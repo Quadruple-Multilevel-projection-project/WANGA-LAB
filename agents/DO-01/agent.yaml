@@ -1,0 +1,6 @@
+agent_id: DO-01
+domain: DOCUMENTS
+angular_domain: 90deg
+can: [pdf, ocr, extraction, comparison, structure]
+cannot: [classify_truth, verify_claim, alter_provenance, redefine_ontology]
+output: [extraction, structure, artifact_refs, source_refs]
