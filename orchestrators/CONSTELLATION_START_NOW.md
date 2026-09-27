@@ -10,10 +10,13 @@ Startup:
 2. Identify GROUP_ID and ORCHESTRATOR_ID.
 3. Read the current shared handoff/orchestrator map.
 4. Check the live project websites listed below for current research/business context.
-5. Report STATUS=READY to the parent orchestrator.
-6. Check the Alert Manager/email channel.
-7. Take the next assigned task and execute.
-8. Preserve evidence and hand off the result.
+5. Load the shared cluster registry and current CLUSTER_REVISION.
+6. Verify orchestrator, relay, cluster-feed, Alert Manager, and evidence-receipt connectivity.
+7. Publish a startup health receipt.
+8. Report STATUS=READY only if required checks pass.
+9. Consume the current change feed and acknowledge all unseen revisions.
+10. Take the next assigned task and execute.
+11. Preserve evidence and hand off the result.
 
 ## LIVE WEBSITE RULE
 The websites are an active information surface for the project. They are updated continuously by the project team.
@@ -43,6 +46,14 @@ If a group encounters a missing instruction, contradiction, unexpected behavior,
 
 Website information is contextual project information. It is NOT automatically proof of a technical or scientific claim. Claims still require the normal source/evidence/verification protocol.
 
+## SHARED CLUSTER
+The cluster control plane is defined in:
+- orchestrators/CONSTELLATION_CLUSTER.md
+- orchestrators/cluster/REGISTRY.yaml
+- orchestrators/cluster/CHANGE_FEED.md
+
+The cluster is responsible for propagation, health checks, receipts, retries, deduplication, replay requests, and escalation. Units must not return basic infrastructure work to the human when it can be executed by the system.
+
 ## WHAT WE ARE BUILDING
 AI Drift Forensics: measure what changed, reconstruct how it changed, preserve the evidence, and verify the result.
 
@@ -56,7 +67,7 @@ Operational chain:
 BASELINE → OBSERVATION → DETECTION → EVIDENCE PRESERVATION → RECONSTRUCTION → CAUSAL/DEPENDENCY ANALYSIS → ATTRIBUTION → RISK QUANTIFICATION → INTERVENTION → VERIFICATION
 
 ## ALERT REQUIREMENT
-Every group must use the shared Alert Manager. A material verification, evidence, provenance, replay, relay, orchestration, or dependency problem must create an ERROR/ESCALATION and an email alert to the configured system owner.
+Every group must use the shared Alert Manager. A material verification, evidence, provenance, replay, relay, orchestration, dependency, health, or update-delivery problem must create an ERROR/ESCALATION and an email alert to the configured system owner.
 
 Do not wait for the human to discover the problem manually.
 Do not silently continue through a material failure.
@@ -65,6 +76,15 @@ Do not put credentials or private email addresses in GitHub.
 ## CORE GITHUB REFERENCES
 WANGA-LAB:
 https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB
+
+Shared cluster:
+https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/agent/architecture-integration/wanga-ai231-bootstrap/orchestrators/CONSTELLATION_CLUSTER.md
+
+Cluster registry:
+https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/agent/architecture-integration/wanga-ai231-bootstrap/orchestrators/cluster/REGISTRY.yaml
+
+Change feed:
+https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/agent/architecture-integration/wanga-ai231-bootstrap/orchestrators/cluster/CHANGE_FEED.md
 
 28-group registry:
 https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/agent/architecture-integration/wanga-ai231-bootstrap/orchestrators/28-groups/groups.json
@@ -81,6 +101,7 @@ https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/agent/
 ## FINAL RULE
 Move fast, but preserve verification.
 The current websites and GitHub are living project context.
-When they change, re-read the current information.
+When they change, the cluster must expose the change to all units.
+When a unit detects a revision gap, it must request replay.
 When they disagree, detect and escalate the discrepancy.
 When something breaks, notify the orchestrator and the system owner.
