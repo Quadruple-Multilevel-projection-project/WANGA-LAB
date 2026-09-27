@@ -1,4 +1,4 @@
-# COMMON GROUP BOOTSTRAP
+# COMMON ROOT BOOTSTRAP
 
 Load this file before unit-specific instructions.
 
