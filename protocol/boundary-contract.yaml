@@ -1,0 +1,4 @@
+version: "0.1"
+rule: "Agent Boundary -> Interface -> Agent Boundary"
+required_checks: [sender, receiver, capability, schema, authorization, provenance, external_side_effect]
+forbidden: [free_form_system_action, implicit_authority_transfer, unrecorded_cross_boundary_transition]
