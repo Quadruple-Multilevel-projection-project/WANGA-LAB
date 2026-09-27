@@ -1,7 +1,18 @@
-version: 1
+version: 2
 cluster_id: WANGA-CONSTELLATION
-cluster_revision: 1
+cluster_revision: 2
 status: ACTIVE_ARCHITECTURE
+primary_orchestrators:
+  - id: PRIMARY-28-ORCHESTRATOR
+    role: thinking_personal_group_plane
+    unit_pattern: GROUP-01..GROUP-28
+  - id: PRIMARY-32-ORCHESTRATOR
+    role: roots_provenance_plane
+    unit_pattern: ROOT-01..ROOT-32
+constellation_bus:
+  id: CONSTELLATION-BUS
+  topology: peer_coordination
+  round_robin: true
 population:
   thinking_personal_groups: 28
   roots: 32
@@ -11,12 +22,17 @@ units:
     groups: GROUP-01..GROUP-28
     roots: ROOT-01..ROOT-32
   required_interfaces:
-    - orchestrator
+    - parent_orchestrator
+    - constellation_bus
     - relay
     - cluster_feed
     - alert_manager
     - evidence_receipts
 bootstrap:
+  fixed_context:
+    - WHO_WE_ARE
+    - WHAT_WE_DO
+    - WHERE_THE_SYSTEM_LIVES
   required_before_ready:
     - registry_loaded
     - manifest_loaded
@@ -31,6 +47,18 @@ update_protocol:
   gap_action: UPDATE_GAP
   gap_recovery: REPLAY_FROM_LAST_ACK
   acknowledgement_required: true
+  idempotency_key: event_id
+orchestration:
+  cycle:
+    - DISCOVER
+    - RECEIVE
+    - CLASSIFY
+    - DERIVE
+    - HANDOFF
+    - ACK
+    - NEXT
+  cross_plane_route: PRIMARY-28-ORCHESTRATOR<->CONSTELLATION-BUS<->PRIMARY-32-ORCHESTRATOR
+  derivation_relation: LETTER<->COMBINATION<->RELATION<->STATE<->NEW_COMBINATION
 health:
   heartbeat_required: true
   stale_state_action: ESCALATE
@@ -39,6 +67,7 @@ evidence:
     - startup
     - update_ack
     - replay
+    - handoff
     - escalation
     - recovery
 alerting:
