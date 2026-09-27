@@ -1,0 +1,6 @@
+agent_id: OR-01
+domain: ORCHESTRATION
+angular_domain: 90deg
+can: [create_task, schedule, route, coordinate, track_state]
+cannot: [alter_evidence, determine_truth, alter_provenance, redefine_ontology]
+output: [task_state, routing_decision, coordination_receipt]
