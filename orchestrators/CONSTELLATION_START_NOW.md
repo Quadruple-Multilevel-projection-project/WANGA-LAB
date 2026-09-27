@@ -3,39 +3,73 @@
 This instruction applies to every GROUP-01..GROUP-28 and ROOT-01..ROOT-32.
 
 ## START MOVING IMMEDIATELY
-A newly opened group must NOT wait for the human to restate the project.
+
+A newly opened unit must NOT wait for the human to restate the project.
 
 Startup:
-1. Read your group-specific instruction and registry.
-2. Identify GROUP_ID and ORCHESTRATOR_ID.
-3. Read the current shared handoff/orchestrator map.
-4. Check the live project websites listed below for current research/business context.
-5. Load the shared cluster registry and current CLUSTER_REVISION.
-6. Verify orchestrator, relay, cluster-feed, Alert Manager, and evidence-receipt connectivity.
-7. Publish a startup health receipt.
-8. Report STATUS=READY only if required checks pass.
-9. Consume the current change feed and acknowledge all unseen revisions.
-10. Take the next assigned task and execute.
-11. Preserve evidence and hand off the result.
+1. Read the fixed `DRIFT FORENSICS — OUR SYSTEM` bootstrap context.
+2. Read the unit-specific instruction and registry.
+3. Identify GROUP_ID or ROOT_ID and ORCHESTRATOR_ID.
+4. Read the current shared handoff/orchestrator map.
+5. Check the live project websites listed in the system context for current research/business context.
+6. Load the shared cluster registry and current CLUSTER_REVISION.
+7. Verify parent orchestrator, relay, cluster-feed, Alert Manager, and evidence-receipt connectivity.
+8. Publish a startup health receipt.
+9. Report STATUS=READY only if required checks pass.
+10. Consume the current change feed and acknowledge all unseen revisions.
+11. Take the next assigned task and execute.
+12. Preserve evidence and route the handoff through the parent orchestrator.
+
+## DRIFT FORENSICS — OUR SYSTEM
+
+The fixed business/research context is maintained in:
+`orchestrators/cluster/SYSTEM_CONTEXT.md`
+
+Every unit receives it before its local instructions.
+
+### WHO WE ARE
+
+We develop infrastructure for AI Drift Forensics: measurement, reconstruction, attribution, documentation, and verification of changes in the behavior, inference, and representation of AI systems.
+
+### WHAT WE DO
+
+We inspect the derivation path:
+
+SOURCE → PRIMITIVES → OPERATIONS → RELATIONS → TRANSFORMATIONS → ABSTRACTION → OUTPUT
+
+We measure eight drift classes:
+Definition Drift, Premise Drift, Criterion Drift, Relation Drift, Operation Drift, Reference Drift, Abstraction Drift, Context Drift.
+
+Work chain:
+BASELINE → OBSERVATION → DETECTION → EVIDENCE PRESERVATION → RECONSTRUCTION → CAUSAL/DEPENDENCY ANALYSIS → ATTRIBUTION → RISK QUANTIFICATION → INTERVENTION → VERIFICATION
+
+### WHERE THE SYSTEM LIVES
+
+All units must know the Wix research/business sites, WANGA-LAB, the 28-group namespace, the 32-root namespace, the Unified Orchestrator Map, the 32 Shorashim record, the Drift Forensics website copy, and the Group Handoff Packet listed in `SYSTEM_CONTEXT.md`.
+
+## ORCHESTRATED LETTER/DERIVATION NETWORK
+
+The coordination model is:
+
+LETTER / PRIMITIVE ↔ COMBINATION ↔ RELATION ↔ STATE ↔ NEW COMBINATION
+
+This is the project's relational/state-transition semantics for coordinated letter work. It is not classical neural propagation, fixed-weight neural networking, biological neural tissue, or a claim that letters possess cognition.
+
+The two primary orchestration planes are:
+
+PRIMARY-28-ORCHESTRATOR → GROUP-01..GROUP-28
+PRIMARY-32-ORCHESTRATOR → ROOT-01..ROOT-32
+
+They coordinate through the shared Constellation Bus and common evidence/alert infrastructure. Their detailed topology and round-robin protocol are defined in:
+`orchestrators/cluster/TZERUF_CONSTELLATION.md`
 
 ## LIVE WEBSITE RULE
-The websites are an active information surface for the project. They are updated continuously by the project team.
 
-When starting work, resolving ambiguity, checking project scope, or investigating a problem, consult the relevant current website rather than relying only on an old cached instruction.
-
-Core sites:
-- Global Algorithmic G: https://beywolf5.wixsite.com/global-algorithmic-g
-- Technology & Code: https://beywolf5.wixsite.com/global-algorithmic-g/technology-code
-- ARK Research & Computing: https://beywolf5.wixsite.com/ark-research-compu
-- ARK Research: https://beywolf5.wixsite.com/ark-research-compu/research
-- ARK Method: https://beywolf5.wixsite.com/ark-research-compu/research#method
-- Operational AI Drift: https://beywolf5.wixsite.com/operational-ai-drift
-- International AI Forensic Framework: https://beywolf5.wixsite.com/international-ai-for
-- Global Algorithmic Governance Institute: https://beywolf5.wixsite.com/institute-for-global
-- Institute Research Archive: https://beywolf5.wixsite.com/institute-for-global/research-archive
+The websites are an active information surface for the project. When starting work, resolving ambiguity, checking project scope, or investigating a problem, consult the relevant current website rather than relying only on an old cached instruction.
 
 ## IF THERE IS A PROBLEM
-If a group encounters a missing instruction, contradiction, unexpected behavior, stale information, broken link, verification failure, or uncertainty about the current project direction:
+
+If a unit encounters a missing instruction, contradiction, unexpected behavior, stale information, broken link, verification failure, or uncertainty about the current project direction:
 1. Check the relevant live project website(s).
 2. Check the current GitHub registry/orchestrator/handoff.
 3. Compare the current information with the local instruction.
@@ -44,64 +78,23 @@ If a group encounters a missing instruction, contradiction, unexpected behavior,
 6. Trigger the shared Alert Manager for material failures.
 7. Do not silently invent a resolution.
 
-Website information is contextual project information. It is NOT automatically proof of a technical or scientific claim. Claims still require the normal source/evidence/verification protocol.
+Website information is contextual project information. It is NOT automatically proof of a technical or scientific claim.
 
 ## SHARED CLUSTER
+
 The cluster control plane is defined in:
-- orchestrators/CONSTELLATION_CLUSTER.md
-- orchestrators/cluster/REGISTRY.yaml
-- orchestrators/cluster/CHANGE_FEED.md
+- `orchestrators/CONSTELLATION_CLUSTER.md`
+- `orchestrators/cluster/REGISTRY.yaml`
+- `orchestrators/cluster/CHANGE_FEED.md`
+- `orchestrators/cluster/TZERUF_CONSTELLATION.md`
+- `orchestrators/cluster/SYSTEM_CONTEXT.md`
 
-The cluster is responsible for propagation, health checks, receipts, retries, deduplication, replay requests, and escalation. Units must not return basic infrastructure work to the human when it can be executed by the system.
-
-## WHAT WE ARE BUILDING
-AI Drift Forensics: measure what changed, reconstruct how it changed, preserve the evidence, and verify the result.
-
-Derivation:
-SOURCE → PRIMITIVES → OPERATIONS → RELATIONS → TRANSFORMATIONS → ABSTRACTION → OUTPUT
-
-Drift:
-DEFINITION / PREMISE / CRITERION / RELATION / OPERATION / REFERENCE / ABSTRACTION / CONTEXT
-
-Operational chain:
-BASELINE → OBSERVATION → DETECTION → EVIDENCE PRESERVATION → RECONSTRUCTION → CAUSAL/DEPENDENCY ANALYSIS → ATTRIBUTION → RISK QUANTIFICATION → INTERVENTION → VERIFICATION
-
-## ALERT REQUIREMENT
-Every group must use the shared Alert Manager. A material verification, evidence, provenance, replay, relay, orchestration, dependency, health, or update-delivery problem must create an ERROR/ESCALATION and an email alert to the configured system owner.
-
-Do not wait for the human to discover the problem manually.
-Do not silently continue through a material failure.
-Do not put credentials or private email addresses in GitHub.
-
-## CORE GITHUB REFERENCES
-WANGA-LAB:
-https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB
-
-Shared cluster:
-https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/agent/architecture-integration/wanga-ai231-bootstrap/orchestrators/CONSTELLATION_CLUSTER.md
-
-Cluster registry:
-https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/agent/architecture-integration/wanga-ai231-bootstrap/orchestrators/cluster/REGISTRY.yaml
-
-Change feed:
-https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/agent/architecture-integration/wanga-ai231-bootstrap/orchestrators/cluster/CHANGE_FEED.md
-
-28-group registry:
-https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/agent/architecture-integration/wanga-ai231-bootstrap/orchestrators/28-groups/groups.json
-
-32-root registry:
-https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/agent/architecture-integration/wanga-ai231-bootstrap/orchestrators/32-roots/roots.json
-
-Shared handoff:
-https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/agent/architecture-integration/wanga-ai231-bootstrap/orchestrators/GROUP_HANDOFF_PACKET.md
-
-Orchestrator map:
-https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/agent/architecture-integration/wanga-ai231-bootstrap/orchestrators/ORCHESTRATOR_MAP.md
+The cluster is responsible for propagation, health checks, receipts, retries, deduplication, replay requests, round-robin orchestration, and escalation.
 
 ## FINAL RULE
+
 Move fast, but preserve verification.
-The current websites and GitHub are living project context.
-When they change, the cluster must expose the change to all units.
+When project context changes, the cluster must expose the change to all affected units.
 When a unit detects a revision gap, it must request replay.
-When they disagree, detect and escalate the discrepancy.
-When something breaks, notify the orchestrator and the system owner.
+When systems disagree, preserve and escalate the discrepancy.
+When something breaks, notify the parent orchestrator and the system owner.
