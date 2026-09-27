@@ -1,0 +1,6 @@
+agent_id: BR-01
+domain: BROWSER
+angular_domain: 90deg
+can: [navigate, retrieve, interact_with_forms, capture_observations, preserve_external_artifacts]
+cannot: [verify_claim, alter_provenance, redefine_ontology, classify_truth, modify_other_agent_state]
+output: [observation, artifact_refs, source_refs, timestamp]
