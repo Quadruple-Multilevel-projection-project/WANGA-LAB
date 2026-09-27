@@ -113,3 +113,13 @@ The unit must know:
 - evidence state;
 - next handoff destination.
 
+
+## PRELOADED URL ACCESS
+
+Canonical URL registry: orchestrators/cluster/SYSTEM_CONTEXT_URLS.md
+
+Every GROUP and ROOT receives this registry as part of bootstrap. Do not search to rediscover known project locations. Direct lookup is required only when current content, verification, or discrepancy resolution requires it.
+
+Common bootstrap entrypoints:
+- orchestrators/28-groups/instructions/COMMON_BOOTSTRAP.md
+- orchestrators/32-roots/COMMON_BOOTSTRAP.md
