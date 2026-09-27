@@ -1,0 +1,6 @@
+groups:
+  orchestration: {agent_id: OR-01, capabilities: [task_management, routing, coordination]}
+  browser: {agent_id: BR-01, capabilities: [navigation, retrieval, form_interaction, observation]}
+  documents: {agent_id: DO-01, capabilities: [pdf, ocr, extraction, comparison]}
+  audit: {agent_id: AU-01, capabilities: [evidence_review, provenance, verification_gate, receipts]}
+routing_rule: capability_based
