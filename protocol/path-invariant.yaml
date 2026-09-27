@@ -1,0 +1,7 @@
+required:
+  - current_position
+  - permitted_domain
+  - next_permitted_transition
+  - boundary_condition
+  - evidence_of_transition
+on_missing: NOT_YET_VERIFIED
