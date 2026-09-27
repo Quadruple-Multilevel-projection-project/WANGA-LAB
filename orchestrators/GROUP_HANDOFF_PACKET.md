@@ -21,8 +21,9 @@ BASELINE → OBSERVATION → DETECTION → EVIDENCE PRESERVATION → RECONSTRUCT
 **WHERE THE SYSTEM LIVES** — the Wix research/business sites, WANGA-LAB, the 28-group namespace, the 32-root namespace, the Unified Orchestrator Map, the 32 Shorashim research record, the Drift Forensics website copy, and this handoff packet.
 
 Canonical full list: `orchestrators/cluster/SYSTEM_CONTEXT.md`
+Canonical URL registry: `orchestrators/cluster/SYSTEM_CONTEXT_URLS.md`
 
-This context is mandatory and is loaded before group-specific instructions.
+This context and URL registry are mandatory and are loaded before group-specific instructions. Known project URLs are preloaded; units do not need to rediscover them.
 
 ## 2. Two constellation spaces
 
