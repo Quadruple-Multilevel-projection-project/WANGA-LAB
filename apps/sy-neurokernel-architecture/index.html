@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#020617">
+<title>WANGA / SY-NEUROKERNEL — Structural Boundary</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+<script crossorigin src="https://unpkg.com/lucide-react@0.468.0/dist/umd/lucide-react.js"></script>
+<script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+<style>
+html,body,#root{min-height:100%;margin:0}
+body{background:#020617}
+</style>
+</head>
+<body>
+<div id="root"></div>
+<script type="text/babel">
+const {useState} = React;
+const {
+  Network, Hexagon, Database, Cpu, Activity, ShieldCheck,
+  CheckCircle2, XCircle, ArrowDown, Layers, GitMerge, FileCheck
+} = lucideReact;
+
+const STRUCTURE = Object.freeze({
+  nodes: 22,
+  unorderedGates: 22 * 21 / 2,
+  directedRelations: 22 * 21,
+  matrixCells: 22 * 22
+});
+
+function NeuroKernelArchitecture() {
+  const [activeSection, setActiveSection] = useState(null);
+  const sections = [
+    {id:'kernel',title:'1. STRUCTURAL KERNEL',icon:<Database className="w-6 h-6 text-blue-400"/>,
+      details:[
+        '22 ADDRESS NODES (addresses only)',
+        '231 UNORDERED GATES (C(22,2))',
+        '462 DIRECTED RELATIONS (22 × 21)',
+        '484 MATRIX CELLS (22 × 22)'
+      ],color:'border-blue-500 bg-blue-900/20'},
+    {id:'topology',title:'3. RELATION TOPOLOGY & GRAPH (4.)',icon:<Network className="w-6 h-6 text-indigo-400"/>,
+      details:['K22 complete graph','231 fixed edges','Immutable topology','No edge invention by neural layer','NetworkX graph representation'],
+      color:'border-indigo-500 bg-indigo-900/20'},
+    {id:'engine',title:'5. NEURO-SYMBOLIC ENGINE',icon:<Cpu className="w-6 h-6 text-purple-400"/>,
+      details:['INPUT: structural graph','MESSAGE PASSING: existing topology only','NODE STATE: embedding representation','RELATION SCORING: ranking existing relations','OUTPUT: embeddings & relation scores'],
+      color:'border-purple-500 bg-purple-900/20'},
+    {id:'provenance',title:'6. PROVENANCE & VALIDATION (7.)',icon:<ShieldCheck className="w-6 h-6 text-emerald-400"/>,
+      details:['VERIFIED_FROM_SOURCE: structural input','COMPUTATIONAL_HYPOTHESIS: derived neural state','ASSERTIONS: Nodes=22, Gates=231, Directed=462'],
+      color:'border-emerald-500 bg-emerald-900/20'}
+  ];
+
+  const assertions = [
+    ['Nodes', STRUCTURE.nodes, STRUCTURE.nodes === 22],
+    ['Unordered gates', STRUCTURE.unorderedGates, STRUCTURE.unorderedGates === 231],
+    ['Directed relations', STRUCTURE.directedRelations, STRUCTURE.directedRelations === 462],
+    ['Matrix cells', STRUCTURE.matrixCells, STRUCTURE.matrixCells === 484]
+  ];
+
+  return (
+    <div className="min-h-screen bg-slate-950 text-slate-300 p-5 md:p-8 font-sans">
+      <div className="max-w-7xl mx-auto">
+        <header className="mb-10 text-center">
+          <h1 className="text-2xl md:text-3xl font-bold tracking-widest text-white mb-2 flex items-center justify-center gap-3">
+            <Hexagon className="w-8 h-8 text-blue-500"/>
+            WANGA / SY-NEUROKERNEL
+          </h1>
+          <p className="text-slate-400 tracking-wider text-xs md:text-sm uppercase">Sandbox Architecture — Structural Boundary</p>
+        </header>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 mb-8">
+          {assertions.map(([label,value,ok]) => (
+            <div key={label} className="rounded-xl border border-slate-800 bg-slate-900 p-4">
+              <div className="text-[10px] uppercase tracking-widest text-slate-500">{label}</div>
+              <div className="mt-1 flex items-center justify-between">
+                <span className="text-2xl font-bold text-white">{value}</span>
+                {ok ? <CheckCircle2 className="w-5 h-5 text-emerald-400"/> : <XCircle className="w-5 h-5 text-red-400"/>}
+              </div>
+            </div>
+          ))}
+        </div>
+
+        <div className="flex flex-col lg:flex-row gap-8">
+          <div className="flex-1 flex flex-col items-center">
+            <h2 className="text-lg font-semibold text-slate-400 mb-6 border-b border-slate-800 pb-2 w-full text-center">PROCESSING PIPELINE</h2>
+            {sections.map((section,index) => (
+              <React.Fragment key={section.id}>
+                <button
+                  type="button"
+                  className={`w-full max-w-2xl text-left p-6 rounded-xl border-l-4 cursor-pointer transition-all duration-300 hover:-translate-y-1 hover:shadow-lg ${section.color} ${activeSection===section.id?'ring-2 ring-white shadow-xl':'opacity-85 hover:opacity-100'}`}
+                  onClick={()=>setActiveSection(activeSection===section.id?null:section.id)}
+                  aria-expanded={activeSection===section.id}
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    {section.icon}
+                    <h3 className="font-bold text-white tracking-wide">{section.title}</h3>
+                  </div>
+                  <ul className="space-y-2">
+                    {section.details.map((detail,i)=><li key={i} className="text-sm flex items-start gap-2">
+                      <div className="w-1.5 h-1.5 rounded-full bg-slate-500 mt-1.5 flex-shrink-0"/>
+                      <span>{detail}</span>
+                    </li>)}
+                  </ul>
+                </button>
+                {index < sections.length-1 && <div className="py-4"><ArrowDown className="w-6 h-6 text-slate-600"/></div>}
+              </React.Fragment>
+            ))}
+          </div>
+
+          <div className="w-full lg:w-[28rem] flex flex-col gap-6">
+            <h2 className="text-lg font-semibold text-slate-400 mb-2 border-b border-slate-800 pb-2 w-full text-center">NEURAL NETWORK BOUNDARIES</h2>
+
+            <div className="bg-slate-900 border border-slate-800 rounded-xl p-6 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-10"><Activity className="w-24 h-24 text-emerald-500"/></div>
+              <h3 className="text-emerald-400 font-bold text-lg mb-4 flex items-center gap-2"><CheckCircle2 className="w-5 h-5"/>NEURAL NET CAN:</h3>
+              <ul className="space-y-3 relative z-10">
+                <li className="flex items-center gap-3 text-sm"><div className="p-1 rounded bg-slate-800"><GitMerge className="w-4 h-4 text-emerald-400"/></div>Propagate states</li>
+                <li className="flex items-center gap-3 text-sm"><div className="p-1 rounded bg-slate-800"><Layers className="w-4 h-4 text-emerald-400"/></div>Transform states</li>
+                <li className="flex items-center gap-3 text-sm"><div className="p-1 rounded bg-slate-800"><Database className="w-4 h-4 text-emerald-400"/></div>Embed entities</li>
+                <li className="flex items-center gap-3 text-sm"><div className="p-1 rounded bg-slate-800"><Activity className="w-4 h-4 text-emerald-400"/></div>Rank existing relations</li>
+              </ul>
+            </div>
+
+            <div className="bg-slate-900 border border-red-900/30 rounded-xl p-6 shadow-xl relative overflow-hidden">
+              <div className="absolute top-0 right-0 p-4 opacity-10"><XCircle className="w-24 h-24 text-red-500"/></div>
+              <h3 className="text-red-400 font-bold text-lg mb-4 flex items-center gap-2"><XCircle className="w-5 h-5"/>NEURAL NET CANNOT:</h3>
+              <ul className="space-y-3 relative z-10">
+                <li className="flex items-center gap-3 text-sm text-slate-400"><div className="p-1 rounded bg-slate-800/50"><Hexagon className="w-4 h-4 text-red-400/50"/></div><span className="line-through decoration-red-900/50">Invent a new node</span></li>
+                <li className="flex items-center gap-3 text-sm text-slate-400"><div className="p-1 rounded bg-slate-800/50"><Network className="w-4 h-4 text-red-400/50"/></div><span className="line-through decoration-red-900/50">Invent a new gate</span></li>
+                <li className="flex items-center gap-3 text-sm text-slate-400"><div className="p-1 rounded bg-slate-800/50"><Cpu className="w-4 h-4 text-red-400/50"/></div><span className="line-through decoration-red-900/50">Alter the fixed topology</span></li>
+                <li className="flex items-center gap-3 text-sm text-slate-400"><div className="p-1 rounded bg-slate-800/50"><FileCheck className="w-4 h-4 text-red-400/50"/></div><span className="line-through decoration-red-900/50">Declare semantic meaning</span></li>
+              </ul>
+            </div>
+
+            <div className="mt-auto bg-blue-950/30 border border-blue-900/50 rounded-xl p-5 text-center">
+              <p className="text-xs text-blue-300 font-mono tracking-widest uppercase mb-1">Guiding Principle</p>
+              <p className="text-lg font-bold text-blue-400">Structure <span className="text-slate-500">→</span> Neural Processing</p>
+              <p className="mt-2 text-[11px] text-slate-500">Topology is input constraint, not neural output.</p>
+            </div>
+          </div>
+        </div>
+
+        <footer className="mt-10 text-center text-[10px] uppercase tracking-widest text-slate-600">
+          Prototype surface • structural invariants are computed, not hard-coded assertions
+        </footer>
+      </div>
+    </div>
+  );
+}
+ReactDOM.createRoot(document.getElementById('root')).render(<NeuroKernelArchitecture/>);
+</script>
+</body>
+</html>
