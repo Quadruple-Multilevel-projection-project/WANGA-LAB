@@ -1,0 +1,55 @@
+version: 1
+cluster_id: WANGA-CONSTELLATION
+cluster_revision: 1
+status: ACTIVE_ARCHITECTURE
+population:
+  thinking_personal_groups: 28
+  roots: 32
+  total_units: 60
+units:
+  naming:
+    groups: GROUP-01..GROUP-28
+    roots: ROOT-01..ROOT-32
+  required_interfaces:
+    - orchestrator
+    - relay
+    - cluster_feed
+    - alert_manager
+    - evidence_receipts
+bootstrap:
+  required_before_ready:
+    - registry_loaded
+    - manifest_loaded
+    - project_context_loaded
+    - orchestrator_health_ok
+    - relay_health_ok
+    - cluster_feed_health_ok
+    - alert_manager_health_ok
+    - startup_receipt_written
+update_protocol:
+  ordering: monotonic_cluster_revision
+  gap_action: UPDATE_GAP
+  gap_recovery: REPLAY_FROM_LAST_ACK
+  acknowledgement_required: true
+health:
+  heartbeat_required: true
+  stale_state_action: ESCALATE
+evidence:
+  receipt_required_for:
+    - startup
+    - update_ack
+    - replay
+    - escalation
+    - recovery
+alerting:
+  shared_manager_only: true
+  deduplication_key: INCIDENT_ID+EVENT_TYPE+AFFECTED_NODE
+  minimum_owner_escalation: HIGH
+verification_states:
+  - VERIFIED
+  - CONDITIONALLY_VERIFIED
+  - NOT_YET_VERIFIED
+  - UNVERIFIED
+  - REPRESENTATION_ONLY
+  - SIMULATION_MODEL
+  - ENGINEERING_ASSUMPTION
