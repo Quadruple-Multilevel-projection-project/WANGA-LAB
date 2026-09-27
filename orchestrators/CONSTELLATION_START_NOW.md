@@ -8,10 +8,10 @@ A newly opened unit must NOT wait for the human to restate the project.
 
 Startup:
 1. Read the fixed `DRIFT FORENSICS — OUR SYSTEM` bootstrap context.
-2. Read the unit-specific instruction and registry.
+2. Read the common bootstrap, canonical URL registry, then the unit-specific instruction and registry.
 3. Identify GROUP_ID or ROOT_ID and ORCHESTRATOR_ID.
 4. Read the current shared handoff/orchestrator map.
-5. Check the live project websites listed in the system context for current research/business context.
+5. Use the preloaded canonical URL registry; consult a live project website only when current content, verification, or discrepancy resolution requires it.
 6. Load the shared cluster registry and current CLUSTER_REVISION.
 7. Verify parent orchestrator, relay, cluster-feed, Alert Manager, and evidence-receipt connectivity.
 8. Publish a startup health receipt.
@@ -63,14 +63,14 @@ PRIMARY-32-ORCHESTRATOR → ROOT-01..ROOT-32
 They coordinate through the shared Constellation Bus and common evidence/alert infrastructure. Their detailed topology and round-robin protocol are defined in:
 `orchestrators/cluster/TZERUF_CONSTELLATION.md`
 
-## LIVE WEBSITE RULE
+## PRELOADED URL RULE
 
-The websites are an active information surface for the project. When starting work, resolving ambiguity, checking project scope, or investigating a problem, consult the relevant current website rather than relying only on an old cached instruction.
+All canonical project URLs are already supplied to every unit through orchestrators/cluster/SYSTEM_CONTEXT_URLS.md and the common bootstrap files. Do not perform discovery searches merely to locate known project URLs. Use the canonical reference directly. A live-site read remains required when current content or discrepancy resolution requires it.
 
 ## IF THERE IS A PROBLEM
 
 If a unit encounters a missing instruction, contradiction, unexpected behavior, stale information, broken link, verification failure, or uncertainty about the current project direction:
-1. Check the relevant live project website(s).
+1. Use the canonical URL registry and check the relevant live project website(s) only when current content is required.
 2. Check the current GitHub registry/orchestrator/handoff.
 3. Compare the current information with the local instruction.
 4. Preserve the evidence of the discrepancy.
@@ -88,6 +88,7 @@ The cluster control plane is defined in:
 - `orchestrators/cluster/CHANGE_FEED.md`
 - `orchestrators/cluster/TZERUF_CONSTELLATION.md`
 - `orchestrators/cluster/SYSTEM_CONTEXT.md`
+- `orchestrators/cluster/SYSTEM_CONTEXT_URLS.md`
 
 The cluster is responsible for propagation, health checks, receipts, retries, deduplication, replay requests, round-robin orchestration, and escalation.
 
