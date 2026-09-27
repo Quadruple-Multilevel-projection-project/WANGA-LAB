@@ -1,0 +1,1 @@
+required_fields: [agent_id, task_id, group_id, role, input, context, constraints, evidence_required, verification_state]
