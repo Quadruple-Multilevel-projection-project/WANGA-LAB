@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Vitruvius Forensic Research Record V1",
+  "type": "object",
+  "required": ["record_id","source","claim","evidence","epistemic_status"],
+  "properties": {
+    "record_id":{"type":"string"},
+    "source":{
+      "type":"object",
+      "required":["work","book","chapter","source_role"],
+      "properties":{
+        "work":{"const":"De Architectura"},
+        "book":{"type":"integer","minimum":1,"maximum":10},
+        "chapter":{"type":["integer","string"]},
+        "source_role":{"enum":["primary_text","edition","translation","commentary","scholarly_metadata","discovery_only","wanga_internal"]}
+      }
+    },
+    "claim":{"type":"string"},
+    "evidence":{
+      "type":"object",
+      "required":["evidence_class","provenance"],
+      "properties":{
+        "evidence_class":{"enum":["DIRECT_TEXT","TEXTUAL_DERIVATION","SECONDARY_INTERPRETATION","STRUCTURAL_INFERENCE","UNVERIFIED_CLAIM","NEGATIVE_FINDING"]},
+        "provenance":{"type":"array","items":{"type":"string"}},
+        "quotation_locator":{"type":["string","null"]},
+        "source_hash":{"type":["string","null"]},
+        "retrieved_at":{"type":["string","null"]}
+      }
+    },
+    "units":{"type":"array","items":{"type":"string"}},
+    "relations":{"type":"array","items":{"type":"object","required":["from","relation","to"],"additionalProperties":false,"properties":{"from":{"type":"string"},"relation":{"type":"string"},"to":{"type":"string"}}}},
+    "compositions":{"type":"array","items":{"type":"array","items":{"type":"string"}}},
+    "structural_maps":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["representation","mapping_status"],
+        "properties":{
+          "representation":{"enum":["GRAPH","HYPERGRAPH","DAG","TREE","RELATION_MATRIX"]},
+          "mapping_status":{"enum":["OBSERVED","DERIVED","HYPOTHESIS","NOT_SUPPORTED"]},
+          "nodes":{"type":"array","items":{"type":"string"}},
+          "edges":{"type":"array","items":{"type":"object","additionalProperties":true}}
+        }
+      }
+    },
+    "formula":{
+      "type":["object","null"],
+      "properties":{
+        "expression":{"type":"string"},
+        "origin":{"enum":["SOURCE_EXPLICIT","TRANSPARENT_DERIVATION"]},
+        "derivation":{"type":["string","null"]},
+        "assumptions":{"type":"array","items":{"type":"string"}}
+      }
+    },
+    "comparison":{
+      "type":"object",
+      "properties":{
+        "maimonides":{"type":"object","additionalProperties":true},
+        "wanga":{"type":"object","additionalProperties":true}
+      },
+      "additionalProperties":false
+    },
+    "claim_checks":{
+      "chapter_count_50":{"type":"object","additionalProperties":true},
+      "core_32":{"type":"object","additionalProperties":true}
+    },
+    "epistemic_status":{"enum":["DISCOVERED","EXTRACTED","DERIVED","CORROBORATED","UNRESOLVED","REFUTED","VERIFIED"]},
+    "verification":{"type":"object","additionalProperties":true}
+  },
+  "additionalProperties":false
+}
