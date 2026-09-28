@@ -21,7 +21,9 @@ jobs:
       - name: Run Vitruvius tests
         run: |
           python -m pip install --upgrade pip pytest
-          PYTHONPATH=. python -m pytest -q tests/test_vitruvius_automation_engine.py
+          PYTHONPATH=. python -m pytest -q tests/test_vitruvius_automation_engine.py tests/test_vitruvius_forensic_research.py
+      - name: Build forensic research queue
+        run: python scripts/vitruvius_forensic_research.py --write
       - name: Upload generated index
         uses: actions/upload-artifact@v4
         with:
@@ -29,3 +31,4 @@ jobs:
           path: |
             vitruvius/VITRUVIUS_INDEX.json
             vitruvius/VITRUVIUS_WORK_QUEUE.json
+            vitruvius/VITRUVIUS_FORENSIC_WORK_QUEUE.json
