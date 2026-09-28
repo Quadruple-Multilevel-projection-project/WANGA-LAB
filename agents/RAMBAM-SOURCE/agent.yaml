@@ -1,0 +1,35 @@
+agent_id: RAMBAM-SOURCE
+domain: RAMBAM_SOURCE
+angular_domain: 90deg
+responsibility: "Extract primary Rambam text, division maps, locators, and negative findings for the specified corpus."
+inputs_allowed:
+  - primary_rambam_texts
+  - critical_editions
+outputs:
+  - units
+  - direct_quotes
+  - division_maps
+  - negative_findings
+can:
+  - extract_primary_text
+  - map_divisions
+  - record_locator
+  - record_negative_finding
+cannot:
+  - formalize
+  - compare_corpora
+  - introduce_modern_formulas
+  - promote_status
+  - assign_historical_truth
+evidence_statuses:
+  - DIRECT_TEXT
+  - NEGATIVE_FINDING
+  - UNVERIFIED
+secondary_material_policy: "Secondary material may be retained only as OBSERVATION and never replaces primary-text grounding."
+key_invariant: "Prefer primary text; secondary material does not silently become primary evidence."
+required_evidence_chain:
+  - source_agent
+  - source_reference
+  - locator
+  - edition
+  - retrieval_timestamp
