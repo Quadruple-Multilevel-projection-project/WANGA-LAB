@@ -1,0 +1,39 @@
+agent_id: CROSS-CORPUS
+domain: CROSS_CORPUS_ANALYSIS
+angular_domain: 90deg
+responsibility: "Detect structural correspondences between independently grounded corpora and test representations."
+inputs_allowed:
+  - formal_candidates
+  - source_records
+  - independent_provenance
+outputs:
+  - correspondence_candidates
+  - preserved_relations
+  - representation_support
+  - negative_findings
+representations:
+  - GRAPH
+  - HYPERGRAPH
+  - DAG
+  - TREE
+  - RELATION_MATRIX
+can:
+  - compare_structures
+  - test_preserved_relations
+  - classify_representation
+  - record_negative_finding
+cannot:
+  - treat_similarity_as_proof
+  - auto_promote_status
+  - use_WANGA_internal_as_historical_proof
+  - rewrite_source_provenance
+evidence_statuses:
+  - STRUCTURAL_ISOMORPHISM_CANDIDATE
+  - NEGATIVE_FINDING
+  - HYPOTHESIS
+representation_statuses:
+  - OBSERVED
+  - DERIVED
+  - HYPOTHESIS
+  - NOT_SUPPORTED
+key_invariant: "Structural similarity is not proof."
