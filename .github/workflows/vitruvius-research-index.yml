@@ -26,6 +26,24 @@ jobs:
             tests/test_vitruvius_forensic_research.py
       - name: Build expanded forensic research queue
         run: python scripts/vitruvius_forensic_research.py --write
+      - name: Build six-agent route queue
+        run: python scripts/build_research_agent_work_queue.py
+      - name: Validate six-agent contracts
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          matrix = Path("agents/AGENT_RESPONSIBILITY_MATRIX_V1.yaml").read_text(encoding="utf-8")
+          runtime = Path("runtime/research-agent-network.yaml").read_text(encoding="utf-8")
+          queue = json.loads(Path("vitruvius/RESEARCH_AGENT_WORK_QUEUE.json").read_text(encoding="utf-8"))
+          required = ["VIT-SOURCE","RAMBAM-SOURCE","FORMALIZER","CROSS-CORPUS","CLAIM-FORENSIC","DELTA-REPORTER"]
+          for agent in required:
+              assert agent in matrix
+          assert "orchestrator: OR-01" in runtime
+          assert queue["agents"] == 7
+          assert queue["orchestrator"] == "OR-01"
+          print({"status":"VALID","specialists":6,"orchestrator":"OR-01"})
+          PY
       - name: Validate generated forensic queue
         run: |
           python - <<'PY'
@@ -50,5 +68,6 @@ jobs:
             vitruvius/VITRUVIUS_INDEX.json
             vitruvius/VITRUVIUS_WORK_QUEUE.json
             vitruvius/VITRUVIUS_FORENSIC_WORK_QUEUE.json
+            vitruvius/RESEARCH_AGENT_WORK_QUEUE.json
             vitruvius/VITRUVIUS_FORENSIC_SCHEMA_V2.json
             vitruvius/VITRUVIUS_FORENSIC_RESEARCH_SPEC_V3.yml
