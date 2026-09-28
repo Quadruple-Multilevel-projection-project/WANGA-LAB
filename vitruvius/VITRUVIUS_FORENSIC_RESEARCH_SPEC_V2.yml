@@ -1,0 +1,103 @@
+version: "2.0"
+status: "ACTIVE_RESEARCH_SPEC"
+scope:
+  corpus: "De Architectura"
+  books: [1,2,3,4,5,6,7,8,9,10]
+  chapter_policy: "discover_and_verify; never assume a chapter count"
+  daily_operation: true
+
+research_tracks:
+  corpus_structure:
+    objective: "Enumerate books and chapters from primary/edition evidence."
+    outputs: ["book_inventory","chapter_inventory","chapter_count_reconciliation"]
+  concept_extraction:
+    concepts:
+      - firmitas
+      - utilitas
+      - venustas
+      - ordinatio
+      - dispositio
+      - eurythmia
+      - symmetria
+      - decor
+      - distributio
+      - proportion
+      - module
+      - ratio
+      - geometry
+      - number
+      - music
+      - acoustics
+      - optics
+      - water
+      - mechanics
+      - machines
+      - urban_planning
+      - temples
+      - public_buildings
+      - housing
+      - materials
+      - construction
+      - planning_methods
+    output_layers: ["units","relations","compositions","compositions_of_compositions","structural_correspondences"]
+  representation_tests:
+    representations: ["GRAPH","HYPERGRAPH","DAG","TREE","RELATION_MATRIX"]
+    rule: "Test each representation independently; absence of a fit is a valid result."
+  formula_policy:
+    allowed:
+      - "SOURCE_EXPLICIT"
+      - "TRANSPARENT_DERIVATION"
+    forbidden:
+      - "UNTRACEABLE_FORMULA"
+      - "POST_HOC_NUMERICAL_FIT"
+  comparative_tracks:
+    maimonides: "Separate comparison; no retroactive attribution to Vitruvius."
+    wanga: "Separate comparison; architectural analogy is not implementation evidence."
+  forensic_claims:
+    chapter_count_50:
+      method: "count primary/edition chapter boundaries; reconcile editions and translations"
+      result_states: ["SUPPORTED","NOT_SUPPORTED","EDITION_DEPENDENT","UNRESOLVED"]
+    core_32:
+      method: "search corpus and secondary literature for explicit definition, context, and provenance of 32-core claim"
+      result_states: ["SUPPORTED","NOT_SUPPORTED","UNRESOLVED","WANGA_INTERNAL_ONLY"]
+      isolation_rule: true
+
+provenance:
+  source_roles:
+    - primary_text
+    - edition
+    - translation
+    - commentary
+    - scholarly_metadata
+    - discovery_only
+    - wanga_internal
+  epistemic_order:
+    - DISCOVERED
+    - EXTRACTED
+    - DERIVED
+    - CORROBORATED
+    - VERIFIED
+    - UNRESOLVED
+    - REFUTED
+  hard_rules:
+    - "Discovery metadata is not evidence of truth."
+    - "Structural similarity is not proof."
+    - "Internal WANGA material cannot authenticate a historical claim by itself."
+    - "A translation cannot silently override the primary/edition locator."
+    - "Every derived formula must expose its derivation and assumptions."
+    - "Negative findings must be stored, not discarded."
+    - "No promotion to VERIFIED without source-level evidence and verification record."
+
+daily_search:
+  retain_existing_agent: true
+  search_incrementally: true
+  deduplicate_by: ["source_url","work","book","chapter","claim_hash"]
+  emit:
+    - "new_sources"
+    - "new_chapters"
+    - "new_concepts"
+    - "new_relations"
+    - "new_formula_candidates"
+    - "claim_check_updates"
+    - "verification_gaps"
+    - "negative_findings"
