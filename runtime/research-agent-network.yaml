@@ -1,0 +1,35 @@
+version: "1.0"
+status: ACTIVE
+orchestrator: OR-01
+network: VITRUVIUS_RAMBAM_FORENSIC
+daily_trigger:
+  schedule_utc: "02:17"
+  mode: INCREMENTAL
+  preserve_existing_vitruvius_queue: true
+pipeline:
+  - stage: SOURCE
+    agents: [VIT-SOURCE, RAMBAM-SOURCE]
+    parallel: true
+  - stage: FORMALIZATION
+    agents: [FORMALIZER]
+    depends_on: [SOURCE]
+  - stage: CROSS_CORPUS
+    agents: [CROSS-CORPUS]
+    depends_on: [SOURCE, FORMALIZATION]
+  - stage: CLAIM_FORENSICS
+    agents: [CLAIM-FORENSIC]
+    depends_on: [VIT-SOURCE]
+  - stage: DELTA
+    agents: [DELTA-REPORTER]
+    depends_on: [SOURCE, FORMALIZATION, CROSS_CORPUS, CLAIM_FORENSICS]
+gates:
+  - id: EVIDENCE_CHAIN
+    rule: "Every finding must carry source_agent and full evidence_chain."
+  - id: STATUS_OWNERSHIP
+    rule: "No agent may change another agent's evidence status."
+  - id: HISTORICAL_ISOLATION
+    rule: "WANGA-internal material cannot authenticate a historical claim."
+  - id: CORPUS_COVERAGE
+    rule: "Corpus-level conclusions require Books I-X or CORPUS_COVERAGE_GAP."
+  - id: NEGATIVE_FINDINGS
+    rule: "Negative findings and NOT_SUPPORTED are retained."
