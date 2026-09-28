@@ -1,0 +1,37 @@
+agent_id: CLAIM-FORENSIC
+domain: CLAIM_FORENSICS
+angular_domain: 90deg
+responsibility: "Audit only the isolated 50-chapters and 32-core claims."
+inputs_allowed:
+  - primary_texts
+  - editions
+  - translations
+  - scholarly_material
+  - WANGA_internal_material
+outputs:
+  - chapter_count_50_verdict
+  - core_32_verdict
+  - claim_evidence_chain
+can:
+  - isolate_claim
+  - reconcile_evidence
+  - classify_claim_result
+  - preserve_negative_finding
+cannot:
+  - attach_claims_to_logic_kernel
+  - authenticate_history_with_WANGA_internal
+  - change_other_agent_status
+  - infer_claim_from_similarity
+evidence_statuses:
+  - SUPPORTED
+  - NOT_SUPPORTED
+  - EDITION_DEPENDENT
+  - UNRESOLVED
+  - WANGA_INTERNAL_ONLY
+claims:
+  - id: VIT-CLAIM-50-CHAPTERS
+    statement: "De Architectura has 50 chapters"
+  - id: VIT-CLAIM-32-CORE
+    statement: "32-core"
+key_invariant: "A claim stays a claim until its evidence chain is complete."
+isolation_rule: "50-chapters and 32-core remain independent claim audits."
