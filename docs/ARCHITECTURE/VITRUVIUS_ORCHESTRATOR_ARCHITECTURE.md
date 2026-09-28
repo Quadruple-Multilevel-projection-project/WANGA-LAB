@@ -215,3 +215,44 @@ The corresponding links should be added only when the referenced artifacts or so
 Vitruvius is the architectural bridge between the project's accumulated developmental memory and its rational-logic model layer.
 
 Its essential role is not to create every model itself, but to preserve enough whole-system architectural knowledge that model selection can be made in the context of lineage, composition, compatibility, and validated history.
+
+## Forensic research / Codex extraction boundary
+
+The daily Vitruvius research process includes a bounded forensic extraction layer:
+
+    DE ARCHITECTURA
+          ↓
+    SOURCE / EDITION DISCOVERY
+          ↓
+    BOOK + CHAPTER INVENTORY
+          ↓
+    UNITS → RELATIONS → COMPOSITIONS
+          ↓
+    COMPOSITIONS OF COMPOSITIONS
+          ↓
+    STRUCTURAL REPRESENTATION TESTS
+    GRAPH / HYPERGRAPH / DAG / TREE / RELATION_MATRIX
+          ↓
+    VITRUVIUS LOGIC KERNEL CANDIDATES
+          ↓
+    PROVENANCE / VERIFICATION GATE
+
+The candidate kernel uses modern labels for extracted structures:
+
+    UNITS → RELATIONS → ORDER → ARRANGEMENT → MODULE
+    → PROPORTION → SYMMETRY → COMPOSITION → TRANSFORMATION → VALIDATION
+
+These labels are formalization primitives, not historical quotations. A source claim, a transparent derivation, a structural inference, and a WANGA implementation remain separate evidence classes.
+
+The daily queue also isolates two forensic claims:
+
+- chapter-count claim ("50 chapters")
+- "32-core" claim
+
+Neither claim may inherit support from WANGA-internal material or from structural resemblance. Negative findings and unresolved states remain first-class outputs.
+
+Comparative work is partitioned into independent Vitruvius ↔ Maimonides and Vitruvius ↔ WANGA tracks. The comparative layer cannot upgrade historical provenance or verification status.
+
+## Coverage invariant
+
+A corpus-level conclusion requires book-level coverage across Books I–X or an explicit CORPUS_COVERAGE_GAP record. Concentrating on Books I, III, and VI is permitted as a research priority but not as evidence that the remaining books have been exhausted.
