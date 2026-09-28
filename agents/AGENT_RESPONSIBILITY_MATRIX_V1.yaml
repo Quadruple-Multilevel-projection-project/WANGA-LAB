@@ -1,0 +1,61 @@
+version: "1.0"
+status: ACTIVE_SINGLE_SOURCE_OF_TRUTH
+orchestrator: OR-01
+agents:
+  VIT-SOURCE:
+    responsibility: "Extract primary De Architectura Books I-X, editions, locators, chapter boundaries."
+    inputs: [external_editions, primary_texts, translations]
+    outputs: [units, direct_quotes, chapter_maps, negative_findings]
+    forbidden: [formalization, comparisons, claim_audits, status_promotion]
+    evidence_statuses: [DIRECT_TEXT, NEGATIVE_FINDING, UNVERIFIED]
+    invariant: "Record what the source actually says, nothing more."
+  RAMBAM-SOURCE:
+    responsibility: "Extract primary Rambam corpus text, division maps, locators, negative findings."
+    inputs: [primary_rambam_texts, critical_editions]
+    outputs: [units, direct_quotes, division_maps, negative_findings]
+    forbidden: [formalization, comparisons, modern_formulas, status_promotion]
+    evidence_statuses: [DIRECT_TEXT, NEGATIVE_FINDING, UNVERIFIED]
+    invariant: "Prefer primary text; secondary material does not replace primary grounding."
+  FORMALIZER:
+    responsibility: "Build the Logic Kernel only from clean source-grounded records."
+    inputs: [VIT-SOURCE_clean_records, RAMBAM-SOURCE_clean_records, DIRECT_TEXT, TEXTUAL_DERIVATION]
+    outputs: [formal_candidates, derivations, hypotheses, unsupported_formalizations]
+    kernel_order: [UNITS, RELATIONS, ORDER, ARRANGEMENT, MODULE, PROPORTION, SYMMETRY, COMPOSITION, TRANSFORMATION, VALIDATION]
+    forbidden: [new_source_search, status_promotion, invented_operators, retroactive_attribution]
+    invariant: "Conceptual geometry is not automatically a computational operator."
+  CROSS-CORPUS:
+    responsibility: "Detect structural correspondences and independently test representations."
+    inputs: [formal_candidates, source_records, independent_provenance]
+    outputs: [correspondence_candidates, preserved_relations, representation_support, negative_findings]
+    representations: [GRAPH, HYPERGRAPH, DAG, TREE, RELATION_MATRIX]
+    forbidden: [similarity_as_proof, auto_promotion, WANGA_internal_as_historical_proof]
+    evidence_statuses: [STRUCTURAL_ISOMORPHISM_CANDIDATE, NEGATIVE_FINDING, HYPOTHESIS]
+    invariant: "Structural similarity is not proof."
+  CLAIM-FORENSIC:
+    responsibility: "Audit only the 50-chapters and 32-core claims."
+    inputs: [primary_texts, editions, translations, scholarly_material, WANGA_internal_material]
+    outputs: [chapter_count_50_verdict, core_32_verdict, claim_evidence_chain]
+    claims: [VIT-CLAIM-50-CHAPTERS, VIT-CLAIM-32-CORE]
+    forbidden: [kernel_attachment, WANGA_historical_authentication, similarity_inference]
+    evidence_statuses: [SUPPORTED, NOT_SUPPORTED, EDITION_DEPENDENT, UNRESOLVED, WANGA_INTERNAL_ONLY]
+    invariant: "A claim stays a claim until its evidence chain is complete."
+  DELTA-REPORTER:
+    responsibility: "Compile pure delta reports from upstream findings."
+    inputs: [VIT-SOURCE_findings, RAMBAM-SOURCE_findings, FORMALIZER_findings, CROSS-CORPUS_findings, CLAIM-FORENSIC_findings]
+    outputs: [new_findings, contradictions, status_changes, negative_findings, open_gaps]
+    forbidden: [research, source_search, upstream_status_change, unchanged_fact_restatement]
+    invariant: "Report only delta; suppress noise."
+hard_rules:
+  - "No agent may change another agent's evidence status."
+  - "Every finding carries source_agent and full evidence_chain."
+  - "WANGA-internal material cannot authenticate a historical claim."
+  - "Negative findings and NOT_SUPPORTED are first-class outcomes."
+  - "Corpus-level conclusions require Books I-X or CORPUS_COVERAGE_GAP."
+  - "No ACTIVE without Evidence Chain."
+routing:
+  VIT-SOURCE: [OR-01, DELTA-REPORTER]
+  RAMBAM-SOURCE: [OR-01, DELTA-REPORTER]
+  FORMALIZER: [VIT-SOURCE, RAMBAM-SOURCE, OR-01, DELTA-REPORTER]
+  CROSS-CORPUS: [VIT-SOURCE, RAMBAM-SOURCE, FORMALIZER, OR-01, DELTA-REPORTER]
+  CLAIM-FORENSIC: [VIT-SOURCE, OR-01, DELTA-REPORTER]
+  DELTA-REPORTER: [OR-01]
