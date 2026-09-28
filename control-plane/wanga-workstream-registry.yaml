@@ -1,0 +1,36 @@
+version: "1.0"
+status: CONTROL_PLANE_DEFINED
+purpose: "Unify WANGA-LAB execution, evidence, research, drift and integration workstreams."
+roles:
+  - Planner
+  - Implementer
+  - Test Engineer
+  - Verification/Drift Reviewer
+  - Integration Engineer
+  - Release/Evidence Reviewer
+evidence_separation:
+  source: "Captured source reference"
+  extraction: "Deterministic extraction"
+  interpretation: "Analytical reading"
+  hypothesis: "Unverified proposed model"
+  verification: "Bounded test/replay evidence"
+workstreams:
+  runtime: {status: TESTED, paths: [wanga_runtime, runtime, routing]}
+  ntm_core: {status: NOT_YET_VERIFIED, paths: [src]}
+  thought_modes_28: {status: NOT_YET_VERIFIED}
+  drift_forensics: {status: TESTED, paths: [tests, strategic-cases, artifacts]}
+  vitruvius: {status: TESTED, paths: [vitruvius]}
+  research_graph: {status: SPECIFIED}
+  ramchal_corpus: {status: INTERNAL_EVIDENCE_RESEARCH_WORKSTREAM}
+  source_expansion: {status: INTERNAL_EVIDENCE_RESEARCH_WORKSTREAM}
+  api_e2e: {status: NOT_YET_VERIFIED}
+  architecture_32:
+    status: NOT_YET_VERIFIED
+    chain: "32 source/string points -> relations -> 32 roots -> 10 structural + 22 letter roots -> letter component -> 28 modes"
+promotion_gates:
+  - "No VERIFIED without execution/test evidence"
+  - "No direct writes to main"
+  - "Every state transition emits trace/evidence"
+automation_policy:
+  keep_two_slots_free: true
+  consolidate_ramchal_and_source_expansion_inside_wanga_lab: true
