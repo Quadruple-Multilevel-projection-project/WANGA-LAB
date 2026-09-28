@@ -1,6 +1,14 @@
 agent_id: OR-01
 domain: ORCHESTRATION
 angular_domain: 90deg
-can: [create_task, schedule, route, coordinate, track_state]
-cannot: [alter_evidence, determine_truth, alter_provenance, redefine_ontology]
-output: [task_state, routing_decision, coordination_receipt]
+responsibility: "Schedule, route, enforce gates, maintain queues and integrity checks for the six research agents."
+can: [create_task, schedule, route, coordinate, track_state, enforce_boundary_gates, maintain_work_queues, run_integrity_checks]
+cannot: [invent_content, verify_claims, alter_evidence, alter_provenance, redefine_ontology, change_agent_status]
+outputs: [task_state, routing_decision, coordination_receipt, work_queue, integrity_report]
+source_of_truth: agents/AGENT_RESPONSIBILITY_MATRIX_V1.yaml
+gates:
+  - "No ACTIVE without Evidence Chain."
+  - "No Claim without SourceReference."
+  - "No corpus-level conclusion without Books I-X coverage or CORPUS_COVERAGE_GAP."
+  - "WANGA-internal material cannot authenticate historical claims."
+  - "Negative findings remain retained."
