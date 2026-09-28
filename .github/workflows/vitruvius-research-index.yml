@@ -21,10 +21,28 @@ jobs:
       - name: Run Vitruvius tests
         run: |
           python -m pip install --upgrade pip pytest
-          PYTHONPATH=. python -m pytest -q tests/test_vitruvius_automation_engine.py tests/test_vitruvius_forensic_research.py
-      - name: Build forensic research queue
+          PYTHONPATH=. python -m pytest -q \
+            tests/test_vitruvius_automation_engine.py \
+            tests/test_vitruvius_forensic_research.py
+      - name: Build expanded forensic research queue
         run: python scripts/vitruvius_forensic_research.py --write
-      - name: Upload generated index
+      - name: Validate generated forensic queue
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          p = Path("vitruvius/VITRUVIUS_FORENSIC_WORK_QUEUE.json")
+          data = json.loads(p.read_text(encoding="utf-8"))
+          assert data["schema_version"] == "2.0.0"
+          assert data["coverage"]["books"] == list(range(1, 11))
+          assert data["agent_policy"]["structural_similarity_is_proof"] is False
+          assert data["agent_policy"]["negative_findings_are_first_class"] is True
+          required = {"VIT-CLAIM-50-CHAPTERS", "VIT-CLAIM-32-CORE", "VIT-COMP-MAIMONIDES", "VIT-COMP-WANGA"}
+          ids = {t["task_id"] for t in data["tasks"]}
+          assert required.issubset(ids)
+          print({"tasks": len(data["tasks"]), "books": 10, "status": "VALID"})
+          PY
+      - name: Upload generated research artifacts
         uses: actions/upload-artifact@v4
         with:
           name: vitruvius-research-index
@@ -32,3 +50,5 @@ jobs:
             vitruvius/VITRUVIUS_INDEX.json
             vitruvius/VITRUVIUS_WORK_QUEUE.json
             vitruvius/VITRUVIUS_FORENSIC_WORK_QUEUE.json
+            vitruvius/VITRUVIUS_FORENSIC_SCHEMA_V2.json
+            vitruvius/VITRUVIUS_FORENSIC_RESEARCH_SPEC_V3.yml
