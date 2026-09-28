@@ -1,0 +1,38 @@
+agent_id: VIT-SOURCE
+domain: VITRUVIUS_SOURCE
+angular_domain: 90deg
+responsibility: "Extract primary text from De Architectura Books I-X, editions, locators, and chapter boundaries."
+inputs_allowed:
+  - external_editions
+  - primary_texts
+  - translations
+outputs:
+  - units
+  - direct_quotes
+  - chapter_maps
+  - negative_findings
+can:
+  - extract_primary_text
+  - identify_edition
+  - record_locator
+  - map_chapter_boundaries
+  - record_negative_finding
+cannot:
+  - formalize
+  - compare_corpora
+  - audit_50_chapters
+  - audit_32_core
+  - promote_status
+  - assign_historical_truth
+evidence_statuses:
+  - DIRECT_TEXT
+  - NEGATIVE_FINDING
+  - UNVERIFIED
+key_invariant: "Record what the source actually says, nothing more."
+required_evidence_chain:
+  - source_agent
+  - source_reference
+  - locator
+  - edition
+  - retrieval_timestamp
+coverage_requirement: "Books I-X; corpus-level completion requires explicit CORPUS_COVERAGE_GAP when incomplete."
