@@ -1,6 +1,33 @@
 groups:
-  orchestration: {agent_id: OR-01, capabilities: [task_management, routing, coordination]}
-  browser: {agent_id: BR-01, capabilities: [navigation, retrieval, form_interaction, observation]}
-  documents: {agent_id: DO-01, capabilities: [pdf, ocr, extraction, comparison]}
-  audit: {agent_id: AU-01, capabilities: [evidence_review, provenance, verification_gate, receipts]}
+  orchestration:
+    agent_id: OR-01
+    capabilities: [task_management, routing, coordination, boundary_gates, queue_management]
+  vitruvius_source:
+    agent_id: VIT-SOURCE
+    capabilities: [primary_text_extraction, edition_mapping, chapter_boundaries, locators, negative_findings]
+  rambam_source:
+    agent_id: RAMBAM-SOURCE
+    capabilities: [primary_text_extraction, division_mapping, locators, negative_findings]
+  formalizer:
+    agent_id: FORMALIZER
+    capabilities: [source_grounded_formalization, derivation, kernel_mapping, hypothesis_classification]
+  cross_corpus:
+    agent_id: CROSS-CORPUS
+    capabilities: [structural_comparison, relation_preservation, graph_test, hypergraph_test, dag_test, tree_test, relation_matrix_test]
+  claim_forensic:
+    agent_id: CLAIM-FORENSIC
+    capabilities: [claim_isolation, evidence_reconciliation, chapter_count_audit, core_32_audit]
+  delta_reporter:
+    agent_id: DELTA-REPORTER
+    capabilities: [delta_compilation, contradiction_reporting, gap_reporting, inherited_status_reporting]
+  browser:
+    agent_id: BR-01
+    capabilities: [navigation, retrieval, form_interaction, observation]
+  documents:
+    agent_id: DO-01
+    capabilities: [pdf, ocr, extraction, comparison]
+  audit:
+    agent_id: AU-01
+    capabilities: [evidence_review, provenance, verification_gate, receipts]
 routing_rule: capability_based
+source_of_truth: agents/AGENT_RESPONSIBILITY_MATRIX_V1.yaml
