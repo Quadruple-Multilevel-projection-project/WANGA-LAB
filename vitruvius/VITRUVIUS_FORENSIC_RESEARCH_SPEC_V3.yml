@@ -1,0 +1,216 @@
+version: "3.0"
+status: "ACTIVE_RESEARCH_SPEC"
+scope:
+  corpus: "De Architectura"
+  books: [1,2,3,4,5,6,7,8,9,10]
+  chapter_policy: "discover_and_verify; never assume a chapter count"
+  daily_operation: true
+  objective: "Incrementally extract source-grounded structure and test formal representations without converting analogy into proof."
+
+research_tracks:
+  corpus_structure:
+    objective: "Enumerate all ten books, chapter boundaries, editions, translations and stable locators."
+    outputs: ["book_inventory","chapter_inventory","chapter_count_reconciliation","edition_matrix"]
+    source_priority: ["primary_text","critical_edition","scholarly_metadata","translation","commentary","discovery_only"]
+
+  book_level_coverage:
+    objective: "Search every book independently so thematic concentration in Books I/III/VI cannot create corpus blind spots."
+    required_topics_by_book:
+      1: ["architecture_definition","architectural_principles","education","knowledge_domains","site_and_material_context"]
+      2: ["origins_of_building","materials","construction_methods","natural_materials"]
+      3: ["temple_principles","symmetry","proportion","module","human_body_analogy"]
+      4: ["orders","temple_forms","origin_and_classification","codex_organization"]
+      5: ["public_buildings","forums","basilicas","theatres","acoustics","waterfront_or_port_context"]
+      6: ["private_houses","site_adaptation","symmetry","proportion","diminutions","additions"]
+      7: ["materials","finishes","pigments","waterproofing_or_surface_methods"]
+      8: ["water","aqueducts","hydraulics","quality","measurement"]
+      9: ["astronomy","sundials","numbers","geometry","music_or_harmonics"]
+      10: ["machines","mechanics","lifting","water_machines","pneumatics_or_related_devices"]
+    rule: "Missing topic evidence is a research gap, not permission to infer."
+
+  concept_extraction:
+    core_concepts:
+      - firmitas
+      - utilitas
+      - venustas
+      - ordinatio
+      - dispositio
+      - eurythmia
+      - symmetria
+      - decor
+      - distributio
+      - proportion
+      - module
+      - ratio
+      - geometry
+      - number
+      - music
+      - acoustics
+      - optics
+      - water
+      - mechanics
+      - machines
+      - urban_planning
+      - temples
+      - public_buildings
+      - housing
+      - materials
+      - construction
+      - planning_methods
+    extraction_layers:
+      - units
+      - relations
+      - compositions
+      - compositions_of_compositions
+      - structural_correspondences
+    relation_types_to_test:
+      - part_whole
+      - measure_standard
+      - proportional
+      - symmetric
+      - ordered
+      - arranged
+      - contextual
+      - functional
+      - dependency
+      - transformation
+      - constraint
+      - sequence
+      - representation
+
+  vitruvius_logic_kernel:
+    objective: "Test whether a source-grounded formal kernel can be extracted without importing modern mathematics or AI terminology."
+    layers:
+      - UNITS
+      - RELATIONS
+      - ORDER
+      - ARRANGEMENT
+      - MODULE
+      - PROPORTION
+      - SYMMETRY
+      - COMPOSITION
+      - TRANSFORMATION
+      - VALIDATION
+    candidate_operators:
+      ORDER: "O"
+      ARRANGEMENT: "D"
+      PROPORTION: "P"
+      SYMMETRY: "S"
+      MODULE: "M"
+      COMPOSITION: "C"
+      TRANSFORMATION: "DELTA"
+      PROPRIETY: "Pr"
+      ECONOMY_DISTRIBUTION: "E"
+    rule: "Operators are modern labels for extracted structures; they are not attributed to Vitruvius unless the source explicitly supports the underlying concept."
+    formalization_levels:
+      - SOURCE_EXPLICIT
+      - TRANSPARENT_DERIVATION
+      - STRUCTURAL_INFERENCE
+      - HYPOTHESIS
+
+  representation_tests:
+    representations: ["GRAPH","HYPERGRAPH","DAG","TREE","RELATION_MATRIX"]
+    rule: "Test each representation independently; absence of fit is a valid result."
+    hypergraph_trigger: "Use when one relation binds more than two units and record the source span."
+    dag_rule: "Only classify as DAG when the extracted dependency relation is acyclic in the tested slice."
+    tree_rule: "Only classify as TREE when each non-root node has the required single-parent structure."
+    matrix_rule: "Record matrix semantics explicitly; do not equate a matrix with an adjacency matrix unless justified."
+
+  composition_tests:
+    objective: "Test units -> relations -> combinations -> combinations_of_combinations."
+    rules:
+      - "Preserve ordered vs unordered composition when the source distinguishes order."
+      - "Do not treat numerical addition as composition unless source semantics justify it."
+      - "A composition must retain all source references of its constituent units and relations."
+      - "A structural correspondence must identify which relation is preserved."
+
+  formula_policy:
+    allowed:
+      - "SOURCE_EXPLICIT"
+      - "TRANSPARENT_DERIVATION"
+    forbidden:
+      - "UNTRACEABLE_FORMULA"
+      - "POST_HOC_NUMERICAL_FIT"
+      - "RETROACTIVE_FORMULA_ATTRIBUTION"
+    derivation_requirements: ["expression","origin","source_locator_or_origin","derivation","assumptions"]
+
+  comparative_tracks:
+    maimonides:
+      mode: "SEPARATE_COMPARATIVE_DATASET"
+      rule: "Compare extracted structures only; no retroactive attribution."
+    wanga:
+      mode: "SEPARATE_IMPLEMENTATION_DATASET"
+      rule: "Compare source-derived structures to WANGA interfaces; similarity is not implementation evidence."
+
+  forensic_claims:
+    chapter_count_50:
+      claim: "De Architectura has 50 chapters"
+      method: "count actual chapter boundaries by book and edition; reconcile primary text, edition metadata and translations"
+      result_states: ["SUPPORTED","NOT_SUPPORTED","EDITION_DEPENDENT","UNRESOLVED"]
+    core_32:
+      claim: "32-core"
+      method: "search primary corpus, scholarly literature and WANGA material separately; identify exact phrase, context, provenance and chronology"
+      result_states: ["SUPPORTED","NOT_SUPPORTED","UNRESOLVED","WANGA_INTERNAL_ONLY"]
+      isolation_rule: true
+
+  source_discovery:
+    objective: "Find new editions, translations, scans, scholarly studies and source fragments incrementally."
+    query_families:
+      - "De Architectura Book {book} chapter {chapter} primary text"
+      - "Vitruvius De Architectura Book {book} critical edition"
+      - "Vitruvius De Architectura Book {book} translation"
+      - "Vitruvius {concept} primary text"
+      - "Vitruvius {concept} scholarly interpretation"
+      - "Vitruvius {concept} proportion symmetry module"
+      - "De Architectura 50 chapters"
+      - "Vitruvius 32-core"
+    deduplication: ["canonical_url","work","book","chapter","claim_hash","source_hash"]
+
+provenance:
+  source_roles:
+    - primary_text
+    - edition
+    - translation
+    - commentary
+    - scholarly_metadata
+    - discovery_only
+    - wanga_internal
+  epistemic_order:
+    - DISCOVERED
+    - EXTRACTED
+    - DERIVED
+    - CORROBORATED
+    - VERIFIED
+    - UNRESOLVED
+    - REFUTED
+  hard_rules:
+    - "Discovery metadata is not evidence of truth."
+    - "Structural similarity is not proof."
+    - "Internal WANGA material cannot authenticate a historical claim by itself."
+    - "A translation cannot silently override the primary/edition locator."
+    - "Every derived formula must expose derivation and assumptions."
+    - "Negative findings must be stored, not discarded."
+    - "No promotion to VERIFIED without source-level evidence and verification record."
+    - "Modern formalization must be labeled as formalization, not attributed to the historical author."
+    - "Book-level coverage is required before corpus-level structural conclusions."
+    - "Historical chronology must be separated from implementation chronology."
+
+daily_search:
+  retain_existing_agent: true
+  search_incrementally: true
+  preserve_existing_queue: true
+  emit:
+    - new_sources
+    - new_editions
+    - new_chapters
+    - new_concepts
+    - new_relations
+    - new_compositions
+    - new_compositions_of_compositions
+    - structural_map_results
+    - new_formula_candidates
+    - claim_check_updates
+    - verification_gaps
+    - negative_findings
+    - provenance_conflicts
+    - corpus_coverage_gaps
