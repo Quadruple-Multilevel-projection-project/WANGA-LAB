@@ -1,0 +1,71 @@
+{
+  "schema_version": "0.1.0",
+  "observations": [
+    {
+      "observation_id": "OBS-1790777335-P01-REG-AFRICA",
+      "timestamp": "2026-09-30T14:08:55.010597+00:00",
+      "node": "REG-AFRICA",
+      "language": "en",
+      "model": "",
+      "probe_id": "P01",
+      "input_snapshot_hash": "bd6a6666f9fbd666b4381f1ff922f2eeca1f1747e6423fe10b78b661b53b3033",
+      "status": "NOT_CONFIGURED",
+      "synthetic": false
+    },
+    {
+      "observation_id": "OBS-1790777335-P02-REG-AFRICA",
+      "timestamp": "2026-09-30T14:08:55.010597+00:00",
+      "node": "REG-AFRICA",
+      "language": "en",
+      "model": "",
+      "probe_id": "P02",
+      "input_snapshot_hash": "fde8a23f5cd720f1b8e5651a6eaf5632ad9d7a99d58e29199c0bfe721f046b30",
+      "status": "NOT_CONFIGURED",
+      "synthetic": false
+    },
+    {
+      "observation_id": "OBS-1790777335-P03-REG-AFRICA",
+      "timestamp": "2026-09-30T14:08:55.010597+00:00",
+      "node": "REG-AFRICA",
+      "language": "en",
+      "model": "",
+      "probe_id": "P03",
+      "input_snapshot_hash": "8ed1a44431e564ab6de24d6fb3df0abaf4c47b58f8fdaabcce605ad7b6d1bc94",
+      "status": "NOT_CONFIGURED",
+      "synthetic": false
+    },
+    {
+      "observation_id": "OBS-1790777335-P04-REG-AFRICA",
+      "timestamp": "2026-09-30T14:08:55.010597+00:00",
+      "node": "REG-AFRICA",
+      "language": "en",
+      "model": "",
+      "probe_id": "P04",
+      "input_snapshot_hash": "2f704a334392d57a03fe276417c7f15d5ae273cb18eea74ace75a02bd34c8892",
+      "status": "NOT_CONFIGURED",
+      "synthetic": false
+    },
+    {
+      "observation_id": "OBS-1790777335-P05-REG-AFRICA",
+      "timestamp": "2026-09-30T14:08:55.010597+00:00",
+      "node": "REG-AFRICA",
+      "language": "en",
+      "model": "",
+      "probe_id": "P05",
+      "input_snapshot_hash": "f5eeac4db9d523c17c0b22fe09695035c70bdf60b4ca0530b315d465ca31aece",
+      "status": "NOT_CONFIGURED",
+      "synthetic": false
+    },
+    {
+      "observation_id": "OBS-1790777335-P06-REG-AFRICA",
+      "timestamp": "2026-09-30T14:08:55.010597+00:00",
+      "node": "REG-AFRICA",
+      "language": "en",
+      "model": "",
+      "probe_id": "P06",
+      "input_snapshot_hash": "551b591d3a143561114c59cb14fa68529cf03a6c60330c1140f8f71529e97800",
+      "status": "NOT_CONFIGURED",
+      "synthetic": false
+    }
+  ]
+}
