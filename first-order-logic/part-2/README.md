@@ -2,26 +2,26 @@
 
 ## הכולל
 
-Part 2 is the **כולל** layer.
+Part 2 is reserved for the **כולל** side of the three-part structure.
 
-Its role is the general side corresponding to the special/particular side of Part 1.
+**כולל here is not defined as the modern logical category “universal.”** It is a source-derived structural label whose exact formal content must be extracted from the relevant passages.
+
+For now:
 
 ```text
-             הכולל
-               ↑
-            Part 2
-               ↑
-        Part 1 = המיוחד
+Part 2
+  ↓
+כולל
+  ↓
+general mode of application / determination
 ```
 
-The exact formal operations belonging to the הכולל layer are **not predefined here**. They will be specified from the source structure rather than imported prematurely from a modern logic textbook.
+The exact relation between Part 1 and Part 2 remains open until the source structure is mapped.
 
 ### Boundary
 
-Part 2 is not Part 3.
-
-Part 3 will be defined only after the relation between **המיוחד** and **הכולל** has been explicitly established.
+Part 2 is not Part 3. Part 3 is reserved for the participating-name relation that will be defined only after the first two modes are established.
 
 ### Status
 
-`FORMAL_MODEL` — structural reconstruction.
+`FORMAL_MODEL` — provisional structural layer.
