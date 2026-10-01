@@ -1,29 +1,38 @@
 # First-Order Logic — Part 3
 
-## Transformations, Contradiction, and Dependencies
+## השם המשתתף
 
-Part 3 models what happens when propositions are transformed, compared, or placed in a dependency graph.
+Part 3 is reserved for the **שם המשתתף** relation between Part 1 and Part 2.
+
+The structural analogy is the Chapter 8 treatment of **מקום**:
 
 ```text
-proposition
-   ↓
-transformation
-   ↓
-comparison
-   ├── consistency
-   └── contradiction
-          ↓
-dependency graph
-          ↓
-downstream conclusion
+           מקום
+             │
+      ┌──────┴──────┐
+    מיוחד          כולל
+      │              │
+  Part 1          Part 2
+      \              /
+       \            /
+        └── Part 3 ─┘
+          השם המשתתף
 ```
 
-### Modules
+Thus Part 3 is **not yet** a generic container for transformations, contradiction, inference, dependency graphs, or other advanced operations.
 
-`transformations` — logical transformations with explicit provenance.
+Its first task is to define precisely:
 
-`contradiction` — contradiction records, competing propositions, and resolution status.
+```text
+מיוחד ↔ כולל
+       ↓
+שם משתתף
+       ↓
+היחס שבו אותו שם/מבנה משתתף בשני הצדדים
+```
 
-`sentence-registry` — canonical registry connecting formal propositions to their source records.
+Nothing beyond that definition is admitted into Part 3 until the relation itself is specified.
 
-A contradiction is recorded before any resolution is asserted. Resolution requires an explicit evidentiary basis.
+### Status
+
+`NOT_YET_VERIFIED` / `FORMAL_MODEL` until the exact source-grounded relation is established.
