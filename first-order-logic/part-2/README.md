@@ -1,29 +1,27 @@
 # First-Order Logic — Part 2
 
-## Relations and Inference
+## הכולל
 
-Part 2 operates on the logical units defined in Part 1.
+Part 2 is the **כולל** layer.
+
+Its role is the general side corresponding to the special/particular side of Part 1.
 
 ```text
-propositions
-   ↓
-comparison
-   ↓
-relation
-   ↓
-inference rule
-   ↓
-derived proposition
-   ↓
-conclusion
+             הכולל
+               ↑
+            Part 2
+               ↑
+        Part 1 = המיוחד
 ```
 
-### Modules
+The exact formal operations belonging to the הכולל layer are **not predefined here**. They will be specified from the source structure rather than imported prematurely from a modern logic textbook.
 
-`definitions` — formal definitions and classification boundaries.
+### Boundary
 
-`syllogisms` — structured premises and conclusions.
+Part 2 is not Part 3.
 
-`inference-rules` — admissible transformations from premises to conclusions.
+Part 3 will be defined only after the relation between **המיוחד** and **הכולל** has been explicitly established.
 
-The historical source, the reconstructed logical form, and the inferred conclusion must remain distinct records.
+### Status
+
+`FORMAL_MODEL` — structural reconstruction.
