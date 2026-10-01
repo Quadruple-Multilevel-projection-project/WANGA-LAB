@@ -4,34 +4,35 @@ This directory is the sole home for the formal reconstruction layer named **Firs
 
 ## Three-part structure
 
-The three parts are not ordinary implementation phases. They are defined structurally:
+The three parts must **not** be read as the ordinary modern opposition “particular vs universal.” The terms **מיוחד** and **כולל** are retained as source-derived structural labels pending a fuller definition from the logic text and the Chapter 8 discussion of participating names.
 
 ```text
-First-Order Logic
-├── Part 1 — המיוחד
-├── Part 2 — הכולל
-└── Part 3 — השם המשתתף
-              ↕
-        המיוחד ↔ הכולל
+Part 1 → המיוחד
+Part 2 → הכולל
+Part 3 → השם המשתתף / היחס בין אופני ההחלה
 ```
 
-The model takes the distinction established around **מקום** in Chapter 8 as the structural reference:
+The Chapter 8 reference to **מקום** is the structural anchor, but it does not by itself exhaust the meaning of the three-part system.
 
 ```text
 מקום
-├── כולל
-└── מיוחד
-
-Part 1 = המיוחד
-Part 2 = הכולל
-Part 3 = היחס/השם המשתתף המקשר את שניהם
+   ↓
+אופני ההחלה: מיוחד / כולל
+   ↓
+שם משתתף
+   ↓
+הקשר בוחר את העניין המתאים
 ```
+
+Therefore:
+
+- Part 1 is not simply “an individual object.”
+- Part 2 is not simply “a universal class.”
+- Part 3 is not yet defined as a generic inference or transformation layer.
 
 ### Boundary rule
 
-**Part 3 must not be populated with transformations, contradiction handling, inference systems, or other downstream machinery until the relation of Part 3 has been explicitly defined.**
-
-The repository therefore preserves the three parts as separate semantic layers. No material is moved from one part to another merely because it can be represented formally.
+**Do not populate Part 3 with transformations, contradiction handling, inference systems, dependency graphs, or other downstream machinery before its source-grounded relation has been explicitly defined.**
 
 Modern first-order notation is a **FORMAL_MODEL** and is not attributed to Maimonides as historical notation.
 
