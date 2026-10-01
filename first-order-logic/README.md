@@ -2,44 +2,48 @@
 
 This directory is the sole home for the formal reconstruction layer named **First-Order Logic**.
 
-## Three-part structure
+## Three parts — relation is not identity
 
-The three parts must **not** be read as the ordinary modern opposition “particular vs universal.” The terms **מיוחד** and **כולל** are retained as source-derived structural labels pending a fuller definition from the logic text and the Chapter 8 discussion of participating names.
+The labels **Part 1**, **Part 2**, and **Part 3** are primary.
 
-```text
-Part 1 → המיוחד
-Part 2 → הכולל
-Part 3 → השם המשתתף / היחס בין אופני ההחלה
-```
+The words **מיוחד** and **כולל** are used only as a **relational analogy supplied for understanding Part 3**. They do **not** define Part 1 or Part 2.
 
-The Chapter 8 reference to **מקום** is the structural anchor, but it does not by itself exhaust the meaning of the three-part system.
+Therefore the system must **not** be represented as:
 
 ```text
-מקום
-   ↓
-אופני ההחלה: מיוחד / כולל
-   ↓
-שם משתתף
-   ↓
-הקשר בוחר את העניין המתאים
+Part 1 = מיוחד
+Part 2 = כולל
 ```
 
-Therefore:
+Instead:
 
-- Part 1 is not simply “an individual object.”
-- Part 2 is not simply “a universal class.”
-- Part 3 is not yet defined as a generic inference or transformation layer.
+```text
+Part 1 ─────────────── Part 2
+          │
+          │  supplied relation
+          ▼
+       Part 3
+          │
+          ▼
+   שם משתתף / היחס
+```
 
-### Boundary rule
+The Chapter 8 treatment of **מקום** supplies the comparison used to clarify the intended structure: a name may have a special and a general mode of application, and the participating-name mechanism concerns the relation between such modes. This analogy is **not an assignment of those labels to Parts 1 and 2**.
 
-**Do not populate Part 3 with transformations, contradiction handling, inference systems, dependency graphs, or other downstream machinery before its source-grounded relation has been explicitly defined.**
+### Strict boundary
 
-Modern first-order notation is a **FORMAL_MODEL** and is not attributed to Maimonides as historical notation.
+Until the source-grounded definition is established:
+
+- Part 1 remains Part 1.
+- Part 2 remains Part 2.
+- Part 3 remains the reserved relation layer.
+- No modern “particular/universal” equivalence is asserted.
+- No downstream inference, contradiction, transformation, or dependency machinery is assigned to Part 3.
+
+Modern first-order notation is a **FORMAL_MODEL**, not historical Maimonidean notation.
 
 ## Repository boundary
 
-Do not place First-Order Logic material in `milaot-hahigayon/sentences/`, the individual gates, or unrelated directories.
+All First-Order Logic material belongs under `first-order-logic/`. Do not place it in `milaot-hahigayon/sentences/` or unrelated directories.
 
-Source extraction remains source-bound. Formalization is stored here with provenance and status fields.
-
-Status values include `FACT`, `FORMAL_MODEL`, `HYPOTHESIS`, and `NOT_YET_VERIFIED`.
+Status values include `FACT`, `RELATIONAL_ANALOGY`, `FORMAL_MODEL`, `HYPOTHESIS`, and `NOT_YET_VERIFIED`.
