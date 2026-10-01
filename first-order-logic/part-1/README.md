@@ -1,23 +1,25 @@
 # First-Order Logic — Part 1
 
-## המיוחד
+## Part 1
 
-Part 1 is reserved for the **מיוחד** side of the three-part structure.
+Part 1 is defined here **only as Part 1**.
 
-**מיוחד here is not defined as the modern logical category “particular.”** It is a source-derived structural label whose exact formal content must be extracted from the relevant passages.
+The terms **מיוחד** and **כולל** must not be used as its identity or definition.
 
-For now:
+They may appear later as source-grounded relational descriptors when required to explain the structure of Part 3.
 
 ```text
 Part 1
-  ↓
-מיוחד
-  ↓
-specific mode of application / determination
+   │
+   │  relation supplied later
+   ▼
+Part 3
 ```
 
-No additional modern interpretation is to be inserted until the source establishes it.
+### Boundary
+
+No modern category is assigned to Part 1 at this stage.
 
 ### Status
 
-`FORMAL_MODEL` — provisional structural layer.
+`NOT_YET_VERIFIED` / `FORMAL_MODEL`.
