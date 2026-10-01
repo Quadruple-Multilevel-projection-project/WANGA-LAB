@@ -1,31 +1,22 @@
 # First-Order Logic — Part 1
 
-## Logical Units
+## המיוחד
 
-Part 1 defines the atomic units used by the formal model.
+Part 1 is the **מיוחד** layer.
+
+Its role is to preserve the individual, bounded, or context-specific logical unit before it is generalized.
 
 ```text
-term
-  ↓
-subject
-  ↓
-predicate
-  ↓
-proposition
-  ↓
-quantified proposition
+פרט / יחידה מסוימת
+        ↓
+     Part 1
+   המיוחד
 ```
 
-### Modules
+This README intentionally does **not** define the later relation between the particular and the general. That belongs to Part 2 and, especially, to the definition of Part 3.
 
-`terms` — names, variables, constants, and term formation.
+### Status
 
-`predicates` — predicate symbols and argument structure.
+`FORMAL_MODEL` — structural reconstruction.
 
-`propositions` — subject/predicate propositions, affirmation and negation.
-
-`quantifiers` — universal and existential quantification.
-
-`relations` — basic n-ary relations between terms.
-
-Every formal statement must retain a link to its source sentence when one exists.
+No claim is made here that this terminology is Maimonides' historical terminology for modern first-order logic.
