@@ -2,21 +2,22 @@
 
 ## המיוחד
 
-Part 1 is the **מיוחד** layer.
+Part 1 is reserved for the **מיוחד** side of the three-part structure.
 
-Its role is to preserve the individual, bounded, or context-specific logical unit before it is generalized.
+**מיוחד here is not defined as the modern logical category “particular.”** It is a source-derived structural label whose exact formal content must be extracted from the relevant passages.
+
+For now:
 
 ```text
-פרט / יחידה מסוימת
-        ↓
-     Part 1
-   המיוחד
+Part 1
+  ↓
+מיוחד
+  ↓
+specific mode of application / determination
 ```
 
-This README intentionally does **not** define the later relation between the particular and the general. That belongs to Part 2 and, especially, to the definition of Part 3.
+No additional modern interpretation is to be inserted until the source establishes it.
 
 ### Status
 
-`FORMAL_MODEL` — structural reconstruction.
-
-No claim is made here that this terminology is Maimonides' historical terminology for modern first-order logic.
+`FORMAL_MODEL` — provisional structural layer.
