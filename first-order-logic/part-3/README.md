@@ -2,37 +2,40 @@
 
 ## השם המשתתף
 
-Part 3 is reserved for the **שם המשתתף** relation between Part 1 and Part 2.
+Part 3 is reserved for the **שם המשתתף** structure.
 
-The structural analogy is the Chapter 8 treatment of **מקום**:
+It must not currently be reduced to “the relation connecting a particular and a universal.” That would import a modern logical interpretation before the source has defined the relation.
 
-```text
-           מקום
-             │
-      ┌──────┴──────┐
-    מיוחד          כולל
-      │              │
-  Part 1          Part 2
-      \              /
-       \            /
-        └── Part 3 ─┘
-          השם המשתתף
-```
-
-Thus Part 3 is **not yet** a generic container for transformations, contradiction, inference, dependency graphs, or other advanced operations.
-
-Its first task is to define precisely:
+The working source anchor is the Chapter 8 treatment of **מקום**, where a name is discussed through different affairs/modes of application and the context determines the relevant affair.
 
 ```text
-מיוחד ↔ כולל
-       ↓
-שם משתתף
-       ↓
-היחס שבו אותו שם/מבנה משתתף בשני הצדדים
+             שם משתתף
+                 │
+        ┌────────┴────────┐
+        │                 │
+     מיוחד              כולל
+    Part 1             Part 2
+        └────────┬────────┘
+                 │
+          contextual selection
+                 │
+          selected affair
 ```
 
-Nothing beyond that definition is admitted into Part 3 until the relation itself is specified.
+### Current boundary
+
+Part 3 is **definition-only** at this stage.
+
+Do not add:
+
+- inference engines
+- contradiction resolution
+- generic transformations
+- dependency graphs
+- downstream proof machinery
+
+until the exact relation has been extracted and defined.
 
 ### Status
 
-`NOT_YET_VERIFIED` / `FORMAL_MODEL` until the exact source-grounded relation is established.
+`NOT_YET_VERIFIED` / `FORMAL_MODEL`.
