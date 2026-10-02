@@ -18,6 +18,20 @@ from .reversible_router import (
     residual_from_code,
     space_group_slot_from_code,
 )
+from .logic_crystal_engine import (
+    CONCEPT_SLOTS,
+    EVOLUTION_LAYERS,
+    DriftGrid6D,
+    StructuralNode,
+    StructuralUpdate,
+    deterministic_structural_update,
+    TiedWeightAdaptiveNeuron,
+    HyperNeuron,
+    HexaComplex,
+    LogicPillar,
+    build_hexa_complexes,
+    DeterministicSatisfiabilityConsensus,
+)
 from .holistic_5d6d import (
     GateDirection,
     Holistic5D6DNetwork,
@@ -68,4 +82,16 @@ __all__ = [
     "TorsionalProjection",
     "DistributedFractalGraphLayer",
     "build_231_gate_directions",
+    "CONCEPT_SLOTS",
+    "EVOLUTION_LAYERS",
+    "DriftGrid6D",
+    "StructuralNode",
+    "StructuralUpdate",
+    "deterministic_structural_update",
+    "TiedWeightAdaptiveNeuron",
+    "HyperNeuron",
+    "HexaComplex",
+    "LogicPillar",
+    "build_hexa_complexes",
+    "DeterministicSatisfiabilityConsensus",
 ]
