@@ -18,6 +18,15 @@ from .reversible_router import (
     residual_from_code,
     space_group_slot_from_code,
 )
+from .holistic_5d6d import (
+    GateDirection,
+    Holistic5D6DNetwork,
+    MetaLogicalLoss,
+    TorsionLayer,
+    TorsionalProjection,
+    DistributedFractalGraphLayer,
+    build_231_gate_directions,
+)
 from .tziruf_manifold import (
     CombinatorialWeightOperator,
     DynamicNameConfiguration,
@@ -52,4 +61,11 @@ __all__ = [
     "gate_index_from_code",
     "residual_from_code",
     "space_group_slot_from_code",
+    "GateDirection",
+    "Holistic5D6DNetwork",
+    "MetaLogicalLoss",
+    "TorsionLayer",
+    "TorsionalProjection",
+    "DistributedFractalGraphLayer",
+    "build_231_gate_directions",
 ]
