@@ -1,0 +1,101 @@
+version: 1
+name: WANGA-PREFLIGHT
+purpose: >
+  Mandatory read-only connectivity gate executed before substantive work.
+  Determine which integrations are actually callable in the current session
+  before selecting an execution route.
+
+policy:
+  mandatory: true
+  timing: "before substantive work"
+  writes_allowed_during_preflight: false
+  destructive_actions_allowed: false
+  secrets_allowed: false
+  registry_is_evidence_not_authority: true
+
+result_states:
+  - CONNECTED
+  - TESTED
+  - DEGRADED
+  - UNAVAILABLE
+  - BLOCKED
+  - NOT_FOUND
+  - CANDIDATE
+
+classification:
+  CONNECTED: "Tool is exposed and a safe read-only operation completed."
+  TESTED: "A concrete health/read check succeeded in this session."
+  DEGRADED: "Tool answered but the health/read check was incomplete or partially failed."
+  UNAVAILABLE: "Expected tool/integration cannot currently be invoked."
+  BLOCKED: "Tool exists but required authorization or access is missing."
+  NOT_FOUND: "No verified integration is available."
+  CANDIDATE: "Potential fallback found through registry/discovery; not connected."
+
+health_check:
+  rule: >
+    For each integration relevant to the task, execute one minimal,
+    deterministic, read-only operation that proves the transport is usable.
+  selection:
+    - "Prefer the smallest safe read operation."
+    - "Prefer existing connected tools over registry discovery."
+    - "Do not mutate data to prove connectivity."
+    - "Do not send test emails/messages."
+    - "Do not create, delete, publish, deploy, merge, or modify records."
+    - "Do not expose or inspect secret values."
+  evidence:
+    required:
+      - tool_name
+      - operation
+      - outcome
+      - timestamp
+      - error_or_result_summary
+      - status
+    persistence: "Record only non-secret metadata."
+
+routing:
+  step_1: "Identify tools relevant to the requested task."
+  step_2: "Run read-only preflight checks on those tools."
+  step_3: "Mark each result with an evidence-backed status."
+  step_4: "Select the preferred route from successful checks."
+  step_5: "If unavailable, try another connected route."
+  step_6: "If no route works, perform registry discovery."
+  step_7: "Mark discovered integrations CANDIDATE until a real connection test succeeds."
+  step_8: "Do not begin consequential execution while the required route is BLOCKED or UNAVAILABLE."
+
+preferred_route:
+  rule: >
+    Keep the last verified successful route as preferred only while its
+    current-session preflight remains valid. Recheck after material tool,
+    permission, session, or environment changes.
+
+recheck_triggers:
+  - "new session"
+  - "tool/connector change"
+  - "permission change"
+  - "authentication change"
+  - "runtime/environment change"
+  - "previous health check failure"
+  - "operation requires a capability not covered by the prior check"
+
+scope:
+  principle: >
+    Do not ping every available integration blindly. Ping every integration
+    needed for the current task, plus any fallback route that may materially
+    affect execution.
+
+report:
+  format:
+    - "PREFLIGHT STATUS"
+    - "TOOLS CHECKED"
+    - "PASSED"
+    - "FAILED/BLOCKED"
+    - "PREFERRED ROUTE"
+    - "FALLBACK"
+    - "EVIDENCE"
+  rule: "Never claim CONNECTED or TESTED without a concrete successful check."
+
+limitations:
+  - "A tool-list entry proves availability to the model, not end-to-end health."
+  - "A successful read does not prove write permission."
+  - "A successful write check is forbidden during preflight."
+  - "A registry listing does not prove a live connection."

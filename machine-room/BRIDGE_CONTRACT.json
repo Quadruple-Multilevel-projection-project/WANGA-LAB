@@ -1,0 +1,65 @@
+{
+  "version": "1.0",
+  "name": "WANGA_PLUGIN_BRIDGE",
+  "purpose": "Transmit a compact, evidence-backed tool snapshot from the GitHub Machine Room to the WANGA orchestrator.",
+  "input": {
+    "task_class": "string",
+    "required_capabilities": ["string"],
+    "preflight_snapshot": "object"
+  },
+  "output": {
+    "generated_at": "RFC3339 timestamp",
+    "source_revision": "git commit SHA",
+    "available": [
+      {
+        "plugin_id": "string",
+        "capabilities": ["string"],
+        "connectivity": "TESTED|CONNECTED|DEGRADED"
+      }
+    ],
+    "blocked": [
+      {
+        "plugin_id": "string",
+        "reason": "string",
+        "evidence_ref": "string"
+      }
+    ],
+    "candidates": [
+      {
+        "plugin_id": "string",
+        "reason": "string"
+      }
+    ],
+    "recommendations": [
+      {
+        "plugin_id": "string",
+        "task_class": "string",
+        "reason": "string",
+        "agent": "string",
+        "evidence_refs": ["string"]
+      }
+    ],
+    "preferred_route": {
+      "plugin_chain": ["string"],
+      "reason": "string",
+      "evidence_refs": ["string"]
+    },
+    "fallback_routes": [
+      {
+        "plugin_chain": ["string"],
+        "reason": "string"
+      }
+    ],
+    "verification": {
+      "state": "UNVERIFIED|VERIFIED",
+      "evidence_refs": ["string"]
+    }
+  },
+  "rules": [
+    "The bridge transmits state; it does not manufacture connectivity.",
+    "A registry entry is not proof of a live connection.",
+    "Recommendations are advisory and cannot override preflight.",
+    "Unknown fields must remain unknown.",
+    "Secret values are forbidden."
+  ]
+}

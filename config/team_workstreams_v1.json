@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "status": "SPECIFIED",
+  "organization": "Quadruple-Multilevel-projection-project",
+  "workstreams": [
+    {"team":"LOGIC-EXTRACTION","repos":["WANGA-LAB","-logicl-neural-order","MNM"],"access":"maintain"},
+    {"team":"DICTIONARY-TAGGING","repos":["WANGA-LAB","AI231.meta.io","-from-Corsican-"],"access":"maintain"},
+    {"team":"EVIDENCE-PROVENANCE","repos":["WANGA-LAB","ARK-KERNEL-OVERSIGHT"],"access":"maintain"},
+    {"team":"WEIGHTS-UNCERTAINTY","repos":["WANGA-LAB","AI231.meta.io","MNM"],"access":"maintain"},
+    {"team":"DRIFT-FORENSICS","repos":["WANGA-LAB","ARK-KERNEL-OVERSIGHT"],"access":"maintain"},
+    {"team":"VERIFICATION","repos":["WANGA-LAB","ARK-KERNEL-OVERSIGHT","ai-agent-terraform"],"access":"maintain"},
+    {"team":"AGENT-EVALUATION","repos":["WANGA-LAB","ai-agent-terraform","skills"],"access":"maintain"}
+  ],
+  "security_exclusions": ["GOOGLE_API_KEY"],
+  "team_creation_verified": false,
+  "permission_assignment_verified": false
+}
