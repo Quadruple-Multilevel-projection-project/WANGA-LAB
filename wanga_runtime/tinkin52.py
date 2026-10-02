@@ -39,7 +39,7 @@ WHEEL_DEFINITIONS: Mapping[str, Tuple[Tuple[str, str], ...]] = {
     ),
 }
 
-DRIFT_AXES: Mapping[str, float] = {
+ENVELOPE_VERTEX_COUNT = 13\nNESTED_LEVELS = (\n    "TERM_NAME_NETWORK",\n    "RELATION_MATTER_SPACE",\n    "SENTENCE_CONFIGURATION",\n    "INFERENCE_SPACE",\n    "META_LOGIC_ORCHESTRATOR",\n)\n\nDRIFT_AXES: Mapping[str, float] = {
     "alpha_up": 0.02,
     "beta_down": 0.02,
     "gamma_forward": 0.03,
@@ -257,6 +257,27 @@ class Tinkin52:
             for threshold in (DRIFT_AXES[code],)
         }
 
+    def architecture_contract(self) -> Dict[str, object]:
+        return {
+            "envelope": {
+                "vertices": ENVELOPE_VERTEX_COUNT,
+                "spatial_dimensions": 3,
+                "temporal_dimensions": 1,
+                "spatiotemporal_dimensions": 4,
+                "coordinates_defined": False,
+            },
+            "nested_levels": [
+                {"level": i + 1, "name": name}
+                for i, name in enumerate(NESTED_LEVELS)
+            ],
+            "logic": {
+                "declared_terms": 175,
+                "computed_from_gate_counts": 188,
+                "count_delta": 13,
+                "count_consistent": False,
+            },
+        }
+
     def validate(self) -> Dict[str, object]:
         gate_counts = {n.network_id: len(n.gates) for n in self.networks}
         return {
@@ -270,7 +291,7 @@ class Tinkin52:
             "gates": 1716,
             "endpoints": 3432,
             "hebrew_letters": len(HEBREW_LETTERS),
-            "drift_axes": len(DRIFT_AXES),
+            "drift_axes": len(DRIFT_AXES),\n            "envelope_vertices": ENVELOPE_VERTEX_COUNT,\n            "nested_levels": len(NESTED_LEVELS),\n            "logic_count_delta": 13,
         }
 
     def step(
@@ -360,7 +381,7 @@ class Tinkin52:
                 }
                 for s in result.networks
             ],
-            "validation": self.validate(),
+            "architecture_contract": self.architecture_contract(),\n            "validation": self.validate(),
         }
 
 
