@@ -1,0 +1,70 @@
+version: "1"
+
+project:
+  id: "wanga-lab"
+  repository: "Quadruple-Multilevel-projection-project/WANGA-LAB"
+  default_branch: "main"
+  execution_policy: "branch-and-pr"
+
+coordination:
+  objective: "Coordinate implementation, testing, verification, and evidence without changing main directly."
+  workflow: "PLAN -> IMPLEMENT -> TEST -> VERIFY -> REPAIR -> PR"
+  merge_policy: "PR only; no direct main writes"
+  evidence_policy: "Do not mark VERIFIED without explicit evidence."
+
+roles:
+  coordinator:
+    responsibility: "Select the highest-value blocker and keep workstreams synchronized."
+  implementer:
+    responsibility: "Implement the selected change on an isolated branch."
+  test_engineer:
+    responsibility: "Run deterministic tests and record failures/evidence."
+  verification_reviewer:
+    responsibility: "Check correctness, drift, provenance, and status claims."
+  integration_engineer:
+    responsibility: "Resolve branch/PR integration issues without bypassing verification."
+  release_evidence_reviewer:
+    responsibility: "Confirm CI, security, provenance, and release evidence before merge."
+
+status_vocabulary:
+  - BUILT
+  - SPECIFIED
+  - PROTOTYPED
+  - TESTED
+  - VERIFIED
+  - PLANNED
+  - HYPOTHETICAL
+  - NOT_YET_VERIFIED
+  - STRUCTURALLY_VALID
+  - REPRESENTATION_ONLY
+
+evidence_chain:
+  - SOURCE
+  - EXTRACTION
+  - INTERPRETATION
+  - HYPOTHESIS
+  - VERIFICATION
+
+active_workstreams:
+  - runtime
+  - ntm_core
+  - thought_modes_28
+  - drift_forensics
+  - vitruvius
+  - research_graph
+  - ramchal_corpus
+  - source_expansion
+  - api_e2e
+  - roots_32
+
+control_plane:
+  github: "source-of-truth for code, branches, PRs, CI"
+  supabase: "workstream state and evidence registry"
+  notion: "coordination and decision documentation"
+  security: "security review before release/merge"
+
+guardrails:
+  preserve_source_names_and_relations: true
+  no_unverified_claims: true
+  no_direct_main_changes: true
+  keep_two_automation_slots_free: true
