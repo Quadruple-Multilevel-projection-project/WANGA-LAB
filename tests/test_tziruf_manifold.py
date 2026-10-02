@@ -35,3 +35,36 @@ def test_source_mapping_does_not_get_invented():
     model = MaimonidesCombinatorialCrystalNetwork()
     assert model.outer_gate_slot_ids.numel() == 231
     assert model.space_group_slot_ids.numel() == 230
+
+
+def test_reversible_three_letter_routing():
+    from wanga_runtime import DynamicNameConfiguration, ReversibleCombinatorialRouter
+
+    router = ReversibleCombinatorialRouter()
+    config = DynamicNameConfiguration(
+        name_id=118,
+        letter_combination=(0, 12, 20),  # א מ ת
+        assigned_space_group=214,
+    )
+
+    route = router.route(config)
+    assert 1 <= route.gate_id <= 231
+    assert 0 <= route.residual <= 46
+    assert 1 <= route.space_group_slot <= 230
+
+    reconstructed = router.reconstruct(route)
+    assert reconstructed.letter_combination == config.letter_combination
+
+
+def test_all_22_cube_index_space_is_lossless():
+    from wanga_runtime import decode_triple, encode_triple
+
+    seen = set()
+    for a in range(22):
+        for b in range(22):
+            for c in range(22):
+                code = encode_triple((a, b, c))
+                assert decode_triple(code) == (a, b, c)
+                seen.add(code)
+
+    assert len(seen) == 22 ** 3
