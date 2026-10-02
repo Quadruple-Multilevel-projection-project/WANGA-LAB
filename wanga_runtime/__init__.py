@@ -9,6 +9,7 @@ from .space_group_layer import (
     build_231_global_gates,
 )
 from .unified_tinkin import UnifiedTinkinRuntime
+from .reversible_router import (\n    ReversibleCombinatorialRouter, ReversibleRoute, decode_triple, encode_triple,\n    gate_index_from_code, residual_from_code, space_group_slot_from_code,\n)
 from .tziruf_manifold import (
     CombinatorialWeightOperator,
     DynamicNameConfiguration,
@@ -36,4 +37,11 @@ __all__ = [
     "MaimonidesCombinatorialCrystalNetwork",
     "SeferHaTzirufManifold",
     "UnifiedTinkinRuntime",
+    "ReversibleCombinatorialRouter",
+    "ReversibleRoute",
+    "decode_triple",
+    "encode_triple",
+    "gate_index_from_code",
+    "residual_from_code",
+    "space_group_slot_from_code",
 ]
