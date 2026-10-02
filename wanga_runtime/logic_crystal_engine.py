@@ -153,7 +153,7 @@ class TiedWeightAdaptiveNeuron(nn.Module):
 
     def reconstruct(self, h: torch.Tensor) -> torch.Tensor:
         weight = self.encoder.weight
-        return torch.tanh(F.linear(h, weight.transpose(0, 1), self.output_bias))
+        return torch.tanh(F.linear(h, weight, self.output_bias))
 
     def forward(
         self,
