@@ -8,6 +8,7 @@ from .space_group_layer import (
     SpaceGroupOperatorSpec,
     build_231_global_gates,
 )
+from .unified_tinkin import UnifiedTinkinRuntime
 from .tziruf_manifold import (
     CombinatorialWeightOperator,
     DynamicNameConfiguration,
@@ -34,4 +35,5 @@ __all__ = [
     "DynamicRoutingEngine",
     "MaimonidesCombinatorialCrystalNetwork",
     "SeferHaTzirufManifold",
+    "UnifiedTinkinRuntime",
 ]
