@@ -78,3 +78,43 @@ def test_architecture_contract():
     assert contract["logic"]["computed_from_gate_counts"] == 188
     assert contract["logic"]["count_delta"] == 13
     assert contract["logic"]["count_consistent"] is False
+
+
+def test_231_gate_registry_and_pending_groups():
+    from importlib.util import spec_from_file_location, module_from_spec
+
+    op_path = ROOT / "wanga_runtime" / "space_group_layer.py"
+    spec2 = spec_from_file_location("space_group_layer_test", op_path)
+    assert spec2 and spec2.loader
+    op = module_from_spec(spec2)
+    spec2.loader.exec_module(op)
+
+    gates = op.build_231_global_gates()
+    assert len(gates) == 231
+    assert len({(g.letter_a, g.letter_b) for g in gates}) == 231
+
+    registry = op.GateSpaceGroupRegistry(gates=gates)
+    report = registry.validate()
+    assert report["global_gate_count"] == 231
+    assert report["space_group_slots"] == 230
+    assert report["pending_space_group_payloads"] == 230
+
+    with __import__("pytest").raises(ValueError):
+        registry.get_group(231).apply((0.0, 0.0, 0.0))
+
+
+def test_nested_configuration_bounds():
+    from importlib.util import spec_from_file_location, module_from_spec
+
+    op_path = ROOT / "wanga_runtime" / "space_group_layer.py"
+    spec2 = spec_from_file_location("space_group_layer_config_test", op_path)
+    assert spec2 and spec2.loader
+    op = module_from_spec(spec2)
+    spec2.loader.exec_module(op)
+
+    cfg = op.NestedConfiguration(
+        nesting_level=2,
+        base_elements=(1, 50),
+        space_group_id=45,
+    )
+    assert cfg.as_dict()["space_group_id"] == 45
