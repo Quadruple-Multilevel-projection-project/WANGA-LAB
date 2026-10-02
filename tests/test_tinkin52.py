@@ -66,3 +66,15 @@ def test_c0_and_axes_exist():
         "epsilon_noise",
         "zeta_anomaly",
     }
+
+
+def test_architecture_contract():
+    machine = Tinkin52()
+    contract = machine.architecture_contract()
+    assert contract["envelope"]["vertices"] == 13
+    assert contract["envelope"]["spatiotemporal_dimensions"] == 4
+    assert len(contract["nested_levels"]) == 5
+    assert contract["logic"]["declared_terms"] == 175
+    assert contract["logic"]["computed_from_gate_counts"] == 188
+    assert contract["logic"]["count_delta"] == 13
+    assert contract["logic"]["count_consistent"] is False
