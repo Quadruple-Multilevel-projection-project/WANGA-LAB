@@ -5,6 +5,7 @@ from typing import Any, Dict, Sequence, Tuple
 
 from .space_group_layer import GateSpaceGroupRegistry
 from .tinkin52 import Tinkin52
+from .reversible_router import ReversibleCombinatorialRouter
 from .tziruf_manifold import (
     DynamicNameConfiguration,
     MaimonidesCombinatorialCrystalNetwork,
@@ -18,6 +19,7 @@ class UnifiedTinkinRuntime:
     machine: Tinkin52
     outer_registry: GateSpaceGroupRegistry
     combinatorial: MaimonidesCombinatorialCrystalNetwork
+    reversible_router: ReversibleCombinatorialRouter
 
     @classmethod
     def create(cls) -> "UnifiedTinkinRuntime":
@@ -25,6 +27,7 @@ class UnifiedTinkinRuntime:
             machine=Tinkin52(),
             outer_registry=GateSpaceGroupRegistry(),
             combinatorial=MaimonidesCombinatorialCrystalNetwork(),
+            reversible_router=ReversibleCombinatorialRouter(),
         )
 
     def route_dynamic_name(
@@ -32,6 +35,7 @@ class UnifiedTinkinRuntime:
         config: DynamicNameConfiguration,
     ) -> Dict[str, Any]:
         routing = self.combinatorial.process_dynamic_name(config)
+        exact_route = self.reversible_router.route(config)
 
         return {
             "name_id": config.name_id,
@@ -41,6 +45,8 @@ class UnifiedTinkinRuntime:
                 routing["gate_probabilities"].tolist()
             ),
             "selected_logic_gate": routing["routing_gate"],
+            "exact_route": exact_route.as_dict(),
+            "address_5d": self.reversible_router.address_5d(exact_route).tolist(),
             "outer_gate_slots": 231,
             "space_group_slots": 230,
             "outer_mapping_state": "PENDING_SOURCE_MAPPING",
@@ -69,6 +75,12 @@ class UnifiedTinkinRuntime:
         outer_validation = self.outer_registry.validate()
         return {
             "tinkin": machine_validation,
+            "reversible_router": {
+                "triple_space": 22 ** 3,
+                "lossless": True,
+                "outer_gate_slots": 231,
+                "space_group_slots": 230,
+            },
             "outer": outer_validation,
             "concept_slots": 175,
             "logic_count_audit": {
