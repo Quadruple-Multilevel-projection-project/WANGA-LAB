@@ -1,0 +1,22 @@
+{
+  "version": "1.0.0",
+  "status": "PLANNED",
+  "deployment_claim": false,
+  "nodes": [
+    {"node_id":"RESEARCH","scope":"research","validation_state":"UNVERIFIED"},
+    {"node_id":"EVIDENCE","scope":"evidence","validation_state":"UNVERIFIED"},
+    {"node_id":"VERIFICATION","scope":"verification","validation_state":"UNVERIFIED"},
+    {"node_id":"LINEAGE","scope":"lineage","validation_state":"UNVERIFIED"},
+    {"node_id":"POLITEIA","scope":"governance-architecture","validation_state":"UNVERIFIED"},
+    {"node_id":"VITRUVIUS","scope":"architecture-orchestration","validation_state":"UNVERIFIED"},
+    {"node_id":"RATIONAL_LOGIC","scope":"logic","validation_state":"UNVERIFIED"},
+    {"node_id":"NTM","scope":"reasoning-research","validation_state":"UNVERIFIED"},
+    {"node_id":"DRIFT_FORENSICS","scope":"evaluation","validation_state":"UNVERIFIED"},
+    {"node_id":"MODEL_FABRIC","scope":"model-routing","validation_state":"UNVERIFIED"},
+    {"node_id":"WORK_MANAGER","scope":"execution-orchestration","validation_state":"UNVERIFIED"},
+    {"node_id":"PERSPECTIVE","scope":"perspective","validation_state":"UNVERIFIED"},
+    {"node_id":"PUBLICATION","scope":"publication","validation_state":"UNVERIFIED"},
+    {"node_id":"COMPUTE","scope":"research-compute","validation_state":"UNVERIFIED"},
+    {"node_id":"INSTITUTIONAL_GATEWAY","scope":"institutional-interface","validation_state":"UNVERIFIED"}
+  ]
+}
