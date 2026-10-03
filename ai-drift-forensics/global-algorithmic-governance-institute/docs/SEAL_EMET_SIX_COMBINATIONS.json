@@ -1,0 +1,64 @@
+{
+  "source_unit": "Sefer Yetzirah Gra 1:13",
+  "base_symbols": [
+    "י",
+    "ה",
+    "ו"
+  ],
+  "permutation_group": "S3",
+  "permutation_count": 6,
+  "seals": [
+    {
+      "source_index": 5,
+      "direction": "above",
+      "hebrew_direction": "רום/למעלה",
+      "combination": "יהו"
+    },
+    {
+      "source_index": 6,
+      "direction": "below",
+      "hebrew_direction": "תחת/למטה",
+      "combination": "היו"
+    },
+    {
+      "source_index": 7,
+      "direction": "east",
+      "hebrew_direction": "מזרח/לפניו",
+      "combination": "ויה"
+    },
+    {
+      "source_index": 8,
+      "direction": "west",
+      "hebrew_direction": "מערב/לאחריו",
+      "combination": "והי"
+    },
+    {
+      "source_index": 9,
+      "direction": "south",
+      "hebrew_direction": "דרום/לימינו",
+      "combination": "יוה"
+    },
+    {
+      "source_index": 10,
+      "direction": "north",
+      "hebrew_direction": "צפון/לשמאלו",
+      "combination": "הוי"
+    }
+  ],
+  "weights": {
+    "status": "NOT_DEFINED_BY_SOURCE",
+    "source_indices_are_weights": false,
+    "rule": "Do not infer probability weights from source indices."
+  },
+  "emet": {
+    "spelling": "אמת",
+    "gematria": 441,
+    "identity": "21^2",
+    "status": "DERIVED_ARITHMETIC"
+  },
+  "maqom_ati": {
+    "source_reference": "Sefer Yetzirah 1:8 + Gra commentary",
+    "engineering_abstraction": "RETURN_TO_REFERENCE",
+    "status": "ENGINEERING_ABSTRACTION"
+  }
+}
