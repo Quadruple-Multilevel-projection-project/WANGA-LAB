@@ -1,0 +1,23 @@
+version: "1.0"
+status: CONFIGURATION_READY
+systems:
+  github:
+    organization: Quadruple-Multilevel-projection-project
+    repositories:
+      wanga_lab: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB
+      cyber_department: https://github.com/Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department
+      ai231: https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io
+      ark_oversight: https://github.com/Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT
+  wix:
+    ark_research: https://beywolf5.wixsite.com/ark-research-compu
+    ark_research_method: https://beywolf5.wixsite.com/ark-research-compu/research#method
+    operational_ai_drift: https://beywolf5.wixsite.com/operational-ai-drift
+    international_framework: https://beywolf5.wixsite.com/international-ai-for
+    global_governance: https://beywolf5.wixsite.com/institute-for-global
+    global_governance_archive: https://beywolf5.wixsite.com/institute-for-global/research-archive
+    global_governance_technology: https://beywolf5.wixsite.com/global-algorithmic-g/technology-code
+  boundaries:
+    physical_claims: "must be independently verified"
+    computational_models: "must be labelled explicitly"
+    provenance: "mandatory"
+    evidence_receipts: "mandatory"
