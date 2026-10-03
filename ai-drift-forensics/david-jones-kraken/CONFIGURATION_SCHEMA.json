@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "KRAKEN Processor Configuration Record",
+  "type": "object",
+  "required": [
+    "configuration_id",
+    "processor_class",
+    "physical_or_simulated",
+    "verification_status"
+  ],
+  "properties": {
+    "configuration_id": {"type": "string"},
+    "processor_class": {"type": "string"},
+    "processor_model": {"type": ["string", "null"]},
+    "vendor": {"type": ["string", "null"]},
+    "physical_or_simulated": {
+      "type": "string",
+      "enum": ["PHYSICAL", "SIMULATION", "HYBRID", "HYPOTHETICAL"]
+    },
+    "quantum_positions": {"type": ["integer", "null"], "minimum": 0},
+    "control_interface": {"type": ["string", "null"]},
+    "data_interface": {"type": ["string", "null"]},
+    "latency_budget_ns": {"type": ["number", "null"], "minimum": 0},
+    "error_model": {"type": ["string", "null"]},
+    "evidence_reference": {"type": ["string", "null"]},
+    "verification_status": {
+      "type": "string",
+      "enum": [
+        "BUILT",
+        "SPECIFIED",
+        "PROTOTYPED",
+        "TESTED",
+        "VERIFIED",
+        "PLANNED",
+        "HYPOTHETICAL",
+        "NOT_YET_VERIFIED"
+      ]
+    }
+  }
+}
