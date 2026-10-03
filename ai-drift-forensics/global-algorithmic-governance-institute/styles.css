@@ -1,0 +1,88 @@
+:root {
+    --bg: #0b132b;
+    --panel: #1c2541;
+    --accent: #5bc0be;
+    --text: #ffffff;
+    --muted: #a8a8b8;
+    --border: rgba(91, 192, 190, 0.22);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    line-height: 1.65;
+}
+
+.container {
+    width: min(1120px, calc(100% - 32px));
+    margin: 0 auto;
+}
+
+.hero {
+    padding: 72px 0 56px;
+    background: linear-gradient(180deg, var(--panel), var(--bg));
+    border-bottom: 1px solid var(--border);
+}
+
+.eyebrow, .status {
+    display: inline-block;
+    margin: 0 0 16px;
+    padding: 5px 9px;
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    color: var(--accent);
+    font: 700 0.74rem/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    letter-spacing: 0.04em;
+}
+
+h1 { margin: 0; font-size: clamp(2.1rem, 6vw, 4.2rem); line-height: 1.05; }
+h2 { margin-top: 0; }
+h3 { margin-top: 0; color: var(--accent); }
+
+.subtitle { color: var(--accent); font-size: 1.15rem; margin: 14px 0; }
+.lead { max-width: 850px; margin: 0; font-size: 1.1rem; color: #ececf2; }
+
+main { padding: 34px 0 10px; }
+
+.panel {
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 26px;
+    margin-bottom: 22px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 22px;
+}
+
+.flow {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 24px;
+}
+
+.flow span {
+    padding: 8px 12px;
+    border-radius: 6px;
+    border: 1px solid var(--border);
+    background: rgba(0, 0, 0, 0.18);
+    font: 700 0.78rem/1.2 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+}
+
+.notice { border-inline-start: 4px solid var(--accent); }
+.muted { color: var(--muted); }
+code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+.footer { padding: 28px 0 50px; color: var(--muted); font-size: 0.85rem; }
+
+@media (max-width: 640px) {
+    .hero { padding-top: 48px; }
+    .panel { padding: 20px; }
+}
