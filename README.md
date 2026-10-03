@@ -2,7 +2,7 @@
 
 WANGA-LAB is the systems architecture and evidence-integrity layer for **AI drift forensics, provenance preservation, reconstruction, and independent verification**.
 
-**Architecture navigation:** [Protected Core → Independent Evidence Infrastructure](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/PROTECTED_CORE_AND_EVIDENCE_INFRASTRUCTURE.md) · [Rational Logic — Protected IP Boundary](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/RATIONAL_LOGIC_IP_BOUNDARY.md) · [Repository Ecosystem](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/REPOSITORY_ECOSYSTEM.md)
+**Architecture navigation:** [WANGA Global Computational Architecture](docs/WANGA_GLOBAL_COMPUTATIONAL_ARCHITECTURE.md) · [Protected Core → Independent Evidence Infrastructure](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/PROTECTED_CORE_AND_EVIDENCE_INFRASTRUCTURE.md) · [Rational Logic — Protected IP Boundary](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/RATIONAL_LOGIC_IP_BOUNDARY.md) · [Repository Ecosystem](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/REPOSITORY_ECOSYSTEM.md)
 
 ## WANGA and Rational Logic
 
@@ -36,7 +36,9 @@ The service is an evidence and forensic-analysis layer. It does not itself provi
 
 **WANGA OS → Global Work Manager → Model Fabric → Digital Model Agents → Providers / Runtimes → Evidence & Provenance → Drift Forensics & Verification → Rational Logic ↔ Neural Thinking Machine → Work Memory**
 
-Rational Logic is a protected reasoning component in this architecture. Its implementation is intentionally outside the public research corpus. See the protected-IP boundary documentation above.
+The expanded system architecture is documented in **[WANGA Global Computational Architecture](docs/WANGA_GLOBAL_COMPUTATIONAL_ARCHITECTURE.md)**.
+
+Rational Logic is a protected reasoning component in this architecture. Its implementation is intentionally outside the public research corpus.
 
 ## Evidence and verification
 
