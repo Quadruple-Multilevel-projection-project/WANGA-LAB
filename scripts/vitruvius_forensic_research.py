@@ -90,9 +90,9 @@ def make_tasks() -> list[dict]:
         ))
 
     tasks += [
-        task("VIT-COMP-LEVEL-1","composition_tests","Vitruvius units relations combinations parts whole","composition_level":"units_to_combinations"),
-        task("VIT-COMP-LEVEL-2","composition_tests","Vitruvius combinations composition of compositions","composition_level":"compositions_of_compositions"),
-        task("VIT-CORRESPONDENCE","composition_tests","Vitruvius structural correspondence preserved relations","acceptance":["correspondence relation named","evidence refs retained"]),
+        task("VIT-COMP-LEVEL-1","composition_tests","Vitruvius units relations combinations parts whole",composition_level="units_to_combinations"),
+        task("VIT-COMP-LEVEL-2","composition_tests","Vitruvius combinations composition of compositions",composition_level="compositions_of_compositions"),
+        task("VIT-CORRESPONDENCE","composition_tests","Vitruvius structural correspondence preserved relations",acceptance=["correspondence relation named","evidence refs retained"]),
         task("VIT-CLAIM-50-CHAPTERS","forensic_claim",'"De Architectura" "50 chapters" Vitruvius',
              claim="De Architectura has 50 chapters",
              method="reconcile actual chapter boundaries across books and editions; never infer from a secondary summary",
