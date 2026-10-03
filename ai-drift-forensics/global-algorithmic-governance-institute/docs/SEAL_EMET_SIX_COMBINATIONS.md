@@ -95,3 +95,63 @@ Before generating the first-order logic layer, extract the additional requested 
 7. any additional constraints associated with "מקום אתי".
 
 Only after that comparison should the first-order predicates be generated.
+
+
+## Variant-control requirement
+
+The six permutations are invariant as a set, but secondary sources can present them in different textual orders or pair them to directions differently.
+
+Examples:
+
+- Gra version 1:13 (Sefaria): `יהו, היו, ויה, והי, יוה, הוי` mapped to above, below, east, west, south, north respectively.
+- *Otzar Eden HaGanuz* lists the six seals in the sequence `יהו, יוה, הוי, היו, ויה, והי` without using that same directional sequence.
+
+Therefore the canonical machine record must contain:
+
+`source_version + source_index + direction + combination`
+
+and must never silently merge different textual orders.
+
+## Weight-slot mathematics
+
+Define the six source positions as a six-dimensional weight vector:
+
+[
+W = (w_5,w_6,w_7,w_8,w_9,w_{10})
+]
+
+At this extraction stage:
+
+[
+w_5,ldots,w_{10} ;=; 	ext{UNASSIGNED}
+]
+
+The source supplies the six positional slots, not numeric resonance/probability values.
+
+Each seal can be encoded as a basis vector:
+
+[
+e_i in mathbb{R}^6,qquad iin{5,ldots,10}
+]
+
+and the weighted state can later be represented as:
+
+[
+X = sum_{i=5}^{10} w_i e_i
+]
+
+No normalization constraint such as (sum_i w_i=1) is imposed yet; that would be an engineering choice requiring a later specification.
+
+## Permutation-matrix representation
+
+For the ordered symbols ((י,ה,ו)), each seal is also a (3	imes3) permutation matrix (P_pi), where (piin S_3).
+
+Thus the minimal structural object is:
+
+[
+Seal_i = (source_index_i, direction_i, pi_i, P_{pi_i}, w_i)
+]
+
+with `w_i` unassigned at this stage.
+
+This representation is the handoff boundary for the next First-Order Logic layer.
