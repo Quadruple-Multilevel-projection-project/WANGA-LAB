@@ -30,3 +30,8 @@ This is PROTOTYPED, not TESTED or VERIFIED. The GitHub contents write establishe
 3. Add deterministic lineage queries.
 4. Add compatibility evidence and validation state.
 5. Add the explicit Vitruvius → Rational Logic handoff contract.
+
+
+## Probabilistic I/O Interface
+
+The existing frontend is preserved. A new Probabilistic I/O view exposes the proposal-only boundary implemented in `wanga_runtime/probabilistic_io.py`. It does not execute actions or mutate state.
