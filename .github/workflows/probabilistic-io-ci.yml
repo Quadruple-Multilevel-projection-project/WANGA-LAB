@@ -4,7 +4,10 @@ on:
   pull_request:
     paths:
       - 'wanga_runtime/probabilistic_io.py'
+      - 'wanga_runtime/continuity.py'
       - 'tests/test_probabilistic_io.py'
+      - 'tests/test_continuity.py'
+      - 'tests/__init__.py'
       - 'apps/vitruvius-architect/**'
       - '.github/workflows/probabilistic-io-ci.yml'
   push:
