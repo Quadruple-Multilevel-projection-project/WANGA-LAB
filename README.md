@@ -2,6 +2,8 @@
 
 WANGA-LAB is the systems architecture and evidence-integrity layer for **AI drift forensics, provenance preservation, reconstruction, and independent verification**.
 
+Project Handoff & Continuation Protocol: See docs/NEXT-MODEL-HANDOFF-KRAKEN.md for model-to-model transition rules and evidence discipline requirements.
+
 **Architecture navigation:** [Protected Core → Independent Evidence Infrastructure](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/PROTECTED_CORE_AND_EVIDENCE_INFRASTRUCTURE.md) · [Rational Logic — Protected IP Boundary](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/RATIONAL_LOGIC_IP_BOUNDARY.md) · [Repository Ecosystem](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/REPOSITORY_ECOSYSTEM.md)
 
 ## WANGA and Rational Logic
