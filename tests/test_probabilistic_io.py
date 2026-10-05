@@ -13,8 +13,31 @@ class ProbabilisticIOInterfaceTests(unittest.TestCase):
     def setUp(self):
         self.io = ProbabilisticIOInterface()
 
+    @staticmethod
+    def valid_logic():
+        return {
+            "first_order": {
+                "internal": "checked",
+                "external": "checked",
+                "coordination": "checked",
+            },
+            "second_order": {
+                "part_1": "checked",
+                "part_2": "checked",
+                "part_3": "checked",
+            },
+            "private_logic": {
+                "part_1": "open",
+                "part_2": "open",
+                "part_3": "open",
+            },
+            "private_complete": False,
+            "investigation_complete": False,
+            "contradictions": [],
+        }
+
     def test_valid_request_produces_structured_proposal(self):
-        result = self.io.propose({"action": "write", "payload": "hello"})
+        result = self.io.propose({"action": "write", "payload": "hello", "logical_consistency": self.valid_logic()})
         self.assertEqual(result.supervisor_status, PENDING)
         self.assertEqual(result.logical_state_id, STATE)
         self.assertTrue(result.validation.valid)
@@ -30,7 +53,7 @@ class ProbabilisticIOInterfaceTests(unittest.TestCase):
 
     def test_execution_boundary_halts(self):
         result = self.io.propose(
-            {"action": "write", "payload": "hello", "execute": True}
+            {"action": "write", "payload": "hello", "execute": True, "logical_consistency": self.valid_logic()}
         )
         self.assertEqual(result.payload, HALT)
         self.assertIn(
@@ -40,7 +63,7 @@ class ProbabilisticIOInterfaceTests(unittest.TestCase):
 
     def test_state_mutation_boundary_halts(self):
         result = self.io.propose(
-            {"action": "write", "payload": "hello", "mutate_state": True}
+            {"action": "write", "payload": "hello", "mutate_state": True, "logical_consistency": self.valid_logic()}
         )
         self.assertEqual(result.payload, HALT)
         self.assertIn(
