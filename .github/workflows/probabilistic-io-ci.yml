@@ -29,5 +29,5 @@ jobs:
           python-version: '3.12'
       - name: Syntax check
         run: python -m compileall -q wanga_runtime tests/test_probabilistic_io.py
-      - name: Boundary tests
-        run: python -m unittest -v tests.test_probabilistic_io
+      - name: Boundary and continuity tests
+        run: python -m unittest -v tests.test_probabilistic_io tests.test_continuity
