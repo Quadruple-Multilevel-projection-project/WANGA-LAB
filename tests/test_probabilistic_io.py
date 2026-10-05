@@ -49,7 +49,8 @@ class ProbabilisticIOInterfaceTests(unittest.TestCase):
         result = self.io.propose({"action": "write"})
         self.assertEqual(result.payload, HALT)
         self.assertFalse(result.validation.valid)
-        self.assertEqual(result.validation.missing_context, ("payload",))
+        self.assertIn("payload", result.validation.missing_context)
+        self.assertIn("logical_consistency", result.validation.missing_context)
 
     def test_execution_boundary_halts(self):
         result = self.io.propose(
