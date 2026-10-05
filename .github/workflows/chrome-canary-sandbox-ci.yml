@@ -1,0 +1,36 @@
+name: Chrome Canary Neural Sandbox CI
+
+on:
+  pull_request:
+    paths:
+      - 'apps/chrome-canary-nn-sandbox/**'
+      - '.github/workflows/chrome-canary-sandbox-ci.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'apps/chrome-canary-nn-sandbox/**'
+      - '.github/workflows/chrome-canary-sandbox-ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  static-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Validate manifest JSON
+        run: node -e "JSON.parse(require('fs').readFileSync('apps/chrome-canary-nn-sandbox/manifest.json','utf8'))"
+      - name: Validate JavaScript syntax
+        run: node --check apps/chrome-canary-nn-sandbox/nn_sandbox_engine.js
+      - name: Validate required sandbox files
+        run: |
+          test -f apps/chrome-canary-nn-sandbox/index.html
+          test -f apps/chrome-canary-nn-sandbox/manifest.json
+          test -f apps/chrome-canary-nn-sandbox/nn_sandbox_engine.js
+          test -f apps/chrome-canary-nn-sandbox/sw.js
+          test -f apps/chrome-canary-nn-sandbox/guide_deployment.md
