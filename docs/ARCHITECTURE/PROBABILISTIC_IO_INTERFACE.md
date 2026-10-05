@@ -47,3 +47,50 @@ contradiction vector.
 
 The existing `apps/vitruvius-architect/` browser prototype is retained. The new interface
 is an additional view inside that frontend; it does not replace the saved frontend.
+
+
+## Deterministic logical-consistency gate
+
+Before a proposal is accepted, the request must carry a `logical_consistency` object containing three distinct layers:
+
+1. **First-order logic** — `internal`, `external`, `coordination`.
+2. **Second-order logic / type-genus layer** — three distinct parts: `part_1`, `part_2`, `part_3`.
+3. **Private/particular logic** — three distinct parts for the current investigation.
+
+The private/particular layer is **not** treated as a third or higher logical order. It is the completion layer for the specific investigation.
+
+The gate rejects:
+- missing parts;
+- explicit cross-level contradictions;
+- treating private logic as a higher order;
+- closing an investigation before private logic is complete.
+
+A rejection uses the exact halt marker and a machine-readable contradiction/missing-context vector.
+
+## Deterministic session continuity
+
+The repository now contains `wanga_runtime/continuity.py`. It provides:
+
+- `LogicalConsistencyGate` for the three-layer structural check;
+- `SessionCheckpoint` for minimal sufficient session state;
+- deterministic JSON serialization;
+- checkpoint validation;
+- a SHA-256 digest for the serialized checkpoint.
+
+A checkpoint records objective, status, completed action, facts, decisions, evidence, repository state, changed files, blockers, open questions, remaining gap, exactly one next action, prohibited drift targets, unverified claims, and logical-consistency state.
+
+A checkpoint is a **continuity artifact, not an authority above current evidence**. On a new session, current repository/CI evidence outranks an old checkpoint. If the checkpoint conflicts with current evidence, it is stale and must be reconstructed.
+
+### Session transition
+
+`SESSION → CHECKPOINT → RESTORE → VERIFY AGAINST CURRENT STATE → NEXT ACTION`
+
+The system must not claim that a conversation-ending note is automatically written by the runtime. The deterministic mechanism is implemented; the host/agent must invoke checkpoint creation at the end of each work session.
+
+## Verification boundary
+
+The implementation is not `VERIFIED` merely because code exists. The required progression remains:
+
+`SPECIFIED → PROTOTYPED → BUILT → TESTED → VERIFIED`
+
+with evidence at each transition.
