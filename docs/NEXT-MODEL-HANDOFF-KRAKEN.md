@@ -1,55 +1,142 @@
 # NEXT MODEL HANDOFF — QUANTUM PROCESSOR / KRAKEN
 
-> This file is an execution note. The next model/session should read it and continue from the repository state rather than restarting the discussion.
+> EXECUTION NOTE / MANDATORY OUTPUT CONTRACT
+>
+> This file is the handoff. The next model must read it before acting and continue from the repository state. It is not a request for a new proposal.
 
-## Operating instruction
+## 1. OPERATING DIRECTIVE
 
 Continue the concrete build of the Quantum Processor / Kraken prototype.
 
-Do not replace execution with another high-level proposal.
+Do not restart the discussion.
+Do not replace execution with a high-level architecture proposal.
+Do not create a new strategic objective merely because an evidence gap exists.
 
-## Required sequence
+Required sequence:
 
-1. READ — inspect WANGA-LAB and accessible GitHub repositories for existing Quantum/Kraken-related code, specifications, interfaces, dependencies, tests, and documentation.
-2. EXTRACT — record only artifacts actually found. Preserve exact repository names, paths, symbols, interfaces, dependencies, and source lineage.
-3. FORMALIZE / DERIVE / MAP — make transformations explicit. Never silently convert an inference into a source fact.
-4. IMPLEMENT — build the minimum viable prototype from material supported by evidence.
-5. TEST — run available tests and add focused tests for implemented behavior. Record inputs, outputs, and failures.
-6. VERIFY — mark a component VERIFIED only when executable or documentary evidence actually supports that status.
+SOURCE → EXTRACTED → FORMALIZED → DERIVED → MAPPED → IMPLEMENTED → TESTED → VERIFIED
 
-## Status vocabulary
-
-Use only:
-
-SOURCE → EXTRACTED → FORMALIZED → DERIVED → MAPPED → VERIFIED
-
-and, where applicable:
+Use these terminal/open states where required:
 
 HYPOTHETICAL / NOT_YET_VERIFIED / OPEN / BLOCKED
 
-No VERIFIED without evidence.
+No claim may be promoted to VERIFIED without evidence.
 
-## Attribution boundary
+## 2. SOURCE AND PROVENANCE RULE
 
-Previous GitHub searches did NOT verify a repository belonging to David Jones/Kraken.
+For every substantive claim, preserve:
 
-A repository named dhcgn/SuperDuperGoCrypto was found during a broader SuperDuper search, but its connection to the intended quantum processor is NOT_YET_VERIFIED.
+- exact source/repository
+- exact path, symbol, interface, or document location when available
+- what was directly observed
+- what was derived
+- what remains uncertain
 
-Do not infer ownership, authorship, architecture, or relevance from repository naming or semantic similarity alone.
+Repository names, semantic similarity, filenames, or suggestive terminology are NOT evidence of authorship, ownership, provenance, or architectural identity.
 
-## First concrete deliverable
+Previous searches did NOT verify a David Jones/Kraken quantum repository.
 
-Leave the repository in a buildable/testable state and record:
+dhcgn/SuperDuperGoCrypto was found in a broader SuperDuper search, but its connection to the intended quantum processor remains NOT_YET_VERIFIED.
 
-- sources inspected
-- relevant artifacts found
-- exact implementation started/completed
-- tests executed and results
-- unresolved dependencies/questions
-- status of each major component
-- commit/branch containing the work
+Do not silently convert that result into attribution.
 
-## Handoff rule
+## 3. IMPLEMENTATION RULE
+
+Build only what the available evidence supports.
+
+If an interface, dependency, algorithm, hardware assumption, or external library is missing:
+
+- do not invent it;
+- record it as NOT_YET_VERIFIED, OPEN, or BLOCKED;
+- continue with independently supported work where possible.
+
+Simulation must be explicitly distinguished from real quantum hardware.
+
+## 4. MANDATORY OUTPUT FILTER / SIEVE
+
+Before returning ANY result to the user or handing work to another model, pass the result through this filter.
+
+### FILTER A — SOURCE
+
+Is the statement directly supported by an inspected source?
+
+- YES → retain as SOURCE / EXTRACTED.
+- NO → it cannot be presented as fact.
+
+### FILTER B — TRANSFORMATION
+
+Is it a formalization, derivation, or mapping from identified source material?
+
+- YES → label the transformation explicitly.
+- NO → do not present inference as derivation.
+
+### FILTER C — EVIDENCE
+
+Is there executable, test, documentary, or other directly inspectable evidence?
+
+- YES → identify the evidence.
+- NO → status remains NOT_YET_VERIFIED / OPEN / BLOCKED as appropriate.
+
+### FILTER D — ATTRIBUTION
+
+Does the result attribute code, architecture, authorship, or provenance to a person/project?
+
+- YES → require direct evidence for that attribution.
+- Otherwise mark NOT_YET_VERIFIED.
+
+### FILTER E — OUTPUT DISCIPLINE
+
+Return only what survived the previous filters.
+
+Do NOT fill missing evidence with plausible language.
+Do NOT upgrade confidence because a result sounds coherent.
+Do NOT hide contradictions.
+Do NOT substitute a summary for the requested execution artifact.
+
+### FILTER F — VERIFICATION
+
+A component may be emitted as VERIFIED only when the verification evidence is named and inspectable.
+
+Otherwise emit:
+
+NOT_YET_VERIFIED / OPEN / BLOCKED
+
+with the exact missing evidence.
+
+## 5. REQUIRED OUTPUT FORMAT
+
+Every execution checkpoint must report, in this order:
+
+1. ACTION
+   - What was actually done.
+
+2. SOURCE
+   - Exact repositories/files/interfaces inspected.
+
+3. EXTRACTED
+   - What was directly found.
+
+4. DERIVED / MAPPED
+   - Only transformations that can be traced back to the extracted material.
+
+5. IMPLEMENTED
+   - Exact files/components changed.
+
+6. TESTED
+   - Exact tests/commands and results.
+
+7. VERIFICATION
+   - Evidence supporting VERIFIED, or the reason it remains NOT_YET_VERIFIED / OPEN / BLOCKED.
+
+8. NEXT ACTION
+   - Only the next action justified by the evidence.
+
+9. COMMIT
+   - Exact commit/branch when repository changes were made.
+
+If a field has no evidence, say so explicitly. Do not manufacture a value.
+
+## 6. HANDOFF RULE
 
 If this model/session ends, the next model must:
 
@@ -57,17 +144,21 @@ If this model/session ends, the next model must:
 2. inspect the current Git state;
 3. inspect the latest implementation and evidence;
 4. continue from the existing state;
-5. preserve the evidence/status boundary;
-6. avoid restarting the analysis unless the repository state requires it.
+5. apply the mandatory output filter before every handoff;
+6. preserve unresolved contradictions and evidence gaps;
+7. avoid restarting analysis unless the repository state requires it.
 
-## WANGA-LAB discipline
+The next model is expected to execute, test, document, and verify—not merely summarize.
+
+## 7. WANGA-LAB DISCIPLINE
 
 Stay on the analytical axis.
 
-Do not invent missing source material.
-Do not promote interpretation to fact.
-Do not claim VERIFIED without evidence.
-Do not erase unresolved contradictions; record them.
-Do not create a new strategic objective merely because a gap was found.
+Source ≠ extraction.
+Extraction ≠ formalization.
+Formalization ≠ derivation.
+Derivation ≠ verification.
+Meaning does not substitute for evidence.
+Coherence does not substitute for proof.
 
 The objective is concrete implementation followed by evidence-backed verification.
