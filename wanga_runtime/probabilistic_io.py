@@ -11,6 +11,8 @@ from hashlib import sha256
 import json
 from typing import Any
 
+from .continuity import LogicalConsistencyGate
+
 
 HALT = "STATUS: LOGICAL_HALT_TRIGGERED"
 PENDING = "PENDING_VERIFICATION"
@@ -82,6 +84,10 @@ class ProbabilisticIOInterface:
             contradictions.append(
                 "STATE_MUTATION_REQUESTED_INSIDE_PROPOSAL_ONLY_BOUNDARY"
             )
+
+        logic_result = LogicalConsistencyGate.validate(request.get("logical_consistency"))
+        contradictions.extend(logic_result.contradictions)
+        missing.extend(logic_result.missing_context)
 
         if contradictions or missing:
             return ValidationResult(False, tuple(contradictions), tuple(missing))
