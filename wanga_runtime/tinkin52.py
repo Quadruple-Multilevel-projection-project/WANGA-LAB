@@ -39,7 +39,16 @@ WHEEL_DEFINITIONS: Mapping[str, Tuple[Tuple[str, str], ...]] = {
     ),
 }
 
-ENVELOPE_VERTEX_COUNT = 13\nNESTED_LEVELS = (\n    "TERM_NAME_NETWORK",\n    "RELATION_MATTER_SPACE",\n    "SENTENCE_CONFIGURATION",\n    "INFERENCE_SPACE",\n    "META_LOGIC_ORCHESTRATOR",\n)\n\nDRIFT_AXES: Mapping[str, float] = {
+ENVELOPE_VERTEX_COUNT = 13
+NESTED_LEVELS = (
+    "TERM_NAME_NETWORK",
+    "RELATION_MATTER_SPACE",
+    "SENTENCE_CONFIGURATION",
+    "INFERENCE_SPACE",
+    "META_LOGIC_ORCHESTRATOR",
+)
+
+DRIFT_AXES: Mapping[str, float] = {
     "alpha_up": 0.02,
     "beta_down": 0.02,
     "gamma_forward": 0.03,
@@ -291,7 +300,10 @@ class Tinkin52:
             "gates": 1716,
             "endpoints": 3432,
             "hebrew_letters": len(HEBREW_LETTERS),
-            "drift_axes": len(DRIFT_AXES),\n            "envelope_vertices": ENVELOPE_VERTEX_COUNT,\n            "nested_levels": len(NESTED_LEVELS),\n            "logic_count_delta": 13,
+            "drift_axes": len(DRIFT_AXES),
+            "envelope_vertices": ENVELOPE_VERTEX_COUNT,
+            "nested_levels": len(NESTED_LEVELS),
+            "logic_count_delta": 13,
         }
 
     def step(
@@ -381,7 +393,8 @@ class Tinkin52:
                 }
                 for s in result.networks
             ],
-            "architecture_contract": self.architecture_contract(),\n            "validation": self.validate(),
+            "architecture_contract": self.architecture_contract(),
+            "validation": self.validate(),
         }
 
 
