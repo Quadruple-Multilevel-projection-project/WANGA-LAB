@@ -57,6 +57,18 @@ Research
 → agent-discoverable capability
 → transaction
 
+## 2026-10-08 — Future-field operating principle
+
+The future is treated as a field that generates meanings, requirements, constraints, and engineering problems through actual development. WANGA-LAB does not claim to invent those meanings or control their outcomes. Present work can influence conditions; it cannot pre-specify the result.
+
+Accordingly, the pipeline is future-facing but not future-dependent: build useful capabilities now, observe what emerges, identify the requirement, adapt the relevant logic/configuration layer, test, and verify.
+
+The persistent research object is logic and its structure. Market, technology, application, architecture, and demand are dynamic variables. The engineering asset therefore includes extraction plus relations, derivations, boundaries, configuration, drift behavior, verification, and construction of more advanced structures.
+
+A source is not treated as logical merely because it is important or meaningful. Logic extraction requires a demonstrated continuous logical structure. This rule applies across historical, philosophical, legal, scientific, and other sources individually.
+
+Prospective Logic Engineering is a research hypothesis: familiar engineering activities may increasingly be applied to logical structures and reasoning architectures as engineering objects. It is not presented as an already-established profession or market fact.
+
 ## Non-claims
 
 This document does not establish that the future agentic network will adopt WANGA-LAB's architecture.
