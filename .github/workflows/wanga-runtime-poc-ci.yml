@@ -1,0 +1,31 @@
+name: WANGA Runtime POC CI
+
+on:
+  pull_request:
+    paths:
+      - 'wanga_runtime/**'
+      - 'tests/test_wanga_runtime_state_evidence.py'
+      - '.github/workflows/wanga-runtime-poc-ci.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'wanga_runtime/**'
+      - 'tests/test_wanga_runtime_state_evidence.py'
+      - '.github/workflows/wanga-runtime-poc-ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  runtime-poc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax check
+        run: python -m compileall -q wanga_runtime tests/test_wanga_runtime_state_evidence.py
+      - name: Runtime state and evidence tests
+        run: python -m unittest -v tests.test_wanga_runtime_state_evidence
