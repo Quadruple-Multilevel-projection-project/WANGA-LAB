@@ -146,6 +146,30 @@ CHECK ACTUAL CONNECTION STATE → CONFIGURE → TEST → VERIFY
 
 Canonical documentation should be maintained in Hebrew and English, while technical terms and structural relations remain stable across additional languages.
 
+## 2026-10-08 — Consolidated operating model
+
+### Future
+
+Future is not an invented target. It is an observation field in which new meanings and requirements emerge. We can influence conditions without owning the resulting meaning or outcome.
+
+### Logic Mine
+
+The asset is not exhausted by extraction. It is upgraded through:
+
+**EXTRACTION → RECONSTRUCTION → LOGIC IDENTIFICATION → RELATIONS / DERIVATIONS → BOUNDARIES → CONFIGURATION → DRIFT FORENSICS → VERIFICATION → ADVANCED STRUCTURE**
+
+### Engineering field
+
+The prospective field applies ordinary engineering disciplines—abstraction, decomposition, design, construction, testing, debugging, verification, optimization—to logical structures and reasoning architectures. It is a field-of-action hypothesis to be demonstrated, not assumed.
+
+### Source rule
+
+Do not force logic onto every source. A source is a Logic Mine candidate only where a continuous logical structure can be demonstrated. Meaning, literary value, importance, or formal appearance alone are insufficient.
+
+### Operating rule
+
+**Build what is useful now → observe what the future actually produces → identify the new problem → adapt the relevant logic/configuration layer → test → verify.**
+
 ## 10. Canonical Summary
 
 WANGA-LAB is being developed as an evidence-bound Continuous Logic Mine: mine emerging capabilities and logic, formalize and test them, turn validated results into reusable products, deploy them, collect evidence, and use that evidence to drive the next mining cycle.
