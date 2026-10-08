@@ -117,3 +117,34 @@ Sources:
 - IDC, Worldwide Agentic AI Platforms Forecast, 2026–2030 (2026).
 
 These figures are external market forecasts and should not be presented as WANGA valuation.
+
+
+## 2026-10-08 — Consolidated field and strategy conclusions
+
+### Future is an observation field, not an invented target
+
+The working position is not that WANGA can predict or control future outcomes. Future conditions generate meanings, requirements, and problems that cannot be fully specified in advance. WANGA can influence present conditions, but must remain adaptive to the results.
+
+### Current work / future direction
+
+The program is deliberately future-facing without being future-dependent. Current problems in agents, skills, discovery, provenance, verification, governance, and drift can be addressed now. The same research infrastructure can then be reconfigured as future requirements become observable.
+
+### Logic as the persistent research object
+
+The strategic constant is LOGIC; technology, market, application, architecture, and demand are dynamic variables. The asset therefore includes not only extracted logic, but knowledge of configuration, derivations, boundaries, drift behavior, domain fit, verification, and construction of more advanced logical structures.
+
+### Prospective engineering field
+
+The hypothesis is that increasing system autonomy may move some engineering work toward the design and verification of logical structures and reasoning architectures. This does not require claiming that existing engineers disappear or that a mature discipline already exists. It is a field-of-action hypothesis to be tested through practical engineering and market evidence.
+
+### Time advantage
+
+Time can increase the value of the work only through accumulated evidence, reusable structures, tested configurations, and demonstrated utility. The strategy is therefore to build useful capabilities now while continuously preparing for future requirements. Market direction and market speed remain separate variables.
+
+### Market test
+
+The market, not the forecast, is the final test. If demand, use, revenue, licensing, or repeated operational adoption emerges, the relevant hypothesis gains evidence. If the market changes direction, the research changes configuration and follows the newly relevant logic layer.
+
+### Core distinction
+
+Do not claim ownership of future outcomes. Seek strong engineering control over the problems that are observable now and over the capability required to respond when future problems become observable.
