@@ -122,3 +122,14 @@ The protected layer may retain:
 **implementation details · algorithms · mechanisms · proprietary technical material**
 
 This separation is intentional. The public system documents the evidence capability without publishing the protected reasoning implementation.
+
+
+## Continuous Logic Mine
+
+WANGA-LAB is also operated as a **continuous mine of logic**. The mine is the ongoing research capability; its outputs can become future-ready products rather than a finite archive of extracted rules.
+
+**Continuous Logic Mining → Logic Architecture → Formalization / Configuration → Verification → Productization → Agent / Runtime Package → Deployment / Licensing / Rental → Operational Evidence → New Mining**
+
+The target is a future agent-centric market in which reusable logic capabilities can be discovered, configured, licensed, rented, or integrated for a particular agent, task, workflow, or runtime. The commercial market and specific product demand remain hypotheses until validated.
+
+See research/LOGIC_MINE_CONTINUOUS_PRODUCTIZATION.md.
