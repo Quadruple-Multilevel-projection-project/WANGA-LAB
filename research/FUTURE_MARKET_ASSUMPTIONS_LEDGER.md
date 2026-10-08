@@ -73,3 +73,47 @@ The central question is:
 OBSERVATION → ASSUMPTION → EVIDENCE → GAP → ARCHITECTURE CHANGE → TEST → NEW OBSERVATION
 
 This ledger is intended to accumulate the extracted assumptions over time rather than overwrite previous conclusions.
+
+
+## Valuation horizon model
+
+Valuation is tracked as a scenario model, not as a guaranteed price forecast.
+
+### S5 / 2031 working scenario
+
+Under S5, the addressable market for agentic execution and its supporting capability infrastructure expands materially. Current external forecasts already place agentic AI/platform markets at tens to hundreds of billions of dollars by 2030, depending on scope and definition. These are market forecasts, not forecasts for WANGA-LAB.
+
+### S10 / 2036 extension
+
+S10 extends the S5 scenario by assuming continued migration of economically valuable work toward autonomous systems and increasing demand for reusable capabilities, logic, orchestration, verification, and governance.
+
+S10 is a strategic scenario only.
+
+### WANGA valuation rule
+
+Do not mechanically increase the company's valuation merely because the forecast horizon gets closer.
+
+Instead update four independent variables:
+
+1. Market size evidence — external market estimates and actual spending.
+2. Capability scarcity — evidence that the required logic/capability layer is difficult to produce.
+3. WANGA technical proof — demonstrated extraction, verification, reuse, and productization.
+4. Commercial proof — customers, recurring revenue, licensing, usage, or strategic contracts.
+
+Illustrative valuation bands should therefore be recalculated whenever one of these variables changes.
+
+### Evidence rule
+
+A future market becoming larger does not prove that WANGA captures it.
+
+Use:
+
+MARKET GROWTH ≠ CAPTURE ≠ COMPANY VALUE
+
+Current market evidence: Gartner forecasts agentic AI software spending at $985B by 2030; IDC forecasts agentic AI platforms at $41.5B by 2030. The difference demonstrates why market definitions must be kept explicit.
+
+Sources:
+- Gartner, Forecast Analysis: Agentic AI Spending in Software Markets (2026).
+- IDC, Worldwide Agentic AI Platforms Forecast, 2026–2030 (2026).
+
+These figures are external market forecasts and should not be presented as WANGA valuation.
