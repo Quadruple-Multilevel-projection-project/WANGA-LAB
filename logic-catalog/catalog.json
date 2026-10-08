@@ -1,0 +1,14 @@
+{
+  "catalog_version": "0.1.0",
+  "status": "PLANNED",
+  "targets": {
+    "candidate_primitives": 50,
+    "candidate_bundles": 100
+  },
+  "optimization": {
+    "objective": "maximize_verified_capability_coverage_with_minimal_logic_components",
+    "metrics": ["coverage", "redundancy", "composition", "verification", "configuration"]
+  },
+  "primitives": [],
+  "bundles": []
+}
