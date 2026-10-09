@@ -9,6 +9,8 @@ The repository has two connected research directions:
 
 The second direction does **not** claim to predict or control future outcomes. The future is treated as a field in which new meanings, requirements, constraints, and engineering problems emerge. The research objective is therefore **future-readiness, not future invention**.
 
+**Current productization record (2026-10-09):** [Business pivot & first logic demo](docs/PRODUCTIZATION_AND_FIRST_LOGIC_DEMO_2026-10-09.md) — the AI Logic Auditor is a prototype; its findings are NOT_YET_VERIFIED.
+
 **Architecture navigation:** [Protected Core → Independent Evidence Infrastructure](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/PROTECTED_CORE_AND_EVIDENCE_INFRASTRUCTURE.md) · [Rational Logic — Protected IP Boundary](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/RATIONAL_LOGIC_IP_BOUNDARY.md) · [Repository Ecosystem](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/REPOSITORY_ECOSYSTEM.md)
 
 ## WANGA and Rational Logic
