@@ -29,8 +29,8 @@ This ordering does not cancel WANGA-LAB's forensic research. It separates the ne
 ## 3. First interactive sample: AI Logic Auditor
 
 **Product name:** AI Logic Auditor Demo  
-**Project:** `productos-agents/productos-ai-logic-auditor-demo-8946d3a4`  
-**GitHub:** https://github.com/productos-agents/productos-ai-logic-auditor-demo-8946d3a4  
+**ProductOS project ID:** `8946d3a4-4c84-4a1f-b151-ac267809b82a`  
+**GitHub sync:** configured target reported by ProductOS, but repository file availability and a successful push have not yet been verified.  
 **Preview:** https://69bb8cc01894754ca7570cde42f7bb57.preview.bl.run
 
 The prototype demonstrates source-grounded checks on three business examples:
