@@ -1,0 +1,30 @@
+{
+  "@context": "https://agenticresourcediscovery.org/context/v1",
+  "identifier": "urn:air:example.invalid:wanga:logic-catalog",
+  "displayName": "WANGA Logic Capability Catalog — example only",
+  "type": "application/json",
+  "description": "Non-production ARD entry example. It demonstrates a discovery envelope only; publisher identity, public deployment, and catalog conformance are not verified.",
+  "representativeQueries": [
+    "find a source-traceable logic primitive",
+    "find a tested runtime evidence capability",
+    "compare candidate bundles by verified capability coverage"
+  ],
+  "capabilities": [
+    "logic-primitive-discovery",
+    "evidence-provenance",
+    "bundle-candidate-discovery"
+  ],
+  "version": "0.1.0",
+  "metadata": {
+    "publicationStatus": "EXAMPLE_ONLY",
+    "verificationStatus": "NOT_YET_VERIFIED",
+    "sourceRepository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "catalogSchemaVersion": "1.0.0"
+  },
+  "data": {
+    "catalog_id": "WANGA-LOGIC-CAPABILITY-CATALOG",
+    "catalog_version": "0.1.0",
+    "status": "EXAMPLE_NOT_PUBLISHED",
+    "verification_boundary": "Only PR #74 deterministic runtime test scope is TESTED; no catalog publication or ARD conformance is claimed."
+  }
+}
