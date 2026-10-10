@@ -1,0 +1,36 @@
+name: Probabilistic I/O Boundary CI
+
+on:
+  pull_request:
+    paths:
+      - 'wanga_runtime/probabilistic_io.py'
+      - 'wanga_runtime/continuity.py'
+      - 'tests/test_probabilistic_io.py'
+      - 'tests/test_continuity.py'
+      - 'tests/__init__.py'
+      - 'apps/vitruvius-architect/**'
+      - '.github/workflows/probabilistic-io-ci.yml'
+  push:
+    branches:
+      - main
+    paths:
+      - 'wanga_runtime/probabilistic_io.py'
+      - 'tests/test_probabilistic_io.py'
+      - 'apps/vitruvius-architect/**'
+      - '.github/workflows/probabilistic-io-ci.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  boundary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Syntax check
+        run: python -m compileall -q wanga_runtime tests/test_probabilistic_io.py
+      - name: Boundary and continuity tests
+        run: python -m unittest -v tests.test_probabilistic_io tests.test_continuity
