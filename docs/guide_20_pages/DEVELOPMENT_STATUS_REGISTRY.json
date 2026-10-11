@@ -1,0 +1,273 @@
+{
+  "schema_version": "1.0.0",
+  "audit_date": "2026-10-11",
+  "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+  "branch_audited": "main",
+  "exact_root_paths_not_found": [
+    "01_logic_packages/",
+    "02_deterministic_filters/",
+    "03_intellectual_infrastructure/"
+  ],
+  "caveat": "Preliminary path/documentation audit, not full runtime/security verification; missing an exact path does not prove no equivalent exists elsewhere.",
+  "status_vocabulary": [
+    "BUILT",
+    "SPECIFIED",
+    "PROTOTYPED",
+    "TESTED",
+    "VERIFIED",
+    "PLANNED",
+    "HYPOTHETICAL",
+    "PARTIAL",
+    "BLOCKED",
+    "NOT_FOUND_IN_AUDITED_PATH"
+  ],
+  "issues": {
+    "schema": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/88",
+    "workbench": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/89",
+    "reward": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/90",
+    "market": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/91",
+    "tracking": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/92"
+  },
+  "articles": [
+    {
+      "article_id": "A01",
+      "number": 1,
+      "cluster": 1,
+      "title": "הקץ לכלכלת הביצוע ועליית הערך של הארכיטקטורה",
+      "path": "docs/guide_20_pages/01-end-of-execution-economy.md",
+      "implementation_status": "HYPOTHETICAL / RESEARCH DIRECTION",
+      "evidence_refs": [
+        "research/FUTURE_MARKET_ASSUMPTIONS_LEDGER.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/92"
+    },
+    {
+      "article_id": "A02",
+      "number": 2,
+      "cluster": 1,
+      "title": "עיוורון המיינסטרים והסירוב לבצע אלימינציה",
+      "path": "docs/guide_20_pages/02-mainstream-blind-spots-and-elimination.md",
+      "implementation_status": "PARTIAL — research ledgers exist; industry study not established",
+      "evidence_refs": [
+        "research/EMERGING_AGENT_LOGIC_MARKET_EVIDENCE.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/92"
+    },
+    {
+      "article_id": "A03",
+      "number": 3,
+      "cluster": 1,
+      "title": "מעבר מאי־ודאות ניחושית לשליטה דטרמיניסטית",
+      "path": "docs/guide_20_pages/03-from-guessing-to-deterministic-control.md",
+      "implementation_status": "PARTIAL — scoped evidence/control components exist",
+      "evidence_refs": [
+        "ai-drift-forensics/VERIFICATION_PROTOCOL.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/89"
+    },
+    {
+      "article_id": "A04",
+      "number": 4,
+      "cluster": 1,
+      "title": "הארכיטקטורה כעוגן קיומי בעידן של שינוי מואץ",
+      "path": "docs/guide_20_pages/04-architecture-as-stability-anchor.md",
+      "implementation_status": "PARTIAL — architecture maps exist; end-to-end stability not verified",
+      "evidence_refs": [
+        "ARCHITECTURE_ROADMAP.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/92"
+    },
+    {
+      "article_id": "A05",
+      "number": 5,
+      "cluster": 2,
+      "title": "מבוא לכלכלת לוגיקה וכריית מנגנונים",
+      "path": "docs/guide_20_pages/05-introduction-to-logic-economy.md",
+      "implementation_status": "SPECIFIED / RESEARCH EXISTS; canonical schema planned",
+      "evidence_refs": [
+        "research/LOGIC_MINE_RESEARCH_TRACKS.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/88"
+    },
+    {
+      "article_id": "A06",
+      "number": 6,
+      "cluster": 2,
+      "title": "קפסולות החלטה סגורות כמנוע צמיחה ארגוני",
+      "path": "docs/guide_20_pages/06-closed-decision-capsules.md",
+      "implementation_status": "PARTIAL — related contracts and narrow demo exist",
+      "evidence_refs": [
+        "docs/ARCHITECTURE_AGENT_CONTRACT_V1.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/88"
+    },
+    {
+      "article_id": "A07",
+      "number": 7,
+      "cluster": 2,
+      "title": "מניעת חורים התנהגותיים באמצעות Negative Constraints",
+      "path": "docs/guide_20_pages/07-negative-constraints.md",
+      "implementation_status": "PARTIAL — general controls exist; dedicated engine not established",
+      "evidence_refs": [
+        "ai-drift-forensics/CODEX_ENGINEERING_GUARDRAILS.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/88"
+    },
+    {
+      "article_id": "A08",
+      "number": 8,
+      "cluster": 2,
+      "title": "אימות ראיות ובדיקת תאימות בחבילות לוגיקה",
+      "path": "docs/guide_20_pages/08-evidence-validation-and-compliance.md",
+      "implementation_status": "PARTIAL / SCOPED VERIFIED — integrity tools and synthetic case exist",
+      "evidence_refs": [
+        "artifacts/drift-known-risk-001/README.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/88"
+    },
+    {
+      "article_id": "A09",
+      "number": 9,
+      "cluster": 3,
+      "title": "חומת האש הדטרמיניסטית מול דריפט ורעש נוירוני",
+      "path": "docs/guide_20_pages/09-deterministic-firewall-drift.md",
+      "implementation_status": "PARTIAL — forensic research and synthetic fixture exist",
+      "evidence_refs": [
+        "artifacts/drift-known-risk-001/README.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/89"
+    },
+    {
+      "article_id": "A10",
+      "number": 10,
+      "cluster": 3,
+      "title": "מנועי קונצנזוס ובדיקות תאימות בין רכיבים",
+      "path": "docs/guide_20_pages/10-consensus-and-compatibility-engines.md",
+      "implementation_status": "PLANNED — adjacent architecture artifacts exist; dedicated engine not found",
+      "evidence_refs": [
+        "docs/ARCHITECTURE_PATTERN_MATRIX_V1.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/88"
+    },
+    {
+      "article_id": "A11",
+      "number": 11,
+      "cluster": 3,
+      "title": "מגן ההוצאה לפועל (Execution Shields) והבטחת דטרמיניזם",
+      "path": "docs/guide_20_pages/11-execution-shields.md",
+      "implementation_status": "PLANNED / NOT VERIFIED as deployed component",
+      "evidence_refs": [
+        "docs/WANGA_GLOBAL_WORK_MANAGER_V2.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/91"
+    },
+    {
+      "article_id": "A12",
+      "number": 12,
+      "cluster": 3,
+      "title": "ניהול מערכות מבוזרות ללא תלות במודלים חיצוניים",
+      "path": "docs/guide_20_pages/12-distributed-systems-without-provider-dependence.md",
+      "implementation_status": "PARTIAL — evidence components exist; provider-independent runtime not demonstrated",
+      "evidence_refs": [
+        "src/crypto/sha256_chain.py"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/89"
+    },
+    {
+      "article_id": "A13",
+      "number": 13,
+      "cluster": 4,
+      "title": "מבנה ה-Repository והנדסת התיקיות ב-GitHub",
+      "path": "docs/guide_20_pages/13-repository-architecture-and-folder-engineering.md",
+      "implementation_status": "BUILT for registries; proposed package folder layout needs a decision",
+      "evidence_refs": [
+        "README.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/92"
+    },
+    {
+      "article_id": "A14",
+      "number": 14,
+      "cluster": 4,
+      "title": "מנהל המניפסטים ותצורת המערכת הדטרמיניסטית",
+      "path": "docs/guide_20_pages/14-manifest-registry-and-system-configuration.md",
+      "implementation_status": "PARTIAL — manifests and registries exist",
+      "evidence_refs": [
+        "docs/ARCHITECTURE_BUILD_MANIFEST.yml"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/92"
+    },
+    {
+      "article_id": "A15",
+      "number": 15,
+      "cluster": 4,
+      "title": "כתיבת בדיקות תקינות ומבחני קפסולה",
+      "path": "docs/guide_20_pages/15-capsule-tests-and-conformance.md",
+      "implementation_status": "PARTIAL — test infrastructure exists; capsule conformance planned",
+      "evidence_refs": [
+        "tests/test_hash_chain.py"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/88"
+    },
+    {
+      "article_id": "A16",
+      "number": 16,
+      "cluster": 4,
+      "title": "ניהול גרסאות ויומן החלטות למערכות אינווריאנטיות",
+      "path": "docs/guide_20_pages/16-versioning-and-decision-log.md",
+      "implementation_status": "PARTIAL — repo history exists; package-level records planned",
+      "evidence_refs": [
+        "ROADMAP.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/92"
+    },
+    {
+      "article_id": "A17",
+      "number": 17,
+      "cluster": 5,
+      "title": "פרופיל מהנדס הלוגיקה החדש מול המפתח הישן",
+      "path": "docs/guide_20_pages/17-the-logic-engineer.md",
+      "implementation_status": "SPECIFIED as a prospective field hypothesis; onboarding/rewards planned",
+      "evidence_refs": [
+        "research/LOGIC_MINE_RESEARCH_TRACKS.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/89"
+    },
+    {
+      "article_id": "A18",
+      "number": 18,
+      "cluster": 5,
+      "title": "המודל הכלכלי של המטבע האונטולוגי והפרדת התגמולים",
+      "path": "docs/guide_20_pages/18-ontological-token-economic-model.md",
+      "implementation_status": "NOT SPECIFIED / NOT IMPLEMENTED",
+      "evidence_refs": [
+        "INVESTOR_BRIEF_V1.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/90"
+    },
+    {
+      "article_id": "A19",
+      "number": 19,
+      "cluster": 5,
+      "title": "שקיפות למשקיעים: ממעקב פיתוח ועד לערך מבני",
+      "path": "docs/guide_20_pages/19-investor-transparency-development-tracking.md",
+      "implementation_status": "PARTIAL — investor/productization docs exist; automated tracking planned",
+      "evidence_refs": [
+        "docs/PRODUCTIZATION_AND_FIRST_LOGIC_DEMO_2026-10-09.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/92"
+    },
+    {
+      "article_id": "A20",
+      "number": 20,
+      "cluster": 5,
+      "title": "מפת הדרכים למעבר של האקוסיסטם",
+      "path": "docs/guide_20_pages/20-ecosystem-transition-roadmap.md",
+      "implementation_status": "PARTIAL — component roadmaps exist; integrated plan planned",
+      "evidence_refs": [
+        "ARCHITECTURE_ROADMAP.md"
+      ],
+      "next_issue": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/92"
+    }
+  ]
+}

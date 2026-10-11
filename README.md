@@ -189,3 +189,16 @@ The protected layer may retain:
 **implementation details · algorithms · mechanisms · proprietary technical material**
 
 This separation is intentional. The public system documents the evidence and research capability without publishing protected reasoning implementation.
+
+
+## Logic Economy — 20-page thesis, development and participation guide
+
+The guide links the market thesis to existing evidence, GitHub tasks, implementation gaps, engineer contributions and the proposed Active Operational Interface.
+
+- [Open the 20-page guide](docs/guide_20_pages/README.md)
+- [Implementation gap register](docs/guide_20_pages/IMPLEMENTATION_GAP_REGISTER.md)
+- [Active Operational Interface and Ontological Reward Model](docs/guide_20_pages/ACTIVE_OPERATIONAL_INTERFACE_AND_ONTOLOGICAL_REWARD_MODEL.md)
+- [Engineering contribution protocol](docs/guide_20_pages/ENGINEERING_CONTRIBUTION_AND_REVIEW_PROTOCOL.md)
+- [Development status registry](docs/guide_20_pages/DEVELOPMENT_STATUS_REGISTRY.json)
+
+The active workbench, marketplace and token/reward system are specified as planned work, not as deployed operational or financial systems.

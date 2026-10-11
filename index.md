@@ -14,3 +14,9 @@ This is the source-controlled research publication layer of WANGA Copernicus. Th
 [GitHub source](https://github.com/AmbassadorOv/WANGA-LAB)
 
 [WANGA-LAB Copernicus branch](https://github.com/AmbassadorOv/WANGA-LAB/tree/agent/copernicus/static-blog-platform)
+
+## Logic Economy — investor and engineer guide
+
+A 20-article research and development guide connecting the thesis to GitHub evidence, missing implementation work, engineer participation and the proposed Proof-of-Logic reward model.
+
+[Open the 20-page guide](docs/guide_20_pages/README.md) · [Implementation gaps](docs/guide_20_pages/IMPLEMENTATION_GAP_REGISTER.md) · [Active Operational Interface](docs/guide_20_pages/ACTIVE_OPERATIONAL_INTERFACE_AND_ONTOLOGICAL_REWARD_MODEL.md)
