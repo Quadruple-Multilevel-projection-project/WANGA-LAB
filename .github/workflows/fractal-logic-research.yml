@@ -64,7 +64,7 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: fractal-logic-first-model-candidate
-          path: $RUNNER_TEMP/fractal-logic-first-model-candidate.json
+          path: ${{ runner.temp }}/fractal-logic-first-model-candidate.json
           if-no-files-found: error
       - name: Build dated research validation report
         run: |
