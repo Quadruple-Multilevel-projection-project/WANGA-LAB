@@ -136,6 +136,8 @@ class CandidateEvaluationTests(unittest.TestCase):
             "source_coverage": 1.0,
             "benchmark_accuracy": 0.98,
             "counterexample_rate": 0.0,
+            "false_accept_rate": 0.0,
+            "counterexample_escape_rate": 0.0,
             "holdout_score": 0.95,
             "replay_stable": True,
             "compute_seconds": 4.0,
