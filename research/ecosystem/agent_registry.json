@@ -1,0 +1,161 @@
+{
+  "schema_version": "wanga-agent-registry/1.0",
+  "status": "AGENT_ROLES_DEFINED_RUNTIME_BOUNDED_BY_AVAILABLE_CONNECTORS",
+  "default_execution_mode": "DETERMINISTIC",
+  "external_llm_backend": "NOT_CONFIGURED_BY_THIS_WORKFLOW",
+  "agents": [
+    {
+      "id": "repository-inventory",
+      "role": "Enumerate the repositories available to the connected GitHub identity and preserve affiliation/visibility boundaries.",
+      "implementation": "scripts/scan_github_ecosystem.py",
+      "status": "IMPLEMENTED_DETERMINISTIC",
+      "inputs": [
+        "GitHub API repository list"
+      ],
+      "outputs": [
+        "bounded public README/path scan artifact",
+        "access-scope blockers"
+      ],
+      "privacy": "Private and unknown-visibility repositories are excluded from public artifacts."
+    },
+    {
+      "id": "project-material-collector",
+      "role": "Collect README and relevant documentation path metadata from a rotating batch of public projects.",
+      "implementation": "scripts/scan_github_ecosystem.py",
+      "status": "IMPLEMENTED_DETERMINISTIC",
+      "inputs": [
+        "repository metadata",
+        "README and tree endpoints"
+      ],
+      "outputs": [
+        "source discovery candidates"
+      ],
+      "privacy": "Does not copy non-public repository content."
+    },
+    {
+      "id": "conversation-export-collector",
+      "role": "Register only actual ChatGPT export records made available to the repository intake.",
+      "implementation": "scripts/ingest_conversation_export.py",
+      "status": "IMPLEMENTED_INPUT_GATED",
+      "inputs": [
+        "user-provided conversations.json or ZIP"
+      ],
+      "outputs": [
+        "private-review intake records"
+      ],
+      "privacy": "No automatic access to unseen ChatGPT conversations; no raw transcript publication."
+    },
+    {
+      "id": "logic-extractor",
+      "role": "Extract literal logical units only from content the connected runtime can actually read.",
+      "implementation": "scripts/run_logic_agents.py",
+      "status": "IMPLEMENTED_BOUNDED",
+      "inputs": [
+        "logic wiki articles and approved export records"
+      ],
+      "outputs": [
+        "source-linked candidates"
+      ],
+      "privacy": "Candidate only; source content must not be paraphrased as verified truth."
+    },
+    {
+      "id": "logic-normalizer",
+      "role": "Check references, stable IDs, typing, and explicit semantic scope.",
+      "implementation": "logic_fractal/composer.py",
+      "status": "IMPLEMENTED_DETERMINISTIC",
+      "inputs": [
+        "logic wiki catalog",
+        "composition contracts"
+      ],
+      "outputs": [
+        "validated structural map"
+      ],
+      "privacy": "Does not invent missing relations."
+    },
+    {
+      "id": "fractal-composer",
+      "role": "Compose nested logic candidates while retaining parent lineage and invariants.",
+      "implementation": "logic_fractal/fragment_composer.py",
+      "status": "IMPLEMENTED_DETERMINISTIC",
+      "inputs": [
+        "typed fragments",
+        "composition contracts"
+      ],
+      "outputs": [
+        "hashed candidate model"
+      ],
+      "privacy": "Composition is not semantic entailment."
+    },
+    {
+      "id": "mirror-contradiction-reviewer",
+      "role": "Generate/inspect counter-readings, contradictions, negative and boundary tests.",
+      "implementation": "scripts/run_logic_agents.py",
+      "status": "IMPLEMENTED_PARTIAL",
+      "inputs": [
+        "candidate graph",
+        "counterexample registry"
+      ],
+      "outputs": [
+        "review candidates and unresolved contradictions"
+      ],
+      "privacy": "Counter-reading is not automatic truth."
+    },
+    {
+      "id": "benchmark-evaluator",
+      "role": "Run unit/invariant tests and track semantic test-suite deficits separately.",
+      "implementation": "GitHub Actions workflow",
+      "status": "IMPLEMENTED_FOR_SOFTWARE_TESTS_SEMANTIC_BENCHMARKS_INCOMPLETE",
+      "inputs": [
+        "test suites",
+        "candidate model"
+      ],
+      "outputs": [
+        "CI summaries and readiness deficits"
+      ],
+      "privacy": "Unit-test pass does not equal semantic validity."
+    },
+    {
+      "id": "wiki-curator",
+      "role": "Build versioned Logic Wiki pages and cross-links from approved source-backed catalog items.",
+      "implementation": "scripts/build_logic_wiki.py",
+      "status": "IMPLEMENTED_DETERMINISTIC",
+      "inputs": [
+        "logic_wiki/data/articles.json"
+      ],
+      "outputs": [
+        "generated wiki and sync manifest"
+      ],
+      "privacy": "Raw private transcripts are never public wiki inputs."
+    },
+    {
+      "id": "wix-sync-auditor",
+      "role": "Verify the Wix deployment and record read-back status; do not assume the GitHub runner has Wix credentials.",
+      "implementation": "logic_wiki/data/wix_sync_manifest.json",
+      "status": "CONNECTED_WIX_TOOL_AVAILABLE_GITHUB_RUNTIME_NOT_CONFIGURED",
+      "inputs": [
+        "Wix sync manifest",
+        "authorized deployment read-back"
+      ],
+      "outputs": [
+        "sync status"
+      ],
+      "privacy": "If write/read-back is unavailable, mark BLOCKED."
+    },
+    {
+      "id": "report-publisher",
+      "role": "Publish scan reports as workflow artifacts and surface access gaps.",
+      "implementation": ".github/workflows/ecosystem-agent-sweep.yml",
+      "status": "IMPLEMENTED_ARTIFACT_ONLY",
+      "inputs": [
+        "scan and validation results"
+      ],
+      "outputs": [
+        "ecosystem scan report artifact"
+      ],
+      "privacy": "No automatic merge, no Wix write, no private-project names in public artifacts."
+    }
+  ],
+  "cross_project_write_policy": "Read broadly where authorized; write to a project only through a review branch/PR and only for changes belonging to that project. Otherwise record an integration proposal in WANGA-LAB.",
+  "conversation_access_policy": "Connected GitHub and Files/Library are not a universal ChatGPT conversation API. Missing conversations remain ACCESS_GAP until an actual export or surfaced file is available.",
+  "first_model_release_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY"
+}
