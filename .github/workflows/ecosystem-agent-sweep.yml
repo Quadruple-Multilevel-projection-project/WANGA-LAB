@@ -54,7 +54,7 @@ jobs:
             echo "Ecosystem scan did not produce a report. Check the step logs; no private repository content was published." >> "$GITHUB_STEP_SUMMARY"
           fi
       - name: Upload ecosystem scan report
-        if: always() && hashFiles(runner.temp + '/ecosystem-scan/ecosystem-scan-report.json') != ''
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: wanga-ecosystem-sweep-${{ github.run_number }}
