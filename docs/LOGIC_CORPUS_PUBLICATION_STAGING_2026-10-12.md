@@ -84,3 +84,15 @@ The product is the packaged logic unit with a task contract, rules, constraints,
 הדף כולל הקדמה לקורא שאינו מכיר את הפרויקט וקופסאות־כפתורים לחיצות שמובילות למפת 12 הבעיות, מפרט 5+5, מפת האינטראקציה, מפת ההתכנסויות, מפת המקורות, אשכול ההנדסה, מסמכי המוצר וטקסט המשקיעים.
 
 **הבחנה תפעולית:** הדף החדש הוא נקודת ניווט מרכזית. הוספת קופסאות לכל מאמר קיים בנפרד דורשת גישה לעורך Wix המחובר; כרגע אין פרופיל דפדפן שמסומן כמחובר ל־Wix. אין לתאר את כל המאמרים כמעודכנים עד להשלמת העריכה הפרטנית.
+
+## Extended 1,000-page logic corpus blueprint — 2026-10-12
+
+A new granular specification layer extends the editorial 257-page outline without replacing it.
+
+- [1,000 page definitions](../research/data/LOGIC_CORPUS_1000_PAGE_BLUEPRINT_V1.json) — 22 letter nodes, 231 unordered gates, 462 directed transitions, 100 submaps, 154 test definitions and 31 formalization pages.
+- [Master map atlas](./LOGIC_CORPUS_MAP_ATLAS_V1.md)
+- [231-gate / 462-transition graph data](../research/data/LETTER_GATE_MAP_231_V1.json)
+- [1,540 unordered triple sets](../research/data/LETTER_TRIPLE_MAP_1540_V1.json)
+- [Mathematical integrity register](./LOGIC_231_MATHEMATICAL_INTEGRITY_REGISTER_V1.md)
+
+**Status:** SPECIFIED / NOT_YET_VERIFIED / NOT_YET_PUBLISHED_AS_1,000_ARTICLES. The page registry comprises definitions rather than complete article copy. Deduplicate against the 257-page plan before bulk public publication. Six per-type JSON shards contain the full 1,000 records.
