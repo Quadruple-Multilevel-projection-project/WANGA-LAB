@@ -1,0 +1,393 @@
+{
+  "schema_version": "logic-wiki/1.0",
+  "generated_from": "seed",
+  "articles": [
+    {
+      "id": "logic",
+      "title": "Logic",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "definition": "Logic studies valid reasoning and formal systems for representing and assessing arguments. A formal logic typically specifies a language, a deductive system and/or model-theoretic semantics.",
+      "scope_note": "General reference summary; it does not imply every natural-language utterance is already formalized.",
+      "sources": [
+        "SRC-SEP-CLASSICAL"
+      ],
+      "relations": [
+        "first-order-logic",
+        "deduction",
+        "semantics"
+      ]
+    },
+    {
+      "id": "first-order-logic",
+      "title": "First-order logic",
+      "category": "Formal systems",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "definition": "A formal language with names, predicates, variables and quantifiers over individuals; consequence is assessed against a defined syntax and semantics.",
+      "scope_note": "Variables over individuals differ from quantification over properties or predicates.",
+      "sources": [
+        "SRC-SEP-CLASSICAL",
+        "SRC-OLP-FOL"
+      ],
+      "relations": [
+        "logic",
+        "second-order-logic",
+        "formal-language"
+      ]
+    },
+    {
+      "id": "second-order-logic",
+      "title": "Second-order logic",
+      "category": "Formal systems",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "definition": "An extension of first-order logic that may quantify over properties, relations or sets, depending on the formulation and semantics.",
+      "scope_note": "Higher-level architecture is not, by itself, a formal definition of second-order logic; the chosen semantics matter.",
+      "sources": [
+        "SRC-SEP-HIGHER-ORDER"
+      ],
+      "relations": [
+        "first-order-logic",
+        "meta-logic"
+      ]
+    },
+    {
+      "id": "formal-language",
+      "title": "Formal language",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "definition": "A vocabulary and grammar formally determining which strings are well-formed. Meaning and validity require an interpretation or semantic system beyond syntax alone.",
+      "scope_note": "Syntax validity does not by itself establish truth, meaning in a target domain, or empirical support.",
+      "sources": [
+        "SRC-SEP-CLASSICAL",
+        "SRC-OLP-FOL"
+      ],
+      "relations": [
+        "logic",
+        "first-order-logic",
+        "lnl"
+      ]
+    },
+    {
+      "id": "deduction",
+      "title": "Deduction",
+      "category": "Reasoning",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "definition": "A rule-governed relation in which a conclusion follows from stated premises within a specified logical system.",
+      "scope_note": "Validity does not independently authenticate the premises or their sources.",
+      "sources": [
+        "SRC-SEP-CLASSICAL"
+      ],
+      "relations": [
+        "logic",
+        "evidence-provenance"
+      ]
+    },
+    {
+      "id": "semantics",
+      "title": "Logical semantics",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "definition": "Interpretation of a formal language, often including satisfaction, truth in a model, and logical consequence.",
+      "scope_note": "WANGA relational and fractal semantics remain a research programme, not an established consequence of classical model theory.",
+      "sources": [
+        "SRC-SEP-CLASSICAL",
+        "SRC-OLP-FOL"
+      ],
+      "relations": [
+        "formal-language",
+        "first-order-logic",
+        "second-order-logic"
+      ]
+    },
+    {
+      "id": "meta-logic",
+      "title": "Metalogic",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "definition": "Study of formal logical systems themselves, including soundness, completeness, consistency, decidability and expressive power.",
+      "scope_note": "A system describing itself is not automatically sound or complete; such properties require definitions and proofs.",
+      "sources": [
+        "SRC-OLP-METALOGIC"
+      ],
+      "relations": [
+        "logic",
+        "second-order-logic",
+        "source-first-contract"
+      ]
+    },
+    {
+      "id": "evidence-provenance",
+      "title": "Evidence and provenance",
+      "category": "Forensic logic",
+      "kind": "WANGA_ENGINEERING_CONCEPT",
+      "status": "IMPLEMENTED_CONCEPT_NOT_UNIVERSALLY_VERIFIED",
+      "definition": "A record of where a claim or model component came from, which exact source span supports it, which transformations were applied, and which checks were performed.",
+      "scope_note": "A URL establishes a reference location, not proof that the source supports a particular claim. BUILT, TESTED and VERIFIED are separate states.",
+      "sources": [
+        "SRC-WANGA-README",
+        "SRC-WANGA-LOGIC-KERNEL"
+      ],
+      "relations": [
+        "deduction",
+        "source-first-contract",
+        "logic-wiki"
+      ]
+    },
+    {
+      "id": "source-first-contract",
+      "title": "Source-first-before-weights contract",
+      "category": "WANGA architecture",
+      "kind": "WANGA_ARCHITECTURE_CONTRACT",
+      "status": "PROJECT_CONTRACT_REQUIRES_REVIEW",
+      "definition": "The WANGA project rule that source lineage, literal extraction, semantic structure, relation extraction, first-order and second-order review, and closure checks precede configuration and weights.",
+      "scope_note": "A project contract, not a theorem of general logic. Reconcile against the canonical current contract file before execution.",
+      "sources": [
+        "SRC-WANGA-LOGIC-MINE",
+        "SRC-WANGA-LNL-DOC"
+      ],
+      "relations": [
+        "evidence-provenance",
+        "logical-fractal",
+        "lnl",
+        "mln-field"
+      ]
+    },
+    {
+      "id": "logical-fractal",
+      "title": "Logical fractal",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "HYPOTHESIS_NEEDS_FORMAL_DEFINITION",
+      "definition": "A proposed recursively composable logical structure in which validated primitives and relations form substructures that can be composed into higher-level structures while preserving constraints, provenance and counterexample results.",
+      "scope_note": "Self-similarity or geometric fractality alone does not establish logical validity. Grammar, composition operators and invariant-preservation conditions remain to be formalized.",
+      "sources": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relations": [
+        "fractal-composition",
+        "logical-primitive",
+        "logical-relation",
+        "source-first-contract"
+      ]
+    },
+    {
+      "id": "fractal-composition",
+      "title": "Fractal composition rule",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "SPECIFICATION_REQUIRED",
+      "definition": "A candidate rule that composes logical structures into a new structure while declaring input types, preconditions, output type, preserved invariants, source provenance and failure cases.",
+      "scope_note": "Composition is rejected when required relations or premises are missing; numeric weights cannot manufacture absent edges.",
+      "sources": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relations": [
+        "logical-fractal",
+        "logical-primitive",
+        "logical-relation"
+      ]
+    },
+    {
+      "id": "logical-primitive",
+      "title": "Logical primitive",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "SCHEMA_DEFINED_SEMANTICS_PENDING",
+      "definition": "The smallest declared unit in a particular WANGA logic model, with a stable identifier, type, source or explicit assumption, contract and tests.",
+      "scope_note": "There is no established universal primitive count for the proposed WANGA system; counts must come from an audited corpus.",
+      "sources": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN",
+        "SRC-WANGA-LOGIC-MINE"
+      ],
+      "relations": [
+        "logical-fractal",
+        "fractal-composition",
+        "logical-relation"
+      ]
+    },
+    {
+      "id": "logical-relation",
+      "title": "Logical relation",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "SCHEMA_DEFINED_SEMANTICS_PENDING",
+      "definition": "A typed connection among declared components or propositions with explicit direction, arity, scope, source support and applicability conditions.",
+      "scope_note": "A graph edge, co-occurrence or numerical similarity is not automatically a valid logical relation.",
+      "sources": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN",
+        "SRC-SEP-CLASSICAL"
+      ],
+      "relations": [
+        "logical-primitive",
+        "fractal-composition",
+        "evidence-provenance"
+      ]
+    },
+    {
+      "id": "lnl",
+      "title": "Logic-Native Language (LNL)",
+      "category": "WANGA implementation",
+      "kind": "WANGA_IMPLEMENTED_PROTOTYPE",
+      "status": "BUILT_NOT_SEMANTICALLY_VERIFIED",
+      "definition": "A prototype declarative language with source, fact, rule, goal and constraint statements; its compiler produces a model graph and execution bundle for the WANGA symbolic kernel.",
+      "scope_note": "LNL/0.1 is a small typed syntax; it is not a trained model and does not formalize arbitrary natural language.",
+      "sources": [
+        "SRC-WANGA-LNL-DOC",
+        "SRC-WANGA-LNL-CODE"
+      ],
+      "relations": [
+        "formal-language",
+        "source-first-contract",
+        "logical-fractal"
+      ]
+    },
+    {
+      "id": "mln-field",
+      "title": "MLN continuous field",
+      "category": "WANGA implementation",
+      "kind": "WANGA_RESEARCH_PROTOTYPE",
+      "status": "LOCAL_PROTOTYPE_NOT_YET_INTEGRATED",
+      "definition": "A research prototype for continuous M/L/N measurement fields and a relational operator, with smoothing, spectral/topological diagnostics and conservative sandbox updates.",
+      "scope_note": "The archived/local implementation is a numerical proxy. Scale normalization and the golden-balance expression are not established laws of intelligence.",
+      "sources": [
+        "SRC-WANGA-MLN-ARCHIVE"
+      ],
+      "relations": [
+        "logical-fractal",
+        "evidence-provenance",
+        "model-readiness"
+      ]
+    },
+    {
+      "id": "model-readiness",
+      "title": "First model readiness gate",
+      "category": "Model lifecycle",
+      "kind": "WANGA_PROCESS_PROPOSAL",
+      "status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+      "definition": "Explicit source-coverage, primitive, composition, counterexample, benchmark, reproducibility and review requirements before releasing the first Logic Fractal Alpha candidate.",
+      "scope_note": "Thresholds are provisional project policy; passing permits candidate review, not a claim of AGI or universal correctness.",
+      "sources": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relations": [
+        "logical-fractal",
+        "fractal-composition",
+        "evidence-provenance"
+      ]
+    },
+    {
+      "id": "logic-wiki",
+      "title": "Logic Wiki",
+      "category": "Research infrastructure",
+      "kind": "WANGA_INFRASTRUCTURE",
+      "status": "INITIAL_CATALOG_IN_PROGRESS",
+      "definition": "A version-controlled research encyclopedia connecting stable concept IDs to sources, claims, primitives, relation maps, composition rules, tests, model versions and uncertainty statuses.",
+      "scope_note": "This is an original project encyclopedia, not an official Wikipedia project.",
+      "sources": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relations": [
+        "evidence-provenance",
+        "logical-primitive",
+        "fractal-composition"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "SRC-SEP-CLASSICAL",
+      "title": "Classical Logic",
+      "uri": "https://plato.stanford.edu/entries/logic-classical/",
+      "type": "REFERENCE_ARTICLE",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "Stanford Encyclopedia of Philosophy; general description of formal language, deductive system and semantics."
+    },
+    {
+      "id": "SRC-SEP-HIGHER-ORDER",
+      "title": "Second-order and Higher-order Logic",
+      "uri": "https://plato.stanford.edu/entries/logic-higher-order/",
+      "type": "REFERENCE_ARTICLE",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "Stanford Encyclopedia of Philosophy; quantification over properties and higher-order semantics."
+    },
+    {
+      "id": "SRC-OLP-FOL",
+      "title": "forall x: Calgary",
+      "uri": "https://forallx.openlogicproject.org/html/",
+      "type": "OPEN_TEXTBOOK",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "Open Logic Project textbook on formal and first-order logic."
+    },
+    {
+      "id": "SRC-OLP-METALOGIC",
+      "title": "Sets, Logic, Computation",
+      "uri": "https://slc.openlogicproject.org/",
+      "type": "OPEN_TEXTBOOK",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "Open Logic Project text on metalogic and formal logic properties."
+    },
+    {
+      "id": "SRC-WANGA-README",
+      "title": "WANGA-LAB README",
+      "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/README.md",
+      "type": "PROJECT_REPOSITORY",
+      "status": "PROJECT_SOURCE",
+      "note": "Project architecture and status, not independent verification."
+    },
+    {
+      "id": "SRC-WANGA-LOGIC-KERNEL",
+      "title": "WANGA Logic Kernel V1",
+      "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_engine_v1/logic_kernel.py",
+      "type": "PROJECT_CODE",
+      "status": "IMPLEMENTATION_SOURCE",
+      "note": "Source implementation; code existence does not establish general semantic correctness."
+    },
+    {
+      "id": "SRC-WANGA-LOGIC-MINE",
+      "title": "Logic Mine Research Tracks",
+      "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/LOGIC_MINE_RESEARCH_TRACKS.md",
+      "type": "PROJECT_RESEARCH",
+      "status": "PROJECT_SOURCE",
+      "note": "Research tracks on logic mining and reusable capabilities."
+    },
+    {
+      "id": "SRC-WANGA-LNL-DOC",
+      "title": "Logic-Native Language and Model Builder V1",
+      "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/LOGIC_NATIVE_LANGUAGE_MODEL_BUILDER_V1.md",
+      "type": "PROJECT_RESEARCH",
+      "status": "PROJECT_SOURCE",
+      "note": "Prototype design and limits."
+    },
+    {
+      "id": "SRC-WANGA-LNL-CODE",
+      "title": "LNL compiler",
+      "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_model_builder_v1/logic_native_language.py",
+      "type": "PROJECT_CODE",
+      "status": "IMPLEMENTATION_SOURCE",
+      "note": "Implementation source, not independent semantic validation."
+    },
+    {
+      "id": "SRC-WANGA-MLN-ARCHIVE",
+      "title": "MLN field archival/local prototype",
+      "uri": "local://mln_field_core_v1",
+      "type": "LOCAL_ARCHIVE",
+      "status": "LOCAL_ONLY_NOT_YET_IN_GITHUB",
+      "note": "The local prototype package is not yet confirmed as committed to the current main branch."
+    },
+    {
+      "id": "SRC-WANGA-LOGIC-FRACTAL-PLAN",
+      "title": "Logic Fractal Model Program V1",
+      "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/feature/logic-fractal-wiki-research-v1/research/LOGIC_FRACTAL_PROGRAM_V1.md",
+      "type": "PROJECT_PROPOSAL",
+      "status": "DRAFT_ON_RESEARCH_BRANCH",
+      "note": "Provisional proposal; readiness thresholds are not empirically validated."
+    }
+  ]
+}
