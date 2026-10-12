@@ -1,0 +1,50 @@
+{
+  "schema_version": "wanga-research-compute-profile/1.0",
+  "status": "CONFIGURED_LOW_COST_BASELINE",
+  "primary_runner": {
+    "platform": "GitHub Actions",
+    "runner": "ubuntu-latest",
+    "python": "3.11",
+    "jobs": [
+      "logic-wiki validation",
+      "source-intake tests",
+      "fractal composer tests",
+      "bounded agent cycle",
+      "candidate model build",
+      "report artifact upload"
+    ]
+  },
+  "local_execution": {
+    "language": "Python",
+    "external_dependencies": "Avoid unless specified by a testable requirement",
+    "uses": [
+      "deterministic parsing",
+      "schema validation",
+      "typed fragment composition",
+      "hash and provenance checks",
+      "report generation"
+    ]
+  },
+  "model_backend": {
+    "status": "NOT_CONFIGURED_BY_DEFAULT",
+    "requires_explicit_endpoint": true,
+    "requires_explicit_api_key_if_remote": true,
+    "paid_token_spend_allowed": false
+  },
+  "gpu_cloud": {
+    "gpu": "NOT_REQUESTED",
+    "paid_cloud": "NOT_AUTHORIZED",
+    "policy": "Do not provision paid GPU/cloud compute without explicit authorization."
+  },
+  "schedules": {
+    "chatgpt_task": "Existing WANGA Unified Work Loop runs daily",
+    "github_actions": "Logic Fractal Wiki workflow runs weekly and supports manual dispatch",
+    "wix_sync": "Connected Wix integration with explicit deployment read-back; not performed by GitHub runner"
+  },
+  "cost_control": [
+    "Keep deterministic CI as default.",
+    "Use model calls only when provider is explicitly configured.",
+    "Store run timestamps, artifacts and execution outcomes.",
+    "Do not claim background execution unless the scheduler or workflow reports a run result."
+  ]
+}
