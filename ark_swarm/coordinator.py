@@ -203,7 +203,7 @@ def build_cycle(
         formal_checks = {
             "fixture_suite_passes": formal_benchmark.get("status") == "PASS",
             "all_formal_fixtures_pass": formal_benchmark.get("passed_cases") == formal_benchmark.get("case_count"),
-            "fixtures_not_mislabeled_as_real_world": "not source-grounded" in str(formal_benchmark.get("fixture_status", "")).lower(),
+            "fixtures_not_mislabeled_as_real_world": "NOT_SOURCE_GROUNDED" in str(formal_benchmark.get("fixture_status", "")).upper(),
             "benchmark_keeps_verification_open": formal_benchmark.get("semantic_status") == "NOT_YET_VERIFIED",
         }
     except (RuntimeError, ValueError, OSError) as exc:
