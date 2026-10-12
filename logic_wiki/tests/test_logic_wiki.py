@@ -25,7 +25,8 @@ class LogicWikiTests(unittest.TestCase):
   self.assertTrue((out/'index.html').exists())
   self.assertTrue((out/'INDEX.md').exists())
   report=json.loads((out/'readiness-report.json').read_text(encoding='utf-8'))
-  self.assertEqual(report['article_count'],17)
+  catalog=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
+  self.assertEqual(report['article_count'],len(catalog['articles']))
   self.assertNotEqual(report['readiness_gate_status'],'CANDIDATE_RELEASE_READY_FOR_HUMAN_REVIEW')
  def tearDown(self):
   p=ROOT/'logic_wiki/generated-test'
