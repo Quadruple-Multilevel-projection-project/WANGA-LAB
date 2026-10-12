@@ -1,0 +1,72 @@
+{
+  "schema_version": "1.0",
+  "gate_id": "FIRST_MODEL_ALPHA_V1",
+  "status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+  "policy_note": "These are provisional project-management thresholds, not universal scientific cutoffs. Thresholds must be recalibrated from benchmark evidence. Passing permits human review of a candidate; it does not prove AGI, universal correctness, source truth, or complete natural-language understanding.",
+  "thresholds": {
+    "min_source_records": 20,
+    "min_source_classes": 3,
+    "min_logic_units_with_provenance": 50,
+    "min_composition_rules_with_contracts": 20,
+    "min_counterexample_cases": 30,
+    "min_test_cases": 100,
+    "min_benchmark_suites": 3,
+    "min_independent_review_cycles": 2,
+    "unresolved_dangling_source_refs": 0,
+    "unresolved_duplicate_stable_ids": 0,
+    "critical_core_contradictions": 0,
+    "deterministic_build_required": true,
+    "holdout_split_required": true,
+    "mirror_review_required": true
+  },
+  "release_contract": {
+    "candidate_name": "Logic Fractal Alpha",
+    "before_gate": "INTERNAL_CANDIDATE_NOT_RELEASED",
+    "after_gate": "CANDIDATE_RELEASE_READY_FOR_HUMAN_REVIEW",
+    "forbidden_implications": [
+      "AGI",
+      "universal correctness",
+      "independently verified source truth",
+      "trained model unless training evidence exists"
+    ],
+    "required_report_fields": [
+      "scope",
+      "source manifest",
+      "build hash",
+      "derivation trace",
+      "positive results",
+      "negative results",
+      "boundary results",
+      "adversarial results",
+      "holdout results",
+      "known failures",
+      "review evidence",
+      "cost and compute"
+    ]
+  },
+  "current_observed_evidence": {
+    "source_fixture_records": 3,
+    "source_fixture_classes": 1,
+    "source_fixture_hashes_are_real_sha256": false,
+    "base_fixture_fragments": 3,
+    "declared_composer_test_methods": 8,
+    "composer_test_execution": "NOT_RUN_IN_THIS_AUTONOMOUS_RUN",
+    "dedicated_benchmark_suites_confirmed": 0,
+    "independent_review_cycles_recorded": 0,
+    "deterministic_replay_gate_in_candidate_builder": false,
+    "negative_boundary_benchmark_gate_in_candidate_builder": false,
+    "global_dangling_source_refs": "NOT_ASSESSED",
+    "global_duplicate_stable_ids": "NOT_ASSESSED",
+    "critical_core_contradictions": "NOT_ASSESSED",
+    "source_backed_logic_units_eligible_for_release": 0,
+    "alpha_gate_result": "BLOCKED"
+  },
+  "next_actions": [
+    "Replace synthetic fixture hashes with hashes of actual immutable source bytes and exact source spans.",
+    "Accumulate at least 20 source records from 3 documented source classes.",
+    "Build and review at least 50 source-backed logic units and 20 typed composition contracts.",
+    "Add at least 30 negative/boundary/counterexample cases and 100 reproducible tests across 3 benchmark suites.",
+    "Implement and execute deterministic build replay, holdout evaluation, mirror review, and two independent review cycles.",
+    "Recompute every count from the canonical corpus; do not infer completeness from declared totals."
+  ]
+}
