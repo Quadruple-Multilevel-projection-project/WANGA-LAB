@@ -8,8 +8,25 @@
   "benchmark_suites": 0,
   "independent_review_cycles": 0,
   "critical_core_contradictions": 0,
-  "deterministic_build": false,
+  "deterministic_build": true,
   "holdout_split": false,
   "mirror_review": false,
-  "note": "2 active composition rules are defined with explicit contracts in logic_fractal/data/composition_rules.json. This is a source/specification count, not a benchmark score. Benchmark cases remain 0 until a reviewed ground-truth test suite is registered and executed."
+  "note": "2 active composition rules are defined with explicit contracts in logic_fractal/data/composition_rules.json. This is a source/specification count, not a benchmark score. Benchmark cases remain 0 until a reviewed ground-truth test suite is registered and executed.",
+  "deterministic_build_evidence": {
+    "status": "TESTED_ON_SYNTHETIC_FIXTURES",
+    "source": "scripts/build_first_fractal_model.py",
+    "test": "logic_fractal/tests/test_fragment_composer.py::test_two_scale_composition_preserves_parent_ids_and_provenance",
+    "note": "The builder constructs a deterministic two-scale candidate and preserves source lineage. This does not satisfy the first-model release gate because source ingestion, benchmark suites, holdout, MIRROR review and independent review remain incomplete."
+  },
+  "last_research_cycle": {
+    "date": "2026-10-12",
+    "pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/98",
+    "merge_commit": "f0ef3c345aeefbff2888312544f1e4bde7cf83d5",
+    "wix_readback_status": "PASS",
+    "conversation_archive_coverage": "PARTIAL_ACCESS_ONLY",
+    "new_conversation_source_records": 0,
+    "typed_fragment_tests": 8,
+    "first_model_status": "CANDIDATE_NOT_RELEASED",
+    "semantic_status": "NOT_YET_VERIFIED"
+  }
 }
