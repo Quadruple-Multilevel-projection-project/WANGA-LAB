@@ -189,3 +189,16 @@ The protected layer may retain:
 **implementation details · algorithms · mechanisms · proprietary technical material**
 
 This separation is intentional. The public system documents the evidence and research capability without publishing protected reasoning implementation.
+
+## Executable symbolic logic kernel — V1
+
+**Status:** BUILT AS A BOUNDED SYMBOLIC PROTOTYPE · TESTS CONFIGURED IN CI · NOT GENERAL AI · NOT YET VERIFIED AS A PRODUCTION SYSTEM.
+
+The new `logic_engine_v1/` package makes the first deterministic logic layer executable over structured claims, evidence references, and explicit rules. It records derivations, flags contradictions, blocks unsupported inputs from acting as rule premises, gates scoped actions and explicit publication permission, compares threshold-based decisions, and validates the 1,000-definition logic corpus.
+
+- [Kernel README](logic_engine_v1/README.md)
+- [Implementation specification](docs/LOGIC_KERNEL_V1_IMPLEMENTATION.md)
+- [Runnable example bundle](logic_engine_v1/examples/site_update_case.json)
+- Run `python logic_engine_v1/logic_kernel.py validate-corpus --repo-root .` and `python -m unittest discover -s logic_engine_v1/tests -v`.
+
+This is a deterministic symbolic subsystem, not a language model. It does not parse arbitrary natural language, learn rules, authenticate source truth, or establish hallucination prevention. A future LLM adapter may propose structured input; it must not bypass the evidence, contradiction, scope or permission gates.
