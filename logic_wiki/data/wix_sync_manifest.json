@@ -12,8 +12,87 @@
   "homepage_card_verified": true,
   "existing_model_builder_preserved": true,
   "existing_corpus_atlas_preserved": true,
-  "verification_method": "Downloaded the Wix deployment after upload and checked logic-wiki.html and index.html.",
-  "automation_boundary": "Connected Wix upload/read-back was used for this sync. GitHub Actions does not currently have Wix credentials; workflow is not yet an autonomous Wix writer.",
+  "verification_method": "Downloaded the Wix deployment after upload; checked that the main catalog contains 18 stable-ID items and the extended section contains 9 distinct stable-ID resource cards, each with source links or an explicit local-source boundary.",
+  "automation_boundary": "Connected Wix upload/read-back used for this sync. GitHub Actions does not have Wix credentials; direct runner-to-Wix publishing is not enabled. The daily WANGA Unified Work Loop has instructions to sync via the authorized Wix connector and read back.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
-  "note": "Page publication status is distinct from semantic verification."
+  "note": "Page publication status is distinct from semantic verification.",
+  "extended_topic_page_count": 9,
+  "main_page_card_count": 27,
+  "extended_page_resources": [
+    {
+      "id": "wiki-page-research-status",
+      "url": "/logic-wiki-research-status.html",
+      "source_refs": [
+        "research/reports/logic-fractal/2026-10-12-readiness-snapshot.md",
+        "logic_wiki/data/readiness_gate.json"
+      ]
+    },
+    {
+      "id": "wiki-page-fractal-model",
+      "url": "/logic-wiki-fractal-model.html",
+      "source_refs": [
+        "research/LOGIC_FRACTAL_PROGRAM_V1.md",
+        "scripts/build_first_fractal_model.py"
+      ]
+    },
+    {
+      "id": "wiki-page-fractal-logic",
+      "url": "/logic-wiki-fractal-logic.html",
+      "source_refs": [
+        "logic_fractal/fragment_composer.py",
+        "logic_fractal/data/composition_rules.json"
+      ]
+    },
+    {
+      "id": "wiki-page-typed-fragment",
+      "url": "/logic-wiki-typed-fragment.html",
+      "source_refs": [
+        "logic_fractal/data/typed_fragments_fixture.json",
+        "logic_fractal/fragment_composer.py"
+      ]
+    },
+    {
+      "id": "wiki-page-mln-field",
+      "url": "/logic-wiki-mln-field.html",
+      "source_refs": [
+        "logic_wiki/data/articles.json"
+      ],
+      "source_status": "LOCAL_ARCHIVE_NOT_PUBLICLY_LINKED"
+    },
+    {
+      "id": "wiki-page-231-gates",
+      "url": "/logic-wiki-231-gates.html",
+      "source_refs": [
+        "https://www.sefaria.org/Sefer_Yetzirah_Gra_Version.2.4",
+        "research/data/LETTER_GATE_MAP_231_V1.json"
+      ]
+    },
+    {
+      "id": "wiki-page-logic-before-weight",
+      "url": "/logic-wiki-logic-before-weight.html",
+      "source_refs": [
+        "research/LOGIC_MINE_RESEARCH_TRACKS.md",
+        "research/LOGIC_FRACTAL_PROGRAM_V1.md"
+      ]
+    },
+    {
+      "id": "wiki-page-evidence-status",
+      "url": "/logic-wiki-evidence-status.html",
+      "source_refs": [
+        "logic_engine_v1/logic_kernel.py",
+        "research/reports/logic-fractal/2026-10-12-readiness-snapshot.md"
+      ]
+    },
+    {
+      "id": "wiki-page-ntm",
+      "url": "/logic-wiki-ntm.html",
+      "source_refs": [
+        "logic_model_builder_v1/README.md",
+        "research/LOGIC_FRACTAL_PROGRAM_V1.md"
+      ],
+      "source_status": "LOCAL_ARCHIVE_INTEGRATION_PENDING"
+    }
+  ],
+  "stable_extended_ids_verified": 9,
+  "all_extended_resources_have_source_or_explicit_local_boundary": true
 }
