@@ -70,13 +70,13 @@
     },
     {
       "component": "formal-fixture-benchmark",
-      "status": "IMPLEMENTED_SEVEN_SYNTHETIC_CASES_CI_PENDING",
-      "limit": "validates adapter behavior only; source-grounded logic benchmark still missing"
+      "status": "TESTED_FIVE_SYNTHETIC_PROPOSITIONAL_CASES",
+      "limit": "Existing canonical propositional benchmark passes five synthetic fixtures; no source-grounded semantic benchmark exists yet."
     },
     {
       "component": "logic-evaluation-ledger",
-      "status": "IMPLEMENTED_HARD_GATES_CI_PENDING",
-      "limit": "records an evaluation vector and review decision only; no reward learning or auto-promotion"
+      "status": "TESTED_HARD_GATES_NO_WEIGHT_UPDATE",
+      "limit": "Hard-gated evaluation tests passed; records an evaluation vector and review decision only, with no reward learning or automatic status promotion."
     },
     {
       "component": "logic-package-contract",
