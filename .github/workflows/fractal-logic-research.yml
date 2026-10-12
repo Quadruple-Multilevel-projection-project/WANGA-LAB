@@ -58,6 +58,14 @@ jobs:
           PY
       - name: Run deterministic fractal composer tests
         run: python -m unittest discover -s research/fractal-logic-model/tests -p 'test_*.py' -v
+      - name: Build first two-scale model candidate
+        run: python research/fractal-logic-model/src/build_first_candidate.py "$RUNNER_TEMP/fractal-logic-first-model-candidate.json"
+      - name: Upload first-model candidate artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: fractal-logic-first-model-candidate
+          path: $RUNNER_TEMP/fractal-logic-first-model-candidate.json
+          if-no-files-found: error
       - name: Build dated research validation report
         run: |
           python - <<'PY'
