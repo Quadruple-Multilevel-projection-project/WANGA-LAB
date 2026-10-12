@@ -11,6 +11,7 @@
 
 - [WANGA-LAB repository](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB)
 - [Logic Mine research tracks](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/LOGIC_MINE_RESEARCH_TRACKS.md)
+- [Daily integration map — Logic Research, Logic Boxes, and Public Site](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/DAILY_INTEGRATION_MAP_2026-10-13.md) — connects the 5+5 architecture review, corpus/source audits, first three logic products, and the public Hebrew catalog.
 
 ## Shared research thread: Logic before implementation
 
