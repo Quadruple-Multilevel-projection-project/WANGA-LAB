@@ -11,7 +11,7 @@ from formal_reasoning.typed_fragment import (
     check_entailment,
     validate_formal_spec,
 )
-from logic_proof.evaluation import evaluate_candidate
+from formal_reasoning.evaluation import evaluate_candidate
 
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURE_PATH = ROOT / "formal_reasoning/examples/typed_formal_cases.json"
@@ -97,25 +97,24 @@ class BoundedZ3AdapterTests(unittest.TestCase):
         self.assertIn("not evaluated as proven", result["interpretation"])
 
     def test_hard_gates_do_not_average_away_failed_proof(self):
-        result = evaluate_candidate(
-            formal_check={"premise_consistency": "SAT", "entailment_status": "NOT_ENTAILED_COUNTERMODEL"},
-            benchmark_metrics={"accuracy": 1.0, "false_accept_rate": 0.0, "counterexample_escape_rate": 0.0},
-            evidence_coverage=1.0,
-            replay_hash_match=True,
-        )
-        self.assertEqual(result["decision"], "REJECT_OR_REFORMULATE")
+        result = evaluate_candidate({
+            "source_coverage": 1.0,
+            "benchmark_accuracy": 1.0,
+            "counterexample_rate": 0.0,
+            "holdout_score": 1.0,
+            "compute_seconds": 0.1,
+            "premises_consistent": True,
+            "formal_checks_pass": False,
+            "replay_stable": True,
+        })
+        self.assertEqual(result["status"], "BLOCKED_BY_HARD_GATE")
+        self.assertFalse(result["all_hard_gates_pass"])
+        self.assertFalse(result["weight_update_performed"])
         self.assertEqual(result["verification_status"], "NOT_YET_VERIFIED")
-        self.assertEqual(result["learning_status"], "EVALUATION_ONLY_NO_WEIGHTS_UPDATED")
 
-    def test_missing_benchmark_metrics_block_review(self):
-        result = evaluate_candidate(
-            formal_check={"premise_consistency": "SAT", "entailment_status": "ENTAILED_WITHIN_ENCODED_FRAGMENT"},
-            benchmark_metrics={},
-            evidence_coverage=1.0,
-            replay_hash_match=True,
-        )
-        self.assertEqual(result["decision"], "HOLD_FOR_EVIDENCE_OR_REVIEW")
-        self.assertIn("benchmark_accuracy_threshold_met", result["failed_gates"])
+    def test_missing_benchmark_metrics_are_rejected(self):
+        with self.assertRaises(ValueError):
+            evaluate_candidate({"source_coverage": 1.0})
 
 
 if __name__ == "__main__":
