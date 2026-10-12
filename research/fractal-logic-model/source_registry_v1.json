@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.0",
+  "captured_on": "2026-10-12",
+  "scope": "Accessible GitHub and Library artifacts only; no full ChatGPT history export was available in the current file lists.",
+  "sources": [
+    {
+      "source_id": "SRC-GH-LOGIC-MINE-TRACKS",
+      "kind": "github_file",
+      "ref": "main",
+      "locator": "research/LOGIC_MINE_RESEARCH_TRACKS.md",
+      "span": "Whole file",
+      "date": "2026-10-12 snapshot",
+      "language": "en",
+      "hash_algorithm": "git-blob-sha1",
+      "hash": "74bf6611d2da891eb5fa45351e0611a3bef6bb11",
+      "verification_status": "READ; CLAIMS_REQUIRE_SOURCE_REVIEW",
+      "usage_permissions": "Public repository reference; redistribution terms not checked"
+    },
+    {
+      "source_id": "LIB-NTM-MLN-OVERLAY",
+      "kind": "library_code_archive",
+      "locator": "WANGA_LAB_NTM_MLN_V0_2_Overlay.zip",
+      "date": "2026-10-12",
+      "language": "mixed",
+      "hash_algorithm": "sha256",
+      "hash": "346c8895150df8b5c74cdcd70f9746c4515daaa96ef9d6f7da10658dd77059d6",
+      "verification_status": "LOCAL_COMPILE_AND_36_TESTS_PASS; SEMANTICS_NOT_VERIFIED",
+      "usage_permissions": "Internal engineering artifact"
+    }
+  ],
+  "conversation_access_audit": {
+    "current_conversation_upload_count": 0,
+    "full_account_history_access": "NOT_AVAILABLE",
+    "export_search": "No explicit transcript export located in the searches run; not proof of absence elsewhere.",
+    "status": "BLOCKED_AWAITING_EXPLICIT_EXPORT"
+  }
+}
