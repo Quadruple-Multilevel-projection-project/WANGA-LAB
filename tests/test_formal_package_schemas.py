@@ -45,7 +45,7 @@ def valid_package():
 class LogicJsonSchemaTests(unittest.TestCase):
     def test_schemas_are_valid_draft_2020_12(self):
         package_schema = load_schema("logic-package-contract-v1.schema.json")
-        formal_schema = load_schema("typed-typed-formal-fragment-v1.schema.json")
+        formal_schema = load_schema("typed-formal-fragment-v1.schema.json")
         jsonschema.Draft202012Validator.check_schema(package_schema)
         jsonschema.Draft202012Validator.check_schema(formal_schema)
 
