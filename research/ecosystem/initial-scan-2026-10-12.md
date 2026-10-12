@@ -71,3 +71,6 @@ Credential-like or unrelated private files are excluded from this research sweep
 ## Decision
 
 **Proceed with multi-project bounded scanning. Do not claim an all-project content audit completed.** An access inventory and a first content sample are confirmed; deeper file-level extraction and the cross-repository scheduled run remain in progress or blocked by token scope.
+
+## Expanded README sweep
+A follow-on bounded pass raised the count of distinct repository identifiers with a usable README response to 33 after excluding known ambiguous connector duplicates. This is still a README-level sweep, not a full content audit. See [Repository README Sweep](readme-sweep-2026-10-12.md) for detailed scope, categories and access gaps.
