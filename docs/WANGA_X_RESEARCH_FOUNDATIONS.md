@@ -212,3 +212,9 @@ The repository must distinguish:
 - **Verification** — experimentally demonstrated behavior.
 
 No claim of novelty, priority, or complete implementation is made until the corresponding evidence exists.
+
+## Executable WANGA-X prototype
+
+An experimental implementation is now merged into the repository: [WANGA-X Blueprint Engine V1](./WANGA_X_EXECUTABLE_BLUEPRINT_ENGINE_V1.md) and [package README](../wanga_x_v1/README.md). It implements requirement normalization, required-computation capability mapping, three candidate architecture strategies, dependency closure, Blueprint generation, structural verification and reversible hashed construction frames.
+
+This implements the initial Blueprint-generation milestone, not the whole WANGA-X thesis. Neural weights are not synthesized or trained, and no live provider endpoint is created. If a requirement requires neural runtime materialization without a verified backend, the result remains blocked. Experimental success on structural tests is not empirical proof that requirement-derived architectures outperform a fixed baseline.
