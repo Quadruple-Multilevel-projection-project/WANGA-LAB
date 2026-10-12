@@ -88,10 +88,11 @@ class EvidenceAndRuleTests(unittest.TestCase):
 
     def test_inactive_rule_is_skipped(self):
         bundle = sample_bundle()
-        bundle["rules"][0]["status"] = "DISABLED"
+        for rule in bundle["rules"]:
+            rule["status"] = "DISABLED"
         result = run_bundle(bundle)
         self.assertEqual(result["summary"]["rule_firings"], 0)
-        self.assertTrue(result["skipped_rules"])
+        self.assertEqual(len(result["skipped_rules"]), len(bundle["rules"]))
 
 
 class ActionGateTests(unittest.TestCase):
@@ -249,7 +250,8 @@ class SourceGroundedSemanticTests(unittest.TestCase):
         derived = result["derived_claims"]
         self.assertEqual(len(derived), 1)
         self.assertEqual(derived[0]["status"], "DERIVED_NOT_VERIFIED")
-        self.assertNotIn("VERIFIED", derived[0]["status"])
+        self.assertEqual(derived[0]["status"], "DERIVED_NOT_VERIFIED")
+        self.assertNotEqual(derived[0]["status"], "VERIFIED")
 
     def test_all_gate_semantics_remain_unassigned_in_registry(self):
         gate_map_path = REPO_ROOT / "research" / "data" / "LETTER_GATE_MAP_231_V1.json"
