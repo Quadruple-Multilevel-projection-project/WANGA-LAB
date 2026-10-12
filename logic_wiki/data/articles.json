@@ -316,6 +316,162 @@
         "fractal-composition",
         "evidence-provenance"
       ]
+    },
+    {
+      "id": "logical-particle",
+      "title": "Logical particle",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "PROPOSED_TYPED_UNIT_SEMANTICS_PENDING",
+      "definition": "A proposed smallest typed unit in the WANGA logical-fractal representation. It may carry a primitive or relation together with type, interface, source lineage, scope and test references.",
+      "scope_note": "The word particle is an engineering metaphor, not a physical claim and not proof that this unit is the universal atom of logic. Unit boundaries require source-grounded semantics and counterexamples.",
+      "sources": [
+        "SRC-WANGA-FRACTAL-COMPOSER",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relations": [
+        "logical-primitive",
+        "logical-relation",
+        "logical-fractal",
+        "fractal-invariant",
+        "multi-scale-fractal-map"
+      ]
+    },
+    {
+      "id": "fractal-invariant",
+      "title": "Fractal composition invariant",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "CONTRACT_CANDIDATE_REQUIRES_BENCHMARK",
+      "definition": "A condition intended to remain true when validated logical fragments are composed at a higher scale, such as typed interface compatibility, stable parent IDs, source lineage, and preserved constraints.",
+      "scope_note": "An invariant must be stated as an executable predicate with positive and negative tests. Similar shapes, shared terms, or successful serialization are not semantic proof.",
+      "sources": [
+        "SRC-WANGA-FRACTAL-COMPOSER",
+        "SRC-WANGA-READINESS-GATE"
+      ],
+      "relations": [
+        "logical-fractal",
+        "fractal-composition",
+        "typed-logic-fragment",
+        "evidence-provenance"
+      ]
+    },
+    {
+      "id": "recursive-composition",
+      "title": "Recursive logical composition",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "PARTIAL_COMPOSER_IMPLEMENTATION_REVIEW_REQUIRED",
+      "definition": "A multi-scale operation that composes previously validated candidate fragments into a higher-level candidate while preserving the full parent graph, contracts, tests, and provenance.",
+      "scope_note": "Each composition remains a candidate until semantic and counterexample tests pass. Recursion cannot silently upgrade a component or an editorial link into logical entailment.",
+      "sources": [
+        "SRC-WANGA-FRACTAL-COMPOSER",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relations": [
+        "logical-fractal",
+        "fractal-composition",
+        "fractal-invariant",
+        "multi-scale-fractal-map"
+      ]
+    },
+    {
+      "id": "conversation-evidence-unit",
+      "title": "Conversation evidence unit",
+      "category": "Research infrastructure",
+      "kind": "WANGA_INFRASTRUCTURE",
+      "status": "INTAKE_TOOL_BUILT_REAL_EXPORTS_NOT_REGISTERED",
+      "definition": "A source-scoped record produced from an explicitly provided conversation export, preserving available conversation/message identifiers, parent links, dates, content segments and hashes for private review.",
+      "scope_note": "The intake tool only processes exports supplied to it. It does not grant automatic access to all private ChatGPT history. Raw exports are not published to GitHub or Wix; only reviewed, permissioned and redacted derivatives may be public.",
+      "sources": [
+        "SRC-WANGA-CONVERSATION-INTAKE",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relations": [
+        "evidence-provenance",
+        "source-first-contract",
+        "autonomous-research-agent",
+        "longitudinal-research-cycle"
+      ]
+    },
+    {
+      "id": "counterexample-case",
+      "title": "Counterexample case",
+      "category": "Reasoning",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "BENCHMARK_DATASET_NOT_YET_REGISTERED",
+      "definition": "A controlled input and expected limiting or failing outcome designed to challenge a rule, composition, interpretation or model candidate.",
+      "scope_note": "Unit tests for software contracts are not semantic ground-truth benchmarks. A counterexample must state its source, target claim/rule, expected result, reviewer and adjudication status.",
+      "sources": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN",
+        "SRC-WANGA-READINESS-GATE"
+      ],
+      "relations": [
+        "deduction",
+        "logical-relation",
+        "fractal-invariant",
+        "model-readiness"
+      ]
+    },
+    {
+      "id": "autonomous-research-agent",
+      "title": "Bounded autonomous research agent",
+      "category": "Research infrastructure",
+      "kind": "WANGA_INFRASTRUCTURE",
+      "status": "ROLE_REGISTRY_AND_DETERMINISTIC_CYCLE_EXIST",
+      "definition": "A bounded work unit with explicit inputs, outputs, evidence requirements and stop conditions, such as source collection, extraction, composition, adversarial review, benchmarking or wiki curation.",
+      "scope_note": "A registered role is not itself an autonomous AI capability. Execution is claimed only when a run produces a report; access gaps, failures and blocked work must be recorded.",
+      "sources": [
+        "SRC-WANGA-AGENT-REGISTRY",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relations": [
+        "conversation-evidence-unit",
+        "longitudinal-research-cycle",
+        "logic-wiki",
+        "model-readiness"
+      ]
+    },
+    {
+      "id": "multi-scale-fractal-map",
+      "title": "Multi-scale logical-fractal map",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "MAP_SCHEMA_CANDIDATE_NOT_SEMANTIC_ENTAILMENT",
+      "definition": "A versioned map connecting logical units and composed fragments across scales, with stable IDs, typed edges, parent links, provenance, constraints, counterexamples and status metadata.",
+      "scope_note": "Keep an editorial knowledge graph separate from an executable composition graph. A link denotes navigation or a proposed relationship unless a rule contract and evidence establish a stronger relation.",
+      "sources": [
+        "SRC-WANGA-FRACTAL-COMPOSER",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relations": [
+        "logical-fractal",
+        "logical-particle",
+        "recursive-composition",
+        "fractal-invariant",
+        "logic-wiki"
+      ]
+    },
+    {
+      "id": "longitudinal-research-cycle",
+      "title": "Longitudinal logic research cycle",
+      "category": "Research infrastructure",
+      "kind": "WANGA_PROCESS_PROPOSAL",
+      "status": "DAILY_AUTOMATION_ENABLED_WITH_ACCESS_BOUNDARIES",
+      "definition": "A repeatable process that checks available sources, registers new evidence, extracts and normalizes logic, composes candidates, runs adversarial and benchmark checks, evaluates readiness, generates a dated report and updates approved public summaries.",
+      "scope_note": "Scheduled runs operate only on accessible inputs and connected tools. They cannot fetch private conversation history unless an export is provided. A no-change, blocked or failed run is a valid result; publication requires source/provenance checks and Wix read-back.",
+      "sources": [
+        "SRC-WANGA-AGENT-REGISTRY",
+        "SRC-WANGA-READINESS-GATE",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relations": [
+        "conversation-evidence-unit",
+        "autonomous-research-agent",
+        "logic-wiki",
+        "model-readiness",
+        "fractal-composition"
+      ]
     }
   ],
   "sources": [
@@ -406,6 +562,38 @@
       "type": "PROJECT_PROPOSAL",
       "status": "DRAFT_ON_RESEARCH_BRANCH",
       "note": "Provisional proposal; readiness thresholds are not empirically validated."
+    },
+    {
+      "id": "SRC-WANGA-CONVERSATION-INTAKE",
+      "title": "Private Conversation Export Intake",
+      "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/scripts/ingest_conversation_export.py",
+      "type": "IMPLEMENTATION_SOURCE",
+      "status": "IMPLEMENTATION_SOURCE",
+      "note": "Local export processor records message IDs, links, dates and hashes; raw transcript output must remain private review material."
+    },
+    {
+      "id": "SRC-WANGA-FRACTAL-COMPOSER",
+      "title": "Typed Fractal Fragment Composer",
+      "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_fractal/fragment_composer.py",
+      "type": "IMPLEMENTATION_SOURCE",
+      "status": "IMPLEMENTATION_SOURCE",
+      "note": "Composes typed fragments as source-backed candidates; validates interfaces and preserves parent/source lineage."
+    },
+    {
+      "id": "SRC-WANGA-READINESS-GATE",
+      "title": "First Model Alpha Readiness Gate",
+      "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/readiness_gate.json",
+      "type": "PROJECT_CONTRACT",
+      "status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+      "note": "Configured release criteria are project thresholds and are not empirically validated universal cutoffs."
+    },
+    {
+      "id": "SRC-WANGA-AGENT-REGISTRY",
+      "title": "Logic Research Agent Registry",
+      "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/agent_registry.json",
+      "type": "PROJECT_CONTRACT",
+      "status": "PROJECT_SOURCE",
+      "note": "Defines bounded agent roles, inputs, outputs and evidence boundaries."
     }
   ]
 }
