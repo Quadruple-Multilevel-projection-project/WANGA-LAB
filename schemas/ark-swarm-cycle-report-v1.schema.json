@@ -1,0 +1,60 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ARK-Swarm Logic Trader Cycle Report V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "cycle_id",
+    "status",
+    "execution_mode",
+    "agents",
+    "logic_trader",
+    "semantic_status",
+    "capability_boundaries"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ark-swarm-logic-trader-cycle/1.0"
+    },
+    "cycle_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "SWARM_CYCLE_PASS_CANDIDATE_BUILT",
+        "SWARM_CYCLE_REVIEW"
+      ]
+    },
+    "execution_mode": {
+      "const": "BOUNDED_LOCAL_DETERMINISTIC_COORDINATOR"
+    },
+    "agents": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "agent_id",
+          "status",
+          "passed",
+          "checks"
+        ]
+      }
+    },
+    "logic_trader": {
+      "type": "object",
+      "required": [
+        "status",
+        "logic_package",
+        "semantic_status"
+      ]
+    },
+    "semantic_status": {
+      "const": "NOT_YET_VERIFIED"
+    },
+    "capability_boundaries": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}
