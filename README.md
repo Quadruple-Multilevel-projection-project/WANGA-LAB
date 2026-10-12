@@ -285,3 +285,17 @@ The repository now includes a restricted propositional-logic adapter backed by Z
 Run with `python -m pip install -r requirements-formal.txt`, `python -m unittest discover -s tests -p 'test_formal_reasoning.py' -v`, and `python scripts/run_formal_reasoning_benchmarks.py`.
 
 The adapter only checks explicitly encoded propositional formulas. It does not turn solver results into empirical truth or promote any claim to `VERIFIED`. The first benchmark is a smoke suite; source-grounded cases and independent holdout are still required.
+
+
+## Formal reasoning extension for ARK-Swarm
+
+The existing `formal_reasoning/` module is the canonical bounded propositional checker. The current integration branch adds `formal_reasoning/typed_fragment.py` for explicit typed Bool/Int/Real/String ASTs, a source-preserving formalization queue, a fail-closed package lifecycle contract and CI coverage. These components do not formalize arbitrary natural language. Synthetic formal tests check the adapter, and every candidate remains `NOT_YET_VERIFIED` pending source-grounded benchmarks and independent review.
+
+```bash
+python -m unittest discover -s tests -p 'test_formal_typed_fragment.py' -v
+python -m unittest discover -s tests -p 'test_formal_typed_benchmark.py' -v
+python -m unittest discover -s tests -p 'test_formalization_queue.py' -v
+python -m unittest discover -s tests -p 'test_logic_package_contract.py' -v
+python -m unittest discover -s tests -p 'test_formal_package_schemas.py' -v
+python scripts/run_typed_formal_benchmark.py
+```
