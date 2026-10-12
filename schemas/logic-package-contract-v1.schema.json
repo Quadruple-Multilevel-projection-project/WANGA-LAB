@@ -86,7 +86,7 @@
             "minLength": 1
           },
           "expr": {
-            "$ref": "formal-fragment-v1.schema.json#/$defs/expression"
+            "$ref": "#/$defs/expression"
           },
           "source_refs": {
             "type": "array",
@@ -120,7 +120,7 @@
       }
     },
     "conclusion": {
-      "$ref": "formal-fragment-v1.schema.json#/$defs/expression"
+      "$ref": "#/$defs/expression"
     },
     "source_refs": {
       "type": "array",
@@ -235,5 +235,77 @@
       }
     }
   ],
-  "additionalProperties": false
+  "additionalProperties": false,
+  "$id": "https://wanga-lab.example/schemas/logic-package-contract-v1.schema.json",
+  "$defs": {
+    "expression": {
+      "oneOf": [
+        {
+          "type": "object",
+          "required": [
+            "var"
+          ],
+          "properties": {
+            "var": {
+              "type": "string",
+              "pattern": "^[A-Za-z_][A-Za-z0-9_]{0,63}$"
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "const"
+          ],
+          "properties": {
+            "const": {
+              "type": [
+                "boolean",
+                "integer",
+                "number",
+                "string"
+              ]
+            }
+          },
+          "additionalProperties": false
+        },
+        {
+          "type": "object",
+          "required": [
+            "op",
+            "args"
+          ],
+          "properties": {
+            "op": {
+              "enum": [
+                "not",
+                "and",
+                "or",
+                "implies",
+                "eq",
+                "neq",
+                "lt",
+                "le",
+                "gt",
+                "ge",
+                "add",
+                "sub",
+                "mul"
+              ]
+            },
+            "args": {
+              "type": "array",
+              "minItems": 1,
+              "maxItems": 128,
+              "items": {
+                "$ref": "#/$defs/expression"
+              }
+            }
+          },
+          "additionalProperties": false
+        }
+      ]
+    }
+  }
 }
