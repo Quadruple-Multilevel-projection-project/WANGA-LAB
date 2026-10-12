@@ -1,22 +1,22 @@
 {
   "schema_version": "logic-wiki-wix-sync/1.0",
   "last_sync_date": "2026-10-12",
-  "status": "READ_BACK_VERIFIED",
+  "status": "PUBLISHED_READ_BACK_PARTIAL",
   "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
   "wiki_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
   "source_catalog": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/articles.json",
-  "synced_article_count": 18,
-  "source_record_count": 11,
-  "relation_link_count": 54,
+  "synced_article_count": 27,
+  "source_record_count": 16,
+  "relation_link_count": 102,
   "homepage_navigation_verified": true,
   "homepage_card_verified": true,
   "existing_model_builder_preserved": true,
   "existing_corpus_atlas_preserved": true,
-  "verification_method": "Downloaded the Wix deployment after upload; checked that the main catalog contains 18 stable-ID items and the extended section contains 9 distinct stable-ID resource cards, each with source links or an explicit local-source boundary.",
-  "automation_boundary": "Connected Wix upload/read-back used for this sync. GitHub Actions does not have Wix credentials; direct runner-to-Wix publishing is not enabled. The daily WANGA Unified Work Loop has instructions to sync via the authorized Wix connector and read back.",
+  "verification_method": "Wix upload API returned HTTP 200 with upload ID 19dbbff1-5859-4704-921c-9af170cafef1. Public fetch confirmed the new research page title, navigation from homepage and Logic Wiki, and source links to the live GitHub catalog/taxonomy. The extractor returned partial rendered page text; not all topic sections were verified individually.",
+  "automation_boundary": "Connected Wix upload/read-back was used. GitHub Actions does not currently have Wix credentials; the daily WANGA Unified Work Loop must use connected Wix tools and record a read-back result.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
-  "note": "Page publication status is distinct from semantic verification.",
-  "extended_topic_page_count": 9,
+  "note": "Publication is not semantic verification. The repository catalog has 27 articles/16 source records; the 18 legacy article entries plus the nine new concept entries are linked across the Logic Wiki and the dedicated fractal research page. Exact topic-by-topic archive readback remains partial.",
+  "extended_topic_page_count": 10,
   "main_page_card_count": 27,
   "extended_page_resources": [
     {
@@ -91,8 +91,23 @@
         "research/LOGIC_FRACTAL_PROGRAM_V1.md"
       ],
       "source_status": "LOCAL_ARCHIVE_INTEGRATION_PENDING"
+    },
+    {
+      "id": "wiki-page-fractal-research",
+      "url": "/logic-wiki-fractal-research.html",
+      "source_refs": [
+        "logic_wiki/data/articles.json",
+        "logic_wiki/data/fractal_taxonomy.json",
+        "logic_fractal/data/recursive_composition_contracts_v1.json",
+        "logic_wiki/data/readiness_gate.json"
+      ]
     }
   ],
   "stable_extended_ids_verified": 9,
-  "all_extended_resources_have_source_or_explicit_local_boundary": true
+  "all_extended_resources_have_source_or_explicit_local_boundary": true,
+  "fractal_research_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki-fractal-research.html",
+  "fractal_research_navigation_verified": true,
+  "additional_pages": [
+    "logic-wiki-fractal-research.html"
+  ]
 }
