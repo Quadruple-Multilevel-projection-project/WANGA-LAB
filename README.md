@@ -224,3 +224,14 @@ The requirement-driven architecture paradigm now has an experimental executable 
 - [Merged PR #97](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/97) — merge commit `638d97a3e201c60a48fbf51ab30ba013837886c2`.
 
 It maps a task requirement into required computation capabilities, compares three candidate architecture strategies, resolves component dependencies, emits a provenance-bearing Blueprint, and records reversible hashed build frames. A request that needs actual neural runtime materialization is explicitly blocked when no verified backend is available. The engine generates a Blueprint; it does not train or instantiate neural weights.
+
+## Logic Fractal Research and Logic Wiki
+
+- [Logic Fractal Model Program V1](research/LOGIC_FRACTAL_PROGRAM_V1.md) — source-first research plan and provisional FIRST_MODEL_ALPHA readiness gate.
+- [Logic Wiki data and catalog](logic_wiki/README.md) — versioned, source-linked encyclopedia; each concept keeps its own status and scope.
+- [Logic-fractal composer](logic_fractal/composer.py) — deterministic candidate composition with provenance and invariant checks.
+- [Agent contracts](logic_wiki/data/agent_registry.json) — nine bounded roles for collection, source registration, extraction, normalization, composition, mirror review, evaluation, curation and reporting.
+- [Conversation intake boundary](research/inbox/conversations/README.md) — only accessible or explicitly exported conversations enter the corpus.
+- [Wix Logic Wiki](https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html) — published index; GitHub PR remains the source-review path.
+
+The initial catalog is a seed. FIRST_MODEL_ALPHA is not ready until the configured source, composition, counterexample, benchmark, holdout and review requirements pass. The thresholds are project policy hypotheses, not empirical laws.

@@ -1,0 +1,171 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Logic Fractal Typed Fragment V1",
+  "type": "object",
+  "required": [
+    "fragment_id",
+    "version",
+    "status",
+    "scale",
+    "claims",
+    "inputs",
+    "outputs",
+    "composition",
+    "provenance",
+    "tests"
+  ],
+  "properties": {
+    "fragment_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "CANDIDATE",
+        "SPECIFIED",
+        "BUILT",
+        "TESTED",
+        "NOT_YET_VERIFIED",
+        "VERIFIED",
+        "REJECTED"
+      ]
+    },
+    "scale": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 20
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "text",
+          "status"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "text": {
+            "type": "string"
+          },
+          "status": {
+            "type": "string"
+          },
+          "source_span_ids": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "assumption": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "type"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          },
+          "required": {
+            "type": "boolean"
+          }
+        }
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "name",
+          "type"
+        ],
+        "properties": {
+          "name": {
+            "type": "string"
+          },
+          "type": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "composition": {
+      "type": "object",
+      "required": [
+        "parent_ids",
+        "rule_id"
+      ],
+      "properties": {
+        "parent_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "rule_id": {
+          "type": "string"
+        },
+        "interface_checks": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "locator"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "locator": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "tests": {
+      "type": "array"
+    },
+    "counterexamples": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "model_hash": {
+      "type": "string"
+    }
+  },
+  "additionalProperties": false
+}

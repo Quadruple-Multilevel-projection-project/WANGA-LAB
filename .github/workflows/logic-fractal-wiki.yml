@@ -1,0 +1,60 @@
+name: Logic Fractal Wiki Research
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 5 * * 1'
+  pull_request:
+    paths:
+      - 'logic_wiki/**'
+      - 'research/inbox/conversations/**'
+      - 'research/LOGIC_FRACTAL_PROGRAM_V1.md'
+      - 'scripts/build_logic_wiki.py'
+      - 'logic_fractal/**'
+      - 'scripts/run_logic_agents.py'
+      - '.github/workflows/logic-fractal-wiki.yml'
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  validate-build-report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Build and validate Logic Wiki
+        run: python scripts/build_logic_wiki.py --root . --out logic_wiki/generated
+      - name: Run Logic Wiki tests
+        run: python -m unittest discover -s logic_wiki/tests -v
+      - name: Run Logic Fractal Composer tests
+        run: python -m unittest discover -s logic_fractal/tests -v
+      - name: Run typed multi-scale fragment tests
+        run: python -m unittest discover -s logic_fractal/tests -p 'test_fragment_composer.py' -v
+      - name: Build first typed fractal model candidate
+        run: python scripts/build_first_fractal_model.py
+      - name: Run bounded research-agent cycle
+        run: python scripts/run_logic_agents.py
+      - name: Upload wiki and readiness report
+        uses: actions/upload-artifact@v4
+        with:
+          name: logic-wiki-research-report
+          path: |
+            logic_wiki/generated/
+            research/reports/logic-fractal/
+      - name: Propose generated wiki/report updates (no auto-merge)
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: automation/logic-wiki-generated
+          delete-branch: false
+          title: 'chore: refresh Logic Wiki and research readiness report'
+          commit-message: 'chore: refresh generated Logic Wiki and readiness report'
+          body: |
+            Automated deterministic build of the current versioned Logic Wiki catalog.
+            Review sources, statuses, and readiness deficits before merge. This PR does not
+            claim that conversation history was collected unless source records were added.
+          add-paths: |
+            logic_wiki/generated/**
+            research/reports/logic-fractal/**

@@ -1,0 +1,31 @@
+{
+  "gate_id": "FIRST_MODEL_ALPHA_V1",
+  "status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+  "policy_note": "Project thresholds are hypotheses, not universal scientific cutoffs. Models may be generated earlier as private candidates, but not released as FIRST_MODEL_ALPHA until every gate passes.",
+  "thresholds": {
+    "min_source_records": 20,
+    "min_source_classes": 3,
+    "min_logic_units_with_provenance": 50,
+    "min_composition_rules_with_contracts": 20,
+    "min_counterexample_cases": 30,
+    "min_test_cases": 100,
+    "min_benchmark_suites": 3,
+    "min_independent_review_cycles": 2,
+    "unresolved_dangling_source_refs": 0,
+    "unresolved_duplicate_stable_ids": 0,
+    "critical_core_contradictions": 0,
+    "deterministic_build_required": true,
+    "holdout_split_required": true,
+    "mirror_review_required": true
+  },
+  "release_contract": {
+    "candidate_output": "Logic Fractal Alpha",
+    "status_before_gate": "INTERNAL_CANDIDATE_NOT_RELEASED",
+    "status_after_gate": "CANDIDATE_RELEASE_READY_FOR_HUMAN_REVIEW",
+    "never_imply": [
+      "AGI",
+      "universal correctness",
+      "independently verified source truth"
+    ]
+  }
+}

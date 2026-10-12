@@ -137,3 +137,11 @@ Architecture review: https://github.com/Quadruple-Multilevel-projection-project/
 Investor draft: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/INVESTOR_LOGIC_EXPLANATION_UPDATE_DRAFT_HE.md
 
 Research track status: SPECIFIED / PROPOSED; not verified as an implemented end-to-end engine.
+
+## Track F — Logic Fractal Model Composition
+
+Collect source-grounded logical primitives, typed relations, explicit composition rules, recursion contracts, counterexamples, and test suites. A fractal composition candidate must preserve stable IDs, source provenance, boundary conditions, and failed-test records. Geometric self-similarity or a numerical weight is not sufficient to establish logical entailment. See [Logic Fractal Model Program V1](LOGIC_FRACTAL_PROGRAM_V1.md) and the [`logic_fractal`](../logic_fractal/) package.
+
+## Track G — Conversation Corpus and Logic Wiki
+
+Ingest only conversation text available in the active conversation/Library or supplied as authorized exports under `research/inbox/conversations/`. Preserve exact text/span and a content hash when available. Separate what a user proposed from what was implemented or independently verified. The [Logic Wiki](../logic_wiki/README.md) tracks article IDs, sources, relations, versions, hypotheses, tests, and readiness deficits. Automated repository jobs cannot read every private ChatGPT conversation by themselves.
