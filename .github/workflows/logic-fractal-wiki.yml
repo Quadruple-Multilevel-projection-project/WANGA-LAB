@@ -10,6 +10,12 @@ on:
       - 'research/inbox/conversations/**'
       - 'research/LOGIC_FRACTAL_PROGRAM_V1.md'
       - 'research/ARK_SWARM_LOGIC_TRADER_INTEGRATION_V1.md'
+      - 'research/ARK_SWARM_FULL_STACK_GAP_ANALYSIS_V1.md'
+      - 'research/ecosystem/library_integration_matrix.json'
+      - 'scripts/validate_ark_swarm_library_matrix.py'
+      - 'research/ARK_SWARM_FULL_STACK_GAP_ANALYSIS_V1.md'
+      - 'research/ecosystem/library_integration_matrix.json'
+      - 'scripts/validate_ark_swarm_library_matrix.py'
       - 'scripts/build_logic_wiki.py'
       - 'logic_fractal/**'
       - 'ark_swarm/**'
@@ -53,6 +59,8 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Validate ARK-Swarm library integration matrix
+        run: python scripts/validate_ark_swarm_library_matrix.py
       - name: Compile private export intake utility
         run: python -m compileall -q scripts/ingest_conversation_export.py
       - name: Test private conversation export intake
