@@ -89,3 +89,11 @@ Rational Logic, Computational Linguistics, Structural Mathematics, Computational
 5. Specify and test one bounded gate or weight case end-to-end.
 6. Review the Forensic Logic Drift draft.
 7. Prepare appropriate technical and investor static-page drafts for Wanga Logic Research and Hebrew Thesis Insight without publishing.
+
+## עדכון 2026-10-12 — ארכיטקטורה מאוחדת וטיוטת Wix
+
+- מפרט ארכיטקטורה קנוני נוצר: [FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md). הוא מרכז את חמש שכבות העיבוד ואת חמש תחנות החזור, מסיר את הכפילות מהטקסט שסופק, ומפריד אותן מארבע שכבות המשקולות.
+- טיוטת Wix הקיימת עודכנה ללא פרסום: Draft ID `e1992c65-dcc3-4483-90d3-eb8688fea347`; הכותרת כעת ״ארכיטקטורת לוגיקה דו־כיוונית: חמש שכבות עיבוד וחמישה שלבי חזור״.
+- טיוטת המשקיעים ב-GitHub עודכנה: [INVESTOR_LOGIC_EXPLANATION_UPDATE_DRAFT_HE.md](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/INVESTOR_LOGIC_EXPLANATION_UPDATE_DRAFT_HE.md).
+- תוקנו/סומנו כלא-מאומתים: ההבטחה ל-Zero-Crash, שחזור מושלם, טענות שאף מנוע AI אחר אינו מסוגל לכך, ערכי LFA/CSR/EDI ללא פרוטוקול ונתונים, והמיזוג בין אילוצים קשיחים למשקולות רכות.
+- **אין פרסום חי חדש.** הסטטוס של פוסט Wix נשאר UNPUBLISHED ויש לאשר את התוכן האנושי לפני פרסום.
