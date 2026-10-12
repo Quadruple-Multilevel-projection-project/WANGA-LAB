@@ -126,3 +126,14 @@ This evidence supports a bounded claim: **a first-stage, source-structured extra
 - Treat text-to-math reconstruction as a separate testable hypothesis, with exact-string reconstruction separated from structural reconstruction.
 
 Detailed audit: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md
+
+## 2026-10-12 — Canonical bidirectional architecture
+
+The proposed system is now described in one canonical document as **five forward-processing layers plus five return stages**. This consolidates repeated descriptions; it does not imply ten separate neural networks have already been implemented.
+
+Do not merge this architecture with the four logical-mathematical weight layers attached to letter interpretations, or with the four sentence roles in the source-extraction method. The original definitions/formulas for the four weight layers still need to be recovered from the research archive.
+
+Architecture review: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md
+Investor draft: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/INVESTOR_LOGIC_EXPLANATION_UPDATE_DRAFT_HE.md
+
+Research track status: SPECIFIED / PROPOSED; not verified as an implemented end-to-end engine.
