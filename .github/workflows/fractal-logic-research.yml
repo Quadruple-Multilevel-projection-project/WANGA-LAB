@@ -1,0 +1,74 @@
+name: Fractal Logic Research Cycle
+
+on:
+  pull_request:
+    paths:
+      - "research/fractal-logic-model/**"
+      - "research/logic-wikipedia/**"
+      - ".github/workflows/fractal-logic-research.yml"
+  push:
+    branches: ["main"]
+    paths:
+      - "research/fractal-logic-model/**"
+      - "research/logic-wikipedia/**"
+      - ".github/workflows/fractal-logic-research.yml"
+  schedule:
+    - cron: "0 9 * * 1"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify-research-corpus:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate research JSON
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          paths = list(Path("research/fractal-logic-model").glob("*.json"))
+          paths += list(Path("research/logic-wikipedia").rglob("*.json"))
+          assert paths, "No research JSON files found"
+          errors = []
+          for path in paths:
+              try:
+                  json.loads(path.read_text(encoding="utf-8"))
+              except Exception as exc:
+                  errors.append(f"{path}: {exc}")
+          if errors:
+              raise SystemExit("\n".join(errors))
+          print(f"Validated {len(paths)} JSON files")
+          PY
+      - name: Check wiki index paths
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          index = json.loads(Path("research/logic-wikipedia/index.json").read_text(encoding="utf-8"))
+          missing = [p["page_id"] + ": " + p["path"] for p in index["pages"] if not Path(p["path"]).is_file()]
+          if missing:
+              raise SystemExit("Missing wiki pages:\n" + "\n".join(missing))
+          print(f"Wiki page index valid: {len(index['pages'])} pages")
+          PY
+      - name: Verify epistemic boundaries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          index = json.loads(Path("research/logic-wikipedia/index.json").read_text(encoding="utf-8"))
+          assert index["rules"]["source_reference_does_not_equal_verification"] is True
+          assert index["rules"]["semantic_gate_meaning_default"] == "UNASSIGNED"
+          assert index["rules"]["model_generated_content_reviewed_before_verified"] is True
+          print("Epistemic boundaries: PASS")
+          PY
+      - name: Record execution boundaries
+        run: |
+          echo "Repository checks completed."
+          echo "This workflow does not access private conversations or publish Wix."
+          echo "Those operations require authorized connectors and public read-back."
