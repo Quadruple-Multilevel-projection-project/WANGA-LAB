@@ -153,11 +153,12 @@ def render(root, out):
           html.escape(a["id"], quote=True), html.escape((a["title"]+" "+a["category"]+" "+a["definition"]).casefold(), quote=True),
           html.escape(a["kind"]), html.escape(a["status"]), html.escape(a["title"]), html.escape(a["definition"]),
           html.escape(a["scope_note"]), source_links, rel_links))
-    page = """<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>WANGA Logic Wiki</title>
+    page_template = """<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>WANGA Logic Wiki</title>
     <style>body{font:16px/1.6 system-ui,sans-serif;max-width:1100px;margin:auto;padding:24px;background:#f6f7f3;color:#19251f}header,.entry{background:#fff;border:1px solid #d9dfd8;border-radius:12px;padding:18px;margin:14px 0}h1{font-size:2.4rem}input{width:100%;padding:12px;border:1px solid #aab5ab;border-radius:8px;font-size:1rem}.meta{font-size:.8rem;color:#27684f;text-transform:uppercase}.scope{color:#5e685f}a{color:#27684f}</style>
     </head><body><header><p>WANGA-LAB · RESEARCH ENCYCLOPEDIA</p><h1>Logic Wiki</h1><p>Versioned concepts, source-linked claims, logical relations and candidate fractal compositions.</p>
-    <input id="q" placeholder="Search terms, relations, or status…" aria-label="Search wiki"><p id="status"></p><p>First-model gate: %s. Source references and project proposals have separate status.</p></header>%s
-    <script>const q=document.getElementById("q"),items=[...document.querySelectorAll(".entry")],status=document.getElementById("status");function filter(){let term=q.value.toLowerCase().trim(),n=0;for(const e of items){let show=!term||e.dataset.search.includes(term)||e.innerText.toLowerCase().includes(term);e.hidden=!show;if(show)n++}status.textContent=n+" entries shown"}q.addEventListener("input",filter);filter();</script></body></html>""" % (html.escape(report["readiness_gate_status"]), "\n".join(cards))
+    <input id="q" placeholder="Search terms, relations, or status…" aria-label="Search wiki"><p id="status"></p><p>First-model gate: __GATE_STATUS__. Source references and project proposals have separate status.</p></header>__ARTICLE_CARDS__
+    <script>const q=document.getElementById("q"),items=[...document.querySelectorAll(".entry")],status=document.getElementById("status");function filter(){let term=q.value.toLowerCase().trim(),n=0;for(const e of items){let show=!term||e.dataset.search.includes(term)||e.innerText.toLowerCase().includes(term);e.hidden=!show;if(show)n++}status.textContent=n+" entries shown"}q.addEventListener("input",filter);filter();</script></body></html>"""
+    page = page_template.replace("__GATE_STATUS__", html.escape(report["readiness_gate_status"])).replace("__ARTICLE_CARDS__", "\n".join(cards))
     (out / "index.html").write_text(page, encoding="utf-8")
     report_path = out / "readiness-report.json"
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
