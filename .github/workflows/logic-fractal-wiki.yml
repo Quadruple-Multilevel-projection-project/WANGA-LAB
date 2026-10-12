@@ -1,4 +1,5 @@
 name: Logic Fractal Wiki Research
+
 on:
   workflow_dispatch:
   schedule:
@@ -7,50 +8,64 @@ on:
     branches: ['main']
     paths:
       - 'logic_wiki/**'
+      - 'logic_fractal/**'
+      - 'ark_swarm/**'
+      - 'logic_proof/**'
+      - 'schemas/ark-swarm-cycle-report-v1.schema.json'
+      - 'schemas/logic-package-contract-v1.schema.json'
+      - 'schemas/conversation-intake-record-v1.schema.json'
+      - 'requirements-logic.txt'
       - 'research/inbox/conversations/**'
       - 'research/LOGIC_FRACTAL_PROGRAM_V1.md'
       - 'research/ARK_SWARM_LOGIC_TRADER_INTEGRATION_V1.md'
       - 'research/ARK_SWARM_FULL_STACK_GAP_ANALYSIS_V1.md'
       - 'research/ecosystem/library_integration_matrix.json'
       - 'scripts/validate_ark_swarm_library_matrix.py'
-      - 'research/ARK_SWARM_FULL_STACK_GAP_ANALYSIS_V1.md'
-      - 'research/ecosystem/library_integration_matrix.json'
-      - 'scripts/validate_ark_swarm_library_matrix.py'
       - 'scripts/build_logic_wiki.py'
-      - 'logic_fractal/**'
-      - 'ark_swarm/**'
+      - 'scripts/run_ark_swarm.py'
+      - 'scripts/run_formal_logic_benchmark.py'
       - 'scripts/run_logic_agents.py'
       - 'scripts/evaluate_logic_agent_bundle.py'
-      - 'scripts/run_ark_swarm.py'
-      - 'tests/test_multi_agent_logic_evaluation.py'
-      - 'tests/test_ark_swarm_logic_trader.py'
       - 'scripts/ingest_conversation_export.py'
+      - 'tests/test_ark_swarm_logic_trader.py'
+      - 'tests/test_logic_proof_adapter.py'
+      - 'tests/test_logic_proof_benchmark.py'
+      - 'tests/test_multi_agent_logic_evaluation.py'
       - 'tests/test_conversation_export_intake.py'
-      - 'schemas/conversation-intake-record-v1.schema.json'
-      - 'schemas/ark-swarm-cycle-report-v1.schema.json'
       - '.github/workflows/logic-fractal-wiki.yml'
   pull_request:
     paths:
       - 'logic_wiki/**'
+      - 'logic_fractal/**'
+      - 'ark_swarm/**'
+      - 'logic_proof/**'
+      - 'schemas/ark-swarm-cycle-report-v1.schema.json'
+      - 'schemas/logic-package-contract-v1.schema.json'
+      - 'schemas/conversation-intake-record-v1.schema.json'
+      - 'requirements-logic.txt'
       - 'research/inbox/conversations/**'
       - 'research/LOGIC_FRACTAL_PROGRAM_V1.md'
+      - 'research/ARK_SWARM_LOGIC_TRADER_INTEGRATION_V1.md'
+      - 'research/ARK_SWARM_FULL_STACK_GAP_ANALYSIS_V1.md'
+      - 'research/ecosystem/library_integration_matrix.json'
+      - 'scripts/validate_ark_swarm_library_matrix.py'
       - 'scripts/build_logic_wiki.py'
-      - 'logic_fractal/**'
+      - 'scripts/run_ark_swarm.py'
+      - 'scripts/run_formal_logic_benchmark.py'
       - 'scripts/run_logic_agents.py'
       - 'scripts/evaluate_logic_agent_bundle.py'
-      - 'tests/test_multi_agent_logic_evaluation.py'
-      - 'ark_swarm/**'
-      - 'scripts/run_ark_swarm.py'
-      - 'tests/test_ark_swarm_logic_trader.py'
-      - 'schemas/ark-swarm-cycle-report-v1.schema.json'
-      - 'research/ARK_SWARM_LOGIC_TRADER_INTEGRATION_V1.md'
       - 'scripts/ingest_conversation_export.py'
+      - 'tests/test_ark_swarm_logic_trader.py'
+      - 'tests/test_logic_proof_adapter.py'
+      - 'tests/test_logic_proof_benchmark.py'
+      - 'tests/test_multi_agent_logic_evaluation.py'
       - 'tests/test_conversation_export_intake.py'
-      - 'schemas/conversation-intake-record-v1.schema.json'
       - '.github/workflows/logic-fractal-wiki.yml'
+
 permissions:
   contents: write
   pull-requests: write
+
 jobs:
   validate-build-report:
     runs-on: ubuntu-latest
@@ -59,31 +74,60 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+
+      - name: Install bounded formal-logic adapter
+        run: |
+          python -m pip install --disable-pip-version-check --upgrade pip
+          python -m pip install --disable-pip-version-check -r requirements-logic.txt
+
       - name: Validate ARK-Swarm library integration matrix
         run: python scripts/validate_ark_swarm_library_matrix.py
+
+      - name: Validate bounded formal fragment fixtures
+        run: python -m unittest discover -s tests -p 'test_logic_proof_adapter.py' -v
+
+      - name: Validate synthetic formal benchmark
+        run: |
+          python -m unittest discover -s tests -p 'test_logic_proof_benchmark.py' -v
+          python scripts/run_formal_logic_benchmark.py --out research/reports/ark-swarm/formal-logic-benchmark-latest.json
+
+      - name: Compile Python source
+        run: python -m compileall -q ark_swarm logic_proof logic_fractal scripts tests
+
       - name: Compile private export intake utility
         run: python -m compileall -q scripts/ingest_conversation_export.py
+
       - name: Test private conversation export intake
         run: python -m unittest discover -s tests -p 'test_conversation_export_intake.py' -v
+
       - name: Build and validate Logic Wiki
         run: python scripts/build_logic_wiki.py --root . --out logic_wiki/generated
+
       - name: Run Logic Wiki tests
         run: python -m unittest discover -s logic_wiki/tests -v
+
       - name: Run Logic Fractal Composer tests
         run: python -m unittest discover -s logic_fractal/tests -v
+
       - name: Run typed multi-scale fragment tests
         run: python -m unittest discover -s logic_fractal/tests -p 'test_fragment_composer.py' -v
+
       - name: Build first typed fractal model candidate
         run: python scripts/build_first_fractal_model.py
+
       - name: Test integrated logic-agent roles
         run: python -m unittest discover -s tests -p 'test_multi_agent_logic_evaluation.py' -v
+
       - name: Run ARK-Swarm + Logic Trader tests
         run: python -m unittest discover -s tests -p 'test_ark_swarm_logic_trader.py' -v
-      - name: Execute integrated ARK-Swarm + Logic Trader (includes existing six roles)
+
+      - name: Execute integrated ARK-Swarm + Logic Trader (includes proof fixture gate)
         run: python scripts/run_ark_swarm.py
+
       - name: Run bounded research-agent cycle
         run: python scripts/run_logic_agents.py
-      - name: Upload wiki and readiness report
+
+      - name: Upload wiki, formal logic, and readiness reports
         uses: actions/upload-artifact@v4
         with:
           name: logic-wiki-research-report
@@ -92,6 +136,8 @@ jobs:
             research/reports/logic-fractal/
             research/reports/agent-evaluation/
             research/reports/ark-swarm/
+          retention-days: 14
+
       - name: Propose generated wiki/report updates (no auto-merge)
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         uses: peter-evans/create-pull-request@v7
@@ -99,12 +145,12 @@ jobs:
           token: ${{ secrets.GITHUB_TOKEN }}
           branch: automation/logic-wiki-generated
           delete-branch: false
-          title: 'chore: refresh Logic Wiki and research readiness report'
-          commit-message: 'chore: refresh generated Logic Wiki and readiness report'
+          title: 'chore: refresh Logic Wiki, formal checks and readiness report'
+          commit-message: 'chore: refresh Logic Wiki, formal checks and readiness report'
           body: |
-            Automated deterministic build of the current versioned Logic Wiki catalog.
-            Review sources, statuses, and readiness deficits before merge. This PR does not
-            claim that conversation history was collected unless source records were added.
+            Automated deterministic build of the versioned Logic Wiki and bounded formal-fragment fixture suite.
+            Synthetic solver fixtures validate adapter behavior only, not source-grounded semantic claims.
+            Review all source records, statuses and release gates before merge.
           add-paths: |
             logic_wiki/generated/**
             research/reports/logic-fractal/**
