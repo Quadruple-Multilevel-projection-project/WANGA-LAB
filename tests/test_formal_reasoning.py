@@ -85,6 +85,14 @@ class PropositionalAdapterTests(unittest.TestCase):
                 "source_refs": [],
             })
 
+    def test_formula_nesting_limit_is_enforced(self):
+        with self.assertRaises(FormalInputError):
+            FormulaParser("(" * 33 + "P" + ")" * 33, {"P"}).parse()
+
+    def test_formula_character_limit_is_enforced(self):
+        with self.assertRaises(FormalInputError):
+            FormulaParser("P" + " " * 4096, {"P"}).parse()
+
     def test_unsupported_python_like_syntax_rejected(self):
         with self.assertRaises(FormalInputError):
             FormulaParser("__import__(P)", {"P"}).parse()
