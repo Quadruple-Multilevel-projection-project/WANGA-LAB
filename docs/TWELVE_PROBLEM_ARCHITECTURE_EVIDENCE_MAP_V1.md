@@ -1,52 +1,118 @@
-# 12-Problem Map — Bidirectional Logic Architecture (5+5)
+# מיפוי 12 הבעיות — מעגל לוגיקה, פתרון, מוצר ושוק
 
-**Status:** SPECIFIED / PROPOSED. This is a design-to-evidence map, not proof that the architecture solves all twelve problems. No benchmark result is accepted without a reproducible test set, protocol, logs, and baseline.
+**תאריך:** 2026-10-12  
+**סטטוס:** ARCHITECTURE PROPOSAL / EVIDENCE MAP — אינו מוכיח שכל 12 הבעיות כבר נפתרו.  
+**מטרה:** לחבר בין בדיקת 12 הבעיות שסופקה, מודל 10 התחנות הדו־כיווניות, מסגרת המשקולות של פרשנויות האותיות, חבילת הלוגיקה כמוצר, והמסלול לשווקים בינלאומיים ולשימושי תמיכה בניתוח גיאופוליטי.
 
-## Purpose
-Connect the proposed ten-stage bidirectional architecture to the investor narrative and identify what each claimed response would need to demonstrate. “Forward 1–5 / return 6–10” describes functional stages, not ten already-built neural networks. The four mathematical-weight layers attached to letter interpretations are a separate research dimension and must not be conflated with the 5+5 flow.
+## 1. המעגל השלם
 
-## The twelve problem areas
+ההצעה המחקרית היא מעגל עבודה אחד:
 
-| # | Problem to investigate | Proposed architectural response | Evidence needed before claiming a solution | Current status |
-|---|---|---|---|---|
-| 1 | Statistical generation vs explicit logical constraints | Preserve source structure and run explicit rules/constraints alongside learned components | Fixed benchmark comparing valid reasoning, unsupported outputs, abstention, and error rates against baselines | PROPOSED |
-| 2 | Traceability from output back to source | Keep source IDs, extraction records, transformations, rule versions, and output links through the return path | Demonstrate trace reconstruction on held-out examples; distinguish exact text reconstruction from structural reconstruction | PARTLY DOCUMENTED extraction method; round trip NOT VERIFIED |
-| 3 | Failure-state detection and recovery | Represent invalid states, constraint failures, recovery rules, and safe stopping explicitly | Inject known failures; measure detection, recovery, false alarms, and safe abstention | SPECIFIED conceptually; runtime NOT VERIFIED |
-| 4 | One undifferentiated notion of weight | Separate the four proposed mathematical-logical weight layers linked to each letter interpretation from ordinary model parameters and confidence scores | Recover original definitions/formulas from source archive; define types, units, composition, and sensitivity tests | NOT YET SPECIFIED from primary evidence |
-| 5 | Hard constraints mixed with soft scores | Use hard gates for non-negotiable rules and soft weights only for ranking within valid paths | Contradiction tests proving a high soft score cannot override a failed hard constraint | SPECIFIED; implementation NOT VERIFIED |
-| 6 | Loss of nested sentence structure | Preserve clauses, relations, participants, order, negation, conditions, and source spans | Annotation agreement and structure-recovery evaluation on a held-out corpus | First-stage extraction documented in a 79-page working artifact; broader performance NOT VERIFIED |
-| 7 | Letters treated as passive characters | Store multiple source-grounded interpretations, forms, positions, combinations, and candidate computational roles as separate records | Source citations, alternative readings, counterexamples, and ablation tests per letter/combination | RESEARCH HYPOTHESIS |
-| 8 | Disconnection between macro, micro, and pico scales | Define explicit scale mappings and aggregation rules | Formal scale definitions, numerical stability tests, and cross-scale consistency evaluation | NOT YET SPECIFIED sufficiently |
-| 9 | Hidden semantic/logical contradictions | Check relations and constraints across interpretations and combinations | Contradiction corpus, precision/recall, adjudicated errors, and comparison with baselines | PROPOSED |
-| 10 | No unified machine-readable representation | Produce a versioned logical-mathematical record with provenance, constraints, weights, uncertainty, and reconstruction metadata | Schema validation, deterministic replay, and separate exact-text/structural round-trip tests | PROPOSED |
-| 11 | Unsuitable evidence for high-stakes environments | Add audit trails, failure reporting, provenance, bounded operation, and review gates | Domain-specific risk assessment, external review, operational trials, and documented failure handling | No “zero-crash” claim; NOT VERIFIED |
-| 12 | Language/logical structure not packaged as reusable engineering assets | Package bounded, task-specific logic modules with inputs, outputs, constraints, provenance, versions, tests, and integration guidance | User interviews, paid pilots, utility measurements, maintenance costs, and comparison to alternatives | Commercial hypothesis; NOT VALIDATED |
+**מקור וטקסט → חילוץ לוגי → לוגיקת אותיות ופרשנויות → ארבע שכבות משקולות לוגיות־מתמטיות → אילוצים ומבנה מרחבי מוצע → חישוב → אימות → הרכבה ושחזור → חבילת לוגיקה מוכוונת־בעיה → יישום שוק → משוב מתוצאות השימוש אל הגדרת הלוגיקה.**
 
-## Important corrections to the earlier twelve-point summary
-1. The architecture does **not** currently prove that it deterministically eliminates hallucinations; it proposes explicit constraints that can be tested.
-2. A bidirectional design does **not** automatically guarantee lossless reconstruction. Exact text and structural round-tripping require separate tests.
-3. “World of Nekudim,” “breaking of vessels,” “Tikun,” “Aleph,” and “Lamed” are source concepts and proposed engineering analogies. The analogy is not itself evidence of an implemented crash/recovery mechanism.
-4. “Sub-atomic,” “quantum-logical,” and “metaphysical” describe the researcher's conceptual depth unless a physical mechanism is independently specified; they must not be marketed as proven physics.
-5. The values LFA 94.8%, CSR 99.2%, and EDI 0.02 appearing in the supplied draft are **not accepted as empirical results** without reproducible data, metric definitions, protocol, baseline, and run logs.
-6. No claim that this is the only system capable of these functions. Neurosymbolic AI and computational text-analysis research already exist; novelty must be shown by direct comparison.
-7. Do not invent the four weight-layer names or formulas. Recover them from the user's research sources and mark unresolved elements as NOT_YET_SPECIFIED.
-8. Keep the three source branches separate: (a) Rambam / *Millot ha-Higayon* and systematic text extraction; (b) philosophical logic of place, identity, relations, boundaries, part/whole, and change; (c) letter logic and its source-grounded interpretations. Arizal texts form a source corpus, not a substitute name for the whole system.
-9. Keep the investor story connected but bounded: the research corpus is an explanatory/evidence asset; the potential product is task-specific logic packages, paid configuration/integration, and custom logic. Demand, pricing, and competitive advantage remain unverified until customer evidence exists.
+המעגל מחבר ארבע רמות:
+1. **לוגיקה:** הגדרות, יחסים, שערים, משקולות ואילוצים.
+2. **פתרון בעיה:** מפרט שמגדיר קלט, פלט, תנאי הצלחה, גבולות וכשל.
+3. **מוצר:** יחידת לוגיקה שאפשר לתעד, לבדוק, לגרס, להתאים ולשלב בתהליך עבודה.
+4. **שוק:** שימוש מוגדר אצל לקוח; מדידת תועלת, עלויות, שגיאות, תחזוקה ונכונות לשלם; תוצאות אלה חוזרות למחקר.
 
-## Investor linkage
-The investor-facing explanation should communicate:
-- **Problem:** in some tasks, fluent output is insufficient without constraints, provenance, and replayable evidence.
-- **Approach:** source-grounded extraction → alternative interpretations → explicit constraints and proposed weight layers → bounded module → tests → traceable output.
-- **Potential asset:** reusable task-specific logic packages, not the page count itself.
-- **Milestones:** source audit; recover the original four weight definitions; build one bounded demonstrator; evaluate exact and structural round trips separately; compare to a baseline; validate demand through customer discovery and paid pilots.
-- **Risk disclosure:** the full 5+5 engine, four weight layers, 231-gate runtime, 3D/fractal coordinate system, broad performance gains, and commercial demand are not yet verified as a complete system.
+ה־10 שכבות הן 10 תחנות פונקציונליות מוצעות — חמש קדימה וחמש חזרה. ארבע שכבות המשקולות הן ציר נפרד במודל ואסור למזג אותן עם 10 התחנות או עם ארבעת תפקידי המשפט שבקובץ החילוץ.
 
-## Canonical links
-- Architecture review: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md
-- Investor explanation draft: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/INVESTOR_LOGIC_EXPLANATION_UPDATE_DRAFT_HE.md
-- 257-page corpus plan: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/LETTER_LOGIC_CORPUS_257_PAGE_PLAN_V1.md
-- Source audit of 79-page extraction artifact: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md
-- Publication staging by site/fractal: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/LOGIC_CORPUS_PUBLICATION_STAGING_2026-10-12.md
+## 2. 12 הבעיות: מה המודל מציע לעשות ומה נדרש כדי לבדוק
 
-## Publication status
-This document is a review artifact. It does not authorize publication of unverified performance claims. The Wix investor site still requires an explicit destination choice before publishing this update live.
+| # | הבעיה כפי שנוסחה במחקר | המענה הארכיטקטוני המוצע | תחנות רלוונטיות | מבחן נדרש | סטטוס |
+|---|---|---|---|---|---|
+| 1 | הסתברות סטטיסטית מול דטרמיניזם לוגי | לשמר מקור ולייצג חלק מהכללים והאילוצים באופן מפורש. רכיבים נוירוניים יכולים להציע פרשנות; שכבת הכללים בודקת אותה. | 1–3, 8–10 | להשוות למודל בסיס את תקפות ההיסק, שיעור טענות חסרות מקור, סירוב/הימנעות נכונים ושגיאות. | מוצע; לא הוכח כמבטל הזיות |
+| 2 | היעדר עקיבות דו־כיוונית | לשמור מזהי מקור, מקטעים, כללי טרנספורמציה, גרסאות והפניות לאורך מסלול החזור. | 1, 5–10 | לשחזר מקור לכל פלט ולמדוד בנפרד התאמת טקסט מדויקת והתאמת מבנה. | חילוץ ראשוני מתועד; round-trip לא מאומת |
+| 3 | ניהול משברי מערכת וקריסות | להגדיר מצבים לא תקפים, חריגות, כללי התאוששות ויציאה בטוחה. דימויי עולם הנקודים/שבירת הכלים יכולים לשמש מקור להשערה הנדסית, לא ראיה למנוע עובד. | 3, 8, 10 | הזרקת תקלות ידועות, מדידת גילוי, false positives, התאוששות, וזיהוי מצב שבו צריך לעצור. | רעיון מוגדר ברמה מושגית; runtime לא מאומת |
+| 4 | אחידות של משקולות חישוב שטחיות | להפריד בין ארבע שכבות המשקולות של פרשנויות האותיות לבין פרמטרים נוירוניים, ציוני ביטחון ומשקולות דירוג רגילות. | 2, 5–7 | לאתר את ההגדרות המקוריות; להגדיר טיפוסים, תחומים, יחידות/נוסחאות, כללי שילוב וניתוח רגישות. | ארבע השכבות עדיין דורשות הגדרה מקורית מלאה |
+| 5 | אי־הבחנה בין אילוצים קשיחים למשקולות גמישות | אילוץ קשיח הוא תנאי תקפות שאי אפשר לפצות עליו בציון רך; משקולות גמישות מדרגות אפשרויות תקפות בלבד. | 3, 8 | להציג סתירה מכוונת ולהוכיח שציון רך גבוה אינו עוקף אילוץ קשיח. | מפרט רעיוני; מימוש לא מאומת |
+| 6 | פירוק טקסט שמאבד היררכיה פנימית | לשמר משפט מקור, נושא/נשוא, משתתפים, יחסים, תנאים ומשפטים פנימיים כמבנה מקונן. | 1, 9, 10 | קורפוס מתויג בידי בודקים והשוואת שחזור המבנה לטקסט המקור. | שיטת חילוץ ראשונה מתועדת בקובץ 79 עמודים; ביצועים רחבים לא נבדקו |
+| 7 | פסיביות האותיות והסמלים | לייצג כל אות וכל פרשנות מתועדת כרשומה בעלת מקור, הקשר, צורה/מיקום כשמתאים, יחסים וצירופים. תפקידים כמו נתב או הזרקת יושר מוגדרים כהשערות הנדסיות עד לבדיקה. | 2, 5, 9 | אסמכתאות לכל פרשנות, חלופות, דוגמאות נגדיות ו־ablation tests לצירופים. | השערת מחקר |
+| 8 | ניתוק בין סקלות מאקרו, מיקרו ופיקו | להגדיר מפות מעבר מפורשות בין רמות, ולבדוק האם יחסים ואילוצים נשמרים בזמן צבירה והרחבה. | 4, 7, 8 | הגדרות סקאלה, קואורדינטות/נתונים מלאים, מדדי יציבות ובדיקות עקביות חוצות־סקאלות. | לא מוגדר מספיק |
+| 9 | זיהוי סתירות סמנטיות נסתרות | להפעיל בדיקות על יחסים, תנאים ופרשנויות מתחרות, ולא להסתמך רק על דמיון סמנטי. | 1–3, 8–10 | אוסף סתירות מתויג, precision/recall, הכרעת בודקים והשוואה לקו בסיס. | מוצע; לא נמדד |
+| 10 | היעדר פלט לוגי־מתמטי מאוחד | להפיק רשומה ממוחשבת עם המקור, יחסים, גרסת הכללים, משקולות שהוגדרו, אי־ודאות ונתוני שחזור. | 5–10 | אימות סכימה, הרצה חוזרת ודטרמיניסטית היכן שהוגדר, ושני מבחני round-trip. | מוצע; לא מאומת |
+| 11 | התאמה לתעשיות קריטיות / דרישת Zero-Crash | לספק תיעוד, עקיבות, גבולות, דיווח כשל, בדיקות והרשאות/סקירת אדם לפי רמת הסיכון. אין להבטיח אפס קריסות או עמידה בדרישות רגולטוריות לפני בדיקה. | 1, 3, 5, 8, 10 | הערכת סיכון לתחום, ניסוי תפעולי, ביקורת עצמאית ותיעוד התקלות והטיפול בהן. | לא מאומת; אין טענת Zero-Crash |
+| 12 | היעדר קוד מקור לוגי לשפה כמוצר הנדסי | לארוז מבנים לוגיים מוגדרים כחבילות מוכוונות־משימה, עם חוזה קלט/פלט, כללים, גבולות, מקור, גרסה ומבחני קבלה. טענת ״השפה היא קוד מקור״ היא תזה הנדסית שיש להראות באמצעות מימוש. | כל 10 התחנות | להדגים חבילה אחת, למדוד תועלת מול חלופות ולבדוק לקוח/פיילוט בתשלום. | השערה מוצרית; ביקוש לא אומת |
+
+## 3. כיצד 10 התחנות עוטפות את כל 12 הבעיות
+
+- **תחנות 1–2:** משמרות את הטקסט ומייצגות את היחסים ואת פרשנויות האותיות.
+- **תחנות 3–5:** מגדירות אילוצים, סולמות ייצוג ומרחב המשקולות; זה המקום שבו נדרשות ההגדרות הפורמליות החסרות.
+- **תחנות 6–7:** משלבות תוצאות מקומיות ובודקות יחסים בין רמות.
+- **תחנה 8:** מאמתת אילוצים מחדש ומאפשרת התאוששות רק לפי כלל מוגדר.
+- **תחנה 9:** מרכיבה את יחסי האותיות והמשפטים בחזרה.
+- **תחנה 10:** מפיקה ייצוג מאוחד עם עקבת מקור ומפעילה בדיקות שחזור ומשוב.
+
+העטיפה היא שלמה ברמת **תכנון זרימת העבודה**. אין פירוש הדבר שכל בעיה כבר נפתרה בביצוע. ההוכחה דורשת שהמבחן של כל שורה יופעל, יירשם ויושווה לקו בסיס.
+
+## 4. מן הלוגיקה למוצר: ״הלוגיקה היא המוצר״
+
+המאגר בן 257 העמודים מסביר את השיטה, מתעד מקורות ומראה את ההדגמות. המוצר המסחרי אינו מספר העמודים; הוא יחידת לוגיקה שניתנת לשימוש מוגדר ולבדיקה.
+
+### מבנה אפשרי של חבילת לוגיקה
+- **בעיה:** איזה כשל או תהליך לקוח החבילה מיועדת לשפר.
+- **חוזה:** קלטים, פלטים, הנחות, גבולות ומה אינו נתמך.
+- **מנוע:** כללים ואילוצים, וכן משקולות רק לאחר שהוגדרו.
+- **עקיבות:** מקור, גרסת מבנה, כללים ונתיב החלטה.
+- **בדיקות:** מקרי הצלחה, מקרי כשל, נגד־דוגמאות ותנאי קבלה.
+- **אריזה מסחרית:** מודול בסיס, התאמה/קונפיגורציה, אינטגרציה או פיתוח לפי הזמנה.
+- **תחזוקה:** גרסאות, בדיקות רגרסיה, שינוי מקור והגדרת אחריות.
+
+זהו מוצר מסוג **Logic-as-a-Product**: נכס הלוגיקה נארז עם חוזה, גבולות ובדיקות. יש לאמת כל חבילה בנפרד לפני מכירה לשימוש קריטי.
+
+## 5. שווקים בינלאומיים
+
+הכיוון הבינלאומי אינו טענה שהמנוע מתאים אוטומטית לכל תעשייה. הוא מפת יישומים פוטנציאליים שבהם עקיבות, כללים, מקורות ושחזור עשויים להיות בעלי ערך:
+
+| תחום | משימה אפשרית לחבילת לוגיקה | תועלת שניתן למדוד |
+|---|---|---|
+| פיננסים וביטוח | בדיקת שלמות מסמכים, תנאי פוליסה, חריגים, סתירות ומקור ההחלטה | זמן בדיקה, שיעור איתור סתירות, false positives, עקיבות |
+| משפט וציות רב־שיפוטי | מיפוי תנאים וחריגים ממסמכים רגולטוריים שונים, עם קישור למקור | כיסוי כללים, החמצת חריגים, זמן סקירה, איכות אסמכתאות |
+| שרשראות אספקה וסחר | שילוב דרישות, תעודות, מדיניות סחר ומגבלות של כמה מדינות | זיהוי חוסר התאמה, שלמות נתונים, זמן איתור חריג |
+| ממשל ותשתיות קריטיות | סיוע לבדיקת עקביות של מדיניות, נהלים ותהליכי אישור | כיסוי אילוצים, יכולת ביקורת, שיעור כשלי תהליך |
+| מערכות ידע ארגוניות | חילוץ יחסי פעולה ומדיניות ממסמכים ארגוניים והפיכתם לכללים ניתנים לבדיקה | זמן אחזור, נכונות כללים, יכולת לעדכן ולשחזר |
+
+תחומים אלה הם **היפותזות ליישום**, לא הוכחה לביקוש או לעליונות. הכניסה לשוק צריכה להתחיל במשימה צרה עם בעל־בעיה ברור, מדד הצלחה ולקוח־פיילוט.
+
+## 6. תמיכה בניתוח גיאופוליטי — גבולות השימוש
+
+המסגרת עשויה להיבחן ככלי לתמיכה באנליסטים, לא כמערכת שמחליטה מדיניות או ״פותרת גיאופוליטיקה״. דוגמאות לתחומי בדיקה:
+- השוואת דיווחים ממקורות ומדינות שונות, תוך שמירה על מקור ותאריך;
+- איתור סתירות בין טענות, הנחות ותרחישים;
+- מיפוי קשרים בין אירוע, שחקן, תנאי, אינטרס והשלכה;
+- הצגת כמה פירושים אפשריים והבחנה בין עובדה, דיווח, הסקה ואי־ודאות;
+- מעקב אחר שינוי בניתוח כאשר משתנה מקור או הנחה.
+
+הצלחה תימדד לפי עקיבות מקור, דיוק חילוץ, טיפול בסתירות, כיול אי־ודאות, זמן אנליסט ושיעור תיקונים אנושיים. המערכת לא תוצג כמנבאת בוודאות פעולות של מדינות או כתחליף לשיקול דעת אנושי, מודיעיני או דיפלומטי.
+
+## 7. מעגל השוק והמשוב למחקר
+
+**חקר מקור → מיפוי לוגי → יחידת לוגיקה → מבחן מול בעיה אמיתית → תוצאה מתועדת → משוב על הכשל/הפער → תיקון המפרט → גרסה חדשה → פיילוט/יישום.**
+
+כך מתקבל הקשר שהמשקיעים צריכים לראות:
+- **נכס:** קורפוס מקורות ומפרטי לוגיקה עם עקיבות.
+- **יחידת מכירה:** חבילת לוגיקה מוכוונת־משימה.
+- **מודל הכנסה אפשרי:** התאמה, אינטגרציה, תחזוקה ופיתוח מותאם.
+- **מנגנון צמיחה:** שימוש חוזר בין לקוחות רק כאשר הכללים והגבולות אכן משותפים.
+- **הוכחת שוק:** פיילוטים, מדדים לפני/אחרי ונכונות לשלם — לא מספר העמודים בלבד.
+
+## 8. חיבור למסגרת ניהול סיכוני AI
+
+תיעוד מקור, בדיקה, עקיבות ודיווח אי־ודאות תואמים נושאים שכבר מופיעים במסגרות ניהול סיכוני AI, כגון NIST AI RMF וה־Generative AI Profile. אלה מסגרות לניהול סיכונים, לא אישור או ולידציה של הארכיטקטורה שלנו:
+- NIST AI RMF: https://www.nist.gov/itl/ai-risk-management-framework
+- NIST Generative AI Profile: https://doi.org/10.6028/NIST.AI.600-1
+- Survey of verification and validation in Neuro-Symbolic AI: https://arxiv.org/abs/2401.03188
+
+## 9. קישורים למסמכי היסוד ולמודל המשקיעים
+- [הסבר למשקיעים — הנדסת לוגיקה כמוצר](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/INVESTOR_LOGIC_EXPLANATION_UPDATE_DRAFT_HE.md)
+- [מפרט 5 שכבות קדימה + 5 שלבי חזור](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md)
+- [ביקורת מקור ה־PDF בן 79 העמודים](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md)
+- [תוכנית מאגר 257 העמודים](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/LETTER_LOGIC_CORPUS_257_PAGE_PLAN_V1.md)
+- [מפת הפרסום לפי אתר](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/LOGIC_CORPUS_PUBLICATION_STAGING_2026-10-12.md)
+
+## 10. סטטוס
+- **SOURCE-EXTRACTED:** חילוץ משפטים ויחסים מתוך קובץ העבודה בן 79 העמודים.
+- **SPECIFIED / PROPOSED:** מודל 5+5 כמבנה פונקציונלי, מיפוי 12 הבעיות, והכיוון העסקי Logic-as-a-Product.
+- **NOT_YET_SPECIFIED:** הגדרות ארבע שכבות המשקולות, נוסחאות חישוב מלאות וחוזים לכל שער.
+- **NOT_YET_VERIFIED:** פתרון אמפירי ל־12 הבעיות, שחזור מלא, תועלת מעל קו בסיס, התאמה לתעשיות קריטיות, ביקוש ותמחור בינלאומיים, ויישומים גיאופוליטיים.
