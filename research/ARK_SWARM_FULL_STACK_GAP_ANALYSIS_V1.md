@@ -27,7 +27,7 @@ The research note proposes a broad stack of 100+ libraries spanning spiking neur
 | Logic asset selection | Deterministic lexical ranking | Semantic retrieval / evaluated task relevance |
 | Logic composition | Editorial relation graph + bounded candidate composition | Explicit typed semantics for each relation and proof-preserving composition |
 | Evidence | Catalog source IDs and provenance checks | Exact spans/quotes, source-version resolution, evidence adjudication and provenance coverage benchmarks |
-| Formal logic | LNL compiler and structural gates | Solver-backed interpretation for a declared supported fragment |
+| Formal logic | LNL compiler, bounded propositional text frontend and typed AST Z3 adapter on the work branch | One canonical typed-AST solver backend; explicit formalization queue, source/assumption contract and package release contract; CI confirmation pending |
 | Counter-reading | MIRROR member-order candidate | Logical negation/alternative derivation generated from actual formal semantics |
 | Agent runtime | Bounded local coordinator and deterministic role functions | Queue/scheduler, separate model-provider interface, timeout/retry/resource policy |
 | Shared state | Local grow-only event set, deterministic hash | Authenticated transport, durable replicated state, conflict/replay protocol |
@@ -40,6 +40,8 @@ The research note proposes a broad stack of 100+ libraries spanning spiking neur
 ## Prioritized additions
 
 ### P0 — Required before calling the output a logical model
+
+**Implemented on the current work branch, pending CI:** bounded typed AST adapter, consistency-before-entailment checks, seven synthetic solver fixtures, fail-closed package contract, formalization queue that does not invent ASTs, and a shared hard-gate evaluation policy. These do not complete the source-grounded benchmark requirement.
 
 **Implemented in the current research branch (pending GitHub CI):** an optional, bounded Z3 AST adapter; separate premise-consistency and entailment checks; a hard-gated evaluation ledger; a seven-case synthetic fixture suite; a source-grounded logic-package schema; and ARK-Swarm integration that runs the fixture gate without promoting the candidate. This reduces the implementation gap but does not establish semantic validity of real Logic Trader outputs.
 
