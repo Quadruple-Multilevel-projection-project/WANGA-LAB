@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0",
+  "status": "AGENT_CONTRACTS_SPECIFIED_NOT_AUTONOMOUSLY_PROVISIONED",
+  "execution_rule": "Roles may work in parallel on bounded inputs. Only the integration/release gate may accept shared artifacts. Every output includes inputs, source IDs, status, uncertainty and a reproducible result hash.",
+  "agents": [
+    {
+      "id": "AGENT-ARCHIVIST",
+      "role": "ARCHIVIST",
+      "inputs": [
+        "accessible_conversation_exports",
+        "GitHub_sources",
+        "Wix_page_archive"
+      ],
+      "outputs": [
+        "source_manifest",
+        "sha256_inventory",
+        "access_gap_report"
+      ],
+      "must_not": [
+        "claim access to unavailable chats",
+        "rewrite source spans",
+        "publish content"
+      ]
+    },
+    {
+      "id": "AGENT-LOGIC-EXTRACTOR",
+      "role": "LOGIC_EXTRACTOR",
+      "inputs": [
+        "hashed_source_manifest",
+        "literal_spans"
+      ],
+      "outputs": [
+        "term_candidates",
+        "relation_candidates",
+        "logic_fragment_candidates"
+      ],
+      "must_not": [
+        "mark claims VERIFIED without test",
+        "discard alternative readings"
+      ]
+    },
+    {
+      "id": "AGENT-FRACTAL-COMPOSER",
+      "role": "FRACTAL_COMPOSER",
+      "inputs": [
+        "accepted_fragment_ids",
+        "interface_schemas",
+        "constraints"
+      ],
+      "outputs": [
+        "multi_scale_composition_candidate",
+        "composition_trace",
+        "interface_report"
+      ],
+      "must_not": [
+        "combine incompatible types",
+        "drop lineage",
+        "use weights to invent relations"
+      ]
+    },
+    {
+      "id": "AGENT-COUNTEREXAMPLE",
+      "role": "COUNTEREXAMPLE_AGENT",
+      "inputs": [
+        "model_candidate",
+        "benchmark_contract"
+      ],
+      "outputs": [
+        "counter_readings",
+        "negative_cases",
+        "boundary_cases"
+      ],
+      "must_not": [
+        "rewrite originals",
+        "assert counterexample without cited basis"
+      ]
+    },
+    {
+      "id": "AGENT-TEST-ENGINEER",
+      "role": "TEST_ENGINEER",
+      "inputs": [
+        "model_candidate",
+        "acceptance_contract"
+      ],
+      "outputs": [
+        "tests",
+        "coverage_report",
+        "test_run_manifest"
+      ],
+      "must_not": [
+        "turn tests into semantic truth claims"
+      ]
+    },
+    {
+      "id": "AGENT-WIKI-LIBRARIAN",
+      "role": "WIKI_LIBRARIAN",
+      "inputs": [
+        "accepted_articles",
+        "logic_wikipedia_index"
+      ],
+      "outputs": [
+        "articles",
+        "backlinks",
+        "broken_link_report",
+        "change_log"
+      ],
+      "must_not": [
+        "publish unsupported claims",
+        "overwrite disputes without history"
+      ]
+    },
+    {
+      "id": "AGENT-RELEASE-AUDITOR",
+      "role": "RELEASE_AUDITOR",
+      "inputs": [
+        "model_artifact",
+        "tests",
+        "provenance",
+        "limitations"
+      ],
+      "outputs": [
+        "release_gate_verdict",
+        "gap_list"
+      ],
+      "must_not": [
+        "approve when required gate is missing"
+      ]
+    },
+    {
+      "id": "AGENT-PUBLISHER",
+      "role": "PUBLISHER",
+      "inputs": [
+        "audited_change_set",
+        "green_ci",
+        "approved_copy"
+      ],
+      "outputs": [
+        "deployment_manifest",
+        "site_readback_report"
+      ],
+      "must_not": [
+        "promote status",
+        "publish private material",
+        "delete previous versions"
+      ]
+    }
+  ]
+}
