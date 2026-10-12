@@ -23,7 +23,7 @@ class FormalLogicBenchmarkTests(unittest.TestCase):
         self.assertEqual(report["passed_cases"], 7)
         self.assertEqual(report["failed_cases"], 0)
         self.assertEqual(report["semantic_status"], "NOT_YET_VERIFIED")
-        self.assertTrue("not source-grounded" in report["fixture_status"].lower())
+        self.assertTrue("not_source_grounded" in report["fixture_status"].lower())
 
     def test_benchmark_ids_are_unique(self):
         report = run_formal_fixture_benchmark(ROOT / "logic_proof/fixtures/formal_cases.json")
