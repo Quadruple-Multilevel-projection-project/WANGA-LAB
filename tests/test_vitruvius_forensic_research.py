@@ -20,14 +20,12 @@ def test_forensic_contract_exists():
     assert (ROOT / "vitruvius/VITRUVIUS_FORENSIC_SCHEMA_V2.json").exists()
 
 def test_claims_are_isolated():
-    data = run()
-    ids = {t["task_id"] for t in data["tasks"]}
+    ids = {t["task_id"] for t in make_tasks()}
     assert "VIT-CLAIM-50-CHAPTERS" in ids
     assert "VIT-CLAIM-32-CORE" in ids
 
 def test_all_representations_are_tested():
-    data = run()
-    reps = {t["representation"] for t in data["tasks"] if t["track"] == "representation_test"}
+    reps = {t["representation"] for t in make_tasks() if t["track"] == "representation_test"}
     assert reps == {"GRAPH","HYPERGRAPH","DAG","TREE","RELATION_MATRIX"}
 
 
