@@ -81,3 +81,7 @@ The kernel can use the WANGA dataset's 22 vertices, 231 unordered pairs, 462 dir
 ## Tests
 
 The CI workflow runs Python compilation, corpus integrity checks, existing symbolic-kernel tests, model-builder tests, and the end-to-end synthetic demo.
+
+## Live research page
+
+Read the Hebrew project overview on [Wix]( https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-native-model-builder.html ). Implementation PR #96 was merged after the Logic-Native Model Builder, Repository Integrity, and CodeQL checks passed. The LLM endpoint adapter remains opt-in and unconfigured by default.
