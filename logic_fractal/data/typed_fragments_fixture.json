@@ -1,0 +1,163 @@
+{
+  "source_registry": {
+    "SRC-OBS-001": {
+      "source_id": "SRC-OBS-001",
+      "locator": "logic_fractal/data/typed_fragments_fixture.json#observation",
+      "sha256": "fixture-sha256-a"
+    },
+    "SRC-REL-001": {
+      "source_id": "SRC-REL-001",
+      "locator": "logic_fractal/data/typed_fragments_fixture.json#relation",
+      "sha256": "fixture-sha256-b"
+    },
+    "SRC-TEST-001": {
+      "source_id": "SRC-TEST-001",
+      "locator": "logic_fractal/data/typed_fragments_fixture.json#review",
+      "sha256": "fixture-sha256-c"
+    }
+  },
+  "fragments": [
+    {
+      "fragment_id": "FL-OBSERVATION",
+      "version": "0.1",
+      "status": "TESTED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C1",
+          "text": "A synthetic source contains a stated observation.",
+          "status": "TESTED",
+          "source_span_ids": [
+            "SRC-OBS-001"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "source_text",
+          "type": "SourceText",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "observed_span",
+          "type": "ObservedSpan"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "SOURCE_CAPTURE"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-OBS-001",
+          "locator": "logic_fractal/data/typed_fragments_fixture.json#observation",
+          "sha256": "fixture-sha256-a"
+        }
+      ],
+      "tests": [
+        {
+          "test_id": "T-OBS-001",
+          "status": "PASS"
+        }
+      ],
+      "model_hash": "fixture-observation-v1"
+    },
+    {
+      "fragment_id": "FL-RELATION-EXTRACT",
+      "version": "0.1",
+      "status": "TESTED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C2",
+          "text": "A relation candidate was extracted from the synthetic source span.",
+          "status": "TESTED",
+          "source_span_ids": [
+            "SRC-REL-001"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "source_span",
+          "type": "ObservedSpan",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "relation_candidate",
+          "type": "LogicRelationCandidate"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "RELATION_EXTRACTION"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-REL-001",
+          "locator": "logic_fractal/data/typed_fragments_fixture.json#relation",
+          "sha256": "fixture-sha256-b"
+        }
+      ],
+      "tests": [
+        {
+          "test_id": "T-REL-001",
+          "status": "PASS"
+        }
+      ],
+      "model_hash": "fixture-relation-v1"
+    },
+    {
+      "fragment_id": "FL-REVIEW",
+      "version": "0.1",
+      "status": "SPECIFIED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C3",
+          "text": "A candidate relation keeps an explicit review status.",
+          "status": "SPECIFIED",
+          "source_span_ids": [
+            "SRC-TEST-001"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "candidate",
+          "type": "LogicRelationCandidate",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "review_state",
+          "type": "ReviewState"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "REVIEW_GATE"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-TEST-001",
+          "locator": "logic_fractal/data/typed_fragments_fixture.json#review",
+          "sha256": "fixture-sha256-c"
+        }
+      ],
+      "tests": [
+        {
+          "test_id": "T-REV-001",
+          "status": "PENDING"
+        }
+      ],
+      "model_hash": "fixture-review-v1"
+    }
+  ],
+  "scope": "SYNTHETIC_TEST_FIXTURES_NOT_REAL_CONVERSATION_OR_EXTERNAL_FACTS"
+}
