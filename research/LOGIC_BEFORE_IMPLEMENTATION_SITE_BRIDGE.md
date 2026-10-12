@@ -47,3 +47,12 @@ A published hyperlink is recorded as a link, not automatically as a logical depe
 - This pass: 28 public sitemap files, 174 unique non-category URLs across 16 site slugs.
 - This is a sitemap-based inventory, not proof that every private, draft, unindexed, or sitemap-less page in all sites was inspected.
 - Observed: repeated philosophical/economic tail paragraphs on reviewed My Site 17 logic-box posts; generic “I'm a product” placeholders on 12 Computational Logic product URLs. Both are flagged for review, not automatically edited.
+
+## Quality-control snapshot — 2026-10-12
+
+- [Quality-control report](./QUALITY_CONTROL_2026-10-12.md) documents scope, cleanup decisions, and remaining issues.
+- [Searchable Wix inventory](https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/source-audit.html) now includes all 174 sitemap-listed URLs from this inventory and explicitly distinguishes 29 focused content reviews from 145 inventory-only records.
+- The public landing page was reduced to five direct research sources; the off-topic mixed-purpose card set was removed.
+- The label 'verified public sources' was changed to 'public sources reviewed'; the 70-post list is labelled as a sitemap register.
+- Original source Wix content was not deleted or rewritten. Six repeated-tail observations and twelve generic store placeholders remain flagged for manual source-page review.
+- Inventory check: 174 records, 174 unique URLs, 16 site slugs, zero duplicate URLs.
