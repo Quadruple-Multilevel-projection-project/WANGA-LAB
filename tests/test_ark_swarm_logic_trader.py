@@ -82,6 +82,10 @@ class LogicTraderTests(unittest.TestCase):
         self.assertTrue(agents["mirror-counter-reader"]["passed"])
         self.assertIn("formal-propositional-benchmark", agents)
         self.assertTrue(agents["formal-propositional-benchmark"]["passed"], agents["formal-propositional-benchmark"])
+        self.assertIn("formalization-queue-gate", agents)
+        self.assertTrue(agents["formalization-queue-gate"]["passed"], agents["formalization-queue-gate"])
+        self.assertIn("formal-proof-fixture-gate", agents)
+        self.assertTrue(agents["formal-proof-fixture-gate"]["passed"], agents["formal-proof-fixture-gate"])
 
     def test_event_set_merge_is_commutative_and_idempotent(self):
         a = make_event(cycle_id="C1", agent_id="logic-trader", event_type="RANKED", payload={"candidate_count": 8})
@@ -100,6 +104,16 @@ class LogicTraderTests(unittest.TestCase):
         b["payload"] = {"v": 2}
         with self.assertRaises(ValueError):
             merge_event_sets([a, b])
+
+
+    def test_formalization_queue_does_not_invent_formal_ast(self):
+        result = build_cycle(DEFAULT_TASK, root=ROOT, include_existing_agent_suite=False)
+        queue = result["model_candidate"]["formalization_queue_item"]
+        self.assertIn(queue["status"], {"READY_FOR_FORMALIZATION", "BLOCKED_SOURCE_REVIEW"})
+        self.assertEqual(queue["solver_execution_status"], "NOT_RUN_NO_FORMAL_AST")
+        self.assertFalse(queue["automatic_semantic_conversion"])
+        self.assertEqual(queue["semantic_status"], "NOT_YET_VERIFIED")
+        self.assertTrue(queue["missing_formal_fields"])
 
 
 if __name__ == "__main__":
