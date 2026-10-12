@@ -185,7 +185,8 @@
         "fractal-composition",
         "logical-primitive",
         "logical-relation",
-        "source-first-contract"
+        "source-first-contract",
+        "logical-diamond"
       ]
     },
     {
@@ -200,7 +201,8 @@
       "relation_ids": [
         "logical-fractal",
         "logical-primitive",
-        "logical-relation"
+        "logical-relation",
+        "logical-diamond"
       ]
     },
     {
@@ -216,7 +218,8 @@
       "relation_ids": [
         "logical-fractal",
         "fractal-composition",
-        "logical-relation"
+        "logical-relation",
+        "logical-diamond"
       ]
     },
     {
@@ -232,7 +235,8 @@
       "relation_ids": [
         "logical-primitive",
         "fractal-composition",
-        "evidence-provenance"
+        "evidence-provenance",
+        "logical-diamond"
       ]
     },
     {
@@ -248,7 +252,8 @@
       "relation_ids": [
         "formal-language",
         "source-first-contract",
-        "logical-fractal"
+        "logical-fractal",
+        "logical-diamond"
       ]
     },
     {
@@ -263,7 +268,8 @@
       "relation_ids": [
         "logical-fractal",
         "evidence-provenance",
-        "model-readiness"
+        "model-readiness",
+        "logical-diamond"
       ]
     },
     {
@@ -293,7 +299,8 @@
       "relation_ids": [
         "evidence-provenance",
         "logical-primitive",
-        "fractal-composition"
+        "fractal-composition",
+        "logical-diamond"
       ]
     },
     {
@@ -451,13 +458,33 @@
         "model-readiness",
         "fractal-composition"
       ]
+    },
+    {
+      "id": "logical-diamond",
+      "title": "Logical diamond",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "USER_SUPPLIED_HYPOTHESIS_NOT_EMPIRICALLY_VERIFIED",
+      "source_ids": [
+        "SRC-WANGA-LOGIC-DIAMOND-HYPOTHESIS",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relation_ids": [
+        "logical-fractal",
+        "fractal-composition",
+        "logical-particle",
+        "fractal-invariant",
+        "model-readiness",
+        "evidence-provenance"
+      ]
     }
   ],
   "relation_policy": "Every edge generated from an article relations field is EDITORIAL_RELATION_CANDIDATE unless an explicit formal rule with cited premises and tests establishes a stronger relation.",
   "validation": {
-    "article_count": 26,
-    "source_count": 15,
+    "article_count": 27,
+    "source_count": 16,
     "missing_relations": [],
+    "dangling_source_refs": [],
     "source_ids_unique": true,
     "article_ids_unique": true
   }
