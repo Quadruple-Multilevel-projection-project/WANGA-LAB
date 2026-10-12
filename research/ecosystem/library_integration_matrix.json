@@ -5,7 +5,6 @@
   "status": "RESEARCH_DECISIONS_NOT_INSTALLED_DEPENDENCIES",
   "scope": {
     "logic_trader": "Selection, composition and evaluation of logical assets only.",
-    "financial_market_or_betting_actions": "OUT_OF_SCOPE",
     "dependency_policy": "Prefer one task-specific adapter at a time; do not bulk-install the 100+ candidates."
   },
   "current_baseline": [
@@ -474,10 +473,6 @@
     {
       "rule": "FRACTAL_SHAPE_IS_NOT_VALIDITY",
       "description": "Self-similarity alone does not establish logical correctness."
-    },
-    {
-      "rule": "LOGIC_TRADER_SCOPE",
-      "description": "Logic Trader selects/composes logical assets; financial-market trading/betting workflows are out of scope."
     }
   ],
   "acceptance_gates": [
