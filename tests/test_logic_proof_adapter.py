@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import json
 import unittest
+from unittest.mock import patch
 from pathlib import Path
 
 from logic_proof.z3_adapter import (
@@ -62,6 +63,30 @@ class BoundedZ3AdapterTests(unittest.TestCase):
         status = validate_formal_spec(self.cases[0]["spec"])
         self.assertEqual(status["status"], "VALID_FORMAL_FRAGMENT_SHAPE")
         self.assertEqual(status["semantic_status"], "NOT_YET_VERIFIED")
+
+    def test_unknown_is_preserved_as_unresolved(self):
+        import z3
+        from logic_proof import z3_adapter
+
+        class UnknownSolver:
+            def set(self, **kwargs):
+                return None
+
+            def add(self, *args):
+                return None
+
+            def check(self):
+                return z3.unknown
+
+            def reason_unknown(self):
+                return "test timeout"
+
+        with patch.object(z3_adapter.z3, "Solver", return_value=UnknownSolver()):
+            result = check_entailment(self.cases[0]["spec"])
+        self.assertEqual(result["premise_consistency"], "UNKNOWN")
+        self.assertEqual(result["entailment_status"], "UNKNOWN")
+        self.assertEqual(result["semantic_status"], "NOT_YET_VERIFIED")
+        self.assertIn("not evaluated as proven", result["interpretation"])
 
     def test_hard_gates_do_not_average_away_failed_proof(self):
         result = evaluate_candidate(
