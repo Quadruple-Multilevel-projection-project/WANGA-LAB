@@ -34,6 +34,7 @@ on:
       - 'tests/test_logic_json_schemas.py'
       - 'tests/test_multi_agent_logic_evaluation.py'
       - 'tests/test_conversation_export_intake.py'
+      - 'schemas/formal-fragment-v1.schema.json'
       - '.github/workflows/logic-fractal-wiki.yml'
   pull_request:
     paths:
@@ -62,6 +63,9 @@ on:
       - 'tests/test_logic_proof_benchmark.py'
       - 'tests/test_multi_agent_logic_evaluation.py'
       - 'tests/test_conversation_export_intake.py'
+      - 'tests/test_logic_package_contract.py'
+      - 'tests/test_logic_json_schemas.py'
+      - 'schemas/formal-fragment-v1.schema.json'
       - '.github/workflows/logic-fractal-wiki.yml'
 
 permissions:
