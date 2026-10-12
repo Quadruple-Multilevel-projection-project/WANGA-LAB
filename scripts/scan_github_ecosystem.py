@@ -30,9 +30,9 @@ RELEVANCE = re.compile(
     re.IGNORECASE,
 )
 DOC_PATH = re.compile(
-    r"(^|/)(readme|agents|architecture|research|logic|fractal|ntm|mln|"
+    r"(^|/)[^/]*(readme|agents|architecture|research|logic|fractal|ntm|mln|"
     r"agent|model|orchestrat|provenance|evidence|manifest|schema|workflow|"
-    r"capabilit|registry|thought|wiki)([^/]*$|/)",
+    r"capabilit|registry|thought|wiki)[^/]*(/|$)",
     re.IGNORECASE,
 )
 
