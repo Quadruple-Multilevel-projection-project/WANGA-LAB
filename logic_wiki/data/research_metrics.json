@@ -29,6 +29,15 @@
     "first_model_status": "CANDIDATE_NOT_RELEASED",
     "semantic_status": "NOT_YET_VERIFIED",
     "wix_research_status_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki-research-status.html",
-    "github_report_path": "research/reports/logic-fractal/2026-10-12-cycle.md"
+    "github_report_path": "research/reports/logic-fractal/2026-10-12-cycle.md",
+    "agent_run": {
+      "workflow_run_id": 38280474364,
+      "agent_roles_executed": 8,
+      "conversation_records_processed": 0,
+      "catalog_graph_composition_candidates": 189,
+      "wiki_build_status": "PASS",
+      "readiness_gate": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+      "note": "Catalog graph paths only; not 189 verified logic units or conversation-derived fragments."
+    }
   }
 }
