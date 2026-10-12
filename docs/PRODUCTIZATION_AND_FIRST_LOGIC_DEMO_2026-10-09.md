@@ -79,3 +79,11 @@ Before presenting the demo as a reliable commercial tool:
 **Current conclusion:** an interactive sample exists and passes a build check. It is a demonstrator, not yet a verified commercial product.
 
 ---
+
+## Architecture scope clarification — 2026-10-12
+
+The current AI Logic Auditor demo must not be represented as an implementation of the complete five-forward / five-return architecture. The canonical architecture remains a proposal that requires explicit interfaces, recovery rules, source-linked weight definitions, round-trip tests, and comparative evaluation.
+
+The first demonstrator should remain bounded: one specified task, known inputs, explicit constraints, traceable outputs, and repeatable tests. Only after this is stable should additional layers be connected. Do not use the LFA/CSR/EDI values from the conceptual architecture text as measured results unless test data and run logs are supplied.
+
+Review: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md
