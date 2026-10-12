@@ -1,0 +1,71 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA candidate evaluation policy",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "policy_id",
+    "status",
+    "thresholds",
+    "hard_gates",
+    "rules"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "wanga-candidate-evaluation-policy/1.0"
+    },
+    "policy_id": {
+      "type": "string"
+    },
+    "status": {
+      "const": "INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED"
+    },
+    "thresholds": {
+      "type": "object",
+      "required": [
+        "min_source_coverage",
+        "min_benchmark_accuracy",
+        "max_counterexample_rate",
+        "min_holdout_score",
+        "max_compute_seconds"
+      ],
+      "properties": {
+        "min_source_coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "min_benchmark_accuracy": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_counterexample_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "min_holdout_score": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_compute_seconds": {
+          "type": "number",
+          "exclusiveMinimum": 0
+        }
+      },
+      "additionalProperties": false
+    },
+    "hard_gates": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rules": {
+      "type": "object"
+    }
+  },
+  "additionalProperties": true
+}
