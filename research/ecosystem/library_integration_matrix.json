@@ -2,7 +2,7 @@
   "schema_version": "wanga-library-integration-matrix/1.0",
   "audit_date": "2026-10-12",
   "basis": "Pasted text.txt plus current ARK-Swarm/Logic Trader implementation and official documentation for short-listed projects.",
-  "status": "RESEARCH_DECISIONS_WITH_OPTIONAL_Z3_ADAPTER_CONFIGURED_NOT_BULK_INSTALLED",
+  "status": "TYPED_AST_AND_TEXT_FRONTEND_CONFIGURED_CI_PENDING_SOURCE_GROUNDED_BENCHMARKS_MISSING",
   "scope": {
     "logic_trader": "Selection, composition and evaluation of logical assets only.",
     "dependency_policy": "Prefer one task-specific adapter at a time; do not bulk-install the 100+ candidates."
@@ -30,8 +30,13 @@
     },
     {
       "component": "z3-proof-adapter",
-      "status": "IMPLEMENTED_OPTIONAL_BOUNDED_PROTOTYPE_CI_PENDING",
-      "limit": "explicit Boolean/integer/real/string AST only; checks premise consistency separately; every premise must cite a source or be marked assumption=true; no natural-language formalizer; not a source-truth oracle"
+      "status": "IMPLEMENTED_TYPED_AST_CI_PENDING",
+      "limit": "explicit typed AST only; each premise must have source refs or be marked assumption=true; no natural-language formalizer or source-truth oracle"
+    },
+    {
+      "component": "formal-reasoning-text-frontend",
+      "status": "IMPLEMENTED_DELEGATES_TO_TYPED_AST_CI_PENDING",
+      "limit": "accepts only bounded propositional syntax; premises are explicit formal assumptions unless per-premise source mapping is added; top-level source refs do not automatically support every premise"
     },
     {
       "component": "swarm-coordinator",
@@ -97,10 +102,10 @@
       "candidate_libraries": [
         {
           "name": "Z3 / z3-solver",
-          "fit": "SMT constraints and formal-fragment checks",
-          "decision": "OPTIONAL_BOUNDED_ADAPTER_CONFIGURED",
+          "fit": "Canonical typed AST solver for Bool/Int/Real/String fragments; propositional text frontend delegates to this engine",
+          "decision": "CANONICAL_TYPED_AST_BACKEND_CONFIGURED",
           "official_url": "https://github.com/Z3Prover/z3",
-          "status": "IMPLEMENTED_PENDING_CI_AND_SOURCE_GROUNDED_BENCHMARKS"
+          "status": "IMPLEMENTED_ON_BRANCH_CI_PENDING_SOURCE_GROUNDED_BENCHMARKS"
         },
         {
           "name": "Lean 4 + LeanCopilot",
