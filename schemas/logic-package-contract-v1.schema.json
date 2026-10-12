@@ -1,0 +1,100 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA Source-Grounded Logic Package Contract V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "package_id",
+    "version",
+    "status",
+    "formal_semantics",
+    "premises",
+    "conclusion",
+    "source_refs",
+    "tests",
+    "known_limits",
+    "semantic_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "wanga-logic-package/1.0"
+    },
+    "package_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "SPECIFIED",
+        "PROTOTYPED",
+        "TESTED",
+        "VERIFIED",
+        "INTERNAL_CANDIDATE_NOT_RELEASED"
+      ]
+    },
+    "formal_semantics": {
+      "type": "object",
+      "required": [
+        "logic_fragment",
+        "variables",
+        "supported_operators"
+      ]
+    },
+    "premises": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "id",
+          "expr",
+          "source_refs",
+          "assumption"
+        ]
+      }
+    },
+    "conclusion": {
+      "type": "object"
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "composition_rule": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "tests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "known_limits": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "semantic_status": {
+      "enum": [
+        "NOT_YET_VERIFIED",
+        "VERIFIED_WITHIN_ENCODED_FRAGMENT"
+      ]
+    },
+    "release_approval": {
+      "type": [
+        "object",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
