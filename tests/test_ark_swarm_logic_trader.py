@@ -70,6 +70,8 @@ class LogicTraderTests(unittest.TestCase):
         self.assertEqual(model["release_gate"]["decision"], "BLOCKED_INTERNAL_CANDIDATE_ONLY")
         self.assertFalse(model["release_gate"]["automatically_released"])
         self.assertEqual(model["semantic_status"], "NOT_YET_VERIFIED")
+        self.assertEqual(model["formalization_queue_item"]["solver_execution_status"], "NOT_RUN_NO_FORMAL_AST")
+        self.assertEqual(model["formalization_queue_item"]["semantic_status"], "NOT_YET_VERIFIED")
         self.assertEqual(report["event_set"]["merge_semantics"], "GROW_ONLY_SET_UNION")
         self.assertEqual(report["capability_boundaries"]["peer_to_peer_transport"], "NOT_IMPLEMENTED")
 
@@ -80,6 +82,7 @@ class LogicTraderTests(unittest.TestCase):
         self.assertTrue(agents["source-provenance-gate"]["passed"])
         self.assertTrue(agents["typed-fragment-composer"]["passed"])
         self.assertTrue(agents["formal-proof-fixture-gate"]["passed"])
+        self.assertTrue(agents["formalization-queue-gate"]["passed"])
         self.assertTrue(agents["mirror-counter-reader"]["passed"])
 
     def test_event_set_merge_is_commutative_and_idempotent(self):
