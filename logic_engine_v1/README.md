@@ -26,7 +26,8 @@ python -m unittest discover -s tests -v
 3. **Contradiction handling:** same subject/predicate/object with opposing polarity triggers `REVIEW`. Facts involved in contradictions are not used as premises.
 4. **Scope/action gate:** denies actions outside declared action/target scope; missing permission denies; incomplete evidence routes to review; publication requires separate explicit permission.
 5. **Drift arithmetic:** the same score can be evaluated under two thresholds. This is a transparent calculation, not model drift discovery.
-6. **Corpus validator:** checks the GitHub's 1,000 page definitions, unique IDs, 231 pair records, 462 directed transitions and reverse links, 1,540 unique unordered triples, and the exact combinatorial formulas.
+6. **Drift and count demo:** the CLI demo also runs a threshold-change example and reports the exact combinatorial counts.
+7. **Corpus validator:** checks the GitHub's 1,000 page definitions, unique IDs, 231 pair records, 462 directed transitions and reverse links, 1,540 unique unordered triples, and the exact combinatorial formulas.
 
 ## Epistemic contract
 
