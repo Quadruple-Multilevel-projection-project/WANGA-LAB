@@ -26,7 +26,7 @@ class TypedFormalLogicBenchmarkTests(unittest.TestCase):
         self.assertTrue("not_source_grounded" in report["fixture_status"].lower())
 
     def test_benchmark_ids_are_unique(self):
-        report = run_formal_fixture_benchmark(ROOT / "logic_proof/fixtures/formal_cases.json")
+        report = run_typed_benchmark_suite(ROOT / "formal_reasoning/examples/typed_formal_cases.json")
         ids = [result["case_id"] for result in report["results"]]
         self.assertEqual(len(ids), len(set(ids)))
 
