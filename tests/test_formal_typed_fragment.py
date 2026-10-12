@@ -74,7 +74,7 @@ class BoundedZ3AdapterTests(unittest.TestCase):
 
     def test_unknown_is_preserved_as_unresolved(self):
         import z3
-        from logic_proof import z3_adapter
+        from formal_reasoning import typed_fragment as z3_adapter
 
         class UnknownSolver:
             def set(self, **kwargs):
