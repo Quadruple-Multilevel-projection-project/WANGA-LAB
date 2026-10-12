@@ -48,3 +48,12 @@
 - Important mathematical distinction: 1,540 is the number of unordered sets of three distinct letters. Ordered triples without repetition number 9,240; allowing repetition gives 10,648.
 - Scope boundary: 1,000 are page definitions/blueprints, not 1,000 completed articles. The existing 257-page plan remains an editorial outline; deduplication is required before treating them as a final count of distinct public articles.
 - Semantic status remains NOT_YET_VERIFIED for page specifications. In particular, the original four weight-layer definitions must be recovered from source, and the Lie/E8/Tonnetz/10-DOF/fractal mappings are unresolved until a formal map and test exist.
+
+## Logic-native model-builder verification — 2026-10-12
+
+- [Live Wix page](https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-native-model-builder.html) added and verified by page retrieval; homepage navigation and showcase card link to it.
+- [PR #96](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/96) merged as `cbe964a245cbc5e0622a92ac2d79da7c3b750126).
+- Logic-Native Model Builder V1, Repository Integrity and CodeQL Advanced passed on the reviewed PR commit.
+- LNL/0.1 defines source, fact, rule, goal and constraint statements; compiled candidates produce a model graph and an execution bundle for the WANGA symbolic kernel.
+- The offline provider is deterministic and is not an AI model. The optional OpenAI-compatible provider requires explicit endpoint/model configuration and was not called during CI.
+- Goal satisfaction shows that the supplied facts/rules derive the goal; it does not independently prove the premises true. Semantic validity remains NOT_YET_VERIFIED.
