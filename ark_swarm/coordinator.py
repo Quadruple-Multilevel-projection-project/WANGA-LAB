@@ -16,6 +16,7 @@ from ark_swarm.logic_trader import canonical_hash, trade_logic
 from ark_swarm.swarm_state import make_event, merge_event_sets, validation_credit
 from logic_fractal.fragment_composer import compose_pair, validate_fragment
 from logic_fractal.composer import load_contracts
+from formal_reasoning.benchmark import run_benchmark_suite
 
 
 DEFAULT_TASK = (
@@ -189,6 +190,32 @@ def build_cycle(
         "meaning_boundary": mirror.get("meaning_boundary", ""),
     }))
 
+    try:
+        formal_suite = run_benchmark_suite(root / "formal_reasoning/examples/benchmark_cases.json")
+    except Exception as exc:
+        formal_suite = {
+            "status": "BLOCKED_OR_ERROR",
+            "case_count": 0,
+            "passed": 0,
+            "failed": 0,
+            "error": f"{type(exc).__name__}: {exc}",
+            "natural_language_truth_verified": False,
+            "verification_status": "NOT_YET_VERIFIED",
+        }
+    roles.append(_role("formal-propositional-benchmark", {
+        "fixed_suite_passes": formal_suite.get("status") == "PASS",
+        "all_five_cases_pass": formal_suite.get("case_count") == 5 and formal_suite.get("passed") == 5 and formal_suite.get("failed") == 0,
+        "not_claimed_as_natural_language_truth": formal_suite.get("natural_language_truth_verified") is False,
+        "verification_status_stays_unverified": formal_suite.get("verification_status") == "NOT_YET_VERIFIED",
+    }, {
+        "suite_status": formal_suite.get("status"),
+        "case_count": formal_suite.get("case_count"),
+        "passed": formal_suite.get("passed"),
+        "failed": formal_suite.get("failed"),
+        "scope": formal_suite.get("scope"),
+        "error": formal_suite.get("error"),
+    }))
+
     existing_suite = None
     if include_existing_agent_suite:
         from scripts.evaluate_logic_agent_bundle import run_evaluation
@@ -239,6 +266,13 @@ def build_cycle(
         "typed_fixture_probe": typed_probe,
         "provenance_gate": next(role for role in roles if role["agent_id"] == "source-provenance-gate"),
         "mirror_review": mirror,
+        "formal_benchmark_summary": {
+            "status": formal_suite.get("status"),
+            "case_count": formal_suite.get("case_count"),
+            "passed": formal_suite.get("passed"),
+            "failed": formal_suite.get("failed"),
+            "verification_status": formal_suite.get("verification_status", "NOT_YET_VERIFIED"),
+        },
         "semantic_status": "NOT_YET_VERIFIED",
         "release_gate": {
             "automatically_released": False,
@@ -269,6 +303,7 @@ def build_cycle(
         "logic_trader": trader_output,
         "typed_fragment_probe": typed_probe,
         "mirror_review": mirror,
+        "formal_benchmark_suite": formal_suite,
         "existing_six_agent_suite": ({
             "status": existing_suite.get("overall_status"),
             "agent_count": existing_suite.get("agent_count"),
@@ -282,6 +317,7 @@ def build_cycle(
             "network_crdt_sync": "NOT_IMPLEMENTED",
             "local_grow_only_event_set": "IMPLEMENTED",
             "external_llm_backend": "NOT_CONFIGURED",
+            "z3_formal_adapter": formal_suite.get("status", "UNKNOWN"),
             "connectome_execution": "NOT_IMPLEMENTED",
             "self_modifying_code": "NOT_IMPLEMENTED",
             "wix_write": "NOT_PERFORMED_BY_THIS_CYCLE",
