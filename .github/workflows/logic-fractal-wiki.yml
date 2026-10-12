@@ -35,8 +35,8 @@ on:
       - 'tests/test_multi_agent_logic_evaluation.py'
       - 'tests/test_conversation_export_intake.py'
       - 'schemas/formal-fragment-v1.schema.json'
-      - 'schemas/logic-formalization-queue-item-v1.schema.json
-      - 'tests/test_logic_formalization_queue.py
+      - 'schemas/logic-formalization-queue-item-v1.schema.json'
+      - 'tests/test_logic_formalization_queue.py'
       - '.github/workflows/logic-fractal-wiki.yml'
   pull_request:
     paths:
