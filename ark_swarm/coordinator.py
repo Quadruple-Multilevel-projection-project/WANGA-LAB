@@ -16,6 +16,7 @@ from ark_swarm.logic_trader import canonical_hash, trade_logic
 from ark_swarm.swarm_state import make_event, merge_event_sets, validation_credit
 from logic_fractal.fragment_composer import compose_pair, validate_fragment
 from logic_fractal.composer import load_contracts
+from logic_proof.benchmark import run_formal_fixture_benchmark
 
 
 DEFAULT_TASK = (
@@ -173,6 +174,33 @@ def build_cycle(
         "catalog_edges_not_treated_as_entailment": "not independently proven semantic entailment" in composition["source_boundary"],
     }, composition))
 
+    formal_benchmark = None
+    formal_benchmark_error = None
+    try:
+        formal_benchmark = run_formal_fixture_benchmark(root / "logic_proof/fixtures/formal_cases.json")
+        formal_checks = {
+            "fixture_suite_passes": formal_benchmark.get("status") == "PASS",
+            "all_formal_fixtures_pass": formal_benchmark.get("passed_cases") == formal_benchmark.get("case_count"),
+            "fixtures_not_mislabeled_as_real_world": "not source-grounded" in str(formal_benchmark.get("fixture_status", "")).lower(),
+            "benchmark_keeps_verification_open": formal_benchmark.get("semantic_status") == "NOT_YET_VERIFIED",
+        }
+    except (RuntimeError, ValueError, OSError) as exc:
+        formal_benchmark_error = f"{type(exc).__name__}: {exc}"
+        formal_checks = {
+            "fixture_suite_passes": False,
+            "all_formal_fixtures_pass": False,
+            "fixtures_not_mislabeled_as_real_world": True,
+            "benchmark_keeps_verification_open": True,
+        }
+    roles.append(_role("formal-proof-fixture-gate", formal_checks, {
+        "status": formal_benchmark.get("status") if formal_benchmark else "BLOCKED",
+        "case_count": formal_benchmark.get("case_count") if formal_benchmark else 0,
+        "passed_cases": formal_benchmark.get("passed_cases") if formal_benchmark else 0,
+        "error": formal_benchmark_error,
+        "semantic_status": "NOT_YET_VERIFIED",
+        "limitation": "Synthetic formal fixtures test the adapter, not the truth of real Logic Trader candidates.",
+    }))
+
     typed_probe = _typed_composition_probe(root)
     roles.append(_role("typed-fragment-composer", typed_probe["checks"], {
         "probe_type": typed_probe["probe_type"],
@@ -268,6 +296,11 @@ def build_cycle(
         "agents": roles,
         "logic_trader": trader_output,
         "typed_fragment_probe": typed_probe,
+        "formal_logic_fixture_benchmark": formal_benchmark or {
+            "status": "BLOCKED",
+            "error": formal_benchmark_error,
+            "semantic_status": "NOT_YET_VERIFIED",
+        },
         "mirror_review": mirror,
         "existing_six_agent_suite": ({
             "status": existing_suite.get("overall_status"),
@@ -288,6 +321,7 @@ def build_cycle(
             "logic_package_release": "BLOCKED_PENDING_SEMANTIC_BENCHMARKS_AND_REVIEW",
         },
         "next_actions": [
+            "Add source-grounded formal cases; current seven-case Z3 suite is synthetic adapter validation only.",
             "Replace synthetic typed-fragment fixtures incrementally with source-reviewed logic fragments.",
             "Add task benchmark cases and negative/counterexample cases for the Logic Trader selection and composition outputs.",
             "Add a reviewer-gated acceptance registry before recursive composition may consume prior candidates.",
