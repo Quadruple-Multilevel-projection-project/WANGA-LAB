@@ -116,3 +116,10 @@
 - **SPECIFIED / PROPOSED:** מודל 5+5 כמבנה פונקציונלי, מיפוי 12 הבעיות, והכיוון העסקי Logic-as-a-Product.
 - **NOT_YET_SPECIFIED:** הגדרות ארבע שכבות המשקולות, נוסחאות חישוב מלאות וחוזים לכל שער.
 - **NOT_YET_VERIFIED:** פתרון אמפירי ל־12 הבעיות, שחזור מלא, תועלת מעל קו בסיס, התאמה לתעשיות קריטיות, ביקוש ותמחור בינלאומיים, ויישומים גיאופוליטיים.
+
+
+## Logic-as-a-Product: market bridge
+The 12-problem map is now connected to the commercial loop: logic research → explicit specification → testable task-specific package → customer workflow → measured outcome → research feedback. Candidate international uses include finance/insurance, cross-border compliance, trade/supply chains, government procedures, enterprise knowledge, and geopolitical analysis support. These are hypotheses for bounded pilots, not validated demand or proof of complete solution.
+
+[Logic as Product — 12 Problems to Markets](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/LOGIC_AS_PRODUCT_MARKETS_BRIDGE_V1.md)
+[Investor explanation draft](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/INVESTOR_LOGIC_EXPLANATION_UPDATE_DRAFT_HE.md)
