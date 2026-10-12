@@ -8,7 +8,7 @@
     "unique_urls": 174,
     "site_slugs": 16,
     "semantic_reviewed_source_pages": 29,
-    "notes": "Sitemap inventory is broader than semantic review. Topic tags are derived from URL/slug only; they do not prove logical relevance. The curated maps cite source pages and label whether a combination is demonstrated or proposed."
+    "notes": "Sitemap inventory is broader than semantic review. Topic tags are derived from URL/slug only and do not prove logical relevance. Page slugs are not verified display titles. Curated maps cite source pages and distinguish demonstrated behavior from proposed combinations. The inventory does not prove that private, draft, unindexed, or sitemap-less pages do not exist."
   },
   "sitemaps": [
     {
@@ -2598,5 +2598,17 @@
       ],
       "action": "Keep them in the inventory but out of validated logic maps unless page content directly supports a specific relationship."
     }
-  ]
+  ],
+  "quality_control": {
+    "checked_at": "2026-10-12",
+    "unique_url_count": 174,
+    "total_inventory_records": 174,
+    "duplicate_url_count": 0,
+    "site_slugs": 16,
+    "reviewed_content_records": 29,
+    "inventory_only_records": 145,
+    "title_field_note": "The inventory stores URL slugs, not verified page display titles.",
+    "topic_tag_note": "Tags are inferred from URL/slug; they are search aids, not evidence of semantic relevance or logical dependency.",
+    "source_mutation_note": "This quality cleanup changes only the Logic Engine demo site and WANGA-LAB documents; original source Wix pages were not edited or deleted."
+  }
 }
