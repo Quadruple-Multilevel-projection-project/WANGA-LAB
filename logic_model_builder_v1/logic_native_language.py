@@ -354,6 +354,7 @@ def compile_lnl(text: str) -> dict[str, Any]:
 
     return {
         "status": "COMPILED_FOR_REVIEW",
+        "semantic_status": "NOT_YET_VERIFIED",
         "language": model["schema_version"],
         "model_name": model["name"],
         "model_version": model["version"],
