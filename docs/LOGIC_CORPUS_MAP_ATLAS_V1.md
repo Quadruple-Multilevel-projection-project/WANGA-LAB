@@ -56,3 +56,9 @@ Every macro map has the ten lenses: source/edition, formal schema, relations/ope
 The [Sefaria text](https://www.sefaria.org/Sefer_Yetzirah.2.1?lang=en&with=Translations) shows the 231-gate reading. Scholarship discusses 221/231 textual and calculation variants: [Ben-Shachar (2025)](https://cris.iucc.ac.il/en/publications/%D7%A0%D7%9E%D7%A6%D7%90%D7%95-%D7%99%D7%95%D7%A6%D7%90%D7%95%D7%AA-%D7%91%D7%A8%D7%9C%D7%90-%D7%A9%D7%A2%D7%A8%D7%99%D7%9D-%D7%A0%D7%90-%D7%9E%D7%90%D7%AA%D7%99%D7%9D-%D7%A2%D7%A9%D7%A8%D7%99%D7%9D-%D7%95%D7%90%D7%97%D7%93-%D7%A2%D7%9C-%D7%A9%D7%99%D7%98%D7%95%D7%AA-%D7%97%D7%99%D7%A9%D7%95%D7%91-%D7%9E%D7%A1%D7%A4%D7%A8-%D7%94/) and [Bar-Asher (2023)](https://cris.huji.ac.il/en/publications/the-earliest-version-of-sefer-yeirah-text-format-structure-and-ge/).
 
 The four original mathematical-logical weight-layer formulas must be recovered. A 10-DOF/ Lie-algebra / E8 / Tonnetz / fractal embedding requires explicit mapping, operations, invariants and tests before it can be treated as established.
+
+## Interactive published atlas
+
+- [Open the live interactive explorer](https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-corpus-atlas.html).
+- Search and filter the 1,000 page definitions; explore K22/231 gate edges, 462 directed transitions and the 1,540 unordered triple sets.
+- Live browser QA passed on 2026-10-12 for data loading, mode switching and search of `GATE-001`.
