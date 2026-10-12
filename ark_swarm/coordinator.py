@@ -371,6 +371,7 @@ def write_cycle(result: Mapping[str, Any], out_dir: Path) -> dict[str, str]:
     markdown_path = out_dir / "logic-trader-swarm-latest.md"
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     candidate_path.write_text(json.dumps(candidate, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    queue_path.write_text(json.dumps(candidate["formalization_queue_item"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     lines = [
         f"# ARK-Swarm + Logic Trader — {report['generated_at_utc']}",
         "",
