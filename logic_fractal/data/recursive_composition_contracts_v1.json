@@ -1,0 +1,105 @@
+{
+  "schema_version": "logic-fractal-recursive-contracts/1.0",
+  "status": "CANDIDATE_CONTRACTS_NEED_SEMANTIC_BENCHMARK",
+  "rules": [
+    {
+      "id": "RF-L0-ATOMIC-UNIT",
+      "scale": 0,
+      "status": "ACTIVE_SPECIFIED",
+      "inputs": [
+        "source_span_or_explicit_hypothesis"
+      ],
+      "outputs": [
+        "typed_logic_unit"
+      ],
+      "invariants": [
+        "stable ID",
+        "literal source mapping or explicitly marked hypothesis",
+        "epistemic status retained"
+      ],
+      "reject_if": [
+        "missing source lineage for source-backed claim",
+        "status claimed VERIFIED without verification record"
+      ]
+    },
+    {
+      "id": "RF-L1-FRAGMENT",
+      "scale": 1,
+      "status": "ACTIVE_SPECIFIED",
+      "inputs": [
+        "two or more typed logic units"
+      ],
+      "outputs": [
+        "fragment candidate"
+      ],
+      "invariants": [
+        "input/output types compatible",
+        "all parent IDs preserved",
+        "all source IDs resolve",
+        "constraints carried forward"
+      ],
+      "reject_if": [
+        "type mismatch",
+        "dangling source or parent reference",
+        "unmarked interpretation"
+      ]
+    },
+    {
+      "id": "RF-L2-RECURSIVE-COMPOSITION",
+      "scale": 2,
+      "status": "DRAFT_FOR_TESTING",
+      "inputs": [
+        "previously structurally valid fragment",
+        "additional typed fragment",
+        "composition rule"
+      ],
+      "outputs": [
+        "higher-scale candidate"
+      ],
+      "invariants": [
+        "child hash and parent IDs included",
+        "no invariant loss",
+        "deterministic canonical build",
+        "source scope intersection or explicit scope expansion evidence"
+      ],
+      "reject_if": [
+        "new conclusion lacks premises",
+        "source scope broadens silently",
+        "recursive expansion creates unbounded cycle"
+      ]
+    },
+    {
+      "id": "RF-L3-COUNTEREXAMPLE-GATE",
+      "scale": 3,
+      "status": "REQUIRED_NOT_YET_SATISFIED",
+      "inputs": [
+        "candidate model",
+        "source-grounded positive/negative/boundary cases",
+        "MIRROR review"
+      ],
+      "outputs": [
+        "review decision"
+      ],
+      "invariants": [
+        "holdout not used for tuning",
+        "failure records retained",
+        "reviewer/status captured"
+      ],
+      "reject_if": [
+        "benchmark absent",
+        "critical contradiction unresolved",
+        "semantic result inferred from structure-only test"
+      ]
+    }
+  ],
+  "common_statuses": [
+    "SOURCE_SUPPORTED",
+    "STRUCTURAL_CANDIDATE",
+    "HYPOTHESIS",
+    "BUILT",
+    "TESTED",
+    "NOT_YET_VERIFIED",
+    "VERIFIED"
+  ],
+  "note": "Contracts are process specifications. ACTIVE_SPECIFIED denotes a configured test contract, not proof that a composed model is semantically true."
+}
