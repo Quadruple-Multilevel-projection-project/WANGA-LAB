@@ -4,6 +4,8 @@ import unittest
 from pathlib import Path
 import json
 
+from logic_proof.formalization_queue import queue_candidate_for_formalization
+
 try:
     import jsonschema
 except ImportError as exc:
@@ -68,6 +70,20 @@ class LogicJsonSchemaTests(unittest.TestCase):
         }
         validator = jsonschema.Draft202012Validator(load_schema("formal-fragment-v1.schema.json"))
         validator.validate(spec)
+
+    def test_formalization_queue_item_matches_schema(self):
+        candidate = {
+            "package_id": "LT-0123456789abcdef",
+            "version": "0.1",
+            "member_articles": [{"id": "logic-a", "definition": "A test definition.", "source_refs": ["SRC-1"]}],
+            "sources": [{"id": "SRC-1"}]
+        }
+        item = queue_candidate_for_formalization(candidate)
+        schema = json.loads((ROOT / "schemas/logic-formalization-queue-item-v1.schema.json").read_text(encoding="utf-8"))
+        jsonschema.Draft202012Validator.check_schema(schema)
+        jsonschema.Draft202012Validator(schema).validate(item)
+        self.assertEqual(item["solver_execution_status"], "NOT_RUN_NO_FORMAL_AST")
+        self.assertFalse(item["automatic_semantic_conversion"])
 
     def test_formal_fragment_schema_rejects_unscoped_premise(self):
         spec = {
