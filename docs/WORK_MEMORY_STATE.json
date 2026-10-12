@@ -137,7 +137,12 @@
     "test_architecture_discovery.py": "discovery contract tests",
     "ARCHITECTURE_DISCOVERY_PROGRAM_V1.md": "three bounded architecture scouts, discovery lifecycle and investor boundary",
     "ARCHITECTURE_PATTERN_MATRIX_V1.md": "pattern comparison and acceptance matrix",
-    "ARCHITECTURE_DISCOVERY_QUERIES_V1.yml": "declared public GitHub discovery domains"
+    "ARCHITECTURE_DISCOVERY_QUERIES_V1.yml": "declared public GitHub discovery domains",
+    "wanga_x_v1/engine.py": "WANGA-X requirement-to-computation mapping, three candidate architecture strategies, dependency closure, Blueprint IR, structural verification and reversible SHA-256-linked construction frames implemented; neural runtime materialization remains blocked until a verified backend exists",
+    "wanga_x_v1/catalog.json": "Machine-readable computation capabilities, task profiles and component dependency catalogue added",
+    "wanga_x_v1/tests/test_engine.py": "11 tests cover task-specific architecture variation, truthful neural-runtime blockers, provider status, dependency closure, deterministic Blueprint hash and reversible rollback",
+    "docs/WANGA_X_EXECUTABLE_BLUEPRINT_ENGINE_V1.md": "WANGA-X prototype documented with explicit BUILD/NOT_YET_VERIFIED boundaries",
+    ".github/workflows/wanga-x-blueprint-engine-v1.yml": "CI covers compilation, logic corpus integrity, WANGA-X regression tests and Blueprint generation"
   },
   "verified_limits": {
     "live_model_connections": false,
@@ -153,6 +158,9 @@
     "external_agent_patterns_runtime": "contract-level integration implemented; runtime execution pending verification"
   },
   "next_actions": [
+    "Recover and validate the named 28-mode reasoning taxonomy before attempting to instantiate its mode registry.",
+    "Implement a verified Neural Runtime Materializer adapter behind provider discovery, health, capability, permission and acceptance-test gates.",
+    "Run WANGA-X Blueprint generation against a source-reviewed benchmark of task requirements and compare output against a fixed-architecture baseline.",
     "Run three architecture-scout tracks, classify public GitHub patterns, verify licenses, and produce adaptation proposals before next-month Rational Logic publication.",
     "run and verify the first architecture-discovery workflow cycle",
     "read and classify discovered repositories with license evidence before proposing adaptations",
@@ -164,7 +172,7 @@
     "implement bounded autonomous continuation loop with a single serialized writer and terminal review state"
   ],
   "last_verification": {
-    "date": "2026-09-18",
+    "date": "2026-10-12",
     "pr": 15,
     "pr_state": "OPEN_DRAFT",
     "main_merge": false,
@@ -175,7 +183,16 @@
     "model_slots_verified": 0,
     "external_agent_pattern_integration": "implemented on autobuild/architecture-construction; workflow execution not yet verified",
     "discovery_program": "implemented on autobuild/architecture-construction; runtime execution not yet verified",
-    "master_instructions_propagation": "manager and subordinate build workflows reference canonical master instructions; runtime execution pending"
+    "master_instructions_propagation": "manager and subordinate build workflows reference canonical master instructions; runtime execution pending",
+    "wanga_x_pr": 97,
+    "wanga_x_pr_state": "MERGED",
+    "wanga_x_merge_commit": "638d97a3e201c60a48fbf51ab30ba013837886c2",
+    "wanga_x_ci": {
+      "WANGA-X Requirement Blueprint Engine V1": "SUCCESS",
+      "Repository Integrity": "SUCCESS",
+      "CodeQL Advanced": "SUCCESS"
+    },
+    "wanga_x_runtime_status": "BLUEPRINT_GENERATION_IMPLEMENTED_NEURAL_RUNTIME_MATERIALIZATION_NOT_IMPLEMENTED"
   },
   "master_project_instructions": {
     "path": "docs/MASTER_PROJECT_INSTRUCTIONS_V1.md",
@@ -212,5 +229,6 @@
       ".github/workflows/architecture-discovery.yml"
     ],
     "next_phase": "Rational Logic formalization/publication next month"
-  }
+  },
+  "current_focus": "WANGA-X requirement-driven Blueprint engine V1 is merged; validate on benchmark task suite, then implement verified neural runtime materialization adapter"
 }
