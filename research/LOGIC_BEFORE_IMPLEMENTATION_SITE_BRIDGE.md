@@ -31,3 +31,19 @@ When the public site publishes an article on this research thread, add its exact
 
 **Public article URL:** PENDING PUBLICATION  
 **Technical record:** This file in WANGA-LAB
+
+## Cross-site inventory and logic-map audit
+
+- [Wix cross-site logic-map audit](./WIX_CROSS_SITE_LOGIC_MAP_AUDIT_2026-10-12.md) — six candidate solution maps, source evidence, page-quality findings and scope limits.
+- [Machine-readable Wix inventory](./data/WIX_PAGE_INVENTORY_2026-10-12.json) — 174 unique public sitemap URLs across 16 site slugs, grouped by site and page type.
+- [Interactive Logic Engine Research Lab](https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com) — visual demo of logic maps and solution paths.
+- [Logic boxes and demos](https://beywolf5.wixsite.com/my-site-17/blog) — scope binder, evidence gatekeeper, deterministic action filter and worked examples.
+
+### Map integrity rule
+A published hyperlink is recorded as a link, not automatically as a logical dependency. A proposed composition stays `PROPOSED_COMBINATION` until the combined behavior is tested. The criterion-drift example remains verified only within its declared synthetic fixture.
+
+### Audit snapshot — 2026-10-12
+- Wix account listing: 53 sites.
+- This pass: 28 public sitemap files, 174 unique non-category URLs across 16 site slugs.
+- This is a sitemap-based inventory, not proof that every private, draft, unindexed, or sitemap-less page in all sites was inspected.
+- Observed: repeated philosophical/economic tail paragraphs on reviewed My Site 17 logic-box posts; generic “I'm a product” placeholders on 12 Computational Logic product URLs. Both are flagged for review, not automatically edited.
