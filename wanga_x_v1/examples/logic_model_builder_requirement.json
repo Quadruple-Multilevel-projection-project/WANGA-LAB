@@ -1,0 +1,48 @@
+{
+  "requirement_id": "WANGAX-LOGIC-AI-BUILDER-001",
+  "goal": "Construct a task-specific AI that treats a logic-native representation as an executable model language, generates candidate logic models, validates them, and preserves reversible architecture revisions.",
+  "task_kind": "logic_model_builder",
+  "input_types": [
+    "structured_requirements",
+    "logic_corpus",
+    "source_records"
+  ],
+  "output_types": [
+    "architecture_blueprint",
+    "logic_model_ir",
+    "candidate_model",
+    "verification_trace",
+    "reversible_frames"
+  ],
+  "required_capabilities": [
+    "candidate_model_generation",
+    "logic_language_compilation",
+    "symbolic_inference",
+    "contradiction_detection",
+    "candidate_critique",
+    "goal_verification",
+    "source_provenance",
+    "reversible_builds",
+    "blueprint_materialization",
+    "neural_architecture_search",
+    "neural_runtime_materialization"
+  ],
+  "optional_capabilities": [
+    "natural_language_requirement_interpretation",
+    "perspective_selection",
+    "drift_classification"
+  ],
+  "constraints": {
+    "require_source_provenance": true,
+    "require_verification": true,
+    "require_reversible_builds": true,
+    "no_automatic_publication": true,
+    "require_neural_runtime": true
+  },
+  "resource_limits": {
+    "max_components": 20,
+    "allow_external_models": false,
+    "max_candidate_architectures": 3
+  },
+  "status_note": "Research fixture. It is not a claim that neural weights or live endpoints exist."
+}
