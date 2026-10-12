@@ -224,3 +224,15 @@ The requirement-driven architecture paradigm now has an experimental executable 
 - [Merged PR #97](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/97) — merge commit `638d97a3e201c60a48fbf51ab30ba013837886c2`.
 
 It maps a task requirement into required computation capabilities, compares three candidate architecture strategies, resolves component dependencies, emits a provenance-bearing Blueprint, and records reversible hashed build frames. A request that needs actual neural runtime materialization is explicitly blocked when no verified backend is available. The engine generates a Blueprint; it does not train or instantiate neural weights.
+
+## Fractal Logic Model Research Platform (2026-10-12)
+
+The current workstream defines a persistent research program for a model that composes source-backed logic fragments recursively. It adds a six-entry starter Logic Wikipedia, source intake protocol, role contracts for eight research agents, a fragment schema, deterministic two-scale composer tests, and a weekly repository workflow. These are initial research structures, not a released/verified fractal AI model.
+
+- [Fractal Logic research program](research/fractal-logic-model/RESEARCH_PROGRAM_V1.md)
+- [Logic Wikipedia](research/logic-wikipedia/README.md)
+- [Research backlog](research/fractal-logic-model/INITIAL_RESEARCH_BACKLOG_V1.json)
+- [Conversation intake protocol](research/fractal-logic-model/CONVERSATION_INTAKE_PROTOCOL_V1.md)
+- [Agent role contracts](research/fractal-logic-model/AGENT_ROLES_V1.json)
+- [Research automation/compute plan](research/fractal-logic-model/AUTOMATION_AND_COMPUTE_PLAN_V1.md)
+- [First-model candidate builder](research/fractal-logic-model/src/build_first_candidate.py)
