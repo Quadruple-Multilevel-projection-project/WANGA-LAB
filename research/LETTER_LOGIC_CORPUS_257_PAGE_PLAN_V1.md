@@ -259,3 +259,7 @@
 ## רישום פרסום לפי שלבי האתרים
 
 מפת המצב של GitHub, Notion ואתרי Wix — כולל אתר שבו נוצרה טיוטת פוסט לא־מפורסמת ואתרים שלא שונו — נמצאת ב-[LOGIC_CORPUS_PUBLICATION_STAGING_2026-10-12.md](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/LOGIC_CORPUS_PUBLICATION_STAGING_2026-10-12.md). יש להתייחס אליה כמפת מצב עדכנית, לא כהוכחה שכל המסלולים מומשו.
+
+## ארכיטקטורת חמש שכבות קדימה וחמישה שלבי חזור
+
+המודל החדש אוחד למסמך קנוני אחד: [FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md). הוא מסיר כפילות בין תיאור חמש השכבות לבין תיאור עשר התחנות, ומבחין בין שלוש מערכות מושגיות: חמש שכבות עיבוד + חמישה שלבי חזור; ארבע שכבות משקולות לוגיות־מתמטיות; וארבעת תפקידי המשפט בחילוץ הטקסט. שמות ונוסחאות ארבע שכבות המשקולות עדיין דורשים איתור במקורות.
