@@ -1,19 +1,24 @@
 {
   "schema_version": "logic-wiki-wix-sync/1.0",
   "last_sync_date": "2026-10-12",
-  "status": "READ_BACK_VERIFIED",
+  "status": "PUBLISHED_READ_BACK_PARTIAL",
   "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
   "wiki_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
-  "source_catalog": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/articles.json",
-  "synced_article_count": 18,
-  "source_record_count": 11,
-  "relation_link_count": 54,
+  "source_catalog": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/feature/fractal-research-v2/logic_wiki/data/articles.json",
+  "synced_article_count": 27,
+  "source_record_count": 16,
+  "relation_link_count": 102,
   "homepage_navigation_verified": true,
   "homepage_card_verified": true,
   "existing_model_builder_preserved": true,
   "existing_corpus_atlas_preserved": true,
-  "verification_method": "Downloaded the Wix deployment after upload and checked logic-wiki.html and index.html.",
-  "automation_boundary": "Connected Wix upload/read-back was used for this sync. GitHub Actions does not currently have Wix credentials; workflow is not yet an autonomous Wix writer.",
+  "verification_method": "Wix upload returned HTTP 200 and an upload ID. Live read-back fetched the new research page, catalog page and homepage; the page title, page routes and GitHub links were observed. The public extractor returned partial page text, so exact topic-by-topic archive-level validation remains incomplete.",
+  "automation_boundary": "Connected Wix upload/read-back was used for this sync. GitHub Actions has no Wix credentials; scheduled ChatGPT automation may use the connected Wix tool, but must record the actual run and read-back result.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
-  "note": "Page publication status is distinct from semantic verification."
+  "note": "Twenty-seven catalog entries are published as 18 existing entries plus a 9-entry fractal-research supplement. Publication status is not semantic verification.",
+  "fractal_research_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki-fractal-research.html",
+  "fractal_research_navigation_verified": true,
+  "additional_pages": [
+    "logic-wiki-fractal-research.html"
+  ]
 }
