@@ -12,6 +12,11 @@ from typing import Any, Mapping, Sequence
 
 SCHEMA_VERSION = "wanga-formal-claim/1.0"
 PARSER_VERSION = "wanga-propositional-parser/1.0"
+MAX_FORMULA_CHARS = 4096
+MAX_FORMULA_TOKENS = 512
+MAX_FORMULA_NESTING = 32
+MAX_VARIABLES = 256
+MAX_PREMISES = 200
 _TOKEN = re.compile(r"\s*(<->|->|[()!&|]|[A-Za-z_][A-Za-z0-9_]*)")
 _RESERVED = {"not", "and", "or", "implies", "iff", "true", "false"}
 
@@ -28,7 +33,9 @@ def canonical_hash(value: Any) -> str:
 def tokenize_formula(text: str) -> list[str]:
     if not isinstance(text, str) or not text.strip():
         raise FormalInputError("formula must be non-empty text")
-    result: list[str] = []
+    if len(text) > MAX_FORMULA_CHARS:
+        raise FormalInputError(f"formula exceeds {MAX_FORMULA_CHARS} character limit")
+    result: list[str] =
     pos = 0
     while pos < len(text):
         if text[pos:].isspace():
@@ -40,6 +47,16 @@ def tokenize_formula(text: str) -> list[str]:
         pos = match.end()
     if not result:
         raise FormalInputError("formula has no tokens")
+    if len(result) > MAX_FORMULA_TOKENS:
+        raise FormalInputError(f"formula exceeds {MAX_FORMULA_TOKENS} token limit")
+    depth = 0
+    for token in result:
+        if token == "(":
+            depth += 1
+            if depth > MAX_FORMULA_NESTING:
+                raise FormalInputError(f"formula exceeds {MAX_FORMULA_NESTING} nesting limit")
+        elif token == ")":
+            depth = max(0, depth - 1)
     return result
 
 
@@ -169,12 +186,20 @@ def _validate_claim(spec: Mapping[str, Any]) -> dict[str, Any]:
         raise FormalInputError("variables must be a list of ASCII identifiers")
     if len(variables) != len(set(variables)):
         raise FormalInputError("variables must be unique")
+    if len(variables) > MAX_VARIABLES:
+        raise FormalInputError(f"variables exceed {MAX_VARIABLES} limit")
     if set(v.casefold() for v in variables) & _RESERVED:
         raise FormalInputError("variables may not use reserved logical operator names")
     if not isinstance(premises, list) or any(not isinstance(p, str) or not p.strip() for p in premises):
         raise FormalInputError("premises must be a list of non-empty formula strings")
+    if len(premises) > MAX_PREMISES:
+        raise FormalInputError(f"premises exceed {MAX_PREMISES} limit")
+    if any(len(p) > MAX_FORMULA_CHARS for p in premises):
+        raise FormalInputError(f"each premise must be at most {MAX_FORMULA_CHARS} characters")
     if not isinstance(conclusion, str) or not conclusion.strip():
         raise FormalInputError("conclusion must be a non-empty formula string")
+    if len(conclusion) > MAX_FORMULA_CHARS:
+        raise FormalInputError(f"conclusion exceeds {MAX_FORMULA_CHARS} character limit")
     if not isinstance(source_refs, list) or any(not isinstance(s, str) or not s.strip() for s in source_refs):
         raise FormalInputError("source_refs must be a list of non-empty strings")
     if not isinstance(timeout_ms, int) or isinstance(timeout_ms, bool) or not 1 <= timeout_ms <= 30000:
