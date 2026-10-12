@@ -154,8 +154,10 @@ def select_batch(items: list[dict[str, Any]], *, limit: int, run_number: int) ->
         raise ValueError("limit must be >= 1")
     if not items:
         return [], 0
-    start = (max(0, run_number - 1) * limit) % len(items)
-    selected = [items[(start + offset) % len(items)] for offset in range(min(limit, len(items)))]
+    batches_per_cycle = (len(items) + limit - 1) // limit
+    batch_index = max(0, run_number - 1) % batches_per_cycle
+    start = batch_index * limit
+    selected = items[start:start + limit]
     next_cursor = (start + len(selected)) % len(items)
     return selected, next_cursor
 
