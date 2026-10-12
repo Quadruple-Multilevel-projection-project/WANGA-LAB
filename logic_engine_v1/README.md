@@ -16,6 +16,7 @@ python logic_kernel.py counts
 python logic_kernel.py demo
 python logic_kernel.py run examples/site_update_case.json
 python logic_kernel.py validate-corpus --repo-root ..
+python logic_kernel.py demo --no-corpus    # isolate the symbolic rule demo
 python -m unittest discover -s tests -v
 ```
 
