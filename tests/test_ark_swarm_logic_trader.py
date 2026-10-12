@@ -79,6 +79,7 @@ class LogicTraderTests(unittest.TestCase):
         self.assertTrue(agents["source-catalog-guard"]["passed"])
         self.assertTrue(agents["source-provenance-gate"]["passed"])
         self.assertTrue(agents["typed-fragment-composer"]["passed"])
+        self.assertTrue(agents["formal-proof-fixture-gate"]["passed"])
         self.assertTrue(agents["mirror-counter-reader"]["passed"])
 
     def test_event_set_merge_is_commutative_and_idempotent(self):
