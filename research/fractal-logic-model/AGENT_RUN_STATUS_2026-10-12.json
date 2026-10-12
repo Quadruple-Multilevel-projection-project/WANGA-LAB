@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "run_id": "WANGA-AUTONOMOUS-RUN-2026-10-12-01",
+  "model_backend_status": "MODEL_BACKEND_NOT_CONFIGURED",
+  "execution_policy": "Role contracts are specifications, not provisioned autonomous agents. Deterministic fallback is used where possible; no role is marked as a trained model.",
+  "roles": [
+    {
+      "id": "AGENT-ARCHIVIST",
+      "role": "COLLECTOR",
+      "scope": "Accessible current files, Library and connected GitHub only; no claim of full ChatGPT history access.",
+      "inputs": ["accessible file metadata", "GitHub file refs", "Library file refs"],
+      "outputs": ["source registry", "hash inventory", "access-gap record"],
+      "evidence": ["research/fractal-logic-model/source_registry_v1.json"],
+      "status": "PARTIAL_DETERMINISTIC_FALLBACK",
+      "next_action": "Wait for an explicit transcript export; do not reconstruct unavailable messages."
+    },
+    {
+      "id": "AGENT-SOURCE-VERIFIER",
+      "role": "SOURCE_VERIFIER",
+      "scope": "Verify file identity, locators and byte hashes where original bytes are accessible; not semantic truth.",
+      "inputs": ["source registry", "original files", "GitHub blob hashes"],
+      "outputs": ["hash/locator checks", "verification gaps"],
+      "evidence": ["source_registry_v1.json", "47/47 overlay checksum result"],
+      "status": "PARTIAL_DETERMINISTIC_FALLBACK",
+      "next_action": "Resolve primary source editions and obtain authorized original bytes for the parsed Milot text if available."
+    },
+    {
+      "id": "AGENT-LOGIC-EXTRACTOR",
+      "role": "LOGIC_EXTRACTOR",
+      "scope": "Extract literal terms and relations only from located source spans.",
+      "inputs": ["source manifest", "literal source spans"],
+      "outputs": ["term candidates", "relation candidates", "fragment candidates"],
+      "evidence": ["SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md"],
+      "status": "NOT_RUN_THIS_RUN",
+      "next_action": "Use exact source editions and spans before adding new source-derived logic units."
+    },
+    {
+      "id": "AGENT-LOGIC-NORMALIZER",
+      "role": "LOGIC_NORMALIZER",
+      "scope": "Apply reversible technical normalization and preserve mappings; do not rewrite source meaning.",
+      "inputs": ["literal spans", "typed fragment schema"],
+      "outputs": ["normalized fragment candidates", "normalization map"],
+      "evidence": ["FRAGMENT_SCHEMA_V1.json", "CONVERSATION_INBOX_V1.md"],
+      "status": "NOT_RUN_THIS_RUN",
+      "next_action": "Normalize only after source spans and original hashes are registered."
+    },
+    {
+      "id": "AGENT-FRACTAL-COMPOSER",
+      "role": "FRACTAL_COMPOSER",
+      "scope": "Compose fragments with declared compatible interfaces and preserve lineage.",
+      "inputs": ["accepted fragment IDs", "interface schemas", "constraints"],
+      "outputs": ["multi-scale candidate", "composition trace", "interface report"],
+      "evidence": ["research/fractal-logic-model/src/fractal_composer.py", "research/fractal-logic-model/tests/test_fractal_composer.py"],
+      "status": "NOT_RUN_THIS_RUN",
+      "next_action": "Run composer tests in GitHub Actions or an authorized local checkout; keep candidate unreleased until tests pass."
+    },
+    {
+      "id": "AGENT-COUNTEREXAMPLE",
+      "role": "ADVERSARIAL_MIRROR_TESTER",
+      "scope": "Generate alternative readings, boundary cases and contradictions against a frozen candidate.",
+      "inputs": ["model candidate", "benchmark contract"],
+      "outputs": ["counter-readings", "negative cases", "boundary cases"],
+      "evidence": ["research/fractal-logic-model/tests/test_fractal_composer.py"],
+      "status": "NOT_RUN_THIS_RUN",
+      "next_action": "Build a separate adversarial suite; do not count declared tests as executed results."
+    },
+    {
+      "id": "AGENT-TEST-ENGINEER",
+      "role": "BENCHMARK_EVALUATOR",
+      "scope": "Run reproducible tests and report actual metrics; distinguish unit tests from benchmark suites.",
+      "inputs": ["test suite", "criteria.json", "candidate artifact"],
+      "outputs": ["test run manifest", "coverage report", "benchmark report"],
+      "evidence": ["NTM/MLN local test execution: 15 + 21 tests passed"],
+      "status": "PARTIAL_DETERMINISTIC_FALLBACK",
+      "next_action": "Run the fractal composer suite and add three explicit benchmark suites before evaluating FIRST_MODEL_ALPHA."
+    },
+    {
+      "id": "AGENT-WIKI-LIBRARIAN",
+      "role": "CURATOR",
+      "scope": "Maintain stable IDs, source links, versions, related pages and backlinks.",
+      "inputs": ["source registry", "Logic Wikipedia index", "accepted articles"],
+      "outputs": ["link map", "article change log", "broken-link report"],
+      "evidence": ["research/logic-wikipedia/index.json", "source_registry_v1.json"],
+      "status": "PARTIAL_DETERMINISTIC_FALLBACK",
+      "next_action": "Reconcile the overlapping Logic Wiki structures in PR #98 and PR #99 before expanding pages."
+    },
+    {
+      "id": "AGENT-PUBLISHER",
+      "role": "CURATOR_PUBLISHER",
+      "scope": "Publish only reviewed, source-backed additions through an authorized Wix connection and verify by read-back.",
+      "inputs": ["approved change set", "green CI", "publication permission"],
+      "outputs": ["deployment manifest", "public read-back report"],
+      "evidence": [],
+      "status": "BLOCKED_PENDING_SOURCE_STATUS_REVIEW",
+      "next_action": "Do not publish these candidate primitives until source/status review and a Wix read-back plan are complete."
+    },
+    {
+      "id": "AGENT-RELEASE-AUDITOR",
+      "role": "RELEASE_AUDITOR",
+      "scope": "Check criteria, provenance, tests, contradictions and limitations before candidate release.",
+      "inputs": ["criteria.json", "run report", "candidate artifact", "test results"],
+      "outputs": ["release gate verdict", "gap list"],
+      "evidence": ["research/fractal-logic-model/criteria.json", "research/fractal-logic-model/REPORT_2026-10-12_AUTONOMOUS_RUN_01.json"],
+      "status": "PARTIAL_DETERMINISTIC_FALLBACK",
+      "next_action": "Keep FIRST_MODEL_ALPHA blocked until every configured gate has measured evidence."
+    }
+  ]
+}
