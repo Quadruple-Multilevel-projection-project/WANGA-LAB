@@ -1,0 +1,567 @@
+{
+  "schema_version": "wanga-library-integration-matrix/1.0",
+  "audit_date": "2026-10-12",
+  "basis": "Pasted text.txt plus current ARK-Swarm/Logic Trader implementation and official documentation for short-listed projects.",
+  "status": "CANONICAL_FORMAL_REASONING_REUSED_TYPED_FRAGMENT_AND_PACKAGE_GATES_ADDED_IN_BRANCH_PENDING_CI",
+  "scope": {
+    "logic_trader": "Selection, composition and evaluation of logical assets only.",
+    "dependency_policy": "Prefer one task-specific adapter at a time; do not bulk-install the 100+ candidates."
+  },
+  "current_baseline": [
+    {
+      "component": "logic-trader",
+      "status": "IMPLEMENTED",
+      "limit": "lexical ranking is not semantic retrieval"
+    },
+    {
+      "component": "fractal-composer",
+      "status": "IMPLEMENTED_CANDIDATE_GRAPH",
+      "limit": "editorial graph edges are not formal entailment"
+    },
+    {
+      "component": "typed-fragment-composer",
+      "status": "TESTED_SYNTHETIC_FIXTURE",
+      "limit": "fixture pass does not verify real-catalog semantics"
+    },
+    {
+      "component": "lnl-compiler",
+      "status": "IMPLEMENTED",
+      "limit": "explicit language subset; not arbitrary natural-language formalization"
+    },
+    {
+      "component": "z3-proof-adapter",
+      "status": "CANONICAL_PROPOSITIONAL_ADAPTER_EXISTS_ON_MAIN",
+      "limit": "formal_reasoning/propositional.py checks only explicit propositional formulas; SAT/UNSAT/UNKNOWN is not natural-language truth or source authentication"
+    },
+    {
+      "component": "swarm-coordinator",
+      "status": "IMPLEMENTED_LOCAL",
+      "limit": "role functions are not independent neural agents"
+    },
+    {
+      "component": "event-ledger",
+      "status": "IMPLEMENTED_LOCAL_GSET",
+      "limit": "no network replication, authentication or deletions"
+    },
+    {
+      "component": "external-llm-proposer",
+      "status": "NOT_CONFIGURED",
+      "limit": "no model-generated candidates today"
+    },
+    {
+      "component": "connectome-simulators",
+      "status": "NOT_IMPLEMENTED",
+      "limit": "role names are abstractions only"
+    },
+    {
+      "component": "rl-training",
+      "status": "NOT_IMPLEMENTED",
+      "limit": "no validated environment/reward/learning loop"
+    },
+    {
+      "component": "recursive-evolution",
+      "status": "NOT_IMPLEMENTED",
+      "limit": "no mutation archive/selection/rollback engine"
+    },
+    {
+      "component": "wix-publishing",
+      "status": "EXISTING_SEPARATE_BRIDGE",
+      "limit": "not part of local candidate cycle by default"
+    },
+    {
+      "component": "formal-fixture-benchmark",
+      "status": "IMPLEMENTED_SEVEN_SYNTHETIC_CASES_CI_PENDING",
+      "limit": "validates adapter behavior only; source-grounded logic benchmark still missing"
+    },
+    {
+      "component": "logic-evaluation-ledger",
+      "status": "IMPLEMENTED_HARD_GATES_CI_PENDING",
+      "limit": "records an evaluation vector and review decision only; no reward learning or auto-promotion"
+    },
+    {
+      "component": "logic-package-contract",
+      "status": "IMPLEMENTED_FAIL_CLOSED_SCHEMA_AND_VALIDATOR_PENDING_CI",
+      "limit": "requires independent review metadata for VERIFIED; contract validity is not semantic proof"
+    },
+    {
+      "component": "formalization-queue",
+      "status": "IMPLEMENTED_SOURCE_PRESERVING_QUEUE_PENDING_CI",
+      "limit": "preserves candidate definitions/source IDs; does not invent AST; solver is not run until formalization is explicit"
+    },
+    {
+      "component": "typed-formal-fragment-adapter",
+      "status": "IMPLEMENTED_AS_OPTIONAL_COMPLEMENT_PENDING_CI",
+      "limit": "typed Boolean/Int/Real/String AST checks only; no natural-language formalizer; every premise must cite a source or be an explicit assumption"
+    },
+    {
+      "component": "typed-formal-fixture-benchmark",
+      "status": "IMPLEMENTED_SEVEN_SYNTHETIC_CASES_PENDING_CI",
+      "limit": "validates typed adapter behavior only; no source-grounded semantic benchmark"
+    }
+  ],
+  "categories": [
+    {
+      "id": "formal-reasoning",
+      "priority": "P0",
+      "need": "Explicit constraints, consistency checks, bounded entailment tests, counterexamples",
+      "candidate_libraries": [
+        {
+          "name": "Z3 / z3-solver",
+          "fit": "Existing propositional adapter plus optional typed AST for Bool/Int/Real/String; source-gated and bounded.",
+          "decision": "EXTEND_EXISTING_FORMAL_REASONING",
+          "official_url": "https://github.com/Z3Prover/z3",
+          "status": "CANONICAL_PROPOSITIONAL_SOLVER_ON_MAIN_TYPED_AST_EXTENSION_PENDING_CI"
+        },
+        {
+          "name": "Lean 4 + LeanCopilot",
+          "fit": "Kernel-checked proof artifacts with optional model-assisted proof search",
+          "decision": "P1_RESEARCH_TRACK",
+          "official_url": "https://github.com/lean-dojo/LeanCopilot",
+          "status": "VERSION_PINNING_AND_PROOF_ARTIFACTS_REQUIRED"
+        },
+        {
+          "name": "ProbLog",
+          "fit": "Explicit probabilistic facts and rules",
+          "decision": "P1_P2_OPT_IN",
+          "official_url": "https://dtai.cs.kuleuven.be/problog/index.html",
+          "status": "PROBABILITY_IS_MODEL_RELATIVE"
+        }
+      ],
+      "acceptance": [
+        "separate premise consistency from entailment",
+        "treat UNKNOWN as unresolved",
+        "SAT cannot auto-promote truth status",
+        "source authenticity remains a separate gate"
+      ]
+    },
+    {
+      "id": "logic-graph-and-retrieval",
+      "priority": "P0_P1",
+      "need": "Improve retrieval and composition based on measured performance",
+      "candidate_libraries": [
+        {
+          "name": "Current JSON graph/catalog",
+          "fit": "Current source of truth",
+          "decision": "KEEP_NOW",
+          "official_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB",
+          "status": "IMPLEMENTED"
+        },
+        {
+          "name": "NetworkX",
+          "fit": "In-memory graph analysis if required by measured use cases",
+          "decision": "DEFER_UNTIL_BENCHMARK",
+          "official_url": "https://networkx.org/",
+          "status": "NOT_ADDED"
+        },
+        {
+          "name": "PyTorch Geometric",
+          "fit": "Learned graph representations after a training benchmark exists",
+          "decision": "P3",
+          "official_url": "https://pytorch-geometric.readthedocs.io/",
+          "status": "NOT_ADDED"
+        },
+        {
+          "name": "Neo4j",
+          "fit": "Graph database only after catalog size/query latency justifies a service",
+          "decision": "P3",
+          "official_url": "https://neo4j.com/docs/python-manual/current/",
+          "status": "NOT_ADDED"
+        }
+      ],
+      "acceptance": [
+        "record precision/recall at K",
+        "report source coverage",
+        "compare against lexical baseline",
+        "do not infer entailment from graph adjacency"
+      ]
+    },
+    {
+      "id": "agent-swarm",
+      "priority": "P1_P2",
+      "need": "Validated task contracts, retries, cancellation, bounded execution and future scaled scheduling",
+      "candidate_libraries": [
+        {
+          "name": "Current local coordinator",
+          "fit": "Deterministic software roles",
+          "decision": "KEEP_AND_TEST",
+          "official_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB",
+          "status": "IMPLEMENTED"
+        },
+        {
+          "name": "Ray RLlib",
+          "fit": "Distributed rollouts and multi-agent reinforcement learning when an environment exists",
+          "decision": "P2_AFTER_ENVIRONMENT",
+          "official_url": "https://docs.ray.io/en/latest/rllib/rllib-env.html",
+          "status": "NOT_ADDED"
+        },
+        {
+          "name": "PettingZoo",
+          "fit": "Standard multi-agent reinforcement-learning environment API",
+          "decision": "P2_BENCHMARK_ONLY",
+          "official_url": "https://pettingzoo.farama.org/",
+          "status": "NOT_ADDED"
+        }
+      ],
+      "acceptance": [
+        "typed role I/O",
+        "timeouts and retries",
+        "idempotent outputs",
+        "explicit runtime and cost budgets",
+        "tests distinguish software roles from trained neural models"
+      ]
+    },
+    {
+      "id": "p2p-and-crdt",
+      "priority": "P2",
+      "need": "Authenticated distributed event exchange and deterministic conflict handling",
+      "candidate_libraries": [
+        {
+          "name": "Current local G-Set event union",
+          "fit": "Append-only local event ledger",
+          "decision": "KEEP_LOCAL_ONLY",
+          "official_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB",
+          "status": "IMPLEMENTED_NOT_NETWORKED"
+        },
+        {
+          "name": "py-libp2p",
+          "fit": "Potential Python P2P transport, pending maturity/security review",
+          "decision": "PROTOTYPE_ONLY",
+          "official_url": "https://github.com/libp2p/py-libp2p",
+          "status": "NOT_ADDED"
+        },
+        {
+          "name": "GossipSub",
+          "fit": "PubSub message dissemination after peer auth and message schemas",
+          "decision": "DESIGN_AFTER_AUTH",
+          "official_url": "https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md",
+          "status": "NOT_ADDED"
+        },
+        {
+          "name": "Automerge Repo",
+          "fit": "JSON-like CRDT and sync stack primarily in JS/TS ecosystem",
+          "decision": "NOT_A_DIRECT_PYTHON_DEPENDENCY",
+          "official_url": "https://automerge.org/docs/reference/repositories/",
+          "status": "NOT_ADDED"
+        }
+      ],
+      "acceptance": [
+        "peer identity/authz",
+        "signatures and replay protection",
+        "partition/reorder/duplicate delivery tests",
+        "versioned event schema",
+        "document corrections/superseding events",
+        "no claims of network CRDT before multi-node tests"
+      ]
+    },
+    {
+      "id": "spiking-neural-networks",
+      "priority": "P2",
+      "need": "Run one explicitly defined SNN experiment, not the full library catalogue",
+      "candidate_libraries": [
+        {
+          "name": "Brian2",
+          "fit": "Flexible clock-driven spiking-network experiments",
+          "decision": "ONE_PILOT_OPTION",
+          "official_url": "https://github.com/brian-team/brian2",
+          "status": "NOT_ADDED"
+        },
+        {
+          "name": "Nengo",
+          "fit": "Spiking and non-spiking computational neural models with interchangeable backends",
+          "decision": "ONE_PILOT_OPTION",
+          "official_url": "https://www.nengo.ai/documentation/",
+          "status": "NOT_ADDED"
+        },
+        {
+          "name": "snnTorch",
+          "fit": "PyTorch-integrated SNN training/tutorial baseline",
+          "decision": "ONE_PILOT_OPTION",
+          "official_url": "https://snntorch.readthedocs.io/en/stable/tutorials/index.html",
+          "status": "NOT_ADDED"
+        }
+      ],
+      "acceptance": [
+        "choose one based on the research question",
+        "pin versions and seeds",
+        "define behavior and performance metrics",
+        "connectome data adapter separate from simulator choice",
+        "no inference that an SNN creates intelligence"
+      ]
+    },
+    {
+      "id": "connectome-datasets",
+      "priority": "P2",
+      "need": "Versioned organism-specific data adapters and benchmarked task proxies",
+      "candidate_libraries": [
+        {
+          "name": "OpenWorm c302 / C. elegans",
+          "fit": "Bounded starting model with documented 302-neuron network generation and validation work",
+          "decision": "FIRST_CONNECTOME_PILOT_CANDIDATE",
+          "official_url": "https://docs.openworm.org/preview/integrate-design-documents/Projects/c302/",
+          "status": "NOT_IMPORTED"
+        },
+        {
+          "name": "FlyWire / FlyBrainLab",
+          "fit": "Drosophila connectome data and circuit analysis",
+          "decision": "DATA_ADAPTER_RESEARCH",
+          "official_url": "https://www.flywire.ai/",
+          "status": "NOT_IMPORTED"
+        },
+        {
+          "name": "MICrONS Explorer",
+          "fit": "Versioned mouse-cortex EM/connectivity and functional data",
+          "decision": "DATA_ADAPTER_RESEARCH",
+          "official_url": "https://www.microns-explorer.org/",
+          "status": "NOT_IMPORTED"
+        },
+        {
+          "name": "Larval zebrafish dataset/model",
+          "fit": "Target sensory/movement/escape task; exact dataset version must be selected",
+          "decision": "SOURCE_SELECTION_REQUIRED",
+          "official_url": "https://zebrafishatlas.org/",
+          "status": "NOT_SELECTED"
+        }
+      ],
+      "acceptance": [
+        "dataset version/URI/license/access date",
+        "stable neuron/synapse IDs and coordinate metadata",
+        "document incomplete annotations",
+        "reproduce a benchmark task",
+        "biological topology-to-agent-role mapping must be tested, not assumed"
+      ]
+    },
+    {
+      "id": "active-inference-and-reward",
+      "priority": "P1_P2",
+      "need": "Measured task reward and uncertainty model only after task environment and metrics exist",
+      "candidate_libraries": [
+        {
+          "name": "pymdp",
+          "fit": "Active inference for explicitly defined discrete state/observation/action models",
+          "decision": "P2_EXPERIMENT",
+          "official_url": "https://github.com/infer-actively/pymdp",
+          "status": "NOT_ADDED"
+        },
+        {
+          "name": "Google Dopamine",
+          "fit": "Research framework for reinforcement-learning experiments",
+          "decision": "P3_IF_RL_REQUIRED",
+          "official_url": "https://github.com/google/dopamine",
+          "status": "NOT_ADDED"
+        },
+        {
+          "name": "RLlib",
+          "fit": "Scalable training after validated environment and reward",
+          "decision": "P2_P3",
+          "official_url": "https://docs.ray.io/en/latest/rllib/",
+          "status": "NOT_ADDED"
+        }
+      ],
+      "acceptance": [
+        "reward based on measured external task results and proof artifacts where applicable",
+        "score vector includes correctness, evidence, counterexamples, generalization and cost",
+        "no reward from SAT alone",
+        "no biological dopamine claim",
+        "no model weights change in initial phase"
+      ]
+    },
+    {
+      "id": "ingestion-and-sources",
+      "priority": "P0",
+      "need": "Access-controlled and traceable source ingestion",
+      "candidate_libraries": [
+        {
+          "name": "Current ChatGPT export intake",
+          "fit": "Ingest user-provided exports into private review status",
+          "decision": "KEEP_AND_TEST",
+          "official_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB",
+          "status": "IMPLEMENTED"
+        },
+        {
+          "name": "Playwright",
+          "fit": "Authorized UI tests or controlled browser extraction when needed",
+          "decision": "P2_IF_DYNAMIC_SITE_REQUIRED",
+          "official_url": "https://playwright.dev/python/docs/intro",
+          "status": "NOT_ADDED"
+        },
+        {
+          "name": "BeautifulSoup/Trafilatura",
+          "fit": "Static HTML parsing/text extraction for permitted sources",
+          "decision": "CHOOSE_ONE_IF_NEEDED",
+          "official_url": "https://www.crummy.com/software/BeautifulSoup/bs4/doc/",
+          "status": "NOT_ADDED"
+        }
+      ],
+      "acceptance": [
+        "source and retrieval date",
+        "exact span where available",
+        "source hash/version",
+        "permission scope",
+        "private text not auto-published",
+        "no access-control bypass"
+      ]
+    },
+    {
+      "id": "evolution-and-self-improvement",
+      "priority": "P1_P3",
+      "need": "Candidate archive and gated improvement before automated search",
+      "candidate_libraries": [
+        {
+          "name": "Internal deterministic candidate archive",
+          "fit": "Record parent/child candidate hashes, score vectors, tests and rollback",
+          "decision": "IMPLEMENT_BEFORE_EVOLUTIONARY_LIBRARIES",
+          "official_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB",
+          "status": "MISSING"
+        },
+        {
+          "name": "Nevergrad",
+          "fit": "Black-box optimization after objective metrics stabilize",
+          "decision": "P3",
+          "official_url": "https://github.com/facebookresearch/nevergrad",
+          "status": "NOT_ADDED"
+        },
+        {
+          "name": "PyGAD",
+          "fit": "Genetic optimization after candidate encoding/fitness validation",
+          "decision": "P3",
+          "official_url": "https://pygad.readthedocs.io/",
+          "status": "NOT_ADDED"
+        }
+      ],
+      "acceptance": [
+        "immutable baseline/holdout",
+        "sandbox and rollback",
+        "record rejected candidates",
+        "multi-objective selection",
+        "no monkey-patching the production runtime",
+        "promote only via review PR"
+      ]
+    },
+    {
+      "id": "observability-security-compute",
+      "priority": "P0",
+      "need": "Reproducible runs, access control, cost visibility and safe release gates",
+      "candidate_libraries": [
+        {
+          "name": "GitHub Actions",
+          "fit": "Current CI and artifact execution",
+          "decision": "KEEP_AND_EXTEND",
+          "official_url": "https://docs.github.com/en/actions",
+          "status": "IMPLEMENTED"
+        },
+        {
+          "name": "JSON Schema",
+          "fit": "Versioned input/output contracts",
+          "decision": "REQUIRED_CONTRACT",
+          "official_url": "https://json-schema.org/",
+          "status": "PARTIAL"
+        },
+        {
+          "name": "Pydantic",
+          "fit": "Optional typed runtime validation if existing contracts become cumbersome",
+          "decision": "DEFER_DEPENDENCY",
+          "official_url": "https://docs.pydantic.dev/",
+          "status": "NOT_ADDED"
+        }
+      ],
+      "acceptance": [
+        "stable run/candidate hashes",
+        "schema validation",
+        "redacted logs",
+        "timeouts/retries",
+        "resource budget and cost log",
+        "no secrets in repository artifacts",
+        "human-reviewed release gate"
+      ]
+    }
+  ],
+  "mandatory_semantic_rules": [
+    {
+      "rule": "Z3_SAT_IS_NOT_TRUTH",
+      "description": "SAT means encoded constraints are satisfiable; it is not a natural-language truth judgement."
+    },
+    {
+      "rule": "ENTAILMENT_ENCODING_REQUIRED",
+      "description": "For a formal encoding, test premises ∧ ¬conclusion for UNSAT; check premises consistency separately."
+    },
+    {
+      "rule": "PROOF_DOES_NOT_AUTHENTICATE_PREMISES",
+      "description": "A proof is relative to its formal assumptions; source authenticity and empirical correctness are separate checks."
+    },
+    {
+      "rule": "PROBLOG_IS_MODEL_RELATIVE",
+      "description": "ProbLog computes query probabilities relative to the supplied probabilistic logic program."
+    },
+    {
+      "rule": "ACTIVE_INFERENCE_REQUIRES_MODEL",
+      "description": "Active inference needs an explicit generative model and state/action/observation definition."
+    },
+    {
+      "rule": "CONNECTOME_ROLE_IS_HYPOTHESIS",
+      "description": "Organism-to-agent responsibility mappings must be tested against task data."
+    },
+    {
+      "rule": "FRACTAL_SHAPE_IS_NOT_VALIDITY",
+      "description": "Self-similarity alone does not establish logical correctness."
+    }
+  ],
+  "acceptance_gates": [
+    "Matrix and configs pass schema/integrity validation.",
+    "The canonical propositional adapter and typed AST complement distinguish SAT/UNSAT/UNKNOWN, separate premise consistency from entailment, require source refs or explicit assumptions, and never auto-promote truth.",
+    "At least 30 source-grounded negative, boundary or counterexample cases exist before any model release.",
+    "Current lexical-ranking baseline is measured for precision/recall at K, false selections and provenance coverage.",
+    "Candidate variants cannot change source records, policy gates, formal premises or be promoted by their own score; unformalized Logic Trader candidates remain queued.",
+    "Network sync remains disabled until peer auth, replay protection and partition tests pass.",
+    "Each connectome track has a pinned dataset manifest and task benchmark before agent integration."
+  ],
+  "official_references_checked": [
+    {
+      "topic": "Z3 solver result semantics",
+      "url": "https://z3prover.github.io/api/html/classz3py_1_1_solver.html"
+    },
+    {
+      "topic": "ProbLog probabilistic logic",
+      "url": "https://dtai.cs.kuleuven.be/problog/index.html"
+    },
+    {
+      "topic": "LeanCopilot requirements",
+      "url": "https://github.com/lean-dojo/LeanCopilot"
+    },
+    {
+      "topic": "Ray RLlib",
+      "url": "https://docs.ray.io/en/latest/rllib/rllib-env.html"
+    },
+    {
+      "topic": "py-libp2p implementation",
+      "url": "https://github.com/libp2p/py-libp2p"
+    },
+    {
+      "topic": "GossipSub protocol",
+      "url": "https://github.com/libp2p/specs/blob/master/pubsub/gossipsub/README.md"
+    },
+    {
+      "topic": "Automerge repository model",
+      "url": "https://automerge.org/docs/reference/repositories/"
+    },
+    {
+      "topic": "pymdp",
+      "url": "https://github.com/infer-actively/pymdp"
+    },
+    {
+      "topic": "snnTorch",
+      "url": "https://snntorch.readthedocs.io/en/stable/tutorials/index.html"
+    },
+    {
+      "topic": "Nengo",
+      "url": "https://www.nengo.ai/documentation/"
+    },
+    {
+      "topic": "OpenWorm c302",
+      "url": "https://docs.openworm.org/preview/integrate-design-documents/Projects/c302/"
+    },
+    {
+      "topic": "MICrONS Explorer",
+      "url": "https://www.microns-explorer.org/"
+    }
+  ]
+}

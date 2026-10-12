@@ -1,0 +1,260 @@
+{
+  "schema_version": "wanga-formal-benchmark/1.0",
+  "status": "SYNTHETIC_FORMAL_FIXTURES_NOT_SOURCE_GROUNDED",
+  "cases": [
+    {
+      "id": "F001-ENTAILED-INT",
+      "spec": {
+        "schema_version": "wanga-formal-fragment/1.0",
+        "variables": {
+          "x": "Int"
+        },
+        "premises": [
+          {
+            "id": "P1",
+            "expr": {
+              "op": "gt",
+              "args": [
+                {
+                  "var": "x"
+                },
+                {
+                  "const": 0
+                }
+              ]
+            },
+            "source_refs": [
+              "fixture://P1"
+            ],
+            "assumption": false
+          }
+        ],
+        "conclusion": {
+          "op": "gt",
+          "args": [
+            {
+              "var": "x"
+            },
+            {
+              "const": 0
+            }
+          ]
+        }
+      },
+      "expected": {
+        "premise_consistency": "SAT",
+        "entailment_status": "ENTAILED_WITHIN_ENCODED_FRAGMENT"
+      }
+    },
+    {
+      "id": "F002-COUNTERMODEL",
+      "spec": {
+        "schema_version": "wanga-formal-fragment/1.0",
+        "variables": {
+          "x": "Int"
+        },
+        "premises": [
+          {
+            "id": "P1",
+            "expr": {
+              "op": "gt",
+              "args": [
+                {
+                  "var": "x"
+                },
+                {
+                  "const": 0
+                }
+              ]
+            },
+            "source_refs": [
+              "fixture://P1"
+            ],
+            "assumption": false
+          }
+        ],
+        "conclusion": {
+          "op": "gt",
+          "args": [
+            {
+              "var": "x"
+            },
+            {
+              "const": 1
+            }
+          ]
+        }
+      },
+      "expected": {
+        "premise_consistency": "SAT",
+        "entailment_status": "NOT_ENTAILED_COUNTERMODEL"
+      }
+    },
+    {
+      "id": "F003-INCONSISTENT-PREMISES",
+      "spec": {
+        "schema_version": "wanga-formal-fragment/1.0",
+        "variables": {
+          "x": "Int"
+        },
+        "premises": [
+          {
+            "id": "P1",
+            "expr": {
+              "op": "gt",
+              "args": [
+                {
+                  "var": "x"
+                },
+                {
+                  "const": 0
+                }
+              ]
+            },
+            "source_refs": [
+              "fixture://P1"
+            ],
+            "assumption": false
+          },
+          {
+            "id": "P2",
+            "expr": {
+              "op": "le",
+              "args": [
+                {
+                  "var": "x"
+                },
+                {
+                  "const": 0
+                }
+              ]
+            },
+            "source_refs": [
+              "fixture://P2"
+            ],
+            "assumption": false
+          }
+        ],
+        "conclusion": {
+          "op": "gt",
+          "args": [
+            {
+              "var": "x"
+            },
+            {
+              "const": 10
+            }
+          ]
+        }
+      },
+      "expected": {
+        "premise_consistency": "UNSAT",
+        "entailment_status": "BLOCKED_INCONSISTENT_PREMISES"
+      }
+    },
+    {
+      "id": "F004-BOOL-ENTAILMENT",
+      "spec": {
+        "schema_version": "wanga-formal-fragment/1.0",
+        "variables": {
+          "p": "Bool",
+          "q": "Bool"
+        },
+        "premises": [
+          {
+            "id": "P1",
+            "expr": {
+              "var": "p"
+            },
+            "source_refs": [
+              "fixture://P1"
+            ],
+            "assumption": false
+          },
+          {
+            "id": "P2",
+            "expr": {
+              "op": "implies",
+              "args": [
+                {
+                  "var": "p"
+                },
+                {
+                  "var": "q"
+                }
+              ]
+            },
+            "source_refs": [
+              "fixture://P2"
+            ],
+            "assumption": false
+          }
+        ],
+        "conclusion": {
+          "var": "q"
+        }
+      },
+      "expected": {
+        "premise_consistency": "SAT",
+        "entailment_status": "ENTAILED_WITHIN_ENCODED_FRAGMENT"
+      }
+    },
+    {
+      "id": "F005-UNSUPPORTED-OPERATOR",
+      "spec": {
+        "schema_version": "wanga-formal-fragment/1.0",
+        "variables": {
+          "p": "Bool"
+        },
+        "premises": [],
+        "conclusion": {
+          "op": "forbidden_exec",
+          "args": [
+            {
+              "var": "p"
+            }
+          ]
+        }
+      },
+      "expected": {
+        "error": "FormalSpecError"
+      }
+    },
+    {
+      "id": "F006-UNDECLARED-VARIABLE",
+      "spec": {
+        "schema_version": "wanga-formal-fragment/1.0",
+        "variables": {
+          "x": "Int"
+        },
+        "premises": [],
+        "conclusion": {
+          "op": "gt",
+          "args": [
+            {
+              "var": "y"
+            },
+            {
+              "const": 0
+            }
+          ]
+        }
+      },
+      "expected": {
+        "error": "FormalSpecError"
+      }
+    },
+    {
+      "id": "F007-NATURAL-LANGUAGE-NOT-AST",
+      "spec": {
+        "schema_version": "wanga-formal-fragment/1.0",
+        "variables": {},
+        "premises": [],
+        "conclusion": "x is true"
+      },
+      "expected": {
+        "error": "FormalSpecError"
+      }
+    }
+  ]
+}
