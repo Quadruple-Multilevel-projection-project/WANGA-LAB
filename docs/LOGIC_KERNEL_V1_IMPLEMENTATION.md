@@ -3,6 +3,13 @@
 ## Scope
 This is the first executable symbolic subsystem for WANGA-LAB. It gives the project an actual deterministic rule engine now, while deliberately not claiming a general autonomous AI.
 
+## Direct corpus integration
+
+The CLI loads the repository corpus via `load_corpus_context(repo_root)` after `validate_corpus()` passes. It converts registry items into typed **structural-only facts** such as `corpus_connects_unordered`, `corpus_reverse_is`, `corpus_contains`, and `corpus_page_type`. On each run, only predicate families named by explicit rule antecedents are inserted into working memory. When a rule uses a registry fact, the trace records the stable fact ID and source file. These facts do not establish a semantic interpretation for a letter or gate.
+
+Source-scoped regression cases live in [`logic_engine_v1/semantic_tests/semantic_test_matrix.json`](../logic_engine_v1/semantic_tests/semantic_test_matrix.json). They distinguish the Sefaria Gra Version 2:4 presentation from claims about every textual witness and mark the 221/231 bibliographic reference as requiring full-text review.
+
+
 ## Interface contract
 Input JSON:
 - `evidence[]`: unique ID, URI, version, location and evidence state.
@@ -15,7 +22,8 @@ Output JSON:
 - rule firings, premise IDs and source references;
 - contradiction set;
 - round/fixed-point status;
-- machine-readable limitations.
+- machine-readable limitations;
+- corpus context status and counts of structural facts available/used for the run.
 
 ## The four gates
 1. Evidence ID and epistemic-status gate.
@@ -36,4 +44,4 @@ It reasons over structured symbols and rules but does not parse arbitrary langua
 7. Compare results against a simple baseline and retain failing fixtures.
 
 ## Test matrix
-Unit tests cover exact combinatorics; evidence gate; missing references; hypotheses not seeding rules; contradictions; disabled rules; scoped actions; publication permission; threshold drift; real repository corpus invariants; and CLI JSON validity.
+The 22 unit tests cover exact combinatorics; corpus registry loading into a live rule; premise/corpus-file provenance; source-scoped Sefer Yetzirah claims; a review-required 221/231 reference; unknown gate semantics; evidence gating; contradictions; disabled rules; scoped actions; publication permission; threshold drift; repository corpus invariants; and CLI JSON validity. The tests validate bounded structured behavior and source-scope handling, not arbitrary natural-language understanding.
