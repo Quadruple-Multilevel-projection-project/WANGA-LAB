@@ -1,0 +1,2 @@
+# Optional formal-reasoning adapter used by the dedicated CI/tests.
+z3-solver==5.1.0.0
