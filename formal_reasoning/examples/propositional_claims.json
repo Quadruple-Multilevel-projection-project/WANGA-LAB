@@ -45,7 +45,7 @@
         "P",
         "not P"
       ],
-      "conclusion": "Q",
+      "conclusion": "P",
       "source_refs": [
         "fixture://formal/3"
       ],
