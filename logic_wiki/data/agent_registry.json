@@ -1,6 +1,6 @@
 {
   "schema_version": "logic-agents/1.0",
-  "execution_model": "Independent bounded work units; a blocked agent must not stop independent workstreams.",
+  "execution_model": "Independent bounded work units; each role records inputs, outputs, evidence, limitations and status. Blocked work does not stop independent tasks. Agent registration alone is not proof of execution; run reports are required.",
   "agents": [
     {
       "id": "conversation-collector",
@@ -162,6 +162,66 @@
         "No direct main writes",
         "Wix write requires read-back",
         "Missing permission means BLOCKED"
+      ]
+    },
+    {
+      "id": "fractal-pattern-miner",
+      "role": "MINE_MULTISCALE_STRUCTURE",
+      "inputs": [
+        "versioned Logic Wiki catalog",
+        "typed fragment graph",
+        "composition contracts"
+      ],
+      "outputs": [
+        "candidate structures at scales L0-L3",
+        "candidate map hash",
+        "missing composition interfaces"
+      ],
+      "constraints": [
+        "Do not label editorial links as entailment",
+        "Do not infer missing relations from weights or geometric similarity",
+        "Preserve parent/source provenance"
+      ]
+    },
+    {
+      "id": "readiness-gatekeeper",
+      "role": "AUDIT_FIRST_MODEL_GATE",
+      "inputs": [
+        "readiness gate thresholds",
+        "source registry",
+        "composition contracts",
+        "counterexamples",
+        "semantic suites",
+        "review logs"
+      ],
+      "outputs": [
+        "measured gate metrics",
+        "deficits",
+        "candidate readiness status"
+      ],
+      "constraints": [
+        "Recompute all counts each run",
+        "Unit tests are not semantic benchmark cases",
+        "Missing contradiction inventory is unmeasured, not zero"
+      ]
+    },
+    {
+      "id": "wix-sync-auditor",
+      "role": "AUDIT_PUBLICATION_SYNC",
+      "inputs": [
+        "GitHub catalog",
+        "Wix sync manifest",
+        "connected deployment read-back when available"
+      ],
+      "outputs": [
+        "sync mismatch list",
+        "verified page/catalog counts",
+        "blocked status when read-back unavailable"
+      ],
+      "constraints": [
+        "Never claim publish without read-back",
+        "Never publish raw private transcript",
+        "Connected Wix access is separate from GitHub Actions credentials"
       ]
     }
   ]
