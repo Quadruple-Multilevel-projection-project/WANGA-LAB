@@ -30,6 +30,8 @@ on:
       - 'tests/test_ark_swarm_logic_trader.py'
       - 'tests/test_logic_proof_adapter.py'
       - 'tests/test_logic_proof_benchmark.py'
+      - 'tests/test_logic_package_contract.py'
+      - 'tests/test_logic_json_schemas.py'
       - 'tests/test_multi_agent_logic_evaluation.py'
       - 'tests/test_conversation_export_intake.py'
       - '.github/workflows/logic-fractal-wiki.yml'
@@ -90,6 +92,12 @@ jobs:
         run: |
           python -m unittest discover -s tests -p 'test_logic_proof_benchmark.py' -v
           python scripts/run_formal_logic_benchmark.py --out research/reports/ark-swarm/formal-logic-benchmark-latest.json
+
+      - name: Validate logic package lifecycle contract
+        run: python -m unittest discover -s tests -p 'test_logic_package_contract.py' -v
+
+      - name: Validate formal JSON schemas
+        run: python -m unittest discover -s tests -p 'test_logic_json_schemas.py' -v
 
       - name: Compile Python source
         run: python -m compileall -q ark_swarm logic_proof logic_fractal scripts tests
