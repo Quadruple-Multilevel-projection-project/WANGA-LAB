@@ -570,6 +570,17 @@ def sample_bundle() -> dict[str, Any]:
             {"id": "C-PERMISSION", "atom": {"subject": "permission", "predicate": "grants", "object": "typo_fix"}, "epistemic_status": "TEST_FIXTURE", "evidence_refs": ["E-PERMISSION"]},
             {"id": "C-UNSUPPORTED-PUBLISH", "atom": {"subject": "request", "predicate": "action", "object": "publish_without_approval"}, "epistemic_status": "HYPOTHESIS", "evidence_refs": []},
         ],
+        "action_gate": {
+            "action": "typo_fix",
+            "target": "approved-page-1",
+            "allowed_actions": ["typo_fix"],
+            "allowed_targets": ["approved-page-1"],
+            "permission_granted": True,
+            "publish": False,
+            "publish_permission_granted": False,
+            "evidence_complete": True,
+        },
+        "threshold_comparison": {"score": 0.75, "old_threshold": 0.80, "new_threshold": 0.60},
         "rules": [
             {
                 "id": "R-SCOPE-PERMISSION",
@@ -603,10 +614,18 @@ def main(argv: Sequence[str] | None = None) -> int:
     if args.command == "counts":
         output = combinatorial_counts()
     elif args.command == "demo":
-        output = run_bundle(sample_bundle())
+        bundle = sample_bundle()
+        output = run_bundle(bundle)
+        output["action_gate_result"] = gate_action(bundle["action_gate"])
+        output["threshold_comparison"] = compare_thresholds(**bundle["threshold_comparison"])
+        output["combinatorial_counts"] = combinatorial_counts()
     elif args.command == "run":
         bundle = json.loads(Path(args.bundle).read_text(encoding="utf-8"))
         output = run_bundle(bundle)
+        if "action_gate" in bundle:
+            output["action_gate_result"] = gate_action(bundle["action_gate"])
+        if "threshold_comparison" in bundle:
+            output["threshold_comparison"] = compare_thresholds(**bundle["threshold_comparison"])
     else:
         output = validate_corpus(args.repo_root)
 
