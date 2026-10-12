@@ -66,3 +66,11 @@ A published hyperlink is recorded as a link, not automatically as a logical depe
 - [Mathematical integrity register](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/LOGIC_231_MATHEMATICAL_INTEGRITY_REGISTER_V1.md).
 
 **Atlas QA (2026-10-12):** browser test passed for loading all 1,000 page definitions, exploring undirected/directed/triple map modes, and finding `GATE-001`. Page definitions remain SPECIFIED / NOT_YET_VERIFIED; this does not verify the semantic role of all gates or a production runtime.
+
+## Logic-native model builder and language
+
+- [Live Wix documentation]( https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-native-model-builder.html ) documents the LNL/0.1 language, candidate–critic–refine loop, reviewed GitHub references and remaining research gaps.
+- [Logic Model Builder package](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/tree/main/logic_model_builder_v1) adds a parser/compiler, a structured baseline provider, an optional model-endpoint adapter and execution through the WANGA symbolic kernel.
+- [Architecture record](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/LOGIC_NATIVE_LANGUAGE_MODEL_BUILDER_V1.md).
+- [Merged PR #96](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/96); CI checks passed for model-builder tests, repository integrity and CodeQL.
+- Status boundary: BUILT as an experimental prototype; not a new foundation model; LLM calls require explicit endpoint configuration; semantic validity and full natural-language formalization remain NOT_YET_VERIFIED.
