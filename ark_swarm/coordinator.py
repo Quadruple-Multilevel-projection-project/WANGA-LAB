@@ -17,6 +17,8 @@ from ark_swarm.swarm_state import make_event, merge_event_sets, validation_credi
 from logic_fractal.fragment_composer import compose_pair, validate_fragment
 from logic_fractal.composer import load_contracts
 from formal_reasoning.benchmark import run_benchmark_suite
+from formal_reasoning.typed_benchmark import run_typed_benchmark_suite
+from formal_reasoning.formalization_queue import queue_candidate_for_formalization
 
 
 DEFAULT_TASK = (
@@ -137,6 +139,7 @@ def build_cycle(
     }, {"catalog_audit": audit}))
 
     logic_package = trader_output["logic_package"]
+    formalization_queue_item = queue_candidate_for_formalization(logic_package)
     roles.append(_role("logic-trader", {
         "candidate_package_created": trader_output["status"] == "CANDIDATE_PACKAGE_ASSEMBLED",
         "package_has_members": bool(logic_package.get("member_articles")),
@@ -149,6 +152,21 @@ def build_cycle(
         "member_ids": [item["id"] for item in logic_package["member_articles"]],
         "source_ids": [item["id"] for item in logic_package["sources"]],
         "candidate_composition_id": (logic_package.get("composition_candidate") or {}).get("candidate_id"),
+    }))
+
+    roles.append(_role("formalization-queue-gate", {
+        "candidate_queued_without_fabricated_ast": formalization_queue_item["solver_execution_status"] == "NOT_RUN_NO_FORMAL_AST",
+        "automatic_semantic_conversion_disabled": formalization_queue_item["automatic_semantic_conversion"] is False,
+        "queue_item_status_explicit": formalization_queue_item["status"] in {"READY_FOR_FORMALIZATION", "BLOCKED_SOURCE_REVIEW"},
+        "queue_sources_resolve": formalization_queue_item["status"] == "READY_FOR_FORMALIZATION" and not formalization_queue_item["unresolved_sources"],
+        "claim_status_not_promoted": formalization_queue_item["semantic_status"] == "NOT_YET_VERIFIED",
+    }, {
+        "queue_item_id": formalization_queue_item["queue_item_id"],
+        "queue_status": formalization_queue_item["status"],
+        "claim_count": len(formalization_queue_item["candidate_claims"]),
+        "source_count": len(formalization_queue_item["source_ids"]),
+        "missing_formal_fields": formalization_queue_item["missing_formal_fields"],
+        "solver_execution_status": formalization_queue_item["solver_execution_status"],
     }))
 
     provenance_errors = []
@@ -216,6 +234,34 @@ def build_cycle(
         "error": formal_suite.get("error"),
     }))
 
+    try:
+        typed_formal_suite = run_typed_benchmark_suite(
+            root / "formal_reasoning/examples/typed_formal_cases.json"
+        )
+    except Exception as exc:
+        typed_formal_suite = {
+            "status": "BLOCKED_OR_ERROR",
+            "case_count": 0,
+            "passed_cases": 0,
+            "failed_cases": 0,
+            "error": f"{type(exc).__name__}: {exc}",
+            "fixture_status": "UNKNOWN",
+            "semantic_status": "NOT_YET_VERIFIED",
+        }
+    roles.append(_role("formal-typed-fragment-benchmark", {
+        "fixed_typed_suite_passes": typed_formal_suite.get("status") == "PASS",
+        "all_seven_typed_cases_pass": typed_formal_suite.get("case_count") == 7 and typed_formal_suite.get("passed_cases") == 7 and typed_formal_suite.get("failed_cases") == 0,
+        "synthetic_fixtures_not_ground_truth": "NOT_SOURCE_GROUNDED" in str(typed_formal_suite.get("fixture_status", "")).upper(),
+        "verification_stays_open": typed_formal_suite.get("semantic_status") == "NOT_YET_VERIFIED",
+    }, {
+        "suite_status": typed_formal_suite.get("status"),
+        "case_count": typed_formal_suite.get("case_count"),
+        "passed_cases": typed_formal_suite.get("passed_cases"),
+        "failed_cases": typed_formal_suite.get("failed_cases"),
+        "fixture_status": typed_formal_suite.get("fixture_status"),
+        "error": typed_formal_suite.get("error"),
+    }))
+
     existing_suite = None
     if include_existing_agent_suite:
         from scripts.evaluate_logic_agent_bundle import run_evaluation
@@ -262,6 +308,14 @@ def build_cycle(
         "task_sha256": canonical_hash(task.strip()),
         "package_hash": trader_output["package_hash"],
         "logic_package": logic_package,
+        "formalization_queue_item": formalization_queue_item,
+        "typed_formal_benchmark_summary": {
+            "status": typed_formal_suite.get("status"),
+            "case_count": typed_formal_suite.get("case_count"),
+            "passed_cases": typed_formal_suite.get("passed_cases"),
+            "failed_cases": typed_formal_suite.get("failed_cases"),
+            "verification_status": typed_formal_suite.get("semantic_status", "NOT_YET_VERIFIED"),
+        },
         "composition_graph_summary": trader_output["composition_graph"],
         "typed_fixture_probe": typed_probe,
         "provenance_gate": next(role for role in roles if role["agent_id"] == "source-provenance-gate"),
@@ -277,6 +331,7 @@ def build_cycle(
         "release_gate": {
             "automatically_released": False,
             "requires_real_source_review": True,
+            "requires_formalization_queue_completion": True,
             "requires_semantic_benchmarks": True,
             "requires_counterexamples": True,
             "requires_independent_review": True,
@@ -304,6 +359,8 @@ def build_cycle(
         "typed_fragment_probe": typed_probe,
         "mirror_review": mirror,
         "formal_benchmark_suite": formal_suite,
+        "typed_formal_benchmark_suite": typed_formal_suite,
+        "formalization_queue_item": formalization_queue_item,
         "existing_six_agent_suite": ({
             "status": existing_suite.get("overall_status"),
             "agent_count": existing_suite.get("agent_count"),
@@ -318,12 +375,16 @@ def build_cycle(
             "local_grow_only_event_set": "IMPLEMENTED",
             "external_llm_backend": "NOT_CONFIGURED",
             "z3_formal_adapter": formal_suite.get("status", "UNKNOWN"),
+            "typed_formal_ast_adapter": typed_formal_suite.get("status", "UNKNOWN"),
+            "formalization_queue": formalization_queue_item.get("status", "UNKNOWN"),
             "connectome_execution": "NOT_IMPLEMENTED",
             "self_modifying_code": "NOT_IMPLEMENTED",
             "wix_write": "NOT_PERFORMED_BY_THIS_CYCLE",
             "logic_package_release": "BLOCKED_PENDING_SEMANTIC_BENCHMARKS_AND_REVIEW",
         },
         "next_actions": [
+            "Replace synthetic typed-formal fixtures with source-grounded arithmetic and Boolean cases and independently reviewed formalizations.",
+            "Formalize queued Logic Trader definitions explicitly before sending them to the typed AST solver.",
             "Replace synthetic typed-fragment fixtures incrementally with source-reviewed logic fragments.",
             "Add task benchmark cases and negative/counterexample cases for the Logic Trader selection and composition outputs.",
             "Add a reviewer-gated acceptance registry before recursive composition may consume prior candidates.",
@@ -345,8 +406,12 @@ def write_cycle(result: Mapping[str, Any], out_dir: Path) -> dict[str, str]:
     report_path = out_dir / "logic-trader-swarm-latest.json"
     candidate_path = out_dir / "logic-brain-candidate-latest.json"
     markdown_path = out_dir / "logic-trader-swarm-latest.md"
+    queue_path = out_dir / "logic-formalization-queue-latest.json"
+    typed_benchmark_path = out_dir / "typed-formal-benchmark-latest.json"
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     candidate_path.write_text(json.dumps(candidate, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    queue_path.write_text(json.dumps(candidate["formalization_queue_item"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    typed_benchmark_path.write_text(json.dumps(report["typed_formal_benchmark_suite"], ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     lines = [
         f"# ARK-Swarm + Logic Trader — {report['generated_at_utc']}",
         "",
@@ -356,6 +421,8 @@ def write_cycle(result: Mapping[str, Any], out_dir: Path) -> dict[str, str]:
         f"- Selected logic package: `{candidate['candidate_id']}`",
         f"- Candidate hash: `{candidate['package_hash']}`",
         f"- Semantic status: **{candidate['semantic_status']}**",
+        f"- Formalization queue: {candidate['formalization_queue_item']['queue_item_id']} ({candidate['formalization_queue_item']['status']})",
+        f"- Typed formal benchmark: {report['typed_formal_benchmark_suite']['passed_cases']}/{report['typed_formal_benchmark_suite']['case_count']} synthetic cases",
         "",
         "## Agent results",
     ]
@@ -372,6 +439,8 @@ def write_cycle(result: Mapping[str, Any], out_dir: Path) -> dict[str, str]:
     return {
         "report": str(report_path.relative_to(ROOT)),
         "candidate": str(candidate_path.relative_to(ROOT)),
+        "formalization_queue": str(queue_path.relative_to(ROOT)),
+        "typed_formal_benchmark": str(typed_benchmark_path.relative_to(ROOT)),
         "markdown": str(markdown_path.relative_to(ROOT)),
     }
 
