@@ -1,0 +1,150 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Conversation Intake Record V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "record_id",
+    "source_type",
+    "source_locator",
+    "conversation_id",
+    "archive_sha256",
+    "permission_scope",
+    "publication_status",
+    "publishable",
+    "segments",
+    "processing_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "conversation-intake/1.0"
+    },
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_type": {
+      "const": "CHAT_EXPORT"
+    },
+    "source_locator": {
+      "type": "string",
+      "minLength": 1
+    },
+    "conversation_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "title": {
+      "type": "string"
+    },
+    "captured_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "conversation_created_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "conversation_updated_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "language": {
+      "type": "string"
+    },
+    "archive_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "conversation_record_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "permission_scope": {
+      "const": "PRIVATE_REVIEW_ONLY"
+    },
+    "publication_status": {
+      "const": "NOT_APPROVED"
+    },
+    "publishable": {
+      "const": false
+    },
+    "metadata_only": {
+      "type": "boolean"
+    },
+    "segment_count": {
+      "type": "integer",
+      "minimum": 0
+    },
+    "segments": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "segment_id",
+          "message_id",
+          "role",
+          "text_sha256",
+          "status",
+          "publication_status"
+        ],
+        "properties": {
+          "segment_id": {
+            "type": "string"
+          },
+          "message_id": {
+            "type": "string"
+          },
+          "parent_message_id": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "role": {
+            "enum": [
+              "user",
+              "assistant"
+            ]
+          },
+          "timestamp_utc": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "text": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "text_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "text_omitted": {
+            "type": "boolean"
+          },
+          "status": {
+            "const": "TRANSCRIPT_TEXT_NOT_FACT_VERIFIED"
+          },
+          "publication_status": {
+            "const": "NOT_APPROVED"
+          }
+        },
+        "additionalProperties": true
+      }
+    },
+    "processing_status": {
+      "const": "REGISTERED_REVIEW_REQUIRED"
+    }
+  },
+  "additionalProperties": true
+}
