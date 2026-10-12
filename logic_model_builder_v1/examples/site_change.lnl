@@ -1,0 +1,23 @@
+# WANGA Logic-Native Language (LNL) v0.1
+# Every statement below has a formal role; this fixture is synthetic.
+
+model site_change_logic version=0.1 description="Synthetic site-change model"
+
+source E_REQUEST uri="fixture://site-change/request" status=TEST_FIXTURE version=fixture-v1 location=input.request
+source E_SCOPE uri="fixture://site-change/scope" status=TEST_FIXTURE version=fixture-v1 location=input.scope
+source E_PERMISSION uri="fixture://site-change/permission" status=TEST_FIXTURE version=fixture-v1 location=input.permission
+source E_POLICY uri="fixture://site-change/policy-rule" status=TEST_FIXTURE version=fixture-v1 location=rule.scope-permission
+
+fact C_REQUEST request.action(typo_fix) status=TEST_FIXTURE evidence=E_REQUEST
+fact C_SCOPE scope.allows(typo_fix) status=TEST_FIXTURE evidence=E_SCOPE
+fact C_PERMISSION permission.grants(typo_fix) status=TEST_FIXTURE evidence=E_PERMISSION
+
+rule R_SCOPE_PERMISSION source=E_POLICY:
+  request.action($action) AND scope.allows($action) AND permission.grants($action) => action.candidate_allowed($action)
+
+goal action.candidate_allowed(typo_fix)
+
+constraint require_evidence
+constraint no_unbound_rule_vars
+constraint no_automatic_verified_status
+constraint require_rule_sources_or_explicit_assumption

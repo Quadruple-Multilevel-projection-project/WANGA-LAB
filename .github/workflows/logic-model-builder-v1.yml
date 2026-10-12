@@ -1,0 +1,39 @@
+name: Logic-Native Model Builder V1
+on:
+  pull_request:
+    paths:
+      - "logic_model_builder_v1/**"
+      - "logic_engine_v1/**"
+      - "research/data/LOGIC_CORPUS_1000_PAGE_BLUEPRINT_V1.json"
+      - "research/data/LOGIC_CORPUS_PAGES_*.json"
+      - "research/data/LETTER_GATE_MAP_231_V1.json"
+      - "research/data/LETTER_TRIPLE_MAP_1540_V1.json"
+      - ".github/workflows/logic-model-builder-v1.yml"
+  push:
+    branches: ["main"]
+    paths:
+      - "logic_model_builder_v1/**"
+      - "logic_engine_v1/**"
+      - "research/data/LOGIC_CORPUS_1000_PAGE_BLUEPRINT_V1.json"
+      - "research/data/LOGIC_CORPUS_PAGES_*.json"
+      - "research/data/LETTER_GATE_MAP_231_V1.json"
+      - "research/data/LETTER_TRIPLE_MAP_1540_V1.json"
+      - ".github/workflows/logic-model-builder-v1.yml"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile Python modules
+        run: python -m compileall -q logic_engine_v1 logic_model_builder_v1
+      - name: Validate corpus invariants
+        run: python logic_engine_v1/logic_kernel.py validate-corpus --repo-root .
+      - name: Test symbolic kernel
+        run: python -m unittest discover -s logic_engine_v1/tests -v
+      - name: Test logic-native language and model builder
+        run: python -m unittest discover -s logic_model_builder_v1/tests -v
+      - name: Run end-to-end model builder demo
+        run: python -m logic_model_builder_v1.cli demo --no-corpus

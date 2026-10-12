@@ -1,0 +1,85 @@
+{
+  "model_name": "site_change_logic",
+  "version": "0.1",
+  "description": "Synthetic example: determine whether a requested site change is a candidate within scope and permission.",
+  "sources": [
+    {
+      "id": "E_REQUEST",
+      "uri": "fixture://site-change/request",
+      "status": "TEST_FIXTURE",
+      "version": "fixture-v1",
+      "location": "input.request"
+    },
+    {
+      "id": "E_SCOPE",
+      "uri": "fixture://site-change/scope",
+      "status": "TEST_FIXTURE",
+      "version": "fixture-v1",
+      "location": "input.scope"
+    },
+    {
+      "id": "E_PERMISSION",
+      "uri": "fixture://site-change/permission",
+      "status": "TEST_FIXTURE",
+      "version": "fixture-v1",
+      "location": "input.permission"
+    },
+    {
+      "id": "E_POLICY",
+      "uri": "fixture://site-change/policy-rule",
+      "status": "TEST_FIXTURE",
+      "version": "fixture-v1",
+      "location": "rule.scope-permission"
+    }
+  ],
+  "facts": [
+    {
+      "id": "C_REQUEST",
+      "atom": "request.action(typo_fix)",
+      "epistemic_status": "TEST_FIXTURE",
+      "evidence_refs": [
+        "E_REQUEST"
+      ]
+    },
+    {
+      "id": "C_SCOPE",
+      "atom": "scope.allows(typo_fix)",
+      "epistemic_status": "TEST_FIXTURE",
+      "evidence_refs": [
+        "E_SCOPE"
+      ]
+    },
+    {
+      "id": "C_PERMISSION",
+      "atom": "permission.grants(typo_fix)",
+      "epistemic_status": "TEST_FIXTURE",
+      "evidence_refs": [
+        "E_PERMISSION"
+      ]
+    }
+  ],
+  "rules": [
+    {
+      "id": "R_SCOPE_PERMISSION",
+      "source_ids": [
+        "E_POLICY"
+      ],
+      "antecedents": [
+        "request.action($action)",
+        "scope.allows($action)",
+        "permission.grants($action)"
+      ],
+      "consequent": "action.candidate_allowed($action)",
+      "description": "A candidate is derived only when request, scope, and permission fixtures all agree."
+    }
+  ],
+  "goals": [
+    "action.candidate_allowed(typo_fix)"
+  ],
+  "constraints": [
+    "require_evidence",
+    "no_unbound_rule_vars",
+    "no_automatic_verified_status",
+    "require_rule_sources_or_explicit_assumption"
+  ]
+}
