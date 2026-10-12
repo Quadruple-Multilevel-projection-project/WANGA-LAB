@@ -110,3 +110,9 @@ The next technical milestone is a minimal virtual-processor prototype demonstrat
 9. independent verification of the resulting architecture.
 
 Performance targets remain experimental until measured.
+
+## Executable reversible Blueprint frames
+
+The first prototype is available in [`wanga_x_v1/engine.py`](../wanga_x_v1/engine.py). Each run records F0 requirement capture, F1 normalized requirement, F2 required-computation derivation, F3 candidate ranking, F4 Blueprint generation and F5 structural verification. Each frame is linked to its parent's hash; rollback adds a new branch frame referencing an older state and does not edit the prior history.
+
+Current boundary: rollback is demonstrated over Blueprint metadata/state references. It does not rollback or snapshot actual neural weights or a deployed machine, because neural runtime materialization is not implemented.
