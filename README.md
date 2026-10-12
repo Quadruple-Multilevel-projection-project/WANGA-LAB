@@ -235,3 +235,9 @@ It maps a task requirement into required computation capabilities, compares thre
 - [Wix Logic Wiki](https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html) — published index; GitHub PR remains the source-review path.
 
 The initial catalog is a seed. FIRST_MODEL_ALPHA is not ready until the configured source, composition, counterexample, benchmark, holdout and review requirements pass. The thresholds are project policy hypotheses, not empirical laws.
+
+## Conversation exports and readiness reporting
+
+- [Private conversation export intake](docs/CONVERSATION_EXPORT_INTAKE_V1.md) — safely parses a user-provided ChatGPT export into review-only records with IDs, source locators and hashes. It does not fetch unexported chats or publish raw transcripts.
+- [Initial Logic Fractal readiness report](research/reports/logic-fractal/2026-10-12-readiness-snapshot.md) — source counts, composition coverage and explicit first-model gate deficits.
+- [Wix sync manifest](logic_wiki/data/wix_sync_manifest.json) — read-back evidence for the public Logic Wiki page and the remaining automation boundary.
