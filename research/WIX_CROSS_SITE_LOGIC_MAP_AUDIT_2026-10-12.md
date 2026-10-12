@@ -50,6 +50,11 @@ A drift signal is not a cause. Preserve artifacts, reproduce, distinguish associ
 - The 174-URL inventory is now searchable by URL, site, page kind, and focused-review status; tags are labelled as URL-derived filters.
 - Misleading 'verified sources' wording was changed to 'sources reviewed'. Original source pages were not edited or deleted.
 
+## Post-deploy QA
+- Browser test confirmed that the 174-record URL inventory loaded, had no duplicate URLs, filtered to 29 `CONTENT_REVIEWED` records, and returned the correct filtered state for `my-site-17`.
+- Browser tests confirmed the synthetic price calculation (about 22.22%) and threshold-drift case (score 0.75; 0.80 => REJECT; 0.60 => ACCEPT).
+- The homepage's unrelated mixed-purpose cards were removed. The interactive node behavior on `cross-site-logic-map.html` remains to be tested separately.
+
 ## Evidence vocabulary
 - `SITEMAP_LISTED`: URL appears in a public sitemap.
 - `CONTENT_REVIEWED`: contents were inspected in this audit stream.
