@@ -51,7 +51,7 @@ def validate_formal_spec(spec: Mapping[str, Any]) -> dict[str, Any]:
     for name, sort in variables.items():
         if not isinstance(name, str) or not _NAME.fullmatch(name):
             raise FormalSpecError(f"invalid variable name: {name!r}")
-        if sort not in _ALLOWED_SORTS:
+        if not isinstance(sort, str) or sort not in _ALLOWED_SORTS:
             raise FormalSpecError(f"unsupported sort for {name}: {sort!r}")
     ids: set[str] = set()
     for index, premise in enumerate(premises):
@@ -105,7 +105,7 @@ def _validate_expr_shape(expr: Mapping[str, Any], depth: int, budget: _Budget) -
         return
     op = expr.get("op")
     args = expr.get("args")
-    if op not in _ALLOWED_OPS or not isinstance(args, list):
+    if not isinstance(op, str) or op not in _ALLOWED_OPS or not isinstance(args, list):
         raise FormalSpecError(f"unsupported operator or missing args: {op!r}")
     expected_arity = 1 if op == "not" else (2 if op in {"implies", "eq", "neq", "lt", "le", "gt", "ge", "sub"} else None)
     if expected_arity is not None and len(args) != expected_arity:
