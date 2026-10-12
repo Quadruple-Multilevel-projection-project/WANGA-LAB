@@ -16,7 +16,10 @@
     "source_provenance",
     "typed_interface_composition",
     "mirror_counterreading",
-    "existing_logic_agent_suite"
+    "existing_logic_agent_suite",
+    "formalization_queue",
+    "formal_proof_fixture_benchmark",
+    "logic_package_contract"
   ],
   "output_status": "INTERNAL_CANDIDATE_NOT_RELEASED",
   "capability_boundaries": {
@@ -37,5 +40,18 @@
     "semantic_status": "NOT_YET_VERIFIED",
     "scope": "EXPLICIT_PROPOSITIONAL_FORMULAS_ONLY",
     "source_truth_promotion": false
+  },
+  "formal_reasoning": {
+    "canonical_solver": "logic_proof.z3_adapter",
+    "typed_ast_schema": "wanga-formal-fragment/1.0",
+    "propositional_text_frontend": "formal_reasoning.propositional",
+    "formalization_queue": "logic_proof.formalization_queue",
+    "package_lifecycle_contract": "logic_proof.package_contract",
+    "benchmark": "logic_proof/fixtures/formal_cases.json",
+    "benchmark_status": "SYNTHETIC_ADAPTER_VALIDATION_ONLY",
+    "solver_dependency_source": "requirements-logic.txt -> requirements-formal.txt",
+    "semantic_status": "NOT_YET_VERIFIED",
+    "automatic_ast_inference": false,
+    "release_requires_independent_review": true
   }
 }
