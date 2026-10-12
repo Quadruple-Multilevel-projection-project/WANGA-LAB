@@ -236,7 +236,6 @@
     }
   ],
   "additionalProperties": false,
-  "$id": "https://wanga-lab.example/schemas/logic-package-contract-v1.schema.json",
   "$defs": {
     "expression": {
       "oneOf": [
