@@ -1,0 +1,117 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA Logic Formalization Queue Item V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "queue_item_id",
+    "candidate_package_id",
+    "status",
+    "candidate_claims",
+    "source_ids",
+    "unresolved_sources",
+    "missing_formal_fields",
+    "solver_execution_status",
+    "formal_fragment_schema",
+    "semantic_status",
+    "automatic_semantic_conversion",
+    "queue_item_sha256"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "wanga-formalization-queue-item/1.0"
+    },
+    "queue_item_id": {
+      "type": "string",
+      "pattern": "^FORM-[a-f0-9]{16}$"
+    },
+    "candidate_package_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "candidate_package_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "READY_FOR_FORMALIZATION",
+        "BLOCKED_SOURCE_REVIEW"
+      ]
+    },
+    "candidate_claims": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_ref",
+          "surface_definition",
+          "source_refs",
+          "source_status",
+          "formalization_status"
+        ],
+        "properties": {
+          "claim_ref": {
+            "type": "string"
+          },
+          "surface_definition": {
+            "type": "string"
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
+          "source_status": {
+            "enum": [
+              "RESOLVED",
+              "SOURCE_REVIEW_REQUIRED"
+            ]
+          },
+          "formalization_status": {
+            "const": "NOT_FORMALIZED"
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "unresolved_sources": {
+      "type": "array"
+    },
+    "missing_formal_fields": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "string"
+      }
+    },
+    "solver_execution_status": {
+      "const": "NOT_RUN_NO_FORMAL_AST"
+    },
+    "formal_fragment_schema": {
+      "const": "wanga-formal-fragment/1.0"
+    },
+    "semantic_status": {
+      "const": "NOT_YET_VERIFIED"
+    },
+    "automatic_semantic_conversion": {
+      "const": false
+    },
+    "boundary": {
+      "type": "string"
+    },
+    "queue_item_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  },
+  "additionalProperties": false
+}
