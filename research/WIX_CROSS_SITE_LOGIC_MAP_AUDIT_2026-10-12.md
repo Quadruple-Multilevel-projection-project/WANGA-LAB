@@ -35,7 +35,7 @@ Sources: [AI Drift Forensics](https://beywolf5.wixsite.com/forensic-logic-dri/po
 A drift signal is not a cause. Preserve artifacts, reproduce, distinguish association from causality, then update the affected mapping version based on bounded findings.
 
 ## Content-quality findings
-1. **Repeated tail paragraphs:** several My Site 17 logic-box and demo pages append the same three philosophical/economic paragraphs. Verify whether this is intentional shared content or accidental body duplication before editing.
+1. **Repeated tail paragraphs:** six reviewed My Site 17 logic-box and demo pages append the same three philosophical/economic paragraphs. Verify whether this is intentional shared content or accidental body duplication before editing.
 2. **Generic store products:** Computational Logic lists 12 product URLs titled “I'm a product” with template text. These are inventory records, not validated logic packages.
 3. **Mixed-purpose site content:** alliance, NGO, generic FAQ, product-template and other non-logic pages remain in the inventory but are excluded from the validated logic core.
 
@@ -43,6 +43,12 @@ A drift signal is not a cause. Preserve artifacts, reproduce, distinguish associ
 - [Machine-readable page inventory and candidate maps](./data/WIX_PAGE_INVENTORY_2026-10-12.json)
 - [Bridge between public site and WANGA-LAB](./LOGIC_BEFORE_IMPLEMENTATION_SITE_BRIDGE.md)
 - [Continuous Logic Mine research track](./LOGIC_MINE_RESEARCH_TRACKS.md)
+
+## Quality-control changes
+- The Logic Engine landing page now emphasizes five direct research sources and no longer presents a broad mixed-purpose collection of unrelated site cards.
+- The 70-article source register is explicitly a sitemap/article catalogue, not a claim that every article's content has been semantically verified.
+- The 174-URL inventory is now searchable by URL, site, page kind, and focused-review status; tags are labelled as URL-derived filters.
+- Misleading 'verified sources' wording was changed to 'sources reviewed'. Original source pages were not edited or deleted.
 
 ## Evidence vocabulary
 - `SITEMAP_LISTED`: URL appears in a public sitemap.
