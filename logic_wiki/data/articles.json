@@ -298,6 +298,24 @@
         "logical-primitive",
         "fractal-composition"
       ]
+    },
+    {
+      "id": "typed-logic-fragment",
+      "title": "Typed logic fragment",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "COMPOSER_IMPLEMENTED_TESTS_PENDING",
+      "definition": "A bounded logical fragment with a stable ID, scale, typed inputs/outputs, claims, source-span IDs, provenance, tests, counterexamples and a composition contract.",
+      "scope_note": "Type compatibility supports composition but does not establish semantic equivalence. A composite fragment becomes CANDIDATE until source review and benchmark tests pass.",
+      "sources": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN",
+        "SRC-WANGA-LOGIC-MINE"
+      ],
+      "relations": [
+        "logical-primitive",
+        "fractal-composition",
+        "evidence-provenance"
+      ]
     }
   ],
   "sources": [
