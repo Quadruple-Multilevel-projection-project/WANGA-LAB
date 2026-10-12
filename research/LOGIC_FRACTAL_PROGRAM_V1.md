@@ -99,3 +99,20 @@ The first bounded integration is implemented in `ark_swarm/`. The Logic Trader r
 
 The first output is `INTERNAL_CANDIDATE_NOT_RELEASED`. Lexical overlap is not semantic understanding; type compatibility is not semantic equivalence. The current runtime is local and deterministic. Peer-to-peer transport, network CRDT replication, biological connectome execution, online reward learning, external language-model generation, and automatic publication remain NOT_IMPLEMENTED or NOT_CONFIGURED.
 
+
+## Typed formal-fragment and formalization queue extension
+
+The existing `formal_reasoning/` propositional adapter remains the canonical parser for the supported propositional language. The ARK-Swarm integration branch adds a complementary typed AST adapter for Boolean, integer, real and string expressions, plus a seven-case synthetic fixture suite. Logic Trader output is stored in `formal_reasoning/formalization_queue.py` with source IDs and missing-field diagnostics; its natural-language descriptions are not converted into formulas automatically. The coordinator emits a formalization queue artifact and stays `NOT_YET_VERIFIED` until the candidate has explicit formalization, source review, counterexamples and independent approval.
+
+Run checks with:
+
+```bash
+python -m unittest discover -s tests -p 'test_formal_typed_fragment.py' -v
+python -m unittest discover -s tests -p 'test_formal_typed_benchmark.py' -v
+python -m unittest discover -s tests -p 'test_formalization_queue.py' -v
+python -m unittest discover -s tests -p 'test_logic_package_contract.py' -v
+python -m unittest discover -s tests -p 'test_formal_package_schemas.py' -v
+python scripts/run_typed_formal_benchmark.py --out research/reports/formal-reasoning/typed-fragment-benchmark-latest.json
+```
+
+The added fixtures are synthetic adapter tests, not a source-grounded semantic benchmark. P2P, connectome execution, RL updates and self-modifying code remain separate future work.
