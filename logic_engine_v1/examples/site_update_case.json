@@ -117,5 +117,10 @@
     "publish": false,
     "publish_permission_granted": false,
     "evidence_complete": true
+  },
+  "threshold_comparison": {
+    "score": 0.75,
+    "old_threshold": 0.8,
+    "new_threshold": 0.6
   }
 }
