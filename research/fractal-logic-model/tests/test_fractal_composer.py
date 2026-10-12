@@ -1,13 +1,15 @@
 from __future__ import annotations
 import json
 from pathlib import Path
+import sys
 import unittest
 
-from research.fractal_logic_model.src.fractal_composer import (
+ROOT = Path(__file__).resolve().parents[3]
+sys.path.insert(0, str(Path(__file__).resolve().parents[1] / "src"))
+from fractal_composer import (
     FragmentError, build_wiki_backlinks, compose_pair, content_hash, validate_fragment
 )
 
-ROOT = Path(__file__).resolve().parents[3]
 FIXTURE = Path(__file__).resolve().parents[1] / "examples" / "canonical_fragments_v1.json"
 WIKI_INDEX = ROOT / "research" / "logic-wikipedia" / "index.json"
 
@@ -37,7 +39,8 @@ class FractalComposerTests(unittest.TestCase):
         self.assertIn(f1["fragment_id"], f2["composition"]["parent_ids"])
         self.assertEqual(f2["status"], "CANDIDATE")
         self.assertEqual(f2["composition"]["semantic_equivalence"], "NOT_ESTABLISHED")
-        self.assertEqual(f2["model_hash"], content_hash({k:v for k,v in f2.items() if k != "model_hash"} | {"model_hash": ""}) if False else f2["model_hash"])
+        repeat = compose_pair(f1, self.fragments["FL-REVIEW"], source_registry=self.sources)
+        self.assertEqual(f2["model_hash"], repeat["fragment"]["model_hash"])
 
     def test_type_mismatch_blocks_composition(self):
         bad = dict(self.fragments["FL-REVIEW"])
