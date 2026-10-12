@@ -1,0 +1,2602 @@
+{
+  "schema_version": "1.0",
+  "generated_at": "2026-10-12",
+  "purpose": "Public Wix sitemap inventory and source-backed logic-map compositions connecting the user's research sites to WANGA-LAB.",
+  "scope": {
+    "account_site_count": 53,
+    "sitemap_files": 28,
+    "unique_urls": 174,
+    "site_slugs": 16,
+    "semantic_reviewed_source_pages": 29,
+    "notes": "Sitemap inventory is broader than semantic review. Topic tags are derived from URL/slug only; they do not prove logical relevance. The curated maps cite source pages and label whether a combination is demonstrated or proposed."
+  },
+  "sitemaps": [
+    {
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/blog-posts-sitemap.xml",
+      "title": "Sitemap (70 URLs)",
+      "url_count": 70,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/blog-categories-sitemap.xml",
+      "title": "Sitemap (1 URL)",
+      "url_count": 1,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/pages-sitemap.xml",
+      "title": "Sitemap (4 URLs)",
+      "url_count": 4,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/hebrew-thesis-insigh/pages-sitemap.xml",
+      "title": "Sitemap (1 URL)",
+      "url_count": 1,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/my-site-18/blog-posts-sitemap.xml",
+      "title": "Sitemap (4 URLs)",
+      "url_count": 4,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/my-site-18/blog-categories-sitemap.xml",
+      "title": "Sitemap (2 URLs)",
+      "url_count": 2,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/my-site-18/pages-sitemap.xml",
+      "title": "Sitemap (3 URLs)",
+      "url_count": 3,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/my-site-17/blog-posts-sitemap.xml",
+      "title": "Sitemap (26 URLs)",
+      "url_count": 26,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/my-site-17/blog-categories-sitemap.xml",
+      "title": "Sitemap (6 URLs)",
+      "url_count": 6,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/my-site-17/pages-sitemap.xml",
+      "title": "Sitemap (4 URLs)",
+      "url_count": 4,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/wanga-lab/pages-sitemap.xml",
+      "title": "Sitemap (1 URL)",
+      "url_count": 1,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/global-algorithmic-g/pages-sitemap.xml",
+      "title": "Sitemap (3 URLs)",
+      "url_count": 3,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/institute-for-global/pages-sitemap.xml",
+      "title": "Sitemap (3 URLs)",
+      "url_count": 3,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/global-algorithmic-2/pages-sitemap.xml",
+      "title": "Sitemap (1 URL)",
+      "url_count": 1,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/international-ai-for/pages-sitemap.xml",
+      "title": "Sitemap (7 URLs)",
+      "url_count": 7,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/ai-drift-research-hu/pages-sitemap.xml",
+      "title": "Sitemap (2 URLs)",
+      "url_count": 2,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/operational-ai-drift/pages-sitemap.xml",
+      "title": "Sitemap (2 URLs)",
+      "url_count": 2,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/ark-research-compu/pages-sitemap.xml",
+      "title": "Sitemap (5 URLs)",
+      "url_count": 5,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/constitutionallaw/pages-sitemap.xml",
+      "title": "Sitemap (1 URL)",
+      "url_count": 1,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/continental-alliance/blog-posts-sitemap.xml",
+      "title": "Sitemap (11 URLs)",
+      "url_count": 11,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/continental-alliance/blog-categories-sitemap.xml",
+      "title": "Sitemap (1 URL)",
+      "url_count": 1,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/continental-alliance/pages-sitemap.xml",
+      "title": "Sitemap (5 URLs)",
+      "url_count": 5,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/website/pages-sitemap.xml",
+      "title": "Sitemap (1 URL)",
+      "url_count": 1,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/store-products-sitemap.xml",
+      "title": "Sitemap (12 URLs)",
+      "url_count": 12,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/store-categories-sitemap.xml",
+      "title": "Sitemap (1 URL)",
+      "url_count": 1,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/blog-posts-sitemap.xml",
+      "title": "Sitemap (1 URL)",
+      "url_count": 1,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/blog-categories-sitemap.xml",
+      "title": "Sitemap (1 URL)",
+      "url_count": 1,
+      "error": null
+    },
+    {
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/pages-sitemap.xml",
+      "title": "Sitemap (7 URLs)",
+      "url_count": 7,
+      "error": null
+    }
+  ],
+  "site_counts": {
+    "forensic-logic-dri": 74,
+    "hebrew-thesis-insigh": 1,
+    "my-site-18": 7,
+    "my-site-17": 30,
+    "wanga-lab": 1,
+    "global-algorithmic-g": 3,
+    "institute-for-global": 3,
+    "global-algorithmic-2": 1,
+    "international-ai-for": 7,
+    "ai-drift-research-hu": 2,
+    "operational-ai-drift": 2,
+    "ark-research-compu": 5,
+    "constitutionallaw": 1,
+    "continental-alliance": 16,
+    "website": 1,
+    "die-continental-trad": 20
+  },
+  "pages": [
+    {
+      "id": "WIX-001",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/the-public-research-layer-and-the-protected-implementation-boundary",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "the-public-research-layer-and-the-protected-implementation-boundary",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-002",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/היצע-וביקוש-ליכולות-כיצד-נוצר-שוק-לוגיקות",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "היצע-וביקוש-ליכולות-כיצד-נוצר-שוק-לוגיקות",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-003",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/what-a-verified-synthetic-drift-case-actually-proves",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "what-a-verified-synthetic-drift-case-actually-proves",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-004",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/המעבר-לכלכלת-הלוגיקה-הנחת-היסוד-של-עידן-שאחרי-האוטומציה",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "המעבר-לכלכלת-הלוגיקה-הנחת-היסוד-של-עידן-שאחרי-האוטומציה",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-005",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/the-coming-ai-bottlenecks-why-logic-architecture-and-drift-forensics-must-converge",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "the-coming-ai-bottlenecks-why-logic-architecture-and-drift-forensics-must-converge",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-006",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/our-five-year-ai-market-forecast-the-coming-bottleneck-in-logic-architecture-and-drift-forensics",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "our-five-year-ai-market-forecast-the-coming-bottleneck-in-logic-architecture-and-drift-forensics",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-007",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/beyond-agent-registries-the-proposed-logic-capability-layer",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "beyond-agent-registries-the-proposed-logic-capability-layer",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-008",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/הרכבת-לוגיקות-כיצד-מחברים-רכיבים-למנגנון",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "הרכבת-לוגיקות-כיצד-מחברים-רכיבים-למנגנון",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-009",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/צווארי-בקבוק-לוגיים--שלוש-לוגיקות--כל-הקישורים-במקומם",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "צווארי-בקבוק-לוגיים--שלוש-לוגיקות--כל-הקישורים-במקומם",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-010",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/שוק-הלוגיקה-וצווארי-הבקבוק-20312036--הכל-במקום-אחד",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "שוק-הלוגיקה-וצווארי-הבקבוק-20312036--הכל-במקום-אחד",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-011",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מה-נחשבת-לוגיקה-כנכס-הנדסי",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מה-נחשבת-לוגיקה-כנכס-הנדסי",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-012",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/where-ai-research-converges-logic-engineering",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "where-ai-research-converges-logic-engineering",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-013",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/forecasting-ais-future-key-insights-for-2031-2036",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "forecasting-ais-future-key-insights-for-2031-2036",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-014",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/לוגיקה-לשימוש-חוזר-מתי-למחזר-ומתי-לבנות-מחדש",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "לוגיקה-לשימוש-חוזר-מתי-למחזר-ומתי-לבנות-מחדש",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-015",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מפת-תחומי-התאמה-היכן-לוגיקה-מועילה-והיכן-לא",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מפת-תחומי-התאמה-היכן-לוגיקה-מועילה-והיכן-לא",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-016",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/כריית-לוגיקה-חילוץ-כללים-מתוך-ידע-קיים",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "כריית-לוגיקה-חילוץ-כללים-מתוך-ידע-קיים",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-017",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מפת-ההתכנסות-איך-12-הנושאים-מתחברים-ומה-הקורא-צריך-לדעת",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מפת-ההתכנסות-איך-12-הנושאים-מתחברים-ומה-הקורא-צריך-לדעת",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-018",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/the-bottlenecks-before-the-next-stage-of-ai-a-structural-forecast",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "the-bottlenecks-before-the-next-stage-of-ai-a-structural-forecast",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-019",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מפת-המקורות--12-נקודות-ההתכנסות-142eb837",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מפת-המקורות--12-נקודות-ההתכנסות-142eb837",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-020",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/reusable-logic-packages-contracts-composition-and-verification",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "reusable-logic-packages-contracts-composition-and-verification",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-021",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/אופק-ארוך-מדוע-לוגיקה-מתפתחת-גם-אחרי-אוטומציה-רחבה",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "אופק-ארוך-מדוע-לוגיקה-מתפתחת-גם-אחרי-אוטומציה-רחבה",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-022",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/בדיקות-תאימות-האם-שני-רכיבים-יכולים-לעבוד-יחד",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "בדיקות-תאימות-האם-שני-רכיבים-יכולים-לעבוד-יחד",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-023",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/ממשל-ראיות-עקבות-בין-החלטה-לפעולה",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "ממשל-ראיות-עקבות-בין-החלטה-לפעולה",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics",
+        "governance-research"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-024",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/כשהביצוע-נעשה-זול-כיצד-משתנה-מקור-הערך",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "כשהביצוע-נעשה-זול-כיצד-משתנה-מקור-הערך",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-025",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/future-after-automation-why-logic-becomes-engineering-layer",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "future-after-automation-why-logic-becomes-engineering-layer",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-026",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/אשכול-ב--הנדסת-לוגיקה-אימות-וארכיטקטורת-קופסאות",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "אשכול-ב--הנדסת-לוגיקה-אימות-וארכיטקטורת-קופסאות",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-027",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/from-source-to-structure-preserving-provenance-in-logic-research",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "from-source-to-structure-preserving-provenance-in-logic-research",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-028",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/דריפט-לוגי-כיצד-מנגנון-מפסיק-להתאים-למציאות",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "דריפט-לוגי-כיצד-מנגנון-מפסיק-להתאים-למציאות",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-029",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/wanga-lab-building-a-unified-logic-evidence-and-agent-discovery-workbench",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "wanga-lab-building-a-unified-logic-evidence-and-agent-discovery-workbench",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-030",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/logic-convergence-map-future-problems",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "logic-convergence-map-future-problems",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-031",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/אשכול-ד--כלכלה-מימון-ומשאבי-מחשוב",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "אשכול-ד--כלכלה-מימון-ומשאבי-מחשוב",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-032",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/אשכול-א--שינוי-טכנולוגי-ומבנה-הערך",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "אשכול-א--שינוי-טכנולוגי-ומבנה-הערך",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-033",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/revolutionizing-model-development-our-research-architecture-explained",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "revolutionizing-model-development-our-research-architecture-explained",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-034",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/forecasting-20312036-without-treating-a-scenario-as-fact",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "forecasting-20312036-without-treating-a-scenario-as-fact",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-035",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מפת-המשקיעים--12-נקודות-ההתכנסות-ומפת-המקורות",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מפת-המשקיעים--12-נקודות-ההתכנסות-ומפת-המקורות",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-036",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מחזור-החיים-של-wanga-lab-מתצפית-לחבילה",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מחזור-החיים-של-wanga-lab-מתצפית-לחבילה",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-037",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מסננים-דטרמיניסטיים-להפוך-תנאים-להחלטות-שנבדקות",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מסננים-דטרמיניסטיים-להפוך-תנאים-להחלטות-שנבדקות",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-038",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/ai-drift-forensics-from-baseline-to-reproducible-finding",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "ai-drift-forensics-from-baseline-to-reproducible-finding",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-039",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/two-dimensions-of-logic-centered-ai-research-collection-and-construction",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "two-dimensions-of-logic-centered-ai-research-collection-and-construction",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-040",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מפת-האינטראקציה-הלוגית-כיצד-הלוגיקה-מזהה-בעיות-ומייצרת-פתרונות",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מפת-האינטראקציה-הלוגית-כיצד-הלוגיקה-מזהה-בעיות-ומייצרת-פתרונות",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-041",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/חוזים-התנהגותיים-מה-רכיב-חייב-ומה-אסור-לו-לעשות",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "חוזים-התנהגותיים-מה-רכיב-חייב-ומה-אסור-לו-לעשות",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-042",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/is-forensic-logic--drift-feasible-connecting-logic-mining-agent-discovery-and-ai-drift-forensics",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "is-forensic-logic--drift-feasible-connecting-logic-mining-agent-discovery-and-ai-drift-forensics",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-043",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/אשכול-ג--רגולציה-ריבונות-טכנולוגית-ואחריות",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "אשכול-ג--רגולציה-ריבונות-טכנולוגית-ואחריות",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "governance-research"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-044",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/ai-industry-convergence-logic-layer-capability-discovery-verification",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "ai-industry-convergence-logic-layer-capability-discovery-verification",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-045",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/logic-convergence-map-from-reusable-logic-boxes-to-future-problem-solving",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "logic-convergence-map-from-reusable-logic-boxes-to-future-problem-solving",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-046",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מהתכנסות-תעשייתית-לשכבת-הלוגיקה",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מהתכנסות-תעשייתית-לשכבת-הלוגיקה",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-047",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/initial-order-logic-and-the-fractal-logic-engine",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "initial-order-logic-and-the-fractal-logic-engine",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-048",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/estimating-direction-ai-market-convergence",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "estimating-direction-ai-market-convergence",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-049",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/אריזת-לוגיקה-מיחידת-החלטה-למוצר-לשימוש-חוזר",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "אריזת-לוגיקה-מיחידת-החלטה-למוצר-לשימוש-חוזר",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-050",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מהנדס-הלוגיקה-תפקיד-הנדסי-בעידן-האוטומציה",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מהנדס-הלוגיקה-תפקיד-הנדסי-בעידן-האוטומציה",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-051",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מדריך-הסדרה-20-דפים-על-כלכלת-הלוגיקה-והנדסת-המנגנונים",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מדריך-הסדרה-20-דפים-על-כלכלת-הלוגיקה-והנדסת-המנגנונים",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-052",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/continuous-logic-mine-a-research-loop-not-a-static-archive",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "continuous-logic-mine-a-research-loop-not-a-static-archive",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-053",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מפת-המשקיעים--12-נקודות-ההתכנסות-ומפת-המקורות-a97d5643",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מפת-המשקיעים--12-נקודות-ההתכנסות-ומפת-המקורות-a97d5643",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-054",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/logical-bottlenecks-explained--three-logics--full-catalog-links",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "logical-bottlenecks-explained--three-logics--full-catalog-links",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-055",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/שוק-של-חבילות-לוגיקה-מוצר-התאמה-הרצה-ואימות",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "שוק-של-חבילות-לוגיקה-מוצר-התאמה-הרצה-ואימות",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-056",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מפת-השימוש-הלוגי-באתר-קופסאות-קישור",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מפת-השימוש-הלוגי-באתר-קופסאות-קישור",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-057",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/the-forensic-case-engine-evidence-states-attribution-and-uncertainty",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "the-forensic-case-engine-evidence-states-attribution-and-uncertainty",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-058",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/ai-model-limits-logical-reduction-wanga-lab-conclusion",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "ai-model-limits-logical-reduction-wanga-lab-conclusion",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-059",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/wanga-lab-logic-layer-after-automation-engineering-correction",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "wanga-lab-logic-layer-after-automation-engineering-correction",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-060",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/logic-engineering-a-field-of-action-hypothesis",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "logic-engineering-a-field-of-action-hypothesis",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-061",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מפת-המקורות--12-נקודות-ההתכנסות",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מפת-המקורות--12-נקודות-ההתכנסות",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-062",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/navigating-ai-bottlenecks-the-evolution-of-logic-and-structure",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "navigating-ai-bottlenecks-the-evolution-of-logic-and-structure",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-063",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/bottlenecks-before-the-next-ai-stage-forensic-logic-drift",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "bottlenecks-before-the-next-ai-stage-forensic-logic-drift",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-064",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/כלכלת-הלוגיקה-בעוד-שנה-תחזית-לאוקטובר-2027",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "כלכלת-הלוגיקה-בעוד-שנה-תחזית-לאוקטובר-2027",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-065",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/הנדסת-מנגנונים-מעבר-מכתיבת-קוד-לתכנון-התנהגות",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "הנדסת-מנגנונים-מעבר-מכתיבת-קוד-לתכנון-התנהגות",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-066",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/אימות-וראיות-מבנה-תקין-אינו-תוצאה-מוכחת",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "אימות-וראיות-מבנה-תקין-אינו-תוצאה-מוכחת",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-067",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/צווארי-בקבוק-לוגיים--שלוש-לוגיקות--forensic-logic--drift--כל-הדוגמאות",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "צווארי-בקבוק-לוגיים--שלוש-לוגיקות--forensic-logic--drift--כל-הדוגמאות",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-068",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/coming-ai-engineering-shift-hidden-builders-logic-layer",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "coming-ai-engineering-shift-hidden-builders-logic-layer",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-069",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מפת-ההתכנסויות-הלוגיות-איך-מזהים-בעיה-עתידית-מנסחים-אותה-ובונים-לה-פתרון",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מפת-ההתכנסויות-הלוגיות-איך-מזהים-בעיה-עתידית-מנסחים-אותה-ובונים-לה-פתרון",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-070",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/post/מגבלות-חשיבה-של-מודלי-ai-מדוע-דרושה-שכבת-בקרה",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-post",
+      "slug": "מגבלות-חשיבה-של-מודלי-ai-מדוע-דרושה-שכבת-בקרה",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-071",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/blog",
+      "site": "forensic-logic-dri",
+      "page_kind": "blog-index",
+      "slug": "blog",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-072",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/about-us",
+      "site": "forensic-logic-dri",
+      "page_kind": "site-page",
+      "slug": "about-us",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-073",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri/research-timeline",
+      "site": "forensic-logic-dri",
+      "page_kind": "site-page",
+      "slug": "research-timeline",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-074",
+      "url": "https://beywolf5.wixsite.com/forensic-logic-dri",
+      "site": "forensic-logic-dri",
+      "page_kind": "site-page",
+      "slug": "forensic-logic-dri",
+      "topic_tags": [
+        "logic-engineering",
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-075",
+      "url": "https://beywolf5.wixsite.com/hebrew-thesis-insigh",
+      "site": "hebrew-thesis-insigh",
+      "page_kind": "site-page",
+      "slug": "hebrew-thesis-insigh",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-076",
+      "url": "https://beywolf5.wixsite.com/my-site-18/post/דף-נחיתה-למשקיעים--כלכלת-הלוגיקה-והמטבע-האונטולוגי",
+      "site": "my-site-18",
+      "page_kind": "blog-post",
+      "slug": "דף-נחיתה-למשקיעים--כלכלת-הלוגיקה-והמטבע-האונטולוגי",
+      "topic_tags": [
+        "logic-engineering",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-077",
+      "url": "https://beywolf5.wixsite.com/my-site-18/post/היתרונות-של-פארוק-משימה-ותחימת-היקף",
+      "site": "my-site-18",
+      "page_kind": "blog-post",
+      "slug": "היתרונות-של-פארוק-משימה-ותחימת-היקף",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-078",
+      "url": "https://beywolf5.wixsite.com/my-site-18/post/איך-ליישם-לוגיקות-בעסק-שלך",
+      "site": "my-site-18",
+      "page_kind": "blog-post",
+      "slug": "איך-ליישם-לוגיקות-בעסק-שלך",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-079",
+      "url": "https://beywolf5.wixsite.com/my-site-18/post/כל-מה-שצריך-לדעת-על-לוגיקה-בקופסאות",
+      "site": "my-site-18",
+      "page_kind": "blog-post",
+      "slug": "כל-מה-שצריך-לדעת-על-לוגיקה-בקופסאות",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-080",
+      "url": "https://beywolf5.wixsite.com/my-site-18/blog",
+      "site": "my-site-18",
+      "page_kind": "blog-index",
+      "slug": "blog",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-081",
+      "url": "https://beywolf5.wixsite.com/my-site-18",
+      "site": "my-site-18",
+      "page_kind": "site-page",
+      "slug": "my-site-18",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-082",
+      "url": "https://beywolf5.wixsite.com/my-site-18/inquiry-services-page",
+      "site": "my-site-18",
+      "page_kind": "service-or-booking",
+      "slug": "inquiry-services-page",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-083",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/logic-box-02-task-scope-binder",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "logic-box-02-task-scope-binder",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-084",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/ontological-logic-currency-future-ai-banking-he",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "ontological-logic-currency-future-ai-banking-he",
+      "topic_tags": [
+        "logic-engineering",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-085",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/evidence-gatekeeper-logic-he",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "evidence-gatekeeper-logic-he",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-086",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/demo-task-scope-binder-three-blog-posts",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "demo-task-scope-binder-three-blog-posts",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-087",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/about-logic-in-boxes",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "about-logic-in-boxes",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-088",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/deterministic-action-filter-he",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "deterministic-action-filter-he",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-089",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/worked-example-three-logics-one-case",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "worked-example-three-logics-one-case",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-090",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/how-to-buy-logic-boxes",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "how-to-buy-logic-boxes",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-091",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/logic-box-01-evidence-gatekeeper",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "logic-box-01-evidence-gatekeeper",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-092",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/from-logic-research-to-testable-product-he",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "from-logic-research-to-testable-product-he",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-093",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/logic-boxes-catalog-map",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "logic-boxes-catalog-map",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-094",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/מזעור-קטגוריות-צמצום-חידושים-תוך-שמירה-על-מסורות",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "מזעור-קטגוריות-צמצום-חידושים-תוך-שמירה-על-מסורות",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-095",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/classical-logic-to-logic-engineering",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "classical-logic-to-logic-engineering",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-096",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/outer-frameworks-inner-development-philosophy-kabbalah",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "outer-frameworks-inner-development-philosophy-kabbalah",
+      "topic_tags": [
+        "governance-research"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-097",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/demo-deterministic-action-filter-publish-change",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "demo-deterministic-action-filter-publish-change",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-098",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/logic-boxes-faq-he",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "logic-boxes-faq-he",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-099",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/logic-box-03-deterministic-action-filter",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "logic-box-03-deterministic-action-filter",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-100",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/task-decomposer-scope-binder-he",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "task-decomposer-scope-binder-he",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-101",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/philosophical-foundation-logic-market-ai",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "philosophical-foundation-logic-market-ai",
+      "topic_tags": [
+        "logic-engineering",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-102",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/הבדלים-בין-מהנדס-מערכות-לארכיטקט-לוגי",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "הבדלים-בין-מהנדס-מערכות-לארכיטקט-לוגי",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-103",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/הנדסת-לוגיקה-המפתח-לעתיד-הבינה-המלאכותית",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "הנדסת-לוגיקה-המפתח-לעתיד-הבינה-המלאכותית",
+      "topic_tags": [
+        "logic-engineering",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-104",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/logic-box-methodology",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "logic-box-methodology",
+      "topic_tags": [
+        "logic-engineering",
+        "governance-research"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-105",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/demo-evidence-gatekeeper-bout-nails",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "demo-evidence-gatekeeper-bout-nails",
+      "topic_tags": [
+        "logic-engineering",
+        "evidence-provenance"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-106",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/logic-in-boxes-catalog-he",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "logic-in-boxes-catalog-he",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-107",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/future-logic-market-ai-he",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "future-logic-market-ai-he",
+      "topic_tags": [
+        "logic-engineering",
+        "market-future"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-108",
+      "url": "https://beywolf5.wixsite.com/my-site-17/post/custom-logic-box-request",
+      "site": "my-site-17",
+      "page_kind": "blog-post",
+      "slug": "custom-logic-box-request",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-109",
+      "url": "https://beywolf5.wixsite.com/my-site-17/blog",
+      "site": "my-site-17",
+      "page_kind": "blog-index",
+      "slug": "blog",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-110",
+      "url": "https://beywolf5.wixsite.com/my-site-17/page",
+      "site": "my-site-17",
+      "page_kind": "generic-or-placeholder-page",
+      "slug": "page",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-111",
+      "url": "https://beywolf5.wixsite.com/my-site-17/page-1",
+      "site": "my-site-17",
+      "page_kind": "generic-or-placeholder-page",
+      "slug": "page-1",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-112",
+      "url": "https://beywolf5.wixsite.com/my-site-17",
+      "site": "my-site-17",
+      "page_kind": "site-page",
+      "slug": "my-site-17",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-113",
+      "url": "https://beywolf5.wixsite.com/wanga-lab",
+      "site": "wanga-lab",
+      "page_kind": "site-page",
+      "slug": "wanga-lab",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-114",
+      "url": "https://beywolf5.wixsite.com/global-algorithmic-g",
+      "site": "global-algorithmic-g",
+      "page_kind": "site-page",
+      "slug": "global-algorithmic-g",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-115",
+      "url": "https://beywolf5.wixsite.com/global-algorithmic-g/resilience-network",
+      "site": "global-algorithmic-g",
+      "page_kind": "site-page",
+      "slug": "resilience-network",
+      "topic_tags": [
+        "governance-research"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-116",
+      "url": "https://beywolf5.wixsite.com/global-algorithmic-g/technology-code",
+      "site": "global-algorithmic-g",
+      "page_kind": "site-page",
+      "slug": "technology-code",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-117",
+      "url": "https://beywolf5.wixsite.com/institute-for-global",
+      "site": "institute-for-global",
+      "page_kind": "site-page",
+      "slug": "institute-for-global",
+      "topic_tags": [
+        "governance-research"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-118",
+      "url": "https://beywolf5.wixsite.com/institute-for-global/research-archive",
+      "site": "institute-for-global",
+      "page_kind": "site-page",
+      "slug": "research-archive",
+      "topic_tags": [
+        "governance-research"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-119",
+      "url": "https://beywolf5.wixsite.com/institute-for-global/team-contact",
+      "site": "institute-for-global",
+      "page_kind": "site-page",
+      "slug": "team-contact",
+      "topic_tags": [
+        "governance-research"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-120",
+      "url": "https://beywolf5.wixsite.com/global-algorithmic-2",
+      "site": "global-algorithmic-2",
+      "page_kind": "site-page",
+      "slug": "global-algorithmic-2",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-121",
+      "url": "https://beywolf5.wixsite.com/international-ai-for/standards",
+      "site": "international-ai-for",
+      "page_kind": "site-page",
+      "slug": "standards",
+      "topic_tags": [
+        "governance-research"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-122",
+      "url": "https://beywolf5.wixsite.com/international-ai-for/laboratory",
+      "site": "international-ai-for",
+      "page_kind": "site-page",
+      "slug": "laboratory",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-123",
+      "url": "https://beywolf5.wixsite.com/international-ai-for/research",
+      "site": "international-ai-for",
+      "page_kind": "site-page",
+      "slug": "research",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-124",
+      "url": "https://beywolf5.wixsite.com/international-ai-for/contact",
+      "site": "international-ai-for",
+      "page_kind": "site-page",
+      "slug": "contact",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-125",
+      "url": "https://beywolf5.wixsite.com/international-ai-for/framework",
+      "site": "international-ai-for",
+      "page_kind": "site-page",
+      "slug": "framework",
+      "topic_tags": [
+        "governance-research"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-126",
+      "url": "https://beywolf5.wixsite.com/international-ai-for",
+      "site": "international-ai-for",
+      "page_kind": "site-page",
+      "slug": "international-ai-for",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-127",
+      "url": "https://beywolf5.wixsite.com/international-ai-for/methodology",
+      "site": "international-ai-for",
+      "page_kind": "site-page",
+      "slug": "methodology",
+      "topic_tags": [
+        "governance-research"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-128",
+      "url": "https://beywolf5.wixsite.com/ai-drift-research-hu",
+      "site": "ai-drift-research-hu",
+      "page_kind": "site-page",
+      "slug": "ai-drift-research-hu",
+      "topic_tags": [
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-129",
+      "url": "https://beywolf5.wixsite.com/ai-drift-research-hu/inquiry-services-page",
+      "site": "ai-drift-research-hu",
+      "page_kind": "service-or-booking",
+      "slug": "inquiry-services-page",
+      "topic_tags": [
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-130",
+      "url": "https://beywolf5.wixsite.com/operational-ai-drift",
+      "site": "operational-ai-drift",
+      "page_kind": "site-page",
+      "slug": "operational-ai-drift",
+      "topic_tags": [
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-131",
+      "url": "https://beywolf5.wixsite.com/operational-ai-drift/inquiry-services-page",
+      "site": "operational-ai-drift",
+      "page_kind": "service-or-booking",
+      "slug": "inquiry-services-page",
+      "topic_tags": [
+        "drift-forensics"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-132",
+      "url": "https://beywolf5.wixsite.com/ark-research-compu",
+      "site": "ark-research-compu",
+      "page_kind": "site-page",
+      "slug": "ark-research-compu",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-133",
+      "url": "https://beywolf5.wixsite.com/ark-research-compu/education",
+      "site": "ark-research-compu",
+      "page_kind": "site-page",
+      "slug": "education",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-134",
+      "url": "https://beywolf5.wixsite.com/ark-research-compu/vision",
+      "site": "ark-research-compu",
+      "page_kind": "site-page",
+      "slug": "vision",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-135",
+      "url": "https://beywolf5.wixsite.com/ark-research-compu/research",
+      "site": "ark-research-compu",
+      "page_kind": "site-page",
+      "slug": "research",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "CONTENT_REVIEWED"
+    },
+    {
+      "id": "WIX-136",
+      "url": "https://beywolf5.wixsite.com/ark-research-compu/partnerships",
+      "site": "ark-research-compu",
+      "page_kind": "site-page",
+      "slug": "partnerships",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-137",
+      "url": "https://beywolf5.wixsite.com/constitutionallaw",
+      "site": "constitutionallaw",
+      "page_kind": "site-page",
+      "slug": "constitutionallaw",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-138",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/post/unlocking-global-opportunities-how-continental-alliances-can-help-your-business",
+      "site": "continental-alliance",
+      "page_kind": "blog-post",
+      "slug": "unlocking-global-opportunities-how-continental-alliances-can-help-your-business",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-139",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/post/seizing-opportunities-how-continental-alliances-can-transform-your-business",
+      "site": "continental-alliance",
+      "page_kind": "blog-post",
+      "slug": "seizing-opportunities-how-continental-alliances-can-transform-your-business",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-140",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/post/from-local-to-global-the-benefits-of-joining-continental-alliances",
+      "site": "continental-alliance",
+      "page_kind": "blog-post",
+      "slug": "from-local-to-global-the-benefits-of-joining-continental-alliances",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-141",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/post/breaking-ground-continental-alliances-paving-the-way-for-global-expansion",
+      "site": "continental-alliance",
+      "page_kind": "blog-post",
+      "slug": "breaking-ground-continental-alliances-paving-the-way-for-global-expansion",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-142",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/post/the-art-of-collaboration-how-continental-alliances-drive-business-success",
+      "site": "continental-alliance",
+      "page_kind": "blog-post",
+      "slug": "the-art-of-collaboration-how-continental-alliances-drive-business-success",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-143",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/post/navigating-cultural-differences-building-successful-international-alliances",
+      "site": "continental-alliance",
+      "page_kind": "blog-post",
+      "slug": "navigating-cultural-differences-building-successful-international-alliances",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-144",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/post/building-bridges-how-continental-alliances-connect-companies-across-continents",
+      "site": "continental-alliance",
+      "page_kind": "blog-post",
+      "slug": "building-bridges-how-continental-alliances-connect-companies-across-continents",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-145",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/post/research-laboratory-research-gateway",
+      "site": "continental-alliance",
+      "page_kind": "blog-post",
+      "slug": "research-laboratory-research-gateway",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-146",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/post/expanding-horizons-exploring-new-markets-with-continental-alliances",
+      "site": "continental-alliance",
+      "page_kind": "blog-post",
+      "slug": "expanding-horizons-exploring-new-markets-with-continental-alliances",
+      "topic_tags": [
+        "market-future",
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-147",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/post/the-power-of-unity-how-continental-alliances-drive-global-growth",
+      "site": "continental-alliance",
+      "page_kind": "blog-post",
+      "slug": "the-power-of-unity-how-continental-alliances-drive-global-growth",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-148",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/post/breaking-barriers-the-power-of-cross-continental-partnerships",
+      "site": "continental-alliance",
+      "page_kind": "blog-post",
+      "slug": "breaking-barriers-the-power-of-cross-continental-partnerships",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-149",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/blog",
+      "site": "continental-alliance",
+      "page_kind": "blog-index",
+      "slug": "blog",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-150",
+      "url": "https://beywolf5.wixsite.com/continental-alliance",
+      "site": "continental-alliance",
+      "page_kind": "site-page",
+      "slug": "continental-alliance",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-151",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/blank-3",
+      "site": "continental-alliance",
+      "page_kind": "generic-or-placeholder-page",
+      "slug": "blank-3",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-152",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/blank-1",
+      "site": "continental-alliance",
+      "page_kind": "generic-or-placeholder-page",
+      "slug": "blank-1",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-153",
+      "url": "https://beywolf5.wixsite.com/continental-alliance/blank-2",
+      "site": "continental-alliance",
+      "page_kind": "generic-or-placeholder-page",
+      "slug": "blank-2",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-154",
+      "url": "https://beywolf5.wixsite.com/website",
+      "site": "website",
+      "page_kind": "site-page",
+      "slug": "website",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-155",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product-8",
+      "site": "die-continental-trad",
+      "page_kind": "store-product",
+      "slug": "i-m-a-product-8",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-156",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product-1",
+      "site": "die-continental-trad",
+      "page_kind": "store-product",
+      "slug": "i-m-a-product-1",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-157",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product-4",
+      "site": "die-continental-trad",
+      "page_kind": "store-product",
+      "slug": "i-m-a-product-4",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-158",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product-10",
+      "site": "die-continental-trad",
+      "page_kind": "store-product",
+      "slug": "i-m-a-product-10",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-159",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product-3",
+      "site": "die-continental-trad",
+      "page_kind": "store-product",
+      "slug": "i-m-a-product-3",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-160",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product-5",
+      "site": "die-continental-trad",
+      "page_kind": "store-product",
+      "slug": "i-m-a-product-5",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-161",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product-2",
+      "site": "die-continental-trad",
+      "page_kind": "store-product",
+      "slug": "i-m-a-product-2",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-162",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product-7",
+      "site": "die-continental-trad",
+      "page_kind": "store-product",
+      "slug": "i-m-a-product-7",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-163",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product-6",
+      "site": "die-continental-trad",
+      "page_kind": "store-product",
+      "slug": "i-m-a-product-6",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-164",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product",
+      "site": "die-continental-trad",
+      "page_kind": "store-product",
+      "slug": "i-m-a-product",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-165",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product-11",
+      "site": "die-continental-trad",
+      "page_kind": "store-product",
+      "slug": "i-m-a-product-11",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-166",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product-9",
+      "site": "die-continental-trad",
+      "page_kind": "store-product",
+      "slug": "i-m-a-product-9",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-167",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/post/computational-logic-research-gateway",
+      "site": "die-continental-trad",
+      "page_kind": "blog-post",
+      "slug": "computational-logic-research-gateway",
+      "topic_tags": [
+        "logic-engineering"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-168",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/blog",
+      "site": "die-continental-trad",
+      "page_kind": "blog-index",
+      "slug": "blog",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-169",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/blank-3",
+      "site": "die-continental-trad",
+      "page_kind": "generic-or-placeholder-page",
+      "slug": "blank-3",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-170",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad",
+      "site": "die-continental-trad",
+      "page_kind": "site-page",
+      "slug": "die-continental-trad",
+      "topic_tags": [
+        "unclassified-by-url"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-171",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/blank-4",
+      "site": "die-continental-trad",
+      "page_kind": "generic-or-placeholder-page",
+      "slug": "blank-4",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-172",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/book-online",
+      "site": "die-continental-trad",
+      "page_kind": "service-or-booking",
+      "slug": "book-online",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-173",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/blank-2",
+      "site": "die-continental-trad",
+      "page_kind": "generic-or-placeholder-page",
+      "slug": "blank-2",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    },
+    {
+      "id": "WIX-174",
+      "url": "https://beywolf5.wixsite.com/die-continental-trad/blank-1",
+      "site": "die-continental-trad",
+      "page_kind": "generic-or-placeholder-page",
+      "slug": "blank-1",
+      "topic_tags": [
+        "nonlogic-or-placeholder"
+      ],
+      "sitemap_status": "LISTED",
+      "semantic_review_status": "INVENTORIED_NOT_FULLY_SEMANTICALLY_REVIEWED"
+    }
+  ],
+  "logic_maps": [
+    {
+      "id": "MAP-01",
+      "name": "מבקשה לעדכון אתר מבוקר",
+      "status": "DEMONSTRATION_COMPOSITION",
+      "sources": [
+        "https://beywolf5.wixsite.com/my-site-17/post/task-decomposer-scope-binder-he",
+        "https://beywolf5.wixsite.com/my-site-17/post/logic-box-01-evidence-gatekeeper",
+        "https://beywolf5.wixsite.com/my-site-17/post/logic-box-03-deterministic-action-filter",
+        "https://beywolf5.wixsite.com/my-site-17/post/demo-deterministic-action-filter-publish-change"
+      ],
+      "path": [
+        "Task Decomposer & Scope Binder",
+        "Evidence Gatekeeper",
+        "Deterministic Action Filter",
+        "Authorized publication",
+        "Post-publication verification"
+      ],
+      "logic": "Scope defines allowed targets and acceptance criteria; evidence gate checks factual claims; deterministic filter separates permissible edits from out-of-scope changes and publication rights. Actual CMS publication remains unconnected in the demo.",
+      "tests": [
+        "Permitted typo correction",
+        "Unapproved price update",
+        "Publication without explicit permission"
+      ]
+    },
+    {
+      "id": "MAP-02",
+      "name": "טענה מסחרית לבדיקת מקור וחישוב",
+      "status": "DEMONSTRATED_SYNTHETIC_CASE",
+      "sources": [
+        "https://beywolf5.wixsite.com/my-site-17/post/demo-evidence-gatekeeper-bout-nails",
+        "https://beywolf5.wixsite.com/my-site-17/post/evidence-gatekeeper-logic-he"
+      ],
+      "path": [
+        "Claim",
+        "Source comparison",
+        "Arithmetic check",
+        "Contradiction status",
+        "Bounded report"
+      ],
+      "logic": "Fictional example: list price 180 NIS, sale price 140 NIS means 40/180 ≈ 22.2%, not 30%. The article explicitly says the business and price list are fictional.",
+      "tests": [
+        "Recalculate percentage",
+        "Verify source discrepancy",
+        "Do not infer intent to deceive"
+      ]
+    },
+    {
+      "id": "MAP-03",
+      "name": "הפרדה בין שינוי מודל לשינוי בקריטריון",
+      "status": "VERIFIED_WITHIN_SYNTHETIC_FIXTURE_AS_PUBLISHED",
+      "sources": [
+        "https://beywolf5.wixsite.com/forensic-logic-dri/post/what-a-verified-synthetic-drift-case-actually-proves",
+        "https://beywolf5.wixsite.com/forensic-logic-dri/post/ai-drift-forensics-from-baseline-to-reproducible-finding"
+      ],
+      "path": [
+        "Freeze output",
+        "Record criterion version",
+        "Replay both thresholds",
+        "Compare decisions",
+        "Record bounded verification"
+      ],
+      "logic": "Synthetic score 0.75 with threshold 0.80 returns reject; threshold 0.60 returns accept. Model score remains unchanged. Claim is limited to the fixture, not a real client incident.",
+      "tests": [
+        "Same score in both runs",
+        "Record both criterion versions",
+        "Prove decision flip derives from threshold change"
+      ]
+    },
+    {
+      "id": "MAP-04",
+      "name": "כריית לוגיקה עם לולאת משוב",
+      "status": "RESEARCH_MODEL_COMPOSED_FROM_PUBLISHED_SOURCES",
+      "sources": [
+        "https://beywolf5.wixsite.com/forensic-logic-dri/post/continuous-logic-mine-a-research-loop-not-a-static-archive",
+        "https://beywolf5.wixsite.com/forensic-logic-dri/post/from-source-to-structure-preserving-provenance-in-logic-research",
+        "https://beywolf5.wixsite.com/forensic-logic-dri/post/reusable-logic-packages-contracts-composition-and-verification"
+      ],
+      "path": [
+        "Source",
+        "Extraction",
+        "Reconstruction",
+        "Logic architecture",
+        "Configuration",
+        "Verification",
+        "Deployment",
+        "Evidence",
+        "New extraction"
+      ],
+      "logic": "Maintain source provenance, component contracts, test evidence and version history. New results can reopen an earlier mapping stage; that feedback policy is proposed, not a claim of fully autonomous operation.",
+      "tests": [
+        "Change one source",
+        "Identify impacted components",
+        "Produce graph diff",
+        "Re-test dependent combinations",
+        "Retain old version"
+      ]
+    },
+    {
+      "id": "MAP-05",
+      "name": "תאימות רכיבים לפני הרכבה",
+      "status": "PROPOSED_COMBINATION",
+      "sources": [
+        "https://beywolf5.wixsite.com/forensic-logic-dri/post/reusable-logic-packages-contracts-composition-and-verification",
+        "https://beywolf5.wixsite.com/forensic-logic-dri/post/beyond-agent-registries-the-proposed-logic-capability-layer",
+        "https://beywolf5.wixsite.com/my-site-17/post/logic-boxes-catalog-map"
+      ],
+      "path": [
+        "Requirement contract",
+        "Primitive contracts",
+        "Interface compatibility",
+        "Dependency resolution",
+        "Composite test",
+        "Evidence-backed release"
+      ],
+      "logic": "Check inputs, outputs, preconditions, permissions and failure behavior before combining components. Correct individual parts do not guarantee correct composition.",
+      "tests": [
+        "Mismatch in input format",
+        "Conflicting permissions",
+        "Composition must fail closed"
+      ]
+    },
+    {
+      "id": "MAP-06",
+      "name": "דריפט פורנזי מעדכן את המפה",
+      "status": "RESEARCH_COMPOSITION",
+      "sources": [
+        "https://beywolf5.wixsite.com/forensic-logic-dri/post/ai-drift-forensics-from-baseline-to-reproducible-finding",
+        "https://beywolf5.wixsite.com/forensic-logic-dri/post/the-forensic-case-engine-evidence-states-attribution-and-uncertainty",
+        "https://beywolf5.wixsite.com/international-ai-for/methodology"
+      ],
+      "path": [
+        "Baseline",
+        "Observation",
+        "Drift detection",
+        "Evidence preservation",
+        "Reconstruction",
+        "Dependency/causal analysis",
+        "Risk/intervention",
+        "Verification",
+        "Feedback to map"
+      ],
+      "logic": "Drift is a signal, not a cause. Preserve artifacts, reproduce what can be reproduced, distinguish association from causation, then revise the map version based on bounded findings.",
+      "tests": [
+        "Preserve baseline and artifacts",
+        "Replay within defined scope",
+        "Keep alternative explanations",
+        "Update only affected map version"
+      ]
+    }
+  ],
+  "quality_findings": [
+    {
+      "id": "Q-01",
+      "status": "OBSERVED",
+      "finding": "Several reviewed My Site 17 logic-box/demo posts append the same three philosophical/economic paragraphs after the page-specific content.",
+      "evidence_urls": [
+        "https://beywolf5.wixsite.com/my-site-17/post/demo-deterministic-action-filter-publish-change",
+        "https://beywolf5.wixsite.com/my-site-17/post/demo-evidence-gatekeeper-bout-nails",
+        "https://beywolf5.wixsite.com/my-site-17/post/logic-box-methodology",
+        "https://beywolf5.wixsite.com/my-site-17/post/logic-boxes-catalog-map",
+        "https://beywolf5.wixsite.com/my-site-17/post/from-logic-research-to-testable-product-he",
+        "https://beywolf5.wixsite.com/my-site-17/post/task-decomposer-scope-binder-he"
+      ],
+      "action": "Check whether these paragraphs are intentional shared content or accidental repetition. Do not remove automatically."
+    },
+    {
+      "id": "Q-02",
+      "status": "OBSERVED",
+      "finding": "Computational Logic exposes 12 product sitemap URLs titled 'I'm a product' with generic product-template copy; they should not be treated as validated logic products.",
+      "evidence_urls": [
+        "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product",
+        "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product-1",
+        "https://beywolf5.wixsite.com/die-continental-trad/product-page/i-m-a-product-2"
+      ],
+      "action": "Add product names, behavioral contracts, dependencies, tests and evidence before classifying as logic packages."
+    },
+    {
+      "id": "Q-03",
+      "status": "OBSERVED",
+      "finding": "Some public site URLs contain generic alliance/NGO/business/FAQ or placeholder content unrelated to logic engineering.",
+      "evidence_urls": [
+        "https://beywolf5.wixsite.com/continental-alliance",
+        "https://beywolf5.wixsite.com/website",
+        "https://beywolf5.wixsite.com/die-continental-trad"
+      ],
+      "action": "Keep them in the inventory but out of validated logic maps unless page content directly supports a specific relationship."
+    }
+  ]
+}
