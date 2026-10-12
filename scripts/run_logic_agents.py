@@ -41,7 +41,7 @@ def main():
   {'agent':'report-publisher','status':'MANIFEST_ONLY','wix_write_performed':False,'note':'This runtime writes a sync manifest; Wix deployment remains a separate approved, read-back-verified operation.'}
  ]
  report={'date':datetime.date.today().isoformat(),'run_status':'PASS' if not errors and not missing_sources else 'REVIEW','catalog_hash':hashlib.sha256(json.dumps(catalog,sort_keys=True,ensure_ascii=False).encode()).hexdigest(),'agent_count':len(agent_results),'agents':agent_results,'conversation_records_ingested':imported,'candidate_model':model,'first_model_gate':'NOT_READY_INTERNAL_CANDIDATE_ONLY','open_gaps':['Chat history is ingested only when available exports are committed.','Benchmark gate remains unmet until source-grounded test cases and holdout data are registered.','Candidate graph edges reflect the authored relation index and need semantic review.']}
- out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+chr(10),encoding='utf-8')
+ out=ROOT/'logic_wiki/generated/agent_cycle_report.json'; out.parent.mkdir(parents=True,exist_ok=True); out.write_text(json.dumps(report,ensure_ascii=False,indent=2)+chr(10),encoding='utf-8')
  print(json.dumps({'status':report['run_status'],'agents':len(agent_results),'conversation_records':len(imported),'compositions':model['candidate_composition_count'],'first_model_gate':report['first_model_gate'],'report':str(out.relative_to(ROOT))},ensure_ascii=False))
  return 0 if report['run_status']=='PASS' else 2
 if __name__=='__main__': raise SystemExit(main())
