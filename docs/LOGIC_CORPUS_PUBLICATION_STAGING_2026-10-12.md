@@ -1,99 +1,101 @@
 # Logic Corpus — Publication Staging and Fractal Mapping
 
 **Date:** 2026-10-12  
-**Status:** STAGING RECORD — no new public content was published.  
-**Purpose:** Track each research branch, repository, and Wix destination at its appropriate stage, without copying the entire research corpus to every site.
+**Status:** STAGING RECORD — no new public content has been published.  
+**Purpose:** One current source of truth for the logic research branches, GitHub documents, Notion records, and Wix sites. This file replaces earlier duplicated status notes.
 
-## 1. Current source and status
+## 1. Canonical architecture and claim boundaries
 
-### Source PDF
-The 79-page uploaded file `עץ החיים לוגיקה מסדר ראשון חלק א+ב(1).pdf` supports a bounded first-stage extraction: original sentence, subject/story, predicate, logical connectives/relations, participant names, and embedded sentences are preserved. The section on *Guide for the Perplexed* I:8 includes 28 records, `S-08-001…S-08-028`, and explicitly defers the second logic until the first extraction is complete.
+The consolidated proposal is **five forward-processing layers + five return stages**. These are ten functional stages, not evidence that ten separate neural networks have been implemented.
 
-The file has not been independently checked line-by-line against a specific critical edition. It does not define the four mathematical-weight layers, their formulas, reversible text/math encoding, the full 231-gate runtime, all 3D coordinates, or reproducible LFA/CSR/EDI benchmark results.
+Keep four concepts separate:
+1. five forward layers and five return stages — flow architecture;
+2. four logical-mathematical weight layers associated with letter interpretations — definitions/formulas still need to be recovered from research;
+3. four sentence roles in the 79-page extraction method — subject, predicate, internal participant, logical connective/relation;
+4. provenance stages — source, extraction, interpretation, engineering hypothesis.
 
-Audit: [SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md)
+Hard constraints are separate from soft weights. "Atomic/subatomic/metaphysical" currently describes conceptual depth, not demonstrated physical or quantum mechanisms. Exact-text reconstruction and structural reconstruction are separate tests.
 
-## 2. Fractal / project-stage map
+Canonical specification: [FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md)
 
-| Branch / asset | Role | Current stage | Next action |
-|---|---|---|---|
-| Source PDF extraction | Source-grounded first logic | EXTRACTED IN WORKING DOCUMENT / source edition NOT_YET_VERIFIED | Validate citations/editions; convert sentence records to structured rows |
-| Letter interpretations | Preserve all sourced readings per letter | RESEARCH TRACK | Build letter → interpretation → source records from the relevant corpus |
-| Four mathematical-weight layers | Weight each relevant letter interpretation, according to the user's research architecture | DEFINITION RECOVERY REQUIRED | Find original layer names/definitions/formulas; do not invent |
-| Text ↔ mathematical representation | Encode, deconstruct, and test reconstruction back to text/structure | HYPOTHESIS / SPECIFICATION OPEN | Define encoding and decoding contracts; test exact text versus structural reconstruction separately |
-| 231 two-letter gates | Combination graph and possible gate behavior | COMBINATORIAL COUNT KNOWN; ENGINE NOT VERIFIED | Define direction/order, gate state, inputs, outputs, constraints, and test fixtures |
-| 3D / fractal measures | Coordinate and scale representation | PARTIAL CLAIMS IN ARCHITECTURE DRAFT | Recover complete coordinates, scale definitions, data, and formulas; distinguish illustrative numbers from measurements |
-| Rational Logic | Formal constraints/inference interface | ARCHITECTURAL RESERVATION | Accept only source-linked structured relations until weight-layer interface is specified |
-| Logic Mine | Mine reusable logic from sources into testable assets | RESEARCH INDEX | Register the PDF as bounded extraction evidence; avoid claims of universal extraction or proven market size |
-| 257-page corpus plan | Editorial/navigation skeleton | SPECIFIED | Populate each page from sources; expand fractally only when a distinct question, source, relation, or test warrants it |
+## 2. Evidence from the 79-page source extraction
 
-## 3. Wix site-by-site status
+The PDF documents sentence-level extraction for selected passages in *Etz Chaim* and 28 records (`S-08-001…S-08-028`) about *Guide for the Perplexed* I:8. It preserves original sentences, subject/predicate roles, relations and embedded sentences. Its I:8 section explicitly defers a second logic until the first extraction is complete.
+
+The file does not define the four weight-layer formulas, the full 231-gate runtime, all 3D coordinates, a fractal-dimension calculation with data, an invertible text/math encoding, or reproducible LFA/CSR/EDI results.
+
+Source audit: [SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md)
+
+## 3. Current GitHub source-of-truth files
+
+- [257-page corpus plan](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/LETTER_LOGIC_CORPUS_257_PAGE_PLAN_V1.md) — editorial/index structure and fractal expansion policy.
+- [Canonical 5+5 architecture review](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md) — deduplicated architecture, error audit, forward/return stages, round-trip tests, investor framing.
+- [Source audit](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md) — what the PDF supports and what it does not.
+- [Investor explanation draft](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/INVESTOR_LOGIC_EXPLANATION_UPDATE_DRAFT_HE.md) — current investor framing, draft only.
+- [Logic Mine research tracks](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/LOGIC_MINE_RESEARCH_TRACKS.md) — research extraction boundaries.
+- [Rational Logic integration position](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/RATIONAL_LOGIC_INTEGRATION_POSITION_V1.md) — interface boundary.
+- [Productization and first logic demo](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/PRODUCTIZATION_AND_FIRST_LOGIC_DEMO_2026-10-09.md) — bounded prototype versus proposed full architecture.
+
+## 4. Wix status by site
 
 ### Forensic Logic Drift
-- **Site status:** Published; Wix Blog is installed.
-- **Action performed:** Created one unpublished Wix Blog draft:
-  - Title: “ממיפוי טקסט להנדסת לוגיקה: מה כבר הודגם ומה עדיין פתוח”
-  - Draft ID: `e1992c65-dcc3-4483-90d3-eb8688fea347`
-  - Preview path returned by Wix: `/post/ממיפוי-טקסט-להנדסת-לוגיקה-מה-כבר-הודגם-ומה-עדיין-פתוח`
-  - Status: `UNPUBLISHED`
-- **Next action:** Human review, revise structure/formatting if needed, and only publish after explicit review. Nothing from this operation went live.
+- **Site:** Published; Wix Blog available.
+- **Draft ID:** `e1992c65-dcc3-4483-90d3-eb8688fea347`.
+- **Current draft title:** “ארכיטקטורת לוגיקה דו־כיוונית: חמש שכבות עיבוד וחמישה שלבי חזור”.
+- **Current status:** `UNPUBLISHED`.
+- **Preview URL:** https://beywolf5.wixsite.com/forensic-logic-dri/post/ממיפוי-טקסט-להנדסת-לוגיקה-מה-כבר-הודגם-ומה-עדיין-פתוח
+- **Note:** Wix retained the earlier SEO slug although the title and body were updated. No public article was published.
+
+The revised draft consolidates the repeated five-layer and ten-stage passages; differentiates the four weight layers; marks the 79-page PDF’s evidentiary boundary; removes claims of zero failures, perfect reconstruction, universal AI uniqueness, and unsupported empirical scores; and includes a restrained investor explanation.
 
 ### Wanga Logic Research
-- **Site status:** Draft site; Wix Blog was not listed among installed apps in site context.
-- **Action performed:** No Wix content changed.
-- **Next action:** Keep GitHub/Notion as current technical draft location; later determine whether to build a static research page or add a Blog app. Do not install apps or change the site's design without a separate decision.
+- **Site:** Draft site; Wix Blog is not listed among installed apps.
+- **Changes:** No Wix site content changed.
+- **Next stage:** Decide whether to create a structured static research page or enable a blog; no app installation or layout change was made.
 
 ### Hebrew Thesis Insight
-- **Site status:** Published; Wix Blog was not listed among installed apps in site context.
-- **Action performed:** No live site content changed. Investor explanation is a draft in GitHub and Notion.
-- **Next action:** Prepare a concise static-page update using the supported Wix site/page workflow, then review. Do not install a Blog app just to publish a single investor summary.
+- **Site:** Published; Wix Blog is not listed among installed apps.
+- **Changes:** No live content changed.
+- **Investor content:** The updated investor draft lives in GitHub and Notion. A static-site update should be prepared only through a supported page-editing workflow.
 
 ### Wanga Lab
-- **Site status:** Published portal/site.
-- **Action performed:** No live content changed.
-- **Next action:** Later add navigation to research branches and evidence status after the main technical content is reviewed, avoiding duplication of the entire paper.
+- **Site:** Published portal.
+- **Changes:** No live content changed.
+- **Next stage:** Add reviewed navigation links to research branches and their evidence status; do not duplicate the full paper.
 
-### Other specialty sites
-Rational Logic, Computational Linguistics, Structural Mathematics, Computational Logic, Research Laboratory, Research Convergence, Research Library, Neural Thinking Machine, AI Drift Forensics, AI Drift Hub and Superpositional Logic were not edited as part of this pass. Their next actions should be tied to the relevant branch, not to bulk-republishing the same article.
+### Specialty sites
+Rational Logic, Computational Linguistics, Structural Mathematics, Computational Logic, Research Laboratory, Research Convergence, Research Library, Neural Thinking Machine, AI Drift Forensics, AI Drift Hub and Superpositional Logic were not edited live in this pass. Their GitHub branch documents can link to the canonical architecture, but site-specific edits require a page/content audit first.
 
-## 4. GitHub changes in this pass
+## 5. Notion status
 
-- [Research corpus plan](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/LETTER_LOGIC_CORPUS_257_PAGE_PLAN_V1.md) — corrected the stale “new language” framing, added four-weight-layer distinction, reversible encoding plan, and source-boundary note.
-- [79-page source audit](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md) — newly added.
-- [Investor explanation draft](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/INVESTOR_LOGIC_EXPLANATION_UPDATE_DRAFT_HE.md) — updated to describe four logical-mathematical weight layers as a research architecture while marking the formulas and engine as unverified.
-- [Rational Logic integration](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/RATIONAL_LOGIC_INTEGRATION_POSITION_V1.md) — added the interface boundary to the letter-weight layer.
-- [Logic Mine research tracks](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/LOGIC_MINE_RESEARCH_TRACKS.md) — added the source extraction boundary and follow-up work.
+- Updated the master 257-page plan to distinguish four weight layers from sentence roles and computational stages, and to link the 5+5 architecture.
+- Updated the investor draft with a 5+5 summary and a bounded commercial thesis.
+- Created source-audit notes for the 79-page PDF.
+- Created the canonical Notion page [Architecture 5+5 — review and error audit](https://app.notion.com/p/3f7649f57cbd81e1a3f6cd48181dfcec?pvs=204).
+- The Notion material is research documentation/draft content, not a public site publication.
 
-## 5. Notion changes in this pass
+## 6. Investor position
 
-- Updated “תוכנית אב — מאגר לוגיקה 257 עמודים ל-Wix” with the PDF audit and distinction between sentence-role fields and weight layers.
-- Updated “טיוטה למשקיעים — מהי הלוגיקה שאנחנו חוקרים” with the same evidence boundary.
-- Created a private draft page “ביקורת מקור — PDF חילוץ לוגיקה ראשונה, 79 עמודים”.
+The research archive is evidence and explanation, not the product itself. The near-term commercial hypothesis is task-specific logic packages with explicit inputs, outputs, constraints, source lineage and acceptance tests, with paid configuration and integration where needed.
 
-## 6. Rules before publication
+The potential differentiator is a source-linked, testable logic representation and a traceable return path. Its uniqueness and commercial value must be tested. Neuro-symbolic AI is an active existing research field; do not claim no other system can perform related functions. No validated market demand, performance superiority, zero-failure property or fully reversible engine is claimed.
 
-1. No silent replacement of existing public articles.
-2. No public claim of VERIFIED without source/implementation/test evidence.
-3. No invented names or formulas for the four weight layers.
-4. No confusion between (a) four sentence roles, (b) three proposed computational layers, (c) four mathematical-weight layers, and (d) source/extraction/interpretation/engineering provenance stages.
-5. No performance numbers for LFA/CSR/EDI until a reproducible dataset, benchmark definitions, baseline, runs, and logs are available.
-6. Every public explainer points to a technical specification or states the relevant unknowns.
-7. Drafts remain unpublished pending review.
+## 7. Rules before publication
 
-## 7. Immediate next sequence
+1. Do not replace existing public articles silently.
+2. Do not claim VERIFIED without source/implementation/test evidence.
+3. Do not invent names or formulas for the four weight layers.
+4. Do not merge hard constraints with soft scoring.
+5. Do not publish the LFA/CSR/EDI values as measured results until a reproducible dataset, metric definitions, baseline, runs and logs are available.
+6. Do not describe conceptual "subatomic/metaphysical" weights as established physical/quantum mechanisms.
+7. Keep the Wix draft unpublished until human review.
 
-1. Locate the original four weight-layer definitions in the research archive/conversation corpus.
-2. Finalize the source register and exact editions for the 79-page extraction.
-3. Build structured data for sentence records and letter interpretations, retaining source pointers.
-4. Define the math representation and its decoder, then separate exact-text and structural reconstruction tests.
-5. Specify and test one bounded gate or weight case end-to-end.
-6. Review the Forensic Logic Drift draft.
-7. Prepare appropriate technical and investor static-page drafts for Wanga Logic Research and Hebrew Thesis Insight without publishing.
+## 8. Immediate sequence
 
-## עדכון 2026-10-12 — ארכיטקטורה מאוחדת וטיוטת Wix
-
-- מפרט ארכיטקטורה קנוני נוצר: [FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md). הוא מרכז את חמש שכבות העיבוד ואת חמש תחנות החזור, מסיר את הכפילות מהטקסט שסופק, ומפריד אותן מארבע שכבות המשקולות.
-- טיוטת Wix הקיימת עודכנה ללא פרסום: Draft ID `e1992c65-dcc3-4483-90d3-eb8688fea347`; הכותרת כעת ״ארכיטקטורת לוגיקה דו־כיוונית: חמש שכבות עיבוד וחמישה שלבי חזור״.
-- טיוטת המשקיעים ב-GitHub עודכנה: [INVESTOR_LOGIC_EXPLANATION_UPDATE_DRAFT_HE.md](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/INVESTOR_LOGIC_EXPLANATION_UPDATE_DRAFT_HE.md).
-- תוקנו/סומנו כלא-מאומתים: ההבטחה ל-Zero-Crash, שחזור מושלם, טענות שאף מנוע AI אחר אינו מסוגל לכך, ערכי LFA/CSR/EDI ללא פרוטוקול ונתונים, והמיזוג בין אילוצים קשיחים למשקולות רכות.
-- **אין פרסום חי חדש.** הסטטוס של פוסט Wix נשאר UNPUBLISHED ויש לאשר את התוכן האנושי לפני פרסום.
+1. Recover the original definitions of the four weight layers from research materials.
+2. Validate exact editions and references for source-extracted passages.
+3. Structure the source sentence and letter-interpretation records with provenance.
+4. Define and test exact-text decoding separately from structural reconstruction.
+5. Complete one bounded, testable gate/weight demonstration.
+6. Review the Forensic Logic Drift draft and then decide whether to publish.
+7. Prepare site-specific static-page drafts for Wanga Logic Research and Hebrew Thesis Insight only after confirming supported page-editing routes.
