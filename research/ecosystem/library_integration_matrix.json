@@ -30,8 +30,8 @@
     },
     {
       "component": "z3-proof-adapter",
-      "status": "IMPLEMENTED_OPTIONAL_BOUNDED_PROTOTYPE",
-      "limit": "explicit Boolean/integer/real/string AST only; checks premise consistency separately; no natural-language formalizer; not a source-truth oracle"
+      "status": "IMPLEMENTED_OPTIONAL_BOUNDED_PROTOTYPE_CI_PENDING",
+      "limit": "explicit Boolean/integer/real/string AST only; checks premise consistency separately; every premise must cite a source or be marked assumption=true; no natural-language formalizer; not a source-truth oracle"
     },
     {
       "component": "swarm-coordinator",
@@ -70,13 +70,23 @@
     },
     {
       "component": "formal-fixture-benchmark",
-      "status": "IMPLEMENTED_SEVEN_SYNTHETIC_CASES",
+      "status": "IMPLEMENTED_SEVEN_SYNTHETIC_CASES_CI_PENDING",
       "limit": "validates adapter behavior only; source-grounded logic benchmark still missing"
     },
     {
       "component": "logic-evaluation-ledger",
-      "status": "IMPLEMENTED_HARD_GATES",
+      "status": "IMPLEMENTED_HARD_GATES_CI_PENDING",
       "limit": "records an evaluation vector and review decision only; no reward learning or auto-promotion"
+    },
+    {
+      "component": "logic-package-contract",
+      "status": "IMPLEMENTED_SCHEMA_AND_FAIL_CLOSED_VALIDATOR_CI_PENDING",
+      "limit": "verified state requires independent reviewer, evidence refs and benchmark hash; contract conformance is not semantic proof"
+    },
+    {
+      "component": "formalization-queue",
+      "status": "IMPLEMENTED_SOURCE_PRESERVING_QUEUE_CI_PENDING",
+      "limit": "preserves candidate definitions and source refs; does not invent formal AST; solver is not run until explicit formalization exists"
     }
   ],
   "categories": [
@@ -487,10 +497,10 @@
   ],
   "acceptance_gates": [
     "Matrix and configs pass schema/integrity validation.",
-    "Z3 adapter handles SAT/UNSAT/UNKNOWN on fixed formal fixtures and never maps SAT directly to truth.",
+    "The optional Z3 adapter returns SAT/UNSAT/UNKNOWN on fixed formal fixtures, every premise is source-backed or an explicit assumption, and no result auto-promotes truth.",
     "At least 30 source-grounded negative, boundary or counterexample cases exist before any model release.",
     "Current lexical-ranking baseline is measured for precision/recall at K, false selections and provenance coverage.",
-    "Candidate variants cannot modify source records or promote their own status.",
+    "Candidate variants cannot change source records, policy gates, formal premises or be promoted by their own score; unformalized Logic Trader candidates remain queued.",
     "Network sync remains disabled until peer auth, replay protection and partition tests pass.",
     "Each connectome track has a pinned dataset manifest and task benchmark before agent integration."
   ],
