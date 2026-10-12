@@ -8,7 +8,10 @@
     "min_benchmark_accuracy": 0.9,
     "max_counterexample_rate": 0.02,
     "min_holdout_score": 0.85,
-    "max_compute_seconds": 30
+    "max_compute_seconds": 30,
+    "min_evidence_coverage": 0.95,
+    "max_false_accept_rate": 0.05,
+    "max_counterexample_escape_rate": 0.02
   },
   "hard_gates": [
     "premises_consistent",
