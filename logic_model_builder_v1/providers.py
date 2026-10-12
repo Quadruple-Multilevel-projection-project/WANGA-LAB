@@ -42,7 +42,7 @@ class StructuredSpecProvider:
             lines.append(f"source {source['id']} " + " ".join(opts))
 
         for fact in specification.get("facts", []):
-            refs = ",".join(fact.get("evidence_refs", [])) or "none"
+            refs = ",".join(fact.get("evidence_refs", []))
             lines.append(
                 f"fact {fact['id']} {fact['atom']} "
                 f"status={str(fact.get('epistemic_status', 'UNKNOWN')).upper()} evidence={refs}"
