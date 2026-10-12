@@ -268,3 +268,14 @@
 ## מפת ניווט לקורא והקופסאות הלוגיות באתר
 
 פורסם דף היכרות שמדגים ניווט בין תוצרי המחקר באמצעות קופסאות קישור: [מפת השימוש הלוגי באתר](https://beywolf5.wixsite.com/forensic-logic-dri/post/מפת-השימוש-הלוגי-באתר-קופסאות-קישור). בתוכנית ההמשך, כל עמוד לוגי יקבל מפת ניווט מקומית שמקשרת מקור, בעיה, המודל הרלוונטי, בדיקות והשלב הבא. מפת הניווט המרכזית אינה מוכיחה שכל המאמרים הישנים כבר עודכנו.
+
+## Supplementary atomic page definitions — 1,000-record extension (2026-10-12)
+
+The 257-page plan remains the editorial outline. The separate 1,000-record registry defines granular letter/gate/transition dossiers, map/submap definitions, validation cases and formalization obligations. These are not represented as complete or published articles.
+
+- [Extended 1,000-page plan](../docs/EXTENDED_LOGIC_CORPUS_1000_PAGE_BLUEPRINT_V1.md)
+- [Machine-readable registry index](./data/LOGIC_CORPUS_1000_PAGE_BLUEPRINT_V1.json)
+- [Master map atlas](../docs/LOGIC_CORPUS_MAP_ATLAS_V1.md)
+- [Mathematical integrity register](../docs/LOGIC_231_MATHEMATICAL_INTEGRITY_REGISTER_V1.md)
+
+The extension distinguishes 231 unordered pairs, 462 ordered pairs, 1,540 unordered triples and 9,240 ordered triples without repetition. It retains the documented 221/231 textual variant and leaves missing weight formulas and spatial/Lie/E8/Tonnetz mappings unresolved.
