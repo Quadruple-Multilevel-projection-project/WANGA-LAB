@@ -2,7 +2,7 @@
   "schema_version": "wanga-library-integration-matrix/1.0",
   "audit_date": "2026-10-12",
   "basis": "Pasted text.txt plus current ARK-Swarm/Logic Trader implementation and official documentation for short-listed projects.",
-  "status": "CANONICAL_FORMAL_REASONING_REUSED_TYPED_FRAGMENT_AND_PACKAGE_GATES_ADDED_IN_BRANCH_PENDING_CI",
+  "status": "MERGED_MAIN_CI_PASS_SOURCE_GROUNDED_SEMANTIC_BENCHMARKS_STILL_MISSING",
   "scope": {
     "logic_trader": "Selection, composition and evaluation of logical assets only.",
     "dependency_policy": "Prefer one task-specific adapter at a time; do not bulk-install the 100+ candidates."
@@ -30,8 +30,8 @@
     },
     {
       "component": "z3-proof-adapter",
-      "status": "CANONICAL_PROPOSITIONAL_ADAPTER_EXISTS_ON_MAIN",
-      "limit": "formal_reasoning/propositional.py checks only explicit propositional formulas; SAT/UNSAT/UNKNOWN is not natural-language truth or source authentication"
+      "status": "CANONICAL_PROPOSITIONAL_ADAPTER_TESTED_ON_MAIN",
+      "limit": "Existing propositional adapter plus the tested typed-fragment complement; SAT/UNSAT/UNKNOWN are encoding-relative results."
     },
     {
       "component": "swarm-coordinator",
@@ -80,23 +80,23 @@
     },
     {
       "component": "logic-package-contract",
-      "status": "IMPLEMENTED_FAIL_CLOSED_SCHEMA_AND_VALIDATOR_PENDING_CI",
-      "limit": "requires independent review metadata for VERIFIED; contract validity is not semantic proof"
+      "status": "TESTED_FAIL_CLOSED_SCHEMA_AND_VALIDATOR",
+      "limit": "Lifecycle contract requires independent approval metadata for VERIFIED; schema/contract tests passed, but schema validity does not prove semantic correctness."
     },
     {
       "component": "formalization-queue",
-      "status": "IMPLEMENTED_SOURCE_PRESERVING_QUEUE_PENDING_CI",
-      "limit": "preserves candidate definitions/source IDs; does not invent AST; solver is not run until formalization is explicit"
+      "status": "IMPLEMENTED_TESTED_SOURCE_PRESERVING_QUEUE",
+      "limit": "Queue preserves source-linked surface definitions, marks NOT_FORMALIZED, and does not invent AST or run the solver on raw prose."
     },
     {
       "component": "typed-formal-fragment-adapter",
-      "status": "IMPLEMENTED_AS_OPTIONAL_COMPLEMENT_PENDING_CI",
-      "limit": "typed Boolean/Int/Real/String AST checks only; no natural-language formalizer; every premise must cite a source or be an explicit assumption"
+      "status": "IMPLEMENTED_TESTED_SYNTHETIC_FIXTURES",
+      "limit": "Typed Bool/Int/Real/String AST adapter passed CI fixtures; still no natural-language formalizer or source-grounded semantic validation."
     },
     {
       "component": "typed-formal-fixture-benchmark",
-      "status": "IMPLEMENTED_SEVEN_SYNTHETIC_CASES_PENDING_CI",
-      "limit": "validates typed adapter behavior only; no source-grounded semantic benchmark"
+      "status": "TESTED_SEVEN_SYNTHETIC_CASES",
+      "limit": "Seven adapter fixtures pass; they verify implementation behavior only, not Logic Trader semantic correctness."
     }
   ],
   "categories": [
@@ -110,7 +110,7 @@
           "fit": "Existing propositional adapter plus optional typed AST for Bool/Int/Real/String; source-gated and bounded.",
           "decision": "EXTEND_EXISTING_FORMAL_REASONING",
           "official_url": "https://github.com/Z3Prover/z3",
-          "status": "CANONICAL_PROPOSITIONAL_SOLVER_ON_MAIN_TYPED_AST_EXTENSION_PENDING_CI"
+          "status": "PROPOSITIONAL_ADAPTER_ON_MAIN_PLUS_TYPED_AST_EXTENSION_TESTED_SYNTHETICALLY"
         },
         {
           "name": "Lean 4 + LeanCopilot",
