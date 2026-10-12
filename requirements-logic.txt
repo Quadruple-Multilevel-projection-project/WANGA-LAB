@@ -1,3 +1,4 @@
 # Optional dependency set for the bounded formal-logic adapter only.
 # Deliberately separate from the default app/runtime dependencies.
 z3-solver>=4.13,<5
+jsonschema>=4,<5
