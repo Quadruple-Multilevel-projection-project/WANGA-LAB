@@ -1,7 +1,8 @@
-"""Bounded propositional verification adapter backed by Z3.
+"""Bounded propositional text frontend for the canonical logic_proof typed-AST adapter.
 
-This module verifies only formulas written in the declared propositional grammar.
-It never turns a solver result into empirical truth or source authentication.
+This module parses only formulas written in the declared propositional grammar.
+All Z3 solving is delegated to logic_proof.z3_adapter; results never establish
+empirical truth or source authenticity.
 """
 from __future__ import annotations
 
@@ -328,7 +329,7 @@ def analyze_claim_batch(specs: Sequence[Mapping[str, Any]]) -> dict[str, Any]:
     for index, spec in enumerate(specs):
         try:
             rows.append(analyze_claim(spec))
-        except (FormalInputError, RuntimeError) as exc:
+        except (ValueError, RuntimeError) as exc:
             rows.append({
                 "claim_id": spec.get("claim_id") if isinstance(spec, Mapping) else None,
                 "status": "INPUT_OR_DEPENDENCY_ERROR",
