@@ -56,3 +56,13 @@ A published hyperlink is recorded as a link, not automatically as a logical depe
 - The label 'verified public sources' was changed to 'public sources reviewed'; the 70-post list is labelled as a sitemap register.
 - Original source Wix content was not deleted or rewritten. Six repeated-tail observations and twelve generic store placeholders remain flagged for manual source-page review.
 - Inventory check: 174 records, 174 unique URLs, 16 site slugs, zero duplicate URLs.
+
+## Extended Logic Corpus — live atlas
+
+- [Interactive corpus atlas](https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-corpus-atlas.html) — searchable 1,000-page blueprint and SVG exploration of 22 letter nodes, 231 unordered pairs, 462 directed transitions, and 1,540 unordered triple sets.
+- [Page-definition plan](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/EXTENDED_LOGIC_CORPUS_1000_PAGE_BLUEPRINT_V1.md).
+- [Machine-readable index](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/data/LOGIC_CORPUS_1000_PAGE_BLUEPRINT_V1.json).
+- [231/462 gate map](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/data/LETTER_GATE_MAP_231_V1.json) and [1,540 triple-set map](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/data/LETTER_TRIPLE_MAP_1540_V1.json).
+- [Mathematical integrity register](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/LOGIC_231_MATHEMATICAL_INTEGRITY_REGISTER_V1.md).
+
+**Atlas QA (2026-10-12):** browser test passed for loading all 1,000 page definitions, exploring undirected/directed/triple map modes, and finding `GATE-001`. Page definitions remain SPECIFIED / NOT_YET_VERIFIED; this does not verify the semantic role of all gates or a production runtime.
