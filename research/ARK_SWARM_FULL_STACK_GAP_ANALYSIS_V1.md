@@ -166,3 +166,22 @@ The repository's current `formal_reasoning/` module already supplies a bounded p
 - `ark_swarm/coordinator.py` adds formalization-queue and typed-benchmark roles and writes queue/benchmark reports alongside the candidate.
 
 The typed extension is complementary to `formal_reasoning/propositional.py`, not a replacement. Both return `NOT_YET_VERIFIED` for solver checks; only the main propositional adapter remains the existing canonical logic-language parser. Synthetic fixture passes verify implementation behavior, not source-grounded semantic validity.
+
+
+## Post-merge implementation and CI snapshot — 2026-10-12
+
+The typed formal reasoning extension has been merged into `main` in PR #114. The final PR-head Logic Fractal Wiki Research workflow passed, as did Repository Integrity, WANGA Ecosystem Agent Sweep and both CodeQL analyses.
+
+Verified in that run:
+- Existing propositional formal adapter: 18 tests passed.
+- Typed AST adapter: 9 tests passed.
+- Typed formal fixture benchmark: 7/7 synthetic cases passed.
+- Formalization queue: 3 tests passed.
+- Logic package contract: 5 tests passed.
+- Formal package/queue schemas: 6 tests passed.
+- Existing Logic Wiki, typed fragment composition, source intake and ARK-Swarm integration tests passed.
+- ARK-Swarm cycle: 10/10 role checks passed; zero failed roles. Candidate ID: `LT-c1918183cff25c53`.
+- Logic Wiki build: 28 articles, 17 sources, 523 composition candidates; readiness remains `NOT_READY_INTERNAL_CANDIDATE_ONLY`.
+
+These are software/integration results. The seven typed-formal cases are synthetic adapter fixtures, not source-grounded semantic benchmarks. No candidate was promoted to `VERIFIED`; no weights were updated. The next P0 requirement remains source-grounded formalization, negative/boundary cases, holdout testing and independent review.
+

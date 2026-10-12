@@ -291,7 +291,7 @@ The adapter only checks explicitly encoded propositional formulas. It does not t
 
 ## Formal reasoning extension for ARK-Swarm
 
-The existing `formal_reasoning/` module is the canonical bounded propositional checker. The current integration branch adds `formal_reasoning/typed_fragment.py` for explicit typed Bool/Int/Real/String ASTs, a source-preserving formalization queue, a fail-closed package lifecycle contract and CI coverage. These components do not formalize arbitrary natural language. Synthetic formal tests check the adapter, and every candidate remains `NOT_YET_VERIFIED` pending source-grounded benchmarks and independent review.
+The existing `formal_reasoning/` module is the canonical bounded propositional checker. The merged integration adds `formal_reasoning/typed_fragment.py` for explicit typed Bool/Int/Real/String ASTs, a source-preserving formalization queue, a fail-closed package lifecycle contract and CI coverage. These components do not formalize arbitrary natural language. Synthetic formal tests check the adapter, and every candidate remains `NOT_YET_VERIFIED` pending source-grounded benchmarks and independent review.
 
 ```bash
 python -m unittest discover -s tests -p 'test_formal_typed_fragment.py' -v
