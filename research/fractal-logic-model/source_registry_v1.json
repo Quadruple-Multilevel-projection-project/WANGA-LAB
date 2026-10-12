@@ -1,14 +1,15 @@
 {
   "schema_version": "1.0",
   "captured_on": "2026-10-12",
-  "scope": "Accessible GitHub and Library artifacts only; no full ChatGPT history export was available in the current file lists.",
+  "scope": "Only accessible GitHub and Library artifacts inspected in this run. Full ChatGPT account history is not available through current file listings.",
+  "hash_policy": "GitHub content API hashes are git-blob-sha1, not SHA-256. Library SHA-256 values below were computed from materialized original bytes. If raw bytes are unavailable, no original-byte hash is claimed.",
   "sources": [
     {
       "source_id": "SRC-GH-LOGIC-MINE-TRACKS",
       "kind": "github_file",
       "ref": "main",
       "locator": "research/LOGIC_MINE_RESEARCH_TRACKS.md",
-      "span": "Whole file",
+      "span": "Whole file; source selection and logic-before-weight boundary",
       "date": "2026-10-12 snapshot",
       "language": "en",
       "hash_algorithm": "git-blob-sha1",
@@ -17,21 +18,105 @@
       "usage_permissions": "Public repository reference; redistribution terms not checked"
     },
     {
+      "source_id": "SRC-GH-SOURCE-AUDIT-79P",
+      "kind": "github_file",
+      "ref": "main",
+      "locator": "research/SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md",
+      "span": "Whole audit",
+      "date": "2026-10-12 snapshot",
+      "language": "he",
+      "hash_algorithm": "git-blob-sha1",
+      "hash": "c6c2acb244312189f80d4174dd73e05584746378",
+      "verification_status": "AUDIT_READ; ORIGINAL EDITION/SPAN ALIGNMENT PARTLY UNRESOLVED",
+      "usage_permissions": "Public repository reference; redistribution terms not checked"
+    },
+    {
+      "source_id": "SRC-GH-LOGIC-KERNEL",
+      "kind": "github_file",
+      "ref": "main",
+      "locator": "logic_engine_v1/logic_kernel.py",
+      "span": "Lines 191-604",
+      "date": "2026-10-12 snapshot",
+      "language": "en",
+      "hash_algorithm": "git-blob-sha1",
+      "hash": "52a77de91e54d4e139753c8ae8400ee37b47d2cd",
+      "verification_status": "IMPLEMENTATION PRESENT; NOT EXECUTED IN THIS RUN",
+      "usage_permissions": "Public repository reference; redistribution terms not checked"
+    },
+    {
+      "source_id": "LIB-ETZ-CHAIM-79P",
+      "kind": "library_working_document",
+      "ref": "file_0000000096ac81f4be6aecddd852f2e3",
+      "locator": "Library PDF file; 79 pages; pages 1-2 inspected",
+      "span": "Whole file",
+      "date": "Library ingest 2026-10-05; original edition unresolved",
+      "language": "he",
+      "hash_algorithm": "sha256",
+      "hash": "a16f34c3c546f53f82729a8ac98e42ea5174089eaef50c7b9e471c412a12bb79",
+      "verification_status": "WORKING EXTRACTION PRESENT; SOURCE EDITION/ALIGNMENT NEEDS REVIEW",
+      "usage_permissions": "Internal research; public republication not authorized by this run"
+    },
+    {
+      "source_id": "LIB-MLN-SPEC-PDF",
+      "kind": "library_working_document",
+      "ref": "file_000000001e8471f4914f56d73b8489a1",
+      "locator": "Library PDF file; full document",
+      "span": "Whole file; page count not assessed",
+      "date": "Library ingest 2026-05-30; original date unresolved",
+      "language": "he",
+      "hash_algorithm": "sha256",
+      "hash": "4867f8985f113f991fad8667c6501f8e3100c8aec1e57a7cda380820d41734b9",
+      "verification_status": "MODEL SPECIFICATION CANDIDATE; NOT EMPIRICAL VALIDATION",
+      "usage_permissions": "Internal research; public republication not authorized by this run"
+    },
+    {
+      "source_id": "LIB-NTM-MLN-REPORT",
+      "kind": "library_generated_report",
+      "ref": "file_00000000b85c81fb82aa909fa646490c",
+      "locator": "NTM_MLN_MODEL_V02_VERIFICATION_REPORT.json",
+      "span": "Whole JSON",
+      "date": "Generated 2026-10-12T13:56:32Z",
+      "language": "en",
+      "hash_algorithm": "sha256",
+      "hash": "f77f7da8a53f35384614e1f39be38128eac5b3bc62a1819b4bc1dd75422eeca3",
+      "verification_status": "REPORT SAYS 36 LOCAL TESTS PASS; SEMANTICS NOT VERIFIED; EXACT CHAT MATCH NOT CONFIRMED",
+      "usage_permissions": "Internal evaluation artifact"
+    },
+    {
       "source_id": "LIB-NTM-MLN-OVERLAY",
       "kind": "library_code_archive",
+      "ref": "file_000000006c7881f49c78970756a52d02",
       "locator": "WANGA_LAB_NTM_MLN_V0_2_Overlay.zip",
-      "date": "2026-10-12",
+      "span": "Whole ZIP",
+      "date": "Library artifact 2026-10-12T13:57:58Z",
       "language": "mixed",
       "hash_algorithm": "sha256",
       "hash": "346c8895150df8b5c74cdcd70f9746c4515daaa96ef9d6f7da10658dd77059d6",
-      "verification_status": "LOCAL_COMPILE_AND_36_TESTS_PASS; SEMANTICS_NOT_VERIFIED",
+      "verification_status": "LOCAL COMPILEALL AND 36 TESTS PASS; SEMANTICS NOT VERIFIED",
       "usage_permissions": "Internal engineering artifact"
+    },
+    {
+      "source_id": "LIB-MILOT-HIGAYON-TEXT",
+      "kind": "library_text_extraction",
+      "ref": "file_00000000cb48820eb95730be83f8929d",
+      "locator": "Library parsed text; edition label Warsaw 1928; embedded Wikisource locator",
+      "span": "Whole parsed text; Gates 1-4 read",
+      "date": "Edition label 1928; Library ingest 2026-09-24",
+      "language": "he",
+      "hash_algorithm": null,
+      "hash": null,
+      "hash_status": "BLOCKED_RAW_BYTES_NOT_AUTHORIZED",
+      "verification_status": "PARSED TEXT READ; ORIGINAL BYTES/TRANSCRIPTION ALIGNMENT NOT VERIFIED",
+      "usage_permissions": "Internal research; public quotation/republication requires edition/license review"
     }
   ],
   "conversation_access_audit": {
+    "checked_on": "2026-10-12",
     "current_conversation_upload_count": 0,
+    "export_search": "No explicit ChatGPT transcript export located in searches run; this does not prove no export exists elsewhere.",
     "full_account_history_access": "NOT_AVAILABLE",
-    "export_search": "No explicit transcript export located in the searches run; not proof of absence elsewhere.",
-    "status": "BLOCKED_AWAITING_EXPLICIT_EXPORT"
+    "status": "BLOCKED_AWAITING_USER_PROVIDED_OR_AUTHORIZED_EXPORT",
+    "required_metadata": ["source_id", "date", "span_or_location", "SHA-256_of_original_export_bytes", "language", "verification_status", "usage_permissions"],
+    "normalization_policy": "Preserve immutable original and literal spans; only technical/reversible normalization."
   }
 }
