@@ -13,6 +13,11 @@ on:
       - 'scripts/run_logic_agents.py'
       - 'scripts/evaluate_logic_agent_bundle.py'
       - 'tests/test_multi_agent_logic_evaluation.py'
+      - 'ark_swarm/**'
+      - 'scripts/run_ark_swarm.py'
+      - 'tests/test_ark_swarm_logic_trader.py'
+      - 'schemas/ark-swarm-cycle-report-v1.schema.json'
+      - 'research/ARK_SWARM_LOGIC_TRADER_INTEGRATION_V1.md'
       - 'scripts/ingest_conversation_export.py'
       - 'tests/test_conversation_export_intake.py'
       - 'schemas/conversation-intake-record-v1.schema.json'
@@ -44,8 +49,10 @@ jobs:
         run: python scripts/build_first_fractal_model.py
       - name: Test integrated logic-agent roles
         run: python -m unittest discover -s tests -p 'test_multi_agent_logic_evaluation.py' -v
-      - name: Execute six logic-agent roles
-        run: python scripts/evaluate_logic_agent_bundle.py
+      - name: Run ARK-Swarm + Logic Trader tests
+        run: python -m unittest discover -s tests -p 'test_ark_swarm_logic_trader.py' -v
+      - name: Execute integrated ARK-Swarm + Logic Trader (includes existing six roles)
+        run: python scripts/run_ark_swarm.py
       - name: Run bounded research-agent cycle
         run: python scripts/run_logic_agents.py
       - name: Upload wiki and readiness report
@@ -72,3 +79,4 @@ jobs:
             logic_wiki/generated/**
             research/reports/logic-fractal/**
             research/reports/agent-evaluation/**
+            research/reports/ark-swarm/**
