@@ -31,9 +31,9 @@ class LogicWikiTests(unittest.TestCase):
  def test_wix_sync_manifest_records_stable_extended_resources(self):
   manifest=json.loads((ROOT/'logic_wiki/data/wix_sync_manifest.json').read_text(encoding='utf-8'))
   self.assertEqual(manifest['synced_article_count'],18)
-  self.assertEqual(manifest['extended_topic_page_count'],9)
+  self.assertEqual(manifest['extended_topic_page_count'],10)
   ids=[x['id'] for x in manifest['extended_page_resources']]
-  self.assertEqual(len(ids),9)
+  self.assertEqual(len(ids),10)
   self.assertEqual(len(ids),len(set(ids)))
   self.assertTrue(all(x.get('source_refs') for x in manifest['extended_page_resources']))
   self.assertTrue(manifest['all_extended_resources_have_source_or_explicit_local_boundary'])
