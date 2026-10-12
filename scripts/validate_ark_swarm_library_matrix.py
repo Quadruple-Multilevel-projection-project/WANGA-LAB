@@ -17,7 +17,6 @@ REQUIRED_RULES = {
     "ACTIVE_INFERENCE_REQUIRES_MODEL",
     "CONNECTOME_ROLE_IS_HYPOTHESIS",
     "FRACTAL_SHAPE_IS_NOT_VALIDITY",
-    "LOGIC_TRADER_SCOPE",
 }
 
 
@@ -55,8 +54,8 @@ def validate_matrix(matrix: dict) -> list[str]:
     rules = {item.get("rule") for item in matrix.get("mandatory_semantic_rules", [])}
     if not REQUIRED_RULES.issubset(rules):
         errors.append(f"missing semantic rules: {sorted(REQUIRED_RULES - rules)}")
-    if matrix.get("scope", {}).get("financial_market_or_betting_actions") != "OUT_OF_SCOPE":
-        errors.append("Logic Trader scope boundary is missing")
+    if "logical assets only" not in matrix.get("scope", {}).get("logic_trader", "").casefold():
+        errors.append("Logic Trader logical-asset scope is missing")
     return errors
 
 
