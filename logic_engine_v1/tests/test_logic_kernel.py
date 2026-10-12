@@ -158,6 +158,9 @@ class CorpusIntegrationTests(unittest.TestCase):
         decoded = json.loads(completed.stdout)
         self.assertEqual(decoded["engine_type"], "DETERMINISTIC_SYMBOLIC_PROTOTYPE_NOT_GENERAL_AI")
         self.assertEqual(decoded["summary"]["rule_firings"], 1)
+        self.assertEqual(decoded["action_gate_result"]["decision"], "ALLOW_WITHIN_DECLARED_SCOPE")
+        self.assertTrue(decoded["threshold_comparison"]["decision_changed"])
+        self.assertEqual(decoded["combinatorial_counts"]["unordered_distinct_triples"], 1540)
 
 
 if __name__ == "__main__":
