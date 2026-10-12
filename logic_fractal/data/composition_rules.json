@@ -1,0 +1,62 @@
+{
+  "schema_version": "logic-composition-contracts/1.0",
+  "status": "CANDIDATE_RULES_FOR_TESTING",
+  "rules": [
+    {
+      "id": "COMPOSE-CHAIN",
+      "name": "Bounded relational chain",
+      "status": "ACTIVE_SPECIFIED",
+      "inputs": [
+        "article nodes with unique stable IDs",
+        "each edge explicitly present in an article relations field"
+      ],
+      "output": "ordered path candidate of 2..N article nodes",
+      "invariants": [
+        "all nodes resolve to the catalog",
+        "all consecutive edges exist in the catalog",
+        "union of source references is preserved",
+        "cycles/repeated nodes are rejected within one path",
+        "output remains candidate pending semantic review"
+      ],
+      "limitations": [
+        "Catalog links are editorial relation candidates, not formal logical entailment."
+      ]
+    },
+    {
+      "id": "COMPOSE-SHARED-SOURCE",
+      "name": "Shared-source grouping",
+      "status": "ACTIVE_SPECIFIED",
+      "inputs": [
+        "two or more articles referencing the same source ID"
+      ],
+      "output": "source-associated article group",
+      "invariants": [
+        "source ID is declared in source catalog",
+        "all article IDs resolve",
+        "association is not upgraded to entailment"
+      ],
+      "limitations": [
+        "Sharing a source does not mean the articles logically imply one another."
+      ]
+    },
+    {
+      "id": "COMPOSE-RECURSIVE-LEVEL",
+      "name": "Recursive composition level",
+      "status": "DRAFT_NOT_EXECUTED",
+      "inputs": [
+        "previously accepted composition candidate",
+        "explicit composition contract and invariant results"
+      ],
+      "output": "higher-order composition candidate",
+      "invariants": [
+        "input composition must have passed human/source review",
+        "preserve transitive provenance",
+        "do not compose rejected or unresolved units",
+        "version and hash every candidate"
+      ],
+      "limitations": [
+        "Not active until acceptance-state tracking and benchmark contracts are implemented."
+      ]
+    }
+  ]
+}
