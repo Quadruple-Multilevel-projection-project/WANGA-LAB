@@ -57,3 +57,12 @@
 - LNL/0.1 defines source, fact, rule, goal and constraint statements; compiled candidates produce a model graph and an execution bundle for the WANGA symbolic kernel.
 - The offline provider is deterministic and is not an AI model. The optional OpenAI-compatible provider requires explicit endpoint/model configuration and was not called during CI.
 - Goal satisfaction shows that the supplied facts/rules derive the goal; it does not independently prove the premises true. Semantic validity remains NOT_YET_VERIFIED.
+
+## WANGA-X Blueprint engine verification — 2026-10-12
+
+- [PR #97](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/97) merged as `638d97a3e201c60a48fbf51ab30ba013837886c2`.
+- The initial CI test run exposed an incorrect repository-root path in the test fixture. The path was corrected in the feature branch, after which WANGA-X Requirement Blueprint Engine V1, Repository Integrity and CodeQL Advanced all passed.
+- The package `wanga_x_v1/` derives required computation capabilities from a task-specific requirement, ranks three architecture strategies, closes dependencies, emits a Blueprint, and records reversible hashed construction frames.
+- Regression tests demonstrate that a logic-model-building requirement and a document-drift requirement produce different component sets; test results are structural checks and not an accuracy benchmark.
+- Runtime truth boundary: no neural weights are generated, no neural network is materialized, and no live endpoint is created. Requests requiring such a backend are explicitly blocked.
+- Next empirical gate: benchmark requirement-derived candidates against a fixed-architecture baseline using the same tasks and acceptance metrics.
