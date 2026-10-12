@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "wanga://schemas/algorithmic-genealogy.schema.json",
+  "title": "WANGA Algorithmic Genealogy Registry",
+  "type": "object",
+  "required": ["registryVersion", "policyVersion", "artifacts"],
+  "properties": {
+    "registryVersion": {"type": "string"},
+    "policyVersion": {"type": "string"},
+    "artifacts": {
+      "type": "array",
+      "items": {"$ref": "#/$defs/artifact"}
+    }
+  },
+  "$defs": {
+    "artifact": {
+      "type": "object",
+      "required": [
+        "artifactId",
+        "kind",
+        "parents",
+        "transformation",
+        "provenance",
+        "evidenceStatus",
+        "integrity"
+      ],
+      "properties": {
+        "artifactId": {"type": "string", "minLength": 1},
+        "kind": {
+          "type": "string",
+          "enum": [
+            "MODEL",
+            "CHECKPOINT",
+            "ADAPTER",
+            "MERGE",
+            "DISTILLED_MODEL",
+            "DATASET",
+            "RUNTIME",
+            "EVALUATOR"
+          ]
+        },
+        "parents": {
+          "type": "array",
+          "items": {"type": "string"}
+        },
+        "transformation": {
+          "type": "string",
+          "enum": [
+            "FROM_SCRATCH",
+            "FINE_TUNE",
+            "DISTILLATION",
+            "DEPTH_UPSCALING",
+            "MODEL_MERGE",
+            "ADAPTER_COMPOSITION",
+            "QUANTIZATION",
+            "PRUNING",
+            "CHECKPOINT_CONVERSION",
+            "UNKNOWN_TRANSFORMATION"
+          ]
+        },
+        "provenance": {
+          "type": "object",
+          "required": ["sourceRefs", "weightLineageDeclared"],
+          "properties": {
+            "sourceRefs": {"type": "array", "items": {"type": "string"}},
+            "weightLineageDeclared": {"type": "boolean"},
+            "updateHistoryRefs": {"type": "array", "items": {"type": "string"}},
+            "builderRefs": {"type": "array", "items": {"type": "string"}}
+          },
+          "additionalProperties": false
+        },
+        "evidenceStatus": {
+          "type": "string",
+          "enum": [
+            "BUILT",
+            "SPECIFIED",
+            "PROTOTYPED",
+            "TESTED",
+            "VERIFIED",
+            "PLANNED",
+            "HYPOTHETICAL"
+          ]
+        },
+        "driftExposure": {
+          "type": "object",
+          "properties": {
+            "known": {"type": "boolean"},
+            "score": {"type": "number", "minimum": 0, "maximum": 1},
+            "evidenceRefs": {"type": "array", "items": {"type": "string"}}
+          },
+          "additionalProperties": false
+        },
+        "integrity": {
+          "type": "object",
+          "required": ["algorithm", "sha256"],
+          "properties": {
+            "algorithm": {"const": "SHA-256"},
+            "sha256": {"type": "string", "pattern": "^[a-fA-F0-9]{64}$"}
+          },
+          "additionalProperties": false
+        },
+        "compatibility": {
+          "type": "object",
+          "properties": {
+            "declaredCompatibleWith": {"type": "array", "items": {"type": "string"}},
+            "conflictRefs": {"type": "array", "items": {"type": "string"}}
+          },
+          "additionalProperties": false
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

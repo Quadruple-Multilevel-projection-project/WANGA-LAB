@@ -1,0 +1,45 @@
+name: WANGA Constellation Cluster Control Plane
+
+on:
+  push:
+    branches:
+      - "agent/architecture-integration/wanga-ai231-bootstrap"
+  workflow_dispatch:
+  schedule:
+    - cron: "*/15 * * * *"
+
+permissions:
+  contents: read
+
+jobs:
+  validate-cluster-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate shared cluster files
+        shell: bash
+        run: |
+          set -euo pipefail
+          test -s orchestrators/CONSTELLATION_CLUSTER.md
+          test -s orchestrators/cluster/REGISTRY.yaml
+          test -s orchestrators/cluster/CHANGE_FEED.md
+          test -s orchestrators/CONSTELLATION_START_NOW.md
+          grep -q "28" orchestrators/cluster/REGISTRY.yaml
+          grep -q "32" orchestrators/cluster/REGISTRY.yaml
+          grep -q "ALERT" orchestrators/CONSTELLATION_CLUSTER.md
+          grep -q "CLUSTER_REVISION" orchestrators/CONSTELLATION_CLUSTER.md
+
+      - name: Emit control-plane health summary
+        shell: bash
+        run: |
+          echo "WANGA_CLUSTER_CONTRACT=OK"
+          echo "GROUPS=28"
+          echo "ROOTS=32"
+          echo "SHARED_ALERT_MANAGER=REQUIRED"
+          echo "CHANGE_FEED=REQUIRED"
+          echo "BOOTSTRAP_HEALTH_CHECKS=REQUIRED"
+
+  # This job deliberately does not claim live agent connectivity.
+  # Runtime connectivity/heartbeat is produced by deployed orchestrators and units.

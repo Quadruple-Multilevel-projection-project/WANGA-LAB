@@ -1,0 +1,115 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.org/schemas/rational-logic-lexical-evidence.schema.json",
+  "title": "Rational Logic Lexical Evidence",
+  "type": "object",
+  "required": ["record_id", "term", "language", "sources", "evidence_status", "record_sha256"],
+  "properties": {
+    "record_id": {"type": "string", "minLength": 1},
+    "term": {"type": "string", "minLength": 1},
+    "language": {"type": "string", "minLength": 2},
+    "lemma": {"type": "string"},
+    "surface_forms": {"type": "array", "items": {"type": "string"}},
+    "part_of_speech": {"type": "string"},
+    "senses": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["sense_id", "gloss"],
+        "properties": {
+          "sense_id": {"type": "string"},
+          "gloss": {"type": "string"},
+          "definitions": {"type": "array", "items": {"type": "string"}},
+          "examples": {"type": "array", "items": {"type": "string"}}
+        },
+        "additionalProperties": false
+      }
+    },
+    "derivations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["target", "relation", "method", "evidence_status"],
+        "properties": {
+          "target": {"type": "string"},
+          "relation": {
+            "type": "string",
+            "enum": [
+              "INFLECTIONAL",
+              "DERIVATIONAL",
+              "COMPOSITIONAL",
+              "SEMANTIC",
+              "LOGICAL"
+            ]
+          },
+          "rule": {"type": "string"},
+          "method": {"type": "string"},
+          "evidence_status": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "relations": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["target", "relation"],
+        "properties": {
+          "target": {"type": "string"},
+          "relation": {"type": "string"},
+          "direction": {"type": "string", "enum": ["OUTBOUND", "INBOUND", "SYMMETRIC"]},
+          "evidence_status": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "logical_roles": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": [
+          "TERM",
+          "PREDICATE",
+          "SUBJECT",
+          "COPULA",
+          "NEGATION",
+          "QUANTITY",
+          "QUALITY",
+          "PROPOSITION",
+          "PREMISE",
+          "CONCLUSION",
+          "IMPLICATION",
+          "OPPOSITION",
+          "SYLLOGISM",
+          "DEFINITION",
+          "GENUS",
+          "SPECIES",
+          "DIFFERENCE"
+        ]
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["provider", "source_ref", "access_method"],
+        "properties": {
+          "provider": {"type": "string"},
+          "source_ref": {"type": "string"},
+          "access_method": {"type": "string"},
+          "retrieved_at": {"type": "string"},
+          "rights_note": {"type": "string"},
+          "citation": {"type": "string"}
+        },
+        "additionalProperties": false
+      }
+    },
+    "extraction_method": {"type": "string"},
+    "evidence_status": {
+      "type": "string",
+      "enum": ["BUILT", "SPECIFIED", "PROTOTYPED", "TESTED", "VERIFIED", "PLANNED", "HYPOTHETICAL"]
+    },
+    "record_sha256": {"type": "string", "pattern": "^[A-Fa-f0-9]{64}$"}
+  },
+  "additionalProperties": false
+}

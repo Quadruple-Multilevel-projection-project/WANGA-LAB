@@ -1,0 +1,183 @@
+{
+  "schema_version": "1.0",
+  "orchestrator_id": "ORCH-28-GROUPS",
+  "purpose": "Personal Thinking Machine group orchestration",
+  "count": 28,
+  "counting_rule": {
+    "base_letters": 22,
+    "final_forms": 5,
+    "aleph_cycle_return": 1,
+    "total": 28
+  },
+  "verification_state": "NOT_YET_VERIFIED",
+  "groups": [
+    {
+      "id": "GROUP-01",
+      "slot": 1,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-02",
+      "slot": 2,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-03",
+      "slot": 3,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-04",
+      "slot": 4,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-05",
+      "slot": 5,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-06",
+      "slot": 6,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-07",
+      "slot": 7,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-08",
+      "slot": 8,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-09",
+      "slot": 9,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-10",
+      "slot": 10,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-11",
+      "slot": 11,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-12",
+      "slot": 12,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-13",
+      "slot": 13,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-14",
+      "slot": 14,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-15",
+      "slot": 15,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-16",
+      "slot": 16,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-17",
+      "slot": 17,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-18",
+      "slot": 18,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-19",
+      "slot": 19,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-20",
+      "slot": 20,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-21",
+      "slot": 21,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-22",
+      "slot": 22,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-23",
+      "slot": 23,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-24",
+      "slot": 24,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-25",
+      "slot": 25,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-26",
+      "slot": 26,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-27",
+      "slot": 27,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    },
+    {
+      "id": "GROUP-28",
+      "slot": 28,
+      "agent_scope": "PERSONAL_THINKING_MACHINE",
+      "status": "PLANNED"
+    }
+  ]
+}

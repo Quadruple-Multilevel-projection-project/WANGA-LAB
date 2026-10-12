@@ -1,0 +1,84 @@
+version: 2
+cluster_id: WANGA-CONSTELLATION
+cluster_revision: 2
+status: ACTIVE_ARCHITECTURE
+primary_orchestrators:
+  - id: PRIMARY-28-ORCHESTRATOR
+    role: thinking_personal_group_plane
+    unit_pattern: GROUP-01..GROUP-28
+  - id: PRIMARY-32-ORCHESTRATOR
+    role: roots_provenance_plane
+    unit_pattern: ROOT-01..ROOT-32
+constellation_bus:
+  id: CONSTELLATION-BUS
+  topology: peer_coordination
+  round_robin: true
+population:
+  thinking_personal_groups: 28
+  roots: 32
+  total_units: 60
+units:
+  naming:
+    groups: GROUP-01..GROUP-28
+    roots: ROOT-01..ROOT-32
+  required_interfaces:
+    - parent_orchestrator
+    - constellation_bus
+    - relay
+    - cluster_feed
+    - alert_manager
+    - evidence_receipts
+bootstrap:
+  fixed_context:
+    - WHO_WE_ARE
+    - WHAT_WE_DO
+    - WHERE_THE_SYSTEM_LIVES
+  required_before_ready:
+    - registry_loaded
+    - manifest_loaded
+    - project_context_loaded
+    - orchestrator_health_ok
+    - relay_health_ok
+    - cluster_feed_health_ok
+    - alert_manager_health_ok
+    - startup_receipt_written
+update_protocol:
+  ordering: monotonic_cluster_revision
+  gap_action: UPDATE_GAP
+  gap_recovery: REPLAY_FROM_LAST_ACK
+  acknowledgement_required: true
+  idempotency_key: event_id
+orchestration:
+  cycle:
+    - DISCOVER
+    - RECEIVE
+    - CLASSIFY
+    - DERIVE
+    - HANDOFF
+    - ACK
+    - NEXT
+  cross_plane_route: PRIMARY-28-ORCHESTRATOR<->CONSTELLATION-BUS<->PRIMARY-32-ORCHESTRATOR
+  derivation_relation: LETTER<->COMBINATION<->RELATION<->STATE<->NEW_COMBINATION
+health:
+  heartbeat_required: true
+  stale_state_action: ESCALATE
+evidence:
+  receipt_required_for:
+    - startup
+    - update_ack
+    - replay
+    - handoff
+    - escalation
+    - recovery
+alerting:
+  shared_manager_only: true
+  deduplication_key: INCIDENT_ID+EVENT_TYPE+AFFECTED_NODE
+  minimum_owner_escalation: HIGH
+verification_states:
+  - VERIFIED
+  - CONDITIONALLY_VERIFIED
+  - NOT_YET_VERIFIED
+  - UNVERIFIED
+  - REPRESENTATION_ONLY
+  - SIMULATION_MODEL
+  - ENGINEERING_ASSUMPTION
