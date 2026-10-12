@@ -37,6 +37,9 @@ The evaluation vector contains premise consistency, formal-check result, source 
 
 ## ARK-Swarm integration
 
+The adapter is wired into ARK-Swarm as the `formal-propositional-benchmark` role. The swarm reads the fixed five-case synthetic suite and includes the outcomes in its candidate/report metadata. It does **not** claim that these cases prove the selected real-catalog package. Candidate-level eligibility remains a separate metric contract and no candidate is automatically released or promoted to VERIFIED.
+
+
 The formal smoke benchmark is added as a separate deterministic coordinator role. It checks five synthetic formulas and contributes a test result to the cycle report. This is not treated as semantic validation of the Logic Trader's selected real-catalog package.
 
 ## Run locally
