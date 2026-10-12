@@ -27,5 +27,15 @@
     "biological_connectome_execution": "NOT_IMPLEMENTED_ROLE_ABSTRACTIONS_ONLY",
     "self_modifying_code": "NOT_IMPLEMENTED",
     "external_model_calls": "DISABLED_UNLESS_EXPLICIT_BACKEND_ADDED"
+  },
+  "formal_reasoning_adapter": {
+    "status": "CONFIGURED_BOUNDED_PROPOSITIONAL",
+    "solver": "Z3",
+    "dependency_file": "requirements-formal.txt",
+    "evaluation_policy": "formal_reasoning/config/evaluation_policy.json",
+    "benchmark_fixture": "formal_reasoning/examples/benchmark_cases.json",
+    "semantic_status": "NOT_YET_VERIFIED",
+    "scope": "EXPLICIT_PROPOSITIONAL_FORMULAS_ONLY",
+    "source_truth_promotion": false
   }
 }
