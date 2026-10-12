@@ -175,7 +175,8 @@
         "logical-primitive",
         "logical-relation",
         "source-first-contract",
-        "logical-diamond"
+        "logical-diamond",
+        "ark-swarm-logic-trader"
       ]
     },
     {
@@ -436,7 +437,8 @@
         "conversation-evidence-unit",
         "longitudinal-research-cycle",
         "logic-wiki",
-        "model-readiness"
+        "model-readiness",
+        "ark-swarm-logic-trader"
       ]
     },
     {
@@ -498,7 +500,31 @@
         "logical-particle",
         "fractal-invariant",
         "model-readiness",
-        "evidence-provenance"
+        "evidence-provenance",
+        "ark-swarm-logic-trader"
+      ]
+    },
+    {
+      "id": "ark-swarm-logic-trader",
+      "title": "ARK-Swarm and Logic Trader",
+      "category": "WANGA implementation",
+      "kind": "WANGA_IMPLEMENTED_PROTOTYPE",
+      "status": "BOUNDED_RUNTIME_BUILT_SEMANTICS_NOT_VERIFIED",
+      "definition": "A bounded coordinator that connects the Logic Wiki catalog, candidate fractal composer, typed-fragment checks, source-provenance gate, counter-reading candidate, and existing six-role agent integration suite. The Logic Trader ranks assets by lexical overlap and source/link metadata, assembles an internal candidate logic package, and preserves source IDs and hashes.",
+      "scope_note": "Lexical ranking is not semantic relevance. The runtime is local and deterministic; P2P transport, replicated network CRDTs, biological connectome execution, external model calls, and automatic release are not implemented.",
+      "sources": [
+        "SRC-WANGA-ARK-SWARM-LOGIC-TRADER",
+        "SRC-WANGA-AGENT-REGISTRY",
+        "SRC-WANGA-FRACTAL-COMPOSER",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relations": [
+        "autonomous-research-agent",
+        "logical-fractal",
+        "recursive-composition",
+        "evidence-provenance",
+        "model-readiness",
+        "logical-diamond"
       ]
     }
   ],
@@ -630,6 +656,14 @@
       "type": "USER_PROVIDED_RESEARCH_HYPOTHESIS",
       "status": "HYPOTHESIS_NOT_SOURCE_VERIFIED",
       "note": "Research direction supplied by the project owner; no private transcript is included, and the interpretation remains a hypothesis awaiting formalization and tests."
+    },
+    {
+      "id": "SRC-WANGA-ARK-SWARM-LOGIC-TRADER",
+      "title": "ARK-Swarm + Logic Trader Integration V1",
+      "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/ARK_SWARM_LOGIC_TRADER_INTEGRATION_V1.md",
+      "type": "PROJECT_IMPLEMENTATION",
+      "status": "IMPLEMENTED_PROTOTYPE_NOT_SEMANTICALLY_VERIFIED",
+      "note": "Bounded deterministic candidate ranker and local swarm coordinator; no P2P transport, external LLM or model release."
     }
   ]
 }
