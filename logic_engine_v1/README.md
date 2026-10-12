@@ -2,7 +2,7 @@
 
 **Status:** BUILT AS A BOUNDED SYMBOLIC PROTOTYPE · TESTED BY UNIT TESTS WHEN CI RUNS · NOT GENERAL AI · NOT YET VERIFIED AS A PRODUCTION SYSTEM
 
-This folder implements the first executable logic layer connected to the WANGA-LAB corpus. It performs deterministic symbolic matching and forward-chaining over explicit structured atoms and rules; checks evidence-reference eligibility; traces derivations; flags contradictory positive/negative claims; checks scoped actions and explicit publication permission; compares threshold-based decisions; and validates the 1,000-page/231-gate corpus structure.
+This folder implements the first executable logic layer connected directly to the WANGA-LAB corpus. At each CLI `demo` or `run`, it validates and loads the repository's letter, gate, directed-transition, triple and page-definition registries. It injects only structural facts whose predicates are explicitly requested by the supplied rules. The engine performs deterministic symbolic matching and forward-chaining; checks evidence-reference eligibility; traces derivations and corpus-file provenance; flags contradictory positive/negative claims; checks scoped actions and explicit publication permission; compares threshold-based decisions; and validates exact corpus invariants.
 
 It is intentionally **not** an LLM, natural-language understanding system, theorem prover, or complete implementation of the proposed 5-forward/5-return architecture. This is a bounded logic kernel that a language model can later call, while the kernel independently enforces specified rules.
 
@@ -24,11 +24,12 @@ python -m unittest discover -s tests -v
 
 1. **Evidence gate:** input claims only become rule-eligible if their epistemic status is `OBSERVED` or `TEST_FIXTURE` and all referenced evidence IDs exist. That checks data structure, not source authenticity or truth.
 2. **Symbolic rule engine:** explicit Horn-style rules use variables such as `$ACTION`; each successful firing has a trace, premise IDs and rule ID.
-3. **Contradiction handling:** same subject/predicate/object with opposing polarity triggers `REVIEW`. Facts involved in contradictions are not used as premises.
-4. **Scope/action gate:** denies actions outside declared action/target scope; missing permission denies; incomplete evidence routes to review; publication requires separate explicit permission.
-5. **Drift arithmetic:** the same score can be evaluated under two thresholds. This is a transparent calculation, not model drift discovery.
-6. **Drift and count demo:** the CLI demo also runs a threshold-change example and reports the exact combinatorial counts.
-7. **Corpus validator:** checks the GitHub's 1,000 page definitions, unique IDs, 231 pair records, 462 directed transitions and reverse links, 1,540 unique unordered triples, and the exact combinatorial formulas.
+3. **Validated corpus loading:** `load_corpus_context()` reads the 1,000 page definitions, 22 letter nodes, 231 unordered gates, 462 directed transitions and 1,540 unordered triples. It labels loaded records `CORPUS_STRUCTURE_NOT_SEMANTIC`; edge existence never establishes a gate's meaning.
+4. **Contradiction handling:** same subject/predicate/object with opposing polarity triggers `REVIEW`. Facts involved in contradictions are not used as premises.
+5. **Scope/action gate:** denies actions outside declared action/target scope; missing permission denies; incomplete evidence routes to review; publication requires separate explicit permission.
+6. **Drift arithmetic:** the same score can be evaluated under two thresholds. This is a transparent calculation, not model drift discovery.
+7. **Corpus validator:** checks the GitHub registry counts, unique IDs, directed reverse links, triple uniqueness and exact combinatorial formulas.
+8. **Source-scoped semantic regression cases:** [`semantic_test_matrix.json`](semantic_tests/semantic_test_matrix.json) scopes the Sefer Yetzirah case to a particular displayed edition and marks the 221/231 scholarly reference as requiring full-text review. The tests do not promote derived output to `VERIFIED`.
 
 ## Epistemic contract
 
