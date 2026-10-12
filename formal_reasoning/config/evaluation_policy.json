@@ -1,0 +1,29 @@
+{
+  "schema_version": "wanga-candidate-evaluation-policy/1.0",
+  "policy_id": "formal-candidate-gates-v1",
+  "status": "INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED",
+  "description": "Initial engineering thresholds for candidate review. They are not statistically calibrated and do not establish truth.",
+  "thresholds": {
+    "min_source_coverage": 0.95,
+    "min_benchmark_accuracy": 0.9,
+    "max_counterexample_rate": 0.02,
+    "min_holdout_score": 0.85,
+    "max_compute_seconds": 30
+  },
+  "hard_gates": [
+    "premises_consistent",
+    "formal_checks_pass",
+    "source_coverage",
+    "benchmark_accuracy",
+    "counterexample_rate",
+    "holdout_score",
+    "replay_stable",
+    "compute_budget"
+  ],
+  "rules": {
+    "hard_gates_cannot_be_offset_by_descriptive_score": true,
+    "no_weight_updates": true,
+    "no_epistemic_status_promotion": true,
+    "solver_result_not_truth": true
+  }
+}
