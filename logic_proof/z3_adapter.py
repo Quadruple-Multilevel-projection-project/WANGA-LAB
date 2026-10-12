@@ -68,6 +68,10 @@ def validate_formal_spec(spec: Mapping[str, Any]) -> dict[str, Any]:
             raise FormalSpecError(f"premise[{index}].source_refs must be a list of non-empty strings")
         if not isinstance(premise.get("assumption", False), bool):
             raise FormalSpecError(f"premise[{index}].assumption must be boolean")
+        if not source_refs and premise.get("assumption", False) is not True:
+            raise FormalSpecError(
+                f"premise[{index}] must cite at least one source_ref or be explicitly marked assumption=true"
+            )
     # Validate AST shape/budgets independently of Z3 availability.
     for expr in [p["expr"] for p in premises] + [conclusion]:
         _validate_expr_shape(expr, 0, _Budget())
