@@ -1,6 +1,6 @@
 # Quality Control — Logic Engine Research Lab
 **Date:** 2026-10-12  
-**Status:** CLEANUP DEPLOYED; POST-DEPLOY CHECKS REQUIRED
+**Status:** CLEANUP DEPLOYED; SELECTED POST-DEPLOY CHECKS PASSED
 
 ## Changes deployed
 1. Removed the broad landing-page card collection that mixed core logic research with tangential public sites. Replaced it with five direct sources: Forensic Logic Dri, Logic Boxes and Demos, WANGA-LAB, Operational AI Drift, and International AI Forensics.
@@ -33,5 +33,9 @@
 - Public links and sitemap presence do not prove semantic dependencies.
 - The site still does not synchronize or publish changes to other Wix sites automatically; the publication mechanism remains a controlled demonstration.
 
-## Required post-deploy verification
-Confirm that the new inventory table loads all 174 records, filters by site/status, and that the homepage source list still renders without console errors. If GitHub raw JSON is blocked by the browser, the fallback link to the public GitHub JSON remains available.
+## Post-deploy verification
+
+- Live browser check passed for `source-audit.html`: the inventory loaded from GitHub; total count was 174 and unique count was 174; filtering site `my-site-17` worked; filtering `CONTENT_REVIEWED` returned 29 entries; no fetch error was reported.
+- Live browser check passed for `logic-compositions.html`: the fictional price case returned approximately 22.22% and a contradiction result; the fixed score 0.75 produced REJECT at threshold 0.80 and ACCEPT at threshold 0.60.
+- Live content extraction confirmed that the homepage no longer contains the tangential `continental-alliance`, `Resilience Network`, or `Research Core / ARK` cards, and that the five curated research links remain.
+- The root, source-audit, cross-site map, and logic-composition routes all returned content. The node/keyboard behavior on `cross-site-logic-map.html` has not yet received a separate browser-interaction test; this remains an explicit QA gap.
