@@ -110,3 +110,19 @@ Future claims remain hypotheses until supported by evidence. Current practical d
 OBSERVATION → ASSUMPTION → EVIDENCE → GAP → ARCHITECTURE CHANGE → TEST → NEW OBSERVATION
 
 The purpose of the loop is cumulative adaptation: each cycle should increase the repository's evidence, tested structures, configuration knowledge, and ability to identify the next relevant logic layer.
+
+
+## 2026-10-12 — Source extraction and mathematical-weight boundary
+
+A 79-page uploaded working document was reviewed as a candidate source-extraction artifact. It records sentence-level structure and relations for selected passages from *Etz Chaim*, and 28 units (`S-08-001…S-08-028`) for *Guide for the Perplexed* I:8. For that I:8 extraction, the text explicitly says that a second logic is not inferred yet; it is deferred until the first extraction is complete.
+
+This evidence supports a bounded claim: **a first-stage, source-structured extraction is documented in the working PDF**. It does not by itself establish the four logical-mathematical weight layers, their formulas, the 231-gate runtime, the fractal 3D engine, or the numerical performance claims.
+
+### Logic Mine follow-up
+- Register the PDF as a working extraction artifact and resolve its exact source editions, page references, and quotation provenance.
+- Keep the extracted relation records separate from later interpretations and engineering mappings.
+- Retrieve the original definitions of the four weight layers from the research archive; do not infer them from sentence roles or invent replacement formulas.
+- Link any later letter interpretation and weight record back to its exact source and version.
+- Treat text-to-math reconstruction as a separate testable hypothesis, with exact-string reconstruction separated from structural reconstruction.
+
+Detailed audit: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md
