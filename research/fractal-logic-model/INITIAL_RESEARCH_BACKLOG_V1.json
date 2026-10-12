@@ -1,0 +1,83 @@
+{
+  "version": "1.0",
+  "status": "BACKLOG_NOT_COMPLETED_WORK",
+  "items": [
+    {
+      "id": "FL-001",
+      "priority": "P0",
+      "title": "Recover complete prior model source",
+      "output": "source manifest and exact spans",
+      "acceptance": "Every principle has file/message locator or is marked NOT_FOUND_IN_SEARCH."
+    },
+    {
+      "id": "FL-002",
+      "priority": "P0",
+      "title": "Define fragment schema and composition interfaces",
+      "output": "JSON schema plus canonical fragments",
+      "acceptance": "Missing parent/source/interface rejected."
+    },
+    {
+      "id": "FL-003",
+      "priority": "P0",
+      "title": "Build two-scale deterministic composer",
+      "output": "composer plus hash and trace",
+      "acceptance": "Compose two fragments across two scales with full lineage and deterministic replay."
+    },
+    {
+      "id": "FL-004",
+      "priority": "P0",
+      "title": "Create negative and boundary tests",
+      "output": "benchmark v0.1",
+      "acceptance": "Positive, negative, ambiguous and contradictory cases pass expected states."
+    },
+    {
+      "id": "FL-005",
+      "priority": "P1",
+      "title": "Integrate MLN field metrics",
+      "output": "bounded analyzer adapter",
+      "acceptance": "Scale normalization documented; E/blocks never automatically verified."
+    },
+    {
+      "id": "FL-006",
+      "priority": "P1",
+      "title": "Integrate NTM evidence/ATLAS/MIRROR state",
+      "output": "state adapter",
+      "acceptance": "Replay, refs, evidence and unresolved questions persist."
+    },
+    {
+      "id": "FL-007",
+      "priority": "P1",
+      "title": "Build Logic Wikipedia linker",
+      "output": "indexer/backlink validator",
+      "acceptance": "Every internal link resolves and every page has ID/status/source boundary."
+    },
+    {
+      "id": "FL-008",
+      "priority": "P1",
+      "title": "Enable scheduled compute/artifacts",
+      "output": "weekly CI report",
+      "acceptance": "Workflow runs tests, schema and freshness checks and uploads report artifact."
+    },
+    {
+      "id": "FL-009",
+      "priority": "P1",
+      "title": "Enable Wix additive publishing",
+      "output": "publish/readback bridge",
+      "acceptance": "Source-backed update publishes only after accepted diff, then verifies public page and nav."
+    },
+    {
+      "id": "FL-010",
+      "priority": "P2",
+      "title": "Compare model proposers",
+      "output": "provider benchmark",
+      "acceptance": "Two configured providers evaluated on identical tests."
+    },
+    {
+      "id": "FL-011",
+      "priority": "P2",
+      "title": "Evaluate self-similarity",
+      "output": "multi-scale invariance study",
+      "acceptance": "Compare invariants against shuffled/random baselines."
+    }
+  ]
+}
