@@ -1,16 +1,41 @@
 """Hard-gated candidate evaluation; scores are measurements, not learning signals."""
 from __future__ import annotations
 
-from typing import Any, Mapping
+import json
 import math
+from pathlib import Path
+from typing import Any, Mapping
 
-DEFAULT_THRESHOLDS = {
-    "min_source_coverage": 0.95,
-    "min_benchmark_accuracy": 0.90,
-    "max_counterexample_rate": 0.02,
-    "min_holdout_score": 0.85,
-    "max_compute_seconds": 30.0,
-}
+POLICY_PATH = Path(__file__).resolve().parent / "config" / "evaluation_policy.json"
+
+
+def load_evaluation_policy(path: Path | str | None = None) -> tuple[dict[str, float], str]:
+    config_path = Path(path) if path is not None else POLICY_PATH
+    payload = json.loads(config_path.read_text(encoding="utf-8"))
+    if payload.get("schema_version") != "wanga-candidate-evaluation-policy/1.0":
+        raise ValueError("unsupported candidate evaluation policy schema")
+    thresholds = payload.get("thresholds")
+    if not isinstance(thresholds, dict):
+        raise ValueError("policy thresholds must be an object")
+    required = {
+        "min_source_coverage", "min_benchmark_accuracy", "max_counterexample_rate",
+        "min_holdout_score", "max_compute_seconds"
+    }
+    if set(thresholds) != required:
+        raise ValueError("policy must define exactly the required evaluation thresholds")
+    for name in required - {"max_compute_seconds"}:
+        value = thresholds[name]
+        if not isinstance(value, (int, float)) or isinstance(value, bool) or not math.isfinite(float(value)) or not 0 <= value <= 1:
+            raise ValueError(f"policy threshold {name} must be a finite number in [0, 1]")
+    max_compute = thresholds["max_compute_seconds"]
+    if not isinstance(max_compute, (int, float)) or isinstance(max_compute, bool) or not math.isfinite(float(max_compute)) or max_compute <= 0:
+        raise ValueError("policy max_compute_seconds must be a positive finite number")
+    if payload.get("status") != "INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED":
+        raise ValueError("policy must explicitly state that thresholds are uncalibrated")
+    return {key: float(value) for key, value in thresholds.items()}, str(payload["status"])
+
+
+DEFAULT_THRESHOLDS, DEFAULT_THRESHOLD_STATUS = load_evaluation_policy()
 
 
 def evaluate_candidate(metrics: Mapping[str, Any], thresholds: Mapping[str, float] | None = None) -> dict[str, Any]:
@@ -76,7 +101,7 @@ def evaluate_candidate(metrics: Mapping[str, Any], thresholds: Mapping[str, floa
         "score_semantics": "DESCRIPTIVE_INDEX_ONLY_NOT_TRUTH_CONFIDENCE_NOT_REWARD_UPDATE",
         "metrics": normalized,
         "thresholds": policy,
-        "threshold_status": "INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED",
+        "threshold_status": DEFAULT_THRESHOLD_STATUS,
         "weight_update_performed": False,
         "epistemic_status_promotion": "FORBIDDEN",
         "verification_status": "NOT_YET_VERIFIED",
