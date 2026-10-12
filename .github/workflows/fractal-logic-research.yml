@@ -56,6 +56,32 @@ jobs:
               raise SystemExit("Missing wiki pages:\n" + "\n".join(missing))
           print(f"Wiki page index valid: {len(index['pages'])} pages")
           PY
+      - name: Run deterministic fractal composer tests
+        run: python -m unittest discover -s research/fractal-logic-model/tests -p 'test_*.py' -v
+      - name: Build dated research validation report
+        run: |
+          python - <<'PY'
+          import json
+          from datetime import datetime, timezone
+          from pathlib import Path
+          index = json.loads(Path("research/logic-wikipedia/index.json").read_text(encoding="utf-8"))
+          report = {
+              "generated_at_utc": datetime.now(timezone.utc).isoformat(),
+              "status": "RESEARCH_CORPUS_CHECKED_NOT_A_MODEL_RELEASE",
+              "wiki_page_count": len(index["pages"]),
+              "agent_roles_specified": len(json.loads(Path("research/fractal-logic-model/AGENT_ROLES_V1.json").read_text(encoding="utf-8"))["agents"]),
+              "priority_0_items": [x["id"] for x in json.loads(Path("research/fractal-logic-model/INITIAL_RESEARCH_BACKLOG_V1.json").read_text(encoding="utf-8"))["items"] if x["priority"] == "P0"],
+              "source_scope": "Repository files only. Private conversations and Wix are not crawled by this workflow.",
+              "verification_status": "NOT_YET_VERIFIED"
+          }
+          Path("research-cycle-report.json").write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+          print(json.dumps(report, ensure_ascii=False, indent=2))
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: fractal-logic-research-report
+          path: research-cycle-report.json
+          if-no-files-found: error
       - name: Verify epistemic boundaries
         run: |
           python - <<'PY'
