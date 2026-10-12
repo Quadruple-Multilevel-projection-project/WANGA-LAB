@@ -1,0 +1,136 @@
+{
+  "report_version": "logic-fractal-readiness/1.0",
+  "date": "2026-10-12",
+  "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+  "gate_id": "FIRST_MODEL_ALPHA_V1",
+  "gate_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+  "snapshot": {
+    "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "wiki_articles": 18,
+    "source_records": 11,
+    "source_classes": 7,
+    "articles_with_provenance": 18,
+    "relation_map_edges": 54,
+    "active_composition_contracts": 2,
+    "total_composition_contracts": 3,
+    "synthetic_typed_fragments": 3,
+    "repository_conversation_exports_ingested": 0,
+    "source_grounded_counterexamples_registered": 0,
+    "semantic_benchmark_cases_registered": 0,
+    "benchmark_suites_registered": 0,
+    "independent_review_cycles": 0,
+    "duplicate_article_ids": 0,
+    "dangling_source_or_relation_refs": 0,
+    "deterministic_replay_evidence": "CI passed for the build pipeline; repeat-build identity is not yet an audited readiness metric.",
+    "holdout_split": false,
+    "mirror_review": false,
+    "critical_contradictions_recorded": 0
+  },
+  "checks": {
+    "source_records": {
+      "observed": 11,
+      "required": 20,
+      "pass": false
+    },
+    "source_classes": {
+      "observed": 7,
+      "required": 3,
+      "pass": true
+    },
+    "logical_units_with_provenance": {
+      "observed": 18,
+      "required": 50,
+      "pass": false
+    },
+    "composition_rules_with_contracts": {
+      "observed": 2,
+      "required": 20,
+      "pass": false
+    },
+    "counterexamples": {
+      "observed": 0,
+      "required": 30,
+      "pass": false
+    },
+    "semantic_benchmark_cases": {
+      "observed": 0,
+      "required": 100,
+      "pass": false
+    },
+    "benchmark_suites": {
+      "observed": 0,
+      "required": 3,
+      "pass": false
+    },
+    "independent_reviews": {
+      "observed": 0,
+      "required": 2,
+      "pass": false
+    },
+    "dangling_refs": {
+      "observed": 0,
+      "maximum": 0,
+      "pass": true
+    },
+    "duplicate_ids": {
+      "observed": 0,
+      "maximum": 0,
+      "pass": true
+    },
+    "holdout_split": {
+      "observed": false,
+      "required": true,
+      "pass": false
+    },
+    "mirror_review": {
+      "observed": false,
+      "required": true,
+      "pass": false
+    }
+  },
+  "candidate": {
+    "name": "WANGA Typed Fractal Logic Candidate V0.1",
+    "status": "CANDIDATE_NOT_RELEASED",
+    "method": "CI builds a two-scale composition from three synthetic typed fragments.",
+    "real_conversation_sources_reviewed": false,
+    "negative_boundary_benchmark_complete": false,
+    "independent_review_complete": false,
+    "release_gate": "BLOCKED_PENDING_REAL_SOURCE_FRAGMENTS_NEGATIVE_BOUNDARY_TESTS_AND_INDEPENDENT_REVIEW"
+  },
+  "ci": {
+    "pr": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/98",
+    "merge_commit": "f0ef3c345aeefbff2888312544f1e4bde7cf83d5",
+    "checks": "Logic Fractal Wiki Research, Repository Integrity and CodeQL Advanced passed before PR #98 was merged.",
+    "limitation": "These validate implementation contracts. They do not count as semantic ground-truth benchmarks."
+  },
+  "conversation_intake": {
+    "script": "scripts/ingest_conversation_export.py",
+    "status": "IMPLEMENTED_ON_REVIEW_BRANCH_NOT_YET_CI_VERIFIED",
+    "real_export_processed": false,
+    "default_permission": "PRIVATE_REVIEW_ONLY",
+    "auto_publish": false
+  },
+  "wix": {
+    "url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
+    "status": "READ_BACK_VERIFIED",
+    "entries": 18,
+    "sources": 11,
+    "relation_edges": 54,
+    "homepage_navigation": true,
+    "homepage_card": true,
+    "sync_note": "This sync used the connected Wix integration. GitHub Actions does not have Wix credentials configured, so autonomous cross-system write is not yet implemented in the runner."
+  },
+  "next": [
+    "Ingest a real user-provided export privately; review/redact excerpts before repository intake.",
+    "Add 32+ source-reviewed logical units and at least 18 additional explicit composition contracts.",
+    "Register source-grounded counterexamples and semantic benchmark cases with a frozen holdout set.",
+    "Verify repeat-build identity and execute independent MIRROR/red-team review.",
+    "Re-run the gate and keep the first model blocked until all required checks pass."
+  ],
+  "limits": [
+    "The exact full conversation from two days earlier was not retrieved; current design uses the closest available archives and project records.",
+    "The 18 catalog entries are not 18 independently verified logical primitives.",
+    "Thresholds are provisional project policy, not universal scientific cutoffs.",
+    "Zero recorded contradictions means none are registered in the metric, not that none exist."
+  ]
+}
