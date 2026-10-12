@@ -1,0 +1,108 @@
+{
+  "schema_version": "1.0",
+  "knowledge_base": "WANGA Logic Wikipedia",
+  "status": "INITIAL_KB_NOT_COMPLETE",
+  "generated_date": "2026-10-12",
+  "pages": [
+    {
+      "page_id": "WIKI-MLN-001",
+      "slug": "mln-continuous-field",
+      "title": "M/L/N Continuous Field",
+      "aliases": [
+        "MLN",
+        "Mind-Logos-Numerals"
+      ],
+      "path": "research/logic-wikipedia/articles/mln-continuous-field.md",
+      "status": "SPECIFIED_WITH_PROTOTYPE",
+      "related_ids": [
+        "WIKI-FRACTAL-001",
+        "WIKI-EVIDENCE-001",
+        "WIKI-NTM-001"
+      ]
+    },
+    {
+      "page_id": "WIKI-FRACTAL-001",
+      "slug": "fractal-logic",
+      "title": "Fractal Logic",
+      "aliases": [
+        "Recursive Logic Composition",
+        "Logic Fragments"
+      ],
+      "path": "research/logic-wikipedia/articles/fractal-logic.md",
+      "status": "HYPOTHESIS_AND_RESEARCH_PROGRAM",
+      "related_ids": [
+        "WIKI-MLN-001",
+        "WIKI-GATES-231",
+        "WIKI-LOGIC-WEIGHT-001"
+      ]
+    },
+    {
+      "page_id": "WIKI-GATES-231",
+      "slug": "gates-231",
+      "title": "The 231-Gate Combinatorial Map",
+      "aliases": [
+        "K22 Gate Map",
+        "231 Gates"
+      ],
+      "path": "research/logic-wikipedia/articles/gates-231.md",
+      "status": "COMBINATORIAL_ENUMERATION_ONLY_SEMANTICS_UNASSIGNED",
+      "related_ids": [
+        "WIKI-FRACTAL-001",
+        "WIKI-EVIDENCE-001"
+      ]
+    },
+    {
+      "page_id": "WIKI-LOGIC-WEIGHT-001",
+      "slug": "logic-before-weight",
+      "title": "Logic Before Weight",
+      "aliases": [
+        "Source-to-Logic Contract"
+      ],
+      "path": "research/logic-wikipedia/articles/logic-before-weight.md",
+      "status": "PROJECT_CONTRACT",
+      "related_ids": [
+        "WIKI-FRACTAL-001",
+        "WIKI-EVIDENCE-001"
+      ]
+    },
+    {
+      "page_id": "WIKI-EVIDENCE-001",
+      "slug": "evidence-status",
+      "title": "Evidence and Verification Statuses",
+      "aliases": [
+        "BUILT TESTED VERIFIED",
+        "Epistemic Status"
+      ],
+      "path": "research/logic-wikipedia/articles/evidence-status.md",
+      "status": "PROJECT_POLICY",
+      "related_ids": [
+        "WIKI-MLN-001",
+        "WIKI-FRACTAL-001",
+        "WIKI-NTM-001"
+      ]
+    },
+    {
+      "page_id": "WIKI-NTM-001",
+      "slug": "ntm",
+      "title": "Neural Thinking Machine",
+      "aliases": [
+        "NTM",
+        "ATLAS",
+        "MIRROR"
+      ],
+      "path": "research/logic-wikipedia/articles/ntm.md",
+      "status": "ARCHIVED_BASELINE_PLUS_PROTOTYPE",
+      "related_ids": [
+        "WIKI-MLN-001",
+        "WIKI-EVIDENCE-001",
+        "WIKI-FRACTAL-001"
+      ]
+    }
+  ],
+  "rules": {
+    "every_claim_requires_source_or_assumption": true,
+    "source_reference_does_not_equal_verification": true,
+    "semantic_gate_meaning_default": "UNASSIGNED",
+    "model_generated_content_reviewed_before_verified": true
+  }
+}
