@@ -27,7 +27,10 @@
         "min_benchmark_accuracy",
         "max_counterexample_rate",
         "min_holdout_score",
-        "max_compute_seconds"
+        "max_compute_seconds",
+        "min_evidence_coverage",
+        "max_false_accept_rate",
+        "max_counterexample_escape_rate"
       ],
       "properties": {
         "min_source_coverage": {
@@ -53,6 +56,21 @@
         "max_compute_seconds": {
           "type": "number",
           "exclusiveMinimum": 0
+        },
+        "min_evidence_coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_false_accept_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_counterexample_escape_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
         }
       },
       "additionalProperties": false
