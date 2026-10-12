@@ -11,6 +11,8 @@ The second direction does **not** claim to predict or control future outcomes. T
 
 **Current productization record (2026-10-09):** [Business pivot & first logic demo](docs/PRODUCTIZATION_AND_FIRST_LOGIC_DEMO_2026-10-09.md) — the AI Logic Auditor is a prototype; its findings are NOT_YET_VERIFIED.
 
+**Daily integration map (2026-10-13):** [Logic architecture ↔ three Logic Boxes ↔ Wix catalog](docs/DAILY_INTEGRATION_MAP_2026-10-13.md) — canonical index of architecture sources, product status, public links, and remaining integration tests.
+
 **Architecture navigation:** [Protected Core → Independent Evidence Infrastructure](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/PROTECTED_CORE_AND_EVIDENCE_INFRASTRUCTURE.md) · [Rational Logic — Protected IP Boundary](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/RATIONAL_LOGIC_IP_BOUNDARY.md) · [Repository Ecosystem](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/REPOSITORY_ECOSYSTEM.md)
 
 ## WANGA and Rational Logic
