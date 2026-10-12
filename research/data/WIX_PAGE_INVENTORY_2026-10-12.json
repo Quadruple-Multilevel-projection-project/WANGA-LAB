@@ -2609,6 +2609,34 @@
     "inventory_only_records": 145,
     "title_field_note": "The inventory stores URL slugs, not verified page display titles.",
     "topic_tag_note": "Tags are inferred from URL/slug; they are search aids, not evidence of semantic relevance or logical dependency.",
-    "source_mutation_note": "This quality cleanup changes only the Logic Engine demo site and WANGA-LAB documents; original source Wix pages were not edited or deleted."
+    "source_mutation_note": "This quality cleanup changes only the Logic Engine demo site and WANGA-LAB documents; original source Wix pages were not edited or deleted.",
+    "browser_checks": {
+      "source_audit": {
+        "status": "PASS",
+        "inventory_loaded_from_github": true,
+        "displayed_total_urls": 174,
+        "displayed_unique_urls": 174,
+        "my_site_17_filter": "PASS",
+        "content_reviewed_filter_count": 29,
+        "error_messages": "none"
+      },
+      "logic_compositions": {
+        "status": "PASS",
+        "synthetic_claim_calculation_percent": 22.22,
+        "claim_result": "CONTRADICTION",
+        "fixed_score": 0.75,
+        "threshold_0_80_result": "REJECT",
+        "threshold_0_60_result": "ACCEPT"
+      },
+      "homepage": {
+        "status": "PASS_FOR_CONTENT_SCOPE",
+        "unrelated_cards_removed": true,
+        "curated_core_links_present": true,
+        "browser_console_errors": "NOT_CHECKED"
+      },
+      "cross_site_logic_map": {
+        "status": "ROUTE_CONTENT_FETCHED; INTERACTION_NOT_SEPARATELY_TESTED"
+      }
+    }
   }
 }
