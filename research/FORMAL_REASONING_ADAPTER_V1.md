@@ -1,60 +1,56 @@
-# WANGA Formal Reasoning Adapter V1 — Z3 and Hard-Gated Evaluation
+# WANGA Formal Reasoning Adapter V1 — Text Frontend + Canonical Typed AST
 
-**Status: BOUNDED PROPOSITIONAL PROTOTYPE · OPTIONAL DEPENDENCY PINNED · FIVE SYNTHETIC BENCHMARK CASES · NOT A NATURAL-LANGUAGE PROVER.**
+**Status: BUILT ON BRANCH · CI VALIDATION PENDING · SYNTHETIC FIXTURES ONLY · SOURCE-GROUNDED SEMANTIC VALIDITY NOT YET VERIFIED.**
 
-## Purpose
+## Architecture decision
 
-This addition advances the P0 items in `research/ARK_SWARM_FULL_STACK_GAP_ANALYSIS_V1.md`: a restricted formal semantics contract, solver-backed checks, countermodel output, an explicit candidate evaluation vector, and CI coverage.
+There is one solver execution layer: `logic_proof.z3_adapter`.
 
-## Components
-
-- `formal_reasoning/propositional.py`: parser for explicitly supplied propositional formulas with variables and operators `not/!`, `and/&`, `or/|`, `->/implies`, and `<->/iff`. It does not run `eval`, rejects undeclared symbols/unsupported syntax, and applies explicit limits to formula length, tokens, nesting, variable count, premise count and solver timeout.
-- `formal_reasoning/benchmark.py`: runs a fixed set of five synthetic cases.
-- `formal_reasoning/evaluation.py`: applies hard gates to a candidate metric vector. Its descriptive score never overrides a failed hard gate and never updates weights.
-- `requirements-formal.txt`: pins the optional Z3 adapter dependency.
-- `schemas/formal-claim-v1.schema.json` and `schemas/formal-check-result-v1.schema.json`: machine-readable input/output contracts.
-- `scripts/run_formal_reasoning_benchmarks.py`: writes the benchmark report to `research/reports/formal-reasoning/benchmark-latest.json`.
-- `tests/test_formal_reasoning.py`: parser, entailment, countermodel, premise-consistency, evaluation-gate and benchmark tests.
+- `formal_reasoning.propositional` is a bounded text frontend for explicitly supplied propositional formulas. It parses a restricted grammar, converts its parsed tree into the typed AST, and delegates solving to `logic_proof.z3_adapter`. It does not call a separate Z3 solver implementation.
+- `logic_proof.z3_adapter` validates explicit typed AST nodes and supports Bool, Int, Real and String variables with a bounded operator set. It requires every premise to contain source references or to be explicitly marked as an assumption.
+- `logic_proof.formalization_queue` receives a Logic Trader candidate and records missing formal fields. It never infers a premise, conclusion, proof or AST from surface prose.
+- `logic_proof.package_contract` validates the source-grounded package lifecycle and requires an independent review record for a `VERIFIED` package.
+- Both evaluation interfaces read a single versioned threshold file: `formal_reasoning/config/evaluation_policy.json`.
 
 ## Decision semantics
 
-1. Parse every premise and conclusion only in the declared propositional grammar.
-2. Test premise consistency first.
-   - `SAT`: premises have at least one satisfying assignment.
-   - `UNSAT`: premises are inconsistent; entailment is not evaluated.
-   - `UNKNOWN`: solver did not decide; remain unresolved.
-3. Only if premises are consistent, test `premises AND NOT conclusion`.
-   - `UNSAT`: the conclusion follows from those encoded premises within this propositional fragment.
-   - `SAT`: a countermodel is emitted; the conclusion is not entailed by this encoding.
-   - `UNKNOWN`: unresolved.
-4. Retain `epistemic_status` unchanged and always emit `verification_status=NOT_YET_VERIFIED`.
+1. Test encoded premise consistency.
+   - `SAT`: at least one assignment satisfies the encoded premises; not a truth judgement.
+   - `UNSAT`: the encoded premises are inconsistent; do not accept entailment.
+   - `UNKNOWN`: the solver did not determine the result; keep it unresolved.
+2. For consistent premises, test premises AND NOT conclusion.
+   - `UNSAT`: the conclusion follows within the exact encoded fragment.
+   - `SAT`: return a countermodel; the conclusion is not entailed by this encoding.
+   - `UNKNOWN`: remain unresolved.
+3. Preserve the input epistemic status and always return `NOT_YET_VERIFIED`.
+4. Do not treat claim-level source references as evidence for every formal premise. The text frontend marks typed premises as explicit formal assumptions unless a future schema adds per-premise source mappings.
+5. Never map SAT, one passing fixture, or an evaluation score to natural-language truth or automatic `VERIFIED` status.
 
-A solver result is relative to the formulas supplied. This adapter does not translate arbitrary natural language, authenticate source documents, prove empirical truth, emit a Lean-style proof object, or certify semantics outside the declared grammar.
+The typed AST adapter is deliberately limited. It does not formalize arbitrary natural language, authenticate documents or prove that the encoding matches its source statement.
 
-## Candidate evaluation
+## Benchmarks
 
-The evaluation vector contains premise consistency, formal-check result, source coverage, benchmark accuracy, counterexample rate, holdout score, replay stability, and compute time. Each hard gate must pass. The weighted descriptive index is for reporting only; it cannot compensate for a failed hard gate. Thresholds load from `formal_reasoning/config/evaluation_policy.json` and are explicitly labeled `INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED`. The evaluator never updates weights or changes a claim status.
+- Five propositional cases test the text-parser frontend and delegation.
+- Seven typed-AST cases test the canonical solver adapter, countermodel, inconsistent-premise handling, explicit assumptions and malformed inputs.
+- Both sets are synthetic adapter tests. They do not constitute source-grounded task benchmarks or prove that a Logic Trader-selected package is semantically correct.
 
-## ARK-Swarm integration
+## Shared candidate evaluation
 
-The adapter is wired into ARK-Swarm as the `formal-propositional-benchmark` role. The swarm reads the fixed five-case synthetic suite and includes the outcomes in its candidate/report metadata. It does **not** claim that these cases prove the selected real-catalog package. Candidate-level eligibility remains a separate metric contract and no candidate is automatically released or promoted to VERIFIED.
+The single policy `formal_reasoning/config/evaluation_policy.json` currently has status `INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED`. Gates cover premise consistency, formal entailment, source/evidence coverage, benchmark accuracy, false acceptance, counterexample escape, holdout and compute budget. Both evaluators require explicit metric inputs; missing holdout or compute measurements block eligibility for independent review. The score remains descriptive, no weights change, and no package promotes its own status.
 
-
-The formal smoke benchmark is added as a separate deterministic coordinator role. It checks five synthetic formulas and contributes a test result to the cycle report. This is not treated as semantic validation of the Logic Trader's selected real-catalog package.
-
-## Run locally
+## Run
 
 ```bash
-python -m pip install -r requirements-formal.txt
+python -m pip install -r requirements-logic.txt
 python -m unittest discover -s tests -p 'test_formal_reasoning.py' -v
-python scripts/run_formal_reasoning_benchmarks.py
+python -m unittest discover -s tests -p 'test_logic_proof_adapter.py' -v
+python -m unittest discover -s tests -p 'test_logic_proof_benchmark.py' -v
+python -m unittest discover -s tests -p 'test_logic_package_contract.py' -v
+python -m unittest discover -s tests -p 'test_logic_formalization_queue.py' -v
+python -m unittest discover -s tests -p 'test_logic_json_schemas.py' -v
+python scripts/run_formal_logic_benchmark.py --out research/reports/ark-swarm/formal-logic-benchmark-latest.json
 ```
 
-## Next required work
+## Remaining evidence requirement
 
-- Increase to at least 30 source-grounded negative/boundary/counterexample cases before any candidate-release decision.
-- Define a versioned compiler from a carefully scoped subset of LNL into this formal AST; do not map natural-language text directly into Z3 assertions.
-- Add differential tests against truth tables for small formula sizes.
-- Add independent review of the mapping from source-backed claims to declared formulas.
-- Use holdout evaluation and calibration before changing candidate selection policy.
-- Extend to first-order logic or Lean only through separate adapters and proof/result contracts.
+Before candidate release, add at least 30 source-grounded negative, boundary or counterexample cases; preserve exact source spans and per-premise provenance; compare against an independent holdout set; measure false acceptance and counterexample escape; and have an independent reviewer inspect the formalization. The current synthetic test suites are not a substitute.
