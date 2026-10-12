@@ -202,3 +202,14 @@ The new `logic_engine_v1/` package makes the first deterministic logic layer exe
 - Run `python logic_engine_v1/logic_kernel.py validate-corpus --repo-root .` and `python -m unittest discover -s logic_engine_v1/tests -v`.
 
 This is a deterministic symbolic subsystem, not a language model. It does not parse arbitrary natural language, learn rules, authenticate source truth, or establish hallucination prevention. A future LLM adapter may propose structured input; it must not bypass the evidence, contradiction, scope or permission gates.
+
+## Logic-native language and model builder V1
+
+WANGA-LAB now includes the experimental LNL/0.1 parser/compiler and model-proposal pipeline. The LLM proposer is optional and only calls a configured endpoint when explicitly selected; the offline structured provider is a deterministic baseline, not an AI model.
+
+- [Logic Model Builder code and quick start](./logic_model_builder_v1/README.md)
+- [Architecture and research record](./docs/LOGIC_NATIVE_LANGUAGE_MODEL_BUILDER_V1.md)
+- [Live Wix documentation page](https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-native-model-builder.html)
+- [Merged implementation PR #96](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/96) — merge commit `cbe964a245cbc5e0622a92ac2d79da7c3b750126`.
+
+The CI workflow passed for the model-builder tests, repository integrity, and CodeQL on the reviewed PR commit. The prototype is not a trained foundation model, arbitrary natural-language semantics are not fully formalized, and semantic accuracy remains NOT_YET_VERIFIED.
