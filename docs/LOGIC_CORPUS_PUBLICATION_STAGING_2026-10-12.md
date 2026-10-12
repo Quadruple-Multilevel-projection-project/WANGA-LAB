@@ -99,3 +99,6 @@ The potential differentiator is a source-linked, testable logic representation a
 5. Complete one bounded, testable gate/weight demonstration.
 6. Review the Forensic Logic Drift draft and then decide whether to publish.
 7. Prepare site-specific static-page drafts for Wanga Logic Research and Hebrew Thesis Insight only after confirming supported page-editing routes.
+## 2026-10-12 — 12-problem evidence map
+
+Added [TWELVE_PROBLEM_ARCHITECTURE_EVIDENCE_MAP_V1.md](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/TWELVE_PROBLEM_ARCHITECTURE_EVIDENCE_MAP_V1.md) and linked it to the investor explanation. It maps the twelve claimed problem areas to proposed responses, evidence requirements, and current status. It explicitly does not treat the twelve as solved or validated. Wix publication remains pending destination selection and human review.
