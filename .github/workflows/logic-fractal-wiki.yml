@@ -11,6 +11,8 @@ on:
       - 'scripts/build_logic_wiki.py'
       - 'logic_fractal/**'
       - 'scripts/run_logic_agents.py'
+      - 'scripts/evaluate_logic_agent_bundle.py'
+      - 'tests/test_multi_agent_logic_evaluation.py'
       - 'scripts/ingest_conversation_export.py'
       - 'tests/test_conversation_export_intake.py'
       - 'schemas/conversation-intake-record-v1.schema.json'
@@ -40,6 +42,10 @@ jobs:
         run: python -m unittest discover -s logic_fractal/tests -p 'test_fragment_composer.py' -v
       - name: Build first typed fractal model candidate
         run: python scripts/build_first_fractal_model.py
+      - name: Test integrated logic-agent roles
+        run: python -m unittest discover -s tests -p 'test_multi_agent_logic_evaluation.py' -v
+      - name: Execute six logic-agent roles
+        run: python scripts/evaluate_logic_agent_bundle.py
       - name: Run bounded research-agent cycle
         run: python scripts/run_logic_agents.py
       - name: Upload wiki and readiness report
@@ -65,3 +71,4 @@ jobs:
           add-paths: |
             logic_wiki/generated/**
             research/reports/logic-fractal/**
+            research/reports/agent-evaluation/**
