@@ -1,0 +1,15 @@
+{
+  "additional_source_records": 0,
+  "additional_source_classes": [],
+  "additional_logic_units_with_provenance": 0,
+  "composition_rules_with_contracts": 0,
+  "counterexample_cases": 0,
+  "test_cases": 0,
+  "benchmark_suites": 0,
+  "independent_review_cycles": 0,
+  "critical_core_contradictions": 0,
+  "deterministic_build": false,
+  "holdout_split": false,
+  "mirror_review": false,
+  "note": "These counters change only when an audited ingest/evaluation run records evidence; zero means not recorded, not proof that no material exists."
+}
