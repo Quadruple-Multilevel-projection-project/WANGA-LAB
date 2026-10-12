@@ -1,8 +1,8 @@
 {
   "schema_version": "wanga-agent-registry/1.0",
-  "status": "AGENT_ROLES_DEFINED_RUNTIME_BOUNDED_BY_AVAILABLE_CONNECTORS",
+  "status": "AGENT_ROLES_DEFINED_WITH_ARK_SWARM_LOGIC_TRADER_PROTOTYPE",
   "default_execution_mode": "DETERMINISTIC",
-  "external_llm_backend": "NOT_CONFIGURED_BY_THIS_WORKFLOW",
+  "external_llm_backend": "NOT_CONFIGURED",
   "agents": [
     {
       "id": "repository-inventory",
@@ -153,6 +153,61 @@
         "ecosystem scan report artifact"
       ],
       "privacy": "No automatic merge, no Wix write, no private-project names in public artifacts."
+    },
+    {
+      "id": "logic-trader",
+      "role": "Rank source-linked logic assets for a declared task and assemble an inspectable internal candidate logic package.",
+      "implementation": "ark_swarm/logic_trader.py",
+      "status": "IMPLEMENTED_DETERMINISTIC_CANDIDATE_RANKER",
+      "inputs": [
+        "declared task text",
+        "Logic Wiki article/source catalog",
+        "composition contracts"
+      ],
+      "outputs": [
+        "lexically ranked articles",
+        "candidate fractal paths",
+        "source-preserving logic package",
+        "content hashes"
+      ],
+      "privacy": "Uses repository-visible catalog material only; no external model calls. Ranking is lexical and does not establish semantic relevance."
+    },
+    {
+      "id": "ark-swarm-coordinator",
+      "role": "Run bounded specialist roles over Logic Trader, source guards, fractal composition, typed-fragment checks, counter-reading, and the existing logic-agent suite.",
+      "implementation": "ark_swarm/coordinator.py",
+      "status": "IMPLEMENTED_BOUNDED_DETERMINISTIC",
+      "inputs": [
+        "task",
+        "Logic Wiki catalog",
+        "composition rules",
+        "typed fragment test fixture",
+        "existing agent evaluation"
+      ],
+      "outputs": [
+        "candidate logic brain artifact",
+        "role result ledger",
+        "swarm cycle report",
+        "counter-reading candidate"
+      ],
+      "privacy": "Local coordinator only; does not call Wix or external LLMs, does not auto-release candidates, and does not implement network transport."
+    },
+    {
+      "id": "swarm-event-ledger",
+      "role": "Record immutable role-result events and merge event sets deterministically for reproducible local cycles.",
+      "implementation": "ark_swarm/swarm_state.py",
+      "status": "IMPLEMENTED_LOCAL_GSET_NOT_NETWORK_SYNC",
+      "inputs": [
+        "cycle ID",
+        "agent role result",
+        "deterministic checksums"
+      ],
+      "outputs": [
+        "deduplicated event set",
+        "event-set SHA-256",
+        "shared validation-credit metric"
+      ],
+      "privacy": "The G-Set union helper is local; it is not peer-to-peer CRDT replication or reinforcement learning."
     }
   ],
   "cross_project_write_policy": "Read broadly where authorized; write to a project only through a review branch/PR and only for changes belonging to that project. Otherwise record an integration proposal in WANGA-LAB.",

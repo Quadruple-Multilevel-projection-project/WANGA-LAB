@@ -261,3 +261,15 @@ The repository now has a bounded, privacy-aware ecosystem scan branch in review.
 - [Daily GitHub Actions workflow](.github/workflows/ecosystem-agent-sweep.yml)
 
 This workflow requires the optional `CROSS_REPO_READ_TOKEN` secret for account-wide repository discovery. Without it, GitHub Actions limits its scan to the current repository and reports the blocker. The connected daily WANGA work loop separately covers connector-visible repositories and accessible Library material. It does not provide automatic access to private ChatGPT conversations without supplied export files.
+
+## ARK-Swarm + Logic Trader (first integrated runtime)
+
+A bounded local runtime now connects the Logic Wiki/catalog and fractal composer to a **Logic Trader** that ranks source-linked logic assets for a task, assembles an internal candidate package, runs provenance/typed-interface/counter-reading checks, and invokes the existing six-role logic-agent suite. Start with:
+
+```bash
+python -m unittest discover -s tests -p 'test_ark_swarm_logic_trader.py' -v
+python scripts/run_ark_swarm.py
+```
+
+Outputs: `research/reports/ark-swarm/logic-trader-swarm-latest.json` and `logic-brain-candidate-latest.json`. The model remains `INTERNAL_CANDIDATE_NOT_RELEASED` and `NOT_YET_VERIFIED`. Lexical ranking is not semantic validation. P2P transport, network CRDT synchronization, connectome execution and an external LLM backend are not configured by this integration.
+

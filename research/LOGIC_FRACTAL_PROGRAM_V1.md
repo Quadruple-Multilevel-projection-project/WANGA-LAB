@@ -86,3 +86,16 @@ This separates graph exploration from executable logical composition. Neither ty
 
 ## Limitations
 The exact conversation from two days earlier has not been fully retrieved. Available context includes the Logic Mine tracks, NTM work, LNL/MLN material and the source-first-before-weights rule. This is a starting corpus, not proof of complete conversation coverage or of the future-market hypothesis.
+
+## ARK-Swarm + Logic Trader integration
+
+The first bounded integration is implemented in `ark_swarm/`. The Logic Trader ranks entries in the versioned Logic Wiki catalog by lexical overlap and source/link metadata, then packages a source-preserving candidate composition. The ARK-Swarm coordinator runs catalogue integrity, provenance, fractal graph composition, typed-fragment fixture tests, a counter-reading candidate and the existing six-role integration suite.
+
+- `ark_swarm/logic_trader.py`: ranked logic assets and candidate package.
+- `ark_swarm/coordinator.py`: bounded role coordinator and candidate reports.
+- `ark_swarm/swarm_state.py`: local G-Set event union and test-only validation credit.
+- `scripts/run_ark_swarm.py`: executable entry point.
+- `research/ARK_SWARM_LOGIC_TRADER_INTEGRATION_V1.md`: architecture and runtime limits.
+
+The first output is `INTERNAL_CANDIDATE_NOT_RELEASED`. Lexical overlap is not semantic understanding; type compatibility is not semantic equivalence. The current runtime is local and deterministic. Peer-to-peer transport, network CRDT replication, biological connectome execution, online reward learning, external language-model generation, and automatic publication remain NOT_IMPLEMENTED or NOT_CONFIGURED.
+

@@ -3,6 +3,26 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 5 * * 1'
+  push:
+    branches: ['main']
+    paths:
+      - 'logic_wiki/**'
+      - 'research/inbox/conversations/**'
+      - 'research/LOGIC_FRACTAL_PROGRAM_V1.md'
+      - 'research/ARK_SWARM_LOGIC_TRADER_INTEGRATION_V1.md'
+      - 'scripts/build_logic_wiki.py'
+      - 'logic_fractal/**'
+      - 'ark_swarm/**'
+      - 'scripts/run_logic_agents.py'
+      - 'scripts/evaluate_logic_agent_bundle.py'
+      - 'scripts/run_ark_swarm.py'
+      - 'tests/test_multi_agent_logic_evaluation.py'
+      - 'tests/test_ark_swarm_logic_trader.py'
+      - 'scripts/ingest_conversation_export.py'
+      - 'tests/test_conversation_export_intake.py'
+      - 'schemas/conversation-intake-record-v1.schema.json'
+      - 'schemas/ark-swarm-cycle-report-v1.schema.json'
+      - '.github/workflows/logic-fractal-wiki.yml'
   pull_request:
     paths:
       - 'logic_wiki/**'
@@ -13,6 +33,11 @@ on:
       - 'scripts/run_logic_agents.py'
       - 'scripts/evaluate_logic_agent_bundle.py'
       - 'tests/test_multi_agent_logic_evaluation.py'
+      - 'ark_swarm/**'
+      - 'scripts/run_ark_swarm.py'
+      - 'tests/test_ark_swarm_logic_trader.py'
+      - 'schemas/ark-swarm-cycle-report-v1.schema.json'
+      - 'research/ARK_SWARM_LOGIC_TRADER_INTEGRATION_V1.md'
       - 'scripts/ingest_conversation_export.py'
       - 'tests/test_conversation_export_intake.py'
       - 'schemas/conversation-intake-record-v1.schema.json'
@@ -44,8 +69,10 @@ jobs:
         run: python scripts/build_first_fractal_model.py
       - name: Test integrated logic-agent roles
         run: python -m unittest discover -s tests -p 'test_multi_agent_logic_evaluation.py' -v
-      - name: Execute six logic-agent roles
-        run: python scripts/evaluate_logic_agent_bundle.py
+      - name: Run ARK-Swarm + Logic Trader tests
+        run: python -m unittest discover -s tests -p 'test_ark_swarm_logic_trader.py' -v
+      - name: Execute integrated ARK-Swarm + Logic Trader (includes existing six roles)
+        run: python scripts/run_ark_swarm.py
       - name: Run bounded research-agent cycle
         run: python scripts/run_logic_agents.py
       - name: Upload wiki and readiness report
@@ -55,6 +82,8 @@ jobs:
           path: |
             logic_wiki/generated/
             research/reports/logic-fractal/
+            research/reports/agent-evaluation/
+            research/reports/ark-swarm/
       - name: Propose generated wiki/report updates (no auto-merge)
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         uses: peter-evans/create-pull-request@v7
@@ -72,3 +101,4 @@ jobs:
             logic_wiki/generated/**
             research/reports/logic-fractal/**
             research/reports/agent-evaluation/**
+            research/reports/ark-swarm/**

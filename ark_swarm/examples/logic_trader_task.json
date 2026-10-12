@@ -1,0 +1,17 @@
+{
+  "task_id": "ARK-SWARM-TASK-LOGICAL-BRAIN-001",
+  "task": "Build a source-grounded fractal logic model by connecting evidence provenance, logical primitives, typed relations, recursive composition, verification, bounded agents, and model readiness. Select existing logic assets, assemble a candidate, keep source lineage, and reject unverified status promotion.",
+  "requested_outputs": [
+    "ranked_logic_assets",
+    "candidate_fractal_composition",
+    "source_provenance_report",
+    "counter-reading_candidate",
+    "agent_evaluation_report"
+  ],
+  "constraints": [
+    "source first, weights later",
+    "do not auto-promote claims to VERIFIED",
+    "no external LLM call unless explicitly configured",
+    "do not publish or execute candidate as a released model"
+  ]
+}
