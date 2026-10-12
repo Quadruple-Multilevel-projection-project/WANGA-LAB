@@ -2,7 +2,7 @@
   "schema_version": "wanga-library-integration-matrix/1.0",
   "audit_date": "2026-10-12",
   "basis": "Pasted text.txt plus current ARK-Swarm/Logic Trader implementation and official documentation for short-listed projects.",
-  "status": "RESEARCH_DECISIONS_NOT_INSTALLED_DEPENDENCIES",
+  "status": "RESEARCH_DECISIONS_WITH_OPTIONAL_Z3_ADAPTER_CONFIGURED_NOT_BULK_INSTALLED",
   "scope": {
     "logic_trader": "Selection, composition and evaluation of logical assets only.",
     "dependency_policy": "Prefer one task-specific adapter at a time; do not bulk-install the 100+ candidates."
@@ -30,8 +30,8 @@
     },
     {
       "component": "z3-proof-adapter",
-      "status": "MISSING",
-      "limit": "requires an explicit semantics/encoding contract"
+      "status": "IMPLEMENTED_OPTIONAL_BOUNDED_PROTOTYPE",
+      "limit": "explicit Boolean/integer/real/string AST only; checks premise consistency separately; no natural-language formalizer; not a source-truth oracle"
     },
     {
       "component": "swarm-coordinator",
@@ -67,6 +67,16 @@
       "component": "wix-publishing",
       "status": "EXISTING_SEPARATE_BRIDGE",
       "limit": "not part of local candidate cycle by default"
+    },
+    {
+      "component": "formal-fixture-benchmark",
+      "status": "IMPLEMENTED_SEVEN_SYNTHETIC_CASES",
+      "limit": "validates adapter behavior only; source-grounded logic benchmark still missing"
+    },
+    {
+      "component": "logic-evaluation-ledger",
+      "status": "IMPLEMENTED_HARD_GATES",
+      "limit": "records an evaluation vector and review decision only; no reward learning or auto-promotion"
     }
   ],
   "categories": [
@@ -78,9 +88,9 @@
         {
           "name": "Z3 / z3-solver",
           "fit": "SMT constraints and formal-fragment checks",
-          "decision": "PILOT_FIRST",
+          "decision": "OPTIONAL_BOUNDED_ADAPTER_CONFIGURED",
           "official_url": "https://github.com/Z3Prover/z3",
-          "status": "CHECK_SAT_NOT_NATURAL_LANGUAGE_TRUTH"
+          "status": "IMPLEMENTED_PENDING_CI_AND_SOURCE_GROUNDED_BENCHMARKS"
         },
         {
           "name": "Lean 4 + LeanCopilot",
