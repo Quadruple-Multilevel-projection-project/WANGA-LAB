@@ -87,3 +87,9 @@ The current AI Logic Auditor demo must not be represented as an implementation o
 The first demonstrator should remain bounded: one specified task, known inputs, explicit constraints, traceable outputs, and repeatable tests. Only after this is stable should additional layers be connected. Do not use the LFA/CSR/EDI values from the conceptual architecture text as measured results unless test data and run logs are supplied.
 
 Review: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md
+
+## Executable symbolic kernel — 2026-10-12
+
+The bounded symbolic prototype is now represented by `logic_engine_v1/` in WANGA-LAB. It runs explicit, structured rules, checks referenced evidence IDs, maintains a derivation trace, flags contradictions, gates scoped actions, and tests exact combinatorial counts. It does not parse natural language or authenticate evidence contents. See [kernel implementation specification](LOGIC_KERNEL_V1_IMPLEMENTATION.md) and [kernel README](../logic_engine_v1/README.md).
+
+Status is BUILT as a bounded prototype; semantic accuracy and production reliability remain NOT_YET_VERIFIED until CI tests run and a reviewed source-backed test corpus is evaluated.

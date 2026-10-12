@@ -1,0 +1,126 @@
+{
+  "case_id": "SITE-UPDATE-SCOPE-DEMO-001",
+  "description": "Synthetic example: request, scope and permission are explicit premises. Values are fixture data, not facts about a real website.",
+  "evidence": [
+    {
+      "id": "E-REQUEST",
+      "source_uri": "fixture://site-update/request",
+      "source_version": "fixture-v1",
+      "location": "input.request",
+      "status": "TEST_FIXTURE"
+    },
+    {
+      "id": "E-SCOPE",
+      "source_uri": "fixture://site-update/scope",
+      "source_version": "fixture-v1",
+      "location": "input.scope",
+      "status": "TEST_FIXTURE"
+    },
+    {
+      "id": "E-PERMISSION",
+      "source_uri": "fixture://site-update/permission",
+      "source_version": "fixture-v1",
+      "location": "input.permission",
+      "status": "TEST_FIXTURE"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C-REQUEST",
+      "atom": {
+        "subject": "request",
+        "predicate": "action",
+        "object": "typo_fix"
+      },
+      "epistemic_status": "TEST_FIXTURE",
+      "evidence_refs": [
+        "E-REQUEST"
+      ]
+    },
+    {
+      "id": "C-SCOPE",
+      "atom": {
+        "subject": "scope",
+        "predicate": "allows",
+        "object": "typo_fix"
+      },
+      "epistemic_status": "TEST_FIXTURE",
+      "evidence_refs": [
+        "E-SCOPE"
+      ]
+    },
+    {
+      "id": "C-PERMISSION",
+      "atom": {
+        "subject": "permission",
+        "predicate": "grants",
+        "object": "typo_fix"
+      },
+      "epistemic_status": "TEST_FIXTURE",
+      "evidence_refs": [
+        "E-PERMISSION"
+      ]
+    },
+    {
+      "id": "C-UNSUPPORTED-PUBLISH",
+      "atom": {
+        "subject": "request",
+        "predicate": "action",
+        "object": "publish_without_approval"
+      },
+      "epistemic_status": "HYPOTHESIS",
+      "evidence_refs": []
+    }
+  ],
+  "rules": [
+    {
+      "id": "R-SCOPE-PERMISSION",
+      "status": "ACTIVE_SPECIFIED",
+      "description": "A candidate permission result follows only when request, scope, and permission are all represented in fixture inputs.",
+      "antecedents": [
+        {
+          "subject": "request",
+          "predicate": "action",
+          "object": "$ACTION"
+        },
+        {
+          "subject": "scope",
+          "predicate": "allows",
+          "object": "$ACTION"
+        },
+        {
+          "subject": "permission",
+          "predicate": "grants",
+          "object": "$ACTION"
+        }
+      ],
+      "consequent": {
+        "subject": "action",
+        "predicate": "candidate_allowed",
+        "object": "$ACTION"
+      },
+      "source_refs": [
+        "fixture://logic-kernel/rules/R-SCOPE-PERMISSION"
+      ]
+    }
+  ],
+  "action_gate": {
+    "action": "typo_fix",
+    "target": "approved-page-1",
+    "allowed_actions": [
+      "typo_fix"
+    ],
+    "allowed_targets": [
+      "approved-page-1"
+    ],
+    "permission_granted": true,
+    "publish": false,
+    "publish_permission_granted": false,
+    "evidence_complete": true
+  },
+  "threshold_comparison": {
+    "score": 0.75,
+    "old_threshold": 0.8,
+    "new_threshold": 0.6
+  }
+}

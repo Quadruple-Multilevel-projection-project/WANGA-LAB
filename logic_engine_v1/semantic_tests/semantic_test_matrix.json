@@ -1,0 +1,122 @@
+{
+  "schema_version": "1.0",
+  "purpose": "Bounded source-grounded regression cases for the symbolic kernel. These cases test scope discipline, exact combinatorics, provenance handling, and the boundary between source text and model interpretation.",
+  "status": "TEST_FIXTURE_SET_NOT_A_GENERAL_SEMANTIC_BENCHMARK",
+  "source_claim_boundary": "A URL or a short excerpt is not independent source authentication. The Sefaria case is scoped to one displayed textual presentation. The 221/231 scholarly reference is flagged for full-text review; automated tests must not promote it to VERIFIED.",
+  "sources": [
+    {
+      "id": "SRC-SY-GRA-2-4",
+      "title": "Sefer Yetzirah Gra Version 2:4 (Sefaria presentation)",
+      "uri": "https://www.sefaria.org/Sefer_Yetzirah_Gra_Version.2.4",
+      "locator": "Sefer Yetzirah, Gra Version, 2:4",
+      "source_version": "Sefaria displayed text accessed 2026-10-12",
+      "reference_status": "SOURCE_TEXT_LOCATED",
+      "excerpt": "Twenty-Two Letters of Foundation: He placed them in a circle like a wall with 231 Gates. The Circle oscillates forward and back.",
+      "assertion_scope": "This displayed presentation describes 22 foundation letters, 231 gates, and forward/back movement.",
+      "scope_limit": "Edition-specific report only. This does not establish that every recension has identical wording, that each gate has a unique computational operator, or that WANGA has implemented a verified semantic mapping."
+    },
+    {
+      "id": "SRC-VARIANT-221-231",
+      "title": "Naama Ben-Shachar (2025), bibliographic reference concerning 221/231 gate calculation traditions",
+      "uri": "https://cris.iucc.ac.il/en/publications/%D7%A0%D7%9E%D7%A6%D7%90%D7%95-%D7%99%D7%95%D7%A6%D7%90%D7%95%D7%AA-%D7%91%D7%A8%D7%9C%D7%90-%D7%A9%D7%A2%D7%A8%D7%99%D7%9D-%D7%A0%D7%90-%D7%9E%D7%90%D7%AA%D7%99%D7%9D-%D7%A2%D7%A9%D7%A8%D7%99%D7%9D-%D7%95%D7%90%D7%97%D7%93-%D7%A2%D7%9C-%D7%A9%D7%99%D7%98%D7%95%D7%AA-%D7%97%D7%99%D7%A9%D7%95%D7%91-%D7%9E%D7%A1%D7%A4%D7%A8-%D7%94/",
+      "locator": "Bibliographic record; exact pages and arguments must be reviewed before detailed claims are published.",
+      "source_version": "Bibliographic reference accessed 2026-10-12",
+      "reference_status": "BIBLIOGRAPHIC_REFERENCE_REQUIRES_FULL_TEXT_REVIEW",
+      "excerpt": "",
+      "assertion_scope": "A research reference is present for examination of 221/231 variants.",
+      "scope_limit": "Do not assert the paper's detailed thesis or full evidentiary implications until the article text, source context, and relevant pages are reviewed. The reference is not itself proof."
+    }
+  ],
+  "cases": [
+    {
+      "id": "SEM-001",
+      "kind": "MATHEMATICAL_INVARIANT",
+      "assertion": "For 22 distinct symbols, unordered pairs without self-pairs total 231.",
+      "scope_limit": "Derived from C(22,2); does not assign semantics to any pair.",
+      "automated_test": "test_exact_counts",
+      "expected_status": "PASS"
+    },
+    {
+      "id": "SEM-002",
+      "kind": "MATHEMATICAL_INVARIANT",
+      "assertion": "Ordered pairs of distinct symbols total 462.",
+      "scope_limit": "Derived from 22×21; direction in the representation does not prove different logical meaning.",
+      "automated_test": "test_exact_counts",
+      "expected_status": "PASS"
+    },
+    {
+      "id": "SEM-003",
+      "kind": "MATHEMATICAL_INVARIANT",
+      "assertion": "Unordered sets of three distinct symbols total 1540.",
+      "scope_limit": "This is not the number of ordered chains.",
+      "automated_test": "test_exact_counts",
+      "expected_status": "PASS"
+    },
+    {
+      "id": "SEM-004",
+      "kind": "MATHEMATICAL_INVARIANT",
+      "assertion": "Ordered triples of distinct symbols total 9240; if repetition is allowed, ordered triples total 10648.",
+      "scope_limit": "The repetition condition must be part of every reported count.",
+      "automated_test": "test_exact_counts",
+      "expected_status": "PASS"
+    },
+    {
+      "id": "SEM-005",
+      "kind": "SOURCE_SCOPE",
+      "source_id": "SRC-SY-GRA-2-4",
+      "assertion": "The selected Sefaria presentation reports 22 letters, 231 gates, and forward/back movement.",
+      "scope_limit": "Only that presentation; not all textual witnesses or a validated WANGA operator set.",
+      "automated_test": "test_selected_sefer_yetzirah_presentation_is_edition_scoped",
+      "expected_status": "PASS"
+    },
+    {
+      "id": "SEM-006",
+      "kind": "LITERATURE_REVIEW_BOUNDARY",
+      "source_id": "SRC-VARIANT-221-231",
+      "assertion": "A 221/231 scholarship reference exists in the source register.",
+      "scope_limit": "Detailed argument remains not yet reviewed; no universal historical conclusion may be inferred.",
+      "automated_test": "test_221_231_scholarship_reference_stays_review_required",
+      "expected_status": "PASS"
+    },
+    {
+      "id": "SEM-007",
+      "kind": "PROVENANCE",
+      "assertion": "A source-linked input or derivation must not be promoted to VERIFIED solely because a URI exists.",
+      "scope_limit": "Existence/reference checks are not authentication.",
+      "automated_test": "test_source_linked_fixture_does_not_upgrade_conclusion_to_verified",
+      "expected_status": "PASS"
+    },
+    {
+      "id": "SEM-008",
+      "kind": "STRUCTURAL_CORPUS_INTEGRATION",
+      "assertion": "An explicit rule can query the actual K22 gate registry and carry the registry-file provenance in its trace.",
+      "scope_limit": "The loaded predicate proves a structural pair in the repository dataset only; it does not assign semantic meaning.",
+      "automated_test": "test_corpus_context_injects_only_structural_facts_requested_by_rules",
+      "expected_status": "PASS"
+    },
+    {
+      "id": "SEM-009",
+      "kind": "INTERPRETATION_BOUNDARY",
+      "assertion": "Gate semantic roles remain UNASSIGNED unless a cited source and reviewed mapping are supplied.",
+      "scope_limit": "A complete combinatorial enumeration is not semantic validation.",
+      "automated_test": "test_all_gate_semantics_remain_unassigned_in_registry",
+      "expected_status": "PASS"
+    },
+    {
+      "id": "SEM-010",
+      "kind": "CONTRADICTION_HANDLING",
+      "assertion": "Opposite-polarity claims for one atom trigger REVIEW and are not silently reconciled.",
+      "scope_limit": "The detector handles explicit atom-level contradiction, not all natural-language contradiction.",
+      "automated_test": "test_opposite_polarity_is_reported_as_contradiction",
+      "expected_status": "PASS"
+    },
+    {
+      "id": "SEM-011",
+      "kind": "MISSING_EVIDENCE",
+      "assertion": "A missing evidence ID makes a claim ineligible as a rule premise.",
+      "scope_limit": "A present evidence ID alone is not proof that the source supports the claim.",
+      "automated_test": "test_missing_evidence_reference_is_not_eligible",
+      "expected_status": "PASS"
+    }
+  ]
+}

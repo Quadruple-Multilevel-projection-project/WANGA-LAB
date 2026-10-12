@@ -1,0 +1,31 @@
+name: Logic Kernel V1
+on:
+  pull_request:
+    paths:
+      - "logic_engine_v1/**"
+      - "research/data/LOGIC_CORPUS_1000_PAGE_BLUEPRINT_V1.json"
+      - "research/data/LOGIC_CORPUS_PAGES_*.json"
+      - "research/data/LETTER_GATE_MAP_231_V1.json"
+      - "research/data/LETTER_TRIPLE_MAP_1540_V1.json"
+      - ".github/workflows/logic-kernel-v1.yml"
+  push:
+    branches: ["main"]
+    paths:
+      - "logic_engine_v1/**"
+      - "research/data/LOGIC_CORPUS_1000_PAGE_BLUEPRINT_V1.json"
+      - "research/data/LOGIC_CORPUS_PAGES_*.json"
+      - "research/data/LETTER_GATE_MAP_231_V1.json"
+      - "research/data/LETTER_TRIPLE_MAP_1540_V1.json"
+      - ".github/workflows/logic-kernel-v1.yml"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate corpus invariants
+        run: python logic_engine_v1/logic_kernel.py validate-corpus --repo-root .
+      - name: Run unit tests
+        run: python -m unittest discover -s logic_engine_v1/tests -v
