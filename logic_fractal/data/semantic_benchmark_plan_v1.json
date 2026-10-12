@@ -1,0 +1,43 @@
+{
+  "schema_version": "logic-fractal-semantic-benchmark-plan/1.0",
+  "status": "SPECIFIED_NOT_POPULATED",
+  "required_suites": [
+    {
+      "id": "BENCH-POSITIVE",
+      "name": "Source-supported positive cases",
+      "minimum_cases": 30,
+      "goal": "Check that the model derives only conclusions supported by declared premises and relations."
+    },
+    {
+      "id": "BENCH-NEGATIVE",
+      "name": "Negative and counterexample cases",
+      "minimum_cases": 30,
+      "goal": "Check that unsupported, contradicted or out-of-scope conclusions are rejected or sent to review."
+    },
+    {
+      "id": "BENCH-BOUNDARY",
+      "name": "Ambiguity and boundary cases",
+      "minimum_cases": 40,
+      "goal": "Check scopes, exceptions, ambiguous relations, missing premises and MIRROR counter-readings."
+    }
+  ],
+  "required_fields": [
+    "case_id",
+    "source_ids",
+    "exact_spans_or_fixture_ids",
+    "input",
+    "expected_outcome",
+    "rationale",
+    "reviewer_or_adjudication_status",
+    "split",
+    "model_version"
+  ],
+  "split_policy": "Holdout cases must be frozen before parameter/model tuning; after exposure, version the benchmark.",
+  "non_counting_tests": [
+    "unit tests of JSON schema",
+    "HTML render tests",
+    "deterministic hash checks",
+    "synthetic tests without reviewed expected semantic outcomes"
+  ],
+  "status_contract": "Benchmark schema or test count does not establish semantic validity."
+}
