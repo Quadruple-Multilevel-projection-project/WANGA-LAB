@@ -1,0 +1,168 @@
+{
+  "schema_version": "logic-agents/1.0",
+  "execution_model": "Independent bounded work units; a blocked agent must not stop independent workstreams.",
+  "agents": [
+    {
+      "id": "conversation-collector",
+      "role": "COLLECT",
+      "inputs": [
+        "accessible conversation/library excerpts",
+        "user-provided exports"
+      ],
+      "outputs": [
+        "conversation source records",
+        "hashes",
+        "access gaps"
+      ],
+      "constraints": [
+        "Never claim access to unavailable history",
+        "No invented transcript or timestamp",
+        "Respect permission scope"
+      ]
+    },
+    {
+      "id": "source-registrar",
+      "role": "REGISTER_SOURCE",
+      "inputs": [
+        "papers",
+        "public repositories",
+        "web pages",
+        "archives"
+      ],
+      "outputs": [
+        "source registry",
+        "version and locator metadata"
+      ],
+      "constraints": [
+        "A URL is not claim verification",
+        "Prefer primary sources",
+        "Record retrieval date"
+      ]
+    },
+    {
+      "id": "logic-extractor",
+      "role": "EXTRACT",
+      "inputs": [
+        "registered source spans"
+      ],
+      "outputs": [
+        "literal units",
+        "claim candidates",
+        "relation candidates"
+      ],
+      "constraints": [
+        "Separate quotation from interpretation",
+        "No silent repair of missing content"
+      ]
+    },
+    {
+      "id": "logic-normalizer",
+      "role": "NORMALIZE",
+      "inputs": [
+        "literal units",
+        "claim candidates"
+      ],
+      "outputs": [
+        "typed primitives",
+        "normalized relations",
+        "reversible mapping"
+      ],
+      "constraints": [
+        "Preserve raw wording and spans",
+        "No weights before logical closure"
+      ]
+    },
+    {
+      "id": "fractal-composer",
+      "role": "COMPOSE",
+      "inputs": [
+        "accepted primitives",
+        "typed relations",
+        "composition contracts"
+      ],
+      "outputs": [
+        "recursive maps",
+        "invariant checks",
+        "composition trace"
+      ],
+      "constraints": [
+        "Each edge needs provenance or hypothesis status",
+        "Fractal similarity alone is not proof"
+      ]
+    },
+    {
+      "id": "mirror-reviewer",
+      "role": "ADVERSARIAL_REVIEW",
+      "inputs": [
+        "candidate maps",
+        "rules",
+        "tests"
+      ],
+      "outputs": [
+        "counter-readings",
+        "negative cases",
+        "contradiction candidates",
+        "boundary failures"
+      ],
+      "constraints": [
+        "Counter-reading is not truth",
+        "Report failures as well as passes"
+      ]
+    },
+    {
+      "id": "benchmark-evaluator",
+      "role": "EVALUATE",
+      "inputs": [
+        "frozen candidate build",
+        "test suites",
+        "holdout"
+      ],
+      "outputs": [
+        "metrics",
+        "failure examples",
+        "readiness report"
+      ],
+      "constraints": [
+        "No score without execution",
+        "Version any change after holdout exposure"
+      ]
+    },
+    {
+      "id": "wiki-curator",
+      "role": "CURATE",
+      "inputs": [
+        "accepted records",
+        "review results"
+      ],
+      "outputs": [
+        "wiki articles",
+        "relation maps",
+        "revision log"
+      ],
+      "constraints": [
+        "Show epistemic status",
+        "Keep stable IDs",
+        "No unsupported status escalation"
+      ]
+    },
+    {
+      "id": "report-publisher",
+      "role": "PUBLISH",
+      "inputs": [
+        "tests",
+        "readiness report",
+        "approved pages"
+      ],
+      "outputs": [
+        "GitHub PR",
+        "Wix sync manifest",
+        "publication report"
+      ],
+      "constraints": [
+        "No direct main writes",
+        "Wix write requires read-back",
+        "Missing permission means BLOCKED"
+      ]
+    }
+  ]
+}
