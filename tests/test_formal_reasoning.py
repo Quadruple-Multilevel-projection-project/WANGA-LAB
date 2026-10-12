@@ -153,6 +153,16 @@ class CandidateEvaluationTests(unittest.TestCase):
         with self.assertRaises(ValueError):
             evaluate_candidate(metrics)
 
+    def test_non_finite_compute_time_is_rejected(self):
+        metrics = self.good_metrics()
+        metrics["compute_seconds"] = float("inf")
+        with self.assertRaises(ValueError):
+            evaluate_candidate(metrics)
+
+    def test_unknown_threshold_key_is_rejected(self):
+        with self.assertRaises(ValueError):
+            evaluate_candidate(self.good_metrics(), {"trust": 1.0})
+
     def test_thresholds_are_recorded_as_uncalibrated(self):
         result = evaluate_candidate(self.good_metrics())
         self.assertEqual(result["threshold_status"], "INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED")
