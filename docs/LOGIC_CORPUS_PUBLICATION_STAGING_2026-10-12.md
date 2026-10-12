@@ -96,3 +96,7 @@ A new granular specification layer extends the editorial 257-page outline withou
 - [Mathematical integrity register](./LOGIC_231_MATHEMATICAL_INTEGRITY_REGISTER_V1.md)
 
 **Status:** SPECIFIED / NOT_YET_VERIFIED / NOT_YET_PUBLISHED_AS_1,000_ARTICLES. The page registry comprises definitions rather than complete article copy. Deduplicate against the 257-page plan before bulk public publication. Six per-type JSON shards contain the full 1,000 records.
+
+### Interactive corpus atlas (Wix)
+
+The page-definition registry and combinatorial maps are available in the [live Logic Corpus Atlas](https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-corpus-atlas.html). Browser verification on 2026-10-12 passed for JSON load, mode changes and `GATE-001` search. This verifies UI behavior and data counts only, not semantic truth for every page or a completed production runtime.
