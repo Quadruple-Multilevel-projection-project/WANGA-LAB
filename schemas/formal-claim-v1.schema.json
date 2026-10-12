@@ -1,0 +1,64 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA bounded propositional claim contract",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "claim_id",
+    "variables",
+    "premises",
+    "conclusion",
+    "source_refs",
+    "epistemic_status"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "wanga-formal-claim/1.0"
+    },
+    "claim_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "variables": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+      }
+    },
+    "premises": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "conclusion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "epistemic_status": {
+      "enum": [
+        "HYPOTHESIS",
+        "OBSERVED",
+        "TEST_FIXTURE",
+        "SPECIFIED",
+        "UNKNOWN"
+      ]
+    },
+    "timeout_ms": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 30000
+    }
+  },
+  "additionalProperties": false
+}
