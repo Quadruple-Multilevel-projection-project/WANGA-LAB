@@ -152,3 +152,11 @@ This is useful as a source-grounded input format for a future formal-reasoning i
 Until the four weight-layer definitions are recovered from research sources and given explicit contracts, Rational Logic may accept only source-linked structured propositions and relations from the extraction layer. The weight-engine interface remains **NOT_SPECIFIED / NOT_YET_VERIFIED**.
 
 Source audit: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md
+
+## 2026-10-12 — Five-forward / five-return interface boundary
+
+The proposed architecture is specified as five forward-processing layers and five return stages. Until implementation contracts exist, these are functional stages rather than assumed separate neural networks. The return path should expose traceability, constraint results, decoding/reconstruction results, and explicit failure states.
+
+The four logical-mathematical weight layers associated with letter interpretations are a distinct mechanism. Rational Logic must not infer their missing formulas from the five processing layers or from the four sentence-role fields. It should receive typed, source-linked records only after the weight-layer schema is defined.
+
+Canonical review: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md
