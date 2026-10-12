@@ -3,6 +3,26 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 5 * * 1'
+  push:
+    branches: ['main']
+    paths:
+      - 'logic_wiki/**'
+      - 'research/inbox/conversations/**'
+      - 'research/LOGIC_FRACTAL_PROGRAM_V1.md'
+      - 'research/ARK_SWARM_LOGIC_TRADER_INTEGRATION_V1.md'
+      - 'scripts/build_logic_wiki.py'
+      - 'logic_fractal/**'
+      - 'ark_swarm/**'
+      - 'scripts/run_logic_agents.py'
+      - 'scripts/evaluate_logic_agent_bundle.py'
+      - 'scripts/run_ark_swarm.py'
+      - 'tests/test_multi_agent_logic_evaluation.py'
+      - 'tests/test_ark_swarm_logic_trader.py'
+      - 'scripts/ingest_conversation_export.py'
+      - 'tests/test_conversation_export_intake.py'
+      - 'schemas/conversation-intake-record-v1.schema.json'
+      - 'schemas/ark-swarm-cycle-report-v1.schema.json'
+      - '.github/workflows/logic-fractal-wiki.yml'
   pull_request:
     paths:
       - 'logic_wiki/**'
