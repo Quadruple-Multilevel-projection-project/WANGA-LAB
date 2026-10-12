@@ -2,9 +2,11 @@
 from __future__ import annotations
 import json
 from pathlib import Path
+import sys
+ROOT=Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
 from logic_fractal.fragment_composer import compose_pair, validate_fragment
 
-ROOT=Path(__file__).resolve().parents[1]
 
 def main():
     fixture=json.loads((ROOT/"logic_fractal/data/typed_fragments_fixture.json").read_text(encoding="utf-8"))
