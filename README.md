@@ -285,3 +285,29 @@ The repository now includes a restricted propositional-logic adapter backed by Z
 Run with `python -m pip install -r requirements-formal.txt`, `python -m unittest discover -s tests -p 'test_formal_reasoning.py' -v`, and `python scripts/run_formal_reasoning_benchmarks.py`.
 
 The adapter only checks explicitly encoded propositional formulas. It does not turn solver results into empirical truth or promote any claim to `VERIFIED`. The first benchmark is a smoke suite; source-grounded cases and independent holdout are still required.
+
+## Typed Logic Package + Formalization Queue V1
+
+The canonical formal stack now separates three different responsibilities:
+
+- `formal_reasoning/propositional.py` parses a small propositional text grammar and converts it to the typed AST.
+- `logic_proof/z3_adapter.py` is the single canonical Z3 execution adapter for bounded, explicit ASTs over Bool/Int/Real/String. It checks premise consistency before entailment and emits countermodels or UNKNOWN.
+- `logic_proof/formalization_queue.py` preserves Logic Trader candidate definitions and source links, but does **not** invent a formal AST. A candidate without an explicitly reviewed representation remains `NOT_RUN_NO_FORMAL_AST`.
+
+The typed contract and lifecycle gate are defined in `logic_proof/package_contract.py`. Release requires independent approval metadata; contract validity does not establish source truth. Both candidate-evaluation interfaces read thresholds from the same `formal_reasoning/config/evaluation_policy.json`, currently marked `INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED`.
+
+Install and run:
+
+```bash
+python -m pip install -r requirements-logic.txt
+python -m unittest discover -s tests -p 'test_formal_reasoning.py' -v
+python -m unittest discover -s tests -p 'test_logic_proof_adapter.py' -v
+python -m unittest discover -s tests -p 'test_logic_proof_benchmark.py' -v
+python -m unittest discover -s tests -p 'test_logic_package_contract.py' -v
+python -m unittest discover -s tests -p 'test_logic_formalization_queue.py' -v
+python -m unittest discover -s tests -p 'test_logic_json_schemas.py' -v
+python scripts/run_formal_logic_benchmark.py --out research/reports/ark-swarm/formal-logic-benchmark-latest.json
+python scripts/run_ark_swarm.py
+```
+
+The five-case propositional suite and seven-case typed-AST suite are synthetic adapter tests only. Source-grounded counterexamples, holdout evaluation and independent review remain release prerequisites.
