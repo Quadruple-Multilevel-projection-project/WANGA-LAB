@@ -41,15 +41,17 @@ The research note proposes a broad stack of 100+ libraries spanning spiking neur
 
 ### P0 — Required before calling the output a logical model
 
+**Implemented in the current research branch (pending GitHub CI):** an optional, bounded Z3 AST adapter; separate premise-consistency and entailment checks; a hard-gated evaluation ledger; a seven-case synthetic fixture suite; a source-grounded logic-package schema; and ARK-Swarm integration that runs the fixture gate without promoting the candidate. This reduces the implementation gap but does not establish semantic validity of real Logic Trader outputs.
+
 1. **Formal semantics contract.** Extend the catalog/typed-fragment format with explicit type signatures, relation meaning, variable scope, assumptions, premises, conclusion, allowed inference rule, applicable domain and failure conditions. A relation label or visual edge is not enough to infer entailment.
-2. **Bounded proof/constraint adapter.** Prototype an optional Z3 adapter for a deliberately restricted formal fragment first. It must distinguish:
+2. **Bounded proof/constraint adapter.** The branch now contains an optional Z3 adapter for a deliberately restricted formal fragment. It must distinguish:
    - `SAT`: the encoded constraints have a satisfying assignment.
    - `UNSAT`: the encoded constraints have no satisfying assignment.
    - `UNKNOWN`: no determination was established.
    To test whether premises entail conclusion `P`, encode the premises and `not P`; an `UNSAT` result supports entailment only within that exact encoding and logic fragment. Check the premises for consistency separately so an inconsistent premise set does not vacuously pass every conclusion. Never map `SAT` alone to “true”, “proven”, or a positive reward.
-3. **Benchmark and counterexample suite.** Add fixed positive, negative, boundary, ambiguous, contradictory, missing-source and adversarial cases with expected structured outcomes. Separate development, validation and holdout cases; ensure exact replay by input hash.
+3. **Benchmark and counterexample suite.** Seven synthetic adapter fixtures now cover entailment, countermodel, inconsistent premises, Boolean implication, unsupported operator and undeclared-variable rejection. This is adapter self-test only. Add source-grounded positive, negative, boundary, ambiguous, contradictory, missing-source and adversarial cases with expected structured outcomes. Separate development, validation and holdout cases; ensure exact replay by input hash.
 4. **Logic asset contract.** Each pack must include stable ID/version, typed input/output, premises, claims, source references and spans, constraints, composition rule, tests, known limits, changelog and status. Fail closed when source IDs or required fields are missing.
-5. **Reward/evaluation ledger.** Replace “shared dopamine” as a truth metaphor with an explicit auditable evaluation vector: proof check, premise consistency, source coverage, benchmark accuracy, counterexample rate, generalization/holdout score, deterministic replay and compute cost. Hard gates cannot be averaged away by a high aggregate score. The first implementation records scores only; it must not update model weights.
+5. **Reward/evaluation ledger.** A first hard-gated evaluation ledger is now implemented; it records an auditable evaluation vector without changing weights. It must be validated on source-grounded cases. Replace “shared dopamine” as a truth metaphor with an explicit auditable evaluation vector: proof check, premise consistency, source coverage, benchmark accuracy, counterexample rate, generalization/holdout score, deterministic replay and compute cost. Hard gates cannot be averaged away by a high aggregate score. The first implementation records scores only; it must not update model weights.
 6. **Candidate comparison and release gate.** Compare candidate and baseline on the same frozen suite; retain failed candidates and rollback evidence. No auto-promotion from `TESTED` to `VERIFIED`.
 
 ### P1 — Needed to produce better candidate models
@@ -134,4 +136,4 @@ The research note proposes a broad stack of 100+ libraries spanning spiking neur
 - OpenWorm c302: https://docs.openworm.org/preview/integrate-design-documents/Projects/c302/
 - MICrONS dataset portal: https://www.microns-explorer.org/
 
-**Decision:** Build the proof/evidence/benchmark/reward contracts first. Keep the swarm local and deterministic. Then pilot one neural/connectome dataset. Do not add all libraries at once.
+**Decision:** The bounded proof adapter, synthetic tests and first hard-gated evaluation record are now configured in this research branch. The remaining P0 work is source-grounded formalization, real counterexample/holdout cases and an independent review gate. Build the proof/evidence/benchmark/reward contracts first. Keep the swarm local and deterministic. Then pilot one neural/connectome dataset. Do not add all libraries at once.
