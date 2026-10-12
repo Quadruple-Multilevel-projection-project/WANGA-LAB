@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Run the small typed typed formal-fragment fixture suite and optionally write JSON output."""
+"""Run the small typed formal-fragment fixture suite and optionally write JSON output."""
 from __future__ import annotations
 
 import argparse
