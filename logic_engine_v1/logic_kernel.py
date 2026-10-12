@@ -188,7 +188,7 @@ def _instantiate(pattern: Atom, bindings: Mapping[str, str]) -> Atom:
     return Atom(values[0], values[1], values[2], pattern.polarity)
 
 
-def run_bundle(bundle: Mapping[str, Any], *, max_rounds: int = 20) -> dict[str, Any]:
+def run_bundle(bundle: Mapping[str, Any], *, max_rounds: int = 20, corpus_context: Mapping[str, Any] | None = None) -> dict[str, Any]:
     """Evaluate referenced input claims and run explicit Horn-style rules.
 
     The engine checks structural evidence references; it does not authenticate a
@@ -247,6 +247,32 @@ def run_bundle(bundle: Mapping[str, Any], *, max_rounds: int = 20) -> dict[str, 
         })
 
     facts: dict[tuple[str, str, str, bool], dict[str, Any]] = {}
+    rule_predicates = {atom.predicate for rule in rules for atom in rule.antecedents}
+    corpus_fact_ids: set[str] = set()
+    corpus_facts_available = 0
+    if corpus_context is not None:
+        if corpus_context.get("status") != "LOADED":
+            raise ValueError("corpus_context must be returned by load_corpus_context() with status LOADED")
+        for item in corpus_context.get("facts", []):
+            raw_atom = item.get("atom")
+            atom_obj = raw_atom if isinstance(raw_atom, Atom) else Atom.from_dict(raw_atom)
+            if atom_obj.predicate not in rule_predicates:
+                continue
+            fact_id = str(item["fact_id"])
+            corpus_fact_ids.add(fact_id)
+            corpus_facts_available += 1
+            key = atom_obj.key()
+            if key not in facts:
+                facts[key] = {
+                    "atom": atom_obj,
+                    "fact_id": fact_id,
+                    "kind": "CORPUS_STRUCTURAL",
+                    "status": "CORPUS_STRUCTURE_NOT_SEMANTIC",
+                    "source_claim_ids": [],
+                    "evidence_refs": [],
+                    "derivations": [],
+                    "corpus_file": str(item.get("corpus_file", "")),
+                }
     for claim in eligible_claims:
         key = claim.atom.key()
         if key not in facts:
@@ -322,6 +348,7 @@ def run_bundle(bundle: Mapping[str, Any], *, max_rounds: int = 20) -> dict[str, 
                 "conclusion_epistemic_status": "DERIVED_NOT_VERIFIED",
                 "source_refs": list(rule.source_refs),
                 "rule_description": rule.description,
+                "premise_corpus_files": sorted({p.get("corpus_file", "") for p in premises if p.get("corpus_file")}),
             }
             trace.append(trace_item)
             key = conclusion.key()
@@ -348,8 +375,16 @@ def run_bundle(bundle: Mapping[str, Any], *, max_rounds: int = 20) -> dict[str, 
             break
 
     contradiction_signatures = _contradiction_signatures(facts)
+    used_corpus_fact_ids = {
+        fact_id
+        for trace_item in trace
+        for fact_id in trace_item["premise_fact_ids"]
+        if fact_id.startswith("CORPUS-")
+    }
     rendered_facts = []
     for item in sorted(facts.values(), key=lambda x: (x["atom"].key(), x["fact_id"])):
+        if item.get("kind") == "CORPUS_STRUCTURAL" and item["fact_id"] not in used_corpus_fact_ids and item["atom"].signature() not in contradiction_signatures:
+            continue
         atom = item["atom"]
         status = "CONTRADICTED_REQUIRES_REVIEW" if atom.signature() in contradiction_signatures else item["status"]
         rendered_facts.append({
@@ -360,6 +395,7 @@ def run_bundle(bundle: Mapping[str, Any], *, max_rounds: int = 20) -> dict[str, 
             "source_claim_ids": sorted(set(item["source_claim_ids"])),
             "evidence_refs": sorted(set(item["evidence_refs"])),
             "derivations": item["derivations"],
+            **({"corpus_file": item["corpus_file"]} if item.get("corpus_file") else {}),
         })
 
     contradictions = []
@@ -389,12 +425,22 @@ def run_bundle(bundle: Mapping[str, Any], *, max_rounds: int = 20) -> dict[str, 
         "contradictions": contradictions,
         "trace": trace,
         "skipped_rules": skipped_rules,
+        "corpus_context": ({
+            "status": "LOADED",
+            "registry_status": corpus_context.get("registry_status", "NOT_RECORDED"),
+            "registered_letters": corpus_context.get("counts", {}).get("letters", 0),
+            "available_structural_facts_for_this_run": corpus_facts_available,
+            "used_structural_facts": len(used_corpus_fact_ids),
+            "semantic_status": "STRUCTURAL_COMBINATORICS_ONLY",
+        } if corpus_context is not None else {"status": "NOT_LOADED"}),
         "summary": {
             "claims_received": len(claims),
             "evidence_records": len(evidence_items),
             "eligible_input_claims": len(eligible_claims),
             "unsupported_or_ineligible_claims": unsupported_count,
             "facts_after_reasoning": len(rendered_facts),
+            "corpus_structural_facts_available": corpus_facts_available,
+            "corpus_structural_facts_used": len(used_corpus_fact_ids),
             "derived_claims": sum(1 for x in rendered_facts if x["kind"] == "DERIVED"),
             "rules_received": len(rules),
             "active_rules": len(rule_list),
@@ -555,6 +601,114 @@ def validate_corpus(repo_root: str | Path) -> dict[str, Any]:
     }
 
 
+
+def load_corpus_context(repo_root: str | Path) -> dict[str, Any]:
+    """Load validated structural facts from the WANGA-LAB corpus.
+
+    These facts describe registry structure only. They do not assign meaning to
+    letters or gates. During inference, only predicates explicitly mentioned in
+    rule antecedents are added to the working memory.
+    """
+    root = Path(repo_root)
+    validation = validate_corpus(root)
+    if validation.get("status") != "PASS":
+        raise ValueError(
+            "Corpus validation failed; refusing to load registry facts: "
+            + json.dumps(validation, ensure_ascii=False)
+        )
+
+    data_dir = root / "research" / "data"
+    manifest = json.loads(
+        (data_dir / "LOGIC_CORPUS_1000_PAGE_BLUEPRINT_V1.json").read_text(encoding="utf-8")
+    )
+    gate_map = json.loads(
+        (data_dir / "LETTER_GATE_MAP_231_V1.json").read_text(encoding="utf-8")
+    )
+    triple_map = json.loads(
+        (data_dir / "LETTER_TRIPLE_MAP_1540_V1.json").read_text(encoding="utf-8")
+    )
+
+    facts: list[dict[str, Any]] = []
+
+    def add_fact(fact_id: str, subject: str, predicate: str, obj: str, corpus_file: str) -> None:
+        facts.append({
+            "fact_id": fact_id,
+            "atom": {"subject": subject, "predicate": predicate, "object": obj, "polarity": True},
+            "corpus_file": corpus_file,
+            "status": "CORPUS_STRUCTURE_NOT_SEMANTIC",
+        })
+
+    gate_path = "research/data/LETTER_GATE_MAP_231_V1.json"
+    triple_path = "research/data/LETTER_TRIPLE_MAP_1540_V1.json"
+    for vertex in gate_map.get("vertices", []):
+        add_fact(
+            f"CORPUS-LETTER-{vertex['id']}",
+            f"letter:{vertex['letter']}", "corpus_node_in", "K22", gate_path
+        )
+    for gate in gate_map.get("undirected_gates", []):
+        add_fact(
+            f"CORPUS-GATE-{gate['id']}",
+            f"gate:{gate['id']}", "corpus_connects_unordered",
+            f"{gate['a']}|{gate['b']}", gate_path
+        )
+    for transition in gate_map.get("directed_transitions", []):
+        tid = transition["id"]
+        add_fact(f"CORPUS-{tid}-FROM", f"transition:{tid}", "corpus_from", transition["from"], gate_path)
+        add_fact(f"CORPUS-{tid}-TO", f"transition:{tid}", "corpus_to", transition["to"], gate_path)
+        add_fact(f"CORPUS-{tid}-REVERSE", f"transition:{tid}", "corpus_reverse_is", transition["reverse_id"], gate_path)
+        add_fact(f"CORPUS-{tid}-PARENT", f"transition:{tid}", "corpus_parent_gate", transition["gate_id"], gate_path)
+    for triple in triple_map.get("triples", []):
+        for letter in triple["letters"]:
+            add_fact(
+                f"CORPUS-{triple['id']}-CONTAINS-{letter}",
+                f"triple:{triple['id']}", "corpus_contains", letter, triple_path
+            )
+
+    page_definitions = 0
+    for group in manifest.get("groups", []):
+        shard_path = data_dir / group["path"]
+        page_records = json.loads(shard_path.read_text(encoding="utf-8"))
+        for page in page_records:
+            page_id = str(page["id"])
+            page_type = str(page.get("type", "UNKNOWN"))
+            add_fact(
+                f"CORPUS-PAGE-{page_id}-TYPE",
+                f"page:{page_id}", "corpus_page_type", page_type,
+                str(Path("research/data") / group["path"])
+            )
+            macro_map = page.get("macro_map")
+            if macro_map:
+                add_fact(
+                    f"CORPUS-PAGE-{page_id}-MAP",
+                    f"page:{page_id}", "corpus_belongs_to_map", str(macro_map),
+                    str(Path("research/data") / group["path"])
+                )
+            page_definitions += 1
+
+    ids = [item["fact_id"] for item in facts]
+    if len(ids) != len(set(ids)):
+        raise ValueError("Corpus structural fact identifiers are not unique.")
+
+    return {
+        "status": "LOADED",
+        "registry_status": validation["status"],
+        "counts": {
+            "letters": len(gate_map.get("vertices", [])),
+            "undirected_gates": len(gate_map.get("undirected_gates", [])),
+            "directed_transitions": len(gate_map.get("directed_transitions", [])),
+            "unordered_triples": len(triple_map.get("triples", [])),
+            "page_definitions": page_definitions,
+            "structural_facts": len(facts),
+        },
+        "facts": facts,
+        "limitations": [
+            "Loaded facts describe registry structure only, not logical meanings of gates.",
+            "Only predicates required by explicit rule antecedents are injected into a run.",
+            "Corpus facts are marked CORPUS_STRUCTURE_NOT_SEMANTIC and cannot authenticate an interpretive claim.",
+        ],
+    }
+
+
 def sample_bundle() -> dict[str, Any]:
     return {
         "case_id": "SITE-UPDATE-SCOPE-DEMO-001",
@@ -583,6 +737,16 @@ def sample_bundle() -> dict[str, Any]:
         "threshold_comparison": {"score": 0.75, "old_threshold": 0.80, "new_threshold": 0.60},
         "rules": [
             {
+                "id": "R-CORPUS-GATE-001-STRUCTURE",
+                "status": "ACTIVE_SPECIFIED",
+                "description": "Structural smoke test: the registry enumerates GATE-001 as the unordered pair א|ב. This does not assign meaning to that pair.",
+                "antecedents": [
+                    {"subject": "gate:GATE-001", "predicate": "corpus_connects_unordered", "object": "א|ב"}
+                ],
+                "consequent": {"subject": "corpus", "predicate": "gate_structure_loaded", "object": "GATE-001"},
+                "source_refs": ["repo://research/data/LETTER_GATE_MAP_231_V1.json#GATE-001"]
+            },
+            {
                 "id": "R-SCOPE-PERMISSION",
                 "status": "ACTIVE_SPECIFIED",
                 "description": "A candidate permission result follows only if request, scope, and permission facts are all present in the fixture.",
@@ -602,11 +766,16 @@ def main(argv: Sequence[str] | None = None) -> int:
     parser = argparse.ArgumentParser(description="Bounded evidence-aware symbolic logic kernel")
     sub = parser.add_subparsers(dest="command", required=True)
     sub.add_parser("counts", help="Print exact 22-symbol combinatorial counts")
+    default_repo_root = str(Path(__file__).resolve().parents[1])
     demo_parser = sub.add_parser("demo", help="Run the built-in synthetic reasoning example")
     demo_parser.add_argument("--compact", action="store_true", help="Print compact JSON")
+    demo_parser.add_argument("--repo-root", default=default_repo_root, help="Repository root used to load the corpus")
+    demo_parser.add_argument("--no-corpus", action="store_true", help="Run without corpus registry facts")
     run_parser = sub.add_parser("run", help="Run a user-supplied JSON bundle")
     run_parser.add_argument("bundle", help="Path to JSON bundle")
     run_parser.add_argument("--compact", action="store_true", help="Print compact JSON")
+    run_parser.add_argument("--repo-root", default=default_repo_root, help="Repository root used to load the corpus")
+    run_parser.add_argument("--no-corpus", action="store_true", help="Run without corpus registry facts")
     validate_parser = sub.add_parser("validate-corpus", help="Validate the WANGA-LAB 1,000-definition corpus")
     validate_parser.add_argument("--repo-root", default=".", help="Path to the WANGA-LAB repository root")
     args = parser.parse_args(argv)
@@ -615,13 +784,15 @@ def main(argv: Sequence[str] | None = None) -> int:
         output = combinatorial_counts()
     elif args.command == "demo":
         bundle = sample_bundle()
-        output = run_bundle(bundle)
+        context = None if args.no_corpus else load_corpus_context(args.repo_root)
+        output = run_bundle(bundle, corpus_context=context)
         output["action_gate_result"] = gate_action(bundle["action_gate"])
         output["threshold_comparison"] = compare_thresholds(**bundle["threshold_comparison"])
         output["combinatorial_counts"] = combinatorial_counts()
     elif args.command == "run":
         bundle = json.loads(Path(args.bundle).read_text(encoding="utf-8"))
-        output = run_bundle(bundle)
+        context = None if args.no_corpus else load_corpus_context(args.repo_root)
+        output = run_bundle(bundle, corpus_context=context)
         if "action_gate" in bundle:
             output["action_gate_result"] = gate_action(bundle["action_gate"])
         if "threshold_comparison" in bundle:
