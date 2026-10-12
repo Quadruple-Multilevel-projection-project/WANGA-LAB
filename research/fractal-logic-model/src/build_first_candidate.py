@@ -10,7 +10,7 @@ from pathlib import Path
 import sys
 
 HERE = Path(__file__).resolve()
-RESEARCH_ROOT = HERE.parents[2]  # repository/research/fractal-logic-model
+RESEARCH_ROOT = HERE.parents[1]  # repository/research/fractal-logic-model
 REPO_ROOT = HERE.parents[3]
 sys.path.insert(0, str(HERE.parent))
 from fractal_composer import compose_pair, validate_fragment, content_hash
