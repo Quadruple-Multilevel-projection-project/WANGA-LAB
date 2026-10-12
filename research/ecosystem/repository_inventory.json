@@ -1,0 +1,1616 @@
+{
+  "schema_version": "wanga-repository-inventory/1.0",
+  "snapshot_at_utc": "2026-10-12T17:33:35.890Z",
+  "snapshot_scope": "Only repositories returned by the connected GitHub list/affiliation actions in this run; not a claim about all GitHub repositories or private ChatGPT conversations.",
+  "enumeration": {
+    "owner_affiliation_returned": 59,
+    "collaborator_affiliation_returned": 13,
+    "organization_member_affiliation_returned": 25,
+    "unique_full_names": 59,
+    "page_size": 100,
+    "page_offset": 0,
+    "update_timestamps_exposed": false,
+    "limitation": "The connected list actions did not expose pushed_at/updated_at or latest commit timestamps. Recency-based ordering was therefore unavailable; batch order uses project relevance."
+  },
+  "scan_cursor": {
+    "completed_batch_number": 1,
+    "completed_batch_size": 10,
+    "scanned_repo_names": [
+      "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "Quadruple-Multilevel-projection-project/MNM",
+      "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "Quadruple-Multilevel-projection-project/Qualia",
+      "Quadruple-Multilevel-projection-project/O-Ms",
+      "Quadruple-Multilevel-projection-project/globalSpeed",
+      "Quadruple-Multilevel-projection-project/glowing-octo-waddle"
+    ],
+    "next_batch_number": 2,
+    "next_batch_repo_names": [
+      "tribal-archery/-logicl-neural-order",
+      "tribal-archery/AI231.meta.io",
+      "tribal-archery/MAM-parse",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/Qdprojects",
+      "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/openai_tiktoken",
+      "AmbassadorOv/python-genai"
+    ],
+    "remaining_repo_names": [
+      "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "AmbassadorOv/googleapis",
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/desktop",
+      "AmbassadorOv/platform-samples",
+      "AmbassadorOv/extensions",
+      "AmbassadorOv/AmbassadorOv",
+      "AmbassadorOv/TTTT-0.0.0.0.1",
+      "AmbassadorOv/TTTTproject-un.govt",
+      "AmbassadorOv/docs",
+      "AmbassadorOv/mermaid",
+      "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "AmbassadorOv/eslint",
+      "AmbassadorOv/openai_tiktoken",
+      "AmbassadorOv/-artificial-y",
+      "AmbassadorOv/Qualia",
+      "AmbassadorOv/O-Ms",
+      "AmbassadorOv/generative-ai-docs",
+      "AmbassadorOv/mujoco",
+      "AmbassadorOv/cookbook",
+      "AmbassadorOv/vscode-docs",
+      "AmbassadorOv/mediapipe",
+      "AmbassadorOv/python-genai",
+      "AmbassadorOv/branches-",
+      "AmbassadorOv/fluffy-parakeet",
+      "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "AmbassadorOv/https-AmbassadorOv.io",
+      "AmbassadorOv/vqbshtfsprojects.org",
+      "AmbassadorOv/awesome-chatgpt-prompts",
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/unetbootin",
+      "AmbassadorOv/test-notebook-links",
+      "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "AmbassadorOv/AG-triple-X-",
+      "Quadruple-Multilevel-projection-project/-",
+      "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "Quadruple-Multilevel-projection-project/branches-",
+      "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "Quadruple-Multilevel-projection-project/-from-Corsican-",
+      "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "Quadruple-Multilevel-projection-project/skills",
+      "tribal-archery/vscode-azure-blockchain-ethereum",
+      "tribal-archery/unetbootin",
+      "tribal-archery/AI231.meta.io",
+      "tribal-archery/Qdprojects",
+      "tribal-archery/mermaid",
+      "tribal-archery/copilot-cli",
+      "tribal-archery/-logicl-neural-order",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/MAM-parse"
+    ],
+    "cursor_rule": "Advance only after each bounded batch has a dated report; do not infer that remaining repositories were scanned."
+  },
+  "repositories": [
+    {
+      "repository_id": "902519447",
+      "full_name": "AmbassadorOv/-artificial-y",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 23,
+      "display_url": "https://github.com/AmbassadorOv/-artificial-y",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "1382585031",
+      "full_name": "AmbassadorOv/AG-triple-X-",
+      "owner": "AmbassadorOv",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 9,
+      "display_url": "https://github.com/AmbassadorOv/AG-triple-X-",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "578540349",
+      "full_name": "AmbassadorOv/AmbassadorOv",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 512,
+      "display_url": "https://github.com/AmbassadorOv/AmbassadorOv",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "1112504425",
+      "full_name": "AmbassadorOv/awesome-chatgpt-prompts",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 1706,
+      "display_url": "https://github.com/AmbassadorOv/awesome-chatgpt-prompts",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "1017008771",
+      "full_name": "AmbassadorOv/branches-",
+      "owner": "AmbassadorOv",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 5,
+      "display_url": "https://github.com/AmbassadorOv/branches-",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "1257402813",
+      "full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 9675,
+      "display_url": "https://github.com/AmbassadorOv/chatgpt-scientific-publications-extension",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "986839535",
+      "full_name": "AmbassadorOv/cookbook",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 407389,
+      "display_url": "https://github.com/AmbassadorOv/cookbook",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "256560568",
+      "full_name": "AmbassadorOv/desktop",
+      "owner": "AmbassadorOv",
+      "default_branch": "development",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 53341,
+      "display_url": "https://github.com/AmbassadorOv/desktop",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "775857820",
+      "full_name": "AmbassadorOv/docs",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 1868145,
+      "display_url": "https://github.com/AmbassadorOv/docs",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "901204835",
+      "full_name": "AmbassadorOv/eslint",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 44362,
+      "display_url": "https://github.com/AmbassadorOv/eslint",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "256788616",
+      "full_name": "AmbassadorOv/extensions",
+      "owner": "AmbassadorOv",
+      "default_branch": "next",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 2926,
+      "display_url": "https://github.com/AmbassadorOv/extensions",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "1032753784",
+      "full_name": "AmbassadorOv/fluffy-parakeet",
+      "owner": "AmbassadorOv",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 5,
+      "display_url": "https://github.com/AmbassadorOv/fluffy-parakeet",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "964517298",
+      "full_name": "AmbassadorOv/generative-ai-docs",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 51587,
+      "display_url": "https://github.com/AmbassadorOv/generative-ai-docs",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "256492277",
+      "full_name": "AmbassadorOv/googleapis",
+      "owner": "AmbassadorOv",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 143800,
+      "display_url": "https://github.com/AmbassadorOv/googleapis",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "1055495093",
+      "full_name": "AmbassadorOv/https-AmbassadorOv.io",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 1,
+      "display_url": "https://github.com/AmbassadorOv/https-AmbassadorOv.io",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "1003986509",
+      "full_name": "AmbassadorOv/mediapipe",
+      "owner": "AmbassadorOv",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 604539,
+      "display_url": "https://github.com/AmbassadorOv/mediapipe",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "818802210",
+      "full_name": "AmbassadorOv/mermaid",
+      "owner": "AmbassadorOv",
+      "default_branch": "develop",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 239380,
+      "display_url": "https://github.com/AmbassadorOv/mermaid",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "982432978",
+      "full_name": "AmbassadorOv/mujoco",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 109719,
+      "display_url": "https://github.com/AmbassadorOv/mujoco",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "1112780190",
+      "full_name": "AmbassadorOv/multi-agent-orchestator",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 16998,
+      "display_url": "https://github.com/AmbassadorOv/multi-agent-orchestator",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "256556391",
+      "full_name": "AmbassadorOv/Nanomathematics",
+      "owner": "AmbassadorOv",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 132,
+      "display_url": "https://github.com/AmbassadorOv/Nanomathematics",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "960060854",
+      "full_name": "AmbassadorOv/O-Ms",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 5,
+      "display_url": "https://github.com/AmbassadorOv/O-Ms",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "902267655",
+      "full_name": "AmbassadorOv/openai_tiktoken",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 62,
+      "display_url": "https://github.com/AmbassadorOv/openai_tiktoken",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "256667208",
+      "full_name": "AmbassadorOv/platform-samples",
+      "owner": "AmbassadorOv",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 2877,
+      "display_url": "https://github.com/AmbassadorOv/platform-samples",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "1005972408",
+      "full_name": "AmbassadorOv/python-genai",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 7547,
+      "display_url": "https://github.com/AmbassadorOv/python-genai",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "927638187",
+      "full_name": "AmbassadorOv/Qualia",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 5,
+      "display_url": "https://github.com/AmbassadorOv/Qualia",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "1034142554",
+      "full_name": "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "owner": "AmbassadorOv",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 2111,
+      "display_url": "https://github.com/AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "1129618084",
+      "full_name": "AmbassadorOv/test-notebook-links",
+      "owner": "AmbassadorOv",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 34,
+      "display_url": "https://github.com/AmbassadorOv/test-notebook-links",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "578543805",
+      "full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 9,
+      "display_url": "https://github.com/AmbassadorOv/TTTT-0.0.0.0.1",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "692505225",
+      "full_name": "AmbassadorOv/TTTTproject-un.govt",
+      "owner": "AmbassadorOv",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 10,
+      "display_url": "https://github.com/AmbassadorOv/TTTTproject-un.govt",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "1113314066",
+      "full_name": "AmbassadorOv/unetbootin",
+      "owner": "AmbassadorOv",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 66633,
+      "display_url": "https://github.com/AmbassadorOv/unetbootin",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "1055577274",
+      "full_name": "AmbassadorOv/vqbshtfsprojects.org",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 0,
+      "display_url": "https://github.com/AmbassadorOv/vqbshtfsprojects.org",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "898290526",
+      "full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "owner": "AmbassadorOv",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 7452,
+      "display_url": "https://github.com/AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "999939955",
+      "full_name": "AmbassadorOv/vscode-docs",
+      "owner": "AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 250412,
+      "display_url": "https://github.com/AmbassadorOv/vscode-docs",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "256247342",
+      "full_name": "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "owner": "AmbassadorOv",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 14,
+      "display_url": "https://github.com/AmbassadorOv/World-Party-Federation-Branches-managers",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner"
+      ]
+    },
+    {
+      "repository_id": "553027903",
+      "full_name": "Quadruple-Multilevel-projection-project/-",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "feat-yellow-quantic-simulation",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 123,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/-",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "collaborator",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "1153675952",
+      "full_name": "Quadruple-Multilevel-projection-project/-from-Corsican-",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 5,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/-from-Corsican-",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "collaborator",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "256605668",
+      "full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 15,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "READ_OK_MINIMAL",
+      "scan_evidence": [
+        {
+          "path": "README.md",
+          "ref": "master",
+          "status": "READ_OK_MINIMAL",
+          "git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107"
+        }
+      ],
+      "affiliations": [
+        "owner",
+        "collaborator",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "929110171",
+      "full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 544,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "READ_OK",
+      "scan_evidence": [
+        {
+          "path": "README.md",
+          "ref": "main",
+          "status": "READ_OK",
+          "git_blob_sha1": "1530209671f6f76eb1808cf17d9584437e1e867b"
+        }
+      ],
+      "affiliations": [
+        "owner",
+        "collaborator",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "912526162",
+      "full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 81,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "READ_OK_MINIMAL",
+      "scan_evidence": [
+        {
+          "path": "README.md",
+          "ref": "main",
+          "status": "READ_OK_MINIMAL",
+          "git_blob_sha1": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6"
+        }
+      ],
+      "affiliations": [
+        "owner",
+        "collaborator",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "1177350003",
+      "full_name": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 11,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "READ_OK_MINIMAL",
+      "scan_evidence": [
+        {
+          "path": "README.md",
+          "ref": "main",
+          "status": "READ_OK_MINIMAL",
+          "git_blob_sha1": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0"
+        }
+      ],
+      "affiliations": [
+        "owner",
+        "collaborator",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "1005702732",
+      "full_name": "Quadruple-Multilevel-projection-project/branches-",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 40,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/branches-",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "819463013",
+      "full_name": "Quadruple-Multilevel-projection-project/globalSpeed",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 1837,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/globalSpeed",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "READ_OK",
+      "scan_evidence": [
+        {
+          "path": "README.md",
+          "ref": "master",
+          "status": "READ_OK",
+          "git_blob_sha1": "a6976e6480700db0264d5dd7a20267a04f9209f0"
+        }
+      ],
+      "affiliations": [
+        "owner",
+        "collaborator",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "1351543659",
+      "full_name": "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 6,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_FOUND_404",
+      "scan_evidence": [
+        {
+          "path": "README.md",
+          "ref": "main",
+          "status": "NOT_FOUND_404",
+          "git_blob_sha1": null
+        }
+      ],
+      "affiliations": [
+        "owner",
+        "collaborator",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "1177511694",
+      "full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 2,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "collaborator",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "256881587",
+      "full_name": "Quadruple-Multilevel-projection-project/MNM",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 145,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/MNM",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "READ_OK_MINIMAL",
+      "scan_evidence": [
+        {
+          "path": "README.md",
+          "ref": "master",
+          "status": "READ_OK_MINIMAL",
+          "git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107"
+        }
+      ],
+      "affiliations": [
+        "owner",
+        "collaborator",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "927638567",
+      "full_name": "Quadruple-Multilevel-projection-project/Qualia",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 91,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/Qualia",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "READ_OK_MINIMAL",
+      "scan_evidence": [
+        {
+          "path": "README.md",
+          "ref": "main",
+          "status": "READ_OK_MINIMAL",
+          "git_blob_sha1": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2"
+        }
+      ],
+      "affiliations": [
+        "owner",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "1351803934",
+      "full_name": "Quadruple-Multilevel-projection-project/skills",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 1183,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/skills",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "collaborator",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "1034142970",
+      "full_name": "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 8,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "562348692",
+      "full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 2583,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "collaborator",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "1352938620",
+      "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "owner": "Quadruple-Multilevel-projection-project",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 2552,
+      "display_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "READ_OK",
+      "scan_evidence": [
+        {
+          "path": "README.md",
+          "ref": "main",
+          "status": "READ_OK",
+          "git_blob_sha1": "bf4c44aa3e51318a440801704b473b7185f580cb"
+        }
+      ],
+      "affiliations": [
+        "owner",
+        "collaborator",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "1127939754",
+      "full_name": "tribal-archery/-logicl-neural-order",
+      "owner": "tribal-archery",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 107,
+      "display_url": "https://github.com/tribal-archery/-logicl-neural-order",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "912528999",
+      "full_name": "tribal-archery/AI231.meta.io",
+      "owner": "tribal-archery",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "private",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 19,
+      "display_url": "https://github.com/tribal-archery/AI231.meta.io",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "1115954276",
+      "full_name": "tribal-archery/copilot-cli",
+      "owner": "tribal-archery",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 89,
+      "display_url": "https://github.com/tribal-archery/copilot-cli",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "1172470694",
+      "full_name": "tribal-archery/MAM-parse",
+      "owner": "tribal-archery",
+      "default_branch": "main",
+      "visibility": "private",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 0,
+      "display_url": "https://github.com/tribal-archery/MAM-parse",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "1153179039",
+      "full_name": "tribal-archery/MAM-parsed",
+      "owner": "tribal-archery",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 85556,
+      "display_url": "https://github.com/tribal-archery/MAM-parsed",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "925985261",
+      "full_name": "tribal-archery/mermaid",
+      "owner": "tribal-archery",
+      "default_branch": "develop",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 239923,
+      "display_url": "https://github.com/tribal-archery/mermaid",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "912583543",
+      "full_name": "tribal-archery/Qdprojects",
+      "owner": "tribal-archery",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 148,
+      "display_url": "https://github.com/tribal-archery/Qdprojects",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "340913886",
+      "full_name": "tribal-archery/unetbootin",
+      "owner": "tribal-archery",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 66633,
+      "display_url": "https://github.com/tribal-archery/unetbootin",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "organization_member"
+      ]
+    },
+    {
+      "repository_id": "257167525",
+      "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
+      "owner": "tribal-archery",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "archived": false,
+      "size_kb": 7452,
+      "display_url": "https://github.com/tribal-archery/vscode-azure-blockchain-ethereum",
+      "latest_known_update_at": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTED_REPOSITORY_LIST_ACTION",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_BATCH",
+      "scan_evidence": [],
+      "affiliations": [
+        "owner",
+        "organization_member"
+      ]
+    }
+  ]
+}
