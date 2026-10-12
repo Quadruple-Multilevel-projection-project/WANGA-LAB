@@ -108,5 +108,7 @@
     "redundantWeeklyAutomation": "DISABLED",
     "githubActions": "Weekly Logic Fractal Wiki Research schedule active; builds and uploads artifacts and opens a PR for generated wiki/report changes without auto-merge.",
     "caveat": "Neither automation is an always-on agent or has unrestricted access to private ChatGPT history. Source access is logged per run."
-  }
+  },
+  "wix_research_status_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki-research-status.html",
+  "cross_sync_status": "GITHUB_REPORT_TO_WIX_STATUS_PAGE_LINKED"
 }
