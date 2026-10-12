@@ -84,4 +84,4 @@ The CI workflow runs Python compilation, corpus integrity checks, existing symbo
 
 ## Live research page
 
-Read the Hebrew project overview on [Wix]( https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-native-model-builder.html ). Implementation PR #96 was merged after the Logic-Native Model Builder, Repository Integrity, and CodeQL checks passed. The LLM endpoint adapter remains opt-in and unconfigured by default.
+Read the Hebrew project overview on [Wix](https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-native-model-builder.html). Implementation PR #96 was merged after the Logic-Native Model Builder, Repository Integrity, and CodeQL checks passed. The LLM endpoint adapter remains opt-in and unconfigured by default.
