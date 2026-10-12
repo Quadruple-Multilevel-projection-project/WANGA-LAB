@@ -135,3 +135,20 @@ The important research question is not whether Rational Logic can replace agents
 The question is whether a formal reasoning layer can make a heterogeneous multi-model system more auditable, contradiction-aware, reproducible, and controllable by placing explicit logical constraints around model-generated work.
 
 This remains a hypothesis until experimentally validated.
+
+
+## 2026-10-12 — Boundary to the letter-weight mathematical layer
+
+A 79-page source-extraction document has been reviewed. It provides structured first-order extraction of selected passages from *Etz Chaim* and 28 units (`S-08-001…S-08-028`) for *Guide for the Perplexed* I:8. In the I:8 extraction, the document explicitly defers the second logic until the first extraction is closed.
+
+This is useful as a source-grounded input format for a future formal-reasoning interface, but it does not define the four mathematical-weight layers or their formulas, an invertible text/math representation, the 231-gate runtime, or verified empirical results.
+
+**Integration boundary:** Rational Logic must not silently infer the weight-layer definitions from sentence-role fields. The following are distinct:
+- four roles used to extract a sentence (subject, predicate, internal participant, logical connective/relationship);
+- three proposed computational layers in the separate architecture draft;
+- four logical-mathematical weight layers associated with letter interpretations;
+- the provenance distinctions source / extraction / interpretation / engineering hypothesis.
+
+Until the four weight-layer definitions are recovered from research sources and given explicit contracts, Rational Logic may accept only source-linked structured propositions and relations from the extraction layer. The weight-engine interface remains **NOT_SPECIFIED / NOT_YET_VERIFIED**.
+
+Source audit: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md
