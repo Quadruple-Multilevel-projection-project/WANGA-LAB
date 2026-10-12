@@ -27,6 +27,8 @@
     "new_conversation_source_records": 0,
     "typed_fragment_tests": 8,
     "first_model_status": "CANDIDATE_NOT_RELEASED",
-    "semantic_status": "NOT_YET_VERIFIED"
+    "semantic_status": "NOT_YET_VERIFIED",
+    "wix_research_status_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki-research-status.html",
+    "github_report_path": "research/reports/logic-fractal/2026-10-12-cycle.md"
   }
 }
