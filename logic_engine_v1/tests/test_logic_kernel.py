@@ -17,6 +17,7 @@ from logic_kernel import (  # noqa: E402
     combinatorial_counts,
     compare_thresholds,
     gate_action,
+    load_corpus_context,
     run_bundle,
     sample_bundle,
     validate_corpus,
@@ -140,6 +141,125 @@ class DriftTests(unittest.TestCase):
             compare_thresholds(float("nan"), 0.8, 0.6)
 
 
+class SourceGroundedSemanticTests(unittest.TestCase):
+    @classmethod
+    def setUpClass(cls):
+        cls.semantic_matrix_path = PROJECT / "semantic_tests" / "semantic_test_matrix.json"
+        cls.matrix = json.loads(cls.semantic_matrix_path.read_text(encoding="utf-8"))
+
+    def test_semantic_test_matrix_has_unique_ids_and_source_bounds(self):
+        cases = self.matrix["cases"]
+        ids = [case["id"] for case in cases]
+        self.assertEqual(len(ids), len(set(ids)))
+        for case in cases:
+            self.assertTrue(case["assertion"].strip())
+            self.assertTrue(case["scope_limit"].strip())
+            self.assertTrue(case["automated_test"].startswith("test_"))
+        self.assertTrue(self.matrix["source_claim_boundary"])
+
+    def test_selected_sefer_yetzirah_presentation_is_edition_scoped(self):
+        source = next(s for s in self.matrix["sources"] if s["id"] == "SRC-SY-GRA-2-4")
+        self.assertEqual(source["reference_status"], "SOURCE_TEXT_LOCATED")
+        self.assertIn("Sefer_Yetzirah_Gra_Version.2.4", source["uri"])
+        self.assertIn("231", source["excerpt"])
+        self.assertIn("forward and back", source["excerpt"])
+        self.assertIn("edition", source["scope_limit"].lower())
+
+    def test_221_231_scholarship_reference_stays_review_required(self):
+        source = next(s for s in self.matrix["sources"] if s["id"] == "SRC-VARIANT-221-231")
+        self.assertEqual(source["reference_status"], "BIBLIOGRAPHIC_REFERENCE_REQUIRES_FULL_TEXT_REVIEW")
+        self.assertNotEqual(source["reference_status"], "VERIFIED")
+        self.assertIn("not", source["scope_limit"].lower())
+
+    def test_corpus_context_injects_only_structural_facts_requested_by_rules(self):
+        context = load_corpus_context(REPO_ROOT)
+        self.assertEqual(context["status"], "LOADED")
+        self.assertEqual(context["counts"]["letters"], 22)
+        self.assertEqual(context["counts"]["undirected_gates"], 231)
+        self.assertEqual(context["counts"]["directed_transitions"], 462)
+        self.assertEqual(context["counts"]["unordered_triples"], 1540)
+        bundle = {
+            "evidence": [],
+            "claims": [],
+            "rules": [{
+                "id": "R-STRUCTURAL-GATE-001",
+                "status": "ACTIVE_SPECIFIED",
+                "description": "Structural count test only; no semantic gate meaning is inferred.",
+                "antecedents": [{
+                    "subject": "gate:GATE-001",
+                    "predicate": "corpus_connects_unordered",
+                    "object": "א|ב",
+                }],
+                "consequent": {
+                    "subject": "test",
+                    "predicate": "corpus_loaded_gate",
+                    "object": "GATE-001",
+                },
+                "source_refs": ["repo://research/data/LETTER_GATE_MAP_231_V1.json#GATE-001"],
+            }],
+        }
+        result = run_bundle(bundle, corpus_context=context)
+        self.assertEqual(result["status"], "COMPLETED")
+        self.assertEqual(len(result["derived_claims"]), 1)
+        self.assertEqual(result["derived_claims"][0]["status"], "DERIVED_NOT_VERIFIED")
+        self.assertEqual(result["corpus_context"]["used_structural_facts"], 1)
+        self.assertIn("research/data/LETTER_GATE_MAP_231_V1.json",
+                      result["trace"][0]["premise_corpus_files"][0])
+
+    def test_source_linked_fixture_does_not_upgrade_conclusion_to_verified(self):
+        source = next(s for s in self.matrix["sources"] if s["id"] == "SRC-SY-GRA-2-4")
+        bundle = {
+            "evidence": [{
+                "id": source["id"],
+                "source_uri": source["uri"],
+                "source_version": source["source_version"],
+                "location": source["locator"],
+                "status": "SOURCE_TEXT_LOCATED",
+                "note": source["scope_limit"],
+            }],
+            "claims": [{
+                "id": "C-SOURCE-EDITION-SCOPE",
+                "atom": {
+                    "subject": "selected Sefer Yetzirah Gra 2:4 presentation",
+                    "predicate": "reports",
+                    "object": "22 letters, 231 gates, forward/back movement",
+                },
+                "epistemic_status": "TEST_FIXTURE",
+                "evidence_refs": [source["id"]],
+            }],
+            "rules": [{
+                "id": "R-PRESERVE-EDITION-BOUNDARY",
+                "status": "ACTIVE_SPECIFIED",
+                "description": "A cited page is a source for an edition-scoped report, not every recension.",
+                "antecedents": [{
+                    "subject": "selected Sefer Yetzirah Gra 2:4 presentation",
+                    "predicate": "reports",
+                    "object": "22 letters, 231 gates, forward/back movement",
+                }],
+                "consequent": {
+                    "subject": "claim C-SOURCE-EDITION-SCOPE",
+                    "predicate": "scope",
+                    "object": "edition_specific_not_universal",
+                },
+                "source_refs": [source["uri"]],
+            }],
+        }
+        result = run_bundle(bundle)
+        self.assertEqual(result["status"], "COMPLETED")
+        derived = result["derived_claims"]
+        self.assertEqual(len(derived), 1)
+        self.assertEqual(derived[0]["status"], "DERIVED_NOT_VERIFIED")
+        self.assertNotIn("VERIFIED", derived[0]["status"])
+
+    def test_all_gate_semantics_remain_unassigned_in_registry(self):
+        gate_map_path = REPO_ROOT / "research" / "data" / "LETTER_GATE_MAP_231_V1.json"
+        gate_map = json.loads(gate_map_path.read_text(encoding="utf-8"))
+        self.assertTrue(all(
+            gate.get("source_semantics") == "UNASSIGNED"
+            for gate in gate_map["undirected_gates"]
+        ))
+
+
 class CorpusIntegrationTests(unittest.TestCase):
     def test_repository_corpus_invariants(self):
         result = validate_corpus(REPO_ROOT)
@@ -157,10 +277,14 @@ class CorpusIntegrationTests(unittest.TestCase):
         )
         decoded = json.loads(completed.stdout)
         self.assertEqual(decoded["engine_type"], "DETERMINISTIC_SYMBOLIC_PROTOTYPE_NOT_GENERAL_AI")
-        self.assertEqual(decoded["summary"]["rule_firings"], 1)
+        self.assertEqual(decoded["summary"]["rule_firings"], 2)
+        self.assertEqual(decoded["corpus_context"]["status"], "LOADED")
+        self.assertEqual(decoded["corpus_context"]["used_structural_facts"], 1)
         self.assertEqual(decoded["action_gate_result"]["decision"], "ALLOW_WITHIN_DECLARED_SCOPE")
         self.assertTrue(decoded["threshold_comparison"]["decision_changed"])
         self.assertEqual(decoded["combinatorial_counts"]["unordered_distinct_triples"], 1540)
+        self.assertEqual(decoded["corpus_context"]["registered_letters"], 22)
+        self.assertEqual(decoded["corpus_context"]["semantic_status"], "STRUCTURAL_COMBINATORICS_ONLY")
 
 
 if __name__ == "__main__":
