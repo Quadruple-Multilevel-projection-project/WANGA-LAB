@@ -4,7 +4,7 @@ import sys
 import unittest
 from pathlib import Path
 
-ROOT = Path(__file__).resolve().parents[1]
+ROOT = Path(__file__).resolve().parents[2]
 sys.path.insert(0, str(ROOT))
 
 from wanga_x_v1.engine import append_rollback_frame, build_blueprint, detect_provider_state, load_catalog, normalize_requirement, workspace_state
