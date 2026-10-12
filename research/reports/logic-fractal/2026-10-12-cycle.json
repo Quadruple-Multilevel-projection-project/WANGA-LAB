@@ -108,5 +108,22 @@
     "redundantWeeklyAutomation": "DISABLED",
     "githubActions": "Weekly Logic Fractal Wiki Research schedule active; builds and uploads artifacts and opens a PR for generated wiki/report changes without auto-merge.",
     "caveat": "Neither automation is an always-on agent or has unrestricted access to private ChatGPT history. Source access is logged per run."
+  },
+  "wix_research_status_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki-research-status.html",
+  "cross_sync_status": "GITHUB_REPORT_WIX_STATUS_LINKED",
+  "latest_automated_run": {
+    "date": "2026-10-12",
+    "workflow_run_id": 38280474364,
+    "workflow_run_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38280474364",
+    "wiki_build_status": "PASS",
+    "article_count": 18,
+    "source_records_in_seed_catalog": 11,
+    "agent_roles_executed": 8,
+    "conversation_records_processed": 0,
+    "catalog_graph_composition_candidates": 189,
+    "first_model_gate": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "artifact_name": "logic-wiki-research-report",
+    "artifact_id": 11761241380,
+    "interpretation": "189 candidates are catalog relation paths, not validated logical rules or conversation-derived fragments."
   }
 }
