@@ -35,6 +35,8 @@ on:
       - 'tests/test_multi_agent_logic_evaluation.py'
       - 'tests/test_conversation_export_intake.py'
       - 'schemas/formal-fragment-v1.schema.json'
+      - 'schemas/logic-formalization-queue-item-v1.schema.json
+      - 'tests/test_logic_formalization_queue.py
       - '.github/workflows/logic-fractal-wiki.yml'
   pull_request:
     paths:
@@ -66,6 +68,8 @@ on:
       - 'tests/test_logic_package_contract.py'
       - 'tests/test_logic_json_schemas.py'
       - 'schemas/formal-fragment-v1.schema.json'
+      - 'schemas/logic-formalization-queue-item-v1.schema.json
+      - 'tests/test_logic_formalization_queue.py
       - '.github/workflows/logic-fractal-wiki.yml'
 
 permissions:
@@ -99,6 +103,9 @@ jobs:
 
       - name: Validate logic package lifecycle contract
         run: python -m unittest discover -s tests -p 'test_logic_package_contract.py' -v
+
+      - name: Validate formalization queue and candidate boundary
+        run: python -m unittest discover -s tests -p 'test_logic_formalization_queue.py' -v
 
       - name: Validate formal JSON schemas
         run: python -m unittest discover -s tests -p 'test_logic_json_schemas.py' -v
