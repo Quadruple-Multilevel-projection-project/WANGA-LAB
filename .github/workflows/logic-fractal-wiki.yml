@@ -31,7 +31,17 @@ on:
       - 'schemas/conversation-intake-record-v1.schema.json'
       - 'schemas/ark-swarm-cycle-report-v1.schema.json'
       - 'schemas/candidate-evaluation-policy-v1.schema.json'
+      - 'schemas/typed-formal-fragment-v1.schema.json'
+      - 'schemas/logic-formalization-queue-item-v1.schema.json'
+      - 'schemas/logic-package-contract-v1.schema.json'
+      - 'tests/test_formal_typed_fragment.py'
+      - 'tests/test_formal_typed_benchmark.py'
+      - 'tests/test_formalization_queue.py'
+      - 'tests/test_logic_package_contract.py'
+      - 'tests/test_formal_package_schemas.py'
+      - 'scripts/run_typed_formal_benchmark.py'
       - '.github/workflows/logic-fractal-wiki.yml'
+
   pull_request:
     paths:
       - 'logic_wiki/**'
@@ -58,7 +68,17 @@ on:
       - 'tests/test_formal_reasoning.py'
       - 'scripts/run_formal_reasoning_benchmarks.py'
       - 'research/FORMAL_REASONING_ADAPTER_V1.md'
+      - 'schemas/typed-formal-fragment-v1.schema.json'
+      - 'schemas/logic-formalization-queue-item-v1.schema.json'
+      - 'schemas/logic-package-contract-v1.schema.json'
+      - 'tests/test_formal_typed_fragment.py'
+      - 'tests/test_formal_typed_benchmark.py'
+      - 'tests/test_formalization_queue.py'
+      - 'tests/test_logic_package_contract.py'
+      - 'tests/test_formal_package_schemas.py'
+      - 'scripts/run_typed_formal_benchmark.py'
       - '.github/workflows/logic-fractal-wiki.yml'
+
 permissions:
   contents: write
   pull-requests: write
@@ -94,6 +114,18 @@ jobs:
         run: python -m unittest discover -s tests -p 'test_formal_reasoning.py' -v
       - name: Run formal reasoning benchmark
         run: python scripts/run_formal_reasoning_benchmarks.py
+      - name: Test typed formal AST adapter
+        run: python -m unittest discover -s tests -p 'test_formal_typed_fragment.py' -v
+      - name: Test typed formal benchmark
+        run: python -m unittest discover -s tests -p 'test_formal_typed_benchmark.py' -v
+      - name: Run typed formal benchmark report
+        run: python scripts/run_typed_formal_benchmark.py --out research/reports/formal-reasoning/typed-fragment-benchmark-latest.json
+      - name: Test formalization queue
+        run: python -m unittest discover -s tests -p 'test_formalization_queue.py' -v
+      - name: Test logic package lifecycle contract
+        run: python -m unittest discover -s tests -p 'test_logic_package_contract.py' -v
+      - name: Test formal package JSON schemas
+        run: python -m unittest discover -s tests -p 'test_formal_package_schemas.py' -v
       - name: Run ARK-Swarm + Logic Trader tests
         run: python -m unittest discover -s tests -p 'test_ark_swarm_logic_trader.py' -v
       - name: Execute integrated ARK-Swarm + Logic Trader (includes existing six roles)
