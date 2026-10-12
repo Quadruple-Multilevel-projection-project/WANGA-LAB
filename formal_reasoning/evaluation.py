@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 from typing import Any, Mapping
+import math
 
 DEFAULT_THRESHOLDS = {
     "min_source_coverage": 0.95,
@@ -20,7 +21,16 @@ def evaluate_candidate(metrics: Mapping[str, Any], thresholds: Mapping[str, floa
     if thresholds is not None:
         if not isinstance(thresholds, Mapping):
             raise ValueError("thresholds must be an object")
+        unknown_thresholds = set(thresholds) - set(policy)
+        if unknown_thresholds:
+            raise ValueError(f"unknown thresholds: {sorted(unknown_thresholds)}")
         policy.update(thresholds)
+    for name in ("min_source_coverage", "min_benchmark_accuracy", "max_counterexample_rate", "min_holdout_score"):
+        value = policy[name]
+        if not isinstance(value, (int, float)) or isinstance(value, bool) or not math.isfinite(float(value)) or not 0 <= value <= 1:
+            raise ValueError(f"{name} must be a finite number in [0, 1]")
+    if not isinstance(policy["max_compute_seconds"], (int, float)) or isinstance(policy["max_compute_seconds"], bool) or not math.isfinite(float(policy["max_compute_seconds"])) or policy["max_compute_seconds"] <= 0:
+        raise ValueError("max_compute_seconds must be a positive finite number")
     bounded = {
         "source_coverage": (0.0, 1.0),
         "benchmark_accuracy": (0.0, 1.0),
@@ -31,7 +41,7 @@ def evaluate_candidate(metrics: Mapping[str, Any], thresholds: Mapping[str, floa
     normalized = dict(metrics)
     for name, (minimum, maximum) in bounded.items():
         value = normalized.get(name)
-        if not isinstance(value, (int, float)) or isinstance(value, bool) or not minimum <= value <= maximum:
+        if not isinstance(value, (int, float)) or isinstance(value, bool) or not math.isfinite(float(value)) or not minimum <= value <= maximum:
             raise ValueError(f"{name} must be a numeric value in [{minimum}, {maximum}]")
         normalized[name] = float(value)
     for name in ("premises_consistent", "formal_checks_pass", "replay_stable"):
