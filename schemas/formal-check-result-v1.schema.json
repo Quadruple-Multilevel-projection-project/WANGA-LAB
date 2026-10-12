@@ -1,0 +1,57 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA bounded formal check result",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "claim_id",
+    "input_sha256",
+    "premise_consistency",
+    "entailment",
+    "verification_status",
+    "formal_scope"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "wanga-formal-check-result/1.0"
+    },
+    "claim_id": {
+      "type": "string"
+    },
+    "input_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "premise_consistency": {
+      "enum": [
+        "SAT",
+        "UNSAT",
+        "UNKNOWN"
+      ]
+    },
+    "entailment": {
+      "enum": [
+        "ENTAILED_WITHIN_PROPOSITIONAL_ENCODING",
+        "COUNTERMODEL_FOUND",
+        "NOT_EVALUATED",
+        "UNKNOWN"
+      ]
+    },
+    "status": {
+      "enum": [
+        "ENTAILED_WITHIN_ENCODING",
+        "NOT_ENTAILED_BY_ENCODING",
+        "INCONSISTENT_PREMISES",
+        "SOLVER_UNKNOWN_ON_PREMISES",
+        "SOLVER_UNKNOWN_ON_ENTAILMENT"
+      ]
+    },
+    "verification_status": {
+      "const": "NOT_YET_VERIFIED"
+    },
+    "formal_scope": {
+      "const": "PROPOSITIONAL_LOGIC_ONLY"
+    }
+  },
+  "additionalProperties": true
+}

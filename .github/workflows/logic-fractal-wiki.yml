@@ -1,3 +1,4 @@
+            research/reports/formal-reasoning/**
 name: Logic Fractal Wiki Research
 on:
   workflow_dispatch:
@@ -12,6 +13,13 @@ on:
       - 'research/ARK_SWARM_LOGIC_TRADER_INTEGRATION_V1.md'
       - 'scripts/build_logic_wiki.py'
       - 'logic_fractal/**'
+      - 'formal_reasoning/**'
+      - 'requirements-formal.txt'
+      - 'schemas/formal-claim-v1.schema.json'
+      - 'schemas/formal-check-result-v1.schema.json'
+      - 'tests/test_formal_reasoning.py'
+      - 'scripts/run_formal_reasoning_benchmarks.py'
+      - 'research/FORMAL_REASONING_ADAPTER_V1.md'
       - 'ark_swarm/**'
       - 'scripts/run_logic_agents.py'
       - 'scripts/evaluate_logic_agent_bundle.py'
@@ -22,6 +30,7 @@ on:
       - 'tests/test_conversation_export_intake.py'
       - 'schemas/conversation-intake-record-v1.schema.json'
       - 'schemas/ark-swarm-cycle-report-v1.schema.json'
+      - 'schemas/candidate-evaluation-policy-v1.schema.json'
       - '.github/workflows/logic-fractal-wiki.yml'
   pull_request:
     paths:
@@ -41,6 +50,14 @@ on:
       - 'scripts/ingest_conversation_export.py'
       - 'tests/test_conversation_export_intake.py'
       - 'schemas/conversation-intake-record-v1.schema.json'
+      - 'formal_reasoning/**'
+      - 'requirements-formal.txt'
+      - 'schemas/formal-claim-v1.schema.json'
+      - 'schemas/formal-check-result-v1.schema.json'
+      - 'schemas/candidate-evaluation-policy-v1.schema.json'
+      - 'tests/test_formal_reasoning.py'
+      - 'scripts/run_formal_reasoning_benchmarks.py'
+      - 'research/FORMAL_REASONING_ADAPTER_V1.md'
       - '.github/workflows/logic-fractal-wiki.yml'
 permissions:
   contents: write
@@ -53,8 +70,12 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
+      - name: Install bounded formal-reasoning dependency
+        run: python -m pip install --disable-pip-version-check -r requirements-formal.txt
       - name: Compile private export intake utility
         run: python -m compileall -q scripts/ingest_conversation_export.py
+      - name: Compile formal reasoning adapter
+        run: python -m compileall -q formal_reasoning scripts/run_formal_reasoning_benchmarks.py
       - name: Test private conversation export intake
         run: python -m unittest discover -s tests -p 'test_conversation_export_intake.py' -v
       - name: Build and validate Logic Wiki
@@ -69,6 +90,10 @@ jobs:
         run: python scripts/build_first_fractal_model.py
       - name: Test integrated logic-agent roles
         run: python -m unittest discover -s tests -p 'test_multi_agent_logic_evaluation.py' -v
+      - name: Run formal reasoning adapter tests
+        run: python -m unittest discover -s tests -p 'test_formal_reasoning.py' -v
+      - name: Run formal reasoning benchmark
+        run: python scripts/run_formal_reasoning_benchmarks.py
       - name: Run ARK-Swarm + Logic Trader tests
         run: python -m unittest discover -s tests -p 'test_ark_swarm_logic_trader.py' -v
       - name: Execute integrated ARK-Swarm + Logic Trader (includes existing six roles)
@@ -84,6 +109,7 @@ jobs:
             research/reports/logic-fractal/
             research/reports/agent-evaluation/
             research/reports/ark-swarm/
+            research/reports/formal-reasoning/
       - name: Propose generated wiki/report updates (no auto-merge)
         if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
         uses: peter-evans/create-pull-request@v7
@@ -102,3 +128,4 @@ jobs:
             research/reports/logic-fractal/**
             research/reports/agent-evaluation/**
             research/reports/ark-swarm/**
+            research/reports/formal-reasoning/**

@@ -26,8 +26,20 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Install bounded formal reasoning dependency
+        run: python -m pip install --disable-pip-version-check -r requirements-formal.txt
+
       - name: Validate Python syntax
         run: python -m compileall -q .
+
+      - name: Formal reasoning adapter tests
+        run: python -m unittest discover -s tests -p 'test_formal_reasoning.py' -v
+
+      - name: Formal reasoning benchmark
+        run: python scripts/run_formal_reasoning_benchmarks.py
+
+      - name: ARK-Swarm + Logic Trader integration tests
+        run: python -m unittest discover -s tests -p 'test_ark_swarm_logic_trader.py' -v
 
       - name: Vitruvius queue regression tests
         run: |

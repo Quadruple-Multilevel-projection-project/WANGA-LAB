@@ -1,0 +1,55 @@
+{
+  "schema_version": "wanga-formal-claim-batch/1.0",
+  "description": "Synthetic propositional-logic fixtures. They test only the declared formulas, not natural-language truth.",
+  "claims": [
+    {
+      "schema_version": "wanga-formal-claim/1.0",
+      "claim_id": "F-ENTAILED-001",
+      "variables": [
+        "P",
+        "Q"
+      ],
+      "premises": [
+        "P -> Q",
+        "P"
+      ],
+      "conclusion": "Q",
+      "source_refs": [
+        "fixture://formal/1"
+      ],
+      "epistemic_status": "TEST_FIXTURE"
+    },
+    {
+      "schema_version": "wanga-formal-claim/1.0",
+      "claim_id": "F-NOT-ENTAILED-001",
+      "variables": [
+        "P",
+        "Q"
+      ],
+      "premises": [
+        "P -> Q"
+      ],
+      "conclusion": "P",
+      "source_refs": [
+        "fixture://formal/2"
+      ],
+      "epistemic_status": "TEST_FIXTURE"
+    },
+    {
+      "schema_version": "wanga-formal-claim/1.0",
+      "claim_id": "F-INCONSISTENT-001",
+      "variables": [
+        "P"
+      ],
+      "premises": [
+        "P",
+        "not P"
+      ],
+      "conclusion": "P",
+      "source_refs": [
+        "fixture://formal/3"
+      ],
+      "epistemic_status": "TEST_FIXTURE"
+    }
+  ]
+}

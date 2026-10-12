@@ -273,3 +273,15 @@ python scripts/run_ark_swarm.py
 
 Outputs: `research/reports/ark-swarm/logic-trader-swarm-latest.json` and `logic-brain-candidate-latest.json`. The model remains `INTERNAL_CANDIDATE_NOT_RELEASED` and `NOT_YET_VERIFIED`. Lexical ranking is not semantic validation. P2P transport, network CRDT synchronization, connectome execution and an external LLM backend are not configured by this integration.
 
+## Bounded formal reasoning adapter V1
+
+The repository now includes a restricted propositional-logic adapter backed by Z3, with a declared grammar, independent premise-consistency check, entailment-by-countermodel check, and hard-gated candidate evaluation vector.
+
+- [Formal reasoning design](research/FORMAL_REASONING_ADAPTER_V1.md)
+- [Input contract](schemas/formal-claim-v1.schema.json)
+- [Formal adapter](formal_reasoning/propositional.py)
+- [Five-case synthetic benchmark](formal_reasoning/examples/benchmark_cases.json)
+
+Run with `python -m pip install -r requirements-formal.txt`, `python -m unittest discover -s tests -p 'test_formal_reasoning.py' -v`, and `python scripts/run_formal_reasoning_benchmarks.py`.
+
+The adapter only checks explicitly encoded propositional formulas. It does not turn solver results into empirical truth or promote any claim to `VERIFIED`. The first benchmark is a smoke suite; source-grounded cases and independent holdout are still required.
