@@ -18,7 +18,8 @@ def load_evaluation_policy(path: Path | str | None = None) -> tuple[dict[str, fl
     if not isinstance(thresholds, dict):
         raise ValueError("policy thresholds must be an object")
     required = {
-        "min_source_coverage", "min_benchmark_accuracy", "max_counterexample_rate",
+        "min_source_coverage", "min_evidence_coverage", "min_benchmark_accuracy",
+        "max_counterexample_rate", "max_false_accept_rate", "max_counterexample_escape_rate",
         "min_holdout_score", "max_compute_seconds"
     }
     if set(thresholds) != required:
@@ -60,6 +61,8 @@ def evaluate_candidate(metrics: Mapping[str, Any], thresholds: Mapping[str, floa
         "source_coverage": (0.0, 1.0),
         "benchmark_accuracy": (0.0, 1.0),
         "counterexample_rate": (0.0, 1.0),
+        "false_accept_rate": (0.0, 1.0),
+        "counterexample_escape_rate": (0.0, 1.0),
         "holdout_score": (0.0, 1.0),
         "compute_seconds": (0.0, float("inf")),
     }
@@ -78,6 +81,8 @@ def evaluate_candidate(metrics: Mapping[str, Any], thresholds: Mapping[str, floa
         "source_coverage": normalized["source_coverage"] >= policy["min_source_coverage"],
         "benchmark_accuracy": normalized["benchmark_accuracy"] >= policy["min_benchmark_accuracy"],
         "counterexample_rate": normalized["counterexample_rate"] <= policy["max_counterexample_rate"],
+        "false_accept_rate": normalized["false_accept_rate"] <= policy["max_false_accept_rate"],
+        "counterexample_escape_rate": normalized["counterexample_escape_rate"] <= policy["max_counterexample_escape_rate"],
         "holdout_score": normalized["holdout_score"] >= policy["min_holdout_score"],
         "replay_stable": normalized["replay_stable"],
         "compute_budget": normalized["compute_seconds"] <= policy["max_compute_seconds"],
