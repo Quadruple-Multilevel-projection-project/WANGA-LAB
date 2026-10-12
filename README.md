@@ -213,3 +213,14 @@ WANGA-LAB now includes the experimental LNL/0.1 parser/compiler and model-propos
 - [Merged implementation PR #96](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/96) — merge commit `cbe964a245cbc5e0622a92ac2d79da7c3b750126`.
 
 The CI workflow passed for the model-builder tests, repository integrity, and CodeQL on the reviewed PR commit. The prototype is not a trained foundation model, arbitrary natural-language semantics are not fully formalized, and semantic accuracy remains NOT_YET_VERIFIED.
+
+## WANGA-X executable Blueprint engine V1
+
+The requirement-driven architecture paradigm now has an experimental executable Blueprint generator in `wanga_x_v1/`.
+
+- [WANGA-X engine README](./wanga_x_v1/README.md)
+- [Implementation and research boundary](./docs/WANGA_X_EXECUTABLE_BLUEPRINT_ENGINE_V1.md)
+- [Engine](./wanga_x_v1/engine.py)
+- [Merged PR #97](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/97) — merge commit `638d97a3e201c60a48fbf51ab30ba013837886c2`.
+
+It maps a task requirement into required computation capabilities, compares three candidate architecture strategies, resolves component dependencies, emits a provenance-bearing Blueprint, and records reversible hashed build frames. A request that needs actual neural runtime materialization is explicitly blocked when no verified backend is available. The engine generates a Blueprint; it does not train or instantiate neural weights.
