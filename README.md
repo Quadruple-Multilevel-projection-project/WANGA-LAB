@@ -230,9 +230,16 @@ It maps a task requirement into required computation capabilities, compares thre
 - [Logic Fractal Model Program V1](research/LOGIC_FRACTAL_PROGRAM_V1.md) — source-first research plan and provisional FIRST_MODEL_ALPHA readiness gate.
 - [Logic Wiki data and catalog](logic_wiki/README.md) — versioned, source-linked encyclopedia; each concept keeps its own status and scope.
 - [Logic-fractal composer](logic_fractal/composer.py) — deterministic candidate composition with provenance and invariant checks.
-- [Agent contracts](logic_wiki/data/agent_registry.json) — nine bounded roles for collection, source registration, extraction, normalization, composition, mirror review, evaluation, curation and reporting.
+- [Agent contracts](logic_wiki/data/agent_registry.json) — twelve bounded roles, including multi-scale fractal mining, readiness gating and Wix sync auditing.
 - [Conversation intake boundary](research/inbox/conversations/README.md) — only accessible or explicitly exported conversations enter the corpus.
 - [Wix Logic Wiki](https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html) — published index; GitHub PR remains the source-review path.
+- [Logical-fractal research page on Wix](https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki-fractal-research.html) — nine new concepts, L0–L3 composition map and review boundaries.
+- [Fractal taxonomy map](logic_wiki/data/fractal_taxonomy.json) — source-linked article map; catalog relationships remain editorial candidates, not logical entailment.
+- [Recursive composition contracts](logic_fractal/data/recursive_composition_contracts_v1.json) — provisional invariants for L0–L3.
+- [Semantic benchmark plan](logic_fractal/data/semantic_benchmark_plan_v1.json) — positive, negative and boundary suites, specified but not yet populated.
+- [Current compute profile](logic_wiki/data/compute_profile.json) — GitHub Actions baseline, optional model endpoint and no paid GPU/cloud by default.
+- [Report format](research/LOGIC_FRACTAL_REPORT_FORMAT_V1.md) — coverage, provenance, benchmarks, readiness deficits, Wix read-back and next tasks.
+- [Autonomous research platform V2](research/LOGIC_FRACTAL_AUTONOMOUS_RESEARCH_PLATFORM_V2.md) — cumulative work loop and evidence boundaries.
 
 The initial catalog is a seed. FIRST_MODEL_ALPHA is not ready until the configured source, composition, counterexample, benchmark, holdout and review requirements pass. The thresholds are project policy hypotheses, not empirical laws.
 
