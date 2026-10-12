@@ -64,6 +64,16 @@ GitHub Actions can process content present in the repository. It cannot autonomo
 - Scheduled generation opens or updates a PR; it does not write directly to main.
 - Wix sync is complete only after a successful write and read-back. Otherwise mark BLOCKED.
 
+## Typed multi-scale fragment composition
+
+The page-graph composer and the typed-fragment composer solve two different tasks.
+
+- The page-graph composer creates auditable navigation/path candidates from article relations already declared in the Logic Wiki catalog.
+- The typed-fragment composer composes logic fragments through explicit input/output types, preserves every parent ID and source span, raises an error on missing required interfaces, creates a canonical hash, and labels the result CANDIDATE.
+- The first candidate builder composes a synthetic observation fragment into a relation fragment (scale 1), then composes that candidate with a review fragment (scale 2). Its release gate stays blocked because these are synthetic fixtures, not a reviewed extraction from the conversation archive, and the negative/boundary benchmark and independent review are not complete.
+
+This separates graph exploration from executable logical composition. Neither type compatibility nor article adjacency establishes semantic entailment.
+
 ## Current milestones
 1. Establish data schema, seed glossary, article renderer and readiness gate.
 2. Add conversation-export inbox and source/claim manifest.
