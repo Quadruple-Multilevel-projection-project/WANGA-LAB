@@ -35,7 +35,7 @@ def tokenize_formula(text: str) -> list[str]:
         raise FormalInputError("formula must be non-empty text")
     if len(text) > MAX_FORMULA_CHARS:
         raise FormalInputError(f"formula exceeds {MAX_FORMULA_CHARS} character limit")
-    result: list[str] =
+    result: list[str] = []
     pos = 0
     while pos < len(text):
         if text[pos:].isspace():
