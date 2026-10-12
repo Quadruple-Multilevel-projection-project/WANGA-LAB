@@ -59,6 +59,14 @@ class BoundedZ3AdapterTests(unittest.TestCase):
         self.assertEqual(result["entailment_status"], "BLOCKED_INCONSISTENT_PREMISES")
         self.assertIsNone(result["countermodel"])
 
+    def test_premises_require_sources_or_explicit_assumptions(self):
+        from copy import deepcopy
+        spec = deepcopy(self.cases[0]["spec"])
+        spec["premises"][0]["source_refs"] = []
+        spec["premises"][0]["assumption"] = False
+        with self.assertRaises(FormalSpecError):
+            check_entailment(spec)
+
     def test_shape_validator_runs_without_semantic_promotion(self):
         status = validate_formal_spec(self.cases[0]["spec"])
         self.assertEqual(status["status"], "VALID_FORMAL_FRAGMENT_SHAPE")
