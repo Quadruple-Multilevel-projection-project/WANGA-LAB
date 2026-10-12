@@ -128,3 +128,4 @@ jobs:
             research/reports/logic-fractal/**
             research/reports/agent-evaluation/**
             research/reports/ark-swarm/**
+            research/reports/formal-reasoning/**
