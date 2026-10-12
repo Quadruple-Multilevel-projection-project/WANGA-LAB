@@ -134,3 +134,11 @@
 - **SPECIFIED / PROPOSED:** מסגרת חמש השכבות הקדמיות וחמש תחנות החזור.
 - **NOT_YET_SPECIFIED:** הגדרות ארבע שכבות המשקולות, הנוסחה הכוללת, מפרט מלא לכל שער וכל נתוני הקואורדינטות.
 - **NOT_YET_VERIFIED:** שחזור טקסט/מבנה, ביצועים, יתרון מול קו בסיס, ערך מסחרי.
+
+
+## 2026-10-12 — Link from architecture to problem map and product
+The 10-stage functional loop is now mapped to the user's original twelve problem areas and candidate product/market applications. The mapping distinguishes proposed architecture from verified outcomes and gives test requirements per problem.
+
+- [12-problem architecture evidence map](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/TWELVE_PROBLEM_ARCHITECTURE_EVIDENCE_MAP_V1.md)
+- [Logic as Product — international markets and bounded geopolitical analysis use cases](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/LOGIC_AS_PRODUCT_MARKETS_BRIDGE_V1.md)
+- [Investor explanation draft](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/INVESTOR_LOGIC_EXPLANATION_UPDATE_DRAFT_HE.md)
