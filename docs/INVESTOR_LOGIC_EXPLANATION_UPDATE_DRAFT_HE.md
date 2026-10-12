@@ -106,6 +106,8 @@
 
 ## מסמכי פירוט
 
+- [מיפוי 12 הבעיות, תגובות הארכיטקטורה ושערי הראיות](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/TWELVE_PROBLEM_ARCHITECTURE_EVIDENCE_MAP_V1.md)
+
 - [ביקורת מקור ל-PDF בן 79 העמודים](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/SOURCE_AUDIT_79_PAGE_LOGIC_EXTRACTION_2026-10-12.md)
 - [מפרט ביקורת של חמש שכבות קדימה וחמישה שלבי חזור](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md)
 - [תוכנית המאגר ל-257 עמודים](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/research/LETTER_LOGIC_CORPUS_257_PAGE_PLAN_V1.md)
