@@ -8,7 +8,7 @@ This addition advances the P0 items in `research/ARK_SWARM_FULL_STACK_GAP_ANALYS
 
 ## Components
 
-- `formal_reasoning/propositional.py`: parser for explicitly supplied propositional formulas with variables and operators `not/!`, `and/&`, `or/|`, `->/implies`, and `<->/iff`. It does not run `eval` and rejects undeclared symbols or unsupported syntax.
+- `formal_reasoning/propositional.py`: parser for explicitly supplied propositional formulas with variables and operators `not/!`, `and/&`, `or/|`, `->/implies`, and `<->/iff`. It does not run `eval`, rejects undeclared symbols/unsupported syntax, and applies explicit limits to formula length, tokens, nesting, variable count, premise count and solver timeout.
 - `formal_reasoning/benchmark.py`: runs a fixed set of five synthetic cases.
 - `formal_reasoning/evaluation.py`: applies hard gates to a candidate metric vector. Its descriptive score never overrides a failed hard gate and never updates weights.
 - `requirements-formal.txt`: pins the optional Z3 adapter dependency.
