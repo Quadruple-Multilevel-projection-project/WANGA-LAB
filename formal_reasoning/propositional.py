@@ -142,29 +142,32 @@ class FormulaParser:
         return ("var", token)
 
 
-def _to_z3(ast: tuple, z3: Any, variables: Mapping[str, Any]) -> Any:
+def _to_logic_ast(ast: tuple) -> dict[str, Any]:
+    """Convert the text parser's validated AST into the canonical typed AST."""
     op = ast[0]
     if op == "var":
-        return variables[ast[1]]
+        return {"var": ast[1]}
     if op == "const":
-        return z3.BoolVal(ast[1])
+        return {"const": ast[1]}
     if op == "not":
-        return z3.Not(_to_z3(ast[1], z3, variables))
+        return {"op": "not", "args": [_to_logic_ast(ast[1])]}
     if op == "and":
-        return z3.And(_to_z3(ast[1], z3, variables), _to_z3(ast[2], z3, variables))
+        return {"op": "and", "args": [_to_logic_ast(ast[1]), _to_logic_ast(ast[2])]}
     if op == "or":
-        return z3.Or(_to_z3(ast[1], z3, variables), _to_z3(ast[2], z3, variables))
+        return {"op": "or", "args": [_to_logic_ast(ast[1]), _to_logic_ast(ast[2])]}
     if op == "implies":
-        return z3.Implies(_to_z3(ast[1], z3, variables), _to_z3(ast[2], z3, variables))
+        return {"op": "implies", "args": [_to_logic_ast(ast[1]), _to_logic_ast(ast[2])]}
     if op == "iff":
-        return _to_z3(ast[1], z3, variables) == _to_z3(ast[2], z3, variables)
-    raise FormalInputError(f"unsupported AST operator: {op!r}")
+        # Both operands are Bool in this propositional frontend.
+        return {"op": "eq", "args": [_to_logic_ast(ast[1]), _to_logic_ast(ast[2])]}
+    raise FormalInputError(f"unsupported parsed AST operator: {op!r}")
 
 
-def _map_solver_result(result: Any, z3: Any) -> str:
-    if result == z3.sat:
+def _map_solver_result(result: Any, z3_module: Any) -> str:
+    """Compatibility helper; the actual solving is delegated to logic_proof.z3_adapter."""
+    if result == z3_module.sat:
         return "SAT"
-    if result == z3.unsat:
+    if result == z3_module.unsat:
         return "UNSAT"
     return "UNKNOWN"
 
@@ -210,101 +213,102 @@ def _validate_claim(spec: Mapping[str, Any]) -> dict[str, Any]:
         raise FormalInputError(f"epistemic_status must be one of {sorted(statuses)}")
     return {
         "schema_version": SCHEMA_VERSION,
-        "claim_id": claim_id.strip(),
-        "variables": list(variables),
-        "premises": list(premises),
-        "conclusion": conclusion.strip(),
-        "source_refs": sorted(set(source_refs)),
-        "timeout_ms": timeout_ms,
-        "epistemic_status": epistemic_status,
-    }
+        "claim_id": claim_id.stridef analyze_claim(spec: Mapping[str, Any]) -> dict[str, Any]:
+    """Check explicitly supplied propositional formulas via the canonical typed-AST adapter.
 
-
-def analyze_claim(spec: Mapping[str, Any]) -> dict[str, Any]:
-    """Check premise consistency, then test entailment within a finite propositional encoding.
-
-    The entailment test runs premises AND NOT conclusion. UNSAT means the
-    encoded conclusion follows from the encoded premises, provided the premises
-    themselves are consistent. SAT yields a countermodel; UNKNOWN stays unresolved.
+    This frontend treats each textual premise as an explicit formal assumption unless
+    a future version supplies per-premise source mappings. Top-level source_refs are
+    retained as claim provenance metadata, but are not falsely attached to every premise.
     """
     normalized = _validate_claim(spec)
+    from logic_proof.z3_adapter import check_entailment
+
+    declared_variables = set(normalized["variables"])
+    premise_asts = [
+        FormulaParser(text, declared_variables).parse()
+        for text in normalized["premises"]
+    ]
+    conclusion_ast = FormulaParser(normalized["conclusion"], declared_variables).parse()
+    formal_spec = {
+        "schema_version": "wanga-formal-fragment/1.0",
+        "variables": {name: "Bool" for name in normalized["variables"]},
+        "premises": [
+            {
+                "id": f"PREM-{index + 1}",
+                "expr": _to_logic_ast(ast),
+                "source_refs": [],
+                "assumption": True,
+            }
+            for index, ast in enumerate(premise_asts)
+        ],
+        "conclusion": _to_logic_ast(conclusion_ast),
+    }
+    backend = check_entailment(formal_spec, timeout_ms=normalized["timeout_ms"])
+    consistency = backend.get("premise_consistency", "UNKNOWN")
+    backend_entailment = backend.get("entailment_status", "UNKNOWN")
+    if consistency == "UNSAT":
+        status = "INCONSISTENT_PREMISES"
+        entailment = "NOT_EVALUATED"
+    elif consistency == "UNKNOWN":
+        status = "SOLVER_UNKNOWN_ON_PREMISES"
+        entailment = "UNKNOWN"
+    elif backend_entailment == "ENTAILED_WITHIN_ENCODED_FRAGMENT":
+        status = "ENTAILED_WITHIN_ENCODING"
+        entailment = "ENTAILED_WITHIN_PROPOSITIONAL_ENCODING"
+    elif backend_entailment == "NOT_ENTAILED_COUNTERMODEL":
+        status = "NOT_ENTAILED_BY_ENCODING"
+        entailment = "COUNTERMODEL_FOUND"
+    else:
+        status = "SOLVER_UNKNOWN_ON_ENTAILMENT"
+        entailment = "UNKNOWN"
+
+    raw_countermodel = backend.get("countermodel")
+    countermodel = None
+    if isinstance(raw_countermodel, Mapping):
+        countermodel = {
+            name: str(value).casefold() == "true"
+            for name, value in raw_countermodel.items()
+        }
+    solver_version = None
     try:
-        import z3
-    except ImportError as exc:
-        raise RuntimeError("z3-solver is required; install requirements-formal.txt") from exc
+        from importlib.metadata import version
+        solver_version = version("z3-solver")
+    except Exception:
+        pass
 
-    variable_map = {name: z3.Bool(name) for name in normalized["variables"]}
-    parser_variables = set(variable_map)
-    premise_asts = [FormulaParser(text, parser_variables).parse() for text in normalized["premises"]]
-    conclusion_ast = FormulaParser(normalized["conclusion"], parser_variables).parse()
-    premise_exprs = [_to_z3(ast, z3, variable_map) for ast in premise_asts]
-    conclusion_expr = _to_z3(conclusion_ast, z3, variable_map)
-
-    consistency_solver = z3.Solver()
-    consistency_solver.set(timeout=normalized["timeout_ms"])
-    if premise_exprs:
-        consistency_solver.add(*premise_exprs)
-    consistency_raw = consistency_solver.check()
-    consistency = _map_solver_result(consistency_raw, z3)
-
-    result: dict[str, Any] = {
+    return {
         "schema_version": "wanga-formal-check-result/1.0",
         "claim_id": normalized["claim_id"],
         "input_sha256": canonical_hash(normalized),
         "parser_version": PARSER_VERSION,
-        "solver": "Z3",
-        "solver_version": ".".join(str(x) for x in z3.get_version()),
+        "solver": "Z3_VIA_LOGIC_PROOF_TYPED_AST",
+        "solver_version": solver_version,
         "premise_consistency": consistency,
-        "premise_count": len(premise_exprs),
-        "variable_count": len(variable_map),
+        "premise_count": len(premise_asts),
+        "variable_count": len(normalized["variables"]),
         "source_refs": normalized["source_refs"],
         "source_refs_supplied": bool(normalized["source_refs"]),
         "epistemic_status_before": normalized["epistemic_status"],
         "epistemic_status_after": normalized["epistemic_status"],
         "verification_status": "NOT_YET_VERIFIED",
         "formal_scope": "PROPOSITIONAL_LOGIC_ONLY",
+        "formal_backend_status": backend_entailment,
+        "explicit_formal_assumptions": [f"PREM-{index + 1}" for index in range(len(premise_asts))],
+        "entailment": entailment,
+        "status": status,
+        "countermodel": countermodel,
+        "reason_unknown": backend.get("reason_unknown"),
+        "encoding_hash": backend.get("encoding_hash"),
         "semantic_boundary": (
-            "This result applies only to the explicit formulas in the declared propositional grammar. "
-            "It does not authenticate sources, validate a natural-language translation, or establish empirical truth."
+            "The text frontend parses only the declared propositional grammar and delegates all solving "
+            "to logic_proof.z3_adapter. Each premise is explicitly treated as a formal assumption; "
+            "claim-level source_refs are not falsely attached to every premise. A solver result does not "
+            "authenticate sources, validate natural-language translation, or establish empirical truth."
         ),
     }
-    if consistency == "UNSAT":
-        result.update({
-            "status": "INCONSISTENT_PREMISES",
-            "entailment": "NOT_EVALUATED",
-            "consistency_reason": "The encoded premises have no satisfying assignment; entailment is not evaluated.",
-        })
-        return result
-    if consistency == "UNKNOWN":
-        result.update({
-            "status": "SOLVER_UNKNOWN_ON_PREMISES",
-            "entailment": "UNKNOWN",
-            "consistency_reason": consistency_solver.reason_unknown(),
-        })
-        return result
 
-    entailment_solver = z3.Solver()
-    entailment_solver.set(timeout=normalized["timeout_ms"])
-    if premise_exprs:
-        entailment_solver.add(*premise_exprs)
-    entailment_solver.add(z3.Not(conclusion_expr))
-    entailment_raw = entailment_solver.check()
-    entailment_result = _map_solver_result(entailment_raw, z3)
-    result["countermodel"] = None
-    result["entailment_query"] = "PREMISES_AND_NOT_CONCLUSION"
-    if entailment_result == "UNSAT":
-        result.update({
-            "status": "ENTAILED_WITHIN_ENCODING",
-            "entailment": "ENTAILED_WITHIN_PROPOSITIONAL_ENCODING",
-        })
-    elif entailment_result == "SAT":
-        model = entailment_solver.model()
-        result.update({
-            "status": "NOT_ENTAILED_BY_ENCODING",
-            "entailment": "COUNTERMODEL_FOUND",
-            "countermodel": {
-                name: bool(z3.is_true(model.eval(variable_map[name], model_completion=True)))
-                for name in sorted(variable_map)
+
+iable_map)
             },
         })
     else:
