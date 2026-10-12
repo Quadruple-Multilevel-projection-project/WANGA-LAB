@@ -1,0 +1,33 @@
+name: WANGA-X Requirement Blueprint Engine V1
+on:
+  pull_request:
+    paths:
+      - "wanga_x_v1/**"
+      - "logic_engine_v1/**"
+      - "docs/WORK_MEMORY_STATE.json"
+      - "docs/MODEL_FAMILY_REGISTRY.yml"
+      - ".github/workflows/wanga-x-blueprint-engine-v1.yml"
+  push:
+    branches: ["main"]
+    paths:
+      - "wanga_x_v1/**"
+      - "logic_engine_v1/**"
+      - "docs/WORK_MEMORY_STATE.json"
+      - "docs/MODEL_FAMILY_REGISTRY.yml"
+      - ".github/workflows/wanga-x-blueprint-engine-v1.yml"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile modules
+        run: python -m compileall -q wanga_x_v1 logic_engine_v1
+      - name: Validate logic corpus
+        run: python logic_engine_v1/logic_kernel.py validate-corpus --repo-root .
+      - name: Test WANGA-X Blueprint engine
+        run: python -m unittest discover -s wanga_x_v1/tests -v
+      - name: Generate Blueprint fixture
+        run: python -m wanga_x_v1.cli demo --out /tmp/wanga-x-blueprint.json

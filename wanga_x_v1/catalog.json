@@ -1,0 +1,379 @@
+{
+  "schema_version": "wanga-x-catalog/1.0",
+  "status": "EXPERIMENTAL_CATALOG",
+  "selection_rule": "Requirements determine required computations; the planner chooses an eligible component set, closes dependencies, and preserves unmet capabilities as blockers.",
+  "mandatory_capabilities": [
+    "source_provenance",
+    "goal_verification",
+    "reversible_builds"
+  ],
+  "task_profiles": {
+    "logic_model_builder": {
+      "required_capabilities": [
+        "requirement_normalization",
+        "required_computation_mapping",
+        "candidate_model_generation",
+        "logic_language_compilation",
+        "symbolic_inference",
+        "contradiction_detection",
+        "candidate_critique",
+        "goal_verification",
+        "source_provenance",
+        "reversible_builds",
+        "blueprint_materialization"
+      ],
+      "optional_capabilities": [
+        "natural_language_requirement_interpretation",
+        "neural_runtime_materialization"
+      ]
+    },
+    "document_drift_analysis": {
+      "required_capabilities": [
+        "requirement_normalization",
+        "source_provenance",
+        "version_comparison",
+        "structural_diff",
+        "semantic_diff",
+        "drift_classification",
+        "goal_verification",
+        "reversible_builds",
+        "blueprint_materialization"
+      ],
+      "optional_capabilities": [
+        "natural_language_requirement_interpretation",
+        "candidate_model_generation"
+      ]
+    },
+    "neural_computer_generation": {
+      "required_capabilities": [
+        "requirement_normalization",
+        "required_computation_mapping",
+        "neural_architecture_search",
+        "neural_runtime_materialization",
+        "source_provenance",
+        "candidate_critique",
+        "goal_verification",
+        "reversible_builds",
+        "blueprint_materialization"
+      ],
+      "optional_capabilities": [
+        "natural_language_requirement_interpretation",
+        "symbolic_inference"
+      ]
+    },
+    "custom": {
+      "required_capabilities": [
+        "requirement_normalization",
+        "required_computation_mapping",
+        "source_provenance",
+        "goal_verification",
+        "reversible_builds",
+        "blueprint_materialization"
+      ],
+      "optional_capabilities": []
+    }
+  },
+  "computation_definitions": {
+    "requirement_normalization": "Normalize the task objective, inputs, outputs, constraints and acceptance conditions.",
+    "required_computation_mapping": "Derive explicit computation requirements from the normalized task and capability constraints.",
+    "candidate_model_generation": "Generate candidate model representations from an explicit specification.",
+    "natural_language_requirement_interpretation": "Interpret free-form language into a structured requirement; needs a configured language-model endpoint.",
+    "logic_language_compilation": "Compile a formal logic-language program into a structured model representation.",
+    "symbolic_inference": "Run deterministic inference over structured facts and declared rules.",
+    "contradiction_detection": "Detect incompatible claims or constraints and route them for review.",
+    "candidate_critique": "Critique architecture candidates against requirements, dependencies, evidence and safety contracts.",
+    "goal_verification": "Check candidate outputs against declared acceptance conditions without upgrading an inference into truth.",
+    "source_provenance": "Preserve source identifiers, versions, locations and traceable references.",
+    "reversible_builds": "Create immutable construction frames, snapshots and auditable rollback branches.",
+    "blueprint_materialization": "Emit a machine-readable architecture Blueprint and materialization plan.",
+    "version_comparison": "Compare named source or architecture versions.",
+    "structural_diff": "Detect changes in components, dependency edges, schemas and topology.",
+    "semantic_diff": "Compare role and relation changes while preserving uncertainty.",
+    "drift_classification": "Classify observed differences against a baseline; difference alone does not establish causality.",
+    "neural_architecture_search": "Generate and rank candidate neural topologies under declared task and resource constraints.",
+    "neural_runtime_materialization": "Instantiate or train an actual neural model through a verified runtime/backend; not implemented in this prototype."
+  },
+  "components": [
+    {
+      "id": "requirement_normalizer",
+      "name": "Requirement Normalizer",
+      "provides": [
+        "requirement_normalization"
+      ],
+      "dependencies": [],
+      "cost": 1,
+      "audit_score": 4,
+      "extensibility_score": 2,
+      "availability": "BUILT"
+    },
+    {
+      "id": "rational_logic",
+      "name": "Rational Logic Requirement Mapper",
+      "provides": [
+        "required_computation_mapping",
+        "constraint_evaluation"
+      ],
+      "dependencies": [
+        "requirement_normalizer",
+        "source_registry"
+      ],
+      "cost": 3,
+      "audit_score": 5,
+      "extensibility_score": 4,
+      "availability": "BUILT"
+    },
+    {
+      "id": "source_registry",
+      "name": "Source / Evidence Registry",
+      "provides": [
+        "source_provenance",
+        "source_lookup"
+      ],
+      "dependencies": [
+        "provenance_ledger"
+      ],
+      "cost": 2,
+      "audit_score": 5,
+      "extensibility_score": 3,
+      "availability": "BUILT"
+    },
+    {
+      "id": "provenance_ledger",
+      "name": "Append-only Provenance Ledger",
+      "provides": [
+        "append_only_trace",
+        "hash_chain"
+      ],
+      "dependencies": [],
+      "cost": 1,
+      "audit_score": 5,
+      "extensibility_score": 2,
+      "availability": "BUILT"
+    },
+    {
+      "id": "verification_gate",
+      "name": "Verification Gate",
+      "provides": [
+        "goal_verification",
+        "architecture_contract_verification"
+      ],
+      "dependencies": [
+        "provenance_ledger"
+      ],
+      "cost": 2,
+      "audit_score": 5,
+      "extensibility_score": 3,
+      "availability": "BUILT"
+    },
+    {
+      "id": "reversible_state_manager",
+      "name": "Reversible Build State Manager",
+      "provides": [
+        "reversible_builds",
+        "snapshot",
+        "rollback",
+        "rebuild"
+      ],
+      "dependencies": [
+        "provenance_ledger"
+      ],
+      "cost": 2,
+      "audit_score": 5,
+      "extensibility_score": 4,
+      "availability": "BUILT"
+    },
+    {
+      "id": "blueprint_materializer",
+      "name": "Blueprint Artifact Materializer",
+      "provides": [
+        "blueprint_materialization"
+      ],
+      "dependencies": [
+        "verification_gate",
+        "provenance_ledger"
+      ],
+      "cost": 2,
+      "audit_score": 5,
+      "extensibility_score": 4,
+      "availability": "BUILT"
+    },
+    {
+      "id": "ntm_orchestrator",
+      "name": "Neural Thinking Machine Candidate Orchestrator",
+      "provides": [
+        "candidate_critique",
+        "architecture_candidate_ranking",
+        "contradiction_routing"
+      ],
+      "dependencies": [
+        "rational_logic",
+        "source_registry",
+        "verification_gate"
+      ],
+      "cost": 4,
+      "audit_score": 5,
+      "extensibility_score": 5,
+      "availability": "BUILT"
+    },
+    {
+      "id": "structured_model_proposer",
+      "name": "Structured Model Candidate Proposer",
+      "provides": [
+        "candidate_model_generation"
+      ],
+      "dependencies": [
+        "rational_logic"
+      ],
+      "cost": 1,
+      "audit_score": 4,
+      "extensibility_score": 2,
+      "availability": "BUILT"
+    },
+    {
+      "id": "llm_model_proposer",
+      "name": "LLM Model Candidate Proposer",
+      "provides": [
+        "candidate_model_generation",
+        "natural_language_requirement_interpretation",
+        "candidate_repair_from_critique"
+      ],
+      "dependencies": [
+        "model_fabric_registry",
+        "ntm_orchestrator"
+      ],
+      "cost": 5,
+      "audit_score": 3,
+      "extensibility_score": 5,
+      "availability": "REQUIRES_CONFIGURED_LLM"
+    },
+    {
+      "id": "model_fabric_registry",
+      "name": "Digital Model Agent / Provider Registry",
+      "provides": [
+        "model_provider_abstraction",
+        "provider_capability_routing"
+      ],
+      "dependencies": [
+        "provenance_ledger"
+      ],
+      "cost": 3,
+      "audit_score": 5,
+      "extensibility_score": 5,
+      "availability": "BUILT_REGISTRY_LIVE_ENDPOINTS_UNVERIFIED"
+    },
+    {
+      "id": "logic_native_compiler",
+      "name": "LNL Compiler",
+      "provides": [
+        "logic_language_compilation",
+        "model_graph_generation"
+      ],
+      "dependencies": [
+        "rational_logic",
+        "source_registry"
+      ],
+      "cost": 2,
+      "audit_score": 5,
+      "extensibility_score": 4,
+      "availability": "BUILT"
+    },
+    {
+      "id": "symbolic_inference_kernel",
+      "name": "WANGA Symbolic Inference Kernel",
+      "provides": [
+        "symbolic_inference",
+        "contradiction_detection"
+      ],
+      "dependencies": [
+        "rational_logic",
+        "provenance_ledger"
+      ],
+      "cost": 3,
+      "audit_score": 5,
+      "extensibility_score": 4,
+      "availability": "BUILT"
+    },
+    {
+      "id": "source_diff_engine",
+      "name": "Version / Semantic / Structural Diff",
+      "provides": [
+        "version_comparison",
+        "structural_diff",
+        "semantic_diff"
+      ],
+      "dependencies": [
+        "source_registry",
+        "provenance_ledger"
+      ],
+      "cost": 3,
+      "audit_score": 5,
+      "extensibility_score": 3,
+      "availability": "BUILT"
+    },
+    {
+      "id": "drift_forensics",
+      "name": "Drift Forensics Classifier",
+      "provides": [
+        "drift_classification"
+      ],
+      "dependencies": [
+        "source_diff_engine",
+        "verification_gate"
+      ],
+      "cost": 3,
+      "audit_score": 5,
+      "extensibility_score": 4,
+      "availability": "BUILT"
+    },
+    {
+      "id": "architecture_blueprint_generator",
+      "name": "Requirement-driven Neural Architecture Blueprint Generator",
+      "provides": [
+        "neural_architecture_search",
+        "architecture_blueprint_generation"
+      ],
+      "dependencies": [
+        "rational_logic",
+        "ntm_orchestrator",
+        "verification_gate"
+      ],
+      "cost": 5,
+      "audit_score": 4,
+      "extensibility_score": 5,
+      "availability": "BLUEPRINT_ONLY_NO_TRAINING_BACKEND"
+    },
+    {
+      "id": "neural_runtime_materializer",
+      "name": "Neural Runtime / Weight Materializer",
+      "provides": [
+        "neural_runtime_materialization",
+        "neural_parameter_training"
+      ],
+      "dependencies": [
+        "model_fabric_registry",
+        "architecture_blueprint_generator",
+        "verification_gate"
+      ],
+      "cost": 10,
+      "audit_score": 3,
+      "extensibility_score": 5,
+      "availability": "REQUIRES_VERIFIED_NEURAL_BACKEND"
+    },
+    {
+      "id": "perspective_router",
+      "name": "Perspective Layer Router",
+      "provides": [
+        "perspective_selection",
+        "multi_perspective_review"
+      ],
+      "dependencies": [
+        "ntm_orchestrator",
+        "model_fabric_registry"
+      ],
+      "cost": 4,
+      "audit_score": 4,
+      "extensibility_score": 5,
+      "availability": "BUILT_ROUTING_CONTRACT_PERSPECTIVE_NODES_UNPOPULATED"
+    }
+  ]
+}
