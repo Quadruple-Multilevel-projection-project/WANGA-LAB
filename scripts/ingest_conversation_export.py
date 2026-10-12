@@ -130,7 +130,7 @@ def ingest(export_path: Path, output_dir: Path, *, repo_root: Path, metadata_onl
     output_dir.mkdir(parents=True,exist_ok=True); records=[]
     for record in record_payloads:
         out=output_dir/(record["record_id"]+".json")
-        out.write_text(json.dumps(record,ensure_ascii=False,indent=2)+"\\n",encoding="utf-8")
+        out.write_text(json.dumps(record,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
         records.append({"record_id":record["record_id"],"output_file":out.name,"segment_count":record["segment_count"],"conversation_record_sha256":record["conversation_record_sha256"],"permission_scope":record["permission_scope"],"publication_status":record["publication_status"]})
     manifest={"schema_version":"conversation-intake-manifest/1.0","source_locator":locator,"archive_sha256":archive_hash,"captured_at":dt.datetime.now(dt.timezone.utc).isoformat(),"metadata_only":metadata_only,"record_count":len(records),"records":records,"private_review_only":True,"publication_status":"NOT_APPROVED","limits":["Only the provided export file was read; this tool cannot fetch all ChatGPT account conversations.","No transcript text was published, uploaded to Wix, or committed to GitHub by this tool.","Review/redact content before placing approved excerpts in the public repository."]}
     (output_dir/"ingest_manifest.json").write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+"\n",encoding="utf-8")
