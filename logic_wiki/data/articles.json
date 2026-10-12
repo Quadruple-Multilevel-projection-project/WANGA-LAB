@@ -174,7 +174,8 @@
         "fractal-composition",
         "logical-primitive",
         "logical-relation",
-        "source-first-contract"
+        "source-first-contract",
+        "logical-diamond"
       ]
     },
     {
@@ -191,7 +192,8 @@
       "relations": [
         "logical-fractal",
         "logical-primitive",
-        "logical-relation"
+        "logical-relation",
+        "logical-diamond"
       ]
     },
     {
@@ -209,7 +211,8 @@
       "relations": [
         "logical-fractal",
         "fractal-composition",
-        "logical-relation"
+        "logical-relation",
+        "logical-diamond"
       ]
     },
     {
@@ -227,7 +230,8 @@
       "relations": [
         "logical-primitive",
         "fractal-composition",
-        "evidence-provenance"
+        "evidence-provenance",
+        "logical-diamond"
       ]
     },
     {
@@ -245,7 +249,8 @@
       "relations": [
         "formal-language",
         "source-first-contract",
-        "logical-fractal"
+        "logical-fractal",
+        "logical-diamond"
       ]
     },
     {
@@ -262,7 +267,8 @@
       "relations": [
         "logical-fractal",
         "evidence-provenance",
-        "model-readiness"
+        "model-readiness",
+        "logical-diamond"
       ]
     },
     {
@@ -296,7 +302,8 @@
       "relations": [
         "evidence-provenance",
         "logical-primitive",
-        "fractal-composition"
+        "fractal-composition",
+        "logical-diamond"
       ]
     },
     {
@@ -472,6 +479,27 @@
         "model-readiness",
         "fractal-composition"
       ]
+    },
+    {
+      "id": "logical-diamond",
+      "title": "Logical diamond",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "USER_SUPPLIED_HYPOTHESIS_NOT_EMPIRICALLY_VERIFIED",
+      "definition": "A project hypothesis that a logic asset can be treated as a reusable multi-facet structure: source extraction, configuration, composition, drift testing, fit boundaries, use contexts and versioned validation.",
+      "scope_note": "Diamond is a design metaphor/hypothesis here, not an established mathematical object or accepted universal law. Future work must define each facet as an operation or invariant, specify relations between facets, and test whether composition preserves meaning and scope.",
+      "sources": [
+        "SRC-WANGA-LOGIC-DIAMOND-HYPOTHESIS",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relations": [
+        "logical-fractal",
+        "fractal-composition",
+        "logical-particle",
+        "fractal-invariant",
+        "model-readiness",
+        "evidence-provenance"
+      ]
     }
   ],
   "sources": [
@@ -594,6 +622,14 @@
       "type": "PROJECT_CONTRACT",
       "status": "PROJECT_SOURCE",
       "note": "Defines bounded agent roles, inputs, outputs and evidence boundaries."
+    },
+    {
+      "id": "SRC-WANGA-LOGIC-DIAMOND-HYPOTHESIS",
+      "title": "User-supplied logical diamond research hypothesis",
+      "uri": "project-note://wanga/logic-diamond/hypothesis",
+      "type": "USER_PROVIDED_RESEARCH_HYPOTHESIS",
+      "status": "HYPOTHESIS_NOT_SOURCE_VERIFIED",
+      "note": "Research direction supplied by the project owner; no private transcript is included, and the interpretation remains a hypothesis awaiting formalization and tests."
     }
   ]
 }
