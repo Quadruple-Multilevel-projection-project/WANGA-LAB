@@ -8,7 +8,7 @@ _SCHEMA = "wanga-logic-package/1.0"
 _SHA256 = re.compile(r"^[a-f0-9]{64}$")
 _REQUIRED = {
     "schema_version", "package_id", "version", "status", "formal_semantics",
-    "premises", "conclusion", "source_refs", "tests", "known_limits", "semantic_status",
+    "premises", "conclusion", "source_refs", "tests", "known_limits", "semantic_status", "release_approval",
 }
 
 
