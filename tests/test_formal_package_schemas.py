@@ -45,7 +45,7 @@ def valid_package():
 class LogicJsonSchemaTests(unittest.TestCase):
     def test_schemas_are_valid_draft_2020_12(self):
         package_schema = load_schema("logic-package-contract-v1.schema.json")
-        formal_schema = load_schema("typed-formal-fragment-v1.schema.json")
+        formal_schema = load_schema("typed-typed-formal-fragment-v1.schema.json")
         jsonschema.Draft202012Validator.check_schema(package_schema)
         jsonschema.Draft202012Validator.check_schema(formal_schema)
 
@@ -68,7 +68,7 @@ class LogicJsonSchemaTests(unittest.TestCase):
                           "source_refs": ["SRC-001"], "assumption": False}],
             "conclusion": {"op": "gt", "args": [{"var": "x"}, {"const": -1}]}
         }
-        validator = jsonschema.Draft202012Validator(load_schema("formal-fragment-v1.schema.json"))
+        validator = jsonschema.Draft202012Validator(load_schema("typed-formal-fragment-v1.schema.json"))
         validator.validate(spec)
 
     def test_formalization_queue_item_matches_schema(self):
@@ -92,7 +92,7 @@ class LogicJsonSchemaTests(unittest.TestCase):
             "premises": [{"id": "P1", "expr": {"var": "x"}, "source_refs": [], "assumption": False}],
             "conclusion": {"var": "x"}
         }
-        validator = jsonschema.Draft202012Validator(load_schema("formal-fragment-v1.schema.json"))
+        validator = jsonschema.Draft202012Validator(load_schema("typed-formal-fragment-v1.schema.json"))
         self.assertTrue(list(validator.iter_errors(spec)))
 
 
