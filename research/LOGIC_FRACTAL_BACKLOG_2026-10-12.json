@@ -1,0 +1,172 @@
+{
+  "schema_version": "1.0",
+  "updated_date": "2026-10-12",
+  "status": "ACTIVE_RESEARCH_BACKLOG",
+  "source_of_truth": "This backlog describes the current WANGA-LAB Logic Fractal/Logic Wiki workstream; status changes require explicit evidence.",
+  "items": [
+    {
+      "id": "FL-001",
+      "priority": "P0",
+      "title": "Recover complete prior model and conversation source material",
+      "status": "BLOCKED_PARTIAL_ACCESS",
+      "evidence": [
+        "Repository/archive sources located",
+        "Exact full conversation from two days earlier not confirmed"
+      ],
+      "next": "Process explicit conversation exports and retain hashes, locators and source boundaries."
+    },
+    {
+      "id": "FL-002",
+      "priority": "P0",
+      "title": "Typed fragment schema and source-boundary validation",
+      "status": "BUILT_TESTED_SYNTHETIC",
+      "evidence": [
+        "logic_fractal/data/fragment_schema_v1.json",
+        "8 typed fragment composer tests passed in PR #98 CI"
+      ],
+      "next": "Validate extracted real conversation fragments against the schema."
+    },
+    {
+      "id": "FL-003",
+      "priority": "P0",
+      "title": "Deterministic two-scale composer",
+      "status": "BUILT_TESTED_SYNTHETIC",
+      "evidence": [
+        "scripts/build_first_fractal_model.py",
+        "two-scale composition, source lineage, hash determinism and type mismatch tests"
+      ],
+      "next": "Repeat composition on reviewed source-backed fragments; preserve candidate-only status."
+    },
+    {
+      "id": "FL-004",
+      "priority": "P0",
+      "title": "Positive/negative/boundary/adversarial benchmark",
+      "status": "IN_PROGRESS_INSUFFICIENT_BENCHMARK_COVERAGE",
+      "evidence": [
+        "Unit tests cover interfaces, sources and status boundaries",
+        "readiness metrics still report zero benchmark cases and suites"
+      ],
+      "next": "Register a labeled benchmark dataset with expected outcomes, counterexamples and holdout split."
+    },
+    {
+      "id": "FL-005",
+      "priority": "P1",
+      "title": "Integrate continuous MLN field core",
+      "status": "LOCAL_PROTOTYPE_NOT_IN_MAIN",
+      "evidence": [
+        "Local artifact and passing local tests were packaged earlier; no merge to main confirmed"
+      ],
+      "next": "Open a review PR with schemas, test report, normalization assumptions and NTM adapter."
+    },
+    {
+      "id": "FL-006",
+      "priority": "P1",
+      "title": "Integrate NTM state/evidence/ATLAS/MIRROR loop",
+      "status": "PARTIAL_SPECIFICATION_AND_ARCHIVE",
+      "evidence": [
+        "NTM V0.1 archive",
+        "NTM/MLN integration contract",
+        "current logic fractal pipeline tracks source status and counterexamples"
+      ],
+      "next": "Port/merge current prototype only after tests are reproducible in repository CI."
+    },
+    {
+      "id": "FL-007",
+      "priority": "P1",
+      "title": "Logic Wikipedia and backlinks",
+      "status": "BUILT_TESTED_INITIAL_CATALOG",
+      "evidence": [
+        "18 article entries in logic_wiki/data/articles.json",
+        "Wix read-back confirmed main wiki links to eight extended pages"
+      ],
+      "next": "Expand coverage from sources, ensure aliases/backlinks and report unresolved conflicts."
+    },
+    {
+      "id": "FL-008",
+      "priority": "P1",
+      "title": "Scheduled repository compute and report artifacts",
+      "status": "BUILT_WEEKLY_CI",
+      "evidence": [
+        ".github/workflows/logic-fractal-wiki.yml",
+        "PR #98 Logic Fractal Wiki Research check passed"
+      ],
+      "next": "Review artifacts from each scheduled run; never auto-merge unreviewed model changes."
+    },
+    {
+      "id": "FL-009",
+      "priority": "P1",
+      "title": "Wix additive publication and read-back",
+      "status": "PUBLISHED_WITH_READBACK_NOT_FULLY_AUTOSYNCED",
+      "evidence": [
+        "Wix upload returned HTTP 200",
+        "read-back found all eight article pages and their wiki links"
+      ],
+      "next": "Keep direct deployment through authorized Wix integration with version/deployment manifest; CI does not itself publish Wix."
+    },
+    {
+      "id": "FL-010",
+      "priority": "P2",
+      "title": "Compare multiple model proposers",
+      "status": "NOT_STARTED_MODEL_BACKENDS_NOT_CONFIGURED",
+      "evidence": [
+        "Optional provider design exists in prior LNL work, but no provider benchmark run confirmed"
+      ],
+      "next": "Configure providers and cost caps; run identical locked test sets."
+    },
+    {
+      "id": "FL-011",
+      "priority": "P2",
+      "title": "Evaluate self-similarity and multi-scale invariants",
+      "status": "NOT_STARTED",
+      "evidence": [
+        "Two-scale composition exists on synthetic fixtures only",
+        "No random/shuffled baseline or held-out semantic benchmark"
+      ],
+      "next": "Compare interface/graph invariants against shuffled and random baselines."
+    }
+  ],
+  "readiness_gate": {
+    "gate_id": "FIRST_MODEL_ALPHA_V1",
+    "status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "metrics_snapshot": {
+      "additional_source_records": 0,
+      "additional_source_classes": [],
+      "additional_logic_units_with_provenance": 0,
+      "composition_rules_with_contracts": 2,
+      "counterexample_cases": 0,
+      "test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "critical_core_contradictions": 0,
+      "deterministic_build": true,
+      "holdout_split": false,
+      "mirror_review": false,
+      "note": "2 active composition rules are defined with explicit contracts in logic_fractal/data/composition_rules.json. This is a source/specification count, not a benchmark score. Benchmark cases remain 0 until a reviewed ground-truth test suite is registered and executed.",
+      "deterministic_build_evidence": {
+        "status": "TESTED_ON_SYNTHETIC_FIXTURES",
+        "source": "scripts/build_first_fractal_model.py",
+        "test": "logic_fractal/tests/test_fragment_composer.py::test_two_scale_composition_preserves_parent_ids_and_provenance",
+        "note": "The builder constructs a deterministic two-scale candidate and preserves source lineage. This does not satisfy the first-model release gate because source ingestion, benchmark suites, holdout, MIRROR review and independent review remain incomplete."
+      },
+      "last_research_cycle": {
+        "date": "2026-10-12",
+        "pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/98",
+        "merge_commit": "f0ef3c345aeefbff2888312544f1e4bde7cf83d5",
+        "wix_readback_status": "PASS",
+        "conversation_archive_coverage": "PARTIAL_ACCESS_ONLY",
+        "new_conversation_source_records": 0,
+        "typed_fragment_tests": 8,
+        "first_model_status": "CANDIDATE_NOT_RELEASED",
+        "semantic_status": "NOT_YET_VERIFIED"
+      }
+    },
+    "release_decision": "BLOCKED_FIRST_MODEL_ALPHA_NOT_RELEASED",
+    "blockers": [
+      "No reviewed conversation-source fragments ingested in this cycle",
+      "0 benchmark cases / 0 benchmark suites in readiness metrics",
+      "holdout split not ready",
+      "MIRROR review not ready",
+      "0 independent review cycles"
+    ]
+  }
+}
