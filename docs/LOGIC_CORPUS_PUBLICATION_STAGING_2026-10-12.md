@@ -102,3 +102,8 @@ The potential differentiator is a source-linked, testable logic representation a
 ## 2026-10-12 — 12-problem evidence map
 
 Added [TWELVE_PROBLEM_ARCHITECTURE_EVIDENCE_MAP_V1.md](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/TWELVE_PROBLEM_ARCHITECTURE_EVIDENCE_MAP_V1.md) and linked it to the investor explanation. It maps the twelve claimed problem areas to proposed responses, evidence requirements, and current status. It explicitly does not treat the twelve as solved or validated. Wix publication remains pending destination selection and human review.
+
+
+## 2026-10-12 — Logic-as-product and international market bridge
+
+Created [LOGIC_AS_PRODUCT_MARKETS_BRIDGE_V1.md](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/LOGIC_AS_PRODUCT_MARKETS_BRIDGE_V1.md), which connects the exact twelve-problem map to the 5+5 functional loop, task-specific logic packages, international market hypotheses, and bounded geopolitical analysis support. Updated the investor draft with a direct link and the proposed feedback loop: logic research → specification → testable package → customer workflow → measured outcome → revision. These are product and market hypotheses; no claim of complete technical resolution or validated demand is made.
