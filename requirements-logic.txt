@@ -1,0 +1,4 @@
+# Optional typed logic proof stack.
+# Reuse the already-tested, pinned Z3 solver version to avoid two solver versions.
+-r requirements-formal.txt
+jsonschema>=4,<5
