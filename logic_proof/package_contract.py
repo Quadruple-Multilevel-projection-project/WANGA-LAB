@@ -77,6 +77,8 @@ def validate_package_contract(package: Mapping[str, Any]) -> dict[str, Any]:
     semantic_status = package.get("semantic_status")
     approval = package.get("release_approval")
     if status == "VERIFIED" or semantic_status == "VERIFIED_WITHIN_ENCODED_FRAGMENT":
+        if (status == "VERIFIED") != (semantic_status == "VERIFIED_WITHIN_ENCODED_FRAGMENT"):
+            errors.append("VERIFIED lifecycle and semantic statuses must agree")
         if not isinstance(approval, Mapping):
             errors.append("verified status requires an independent release_approval record")
         else:
