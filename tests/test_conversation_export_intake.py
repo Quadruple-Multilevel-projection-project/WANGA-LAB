@@ -42,6 +42,13 @@ class ConversationIntakeTests(unittest.TestCase):
    self.assertEqual(result["record_count"],1);self.assertTrue(result["private_review_only"]);self.assertEqual(result["publication_status"],"NOT_APPROVED")
    record=json.loads((out/(result["records"][0]["record_id"]+".json")).read_text(encoding="utf-8"))
    self.assertIn("source_locator",record);self.assertEqual(record["segment_count"],2)
+ def test_duplicate_conversation_ids_fail_before_writing(self):
+  with tempfile.TemporaryDirectory() as d:
+   root=Path(d); export=root/"conversations.json"
+   export.write_text(json.dumps(fixture()+fixture()),encoding="utf-8")
+   out=root/"private"
+   with self.assertRaises(ValueError):ingest(export,out,repo_root=root/"repo")
+   self.assertFalse(out.exists())
  def test_text_is_preserved_exactly(self):
   r=conversation_to_record(fixture()[0],export_locator="export.json",archive_sha256="a"*64,index=1)
   self.assertEqual(r["segments"][0]["text"],"The logical fractal should preserve sources.")
