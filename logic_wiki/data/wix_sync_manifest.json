@@ -5,17 +5,17 @@
   "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
   "wiki_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
   "source_catalog": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/articles.json",
-  "synced_article_count": 27,
+  "synced_article_count": 18,
   "source_record_count": 16,
   "relation_link_count": 102,
   "homepage_navigation_verified": true,
   "homepage_card_verified": true,
   "existing_model_builder_preserved": true,
   "existing_corpus_atlas_preserved": true,
-  "verification_method": "Wix upload API returned HTTP 200 with upload ID 19dbbff1-5859-4704-921c-9af170cafef1. Public fetch confirmed the new research page title, navigation from homepage and Logic Wiki, and source links to the live GitHub catalog/taxonomy. The extractor returned partial rendered page text; not all topic sections were verified individually.",
-  "automation_boundary": "Connected Wix upload/read-back was used. GitHub Actions does not currently have Wix credentials; the daily WANGA Unified Work Loop must use connected Wix tools and record a read-back result.",
+  "verification_method": "Wix upload API returned HTTP 200. Public fetch confirmed the new research page title, navigation from homepage and Logic Wiki, and links to the GitHub catalog/taxonomy. Extracted public page text was partial, so exact topic-by-topic read-back remains incomplete.",
+  "automation_boundary": "Connected Wix upload/read-back was used. GitHub Actions does not have Wix credentials; scheduled research must use the connected Wix integration and record a read-back result.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
-  "note": "Publication is not semantic verification. The repository catalog has 27 articles/16 source records; the 18 legacy article entries plus the nine new concept entries are linked across the Logic Wiki and the dedicated fractal research page. Exact topic-by-topic archive readback remains partial.",
+  "note": "18 legacy catalog entries remain on the core Logic Wiki. The GitHub research catalog contains 27 entries, including 9 new concepts described on the supplemental fractal-research page. Publication is not semantic verification.",
   "extended_topic_page_count": 10,
   "main_page_card_count": 27,
   "extended_page_resources": [
@@ -103,11 +103,14 @@
       ]
     }
   ],
-  "stable_extended_ids_verified": 9,
+  "stable_extended_ids_verified": 10,
   "all_extended_resources_have_source_or_explicit_local_boundary": true,
   "fractal_research_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki-fractal-research.html",
   "fractal_research_navigation_verified": true,
   "additional_pages": [
     "logic-wiki-fractal-research.html"
-  ]
+  ],
+  "main_page_catalog_article_count": 18,
+  "research_catalog_article_count": 27,
+  "supplemental_research_concept_count": 9
 }
