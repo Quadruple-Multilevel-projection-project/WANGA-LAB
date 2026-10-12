@@ -75,3 +75,12 @@ The product is the packaged logic unit with a task contract, rules, constraints,
 4. Test exact text and structural reconstruction separately.
 5. Implement one bounded logic package and compare it with a baseline.
 6. Test one market-specific workflow before making claims about international demand.
+
+
+## עדכון אתר — מפת ניווט היכרות בקופסאות (2026-10-12)
+
+פורסם דף חדש ב־Forensic Logic Drift: [מפת השימוש הלוגי באתר: מדריך היכרות וקופסאות קישור בין הדפים](https://beywolf5.wixsite.com/forensic-logic-dri/post/מפת-השימוש-הלוגי-באתר-קופסאות-קישור).
+
+הדף כולל הקדמה לקורא שאינו מכיר את הפרויקט וקופסאות־כפתורים לחיצות שמובילות למפת 12 הבעיות, מפרט 5+5, מפת האינטראקציה, מפת ההתכנסויות, מפת המקורות, אשכול ההנדסה, מסמכי המוצר וטקסט המשקיעים.
+
+**הבחנה תפעולית:** הדף החדש הוא נקודת ניווט מרכזית. הוספת קופסאות לכל מאמר קיים בנפרד דורשת גישה לעורך Wix המחובר; כרגע אין פרופיל דפדפן שמסומן כמחובר ל־Wix. אין לתאר את כל המאמרים כמעודכנים עד להשלמת העריכה הפרטנית.
