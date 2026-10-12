@@ -13,7 +13,8 @@
     "source_refs",
     "tests",
     "known_limits",
-    "semantic_status"
+    "semantic_status",
+    "release_approval"
   ],
   "properties": {
     "schema_version": {
@@ -42,7 +43,32 @@
         "logic_fragment",
         "variables",
         "supported_operators"
-      ]
+      ],
+      "properties": {
+        "logic_fragment": {
+          "type": "string",
+          "minLength": 1
+        },
+        "variables": {
+          "type": "object",
+          "additionalProperties": {
+            "enum": [
+              "Bool",
+              "Int",
+              "Real",
+              "String"
+            ]
+          }
+        },
+        "supported_operators": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
     },
     "premises": {
       "type": "array",
@@ -53,16 +79,54 @@
           "expr",
           "source_refs",
           "assumption"
-        ]
+        ],
+        "properties": {
+          "id": {
+            "type": "string",
+            "minLength": 1
+          },
+          "expr": {
+            "$ref": "formal-fragment-v1.schema.json#/$defs/expression"
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "string",
+              "minLength": 1
+            }
+          },
+          "assumption": {
+            "type": "boolean",
+            "default": false
+          }
+        },
+        "anyOf": [
+          {
+            "properties": {
+              "source_refs": {
+                "minItems": 1
+              }
+            }
+          },
+          {
+            "properties": {
+              "assumption": {
+                "const": true
+              }
+            }
+          }
+        ],
+        "additionalProperties": false
       }
     },
     "conclusion": {
-      "type": "object"
+      "$ref": "formal-fragment-v1.schema.json#/$defs/expression"
     },
     "source_refs": {
       "type": "array",
       "items": {
-        "type": "string"
+        "type": "string",
+        "minLength": 1
       }
     },
     "composition_rule": {
@@ -79,6 +143,7 @@
     },
     "known_limits": {
       "type": "array",
+      "minItems": 1,
       "items": {
         "type": "string"
       }
@@ -93,8 +158,82 @@
       "type": [
         "object",
         "null"
-      ]
+      ],
+      "required": [
+        "reviewer_id",
+        "approved_at",
+        "benchmark_report_sha256",
+        "evidence_refs",
+        "independent_review_pass"
+      ],
+      "properties": {
+        "reviewer_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "approved_at": {
+          "type": "string",
+          "minLength": 1
+        },
+        "benchmark_report_sha256": {
+          "type": "string",
+          "pattern": "^[a-f0-9]{64}$"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "independent_review_pass": {
+          "const": true
+        }
+      },
+      "additionalProperties": false
     }
   },
+  "allOf": [
+    {
+      "if": {
+        "anyOf": [
+          {
+            "properties": {
+              "status": {
+                "const": "VERIFIED"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          {
+            "properties": {
+              "semantic_status": {
+                "const": "VERIFIED_WITHIN_ENCODED_FRAGMENT"
+              }
+            },
+            "required": [
+              "semantic_status"
+            ]
+          }
+        ]
+      },
+      "then": {
+        "properties": {
+          "status": {
+            "const": "VERIFIED"
+          },
+          "semantic_status": {
+            "const": "VERIFIED_WITHIN_ENCODED_FRAGMENT"
+          },
+          "release_approval": {
+            "type": "object"
+          }
+        }
+      }
+    }
+  ],
   "additionalProperties": false
 }
