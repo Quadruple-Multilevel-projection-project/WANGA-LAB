@@ -1,0 +1,491 @@
+{
+  "schema_version": "logic-fractal-taxonomy/1.0",
+  "status": "CANDIDATE_MAP_NOT_ENTAILMENT_GRAPH",
+  "catalogue_ref": "logic_wiki/data/articles.json",
+  "level_contract": [
+    {
+      "scale": 0,
+      "name": "Primitives and source units",
+      "description": "Source spans, typed primitives, claim candidates and relation candidates; every item carries provenance."
+    },
+    {
+      "scale": 1,
+      "name": "Logical fragments",
+      "description": "Validated typed interfaces over primitives; source lineage and constraints remain explicit."
+    },
+    {
+      "scale": 2,
+      "name": "Composed fragments",
+      "description": "Multiple child fragments connected by a declared composition contract; structural validation is necessary but not sufficient."
+    },
+    {
+      "scale": 3,
+      "name": "Model candidate",
+      "description": "A versioned composition graph tested against counterexamples, negative cases, holdout data and MIRROR review."
+    }
+  ],
+  "invariants": [
+    "No child/source lineage loss under composition.",
+    "Each edge has an explicit type and a provenance or hypothesis status.",
+    "No automatic VERIFIED status from parsing, schema validation or weight adjustment.",
+    "No weights before source extraction, semantic structure, relation checks and logical closure review.",
+    "Editorial encyclopedia relations are not treated as logical entailment.",
+    "Recursion can increase structure scale but cannot upgrade epistemic status automatically."
+  ],
+  "nodes": [
+    {
+      "id": "logic",
+      "title": "Logic",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "source_ids": [
+        "SRC-SEP-CLASSICAL"
+      ],
+      "relation_ids": [
+        "first-order-logic",
+        "deduction",
+        "semantics"
+      ]
+    },
+    {
+      "id": "first-order-logic",
+      "title": "First-order logic",
+      "category": "Formal systems",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "source_ids": [
+        "SRC-SEP-CLASSICAL",
+        "SRC-OLP-FOL"
+      ],
+      "relation_ids": [
+        "logic",
+        "second-order-logic",
+        "formal-language"
+      ]
+    },
+    {
+      "id": "second-order-logic",
+      "title": "Second-order logic",
+      "category": "Formal systems",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "source_ids": [
+        "SRC-SEP-HIGHER-ORDER"
+      ],
+      "relation_ids": [
+        "first-order-logic",
+        "meta-logic"
+      ]
+    },
+    {
+      "id": "formal-language",
+      "title": "Formal language",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "source_ids": [
+        "SRC-SEP-CLASSICAL",
+        "SRC-OLP-FOL"
+      ],
+      "relation_ids": [
+        "logic",
+        "first-order-logic",
+        "lnl"
+      ]
+    },
+    {
+      "id": "deduction",
+      "title": "Deduction",
+      "category": "Reasoning",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "source_ids": [
+        "SRC-SEP-CLASSICAL"
+      ],
+      "relation_ids": [
+        "logic",
+        "evidence-provenance"
+      ]
+    },
+    {
+      "id": "semantics",
+      "title": "Logical semantics",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "source_ids": [
+        "SRC-SEP-CLASSICAL",
+        "SRC-OLP-FOL"
+      ],
+      "relation_ids": [
+        "formal-language",
+        "first-order-logic",
+        "second-order-logic"
+      ]
+    },
+    {
+      "id": "meta-logic",
+      "title": "Metalogic",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "source_ids": [
+        "SRC-OLP-METALOGIC"
+      ],
+      "relation_ids": [
+        "logic",
+        "second-order-logic",
+        "source-first-contract"
+      ]
+    },
+    {
+      "id": "evidence-provenance",
+      "title": "Evidence and provenance",
+      "category": "Forensic logic",
+      "kind": "WANGA_ENGINEERING_CONCEPT",
+      "status": "IMPLEMENTED_CONCEPT_NOT_UNIVERSALLY_VERIFIED",
+      "source_ids": [
+        "SRC-WANGA-README",
+        "SRC-WANGA-LOGIC-KERNEL"
+      ],
+      "relation_ids": [
+        "deduction",
+        "source-first-contract",
+        "logic-wiki"
+      ]
+    },
+    {
+      "id": "source-first-contract",
+      "title": "Source-first-before-weights contract",
+      "category": "WANGA architecture",
+      "kind": "WANGA_ARCHITECTURE_CONTRACT",
+      "status": "PROJECT_CONTRACT_REQUIRES_REVIEW",
+      "source_ids": [
+        "SRC-WANGA-LOGIC-MINE",
+        "SRC-WANGA-LNL-DOC"
+      ],
+      "relation_ids": [
+        "evidence-provenance",
+        "logical-fractal",
+        "lnl",
+        "mln-field"
+      ]
+    },
+    {
+      "id": "logical-fractal",
+      "title": "Logical fractal",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "HYPOTHESIS_NEEDS_FORMAL_DEFINITION",
+      "source_ids": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relation_ids": [
+        "fractal-composition",
+        "logical-primitive",
+        "logical-relation",
+        "source-first-contract",
+        "logical-diamond"
+      ]
+    },
+    {
+      "id": "fractal-composition",
+      "title": "Fractal composition rule",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "SPECIFICATION_REQUIRED",
+      "source_ids": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relation_ids": [
+        "logical-fractal",
+        "logical-primitive",
+        "logical-relation",
+        "logical-diamond"
+      ]
+    },
+    {
+      "id": "logical-primitive",
+      "title": "Logical primitive",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "SCHEMA_DEFINED_SEMANTICS_PENDING",
+      "source_ids": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN",
+        "SRC-WANGA-LOGIC-MINE"
+      ],
+      "relation_ids": [
+        "logical-fractal",
+        "fractal-composition",
+        "logical-relation",
+        "logical-diamond"
+      ]
+    },
+    {
+      "id": "logical-relation",
+      "title": "Logical relation",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "SCHEMA_DEFINED_SEMANTICS_PENDING",
+      "source_ids": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN",
+        "SRC-SEP-CLASSICAL"
+      ],
+      "relation_ids": [
+        "logical-primitive",
+        "fractal-composition",
+        "evidence-provenance",
+        "logical-diamond"
+      ]
+    },
+    {
+      "id": "lnl",
+      "title": "Logic-Native Language (LNL)",
+      "category": "WANGA implementation",
+      "kind": "WANGA_IMPLEMENTED_PROTOTYPE",
+      "status": "BUILT_NOT_SEMANTICALLY_VERIFIED",
+      "source_ids": [
+        "SRC-WANGA-LNL-DOC",
+        "SRC-WANGA-LNL-CODE"
+      ],
+      "relation_ids": [
+        "formal-language",
+        "source-first-contract",
+        "logical-fractal",
+        "logical-diamond"
+      ]
+    },
+    {
+      "id": "mln-field",
+      "title": "MLN continuous field",
+      "category": "WANGA implementation",
+      "kind": "WANGA_RESEARCH_PROTOTYPE",
+      "status": "LOCAL_PROTOTYPE_NOT_YET_INTEGRATED",
+      "source_ids": [
+        "SRC-WANGA-MLN-ARCHIVE"
+      ],
+      "relation_ids": [
+        "logical-fractal",
+        "evidence-provenance",
+        "model-readiness",
+        "logical-diamond"
+      ]
+    },
+    {
+      "id": "model-readiness",
+      "title": "First model readiness gate",
+      "category": "Model lifecycle",
+      "kind": "WANGA_PROCESS_PROPOSAL",
+      "status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+      "source_ids": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relation_ids": [
+        "logical-fractal",
+        "fractal-composition",
+        "evidence-provenance"
+      ]
+    },
+    {
+      "id": "logic-wiki",
+      "title": "Logic Wiki",
+      "category": "Research infrastructure",
+      "kind": "WANGA_INFRASTRUCTURE",
+      "status": "INITIAL_CATALOG_IN_PROGRESS",
+      "source_ids": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relation_ids": [
+        "evidence-provenance",
+        "logical-primitive",
+        "fractal-composition",
+        "logical-diamond"
+      ]
+    },
+    {
+      "id": "typed-logic-fragment",
+      "title": "Typed logic fragment",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "COMPOSER_IMPLEMENTED_TESTS_PENDING",
+      "source_ids": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN",
+        "SRC-WANGA-LOGIC-MINE"
+      ],
+      "relation_ids": [
+        "logical-primitive",
+        "fractal-composition",
+        "evidence-provenance"
+      ]
+    },
+    {
+      "id": "logical-particle",
+      "title": "Logical particle",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "PROPOSED_TYPED_UNIT_SEMANTICS_PENDING",
+      "source_ids": [
+        "SRC-WANGA-FRACTAL-COMPOSER",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relation_ids": [
+        "logical-primitive",
+        "logical-relation",
+        "logical-fractal",
+        "fractal-invariant",
+        "multi-scale-fractal-map"
+      ]
+    },
+    {
+      "id": "fractal-invariant",
+      "title": "Fractal composition invariant",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "CONTRACT_CANDIDATE_REQUIRES_BENCHMARK",
+      "source_ids": [
+        "SRC-WANGA-FRACTAL-COMPOSER",
+        "SRC-WANGA-READINESS-GATE"
+      ],
+      "relation_ids": [
+        "logical-fractal",
+        "fractal-composition",
+        "typed-logic-fragment",
+        "evidence-provenance"
+      ]
+    },
+    {
+      "id": "recursive-composition",
+      "title": "Recursive logical composition",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "PARTIAL_COMPOSER_IMPLEMENTATION_REVIEW_REQUIRED",
+      "source_ids": [
+        "SRC-WANGA-FRACTAL-COMPOSER",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relation_ids": [
+        "logical-fractal",
+        "fractal-composition",
+        "fractal-invariant",
+        "multi-scale-fractal-map"
+      ]
+    },
+    {
+      "id": "conversation-evidence-unit",
+      "title": "Conversation evidence unit",
+      "category": "Research infrastructure",
+      "kind": "WANGA_INFRASTRUCTURE",
+      "status": "INTAKE_TOOL_BUILT_REAL_EXPORTS_NOT_REGISTERED",
+      "source_ids": [
+        "SRC-WANGA-CONVERSATION-INTAKE",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relation_ids": [
+        "evidence-provenance",
+        "source-first-contract",
+        "autonomous-research-agent",
+        "longitudinal-research-cycle"
+      ]
+    },
+    {
+      "id": "counterexample-case",
+      "title": "Counterexample case",
+      "category": "Reasoning",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "BENCHMARK_DATASET_NOT_YET_REGISTERED",
+      "source_ids": [
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN",
+        "SRC-WANGA-READINESS-GATE"
+      ],
+      "relation_ids": [
+        "deduction",
+        "logical-relation",
+        "fractal-invariant",
+        "model-readiness"
+      ]
+    },
+    {
+      "id": "autonomous-research-agent",
+      "title": "Bounded autonomous research agent",
+      "category": "Research infrastructure",
+      "kind": "WANGA_INFRASTRUCTURE",
+      "status": "ROLE_REGISTRY_AND_DETERMINISTIC_CYCLE_EXIST",
+      "source_ids": [
+        "SRC-WANGA-AGENT-REGISTRY",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relation_ids": [
+        "conversation-evidence-unit",
+        "longitudinal-research-cycle",
+        "logic-wiki",
+        "model-readiness"
+      ]
+    },
+    {
+      "id": "multi-scale-fractal-map",
+      "title": "Multi-scale logical-fractal map",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "MAP_SCHEMA_CANDIDATE_NOT_SEMANTIC_ENTAILMENT",
+      "source_ids": [
+        "SRC-WANGA-FRACTAL-COMPOSER",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relation_ids": [
+        "logical-fractal",
+        "logical-particle",
+        "recursive-composition",
+        "fractal-invariant",
+        "logic-wiki"
+      ]
+    },
+    {
+      "id": "longitudinal-research-cycle",
+      "title": "Longitudinal logic research cycle",
+      "category": "Research infrastructure",
+      "kind": "WANGA_PROCESS_PROPOSAL",
+      "status": "DAILY_AUTOMATION_ENABLED_WITH_ACCESS_BOUNDARIES",
+      "source_ids": [
+        "SRC-WANGA-AGENT-REGISTRY",
+        "SRC-WANGA-READINESS-GATE",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relation_ids": [
+        "conversation-evidence-unit",
+        "autonomous-research-agent",
+        "logic-wiki",
+        "model-readiness",
+        "fractal-composition"
+      ]
+    },
+    {
+      "id": "logical-diamond",
+      "title": "Logical diamond",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "USER_SUPPLIED_HYPOTHESIS_NOT_EMPIRICALLY_VERIFIED",
+      "source_ids": [
+        "SRC-WANGA-LOGIC-DIAMOND-HYPOTHESIS",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+      ],
+      "relation_ids": [
+        "logical-fractal",
+        "fractal-composition",
+        "logical-particle",
+        "fractal-invariant",
+        "model-readiness",
+        "evidence-provenance"
+      ]
+    }
+  ],
+  "relation_policy": "Every edge generated from an article relations field is EDITORIAL_RELATION_CANDIDATE unless an explicit formal rule with cited premises and tests establishes a stronger relation.",
+  "validation": {
+    "article_count": 27,
+    "source_count": 16,
+    "missing_relations": [],
+    "dangling_source_refs": [],
+    "source_ids_unique": true,
+    "article_ids_unique": true
+  }
+}
