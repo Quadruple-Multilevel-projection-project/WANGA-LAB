@@ -137,3 +137,18 @@ The research note proposes a broad stack of 100+ libraries spanning spiking neur
 - MICrONS dataset portal: https://www.microns-explorer.org/
 
 **Decision:** The bounded proof adapter, synthetic tests and first hard-gated evaluation record are now configured in this research branch. The remaining P0 work is source-grounded formalization, real counterexample/holdout cases and an independent review gate. Build the proof/evidence/benchmark/reward contracts first. Keep the swarm local and deterministic. Then pilot one neural/connectome dataset. Do not add all libraries at once.
+
+## Implementation delta after the initial audit snapshot
+
+The current research branch adds the first P0 proof/evidence contracts (pending GitHub CI in this branch):
+
+- `requirements-logic.txt` keeps `z3-solver` and `jsonschema` optional and separate from the default runtime dependencies.
+- `logic_proof/z3_adapter.py` supports a bounded explicit AST for Boolean, integer, real and string variables; checks premise consistency separately; tests entailment through premises plus the negated conclusion; and preserves `UNKNOWN`.
+- Every formal premise must have a source reference or be explicitly marked as an assumption.
+- `logic_proof/evaluation.py` records hard-gated metrics without aggregating away failed gates, updating weights or promoting a package to `VERIFIED`.
+- `logic_proof/package_contract.py` and the JSON Schemas require explicit semantics, sources, tests, known limits, and independent release-approval metadata for any verified lifecycle state.
+- `logic_proof/benchmark.py` supplies seven **synthetic adapter fixtures**, not a source-grounded semantic benchmark.
+- `logic_proof/formalization_queue.py` preserves candidate claims/source IDs and lists missing formal fields. Logic Trader outputs with natural-language definitions are queued as `NOT_FORMALIZED`; Z3 is not run on them and no AST is fabricated.
+- ARK-Swarm runs both the synthetic proof-adapter fixture gate and formalization-queue gate, and writes `logic-formalization-queue-latest.json` beside the candidate/report artifacts.
+
+This makes the boundary explicit: the solver can check an encoding after it exists; it does not translate arbitrary language into faithful logic, validate a source's authenticity, or determine empirical truth.
