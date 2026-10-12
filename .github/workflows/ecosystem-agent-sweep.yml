@@ -1,0 +1,65 @@
+name: WANGA Ecosystem Agent Sweep
+on:
+  workflow_dispatch:
+    inputs:
+      batch_limit:
+        description: Number of public repositories to inspect in this cycle
+        required: false
+        default: "10"
+  schedule:
+    - cron: "37 5 * * *"
+  pull_request:
+    paths:
+      - "scripts/scan_github_ecosystem.py"
+      - "tests/test_ecosystem_agent_sweep.py"
+      - "research/ecosystem/**"
+      - ".github/workflows/ecosystem-agent-sweep.yml"
+permissions:
+  contents: read
+concurrency:
+  group: wanga-ecosystem-sweep-${{ github.ref }}
+  cancel-in-progress: false
+jobs:
+  public-repository-scout:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      CROSS_REPO_READ_TOKEN: ${{ (github.event_name == 'schedule' || github.event_name == 'workflow_dispatch') && secrets.CROSS_REPO_READ_TOKEN || '' }}
+      SCAN_BATCH_LIMIT: ${{ github.event.inputs.batch_limit || '10' }}
+      GITHUB_RUN_NUMBER: ${{ github.run_number }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile scanner
+        run: python -m compileall -q scripts/scan_github_ecosystem.py
+      - name: Test privacy, scope, and batch rotation
+        run: python -m unittest discover -s tests -p 'test_ecosystem_agent_sweep.py' -v
+      - name: Scan bounded public repository batch
+        run: |
+          python scripts/scan_github_ecosystem.py \
+            --limit "$SCAN_BATCH_LIMIT" \
+            --run-number "$GITHUB_RUN_NUMBER" \
+            --current-repo "$GITHUB_REPOSITORY" \
+            --out-dir "$RUNNER_TEMP/ecosystem-scan"
+      - name: Add privacy-safe summary
+        if: always()
+        run: |
+          if [ -f "$RUNNER_TEMP/ecosystem-scan/ecosystem-scan-report.md" ]; then
+            cat "$RUNNER_TEMP/ecosystem-scan/ecosystem-scan-report.md" >> "$GITHUB_STEP_SUMMARY"
+          else
+            echo "Ecosystem scan did not produce a report. Check the step logs; no private repository content was published." >> "$GITHUB_STEP_SUMMARY"
+          fi
+      - name: Upload ecosystem scan report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: wanga-ecosystem-sweep-${{ github.run_number }}
+          path: |
+            ${{ runner.temp }}/ecosystem-scan/ecosystem-scan-report.json
+            ${{ runner.temp }}/ecosystem-scan/ecosystem-scan-report.md
+          if-no-files-found: warn
+          retention-days: 30

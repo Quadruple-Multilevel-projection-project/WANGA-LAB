@@ -1,0 +1,40 @@
+{
+  "schema_version": "wanga-ecosystem-scan-policy/1.0",
+  "generated_at": "2026-10-12",
+  "discovery_scope": [
+    "owner",
+    "collaborator",
+    "organization_member"
+  ],
+  "batch_limit_default": 10,
+  "scheduling": "daily GitHub Actions scan for public repositories; daily connected WANGA work loop for connector-visible projects and Library sources",
+  "private_content_policy": {
+    "public_reports": "Never include private or unknown-visibility repository names, paths, excerpts, or source contents.",
+    "private_content_collection": "Only through an authorized connected runtime; preserve source locator/hash and store review output only in an approved private destination.",
+    "raw_conversation_export": "PRIVATE_REVIEW_ONLY until manually reviewed/redacted; never auto-publish transcripts to Wix."
+  },
+  "git_policy": {
+    "target": "branch then PR",
+    "main_direct_writes": false,
+    "auto_merge": false,
+    "other_repository_writes": "Only when change belongs to that repository and a branch/PR can be opened; otherwise record an integration proposal in WANGA-LAB."
+  },
+  "epistemic_statuses": [
+    "SOURCE_LOCATED",
+    "DIRECT_TEXTUAL_EVIDENCE",
+    "STRUCTURAL_CANDIDATE",
+    "INTERPRETATION",
+    "HYPOTHESIS",
+    "IMPLEMENTED",
+    "TESTED",
+    "VERIFIED",
+    "ACCESS_GAP",
+    "BLOCKED"
+  ],
+  "access_notes": [
+    "A connected GitHub repository list is an access snapshot, not proof of ownership or public visibility.",
+    "GitHub Actions GITHUB_TOKEN is not assumed to have account-wide access.",
+    "CROSS_REPO_READ_TOKEN is optional and must be provided as a secret with approved minimum read scope.",
+    "Private or unknown visibility content is excluded from public artifacts."
+  ]
+}

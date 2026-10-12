@@ -248,3 +248,16 @@ The initial catalog is a seed. FIRST_MODEL_ALPHA is not ready until the configur
 - [Private conversation export intake](docs/CONVERSATION_EXPORT_INTAKE_V1.md) — safely parses a user-provided ChatGPT export into review-only records with IDs, source locators and hashes. It does not fetch unexported chats or publish raw transcripts.
 - [Initial Logic Fractal readiness report](research/reports/logic-fractal/2026-10-12-readiness-snapshot.md) — source counts, composition coverage and explicit first-model gate deficits.
 - [Wix sync manifest](logic_wiki/data/wix_sync_manifest.json) — read-back evidence for the public Logic Wiki page and the remaining automation boundary.
+
+## Cross-project ecosystem agent sweep
+
+The repository now has a bounded, privacy-aware ecosystem scan branch in review. The scan is designed to inventory repositories visible to the connected GitHub identity, sample a rotating batch of public README/documentation paths, preserve source metadata, and avoid exposing private/unknown-visibility projects in public artifacts.
+
+- [Agent sweep plan and initial evidence report](research/ecosystem/ECOSYSTEM_AGENT_SWEEP_V1.md)
+- [Agent role registry](research/ecosystem/agent_registry.json)
+- [Initial cross-project report](research/ecosystem/initial-scan-2026-10-12.md)
+- [Privacy and access policy](research/ecosystem/scan_policy.json)
+- [Repository scan implementation](scripts/scan_github_ecosystem.py)
+- [Daily GitHub Actions workflow](.github/workflows/ecosystem-agent-sweep.yml)
+
+This workflow requires the optional `CROSS_REPO_READ_TOKEN` secret for account-wide repository discovery. Without it, GitHub Actions limits its scan to the current repository and reports the blocker. The connected daily WANGA work loop separately covers connector-visible repositories and accessible Library material. It does not provide automatic access to private ChatGPT conversations without supplied export files.
