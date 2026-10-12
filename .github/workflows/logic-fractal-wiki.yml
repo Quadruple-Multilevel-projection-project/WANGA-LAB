@@ -44,6 +44,7 @@ on:
       - 'research/ARK_SWARM_FULL_STACK_GAP_ANALYSIS_V1.md'
       - 'research/ecosystem/library_integration_matrix.json'
       - 'scripts/validate_ark_swarm_library_matrix.py'
+      - 'research/FORMAL_LOGIC_PACKAGE_CONTRACT_V1.md'
       - '.github/workflows/logic-fractal-wiki.yml'
   pull_request:
     paths:
@@ -85,6 +86,7 @@ on:
       - 'research/ARK_SWARM_FULL_STACK_GAP_ANALYSIS_V1.md'
       - 'research/ecosystem/library_integration_matrix.json'
       - 'scripts/validate_ark_swarm_library_matrix.py'
+      - 'research/FORMAL_LOGIC_PACKAGE_CONTRACT_V1.md'
       - '.github/workflows/logic-fractal-wiki.yml'
 permissions:
   contents: write
