@@ -33,7 +33,7 @@ A solver result is relative to the formulas supplied. This adapter does not tran
 
 ## Candidate evaluation
 
-The evaluation vector contains premise consistency, formal-check result, source coverage, benchmark accuracy, counterexample rate, holdout score, replay stability, and compute time. Each hard gate must pass. The weighted descriptive index is for reporting only; it cannot compensate for a failed hard gate. Initial thresholds are explicitly labeled `INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED`. The evaluator never updates weights or changes a claim status.
+The evaluation vector contains premise consistency, formal-check result, source coverage, benchmark accuracy, counterexample rate, holdout score, replay stability, and compute time. Each hard gate must pass. The weighted descriptive index is for reporting only; it cannot compensate for a failed hard gate. Thresholds load from `formal_reasoning/config/evaluation_policy.json` and are explicitly labeled `INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED`. The evaluator never updates weights or changes a claim status.
 
 ## ARK-Swarm integration
 
