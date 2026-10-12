@@ -70,6 +70,11 @@ class LogicTraderTests(unittest.TestCase):
         self.assertEqual(model["release_gate"]["decision"], "BLOCKED_INTERNAL_CANDIDATE_ONLY")
         self.assertFalse(model["release_gate"]["automatically_released"])
         self.assertEqual(model["semantic_status"], "NOT_YET_VERIFIED")
+        self.assertEqual(model["formalization_queue_item"]["solver_execution_status"], "NOT_RUN_NO_FORMAL_AST")
+        self.assertEqual(model["formalization_queue_item"]["semantic_status"], "NOT_YET_VERIFIED")
+        self.assertEqual(report["typed_formal_benchmark_suite"]["case_count"], 7)
+        self.assertEqual(report["typed_formal_benchmark_suite"]["passed_cases"], 7)
+        self.assertEqual(report["typed_formal_benchmark_suite"]["semantic_status"], "NOT_YET_VERIFIED")
         self.assertEqual(report["event_set"]["merge_semantics"], "GROW_ONLY_SET_UNION")
         self.assertEqual(report["capability_boundaries"]["peer_to_peer_transport"], "NOT_IMPLEMENTED")
 
@@ -82,6 +87,8 @@ class LogicTraderTests(unittest.TestCase):
         self.assertTrue(agents["mirror-counter-reader"]["passed"])
         self.assertIn("formal-propositional-benchmark", agents)
         self.assertTrue(agents["formal-propositional-benchmark"]["passed"], agents["formal-propositional-benchmark"])
+        self.assertTrue(agents["formal-typed-fragment-benchmark"]["passed"], agents["formal-typed-fragment-benchmark"])
+        self.assertTrue(agents["formalization-queue-gate"]["passed"], agents["formalization-queue-gate"])
 
     def test_event_set_merge_is_commutative_and_idempotent(self):
         a = make_event(cycle_id="C1", agent_id="logic-trader", event_type="RANKED", payload={"candidate_count": 8})
