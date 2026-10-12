@@ -67,3 +67,10 @@ The model builder loads the corpus through the existing `logic_engine_v1` integr
 4. Compare LNL candidate output from multiple configured models against the same deterministic compiler and benchmark.
 5. Only after that, prototype learnable weights (for example, compare LNN/PyNeuraLogic as independent backends).
 6. Add any external publishing executor as a separate approved action layer; model generation must not publish its own unreviewed results.
+
+## Publication and CI state
+
+- Live Wix documentation: [Logic-native language and model builder](https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-native-model-builder.html).
+- Implementation: [PR #96](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/96), merged in commit `cbe964a245cbc5e0622a92ac2d79da7c3b750126`.
+- The review checks passed: Logic-Native Model Builder V1, Repository Integrity and CodeQL Advanced.
+- The LLM provider is a pluggable adapter only. No real model was called during CI, and no model endpoint or credential is configured in the repository.
