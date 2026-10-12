@@ -4,6 +4,11 @@ on:
   workflow_dispatch:
   schedule:
     - cron: "11 3 * * *"
+  pull_request:
+    paths:
+      - "scripts/vitruvius_forensic_research.py"
+      - "tests/test_vitruvius_forensic_research.py"
+      - ".github/workflows/daily-autonomous-operations.yml"
 
 permissions:
   contents: read
@@ -21,7 +26,9 @@ jobs:
       - name: Operations tests
         run: |
           python -m pip install --upgrade pip pytest
-          PYTHONPATH=. python -m pytest -q tests/test_daily_operations_report.py tests/test_insurer_intake.py tests/test_insurer_case_queue.py tests/test_insurer_pipeline.py tests/test_insurer_oversight.py tests/test_insurer_intake_cli.py
+          PYTHONPATH=. python -m pytest -q tests/test_daily_operations_report.py tests/test_insurer_intake.py tests/test_insurer_case_queue.py tests/test_insurer_pipeline.py tests/test_insurer_oversight.py tests/test_insurer_intake_cli.py tests/test_vitruvius_forensic_research.py
+      - name: Vitruvius queue dry-run
+        run: python scripts/vitruvius_forensic_research.py
       - name: Generate daily report
         run: python scripts/daily_operations_report.py > daily-operations-report.json
       - name: Upload daily operations report

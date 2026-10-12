@@ -29,6 +29,11 @@ jobs:
       - name: Validate Python syntax
         run: python -m compileall -q .
 
+      - name: Vitruvius queue regression tests
+        run: |
+          python -m pip install --disable-pip-version-check pytest
+          python -m pytest -q tests/test_vitruvius_forensic_research.py
+
       - name: Validate JSON documents
         run: |
           python - <<'PY'
