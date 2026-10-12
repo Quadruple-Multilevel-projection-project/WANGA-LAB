@@ -88,3 +88,12 @@
 הקובץ **אינו** מוכיח כשלעצמו את מנוע המשקולות בעל ארבע השכבות, את מנוע 231 השערים, את המרחב הפרקטלי התלת־ממדי, את המסלול המתמטי ההפיך או את המדדים המספריים שבטיוטת הארכיטקטורה. אלה נשארים משימות מפרט ובדיקה נפרדות.
 
 **מצב:** SOURCE REVIEW COMPLETED FOR THIS FILE; mathematical architecture and performance claims remain NOT_YET_VERIFIED.
+
+## Follow-up: five-forward / five-return architecture
+
+The later architecture proposal defines five forward-processing layers and five return stages. This is an engineering proposal that follows from, but is not proved by, this source-extraction PDF. The source document demonstrates text-level sentence extraction and relationship preservation; it does not define the full ten-stage runtime or the four logical-mathematical weight layers.
+
+Canonical architecture review: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/FIVE_FORWARD_FIVE_RETURN_LOGIC_ARCHITECTURE_REVIEW_V1.md
+Investor draft: https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/INVESTOR_LOGIC_EXPLANATION_UPDATE_DRAFT_HE.md
+
+**Evidence boundary remains:** source extraction is documented in the working PDF; the complete architecture, reversible math representation, weight formulas, and performance results remain NOT_YET_VERIFIED.
