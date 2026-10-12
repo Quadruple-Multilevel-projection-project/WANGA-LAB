@@ -1,0 +1,31 @@
+{
+  "schema_version": "ark-swarm-config/1.0",
+  "name": "ARK-Swarm Mesh + Logic Trader",
+  "version": "0.1",
+  "execution_mode": "BOUNDED_LOCAL_COORDINATOR",
+  "external_llm_backend": "NOT_CONFIGURED",
+  "logic_source": "logic_wiki/data/articles.json",
+  "composition_contracts": "logic_fractal/data/composition_rules.json",
+  "typed_fragment_fixture": "logic_fractal/data/typed_fragments_fixture.json",
+  "max_depth": 3,
+  "max_candidates": 2000,
+  "top_assets": 10,
+  "top_compositions": 10,
+  "required_gates": [
+    "catalog_integrity",
+    "source_provenance",
+    "typed_interface_composition",
+    "mirror_counterreading",
+    "existing_logic_agent_suite"
+  ],
+  "output_status": "INTERNAL_CANDIDATE_NOT_RELEASED",
+  "capability_boundaries": {
+    "peer_to_peer_transport": "NOT_IMPLEMENTED",
+    "network_crdt_sync": "NOT_IMPLEMENTED",
+    "local_grow_only_event_set": "IMPLEMENTED",
+    "collective_validation_credit": "TEST_METRIC_ONLY_NO_WEIGHT_UPDATES",
+    "biological_connectome_execution": "NOT_IMPLEMENTED_ROLE_ABSTRACTIONS_ONLY",
+    "self_modifying_code": "NOT_IMPLEMENTED",
+    "external_model_calls": "DISABLED_UNLESS_EXPLICIT_BACKEND_ADDED"
+  }
+}
