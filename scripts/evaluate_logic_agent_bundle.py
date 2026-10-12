@@ -83,7 +83,7 @@ def _evidence_agent() -> dict[str, Any]:
         }]
     }
     result = run_bundle(bundle)
-    reports = {item["claim_id"]: item for item in result.get("input_reports", [])}
+    reports = {item["claim_id"]: item for item in result.get("input_claims", [])}
     derived = result.get("derived_claims", [])
     checks = {
         "valid_fixture_eligible": reports.get("C-ELIGIBLE", {}).get("engine_status") == "INPUT_ELIGIBLE_WITH_REFERENCED_EVIDENCE",
@@ -93,7 +93,7 @@ def _evidence_agent() -> dict[str, Any]:
     }
     return {"passed": result.get("status") == "COMPLETED" and all(checks.values()), "checks": checks,
             "result_status": result.get("status"), "input_reports": reports,
-            "derived_claim_count": len(derived), "unsupported_input_count": result.get("summary", {}).get("unsupported_claims")}
+            "derived_claim_count": len(derived), "unsupported_input_count": result.get("summary", {}).get("unsupported_or_ineligible_claims")}
 
 
 def _lnl_builder_agent() -> dict[str, Any]:
