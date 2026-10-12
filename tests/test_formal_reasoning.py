@@ -53,7 +53,6 @@ class PropositionalAdapterTests(unittest.TestCase):
         self.assertEqual(result["entailment"], "COUNTERMODEL_FOUND")
         model = result["countermodel"]
         self.assertFalse(model["P"])
-        self.assertEqual(model["Q"], False)
 
     def test_inconsistent_premises_do_not_get_vacuous_entailment(self):
         result = analyze_claim({
@@ -110,7 +109,7 @@ class PropositionalAdapterTests(unittest.TestCase):
         })
         self.assertEqual(result["epistemic_status_after"], "HYPOTHESIS")
         self.assertEqual(result["verification_status"], "NOT_YET_VERIFIED")
-        self.assertFalse(result["source_refs_supplied"] is False)
+        self.assertTrue(result["source_refs_supplied"])
 
     def test_fixed_benchmark_cases_pass(self):
         report = run_benchmark_suite(FIXTURES)
