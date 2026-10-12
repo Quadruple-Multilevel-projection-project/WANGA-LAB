@@ -40,6 +40,12 @@ A candidate is not upgraded to `VERIFIED` because it was selected, composed or t
 
 Roles are deterministic software tasks in one local coordinator. The implementation does not claim separate neural agents or biological connectome execution. The event-set merge implements a local G-Set union function, but there is no P2P transport, network CRDT replication, authentication, shared dopamine/reward learning, dynamic code modification or autonomous production deployment. The validation-credit score summarizes tests; it does not update model weights.
 
+## Bounded Z3 formal adapter
+
+The bounded proposition parser/solver adapter is documented separately in [Formal Reasoning Adapter V1](FORMAL_REASONING_ADAPTER_V1.md). The integrated coordinator now includes a dedicated `formal-propositional-benchmark` role, which runs fixed propositional fixtures. Passing this role validates the adapter against these fixtures only; it does not translate natural language or verify the semantic correctness of the Logic Trader’s real-catalog package.
+
+The workflow installs the pinned optional dependency from `requirements-formal.txt`, runs the formal adapter tests and writes `research/reports/formal-reasoning/benchmark-latest.json`.
+
 ## Running
 
 ```bash
