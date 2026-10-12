@@ -17,6 +17,7 @@ from ark_swarm.swarm_state import make_event, merge_event_sets, validation_credi
 from logic_fractal.fragment_composer import compose_pair, validate_fragment
 from logic_fractal.composer import load_contracts
 from logic_proof.benchmark import run_formal_fixture_benchmark
+from logic_proof.formalization_queue import queue_candidate_for_formalization
 
 
 DEFAULT_TASK = (
@@ -137,6 +138,7 @@ def build_cycle(
     }, {"catalog_audit": audit}))
 
     logic_package = trader_output["logic_package"]
+    formalization_queue_item = queue_candidate_for_formalization(logic_package)
     roles.append(_role("logic-trader", {
         "candidate_package_created": trader_output["status"] == "CANDIDATE_PACKAGE_ASSEMBLED",
         "package_has_members": bool(logic_package.get("member_articles")),
@@ -149,6 +151,26 @@ def build_cycle(
         "member_ids": [item["id"] for item in logic_package["member_articles"]],
         "source_ids": [item["id"] for item in logic_package["sources"]],
         "candidate_composition_id": (logic_package.get("composition_candidate") or {}).get("candidate_id"),
+    }))
+
+    queue_source_ids = {
+        source_id
+        for claim in formalization_queue_item["candidate_claims"]
+        for source_id in claim["source_refs"]
+    }
+    roles.append(_role("formalization-queue-gate", {
+        "candidate_is_queued": formalization_queue_item["status"] in {"READY_FOR_FORMALIZATION", "BLOCKED_SOURCE_REVIEW"},
+        "solver_not_run_without_formal_ast": formalization_queue_item["solver_execution_status"] == "NOT_RUN_NO_FORMAL_AST",
+        "no_automatic_semantic_conversion": formalization_queue_item["automatic_semantic_conversion"] is False,
+        "source_refs_resolve": formalization_queue_item["status"] == "READY_FOR_FORMALIZATION" and not formalization_queue_item["unresolved_sources"],
+        "no_status_promotion": formalization_queue_item["semantic_status"] == "NOT_YET_VERIFIED",
+    }, {
+        "queue_item_id": formalization_queue_item["queue_item_id"],
+        "status": formalization_queue_item["status"],
+        "missing_fields": formalization_queue_item["missing_formal_fields"],
+        "claim_count": len(formalization_queue_item["candidate_claims"]),
+        "source_count": len(queue_source_ids),
+        "solver_execution_status": formalization_queue_item["solver_execution_status"],
     }))
 
     provenance_errors = []
@@ -263,6 +285,7 @@ def build_cycle(
         "task_sha256": canonical_hash(task.strip()),
         "package_hash": trader_output["package_hash"],
         "logic_package": logic_package,
+        "formalization_queue_item": formalization_queue_item,
         "composition_graph_summary": trader_output["composition_graph"],
         "typed_fixture_probe": typed_probe,
         "provenance_gate": next(role for role in roles if role["agent_id"] == "source-provenance-gate"),
@@ -271,6 +294,7 @@ def build_cycle(
         "release_gate": {
             "automatically_released": False,
             "requires_real_source_review": True,
+            "requires_formalization_queue_completion": True,
             "requires_semantic_benchmarks": True,
             "requires_counterexamples": True,
             "requires_independent_review": True,
@@ -301,6 +325,7 @@ def build_cycle(
             "error": formal_benchmark_error,
             "semantic_status": "NOT_YET_VERIFIED",
         },
+        "formalization_queue_item": formalization_queue_item,
         "mirror_review": mirror,
         "existing_six_agent_suite": ({
             "status": existing_suite.get("overall_status"),
@@ -342,6 +367,7 @@ def write_cycle(result: Mapping[str, Any], out_dir: Path) -> dict[str, str]:
     candidate = result["model_candidate"]
     report_path = out_dir / "logic-trader-swarm-latest.json"
     candidate_path = out_dir / "logic-brain-candidate-latest.json"
+    queue_path = out_dir / "logic-formalization-queue-latest.json"
     markdown_path = out_dir / "logic-trader-swarm-latest.md"
     report_path.write_text(json.dumps(report, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     candidate_path.write_text(json.dumps(candidate, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
@@ -354,6 +380,8 @@ def write_cycle(result: Mapping[str, Any], out_dir: Path) -> dict[str, str]:
         f"- Selected logic package: `{candidate['candidate_id']}`",
         f"- Candidate hash: `{candidate['package_hash']}`",
         f"- Semantic status: **{candidate['semantic_status']}**",
+        f"- Formalization queue: `{candidate['formalization_queue_item']['queue_item_id']}` ({candidate['formalization_queue_item']['status']})",
+        f"- Formal AST: **{candidate['formalization_queue_item']['solver_execution_status']}**",
         "",
         "## Agent results",
     ]
@@ -370,6 +398,7 @@ def write_cycle(result: Mapping[str, Any], out_dir: Path) -> dict[str, str]:
     return {
         "report": str(report_path.relative_to(ROOT)),
         "candidate": str(candidate_path.relative_to(ROOT)),
+        "formalization_queue": str(queue_path.relative_to(ROOT)),
         "markdown": str(markdown_path.relative_to(ROOT)),
     }
 
