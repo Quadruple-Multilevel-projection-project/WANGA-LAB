@@ -7,7 +7,7 @@
 ## Coverage counts
 
 - Repository inventory returned **59 unique repository identifiers** across three access-list categories: owner (34 records), collaborator (13) and organization-member (25), before de-duplication. The lists overlap. This is an access snapshot, not a statement of ownership or visibility.
-- README retrieval was attempted across multiple bounded batches. **33 distinct repository identifiers produced a usable README response after excluding known repeated/ambiguous content responses.**
+- README retrieval was attempted across multiple bounded batches. **35 distinct repository identifiers produced a usable README response after excluding known repeated/ambiguous content responses.**
 - Additional repository identifiers returned 404, empty-repository responses, non-standard/unusable default refs, or repeated content that could not be trusted as specific to the requested identifier.
 - The repository contents in these passes were not exhaustively cloned or scanned. The confirmed result is README-level material and a bounded set of relevant path lookups, not a full code-level audit.
 
