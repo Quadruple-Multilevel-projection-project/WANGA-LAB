@@ -61,3 +61,13 @@ python scripts/run_ark_swarm.py --task "Build source-grounded evidence gate logi
 ```
 
 The generated outputs are internal candidate artifacts and research reports. The scheduled workflow opens a PR for generated changes; it does not auto-merge or publish a candidate model to Wix.
+
+## Typed Logic Package and Formalization Queue
+
+The coordinator now also queues the Logic Trader result through `logic_proof.formalization_queue`. It does not translate the selected articles' definitions into formal premises automatically. Every candidate claim retains its article IDs and source references; missing or unresolved sources are marked for review. The queue explicitly reports `NOT_RUN_NO_FORMAL_AST` until a formal AST is supplied.
+
+Two different suites are reported:
+- `formal-propositional-benchmark`: five synthetic cases for the propositional text frontend.
+- `formal-proof-fixture-gate`: seven synthetic cases for the canonical typed AST/Z3 adapter.
+
+Both test software behavior. Neither makes the real Logic Trader candidate semantically verified. The model artifact now carries the formalization queue item and the release gate explicitly requires its completion, real-source review, source-grounded counterexamples, holdout evaluation and independent approval.
