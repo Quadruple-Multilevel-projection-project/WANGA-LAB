@@ -118,5 +118,30 @@ class BoundedZ3AdapterTests(unittest.TestCase):
         self.assertIn("benchmark_accuracy_threshold_met", result["failed_gates"])
 
 
+    def test_all_shared_hard_gates_required(self):
+        result = evaluate_candidate(
+            formal_check={"premise_consistency": "SAT", "entailment_status": "ENTAILED_WITHIN_ENCODED_FRAGMENT"},
+            benchmark_metrics={"accuracy": 0.99, "false_accept_rate": 0.0, "counterexample_escape_rate": 0.0},
+            evidence_coverage=1.0,
+            replay_hash_match=True,
+            holdout_score=0.95,
+            compute_seconds=2.0,
+        )
+        self.assertEqual(result["decision"], "ELIGIBLE_FOR_INDEPENDENT_REVIEW")
+        self.assertEqual(result["verification_status"], "NOT_YET_VERIFIED")
+        self.assertEqual(result["threshold_status"], "INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED")
+
+    def test_missing_holdout_or_compute_blocks_candidate_review(self):
+        result = evaluate_candidate(
+            formal_check={"premise_consistency": "SAT", "entailment_status": "ENTAILED_WITHIN_ENCODED_FRAGMENT"},
+            benchmark_metrics={"accuracy": 0.99, "false_accept_rate": 0.0, "counterexample_escape_rate": 0.0},
+            evidence_coverage=1.0,
+            replay_hash_match=True,
+        )
+        self.assertEqual(result["decision"], "HOLD_FOR_EVIDENCE_OR_REVIEW")
+        self.assertFalse(result["hard_gates"]["holdout_score_threshold_met"])
+        self.assertFalse(result["hard_gates"]["compute_budget_within_limit"])
+
+
 if __name__ == "__main__":
     unittest.main()
