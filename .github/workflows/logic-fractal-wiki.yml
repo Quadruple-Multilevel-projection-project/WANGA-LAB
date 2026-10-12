@@ -1,3 +1,4 @@
+            research/reports/formal-reasoning/**
 name: Logic Fractal Wiki Research
 on:
   workflow_dispatch:
