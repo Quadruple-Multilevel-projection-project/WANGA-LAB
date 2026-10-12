@@ -74,3 +74,11 @@ A published hyperlink is recorded as a link, not automatically as a logical depe
 - [Architecture record](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/LOGIC_NATIVE_LANGUAGE_MODEL_BUILDER_V1.md).
 - [Merged PR #96](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/96); CI checks passed for model-builder tests, repository integrity and CodeQL.
 - Status boundary: BUILT as an experimental prototype; not a new foundation model; LLM calls require explicit endpoint configuration; semantic validity and full natural-language formalization remain NOT_YET_VERIFIED.
+
+## WANGA-X executable Blueprint engine
+
+- [Implementation record](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/WANGA_X_EXECUTABLE_BLUEPRINT_ENGINE_V1.md).
+- [Blueprint generator](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/tree/main/wanga_x_v1).
+- [Merged PR #97](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/97); merge commit `638d97a3e201c60a48fbf51ab30ba013837886c2`.
+- CI passed for WANGA-X Blueprint tests, Repository Integrity and CodeQL Advanced.
+- Capability boundary: executable requirement-to-computation mapping and Blueprint generation are built; neural weights, runtime materialization and live endpoint creation are not.
