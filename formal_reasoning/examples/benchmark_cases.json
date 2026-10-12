@@ -1,0 +1,106 @@
+{
+  "schema_version": "wanga-formal-benchmark/1.0",
+  "description": "Small deterministic propositional fixtures only. The gate tests the encoded formulas, not natural-language truth.",
+  "cases": [
+    {
+      "case_id": "MP-001",
+      "expected_status": "ENTAILED_WITHIN_ENCODING",
+      "claim": {
+        "schema_version": "wanga-formal-claim/1.0",
+        "claim_id": "MP-001",
+        "variables": [
+          "P",
+          "Q"
+        ],
+        "premises": [
+          "P -> Q",
+          "P"
+        ],
+        "conclusion": "Q",
+        "source_refs": [
+          "fixture://formal/mp-001"
+        ],
+        "epistemic_status": "TEST_FIXTURE"
+      }
+    },
+    {
+      "case_id": "NENT-001",
+      "expected_status": "NOT_ENTAILED_BY_ENCODING",
+      "claim": {
+        "schema_version": "wanga-formal-claim/1.0",
+        "claim_id": "NENT-001",
+        "variables": [
+          "P",
+          "Q"
+        ],
+        "premises": [
+          "P -> Q"
+        ],
+        "conclusion": "P",
+        "source_refs": [
+          "fixture://formal/nent-001"
+        ],
+        "epistemic_status": "TEST_FIXTURE"
+      }
+    },
+    {
+      "case_id": "INC-001",
+      "expected_status": "INCONSISTENT_PREMISES",
+      "claim": {
+        "schema_version": "wanga-formal-claim/1.0",
+        "claim_id": "INC-001",
+        "variables": [
+          "P"
+        ],
+        "premises": [
+          "P",
+          "not P"
+        ],
+        "conclusion": "P",
+        "source_refs": [
+          "fixture://formal/inc-001"
+        ],
+        "epistemic_status": "TEST_FIXTURE"
+      }
+    },
+    {
+      "case_id": "TAUT-001",
+      "expected_status": "ENTAILED_WITHIN_ENCODING",
+      "claim": {
+        "schema_version": "wanga-formal-claim/1.0",
+        "claim_id": "TAUT-001",
+        "variables": [
+          "P"
+        ],
+        "premises": [],
+        "conclusion": "P or not P",
+        "source_refs": [
+          "fixture://formal/taut-001"
+        ],
+        "epistemic_status": "TEST_FIXTURE"
+      }
+    },
+    {
+      "case_id": "BOUND-001",
+      "expected_status": "NOT_ENTAILED_BY_ENCODING",
+      "claim": {
+        "schema_version": "wanga-formal-claim/1.0",
+        "claim_id": "BOUND-001",
+        "variables": [
+          "P",
+          "Q",
+          "R"
+        ],
+        "premises": [
+          "P -> Q",
+          "Q -> R"
+        ],
+        "conclusion": "R -> P",
+        "source_refs": [
+          "fixture://formal/bound-001"
+        ],
+        "epistemic_status": "TEST_FIXTURE"
+      }
+    }
+  ]
+}
