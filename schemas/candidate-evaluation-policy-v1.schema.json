@@ -8,10 +8,7 @@
     "status",
     "thresholds",
     "hard_gates",
-    "rules",
-    "min_evidence_coverage",
-    "max_false_accept_rate",
-    "max_counterexample_escape_rate"
+    "rules"
   ],
   "properties": {
     "schema_version": {
@@ -82,12 +79,79 @@
       "type": "array",
       "uniqueItems": true,
       "minItems": 11,
+      "maxItems": 11,
       "items": {
-        "type": "string"
+        "enum": [
+          "premises_consistent",
+          "formal_checks_pass",
+          "source_coverage",
+          "evidence_coverage",
+          "benchmark_accuracy",
+          "counterexample_rate",
+          "false_accept_rate",
+          "counterexample_escape_rate",
+          "holdout_score",
+          "replay_stable",
+          "compute_budget"
+        ]
       },
-      "contains": {
-        "const": "false_accept_rate"
-      }
+      "allOf": [
+        {
+          "contains": {
+            "const": "premises_consistent"
+          }
+        },
+        {
+          "contains": {
+            "const": "formal_checks_pass"
+          }
+        },
+        {
+          "contains": {
+            "const": "source_coverage"
+          }
+        },
+        {
+          "contains": {
+            "const": "evidence_coverage"
+          }
+        },
+        {
+          "contains": {
+            "const": "benchmark_accuracy"
+          }
+        },
+        {
+          "contains": {
+            "const": "counterexample_rate"
+          }
+        },
+        {
+          "contains": {
+            "const": "false_accept_rate"
+          }
+        },
+        {
+          "contains": {
+            "const": "counterexample_escape_rate"
+          }
+        },
+        {
+          "contains": {
+            "const": "holdout_score"
+          }
+        },
+        {
+          "contains": {
+            "const": "replay_stable"
+          }
+        },
+        {
+          "contains": {
+            "const": "compute_budget"
+          }
+        }
+      ]
     },
     "rules": {
       "type": "object",
