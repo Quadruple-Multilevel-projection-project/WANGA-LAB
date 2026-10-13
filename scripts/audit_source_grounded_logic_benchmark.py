@@ -182,10 +182,13 @@ def audit_manifest(
 
     case_count = len(manifest.get("cases", []))
     executed_count = len(results)
-    passed = sum(1 for result in results if result["status"] == "PASS")
-    risk_results = [r for r in results if r["case_type"] in RISK_TYPES]
-    counterexample_results = [r for r in results if r["case_type"] == "COUNTEREXAMPLE"]
-    holdout_results = [r for r in results if r["split"] == "HOLDOUT"]
+    passed_all = sum(1 for result in results if result["status"] == "PASS")
+    eligible_ids = {case["case_id"] for case in eligible_reviewed}
+    eligible_results = [r for r in results if r["case_id"] in eligible_ids]
+    eligible_passed = sum(1 for result in eligible_results if result["status"] == "PASS")
+    eligible_risk_results = [r for r in eligible_results if r["case_type"] in RISK_TYPES]
+    eligible_counterexample_results = [r for r in eligible_results if r["case_type"] == "COUNTEREXAMPLE"]
+    eligible_holdout_results = [r for r in eligible_results if r["split"] == "HOLDOUT"]
     reviewed_types = Counter(case["case_type"] for case in eligible_reviewed)
     reviewed_splits = {case["split"] for case in eligible_reviewed}
     source_classes = {
@@ -194,34 +197,52 @@ def audit_manifest(
         if source_by_id[ref].get("type") and source_by_id[ref].get("type") != "TEST_FIXTURE"
     }
 
+    eligible_span_count = sum(len(case["source_spans"]) for case in eligible_reviewed)
     metrics = {
         "source_coverage": source_resolved_count / case_count if case_count else None,
-        "evidence_coverage": reviewed_span_count / total_span_count if total_span_count else None,
-        "benchmark_accuracy": passed / executed_count if executed_count else None,
+        "evidence_coverage": eligible_span_count / total_span_count if total_span_count else None,
+        "benchmark_accuracy": eligible_passed / len(eligible_results) if eligible_results else None,
         "false_accept_rate": (
-            sum(1 for r in risk_results if r["observed_status"] == "ENTAILED_WITHIN_ENCODING") / len(risk_results)
-            if risk_results else None
+            sum(1 for r in eligible_risk_results if r["observed_status"] == "ENTAILED_WITHIN_ENCODING") / len(eligible_risk_results)
+            if eligible_risk_results else None
         ),
         "counterexample_escape_rate": (
-            sum(1 for r in counterexample_results if r["observed_status"] == "ENTAILED_WITHIN_ENCODING") / len(counterexample_results)
-            if counterexample_results else None
+            sum(1 for r in eligible_counterexample_results if r["observed_status"] == "ENTAILED_WITHIN_ENCODING") / len(eligible_counterexample_results)
+            if eligible_counterexample_results else None
         ),
         "holdout_score": (
-            sum(1 for r in holdout_results if r["status"] == "PASS") / len(holdout_results)
-            if holdout_results else None
+            sum(1 for r in eligible_holdout_results if r["status"] == "PASS") / len(eligible_holdout_results)
+            if eligible_holdout_results else None
         ),
     }
+
+    policy_path = root / "formal_reasoning/config/evaluation_policy.json"
+    evaluation_policy = json.loads(policy_path.read_text(encoding="utf-8"))
+    thresholds = evaluation_policy["thresholds"]
+    metric_gates = {
+        "source_coverage": metrics["source_coverage"] is not None and metrics["source_coverage"] >= thresholds["min_source_coverage"],
+        "evidence_coverage": metrics["evidence_coverage"] is not None and metrics["evidence_coverage"] >= thresholds["min_evidence_coverage"],
+        "benchmark_accuracy": metrics["benchmark_accuracy"] is not None and metrics["benchmark_accuracy"] >= thresholds["min_benchmark_accuracy"],
+        "false_accept_rate": metrics["false_accept_rate"] is not None and metrics["false_accept_rate"] <= thresholds["max_false_accept_rate"],
+        "counterexample_escape_rate": metrics["counterexample_escape_rate"] is not None and metrics["counterexample_escape_rate"] <= thresholds["max_counterexample_escape_rate"],
+        "holdout_score": metrics["holdout_score"] is not None and metrics["holdout_score"] >= thresholds["min_holdout_score"],
+    }
+
     min_risk_cases = int(manifest["minimum_risk_cases"])
+    required_risk_types = set(manifest["required_risk_case_types"])
+    risk_counts = {key: reviewed_types.get(key, 0) for key in sorted(RISK_TYPES)}
     ready_requirements = {
-        "minimum_reviewed_risk_cases": len([case for case in eligible_reviewed if case["case_type"] in RISK_TYPES]) >= min_risk_cases,
+        "minimum_reviewed_risk_cases": sum(risk_counts.values()) >= min_risk_cases,
+        "required_risk_types_present": required_risk_types.issubset({key for key, count in risk_counts.items() if count > 0}),
         "required_splits_present": set(manifest["required_splits"]).issubset(reviewed_splits),
         "minimum_source_classes_present": len(source_classes) >= int(manifest["minimum_source_classes"]),
-        "at_least_one_case_executed": executed_count > 0,
-        "all_expected_results_match": passed == executed_count,
+        "at_least_one_eligible_case_executed": bool(eligible_results),
+        "all_eligible_expected_results_match": bool(eligible_results) and eligible_passed == len(eligible_results),
+        "metric_gates_pass": all(metric_gates.values()),
         "no_case_errors": not case_errors,
     }
     ready = all(ready_requirements.values())
-    if executed_count and passed < executed_count:
+    if executed_count and passed_all < executed_count:
         status = "FAIL_CASE_EXPECTATION"
     elif ready:
         status = "PASS_BENCHMARK_CASES_READINESS_GATES"
@@ -239,21 +260,27 @@ def audit_manifest(
         "case_count": case_count,
         "reviewed_executable_case_count": executed_count,
         "eligible_reviewed_case_count": len(eligible_reviewed),
-        "passed_cases": passed,
-        "failed_cases": executed_count - passed,
-        "risk_case_counts": {key: reviewed_types.get(key, 0) for key in sorted(RISK_TYPES)},
+        "eligible_executed_case_count": len(eligible_results),
+        "passed_cases": passed_all,
+        "failed_cases": executed_count - passed_all,
+        "eligible_passed_cases": eligible_passed,
+        "eligible_failed_cases": len(eligible_results) - eligible_passed,
+        "risk_case_counts": risk_counts,
         "source_class_count": len(source_classes),
         "source_classes": sorted(source_classes),
         "reviewed_splits": sorted(reviewed_splits),
         "metrics": metrics,
+        "metric_gates": metric_gates,
+        "metric_thresholds": thresholds,
+        "threshold_status": evaluation_policy.get("status", "UNKNOWN"),
         "readiness_requirements": ready_requirements,
         "minimum_risk_cases": min_risk_cases,
         "case_results": results,
         "elapsed_seconds": round(time.perf_counter() - started, 6),
-        "false_accept_rate_semantics": "Known risk cases observed as ENTAILED_WITHIN_ENCODING divided by executed risk cases; null when no risk cases exist.",
-        "counterexample_escape_rate_semantics": "Counterexample cases observed as ENTAILED_WITHIN_ENCODING divided by executed counterexample cases; null when none exist.",
+        "false_accept_rate_semantics": "Known eligible risk cases observed as ENTAILED_WITHIN_ENCODING divided by eligible executed risk cases; null when no such cases exist.",
+        "counterexample_escape_rate_semantics": "Eligible counterexample cases observed as ENTAILED_WITHIN_ENCODING divided by eligible executed counterexample cases; null when none exist.",
         "semantic_status": "NOT_YET_VERIFIED",
-        "truth_boundary": "Results validate only the explicitly reviewed propositional encoding; source references and mapping review do not prove unrestricted natural-language truth.",
+        "truth_boundary": "Results validate only the explicitly reviewed propositional encoding; source references and mapping review do not prove unrestricted natural-language truth. Synthetic/test-fixture sources are excluded from readiness metrics.",
     }
 
 
