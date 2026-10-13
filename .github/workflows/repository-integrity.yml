@@ -38,6 +38,22 @@ jobs:
       - name: Formal reasoning benchmark
         run: python scripts/run_formal_reasoning_benchmarks.py
 
+      - name: Typed formal-fragment tests
+        run: python -m unittest discover -s tests -p 'test_formal_typed_fragment.py' -v
+
+      - name: Typed formal benchmark tests
+        run: python -m unittest discover -s tests -p 'test_formal_typed_benchmark.py' -v
+
+      - name: Logic package contract tests
+        run: python -m unittest discover -s tests -p 'test_logic_package_contract.py' -v
+
+      - name: Formal package JSON schema tests
+        run: python -m unittest discover -s tests -p 'test_formal_package_schemas.py' -v
+
+      - name: Validate ARK-Swarm library matrix
+        run: python scripts/validate_ark_swarm_library_matrix.py
+
+
       - name: ARK-Swarm + Logic Trader integration tests
         run: python -m unittest discover -s tests -p 'test_ark_swarm_logic_trader.py' -v
 

@@ -5,6 +5,7 @@ from pathlib import Path
 import json
 
 from formal_reasoning.formalization_queue import queue_candidate_for_formalization
+from formal_reasoning.evaluation import load_evaluation_policy
 
 try:
     import jsonschema
@@ -48,6 +49,18 @@ class LogicJsonSchemaTests(unittest.TestCase):
         formal_schema = load_schema("typed-formal-fragment-v1.schema.json")
         jsonschema.Draft202012Validator.check_schema(package_schema)
         jsonschema.Draft202012Validator.check_schema(formal_schema)
+
+    def test_candidate_evaluation_policy_schema_and_config_match(self):
+        policy_schema = load_schema("candidate-evaluation-policy-v1.schema.json")
+        jsonschema.Draft202012Validator.check_schema(policy_schema)
+        policy_file = ROOT / "formal_reasoning/config/evaluation_policy.json"
+        policy = json.loads(policy_file.read_text(encoding="utf-8"))
+        jsonschema.Draft202012Validator(policy_schema).validate(policy)
+        thresholds, status = load_evaluation_policy()
+        self.assertEqual(status, "INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED")
+        self.assertIn("min_evidence_coverage", thresholds)
+        self.assertIn("max_false_accept_rate", thresholds)
+        self.assertIn("max_counterexample_escape_rate", thresholds)
 
     def test_internal_candidate_contract_is_valid(self):
         validator = jsonschema.Draft202012Validator(load_schema("logic-package-contract-v1.schema.json"))

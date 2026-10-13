@@ -27,7 +27,10 @@
         "min_benchmark_accuracy",
         "max_counterexample_rate",
         "min_holdout_score",
-        "max_compute_seconds"
+        "max_compute_seconds",
+        "min_evidence_coverage",
+        "max_false_accept_rate",
+        "max_counterexample_escape_rate"
       ],
       "properties": {
         "min_source_coverage": {
@@ -53,18 +56,133 @@
         "max_compute_seconds": {
           "type": "number",
           "exclusiveMinimum": 0
+        },
+        "min_evidence_coverage": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_false_accept_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "max_counterexample_escape_rate": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
         }
       },
       "additionalProperties": false
     },
     "hard_gates": {
       "type": "array",
+      "uniqueItems": true,
+      "minItems": 11,
+      "maxItems": 11,
       "items": {
-        "type": "string"
-      }
+        "enum": [
+          "premises_consistent",
+          "formal_checks_pass",
+          "source_coverage",
+          "evidence_coverage",
+          "benchmark_accuracy",
+          "counterexample_rate",
+          "false_accept_rate",
+          "counterexample_escape_rate",
+          "holdout_score",
+          "replay_stable",
+          "compute_budget"
+        ]
+      },
+      "allOf": [
+        {
+          "contains": {
+            "const": "premises_consistent"
+          }
+        },
+        {
+          "contains": {
+            "const": "formal_checks_pass"
+          }
+        },
+        {
+          "contains": {
+            "const": "source_coverage"
+          }
+        },
+        {
+          "contains": {
+            "const": "evidence_coverage"
+          }
+        },
+        {
+          "contains": {
+            "const": "benchmark_accuracy"
+          }
+        },
+        {
+          "contains": {
+            "const": "counterexample_rate"
+          }
+        },
+        {
+          "contains": {
+            "const": "false_accept_rate"
+          }
+        },
+        {
+          "contains": {
+            "const": "counterexample_escape_rate"
+          }
+        },
+        {
+          "contains": {
+            "const": "holdout_score"
+          }
+        },
+        {
+          "contains": {
+            "const": "replay_stable"
+          }
+        },
+        {
+          "contains": {
+            "const": "compute_budget"
+          }
+        }
+      ]
     },
     "rules": {
-      "type": "object"
+      "type": "object",
+      "required": [
+        "hard_gates_cannot_be_offset_by_descriptive_score",
+        "no_weight_updates",
+        "no_epistemic_status_promotion",
+        "solver_result_not_truth",
+        "missing_metrics_fail_closed",
+        "rates_require_labeled_benchmark_denominators"
+      ],
+      "properties": {
+        "hard_gates_cannot_be_offset_by_descriptive_score": {
+          "const": true
+        },
+        "no_weight_updates": {
+          "const": true
+        },
+        "no_epistemic_status_promotion": {
+          "const": true
+        },
+        "solver_result_not_truth": {
+          "const": true
+        },
+        "missing_metrics_fail_closed": {
+          "const": true
+        },
+        "rates_require_labeled_benchmark_denominators": {
+          "const": true
+        }
+      }
     }
   },
   "additionalProperties": true
