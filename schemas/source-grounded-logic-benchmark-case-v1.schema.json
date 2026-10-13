@@ -199,7 +199,7 @@
           "enum": [
             "ACCEPTED_WITHIN_PROPOSITIONAL_FRAGMENT",
             "REJECTED",
-            "NEQUIRES_DIFFERENT_LOGIC_FRAGMENT"
+            "REQUIRES_DIFFERENT_LOGIC_FRAGMENT"
           ]
         },
         "notes": {
@@ -229,10 +229,22 @@
           }
         },
         "not": {
-          "required": [
-            "formal_spec",
-            "expected_status",
-            "review"
+          "anyOf": [
+            {
+              "required": [
+                "formal_spec"
+              ]
+            },
+            {
+              "required": [
+                "expected_status"
+              ]
+            },
+            {
+              "required": [
+                "review"
+              ]
+            }
           ]
         }
       }
