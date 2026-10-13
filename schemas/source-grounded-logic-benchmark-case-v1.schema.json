@@ -1,0 +1,289 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA Source-Grounded Logic Benchmark Case V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "case_id",
+    "case_type",
+    "split",
+    "claim_text",
+    "source_refs",
+    "source_spans",
+    "formalization_status",
+    "semantic_status",
+    "execute_in_benchmark"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "wanga-source-grounded-benchmark-case/1.0"
+    },
+    "case_id": {
+      "type": "string",
+      "pattern": "^[A-Z0-9][A-Z0-9._-]{2,63}$"
+    },
+    "case_type": {
+      "enum": [
+        "POSITIVE",
+        "NEGATIVE",
+        "BOUNDARY",
+        "COUNTEREXAMPLE",
+        "AMBIGUOUS",
+        "CONTRADICTION"
+      ]
+    },
+    "split": {
+      "enum": [
+        "TRAIN",
+        "VALIDATION",
+        "HOLDOUT"
+      ]
+    },
+    "claim_text": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_refs": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "source_spans": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "required": [
+          "source_ref",
+          "locator",
+          "span_sha256",
+          "permission_scope"
+        ],
+        "properties": {
+          "source_ref": {
+            "type": "string",
+            "minLength": 1
+          },
+          "locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "span_sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          },
+          "permission_scope": {
+            "enum": [
+              "PUBLIC_SOURCE",
+              "LICENSED_SOURCE_WITH_REUSE_PERMISSION",
+              "TEST_FIXTURE_NOT_ELIGIBLE_FOR_READINESS"
+            ]
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "formalization_status": {
+      "enum": [
+        "NOT_FORMALIZED",
+        "REVIEWED_FORMALIZATION"
+      ]
+    },
+    "semantic_status": {
+      "const": "NOT_YET_VERIFIED"
+    },
+    "execute_in_benchmark": {
+      "type": "boolean"
+    },
+    "formal_spec": {
+      "type": "object",
+      "required": [
+        "schema_version",
+        "claim_id",
+        "variables",
+        "premises",
+        "conclusion",
+        "source_refs",
+        "epistemic_status"
+      ],
+      "properties": {
+        "schema_version": {
+          "const": "wanga-formal-claim/1.0"
+        },
+        "claim_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "variables": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z_][A-Za-z0-9_]*$"
+          },
+          "uniqueItems": true
+        },
+        "premises": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "conclusion": {
+          "type": "string",
+          "minLength": 1
+        },
+        "source_refs": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "epistemic_status": {
+          "enum": [
+            "HYPOTHESIS",
+            "OBSERVED",
+            "TEST_FIXTURE",
+            "SPECIFIED",
+            "UNKNOWN"
+          ]
+        },
+        "timeout_ms": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 30000
+        }
+      },
+      "additionalProperties": false
+    },
+    "expected_status": {
+      "enum": [
+        "ENTAILED_WITHIN_ENCODING",
+        "NOT_ENTAILED_BY_ENCODING",
+        "INCONSISTENT_PREMISES",
+        "SOLVER_UNKNOWN_ON_PREMISES",
+        "SOLVER_UNKNOWN_ON_ENTAILMENT"
+      ]
+    },
+    "review": {
+      "type": "object",
+      "required": [
+        "reviewer_id",
+        "reviewed_at",
+        "source_mapping_decision",
+        "formalization_decision",
+        "notes"
+      ],
+      "properties": {
+        "reviewer_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "reviewed_at": {
+          "type": "string",
+          "minLength": 10
+        },
+        "source_mapping_decision": {
+          "enum": [
+            "ACCEPTED_FOR_BENCHMARK",
+            "REJECTED",
+            "NEEDS_MORE_EVIDENCE"
+          ]
+        },
+        "formalization_decision": {
+          "enum": [
+            "ACCEPTED_WITHIN_PROPOSITIONAL_FRAGMENT",
+            "REJECTED",
+            "REQUIRES_DIFFERENT_LOGIC_FRAGMENT"
+          ]
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "formalization_status": {
+            "const": "NOT_FORMALIZED"
+          }
+        },
+        "required": [
+          "formalization_status"
+        ]
+      },
+      "then": {
+        "properties": {
+          "execute_in_benchmark": {
+            "const": false
+          }
+        },
+        "not": {
+          "anyOf": [
+            {
+              "required": [
+                "formal_spec"
+              ]
+            },
+            {
+              "required": [
+                "expected_status"
+              ]
+            },
+            {
+              "required": [
+                "review"
+              ]
+            }
+          ]
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "formalization_status": {
+            "const": "REVIEWED_FORMALIZATION"
+          }
+        },
+        "required": [
+          "formalization_status"
+        ]
+      },
+      "then": {
+        "required": [
+          "formal_spec",
+          "expected_status",
+          "review"
+        ],
+        "properties": {
+          "execute_in_benchmark": {
+            "const": true
+          },
+          "review": {
+            "properties": {
+              "source_mapping_decision": {
+                "const": "ACCEPTED_FOR_BENCHMARK"
+              },
+              "formalization_decision": {
+                "const": "ACCEPTED_WITHIN_PROPOSITIONAL_FRAGMENT"
+              }
+            }
+          }
+        }
+      }
+    }
+  ],
+  "additionalProperties": false
+}

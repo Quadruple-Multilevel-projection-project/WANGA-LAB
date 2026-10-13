@@ -1,0 +1,22 @@
+{
+  "schema_version": "wanga-source-grounded-benchmark-manifest/1.0",
+  "dataset_id": "WANGA-LOGIC-SOURCE-GROUNDED-V1",
+  "dataset_version": "0.1.0",
+  "status": "BLOCKED_EMPTY_WAITING_REVIEWED_CASES",
+  "description": "Registry for source-grounded, human-reviewed formal cases. No cases are seeded automatically; a solver result is only relative to an explicitly reviewed encoding.",
+  "minimum_risk_cases": 30,
+  "required_risk_case_types": [
+    "NEGATIVE",
+    "BOUNDARY",
+    "COUNTEREXAMPLE"
+  ],
+  "required_splits": [
+    "TRAIN",
+    "VALIDATION",
+    "HOLDOUT"
+  ],
+  "minimum_source_classes": 3,
+  "source_registry": "logic_wiki/data/articles.json",
+  "case_schema": "schemas/source-grounded-logic-benchmark-case-v1.schema.json",
+  "cases": []
+}

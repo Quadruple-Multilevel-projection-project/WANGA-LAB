@@ -38,6 +38,13 @@ jobs:
       - name: Formal reasoning benchmark
         run: python scripts/run_formal_reasoning_benchmarks.py
 
+      - name: Source-grounded benchmark intake tests
+        run: python -m unittest discover -s tests -p 'test_source_grounded_logic_benchmark.py' -v
+
+      - name: Audit source-grounded benchmark readiness
+        run: python scripts/audit_source_grounded_logic_benchmark.py --out research/reports/formal-reasoning/source-grounded-benchmark-latest.json
+
+
       - name: Typed formal-fragment tests
         run: python -m unittest discover -s tests -p 'test_formal_typed_fragment.py' -v
 

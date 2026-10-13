@@ -1,0 +1,88 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA Source-Grounded Logic Benchmark Manifest V1",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "dataset_id",
+    "dataset_version",
+    "status",
+    "minimum_risk_cases",
+    "required_risk_case_types",
+    "required_splits",
+    "minimum_source_classes",
+    "source_registry",
+    "case_schema",
+    "cases"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "wanga-source-grounded-benchmark-manifest/1.0"
+    },
+    "dataset_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dataset_version": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "enum": [
+        "BLOCKED_EMPTY_WAITING_REVIEWED_CASES",
+        "INTAKE_IN_PROGRESS",
+        "REVIEWED_CASES_AVAILABLE"
+      ]
+    },
+    "description": {
+      "type": "string"
+    },
+    "minimum_risk_cases": {
+      "type": "integer",
+      "minimum": 30
+    },
+    "required_risk_case_types": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "NEGATIVE",
+          "BOUNDARY",
+          "COUNTEREXAMPLE"
+        ]
+      },
+      "minItems": 3
+    },
+    "required_splits": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "enum": [
+          "TRAIN",
+          "VALIDATION",
+          "HOLDOUT"
+        ]
+      },
+      "minItems": 3
+    },
+    "minimum_source_classes": {
+      "type": "integer",
+      "minimum": 3
+    },
+    "source_registry": {
+      "type": "string",
+      "minLength": 1
+    },
+    "case_schema": {
+      "type": "string",
+      "minLength": 1
+    },
+    "cases": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    }
+  },
+  "additionalProperties": false
+}

@@ -2,7 +2,7 @@
   "schema_version": "wanga-library-integration-matrix/1.0",
   "audit_date": "2026-10-12",
   "basis": "Pasted text.txt plus current ARK-Swarm/Logic Trader implementation and official documentation for short-listed projects.",
-  "status": "MERGED_MAIN_CI_PASS_SOURCE_GROUNDED_SEMANTIC_BENCHMARKS_STILL_MISSING",
+  "status": "SOURCE_GROUNDED_BENCHMARK_INTAKE_CONFIGURED_ZERO_REVIEWED_CASES",
   "scope": {
     "logic_trader": "Selection, composition and evaluation of logical assets only.",
     "dependency_policy": "Prefer one task-specific adapter at a time; do not bulk-install the 100+ candidates."
@@ -97,6 +97,11 @@
       "component": "typed-formal-fixture-benchmark",
       "status": "TESTED_SEVEN_SYNTHETIC_CASES",
       "limit": "Seven adapter fixtures pass; they verify implementation behavior only, not Logic Trader semantic correctness."
+    },
+    {
+      "component": "source-grounded-semantic-benchmark",
+      "status": "INTAKE_SCHEMA_AND_RUNNER_CONFIGURED_EMPTY",
+      "limit": "The reviewed case manifest currently contains zero cases. The runner is expected to return BLOCKED_INSUFFICIENT_REVIEWED_CASES with null rates; synthetic fixtures do not count toward readiness."
     }
   ],
   "categories": [
@@ -512,7 +517,8 @@
     "Current lexical-ranking baseline is measured for precision/recall at K, false selections and provenance coverage.",
     "Candidate variants cannot change source records, policy gates, formal premises or be promoted by their own score; unformalized Logic Trader candidates remain queued.",
     "Network sync remains disabled until peer auth, replay protection and partition tests pass.",
-    "Each connectome track has a pinned dataset manifest and task benchmark before agent integration."
+    "Each connectome track has a pinned dataset manifest and task benchmark before agent integration.",
+    "Source-grounded benchmark intake validates exact source references/spans, keeps unformalized prose out of the solver, and remains blocked with null metrics until reviewed cases meet all thresholds."
   ],
   "official_references_checked": [
     {
