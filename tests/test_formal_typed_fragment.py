@@ -99,8 +99,11 @@ class BoundedZ3AdapterTests(unittest.TestCase):
     def test_hard_gates_do_not_average_away_failed_proof(self):
         result = evaluate_candidate({
             "source_coverage": 1.0,
+            "evidence_coverage": 1.0,
             "benchmark_accuracy": 1.0,
             "counterexample_rate": 0.0,
+            "false_accept_rate": 0.0,
+            "counterexample_escape_rate": 0.0,
             "holdout_score": 1.0,
             "compute_seconds": 0.1,
             "premises_consistent": True,
@@ -111,6 +114,30 @@ class BoundedZ3AdapterTests(unittest.TestCase):
         self.assertFalse(result["all_hard_gates_pass"])
         self.assertFalse(result["weight_update_performed"])
         self.assertEqual(result["verification_status"], "NOT_YET_VERIFIED")
+
+    def test_evidence_and_error_rate_gates_are_independent(self):
+        metrics = {
+            "source_coverage": 1.0,
+            "evidence_coverage": 0.50,
+            "benchmark_accuracy": 1.0,
+            "counterexample_rate": 0.0,
+            "false_accept_rate": 0.0,
+            "counterexample_escape_rate": 0.0,
+            "holdout_score": 1.0,
+            "compute_seconds": 0.1,
+            "premises_consistent": True,
+            "formal_checks_pass": True,
+            "replay_stable": True,
+        }
+        result = evaluate_candidate(metrics)
+        self.assertFalse(result["hard_gates"]["evidence_coverage"])
+        self.assertEqual(result["status"], "BLOCKED_BY_HARD_GATE")
+
+        metrics["evidence_coverage"] = 1.0
+        metrics["counterexample_escape_rate"] = 0.1
+        result = evaluate_candidate(metrics)
+        self.assertFalse(result["hard_gates"]["counterexample_escape_rate"])
+        self.assertEqual(result["status"], "BLOCKED_BY_HARD_GATE")
 
     def test_missing_benchmark_metrics_are_rejected(self):
         with self.assertRaises(ValueError):
