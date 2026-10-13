@@ -79,7 +79,8 @@
           "permission_scope": {
             "enum": [
               "PUBLIC_SOURCE",
-              "LICENSED_SOURCE_WITH_REUSE_PERMISSION"
+              "LICENSED_SOURCE_WITH_REUSE_PERMISSION",
+              "TEST_FIXTURE_NOT_ELIGIBLE_FOR_READINESS"
             ]
           }
         },
