@@ -185,3 +185,8 @@ Verified in that run:
 
 These are software/integration results. The seven typed-formal cases are synthetic adapter fixtures, not source-grounded semantic benchmarks. No candidate was promoted to `VERIFIED`; no weights were updated. The next P0 requirement remains source-grounded formalization, negative/boundary cases, holdout testing and independent review.
 
+
+
+## Source-grounded benchmark intake scaffold
+
+A versioned schema and runner have now been added on the research branch: `schemas/source-grounded-logic-benchmark-case-v1.schema.json`, `schemas/source-grounded-logic-benchmark-manifest-v1.schema.json`, `formal_reasoning/examples/source_grounded_benchmark_manifest.json`, and `scripts/audit_source_grounded_logic_benchmark.py`. The initial manifest is intentionally empty. The runner will report `BLOCKED_INSUFFICIENT_REVIEWED_CASES`, with null rates, until source-backed cases are explicitly formalized/reviewed and the case count, risk types, splits, source-class and metric gates all pass. The file contract records source URI IDs, span locator and hash; the runner checks IDs/schema and review status but **does not fetch or re-hash the underlying website span**, so that source-span hash is a reviewer attestation and must be checked during ingestion/review. Synthetic test fixtures are excluded from readiness metrics.
