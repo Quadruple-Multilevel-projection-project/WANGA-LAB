@@ -33,6 +33,8 @@ A solver result is relative to the formulas supplied. This adapter does not tran
 
 ## Candidate evaluation
 
+The evaluator also hard-gates reviewed evidence coverage, false-accept rate and counterexample-escape rate. `source_coverage` means that each packaged claim/component has a resolvable source reference; `evidence_coverage` means that the cited spans have been reviewed against the specific claim. `false_accept_rate` is the share of known-invalid benchmark candidates incorrectly accepted; `counterexample_escape_rate` is the share of registered counterexamples not detected by the applicable gates. Missing metrics are rejected instead of defaulted to zero. These initial thresholds are `INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED` and must be measured on a labeled dataset before they are used as evidence of readiness.
+
 The evaluation vector contains premise consistency, formal-check result, source coverage, benchmark accuracy, counterexample rate, holdout score, replay stability, and compute time. Each hard gate must pass. The weighted descriptive index is for reporting only; it cannot compensate for a failed hard gate. Thresholds load from `formal_reasoning/config/evaluation_policy.json` and are explicitly labeled `INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED`. The evaluator never updates weights or changes a claim status.
 
 ## ARK-Swarm integration
