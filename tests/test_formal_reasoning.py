@@ -134,8 +134,11 @@ class CandidateEvaluationTests(unittest.TestCase):
             "premises_consistent": True,
             "formal_checks_pass": True,
             "source_coverage": 1.0,
+            "evidence_coverage": 1.0,
             "benchmark_accuracy": 0.98,
             "counterexample_rate": 0.0,
+            "false_accept_rate": 0.0,
+            "counterexample_escape_rate": 0.0,
             "holdout_score": 0.95,
             "replay_stable": True,
             "compute_seconds": 4.0,
@@ -170,6 +173,33 @@ class CandidateEvaluationTests(unittest.TestCase):
     def test_unknown_threshold_key_is_rejected(self):
         with self.assertRaises(ValueError):
             evaluate_candidate(self.good_metrics(), {"trust": 1.0})
+
+    def test_evidence_coverage_is_a_separate_hard_gate(self):
+        metrics = self.good_metrics()
+        metrics["evidence_coverage"] = 0.50
+        result = evaluate_candidate(metrics)
+        self.assertEqual(result["status"], "BLOCKED_BY_HARD_GATE")
+        self.assertFalse(result["hard_gates"]["evidence_coverage"])
+
+    def test_false_accept_rate_blocks_candidate_even_when_other_metrics_are_high(self):
+        metrics = self.good_metrics()
+        metrics["false_accept_rate"] = 0.10
+        result = evaluate_candidate(metrics)
+        self.assertEqual(result["status"], "BLOCKED_BY_HARD_GATE")
+        self.assertFalse(result["hard_gates"]["false_accept_rate"])
+
+    def test_counterexample_escape_rate_blocks_candidate(self):
+        metrics = self.good_metrics()
+        metrics["counterexample_escape_rate"] = 0.05
+        result = evaluate_candidate(metrics)
+        self.assertEqual(result["status"], "BLOCKED_BY_HARD_GATE")
+        self.assertFalse(result["hard_gates"]["counterexample_escape_rate"])
+
+    def test_new_error_rates_are_required_and_never_default_to_zero(self):
+        metrics = self.good_metrics()
+        del metrics["false_accept_rate"]
+        with self.assertRaises(ValueError):
+            evaluate_candidate(metrics)
 
     def test_thresholds_are_recorded_as_uncalibrated(self):
         result = evaluate_candidate(self.good_metrics())
