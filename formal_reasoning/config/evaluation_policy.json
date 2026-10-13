@@ -2,11 +2,14 @@
   "schema_version": "wanga-candidate-evaluation-policy/1.0",
   "policy_id": "formal-candidate-gates-v1",
   "status": "INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED",
-  "description": "Initial engineering thresholds for candidate review. They are not statistically calibrated and do not establish truth.",
+  "description": "Initial engineering thresholds for candidate review. They are not statistically calibrated and do not establish truth. Evidence coverage, false-accept and counterexample-escape rates must be measured on labeled evaluation data; they must never be fabricated or defaulted to zero.",
   "thresholds": {
     "min_source_coverage": 0.95,
+    "min_evidence_coverage": 0.95,
     "min_benchmark_accuracy": 0.9,
     "max_counterexample_rate": 0.02,
+    "max_false_accept_rate": 0.05,
+    "max_counterexample_escape_rate": 0.02,
     "min_holdout_score": 0.85,
     "max_compute_seconds": 30
   },
@@ -14,8 +17,11 @@
     "premises_consistent",
     "formal_checks_pass",
     "source_coverage",
+    "evidence_coverage",
     "benchmark_accuracy",
     "counterexample_rate",
+    "false_accept_rate",
+    "counterexample_escape_rate",
     "holdout_score",
     "replay_stable",
     "compute_budget"
@@ -24,6 +30,8 @@
     "hard_gates_cannot_be_offset_by_descriptive_score": true,
     "no_weight_updates": true,
     "no_epistemic_status_promotion": true,
-    "solver_result_not_truth": true
+    "solver_result_not_truth": true,
+    "missing_metrics_fail_closed": true,
+    "rates_require_labeled_benchmark_denominators": true
   }
 }
