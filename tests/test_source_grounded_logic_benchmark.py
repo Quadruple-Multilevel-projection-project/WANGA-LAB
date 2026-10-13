@@ -93,6 +93,29 @@ class SourceGroundedBenchmarkIntakeTests(unittest.TestCase):
         self.assertIsNone(report["metrics"]["counterexample_escape_rate"])
         self.assertEqual(report["semantic_status"], "NOT_YET_VERIFIED")
 
+    def test_readiness_reports_metric_gates_as_blocked_when_no_eligible_cases_exist(self):
+        report = audit_manifest(
+            self.manifest,
+            CASE_SCHEMA_PATH,
+            MANIFEST_SCHEMA_PATH,
+            self.catalog,
+            root=ROOT,
+        )
+        self.assertFalse(report["readiness_requirements"]["metric_gates_pass"])
+        self.assertTrue(all(value is False for value in report["metric_gates"].values()))
+        self.assertEqual(report["threshold_status"], "INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED")
+
+    def test_case_and_manifest_json_schemas_are_valid(self):
+        try:
+            import jsonschema
+        except ImportError as exc:
+            self.skipTest(f"jsonschema unavailable: {exc}")
+        case_schema = json.loads(CASE_SCHEMA_PATH.read_text(encoding="utf-8"))
+        manifest_schema = json.loads(MANIFEST_SCHEMA_PATH.read_text(encoding="utf-8"))
+        jsonschema.Draft202012Validator.check_schema(case_schema)
+        jsonschema.Draft202012Validator.check_schema(manifest_schema)
+        jsonschema.Draft202012Validator(manifest_schema).validate(self.manifest)
+
     def test_reviewed_fixture_executes_but_does_not_count_toward_readiness(self):
         self.manifest["cases"] = [reviewed_case()]
         report = audit_manifest(
