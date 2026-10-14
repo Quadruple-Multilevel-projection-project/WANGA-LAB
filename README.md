@@ -301,3 +301,8 @@ python -m unittest discover -s tests -p 'test_logic_package_contract.py' -v
 python -m unittest discover -s tests -p 'test_formal_package_schemas.py' -v
 python scripts/run_typed_formal_benchmark.py
 ```
+
+
+## Limbo and morphogenetic logic terminology
+
+The project's working vocabulary and unresolved definitions are preserved in [Limbo / Morphogenetic Logic — Working Terminology](docs/LIMBO_MORPHOGENETIC_LOGIC_TERMINOLOGY_V1.md). This glossary is interpretive and not yet verified; it deliberately does not reduce the project's logic to formal logic, numeric metrics, or biological claims.
