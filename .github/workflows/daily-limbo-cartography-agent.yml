@@ -31,7 +31,7 @@ jobs:
         run: python -m pip install --disable-pip-version-check pytest jsonschema
       - name: Create execution log
         working-directory: limbo-cartography-core
-        run: python engine/deterministic_executor.py > cartography/run_logs/latest_execution.json
+        run: python engine/deterministic_executor.py
       - name: Validate repository baseline
         working-directory: limbo-cartography-core
         run: python engine/drift_validator.py
