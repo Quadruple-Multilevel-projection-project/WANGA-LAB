@@ -1,0 +1,83 @@
+{
+  "report_id": "LOGIC-FRACTAL-CYCLE-2026-10-15",
+  "date": "2026-10-15",
+  "status": "IN_PROGRESS_FIRST_MODEL_RELEASE_BLOCKED_PR_CI_PENDING",
+  "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+  "source_scope": {
+    "github_affiliation_snapshot_queried": true,
+    "repositories_selected_for_first_batch": 10,
+    "repository_inventory_publication": "BLOCKED_BY_SAFETY_CHECKS",
+    "library_metadata_items_listed": 98,
+    "confirmed_conversation_export_found": false,
+    "conversation_records_ingested": 0
+  },
+  "catalog_snapshot": {
+    "articles": 28,
+    "source_records": 17,
+    "source_types": 11,
+    "source_references": 50,
+    "relation_edges": 111,
+    "duplicate_article_ids": 0,
+    "dangling_source_refs": 0,
+    "dangling_relation_targets": 0,
+    "total_composition_rules": 3,
+    "active_specified_composition_rules": 2
+  },
+  "readiness_gate": {
+    "id": "FIRST_MODEL_ALPHA_V1",
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "thresholds_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "gate_eligible_logic_units_counted": 0,
+    "source_grounded_counterexamples": 0,
+    "semantic_test_cases": 0,
+    "benchmark_suites": 0,
+    "independent_reviews": 0,
+    "holdout_split": false,
+    "mirror_review": false
+  },
+  "local_library_package_tests": {
+    "status": "PASS_LOCAL_TESTS_NOT_INTEGRATED",
+    "ntm_tests_passed": 15,
+    "mln_tests_passed": 21,
+    "compileall_exit_code": 0,
+    "cli_repeat_runs": 2,
+    "cli_output_identical": true,
+    "cli_output_sha256": "37841c40de476696d7deecefc4fca4ef421cd437a72e3a5da89074d0ce0bfde1",
+    "semantic_status": "NOT_YET_VERIFIED",
+    "integrated_into_wanga_lab_main": false
+  },
+  "wix_sync": {
+    "status": "STALE_MANIFEST_NO_WRITE_THIS_CYCLE",
+    "last_manifest_sync_date": "2026-10-12",
+    "manifest_main_articles": 18,
+    "manifest_research_articles": 27,
+    "manifest_sources": 16,
+    "manifest_relations": 102,
+    "current_articles": 28,
+    "current_sources": 17,
+    "current_relations": 111,
+    "current_public_readback_performed": false
+  },
+  "ci": {
+    "status": "PENDING_PR_CI_AT_REPORT_CREATION",
+    "workflow": ".github/workflows/logic-fractal-wiki.yml"
+  },
+  "model": {
+    "first_typed_fractal_builder_run_this_cycle": false,
+    "first_model_hash": "NOT_RECOMPUTED_THIS_CYCLE",
+    "first_model_status": "CANDIDATE_NOT_RELEASED",
+    "semantic_status": "NOT_YET_VERIFIED"
+  },
+  "blocked": [
+    "No confirmed ChatGPT export archive was identified or ingested.",
+    "Full repository inventory could not be published to the public repository after safety checks blocked the write.",
+    "Wix synchronization is pending PR review/merge and approved deployment.",
+    "Semantic ground-truth benchmarks, holdout and independent MIRROR reviews remain absent."
+  ],
+  "next": [
+    "Inspect PR CI after opening the review request.",
+    "Continue the ecosystem sweep in bounded batches.",
+    "Review NTM/MLN code import separately; do not claim integration until repository code and CI evidence exist.",
+    "After review/merge, update Wix and verify public read-back."
+  ]
+}
