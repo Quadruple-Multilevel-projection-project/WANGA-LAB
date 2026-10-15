@@ -1,0 +1,13 @@
+{
+  "schema_version": "wanga-ecosystem-scan-cursor/1.0",
+  "snapshot_date": "2026-10-15",
+  "last_completed_batch": "ECOSYSTEM-SWEEP-2026-10-15-B01",
+  "batch_size": 10,
+  "completed_repositories": 10,
+  "remaining_repositories": 49,
+  "next_batch_order": "Prioritized from connector-visible project relevance; exact public listing withheld from this public cursor after safety checks blocked bulk repository metadata publication.",
+  "next_batch_start_index": 10,
+  "inventory_path": "research/ecosystem/repository_inventory.json",
+  "findings_path": "research/ecosystem/project_findings.json",
+  "status": "PARTIAL_PUBLIC_INVENTORY; CONTINUE_NEXT_CYCLE"
+}
