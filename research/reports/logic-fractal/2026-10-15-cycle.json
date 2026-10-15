@@ -4,12 +4,8 @@
   "status": "IN_PROGRESS_FIRST_MODEL_RELEASE_BLOCKED_PR_CI_PENDING",
   "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
   "source_scope": {
-    "github_affiliation_snapshot_queried": true,
-    "repositories_selected_for_first_batch": 10,
-    "repository_inventory_publication": "BLOCKED_BY_SAFETY_CHECKS",
-    "library_metadata_items_listed": 98,
-    "confirmed_conversation_export_found": false,
-    "conversation_records_ingested": 0
+    "catalog_and_repository_files_only": true,
+    "first_model_hash_recomputed": false
   },
   "catalog_snapshot": {
     "articles": 28,
@@ -35,17 +31,6 @@
     "holdout_split": false,
     "mirror_review": false
   },
-  "local_library_package_tests": {
-    "status": "PASS_LOCAL_TESTS_NOT_INTEGRATED",
-    "ntm_tests_passed": 15,
-    "mln_tests_passed": 21,
-    "compileall_exit_code": 0,
-    "cli_repeat_runs": 2,
-    "cli_output_identical": true,
-    "cli_output_sha256": "37841c40de476696d7deecefc4fca4ef421cd437a72e3a5da89074d0ce0bfde1",
-    "semantic_status": "NOT_YET_VERIFIED",
-    "integrated_into_wanga_lab_main": false
-  },
   "wix_sync": {
     "status": "STALE_MANIFEST_NO_WRITE_THIS_CYCLE",
     "last_manifest_sync_date": "2026-10-12",
@@ -68,16 +53,10 @@
     "first_model_status": "CANDIDATE_NOT_RELEASED",
     "semantic_status": "NOT_YET_VERIFIED"
   },
-  "blocked": [
-    "No confirmed ChatGPT export archive was identified or ingested.",
-    "Full repository inventory could not be published to the public repository after safety checks blocked the write.",
-    "Wix synchronization is pending PR review/merge and approved deployment.",
-    "Semantic ground-truth benchmarks, holdout and independent MIRROR reviews remain absent."
-  ],
   "next": [
-    "Inspect PR CI after opening the review request.",
-    "Continue the ecosystem sweep in bounded batches.",
-    "Review NTM/MLN code import separately; do not claim integration until repository code and CI evidence exist.",
-    "After review/merge, update Wix and verify public read-back."
+    "Inspect PR CI",
+    "Register source-grounded counterexamples and semantic benchmark suites",
+    "Create a frozen holdout and complete independent MIRROR review",
+    "Update Wix only after review/merge and verify public read-back"
   ]
 }
