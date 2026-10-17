@@ -1,0 +1,146 @@
+{
+  "schema_version": "wanga-ecosystem-sweep-report/1.0",
+  "report_date": "2026-10-17",
+  "snapshot_counts": {
+    "owner_repositories": 34,
+    "collaborator_repositories": 13,
+    "organization_member_repositories": 25,
+    "unique_repositories": 59,
+    "public_repositories": 57,
+    "private_repositories_redacted": 2,
+    "public_name_redactions": 1,
+    "branch_label_redactions": 3
+  },
+  "SOURCES_SCANNED": {
+    "repository_inventory_count": 59,
+    "public_readme_files": 9,
+    "private_repository_content_in_public_output": 0,
+    "library_files_visible": 99,
+    "relevant_library_artifacts_reviewed_metadata_only": 4,
+    "conversation_exports_found": 0,
+    "conversation_exports_ingested": 0
+  },
+  "ACCESS_GAPS": [
+    {
+      "id": "GAP-CHAT-EXPORT",
+      "status": "BLOCKED",
+      "detail": "No conversations.json or ChatGPT export ZIP was found in visible Library results; no claim is made about unexposed private ChatGPT conversations."
+    },
+    {
+      "id": "GAP-CROSS-REPO-ACTIONS",
+      "status": "BLOCKED_IN_GITHUB_ACTIONS",
+      "detail": "The scheduled GitHub runner's cross-repository scanner returned 403 because CROSS_REPO_READ_TOKEN is not configured. The connected GitHub integration supplied this manual snapshot."
+    },
+    {
+      "id": "GAP-PRIVATE-SOURCES",
+      "status": "REDACTED",
+      "detail": "Two private repository identities and all private content are excluded from the public registry; private Library paths and contents were not copied."
+    },
+    {
+      "id": "GAP-WIX",
+      "status": "BLOCKED",
+      "detail": "Wix site is published and editorless; the full current static deployment bundle is not present in the repository. A partial upload could replace the site file set, so no Wix write was attempted."
+    }
+  ],
+  "NEW_SOURCES": {
+    "public_readme_records": 9,
+    "logic_wiki_source_records_added": 0,
+    "logic_units_added": 0,
+    "claims_added": 0
+  },
+  "DUPLICATE_SOURCES": [
+    {
+      "type": "IDENTICAL_README_GIT_BLOB",
+      "git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/MNM",
+        "tribal-archery/Qdprojects"
+      ],
+      "interpretation": "Duplicate README content only; repository identity, architecture equivalence and code lineage remain unresolved."
+    }
+  ],
+  "LOGIC_UNITS": {
+    "added": 0,
+    "source_grounded_counterexamples_added": 0,
+    "semantic_benchmark_cases_added": 0,
+    "independent_reviews_added": 0
+  },
+  "COMPOSITION_COUNT": {
+    "active_contracts": 2,
+    "total_rules": 3,
+    "new_compositions": 0
+  },
+  "CONTRADICTIONS": {
+    "new_source_grounded_contradictions": 0,
+    "open_identity_ambiguities": 1,
+    "core_contradictions_recorded_in_readiness_catalog": 0
+  },
+  "BENCHMARKS": {
+    "semantic_ground_truth_cases": 0,
+    "semantic_suites": 0,
+    "source_grounded_counterexamples": 0,
+    "independent_reviews": 0,
+    "software_ci_status": "CURRENT_LIMBO_PR_CI_PASS; CURRENT_LOGIC_FRACTAL_REPORT_CI_PENDING"
+  },
+  "CI": {
+    "limbo_pr": 122,
+    "limbo_head_sha": "02de60596d024e908558655349641d055df32115",
+    "limbo_workflow_run_id": 39005035439,
+    "limbo_workflow_conclusion": "success",
+    "repository_integrity_run_id": 39005035405,
+    "repository_integrity_conclusion": "success",
+    "codeql_run_id": 39005035433,
+    "codeql_conclusion": "success",
+    "latest_successful_logic_fractal_run_id": 38343566735,
+    "latest_successful_logic_fractal_date": "2026-10-13",
+    "latest_logic_fractal_artifact": "logic-wiki-research-report.zip",
+    "latest_logic_fractal_artifact_size_bytes": 76037,
+    "current_logic_fractal_pr_run": "PENDING"
+  },
+  "MODEL_HASH": {
+    "current_cycle": "PENDING_CURRENT_LOGIC_FRACTAL_CI",
+    "last_successful_typed_candidate": "a16a83aef58d04bfc06c5eafda915b5c65c0a3a",
+    "last_successful_build_date": "2026-10-13",
+    "source_validated": false
+  },
+  "READINESS_GATE": {
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "catalog_articles": 28,
+    "catalog_entries_with_sources": 28,
+    "unique_source_ids": 17,
+    "source_classes": {
+      "count": 11,
+      "basis": "Last successful CI build 2026-10-13; current-cycle CI recomputation pending."
+    },
+    "editorial_relation_edges": 111,
+    "active_composition_contracts": 2,
+    "logic_units_with_provenance": "PENDING_CURRENT_CI_RECOMPUTE",
+    "source_grounded_counterexamples": 0,
+    "semantic_test_cases": 0,
+    "semantic_suites": 0,
+    "independent_review_cycles": 0,
+    "holdout_split": "NOT_CONFIGURED",
+    "mirror_review": "NOT_DONE",
+    "duplicate_article_ids": 0,
+    "dangling_relation_refs": 0,
+    "release_status": "BLOCKED"
+  },
+  "BUILT_TESTED_VERIFIED": {
+    "built": "Limbo history-event schema, append-only history ingestion, and evidence-gated tuning candidate builder committed to PR #122 branch.",
+    "tested": "Limbo workflow, Repository Integrity and CodeQL completed successfully on head 02de60596d024e908558655349641d055df32115.",
+    "verified": "No semantic model, real crash point, causal link or real-system replay is verified by this cycle."
+  },
+  "BLOCKED": [
+    "No source-backed Limbo crash records are present; the reality matrix remains empty and the map coverage is NO_INPUTS.",
+    "No current-cycle logic-fractal build artifact is available yet.",
+    "No complete Wix deployment bundle is available for a safe additive update.",
+    "No ChatGPT conversation export is present in the visible Library."
+  ],
+  "NEXT": [
+    "Read the current Logic Fractal CI artifact and update the model hash/readiness report from actual output.",
+    "Scan the next ten repositories listed in scan_cursor.json.",
+    "Populate Limbo only from source-backed incident evidence; test actual replay only when a concrete target runtime is available.",
+    "Recover the complete Wix site bundle before attempting deployment."
+  ]
+}

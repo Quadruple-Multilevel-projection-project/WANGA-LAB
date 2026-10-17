@@ -19,25 +19,46 @@
     "note": "The builder constructs a deterministic two-scale candidate and preserves source lineage. This does not satisfy the first-model release gate because source ingestion, benchmark suites, holdout, MIRROR review and independent review remain incomplete."
   },
   "last_research_cycle": {
-    "date": "2026-10-12",
-    "pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/98",
-    "merge_commit": "f0ef3c345aeefbff2888312544f1e4bde7cf83d5",
-    "wix_readback_status": "PASS",
+    "date": "2026-10-17",
+    "pr_url": null,
+    "merge_commit": null,
+    "wix_readback_status": "BLOCKED_NO_COMPLETE_DEPLOYMENT_BUNDLE",
     "conversation_archive_coverage": "PARTIAL_ACCESS_ONLY",
     "new_conversation_source_records": 0,
-    "typed_fragment_tests": 8,
+    "typed_fragment_tests": null,
     "first_model_status": "CANDIDATE_NOT_RELEASED",
     "semantic_status": "NOT_YET_VERIFIED",
     "wix_research_status_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki-research-status.html",
-    "github_report_path": "research/reports/logic-fractal/2026-10-12-cycle.md",
-    "agent_run": {
-      "workflow_run_id": 38280474364,
-      "agent_roles_executed": 8,
-      "conversation_records_processed": 0,
-      "catalog_graph_composition_candidates": 189,
-      "wiki_build_status": "PASS",
-      "readiness_gate": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
-      "note": "Catalog graph paths only; not 189 verified logic units or conversation-derived fragments."
-    }
-  }
+    "github_report_path": "research/reports/logic-fractal/2026-10-17-cycle.md",
+    "current_cycle_ci": "PENDING",
+    "current_model_hash": "PENDING_CURRENT_CI",
+    "catalog_articles": 28,
+    "source_records": 17,
+    "source_classes": 11,
+    "relation_edges": 111,
+    "composition_rules_with_contracts": 2,
+    "source_grounded_counterexamples": 0,
+    "semantic_test_cases": 0,
+    "benchmark_suites": 0,
+    "independent_review_cycles": 0
+  },
+  "previous_successful_agent_run": null,
+  "agent_run": {
+    "workflow_run_id": null,
+    "workflow_run_url": null,
+    "date": "2026-10-17",
+    "status": "PENDING_CI",
+    "execution_mode": "BOUNDED_TOOL_ROLES_NOT_SEPARATE_LLM_INSTANCES",
+    "agent_roles_executed": 10,
+    "conversation_records_processed": 0,
+    "source_records_added": 0,
+    "source_classes_added": 0,
+    "logic_units_added": 0,
+    "composition_candidates_added": 0,
+    "counterexamples_added": 0,
+    "semantic_benchmark_cases_added": 0,
+    "tests_passed": null,
+    "report_path": "research/reports/logic-fractal/2026-10-17-cycle.md"
+  },
+  "github_report_path": "research/reports/logic-fractal/2026-10-17-cycle.md"
 }
