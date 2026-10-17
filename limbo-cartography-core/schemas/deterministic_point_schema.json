@@ -1,32 +1,192 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "title": "DeterministicCollapsePoint",
+  "title": "LimboIncidentRecordV1",
   "type": "object",
   "properties": {
-    "coordinate_id": {"type": "string", "minLength": 1},
-    "timestamp_utc": {"type": "string", "format": "date-time"},
-    "status": {"type": "string", "enum": ["OBSERVED", "STRUCTURALLY_TESTED", "VERIFIED"]},
-    "legacy_system_status": {"type": "string", "enum": ["NOT_ASSESSED", "LOCAL_STRUCTURE_FAILURE", "COLLAPSE_REPORTED"]},
-    "source_refs": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1},
-    "context": {"type": "string", "minLength": 1},
-    "failure_observation": {"type": "string", "minLength": 1},
-    "structure_ref": {"type": ["string", "null"]},
+    "coordinate_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "OBSERVED",
+        "STRUCTURALLY_TESTED",
+        "VERIFIED"
+      ]
+    },
+    "legacy_system_status": {
+      "type": "string",
+      "enum": [
+        "NOT_ASSESSED",
+        "LOCAL_STRUCTURE_FAILURE",
+        "COLLAPSE_REPORTED"
+      ]
+    },
+    "source_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "source_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_uri": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_sha256": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[A-Fa-f0-9]{64}$"
+          },
+          "exact_locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "language": {
+            "type": "string",
+            "minLength": 1
+          },
+          "permission_scope": {
+            "type": "string",
+            "enum": [
+              "PUBLIC_SOURCE",
+              "PUBLIC_REDACTED_SUMMARY",
+              "SYNTHETIC_TEST_FIXTURE"
+            ]
+          },
+          "excerpt_or_summary": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "source_uri",
+          "source_version",
+          "source_sha256",
+          "exact_locator",
+          "language",
+          "permission_scope",
+          "excerpt_or_summary"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "context": {
+      "type": "string",
+      "minLength": 1
+    },
+    "failure_observation": {
+      "type": "string",
+      "minLength": 1
+    },
+    "affected_component": {
+      "type": "string",
+      "minLength": 1
+    },
+    "observed_state": {
+      "type": "string",
+      "minLength": 1
+    },
+    "prior_incident_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "structure_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
     "verification": {
       "type": "object",
       "properties": {
-        "procedure": {"type": "string", "minLength": 1},
-        "result": {"type": "string", "minLength": 1},
-        "verified_at_utc": {"type": "string", "format": "date-time"},
-        "evidence_refs": {"type": "array", "items": {"type": "string", "minLength": 1}, "minItems": 1}
+        "procedure": {
+          "type": "string",
+          "minLength": 1
+        },
+        "result": {
+          "type": "string",
+          "minLength": 1
+        },
+        "verified_at_utc": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "minItems": 1,
+          "uniqueItems": true
+        }
       },
-      "required": ["procedure", "result", "verified_at_utc", "evidence_refs"],
+      "required": [
+        "procedure",
+        "result",
+        "verified_at_utc",
+        "evidence_refs"
+      ],
       "additionalProperties": false
     }
   },
-  "required": ["coordinate_id", "timestamp_utc", "status", "legacy_system_status", "source_refs", "context", "failure_observation"],
-  "allOf": [{
-    "if": {"properties": {"status": {"const": "VERIFIED"}}, "required": ["status"]},
-    "then": {"required": ["verification"]}
-  }],
+  "required": [
+    "coordinate_id",
+    "timestamp_utc",
+    "status",
+    "legacy_system_status",
+    "source_refs",
+    "source_evidence",
+    "context",
+    "failure_observation",
+    "affected_component",
+    "observed_state",
+    "prior_incident_ids"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "const": "VERIFIED"
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "verification"
+        ]
+      }
+    }
+  ],
   "additionalProperties": false
 }
