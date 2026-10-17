@@ -7,9 +7,12 @@ import sys
 from pathlib import Path
 from typing import Any
 
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from engine.history_link_validator import validate_history_data
 
-ROOT = Path(__file__).resolve().parents[1]
 MATRIX_PATH = ROOT / "cartography" / "reality_matrix.json"
 INCIDENT_SCHEMA_PATH = ROOT / "schemas" / "deterministic_point_schema.json"
 EVENT_SCHEMA_PATH = ROOT / "schemas" / "history_event_schema.json"
