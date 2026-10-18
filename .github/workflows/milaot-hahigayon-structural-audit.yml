@@ -33,6 +33,9 @@ jobs:
       - name: Rebuild complete-book sentence candidates
         run: python tools/milaot_hahigayon/extract_book_structure.py
 
+      - name: Build complete Gate XIV relation matrix
+        run: python tools/milaot_hahigayon/build_gate14_full_relation_matrix.py
+
       - name: Build source-preserving integration artifact
         shell: bash
         run: |
@@ -78,6 +81,7 @@ jobs:
             artifacts/gate14_sentence_structure.json
             artifacts/gate14_word_occurrence_matrix.json
             artifacts/gate14_word_role_candidates.json
+            artifacts/gate14_full_relation_matrix.json
             artifacts/gate14_structural_integration.json
             artifacts/gate14_execution_audit.json
             artifacts/current_audit_status.json
