@@ -1,0 +1,40 @@
+{
+  "contract_id": "MILAOT_HAHIGAYON_INTERNAL_FRAMEWORK_INTEGRATION_V1",
+  "work": "מילות ההגיון",
+  "target_gate": 14,
+  "framework_gates": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+  "objective": "Place Gate 14 inside the internal structure established by Gates 1-13, using only evidence and relationships traceable to the book's own source material.",
+  "mode": "STRUCTURAL_INTEGRATION_ONLY",
+  "preserve": [
+    "source wording",
+    "source order",
+    "gate and sentence identifiers",
+    "separation between source text and structural metadata",
+    "existing repository history"
+  ],
+  "prohibited": [
+    "interpretive commentary",
+    "explanatory prose presented as output",
+    "external theoretical additions",
+    "invented source relationships",
+    "rewriting or flattening the original structure",
+    "marking extraction as verification",
+    "claiming completion when required source material is missing"
+  ],
+  "evidence_rules": {
+    "source_text_is_authoritative": true,
+    "structural_labels_are_metadata": true,
+    "links_must_be_explicitly_declared_or_source_traceable": true,
+    "unproven_links_status": "UNRESOLVED",
+    "missing_preceding_gates_status": "BLOCKED",
+    "verified_requires_evidence": true
+  },
+  "completion_conditions": [
+    "Target Gate 14 source units are indexed without changing their wording.",
+    "Each proposed relationship to Gates 1-13 is tied to a specific source unit or explicit repository record.",
+    "Missing source coverage is reported, not silently inferred.",
+    "The auditor passes all integrity and policy checks.",
+    "No unit is marked VERIFIED solely because it was extracted."
+  ],
+  "current_repository_coverage_note": "The sentence index currently lists structured sentence extraction for Gates 9-14 and does not list equivalent sentence extraction for Gates 1-8. Full integration across Gates 1-13 must remain BLOCKED until missing source/registry coverage is supplied or located and verified."
+}
