@@ -1,6 +1,6 @@
 {
   "schema": "WANGA_LIVE_STRUCTURAL_AUDIT_STATUS_V1",
-  "generated_at_utc": "2026-10-18T10:26:00.960528+00:00",
+  "generated_at_utc": "2026-10-18T10:30:02.946602+00:00",
   "overall_mechanical_status": "PASS",
   "integration_status": "READY_FOR_REVIEW",
   "coverage_status": "PASS",
@@ -21,17 +21,17 @@
   "relation_matrix_cells": 442,
   "relation_matrix_expected_cells": 442,
   "relation_matrix_structural_status_counts": {
-    "UNRESOLVED": 401,
-    "STRUCTURAL_LINK_CANDIDATE": 28,
+    "UNRESOLVED": 404,
+    "STRUCTURAL_LINK_CANDIDATE": 25,
     "EXPLICIT_SCOPE_REFERENCE": 13
   },
-  "relation_matrix_unresolved_with_lexical_overlap": 354,
+  "relation_matrix_unresolved_with_lexical_overlap": 357,
   "relation_matrix_unresolved_without_lexical_overlap": 47,
   "gate14_clause_candidate_count": 54,
   "gate14_clause_word_token_count": 799,
   "gate14_clause_token_coverage_complete": true,
-  "relation_review_queue_count": 268,
-  "relation_review_queue_unresolved_only_stopwords": 86,
+  "relation_review_queue_count": 270,
+  "relation_review_queue_unresolved_only_stopwords": 87,
   "relation_review_queue_unresolved_no_surface_overlap": 47,
   "word_role_counts": {
     "SUBJECT_TERM_CANDIDATE": 49,
@@ -52,11 +52,11 @@
     "Clause segmentation is punctuation-based and unverified; the review queue is not a set of confirmed structural links."
   ],
   "run": {
-    "id": "39119219654",
-    "number": "47",
-    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39119219654",
+    "id": "39119479706",
+    "number": "48",
+    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39119479706",
     "branch": "milaot-hahigayon-structural-integration-v1",
-    "commit": "10e6320b75d1f599992039369514e9bbc3773f85",
+    "commit": "93edab1d222e4607448ab7b67dc0202b21fc93b4",
     "workflow": "Milaot HaHigayon Structural Integration Audit",
     "event": "push"
   }
