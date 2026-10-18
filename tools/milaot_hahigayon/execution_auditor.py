@@ -13,6 +13,7 @@ CONTRACT_PATH = ROOT / "milaot-hahigayon/integration/INTERNAL_FRAMEWORK_CONTRACT
 SOURCE_PATH = ROOT / "milaot-hahigayon/sentences/שער-יד.md"
 SOURCE_SNAPSHOT_PATH = ROOT / "milaot-hahigayon/source/milot_hahigayon_d1106d9a.html"
 BOOK_REGISTRY_PATH = ROOT / "artifacts/book_sentence_registry.json"
+FULL_MATRIX_PATH = ROOT / "artifacts/gate14_full_relation_matrix.json"
 OUTPUT_PATH = ROOT / "artifacts/gate14_structural_integration.json"
 REPORT_PATH = ROOT / "artifacts/gate14_execution_audit.json"
 LINKS_PATH = ROOT / "milaot-hahigayon/integration/explicit_links.json"
@@ -173,6 +174,30 @@ def main() -> int:
     canonical_source = SOURCE_SNAPSHOT_PATH.read_text(encoding="utf-8")
     canonical_registry = load_json(BOOK_REGISTRY_PATH)
     findings = audit(contract, source, output, manifest, registry, canonical_source, canonical_registry)
+    full_matrix = load_json(FULL_MATRIX_PATH)
+    matrix_cells = full_matrix.get("cells", [])
+    canonical_units = canonical_registry.get("chapters", [])[13].get("sentence_units", []) if len(canonical_registry.get("chapters", [])) >= 14 else []
+    expected_pairs = {(u.get("sentence_id"), gate) for u in canonical_units for gate in range(1, 14)}
+    actual_pairs = [(c.get("gate14_sentence_id"), c.get("prior_gate")) for c in matrix_cells]
+    if full_matrix.get("complete_pairwise_coverage") is not True or len(matrix_cells) != 34 * 13:
+        findings.append("FULL_RELATION_MATRIX_CELL_COUNT_MISMATCH")
+    if len(set(actual_pairs)) != len(actual_pairs) or set(actual_pairs) != expected_pairs:
+        findings.append("FULL_RELATION_MATRIX_PAIR_COVERAGE_MISMATCH")
+    valid_matrix_statuses = {"UNRESOLVED", "STRUCTURAL_LINK_CANDIDATE", "EXPLICIT_SCOPE_REFERENCE"}
+    for cell in matrix_cells:
+        if cell.get("structural_link_status") not in valid_matrix_statuses:
+            findings.append("INVALID_FULL_MATRIX_STRUCTURAL_STATUS")
+            break
+        if cell.get("structural_link_status") == "UNRESOLVED" and cell.get("structural_relation_type") is not None:
+            findings.append("UNRESOLVED_CELL_HAS_RELATION_TYPE")
+            break
+        if cell.get("structural_link_status") in {"STRUCTURAL_LINK_CANDIDATE", "EXPLICIT_SCOPE_REFERENCE"} and not cell.get("structural_evidence"):
+            findings.append("STRUCTURAL_MATRIX_CELL_WITHOUT_EVIDENCE")
+            break
+        if cell.get("exact_surface_overlap_count", 0) != len(cell.get("exact_surface_overlap_terms", [])):
+            findings.append("LEXICAL_OVERLAP_COUNT_MISMATCH")
+            break
+
 
     report = {
         "audit_status": "PASS" if not findings else "FAIL",
@@ -185,9 +210,14 @@ def main() -> int:
         "canonical_source_coverage": output.get("canonical_source_coverage", {}).get("status"),
         "canonical_sentence_candidates_gate14": output.get("canonical_source_coverage", {}).get("canonical_sentence_candidates"),
         "legacy_gate14_registry_coverage": output.get("canonical_source_coverage", {}).get("legacy_registry_coverage"),
+        "relation_matrix_cells": len(matrix_cells),
+        "expected_relation_matrix_cells": 34 * 13,
+        "relation_matrix_structural_status_counts": full_matrix.get("structural_status_counts", {}),
+        "relation_matrix_unresolved_with_lexical_overlap": full_matrix.get("unresolved_with_lexical_overlap"),
+        "relation_matrix_unresolved_without_lexical_overlap": full_matrix.get("unresolved_without_lexical_overlap"),
         "verification_boundary": (
             "Audit PASS confirms source preservation, registry coverage, declared link targets, and required evidence fields. "
-            "It does not certify full sentence-level extraction of Gates 1-8 or prove semantic identity of structural correspondences."
+            "It does not certify syntactic sentence boundaries or prove semantic identity of structural correspondences. The full matrix distinguishes candidate links, explicit scope references, lexical overlap, and unresolved pairs."
         )
     }
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
