@@ -12,7 +12,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   structural-integration-audit:
@@ -45,7 +45,27 @@ jobs:
       - name: Audit execution independently
         run: python tools/milaot_hahigayon/execution_auditor.py
 
+
+      - name: Publish live audit status for Wix dashboard
+        if: always()
+        run: python tools/milaot_hahigayon/publish_audit_status.py
+
+      - name: Commit live audit status to working branch
+        if: always()
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add artifacts/current_audit_status.json
+          if git diff --cached --quiet; then
+            echo "Live status JSON is unchanged."
+            exit 0
+          fi
+          git commit -m "Update live structural audit status [skip ci]"
+          git push origin "HEAD:${GITHUB_REF_NAME}"
+
       - name: Upload machine-readable artifacts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: milaot-hahigayon-structural-evidence
@@ -56,7 +76,8 @@ jobs:
             artifacts/gate14_word_role_candidates.json
             artifacts/gate14_structural_integration.json
             artifacts/gate14_execution_audit.json
-          if-no-files-found: error
+            artifacts/current_audit_status.json
+          if-no-files-found: warn
 
       - name: Print explicit integration and audit statuses
         run: |
@@ -73,6 +94,7 @@ jobs:
           PY
 
       - name: Upload integration and audit artifacts
+        if: always()
         uses: actions/upload-artifact@v4
         with:
           name: milaot-hahigayon-gate14-structural-integration
@@ -82,5 +104,6 @@ jobs:
             artifacts/gate14_word_occurrence_matrix.json
             artifacts/gate14_structural_integration.json
             artifacts/gate14_execution_audit.json
-          if-no-files-found: error
+            artifacts/current_audit_status.json
+          if-no-files-found: warn
           retention-days: 30
