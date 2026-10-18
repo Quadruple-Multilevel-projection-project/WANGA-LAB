@@ -62,3 +62,7 @@
 
 - מטריצת זוגות מלאה שער י״ד × שערים א׳–י״ג: `artifacts/gate14_full_relation_matrix.json` (442 תאים; חפיפה מילולית מופרדת מקשר מבני).
 - מחולל המטריצה: `tools/milaot_hahigayon/build_gate14_full_relation_matrix.py`.
+
+- מועמדי סעיפים של שער י״ד עם מיקומי מקור: `artifacts/gate14_clause_registry.json` — 54 יחידות מועמדות, 799 טוקנים, 0 שגיאות מיקום.
+- תור סקירה של קשרים לא פתורים לפי חפיפת מונחי תוכן: `artifacts/gate14_relation_review_queue.json` — מועמדי סקירה בלבד, לא קישורים מאומתים.
+- מחוללים: `tools/milaot_hahigayon/build_gate14_clause_registry.py`, `tools/milaot_hahigayon/build_gate14_relation_review_queue.py`.
