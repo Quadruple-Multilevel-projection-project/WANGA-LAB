@@ -1,0 +1,12 @@
+{
+  "manifest_version": 3,
+  "name": "Chrome Canary Neural Sandbox",
+  "version": "0.1.0",
+  "description": "Isolated neural-compute sandbox using Web Worker, SharedArrayBuffer and TensorFlow.js/WebGPU.",
+  "sandbox": {
+    "pages": ["index.html"],
+    "content_security_policy": "sandbox allow-scripts; script-src 'self' https://cdn.jsdelivr.net; object-src 'self'"
+  },
+  "cross_origin_opener_policy": {"value": "same-origin"},
+  "cross_origin_embedder_policy": {"value": "require-corp"}
+}

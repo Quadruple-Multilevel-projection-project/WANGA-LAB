@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+<meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+<title>Chrome Canary Neural Sandbox</title>
+<style>
+body{font-family:system-ui,sans-serif;max-width:980px;margin:40px auto;padding:0 20px;background:#0f172a;color:#e2e8f0}
+.card{background:#1e293b;border:1px solid #334155;border-radius:10px;padding:18px;margin:14px 0}
+button{padding:10px 14px;border-radius:7px;border:1px solid #475569;background:#0f172a;color:#e2e8f0;cursor:pointer}
+code,pre{font-family:ui-monospace,monospace}.ok{color:#4ade80}.warn{color:#fbbf24}.err{color:#f87171}
+</style></head>
+<body>
+<h1>Chrome Canary Neural Sandbox</h1>
+<p>Web Worker + SharedArrayBuffer + TensorFlow.js/WebGPU execution test.</p>
+<div class="card"><strong>Isolation</strong><div id="isolation">checking…</div></div>
+<div class="card"><strong>Runtime</strong><div id="runtime">initializing…</div><button id="run" disabled>Run worker inference</button></div>
+<div class="card"><strong>Result</strong><pre id="result">—</pre></div>
+<script>
+if ("serviceWorker" in navigator && !window.crossOriginIsolated) {
+  navigator.serviceWorker.register("./sw.js",{scope:"./"}).then(()=>{
+    if(!navigator.serviceWorker.controller) location.reload();
+  }).catch(console.error);
+}
+const isolation=document.getElementById("isolation"),runtime=document.getElementById("runtime"),result=document.getElementById("result"),run=document.getElementById("run");
+isolation.innerHTML=window.crossOriginIsolated?'<span class="ok">crossOriginIsolated = true</span>':'<span class="warn">crossOriginIsolated = false — SharedArrayBuffer may be unavailable</span>';
+const worker=new Worker("./nn_sandbox_engine.js");
+worker.onmessage=({data})=>{
+  if(data.type==="READY"){runtime.textContent=data.message;run.disabled=false;}
+  else if(data.type==="RESULT"){result.textContent=JSON.stringify(data.payload,null,2);}
+  else if(data.type==="ERROR"){runtime.innerHTML='<span class="err">'+data.message+'</span>';result.textContent=data.stack||"";}
+};
+worker.postMessage({type:"INIT"});
+run.onclick=()=>{
+  if(!window.crossOriginIsolated||typeof SharedArrayBuffer==="undefined"){result.textContent="SharedArrayBuffer is not available in this execution context.";return;}
+  const input=new SharedArrayBuffer(Float32Array.BYTES_PER_ELEMENT*8),output=new SharedArrayBuffer(Float32Array.BYTES_PER_ELEMENT*4),x=new Float32Array(input);
+  for(let i=0;i<x.length;i++)x[i]=i+1;
+  worker.postMessage({type:"INFER",input,output,length:x.length});
+};
+</script></body></html>
