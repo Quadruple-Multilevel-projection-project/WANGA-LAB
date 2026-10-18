@@ -7,6 +7,7 @@ sentence-level extraction and never infers links from keyword similarity alone.
 """
 from __future__ import annotations
 
+import html
 import json
 import re
 from pathlib import Path
@@ -23,6 +24,8 @@ OUT_DIR = ROOT / "artifacts"
 OUT_PATH = OUT_DIR / "gate14_structural_integration.json"
 
 SOURCE_COMMIT = "d1106d9a66528dc3e39cf1ea0732782927d9f678"
+SOURCE_SNAPSHOT_PATH = ROOT / "milaot-hahigayon/source/milot_hahigayon_d1106d9a.html"
+BOOK_REGISTRY_PATH = ROOT / "artifacts/book_sentence_registry.json"
 GATE_NUMERALS = {
     "א": 1, "א׳": 1, "ב": 2, "ב׳": 2, "ג": 3, "ג׳": 3,
     "ד": 4, "ד׳": 4, "ה": 5, "ה׳": 5, "ו": 6, "ו׳": 6,
@@ -166,6 +169,57 @@ def collect_target_ids(registry: dict[str, Any]) -> set[str]:
     return target_ids
 
 
+
+def normalize_source_fragment(fragment: str) -> str:
+    fragment = re.sub(
+        r'<sup class="footnote-marker">[\s\S]*?</sup>\s*<i class="footnote">[\s\S]*?</i>',
+        "", fragment
+    )
+    fragment = re.sub(r"<[^>]+>", "", fragment)
+    fragment = html.unescape(fragment).replace("\xa0", " ")
+    return re.sub(r"\s+", " ", fragment).strip()
+
+
+def audit_canonical_gate14_source(gate14_text: str) -> dict[str, Any]:
+    raw = read_text(SOURCE_SNAPSHOT_PATH)
+    heading_re = re.compile(r"<h3[^>]*>\s*שער\s*([^<]+)</h3>", re.I)
+    headings = list(heading_re.finditer(raw))
+    registry = json.loads(read_text(BOOK_REGISTRY_PATH))
+    chapter14 = registry.get("chapters", [])[13] if len(registry.get("chapters", [])) >= 14 else {}
+    if len(headings) != 14:
+        return {"status": "FAIL", "full_source_match": False,
+                "reason": f"EXPECTED_14_SOURCE_HEADINGS_FOUND_{len(headings)}"}
+    canonical_text = normalize_source_fragment(raw[headings[13].end():])
+    registry_text = chapter14.get("normalized_source_text", "")
+    units = parse_gate14_units(gate14_text)
+    exact_legacy_quotes = sum(
+        1 for unit in units
+        if unit.get("source_text") and normalize_source_fragment(unit["source_text"]) in canonical_text
+    )
+    full_match = (
+        registry.get("source", {}).get("commit") == SOURCE_COMMIT
+        and registry.get("chapter_count") == 14
+        and chapter14.get("chapter") == 14
+        and registry_text == canonical_text
+        and bool(chapter14.get("sentence_units"))
+        and all(unit.get("original_text") in canonical_text for unit in chapter14.get("sentence_units", []))
+    )
+    return {
+        "status": "PASS" if full_match else "FAIL",
+        "full_source_match": full_match,
+        "source_commit": SOURCE_COMMIT,
+        "source_heading_count": len(headings),
+        "canonical_gate14_characters": len(canonical_text),
+        "registry_gate14_characters": len(registry_text),
+        "canonical_sentence_candidates": len(chapter14.get("sentence_units", [])),
+        "canonical_word_count": chapter14.get("word_count"),
+        "legacy_units": len(units),
+        "legacy_exact_quote_matches": exact_legacy_quotes,
+        "legacy_registry_coverage": "PARTIAL" if exact_legacy_quotes < len(units) else "ALL_QUOTES_FOUND",
+        "boundary": "Candidate sentence segmentation is not a verified syntactic analysis. Legacy unit excerpts are a separate derived layer."
+    }
+
+
 def integrate() -> dict[str, Any]:
     contract = json.loads(read_text(CONTRACT_PATH))
     index_text = read_text(INDEX_PATH)
@@ -173,6 +227,7 @@ def integrate() -> dict[str, Any]:
     gate13_text = read_text(GATE13_PATH)
     preceding_registry = json.loads(read_text(PRECEDING_SOURCE_REGISTRY_PATH))
     coverage = detect_coverage(index_text, preceding_registry)
+    source_coverage = audit_canonical_gate14_source(gate14_text)
     units = parse_gate14_units(gate14_text)
     explicit_links = read_json(LINKS_PATH, [])
 
@@ -195,7 +250,7 @@ def integrate() -> dict[str, Any]:
     gate13_present = bool(gate13_text.strip())
     status = (
         "READY_FOR_REVIEW"
-        if coverage["coverage_status"] == "PASS" and not rejected_links and gate13_present
+        if coverage["coverage_status"] == "PASS" and source_coverage["full_source_match"] and not rejected_links and gate13_present
         else "BLOCKED"
     )
 
@@ -206,6 +261,7 @@ def integrate() -> dict[str, Any]:
         "target_gate": 14,
         "preceding_gates": list(range(1, 14)),
         "coverage": coverage,
+        "canonical_source_coverage": source_coverage,
         "gate13_registry_present": gate13_present,
         "source_preserved": True,
         "interpretation_added": False,
@@ -214,7 +270,8 @@ def integrate() -> dict[str, Any]:
         "units": units,
         "rejected_links": rejected_links,
         "limitations": [
-            "Gates 1-8 have immutable source locators and checked excerpts, but not full sentence-level extraction in the repository index.",
+            "The canonical registry contains punctuation-based sentence candidates and lexical tokens for all 14 gates; candidate segmentation is not verified syntax.",
+            "The legacy Gate 14 derived registry contains abbreviated excerpts and does not independently cover the full canonical Gate 14 source.",
             "Structural correspondence labels are metadata; they are not quotations or claims made verbatim by the source.",
             "No relation is inferred from keyword similarity alone; links require a named target and evidence reference.",
             "EXTRACTED does not mean SOURCE-CHECKED or VERIFIED."
@@ -240,6 +297,9 @@ def main() -> int:
         "links_attached": sum(len(unit["structural_links"]) for unit in result["units"]),
         "rejected_links": len(result["rejected_links"]),
         "coverage_status": result["coverage"]["coverage_status"],
+        "canonical_source_coverage_status": result["canonical_source_coverage"]["status"],
+        "canonical_gate14_sentence_candidates": result["canonical_source_coverage"].get("canonical_sentence_candidates"),
+        "legacy_gate14_registry_coverage": result["canonical_source_coverage"].get("legacy_registry_coverage"),
         "source_located_gates": result["coverage"]["source_located_gates"],
         "gates_not_sentence_extracted": result["coverage"]["gates_not_sentence_extracted"],
         "output": str(OUT_PATH.relative_to(ROOT))
