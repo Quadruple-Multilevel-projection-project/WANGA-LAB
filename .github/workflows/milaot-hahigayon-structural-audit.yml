@@ -75,7 +75,15 @@ jobs:
             exit 0
           fi
           git commit -m "Update live structural audit status [skip ci]"
-          git push origin "HEAD:${GITHUB_REF_NAME}"
+          if ! git pull --rebase origin "${GITHUB_REF_NAME}"; then
+            git rebase --abort || true
+            echo "Remote branch moved during status publication; leaving the report in the Actions artifact for the next run to refresh."
+            exit 0
+          fi
+          if ! git push origin "HEAD:${GITHUB_REF_NAME}"; then
+            echo "Status push raced with a remote update; a subsequent run will refresh the committed status."
+            exit 0
+          fi
 
       - name: Upload machine-readable artifacts
         if: always()
