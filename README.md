@@ -13,6 +13,8 @@ The second direction does **not** claim to predict or control future outcomes. T
 
 **Daily integration map (2026-10-13):** [Logic architecture ↔ three Logic Boxes ↔ Wix catalog](docs/DAILY_INTEGRATION_MAP_2026-10-13.md) — canonical index of architecture sources, product status, public links, and remaining integration tests.
 
+**Logic diagram traceability correction (2026-10-18):** [Correction and Traceability Map V1](docs/LOGIC_ARCHITECTURE_CORRECTION_AND_TRACEABILITY_V1.md) — maps the proposed algorithmic-seed diagram to existing Logic Wiki/fractal components and labels unsupported mappings, implementation states, and verification boundaries.
+
 **Architecture navigation:** [Protected Core → Independent Evidence Infrastructure](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/PROTECTED_CORE_AND_EVIDENCE_INFRASTRUCTURE.md) · [Rational Logic — Protected IP Boundary](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/RATIONAL_LOGIC_IP_BOUNDARY.md) · [Repository Ecosystem](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/REPOSITORY_ECOSYSTEM.md)
 
 ## WANGA and Rational Logic
