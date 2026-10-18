@@ -25,6 +25,9 @@ jobs:
         with:
           python-version: "3.12"
 
+      - name: Rebuild complete-book sentence candidates
+        run: python tools/milaot_hahigayon/extract_book_structure.py
+
       - name: Build source-preserving integration artifact
         shell: bash
         run: |
@@ -37,9 +40,6 @@ jobs:
             exit "$rc"
           fi
           echo "Integrator exit code: $rc (0=ready, 2=blocked by source coverage)"
-
-      - name: Rebuild complete-book sentence candidates
-        run: python tools/milaot_hahigayon/extract_book_structure.py
 
       - name: Audit execution independently
         run: python tools/milaot_hahigayon/execution_auditor.py
