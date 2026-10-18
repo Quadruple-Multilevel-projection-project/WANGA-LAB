@@ -7,6 +7,7 @@ on:
     paths:
       - "milaot-hahigayon/**"
       - "tools/milaot_hahigayon/**"
+      - "artifacts/**"
       - ".github/workflows/milaot-hahigayon-structural-audit.yml"
   workflow_dispatch:
 
@@ -50,6 +51,8 @@ jobs:
           name: milaot-hahigayon-structural-evidence
           path: |
             artifacts/book_sentence_registry.json
+            artifacts/gate14_sentence_structure.json
+            artifacts/gate14_word_occurrence_matrix.json
             artifacts/gate14_structural_integration.json
             artifacts/gate14_execution_audit.json
           if-no-files-found: error
@@ -73,6 +76,9 @@ jobs:
         with:
           name: milaot-hahigayon-gate14-structural-integration
           path: |
+            artifacts/book_sentence_registry.json
+            artifacts/gate14_sentence_structure.json
+            artifacts/gate14_word_occurrence_matrix.json
             artifacts/gate14_structural_integration.json
             artifacts/gate14_execution_audit.json
           if-no-files-found: error
