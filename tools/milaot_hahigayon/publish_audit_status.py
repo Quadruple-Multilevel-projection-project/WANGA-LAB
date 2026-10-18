@@ -23,6 +23,7 @@ def main() -> int:
     analysis = read_json("gate14_sentence_structure.json")
     overlap = read_json("gate14_word_occurrence_matrix.json")
     roles = read_json("gate14_word_role_candidates.json")
+    matrix = read_json("gate14_full_relation_matrix.json")
     coverage = integration.get("coverage", {})
     source_coverage = integration.get("canonical_source_coverage", {})
     audit_status = audit.get("audit_status", "MISSING")
@@ -33,6 +34,8 @@ def main() -> int:
         audit_status == "PASS"
         and coverage_status == "PASS"
         and source_coverage.get("full_source_match") is True
+        and matrix.get("complete_pairwise_coverage") is True
+        and matrix.get("cell_count") == 34 * 13
         and not findings
     )
     run_id = os.environ.get("GITHUB_RUN_ID", "")
@@ -58,15 +61,23 @@ def main() -> int:
         "gate14_word_token_count": roles.get("token_count", 0),
         "gate14_structural_annotations": len(analysis.get("units", [])),
         "gate14_exact_surface_overlap_terms": overlap.get("terms_with_prior_gate_overlap", 0),
+        "relation_matrix_status": matrix.get("status", "MISSING"),
+        "relation_matrix_cells": matrix.get("cell_count", 0),
+        "relation_matrix_expected_cells": matrix.get("expected_cell_count", 34 * 13),
+        "relation_matrix_structural_status_counts": matrix.get("structural_status_counts", {}),
+        "relation_matrix_unresolved_with_lexical_overlap": matrix.get("unresolved_with_lexical_overlap", 0),
+        "relation_matrix_unresolved_without_lexical_overlap": matrix.get("unresolved_without_lexical_overlap", 0),
         "word_role_counts": roles.get("role_counts", {}),
         "audit_status": audit_status,
+        "relation_matrix_status": matrix.get("status", "MISSING"),
         "audit_findings": findings,
         "warnings": [
             "READY_FOR_REVIEW is not VERIFIED.",
             "Punctuation-based sentence boundaries remain candidates.",
             "Legacy Gate XIV excerpts cover only part of the canonical text.",
             "Exact word overlap is not a semantic relationship.",
-            "Word-role labels are rule-based candidates; unassigned tokens require review."
+            "Word-role labels are rule-based candidates; unassigned tokens require review.",
+            "The 34-by-13 relation matrix is pairwise-complete, but most cells remain unresolved or lexical-only."
         ],
         "run": {
             "id": run_id,
