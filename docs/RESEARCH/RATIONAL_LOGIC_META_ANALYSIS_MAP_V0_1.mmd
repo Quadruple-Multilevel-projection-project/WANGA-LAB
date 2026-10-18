@@ -1,0 +1,53 @@
+# Rational Logic Meta-Analysis — Mermaid Research Map v0.1
+
+```mermaid
+flowchart TD
+    RS["RULE-SPACE<br/>combinatorial configuration space"]
+    RS --> B["BOUND CASE"]
+    B --> O["OBSERVATION"]
+    O --> E["EXTRACTION"]
+    E --> D["DISTINCTION"]
+    E --> R["RELATION"]
+    E --> C["CONDITION"]
+    E --> T["TRANSFORMATION"]
+    E --> A["ATTRIBUTION"]
+    E --> L["LEVEL / READING"]
+    E --> M["MODALITY / SCOPE"]
+    D --> X["STRUCTURAL TEST"]
+    R --> X
+    C --> X
+    T --> X
+    A --> X
+    L --> X
+    M --> X
+    X --> C1["C1: DIFFERENT AUTHOR"]
+    X --> C2["C2: POSITION REVISED"]
+    X --> C3["C3: READING / LAYER"]
+    X --> C4["C4: HIDDEN CONDITION / SUBJECT"]
+    X --> C5["C5: PEDAGOGICAL SIMPLIFICATION"]
+    X --> C6["C6: DEEP DERIVATION"]
+    X --> C7["C7: CONCEALED TENSION"]
+    C1 --> V["VALIDATION"]
+    C2 --> V
+    C3 --> V
+    C4 --> V
+    C5 --> V
+    C6 --> V
+    C7 --> V
+    V --> P["PERTURBATION + REPLAY + PROVENANCE"]
+    P --> S["REPRESENTATION SPECIFICATION"]
+    S --> I["IMPLEMENTATION"]
+    SRC["SOURCE CORPUS<br/>Maimonidean logic + related texts"] --> E
+    SRC --> A
+    H["HYPOTHESIS"] -.-> C7
+    H -.-> X
+    N["LATER TEST FIXTURES<br/>graded eligibility/status rules"] -.-> C4
+    N -.-> V
+```
+
+## Interpretation boundary
+
+- Solid arrows represent workflow dependencies.
+- Dashed arrows represent hypotheses or later validation fixtures.
+- The seven causes are operator candidates, not assumed primitive ontology.
+- The source corpus supplies analytical vocabulary; it does not automatically define the complete rule-space.
