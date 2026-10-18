@@ -75,15 +75,19 @@ jobs:
             exit 0
           fi
           git commit -m "Update live structural audit status [skip ci]"
+          git stash push --include-untracked -m "temporary generated artifacts" -- artifacts/
           if ! git pull --rebase origin "${GITHUB_REF_NAME}"; then
             git rebase --abort || true
-            echo "Remote branch moved during status publication; leaving the report in the Actions artifact for the next run to refresh."
+            git stash pop || true
+            echo "Remote branch moved during status publication; the next CI run will refresh the status."
             exit 0
           fi
           if ! git push origin "HEAD:${GITHUB_REF_NAME}"; then
+            git stash pop || true
             echo "Status push raced with a remote update; a subsequent run will refresh the committed status."
             exit 0
           fi
+          git stash pop || true
 
       - name: Upload machine-readable artifacts
         if: always()
