@@ -1,0 +1,6 @@
+{
+  "name":"TNRL-Kernel","version":"0.1.0","status":"SPECIFIED",
+  "position":"kernel","higher_layer":"rational_logic","neural_bridge":"adapter",
+  "architecture":["source","ontology","talmudic_operators","ir","fol","runtime"],
+  "operators":["kushya","terutz","reaya","dehiya","stira","havdalah","mekor","mahloket","hachraa"]
+}
