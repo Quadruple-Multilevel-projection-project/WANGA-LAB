@@ -1,6 +1,6 @@
 {
   "schema": "WANGA_LIVE_STRUCTURAL_AUDIT_STATUS_V1",
-  "generated_at_utc": "2026-10-18T10:21:39.515924+00:00",
+  "generated_at_utc": "2026-10-18T10:22:16.737474+00:00",
   "overall_mechanical_status": "PASS",
   "integration_status": "READY_FOR_REVIEW",
   "coverage_status": "PASS",
@@ -27,6 +27,12 @@
   },
   "relation_matrix_unresolved_with_lexical_overlap": 354,
   "relation_matrix_unresolved_without_lexical_overlap": 47,
+  "gate14_clause_candidate_count": 54,
+  "gate14_clause_word_token_count": 799,
+  "gate14_clause_token_coverage_complete": true,
+  "relation_review_queue_count": 268,
+  "relation_review_queue_unresolved_only_stopwords": 86,
+  "relation_review_queue_unresolved_no_surface_overlap": 47,
   "word_role_counts": {
     "SUBJECT_TERM_CANDIDATE": 49,
     "UNASSIGNED_REQUIRES_REVIEW": 539,
@@ -42,14 +48,15 @@
     "Legacy Gate XIV excerpts cover only part of the canonical text.",
     "Exact word overlap is not a semantic relationship.",
     "Word-role labels are rule-based candidates; unassigned tokens require review.",
-    "The 34-by-13 relation matrix is pairwise-complete, but most cells remain unresolved or lexical-only."
+    "The 34-by-13 relation matrix is pairwise-complete, but most cells remain unresolved or lexical-only.",
+    "Clause segmentation is punctuation-based and unverified; the review queue is not a set of confirmed structural links."
   ],
   "run": {
-    "id": "39118925009",
-    "number": "39",
-    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39118925009",
+    "id": "39118969142",
+    "number": "42",
+    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39118969142",
     "branch": "milaot-hahigayon-structural-integration-v1",
-    "commit": "46693a5251902bffaef456382c70fe9bc267fff9",
+    "commit": "9a72fafbb9c13daf1191cdce3246c85d722143e5",
     "workflow": "Milaot HaHigayon Structural Integration Audit",
     "event": "push"
   }
