@@ -1,0 +1,56 @@
+name: Milaot HaHigayon Structural Integration Audit
+
+on:
+  push:
+    branches:
+      - milaot-hahigayon-structural-integration-v1
+    paths:
+      - "milaot-hahigayon/**"
+      - "tools/milaot_hahigayon/**"
+      - ".github/workflows/milaot-hahigayon-structural-audit.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  structural-integration-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Build source-preserving integration artifact
+        shell: bash
+        run: |
+          set +e
+          python tools/milaot_hahigayon/structural_integrator.py
+          rc=$?
+          set -e
+          if [ "$rc" -ne 0 ] && [ "$rc" -ne 2 ]; then
+            echo "Integrator failed unexpectedly with exit code $rc"
+            exit "$rc"
+          fi
+          echo "Integrator exit code: $rc (0=ready, 2=blocked by source coverage)"
+
+      - name: Audit execution independently
+        run: python tools/milaot_hahigayon/execution_auditor.py
+
+      - name: Print explicit integration and audit statuses
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          integration = json.loads(Path("artifacts/gate14_structural_integration.json").read_text(encoding="utf-8"))
+          audit = json.loads(Path("artifacts/gate14_execution_audit.json").read_text(encoding="utf-8"))
+          print("INTEGRATION_STATUS =", integration["status"])
+          print("COVERAGE_STATUS =", integration["coverage"]["coverage_status"])
+          print("AUDIT_STATUS =", audit["audit_status"])
+          if audit["audit_status"] != "PASS":
+              raise SystemExit("Audit did not pass")
+          PY
