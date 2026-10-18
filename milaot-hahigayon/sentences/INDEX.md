@@ -59,3 +59,6 @@
 - דוח סטטי/אינטראקטיבי לשימוש חוזר: `../../docs/milaot-hahigayon-structural-dashboard.html`.
 
 ה־Wix Dashboard מציג `overall_mechanical_status`, `integration_status`, כיסוי מקור, מצב הרישום הישן, ריצת CI אחרונה, 34 מועמדי משפט, 799 טוקנים של שער י״ד, חפיפות מונחים ותפקידי מילים מועמדים. WebMCP נרשם רק כאשר `document.modelContext` או `navigator.modelContext` זמין בדפדפן; כל הכלים המוצגים לקריאה בלבד.
+
+- מטריצת זוגות מלאה שער י״ד × שערים א׳–י״ג: `artifacts/gate14_full_relation_matrix.json` (442 תאים; חפיפה מילולית מופרדת מקשר מבני).
+- מחולל המטריצה: `tools/milaot_hahigayon/build_gate14_full_relation_matrix.py`.
