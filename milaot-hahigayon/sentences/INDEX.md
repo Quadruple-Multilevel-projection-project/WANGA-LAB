@@ -45,3 +45,17 @@
 ## רישום קנוני של המקור — שערים א׳–י״ד
 
 המקור המלא נשמר ללא שינוי ב־`milaot-hahigayon/source/milot_hahigayon_d1106d9a.html` לפי commit `d1106d9a66528dc3e39cf1ea0732782927d9f678`. רישום המילים ומועמדי המשפטים נמצא ב־`artifacts/book_sentence_registry.json`. חלוקת משפטים מבוססת פיסוק היא מועמדת בלבד (`CANDIDATE_SENTENCE_SEGMENTATION_NOT_VERIFIED`); היא אינה חילוץ תחבירי מאומת ואינה מוכיחה קשר בין שערים.
+
+
+## אינטגרציה חיה ותוצרי ביקורת
+
+- רישום מקור/משפטים/מילים לכל 14 השערים: `artifacts/book_sentence_registry.json` — חלוקת המשפטים היא מועמדת ולא תחביר מאומת.
+- ניתוח מבני נגזר לשער י״ד: `artifacts/gate14_sentence_structure.json`.
+- חפיפת פני־מילה בלבד: `artifacts/gate14_word_occurrence_matrix.json`.
+- תפקידי מילים מועמדים עם מיקומי מקור: `artifacts/gate14_word_role_candidates.json`.
+- מצב ביקורת עדכני שנוצר ב־CI ונשמר בענף: `artifacts/current_audit_status.json`.
+- קוד ה־Wix Dashboard החי: `integration/wix_audit_dashboard_embed.html`.
+- קוד WebMCP לקריאה בלבד: `integration/wix_webmcp_readonly_embed.html`.
+- דוח סטטי/אינטראקטיבי לשימוש חוזר: `../../docs/milaot-hahigayon-structural-dashboard.html`.
+
+ה־Wix Dashboard מציג `overall_mechanical_status`, `integration_status`, כיסוי מקור, מצב הרישום הישן, ריצת CI אחרונה, 34 מועמדי משפט, 799 טוקנים של שער י״ד, חפיפות מונחים ותפקידי מילים מועמדים. WebMCP נרשם רק כאשר `document.modelContext` או `navigator.modelContext` זמין בדפדפן; כל הכלים המוצגים לקריאה בלבד.
