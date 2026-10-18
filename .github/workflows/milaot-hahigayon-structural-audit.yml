@@ -54,3 +54,13 @@ jobs:
           if audit["audit_status"] != "PASS":
               raise SystemExit("Audit did not pass")
           PY
+
+      - name: Upload integration and audit artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: milaot-hahigayon-gate14-structural-integration
+          path: |
+            artifacts/gate14_structural_integration.json
+            artifacts/gate14_execution_audit.json
+          if-no-files-found: error
+          retention-days: 30
