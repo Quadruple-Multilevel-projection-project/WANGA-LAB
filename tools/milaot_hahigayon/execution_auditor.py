@@ -2,6 +2,7 @@
 """Independent compliance audit for the Gate 14 structural integration artifact."""
 from __future__ import annotations
 
+import html
 import json
 import re
 from pathlib import Path
@@ -10,6 +11,8 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[2]
 CONTRACT_PATH = ROOT / "milaot-hahigayon/integration/INTERNAL_FRAMEWORK_CONTRACT.json"
 SOURCE_PATH = ROOT / "milaot-hahigayon/sentences/שער-יד.md"
+SOURCE_SNAPSHOT_PATH = ROOT / "milaot-hahigayon/source/milot_hahigayon_d1106d9a.html"
+BOOK_REGISTRY_PATH = ROOT / "artifacts/book_sentence_registry.json"
 OUTPUT_PATH = ROOT / "artifacts/gate14_structural_integration.json"
 REPORT_PATH = ROOT / "artifacts/gate14_execution_audit.json"
 LINKS_PATH = ROOT / "milaot-hahigayon/integration/explicit_links.json"
@@ -53,8 +56,24 @@ def known_target_ids(registry: dict[str, Any]) -> set[str]:
     return {value for value in ids if isinstance(value, str) and value}
 
 
+
+def normalize_canonical_gate14(raw: str) -> tuple[str, int]:
+    headings = list(re.finditer(r"<h3[^>]*>\s*שער\s*([^<]+)</h3>", raw, re.I))
+    if len(headings) != 14:
+        return "", len(headings)
+    fragment = raw[headings[13].end():]
+    fragment = re.sub(
+        r'<sup class="footnote-marker">[\s\S]*?</sup>\s*<i class="footnote">[\s\S]*?</i>',
+        "", fragment
+    )
+    fragment = re.sub(r"<[^>]+>", "", fragment)
+    fragment = html.unescape(fragment).replace("\xa0", " ")
+    return re.sub(r"\s+", " ", fragment).strip(), len(headings)
+
+
 def audit(contract: dict[str, Any], source: str, output: dict[str, Any],
-          manifest: list[dict[str, Any]], registry: dict[str, Any]) -> list[str]:
+          manifest: list[dict[str, Any]], registry: dict[str, Any],
+          canonical_source: str, canonical_registry: dict[str, Any]) -> list[str]:
     findings: list[str] = []
 
     if output.get("target_gate") != 14:
@@ -78,6 +97,20 @@ def audit(contract: dict[str, Any], source: str, output: dict[str, Any],
 
     if output.get("source_preserved") is not True:
         findings.append("SOURCE_PRESERVATION_NOT_ASSERTED")
+
+    canonical_text, heading_count = normalize_canonical_gate14(canonical_source)
+    canonical_chapters = canonical_registry.get("chapters", [])
+    canonical_gate14 = canonical_chapters[13] if len(canonical_chapters) >= 14 else {}
+    if heading_count != 14:
+        findings.append("CANONICAL_SOURCE_HEADING_COUNT_MISMATCH")
+    if canonical_registry.get("source", {}).get("commit") != SOURCE_COMMIT:
+        findings.append("CANONICAL_REGISTRY_SOURCE_COMMIT_MISMATCH")
+    if canonical_gate14.get("normalized_source_text") != canonical_text:
+        findings.append("CANONICAL_GATE14_SOURCE_COVERAGE_MISMATCH")
+    if not canonical_gate14.get("sentence_units") or any(u.get("original_text") not in canonical_text for u in canonical_gate14.get("sentence_units", [])):
+        findings.append("CANONICAL_GATE14_CANDIDATE_UNIT_MISSING_FROM_SOURCE")
+    if output.get("canonical_source_coverage", {}).get("full_source_match") is not True:
+        findings.append("CANONICAL_SOURCE_COVERAGE_NOT_PASS")
 
     registry_gates = sorted(item.get("gate") for item in registry.get("gates", []) if isinstance(item.get("gate"), int))
     if registry.get("source_commit") != SOURCE_COMMIT or registry_gates != list(range(1, 9)):
@@ -137,7 +170,9 @@ def main() -> int:
     source = SOURCE_PATH.read_text(encoding="utf-8")
     manifest = json.loads(LINKS_PATH.read_text(encoding="utf-8"))
     registry = load_json(PRECEDING_SOURCE_REGISTRY_PATH)
-    findings = audit(contract, source, output, manifest, registry)
+    canonical_source = SOURCE_SNAPSHOT_PATH.read_text(encoding="utf-8")
+    canonical_registry = load_json(BOOK_REGISTRY_PATH)
+    findings = audit(contract, source, output, manifest, registry, canonical_source, canonical_registry)
 
     report = {
         "audit_status": "PASS" if not findings else "FAIL",
@@ -147,6 +182,9 @@ def main() -> int:
         "units_audited": len(output.get("units", [])),
         "links_audited": sum(len(unit.get("structural_links", [])) for unit in output.get("units", [])),
         "gate_1_8_source_registry": output.get("coverage", {}).get("gate_1_8_registry_status"),
+        "canonical_source_coverage": output.get("canonical_source_coverage", {}).get("status"),
+        "canonical_sentence_candidates_gate14": output.get("canonical_source_coverage", {}).get("canonical_sentence_candidates"),
+        "legacy_gate14_registry_coverage": output.get("canonical_source_coverage", {}).get("legacy_registry_coverage"),
         "verification_boundary": (
             "Audit PASS confirms source preservation, registry coverage, declared link targets, and required evidence fields. "
             "It does not certify full sentence-level extraction of Gates 1-8 or prove semantic identity of structural correspondences."
