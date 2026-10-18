@@ -11,6 +11,10 @@ on:
       - ".github/workflows/milaot-hahigayon-structural-audit.yml"
   workflow_dispatch:
 
+concurrency:
+  group: milaot-hahigayon-${{ github.ref }}
+  cancel-in-progress: false
+
 permissions:
   contents: write
 
