@@ -15,6 +15,8 @@ The second direction does **not** claim to predict or control future outcomes. T
 
 **Logic diagram traceability correction (2026-10-18):** [Correction and Traceability Map V1](docs/LOGIC_ARCHITECTURE_CORRECTION_AND_TRACEABILITY_V1.md) — maps the proposed algorithmic-seed diagram to existing Logic Wiki/fractal components and labels unsupported mappings, implementation states, and verification boundaries.
 
+**FOL / second-order / fractal traceability map (Hebrew, 2026-10-18):** [מפת תיקון ועקיבות — FOL, סדר שני, לוגיקה פרקטלית ו-WANGA](docs/FOL_SECOND_ORDER_FRACTAL_WANGA_TRACEABILITY_MAP_HE_V1.md) — per-section GitHub/Wix links, corrected epistemic status, five-gate boundaries, fractal readiness status, and a cross-document navigation map.
+
 **Architecture navigation:** [Protected Core → Independent Evidence Infrastructure](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/PROTECTED_CORE_AND_EVIDENCE_INFRASTRUCTURE.md) · [Rational Logic — Protected IP Boundary](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/RATIONAL_LOGIC_IP_BOUNDARY.md) · [Repository Ecosystem](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/REPOSITORY_ECOSYSTEM.md)
 
 ## WANGA and Rational Logic
@@ -279,7 +281,7 @@ Outputs: `research/reports/ark-swarm/logic-trader-swarm-latest.json` and `logic-
 
 ## Bounded formal reasoning adapter V1
 
-The repository now includes a restricted propositional-logic adapter backed by Z3, with a declared grammar, independent premise-consistency check, entailment-by-countermodel check, and hard-gated candidate evaluation vector.
+The repository includes a restricted propositional-logic adapter backed by Z3, with a declared grammar, independent premise-consistency check, entailment-by-countermodel check, and hard-gated candidate evaluation vector.
 
 - [Formal reasoning design](research/FORMAL_REASONING_ADAPTER_V1.md)
 - [Input contract](schemas/formal-claim-v1.schema.json)
@@ -289,7 +291,6 @@ The repository now includes a restricted propositional-logic adapter backed by Z
 Run with `python -m pip install -r requirements-formal.txt`, `python -m unittest discover -s tests -p 'test_formal_reasoning.py' -v`, and `python scripts/run_formal_reasoning_benchmarks.py`.
 
 The adapter only checks explicitly encoded propositional formulas. It does not turn solver results into empirical truth or promote any claim to `VERIFIED`. The first benchmark is a smoke suite; source-grounded cases and independent holdout are still required.
-
 
 ## Formal reasoning extension for ARK-Swarm
 
