@@ -53,6 +53,7 @@ jobs:
             artifacts/book_sentence_registry.json
             artifacts/gate14_sentence_structure.json
             artifacts/gate14_word_occurrence_matrix.json
+            artifacts/gate14_word_role_candidates.json
             artifacts/gate14_structural_integration.json
             artifacts/gate14_execution_audit.json
           if-no-files-found: error
