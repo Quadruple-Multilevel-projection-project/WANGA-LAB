@@ -1,6 +1,6 @@
 {
   "schema": "WANGA_LIVE_STRUCTURAL_AUDIT_STATUS_V1",
-  "generated_at_utc": "2026-10-18T10:09:43.855520+00:00",
+  "generated_at_utc": "2026-10-18T10:12:05.569755+00:00",
   "overall_mechanical_status": "PASS",
   "integration_status": "READY_FOR_REVIEW",
   "coverage_status": "PASS",
@@ -34,11 +34,11 @@
     "Word-role labels are rule-based candidates; unassigned tokens require review."
   ],
   "run": {
-    "id": "39118148484",
-    "number": "27",
-    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39118148484",
+    "id": "39118298054",
+    "number": "30",
+    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39118298054",
     "branch": "milaot-hahigayon-structural-integration-v1",
-    "commit": "343fec98e41962ac1c761da55fe72e600b0669b2",
+    "commit": "b001ae638ffcbe6ea6573ba1ec0a58d047421cd2",
     "workflow": "Milaot HaHigayon Structural Integration Audit",
     "event": "push"
   }
