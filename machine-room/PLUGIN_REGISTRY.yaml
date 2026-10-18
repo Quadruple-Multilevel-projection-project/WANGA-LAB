@@ -1,0 +1,295 @@
+version: 1
+name: WANGA-MACHINE-ROOM
+status: SPECIFIED
+
+defaults:
+  connectivity_status: UNKNOWN
+  permission_status: UNKNOWN
+  recommendation_status: UNKNOWN
+  health_check_mode: READ_ONLY
+  secret_values_allowed: false
+
+plugin_classes:
+  github:
+    purpose: source_control
+  knowledge:
+    purpose: documentation_and_knowledge
+  project_management:
+    purpose: planning_and_work_tracking
+  data:
+    purpose: operational_data
+  browser:
+    purpose: browser_automation
+  research:
+    purpose: web_and_literature_research
+  verification:
+    purpose: testing_and_evidence
+  security:
+    purpose: security_analysis_and_trust
+  agent_coordination:
+    purpose: bounded_agent_orchestration
+  design:
+    purpose: design_and_visualization
+  infrastructure:
+    purpose: runtime_and_deployment
+  secret_management:
+    purpose: secret_storage_and_injection
+
+plugins:
+  - id: github
+    name: GitHub
+    class: github
+    status: CONNECTED
+    proof_requirement: "successful read-only repository operation"
+    health_check:
+      mode: read_only
+      operation: repository_read
+
+  - id: notion
+    name: Notion
+    class: knowledge
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: workspace_search
+
+  - id: linear
+    name: Linear
+    class: project_management
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: issue_or_project_read
+
+  - id: airtable
+    name: Airtable
+    class: data
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: table_read
+
+  - id: productos
+    name: ProductOS
+    class: project_management
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: project_read
+
+  - id: supabase
+    name: Supabase
+    class: data
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: project_or_database_read
+
+  - id: outlook
+    name: Microsoft Outlook
+    class: knowledge
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: mail_or_calendar_read
+
+  - id: tinyfish
+    name: TinyFish
+    class: browser
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: browser_session_read
+
+  - id: agent-reach
+    name: Agent Reach
+    class: research
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: public_source_search
+
+  - id: biggeo
+    name: BigGeo AI
+    class: research
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: spatial_query
+
+  - id: scite
+    name: Scite
+    class: research
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: literature_search
+
+  - id: consensus
+    name: Consensus
+    class: research
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: literature_search
+
+  - id: digitrust
+    name: DigiTrust Evidence Assistant
+    class: security
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: evidence_packet_read
+
+  - id: eczid-agent-trust
+    name: ECZ-ID Agent Trust
+    class: verification
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: agent_manifest_read
+
+  - id: frontier-infra
+    name: Frontier Infra
+    class: agent_coordination
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: capability_or_attestation_read
+
+  - id: codex-coordinator
+    name: Codex Coordinator
+    class: agent_coordination
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: task_or_capability_read
+
+  - id: codex-advisor
+    name: Codex Advisor
+    class: verification
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: advisor_capability_read
+
+  - id: 1password
+    name: 1Password
+    class: secret_management
+    status: UNKNOWN
+    health_check:
+      mode: metadata_only
+      operation: environment_configuration_status
+    security:
+      never_return_secret_values: true
+
+  - id: figma
+    name: Figma
+    class: design
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: file_or_design_context_read
+
+  - id: canva
+    name: Canva
+    class: design
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: design_context_read
+
+  - id: digitalocean
+    name: DigitalOcean
+    class: infrastructure
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: project_or_resource_read
+
+  - id: vercel
+    name: Vercel
+    class: infrastructure
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: project_or_deployment_read
+
+  - id: replit
+    name: Replit
+    class: infrastructure
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: project_read
+
+  - id: gitbook
+    name: GitBook
+    class: knowledge
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: space_or_page_read
+
+  - id: zzzops
+    name: ZzzOps
+    class: project_management
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: goal_read
+
+  - id: onplana
+    name: Onplana
+    class: project_management
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: project_read
+
+  - id: atlas-red
+    name: Atlas Red
+    class: knowledge
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: map_read
+
+  - id: app-atlas
+    name: App Atlas
+    class: research
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: catalog_search
+
+  - id: hapi-mcp-registry
+    name: HAPI MCP Registry
+    class: agent_coordination
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: registry_search
+
+  - id: endor-labs
+    name: Endor Labs Agent Kit
+    class: security
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: security_project_read
+
+  - id: atlas-ai-agent
+    name: Atlas AI Agent
+    class: agent_coordination
+    status: UNKNOWN
+    health_check:
+      mode: read_only
+      operation: assistant_context_read
+
+policy:
+  - "Never promote UNKNOWN/CANDIDATE to CONNECTED without evidence."
+  - "Never use a write operation as a health check."
+  - "Never expose secret values."
+  - "Preserve failed checks and their evidence."
+  - "Recommendations never override a failed preflight."
