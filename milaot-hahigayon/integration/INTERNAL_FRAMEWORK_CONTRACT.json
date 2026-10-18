@@ -2,7 +2,21 @@
   "contract_id": "MILAOT_HAHIGAYON_INTERNAL_FRAMEWORK_INTEGRATION_V1",
   "work": "מילות ההגיון",
   "target_gate": 14,
-  "framework_gates": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+  "framework_gates": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
   "objective": "Place Gate 14 inside the internal structure established by Gates 1-13, using only evidence and relationships traceable to the book's own source material.",
   "mode": "STRUCTURAL_INTEGRATION_ONLY",
   "preserve": [
@@ -36,5 +50,5 @@
     "The auditor passes all integrity and policy checks.",
     "No unit is marked VERIFIED solely because it was extracted."
   ],
-  "current_repository_coverage_note": "The sentence index currently lists structured sentence extraction for Gates 9-14 and does not list equivalent sentence extraction for Gates 1-8. Full integration across Gates 1-13 must remain BLOCKED until missing source/registry coverage is supplied or located and verified."
+  "current_repository_coverage_note": "The immutable source for Gates 1-8 has now been located and checked at source commit d1106d9a66528dc3e39cf1ea0732782927d9f678, with exact excerpts recorded in gates_1_8_source_registry.json. This is source location evidence, not full sentence-level extraction for Gates 1-8. Gates 9-14 have existing extracted registries. Gate 14 cross-links are recorded only in explicit_links.json with named targets and evidence references; the resulting integration is READY_FOR_REVIEW, not VERIFIED."
 }
