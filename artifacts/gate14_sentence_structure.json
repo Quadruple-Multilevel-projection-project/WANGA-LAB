@@ -31,7 +31,20 @@
           "gate": 13,
           "type": "TERM_CATEGORY_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "השם דבור; שם משותף"
+          "evidence": "שם משותף יפול אל שלשה עניינים",
+          "source_evidence_exact": "שם משותף יפול אל שלשה עניינים",
+          "target_sentence_ids": [
+            "G13-S012"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G13-S012",
+              "excerpt": "כאשר יהיה שם אחד לענינים רבים הנה שם משותף"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -163,7 +176,8 @@
           "chapter_end_char": 80,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S002",
@@ -181,16 +195,23 @@
       "sequence_role": "פירוט הענין הראשון",
       "prior_gate_links": [
         {
-          "gate": 1,
-          "type": "STRUCTURAL_CORRESPONDENCE",
-          "status": "CANDIDATE",
-          "evidence": "הגדרת הנושא/נשוא והמשפט בשער א׳; אין אזכור מפורש של שער א׳"
-        },
-        {
           "gate": 13,
           "type": "TERM_CATEGORY_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "ויקרא זה… ויקרא גם כן"
+          "evidence": "ויקרא זה – הכח הדבור, ויקרא גם כן – הנפש המדברת",
+          "source_evidence_exact": "ויקרא זה – הכח הדבור, ויקרא גם כן – הנפש המדברת",
+          "target_sentence_ids": [
+            "G13-S012"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G13-S012",
+              "excerpt": "כאשר יהיו לו שמות רבים הם נרדפים"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -421,6 +442,16 @@
           "chapter_end_char": 218,
           "role_status": "UNCLASSIFIED"
         }
+      ],
+      "deferred_link_candidates": [
+        {
+          "gate": 1,
+          "type": "STRUCTURAL_CORRESPONDENCE",
+          "status": "DEFERRED_UNSUPPORTED_RELATION",
+          "evidence": "הגדרת הנושא/נשוא והמשפט בשער א׳; אין אזכור מפורש של שער א׳",
+          "defer_reason": "הקישור נשען על תיאור כללי של הכוח המדבר; לא נמצא יעד ספציפי בשער א׳ שמוכיח קשר מבני.",
+          "original_status": "CANDIDATE"
+        }
       ]
     },
     {
@@ -440,15 +471,41 @@
       "prior_gate_links": [
         {
           "gate": 3,
-          "type": "TERM_REUSE",
+          "type": "POLYSEMY_TERM_REUSE_CANDIDATE",
           "status": "CANDIDATE",
-          "evidence": "הדבור הפנימי מול מונח הדיבור בשער ג׳"
+          "evidence": "הדבור הפנימי",
+          "source_evidence_exact": "הדבור הפנימי",
+          "target_sentence_ids": [
+            "G03-S011"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G03-S011",
+              "excerpt": "נקרא הפעולה – הדיבור, והפעולות – הדיבורים"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         },
         {
           "gate": 13,
           "type": "TERM_CATEGORY_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "ויקרא זה הענין גם כן"
+          "evidence": "ויקרא זה הענין גם כן – הדבור הפנימי",
+          "source_evidence_exact": "ויקרא זה הענין גם כן – הדבור הפנימי",
+          "target_sentence_ids": [
+            "G13-S012"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G13-S012",
+              "excerpt": "כאשר יהיה שם אחד לענינים רבים הנה שם משותף"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -598,7 +655,8 @@
           "chapter_end_char": 305,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S004",
@@ -619,13 +677,39 @@
           "gate": 1,
           "type": "STRUCTURAL_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "שער א׳ מגדיר משפט המורכב מנושא ונשוא"
+          "evidence": "המליצה בלשון מהענין ההוא הנרשם בנפש",
+          "source_evidence_exact": "המליצה בלשון מהענין ההוא הנרשם בנפש",
+          "target_sentence_ids": [
+            "G01-S013"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G01-S013",
+              "excerpt": "כלל הדבור המרכב מהסיפור והמסופר ממנו יהיה חיוב או שלילה"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         },
         {
           "gate": 13,
           "type": "TERM_CATEGORY_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "מליצה בלשון; שם/מאמר"
+          "evidence": "ויקרא זה הענין גם כן – הדבור החיצוני",
+          "source_evidence_exact": "ויקרא זה הענין גם כן – הדבור החיצוני",
+          "target_sentence_ids": [
+            "G13-S012"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G13-S012",
+              "excerpt": "כאשר יהיה שם אחד לענינים רבים הנה שם משותף"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -775,7 +859,8 @@
           "chapter_end_char": 399,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S005",
@@ -796,31 +881,101 @@
           "gate": 1,
           "type": "STRUCTURAL_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "משפט, נושא ונשוא"
+          "evidence": "מה שתליץ בו הלשון נאות למה שבנפש ומשתוה לו",
+          "source_evidence_exact": "מה שתליץ בו הלשון נאות למה שבנפש ומשתוה לו",
+          "target_sentence_ids": [
+            "G01-S013"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G01-S013",
+              "excerpt": "כלל הדבור המרכב מהסיפור והמסופר ממנו"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         },
         {
           "gate": 4,
           "type": "FUNCTIONAL_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "הבחנות חיוב/שלילה והתנגדות"
+          "evidence": "תשמרהו מן הטעות ותדריכהו על היושר",
+          "source_evidence_exact": "תשמרהו מן הטעות ותדריכהו על היושר",
+          "target_sentence_ids": [
+            "G04-S007"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G04-S007",
+              "excerpt": "נקראים – משפטים סותרים, וזה העניין נקרא – הסתירה"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         },
         {
           "gate": 6,
           "type": "FUNCTIONAL_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "היקש, הקדמות ותולדה"
+          "evidence": "תתן לכח המדבר, והוא הדבור הפנימי, דרכים במושכלות",
+          "source_evidence_exact": "תתן לכח המדבר, והוא הדבור הפנימי, דרכים במושכלות",
+          "target_sentence_ids": [
+            "G06-S003",
+            "G06-S004"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G06-S003",
+              "excerpt": "הרכבת אותם שני המשפטים, אז יקרא היקש"
+            },
+            {
+              "sentence_id": "G06-S004",
+              "excerpt": "המשפט השלישי המתחייב מחיבור שתי ההקדמות יקרא – תולדה"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         },
         {
           "gate": 7,
           "type": "FUNCTIONAL_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "תמונות ההיקש והיקשים מטעים"
+          "evidence": "תשמרהו מן הטעות",
+          "source_evidence_exact": "תשמרהו מן הטעות",
+          "target_sentence_ids": [
+            "G07-S005"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G07-S005",
+              "excerpt": "לא מכל שני משפטים, אשר ישתתפו בגבול האמצעי על אחת מאלו שלשת הדרכים, יהיה מהרכבתם היקש בלי ספק"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         },
         {
           "gate": 8,
           "type": "FUNCTIONAL_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "משפטים הידועים ללא ראיה"
+          "evidence": "עד שתגיע לו האמת",
+          "source_evidence_exact": "עד שתגיע לו האמת",
+          "target_sentence_ids": [
+            "G08-S001"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G08-S001",
+              "excerpt": "המשפטים אשר יודעו ולא נצטרך אל ראיה על אמתותם ארבעה מינים"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -1618,7 +1773,8 @@
           "chapter_end_char": 876,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S006",
@@ -1639,7 +1795,24 @@
           "gate": 13,
           "type": "TERM_MAPPING_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "שער י״ג ממפה שמות ודקדוק מול מונחי ההגיון"
+          "evidence": "מדרגת מלאכת ההגיון מן השכל כמדרגת מלאכת הדקדוק מן הלשון",
+          "source_evidence_exact": "מדרגת מלאכת ההגיון מן השכל כמדרגת מלאכת הדקדוק מן הלשון",
+          "target_sentence_ids": [
+            "G13-S003"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G13-S003",
+              "excerpt": "אנשי מלאכת ההגיון"
+            },
+            {
+              "sentence_id": "G13-S003",
+              "excerpt": "בעל מלאכת ההגיון"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -1744,7 +1917,8 @@
           "chapter_end_char": 939,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S007",
@@ -1765,7 +1939,20 @@
           "gate": 13,
           "type": "EXPLICIT_TERM_CATEGORY",
           "status": "CANDIDATE",
-          "evidence": "שם משותף בשער י״ג"
+          "evidence": "שם משותף",
+          "source_evidence_exact": "שם משותף",
+          "target_sentence_ids": [
+            "G13-S012"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G13-S012",
+              "excerpt": "כאשר יהיה שם אחד לענינים רבים הנה שם משותף"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -2086,7 +2273,8 @@
           "chapter_end_char": 1147,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S008",
@@ -2107,7 +2295,20 @@
           "gate": 13,
           "type": "EXPLICIT_TERM_CATEGORY",
           "status": "CANDIDATE",
-          "evidence": "שם משותף בשער י״ג"
+          "evidence": "שם משותף",
+          "source_evidence_exact": "שם משותף",
+          "target_sentence_ids": [
+            "G13-S012"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G13-S012",
+              "excerpt": "כאשר יהיה שם אחד לענינים רבים הנה שם משותף"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -2437,7 +2638,8 @@
           "chapter_end_char": 1369,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S009",
@@ -2458,7 +2660,20 @@
           "gate": 13,
           "type": "TERM_MAPPING_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "מיפוי שמות בשער י״ג"
+          "evidence": "ותקרא גם כן, החכמה המדינית",
+          "source_evidence_exact": "ותקרא גם כן, החכמה המדינית",
+          "target_sentence_ids": [
+            "G13-S012"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G13-S012",
+              "excerpt": "הענין האחד כאשר יהיו לו שמות רבים הם נרדפים"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -2509,7 +2724,8 @@
           "chapter_end_char": 1397,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S010",
@@ -2601,7 +2817,8 @@
           "chapter_end_char": 1461,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S011",
@@ -2828,7 +3045,8 @@
           "chapter_end_char": 1588,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S012",
@@ -3019,7 +3237,8 @@
           "chapter_end_char": 1700,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S013",
@@ -3093,7 +3312,8 @@
           "chapter_end_char": 1738,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S014",
@@ -3114,13 +3334,44 @@
           "gate": 9,
           "type": "EXACT_TERM_REUSE",
           "status": "CANDIDATE",
-          "evidence": "סבות/סבותם בשער ט׳"
+          "evidence": "וסבותם",
+          "source_evidence_exact": "וסבותם",
+          "target_sentence_ids": [
+            "G09-S009"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G09-S009",
+              "excerpt": "כי אלו הסבות ארבע, מהן קרובות ומהן רחוקות"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         },
         {
           "gate": 10,
           "type": "EXACT_TERM_REUSE",
           "status": "CANDIDATE",
-          "evidence": "מקרים וסגולות בשער י׳"
+          "evidence": "במקריהם כולם ובסגולותיהם",
+          "source_evidence_exact": "במקריהם כולם ובסגולותיהם",
+          "target_sentence_ids": [
+            "G10-S003",
+            "G10-S004"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G10-S003",
+              "excerpt": "נקראהו – סגולה"
+            },
+            {
+              "sentence_id": "G10-S004",
+              "excerpt": "נקראהו – מקרה"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -3477,7 +3728,8 @@
           "chapter_end_char": 1971,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S015",
@@ -3496,9 +3748,22 @@
       "prior_gate_links": [
         {
           "gate": 9,
-          "type": "TERM_REUSE_CANDIDATE",
+          "type": "CONTRAST_TERM_REUSE_CANDIDATE",
           "status": "CANDIDATE",
-          "evidence": "קשרי סיבה במערכת הספר; אין קשר מפורש בשער זה"
+          "evidence": "נבדלים מן החומר",
+          "source_evidence_exact": "נבדלים מן החומר",
+          "target_sentence_ids": [
+            "G09-S001"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G09-S001",
+              "excerpt": "סבות הנמצאות ארבע: החומר, הצורה, הפועל והתכלית"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -3909,7 +4174,8 @@
           "chapter_end_char": 2209,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S016",
@@ -3930,7 +4196,20 @@
           "gate": 9,
           "type": "EXACT_TERM_REUSE",
           "status": "CANDIDATE",
-          "evidence": "סבות קרובות/רחוקות בשער ט׳"
+          "evidence": "בסבות הרחוקות",
+          "source_evidence_exact": "בסבות הרחוקות",
+          "target_sentence_ids": [
+            "G09-S009"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G09-S009",
+              "excerpt": "מהן קרובות ומהן רחוקות"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -4071,7 +4350,8 @@
           "chapter_end_char": 2295,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S017",
@@ -4092,7 +4372,20 @@
           "gate": 13,
           "type": "TERM_MAPPING_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "מיפויי שמות בשער י״ג"
+          "evidence": "ויקראו גם כן את החכמה האלהית – מה שאחר הטבע",
+          "source_evidence_exact": "ויקראו גם כן את החכמה האלהית – מה שאחר הטבע",
+          "target_sentence_ids": [
+            "G13-S012"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G13-S012",
+              "excerpt": "כאשר יהיו לו שמות רבים הם נרדפים"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -4179,7 +4472,8 @@
           "chapter_end_char": 2340,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S018",
@@ -4253,7 +4547,8 @@
           "chapter_end_char": 2371,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S019",
@@ -4271,16 +4566,28 @@
       "sequence_role": "הבחנת כלי/תחום",
       "prior_gate_links": [
         {
-          "gate": 1,
-          "type": "FUNCTIONAL_CORRESPONDENCE",
-          "status": "CANDIDATE",
-          "evidence": "הגדרות מבניות של משפט"
-        },
-        {
           "gate": 6,
           "type": "FUNCTIONAL_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "היקש ככלי להפקת תולדה"
+          "evidence": "היא כלי לחכמה",
+          "source_evidence_exact": "היא כלי לחכמה",
+          "target_sentence_ids": [
+            "G06-S003",
+            "G06-S004"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G06-S003",
+              "excerpt": "הרכבת אותם שני המשפטים, אז יקרא היקש"
+            },
+            {
+              "sentence_id": "G06-S004",
+              "excerpt": "המשפט השלישי המתחייב מחיבור שתי ההקדמות יקרא – תולדה"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -4394,6 +4701,16 @@
           "chapter_end_char": 2436,
           "role_status": "UNCLASSIFIED"
         }
+      ],
+      "deferred_link_candidates": [
+        {
+          "gate": 1,
+          "type": "FUNCTIONAL_CORRESPONDENCE",
+          "status": "DEFERRED_UNSUPPORTED_RELATION",
+          "evidence": "הגדרות מבניות של משפט",
+          "defer_reason": "הקישור בין ההיגיון ככלי לבין הגדרת נושא/נשוא בשער א׳ רחב מדי ללא ראיית מקור ישירה.",
+          "original_status": "CANDIDATE"
+        }
       ]
     },
     {
@@ -4415,7 +4732,25 @@
           "gate": 6,
           "type": "FUNCTIONAL_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "היקש כדרך ליצירת תולדה"
+          "evidence": "כי היא הכלי לכל דבר ולא מן הדבר",
+          "source_evidence_exact": "כי היא הכלי לכל דבר ולא מן הדבר",
+          "target_sentence_ids": [
+            "G06-S003",
+            "G06-S004"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G06-S003",
+              "excerpt": "הרכבת אותם שני המשפטים, אז יקרא היקש"
+            },
+            {
+              "sentence_id": "G06-S004",
+              "excerpt": "המשפט השלישי המתחייב מחיבור שתי ההקדמות יקרא – תולדה"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -4601,7 +4936,8 @@
           "chapter_end_char": 2526,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S021",
@@ -4828,7 +5164,8 @@
           "chapter_end_char": 2676,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S022",
@@ -5001,7 +5338,8 @@
           "chapter_end_char": 2770,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S023",
@@ -5138,7 +5476,8 @@
           "chapter_end_char": 2849,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S024",
@@ -5383,7 +5722,8 @@
           "chapter_end_char": 3041,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S025",
@@ -5402,9 +5742,22 @@
       "prior_gate_links": [
         {
           "gate": 3,
-          "type": "TERM_REUSE",
+          "type": "POLYSEMY_TERM_REUSE_CANDIDATE",
           "status": "CANDIDATE",
-          "evidence": "מונח הדיבור בשער ג׳"
+          "evidence": "מעלות דבוריות",
+          "source_evidence_exact": "מעלות דבוריות",
+          "target_sentence_ids": [
+            "G03-S011"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G03-S011",
+              "excerpt": "נקרא הפעולה – הדיבור, והפעולות – הדיבורים"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -5554,7 +5907,8 @@
           "chapter_end_char": 3141,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S026",
@@ -5682,7 +6036,8 @@
           "chapter_end_char": 3216,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S027",
@@ -5927,7 +6282,8 @@
           "chapter_end_char": 3356,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S028",
@@ -6460,7 +6816,8 @@
           "chapter_end_char": 3670,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S029",
@@ -6705,7 +7062,8 @@
           "chapter_end_char": 3822,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S030",
@@ -6721,14 +7079,7 @@
       "relation_pattern": "קיום ספרים → הערכת צורך בזמן הנוכחי",
       "scope_or_conditions": "אולי; בזמנים אלה",
       "sequence_role": "הערת היקף/זמן",
-      "prior_gate_links": [
-        {
-          "gate": 12,
-          "type": "TERM_REUSE_CANDIDATE",
-          "status": "CANDIDATE",
-          "evidence": "אזכור זמן; קשר למונחי קדימה/יחד אינו מוכח"
-        }
-      ],
+      "prior_gate_links": [],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
       "word_token_count": 32,
       "word_tokens": [
@@ -7020,6 +7371,16 @@
           "chapter_end_char": 4010,
           "role_status": "UNCLASSIFIED"
         }
+      ],
+      "deferred_link_candidates": [
+        {
+          "gate": 12,
+          "type": "TERM_REUSE_CANDIDATE",
+          "status": "DEFERRED_UNSUPPORTED_RELATION",
+          "evidence": "אזכור זמן; קשר למונחי קדימה/יחד אינו מוכח",
+          "defer_reason": "המילה 'זמנים' מציינת כאן תקופה; אין ראיה שזהו מושג הקדימה/יחד שבשער י״ב.",
+          "original_status": "CANDIDATE"
+        }
       ]
     },
     {
@@ -7039,9 +7400,22 @@
       "prior_gate_links": [
         {
           "gate": 13,
-          "type": "STRUCTURAL_CORRESPONDENCE",
+          "type": "TERM_REGISTRY_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "שער י״ג כולל מרשם מונחים; קשר ישיר דורש בדיקת מרשם"
+          "evidence": "שבעה ועשרים שמות הם",
+          "source_evidence_exact": "שבעה ועשרים שמות הם",
+          "target_sentence_ids": [
+            "G13-S025"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G13-S025",
+              "excerpt": "כלל השמות שענייניהם מפורשים בזה השער שמונה־עשר שמות הם"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -7137,7 +7511,8 @@
           "chapter_end_char": 4068,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S032",
@@ -7158,7 +7533,20 @@
           "gate": 13,
           "type": "TERM_REGISTRY_CORRESPONDENCE",
           "status": "CANDIDATE",
-          "evidence": "מונחים/שמות בשער י״ג"
+          "evidence": "והם: הכח המדבר, הנפש המדברת, הדבור הפנימי, הדבור החיצוני",
+          "source_evidence_exact": "והם: הכח המדבר, הנפש המדברת, הדבור הפנימי, הדבור החיצוני",
+          "target_sentence_ids": [
+            "G13-S026"
+          ],
+          "target_evidence_exact": [
+            {
+              "sentence_id": "G13-S026",
+              "excerpt": "והם: הקנין, השם הישר, השם הנוטה"
+            }
+          ],
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_CANDIDATE",
+          "review_status": "UNVERIFIED_STRUCTURAL_CANDIDATE",
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -7623,7 +8011,8 @@
           "chapter_end_char": 4425,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S033",
@@ -7644,79 +8033,144 @@
           "gate": 1,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+          "evidence": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "source_evidence_exact": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_EXPLICIT_SCOPE",
+          "target_sentence_ids": [],
+          "target_evidence_exact": [],
+          "relation_is_verified": false
         },
         {
           "gate": 2,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+          "evidence": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "source_evidence_exact": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_EXPLICIT_SCOPE",
+          "target_sentence_ids": [],
+          "target_evidence_exact": [],
+          "relation_is_verified": false
         },
         {
           "gate": 3,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+          "evidence": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "source_evidence_exact": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_EXPLICIT_SCOPE",
+          "target_sentence_ids": [],
+          "target_evidence_exact": [],
+          "relation_is_verified": false
         },
         {
           "gate": 4,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+          "evidence": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "source_evidence_exact": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_EXPLICIT_SCOPE",
+          "target_sentence_ids": [],
+          "target_evidence_exact": [],
+          "relation_is_verified": false
         },
         {
           "gate": 5,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+          "evidence": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "source_evidence_exact": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_EXPLICIT_SCOPE",
+          "target_sentence_ids": [],
+          "target_evidence_exact": [],
+          "relation_is_verified": false
         },
         {
           "gate": 6,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+          "evidence": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "source_evidence_exact": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_EXPLICIT_SCOPE",
+          "target_sentence_ids": [],
+          "target_evidence_exact": [],
+          "relation_is_verified": false
         },
         {
           "gate": 7,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+          "evidence": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "source_evidence_exact": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_EXPLICIT_SCOPE",
+          "target_sentence_ids": [],
+          "target_evidence_exact": [],
+          "relation_is_verified": false
         },
         {
           "gate": 8,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+          "evidence": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "source_evidence_exact": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_EXPLICIT_SCOPE",
+          "target_sentence_ids": [],
+          "target_evidence_exact": [],
+          "relation_is_verified": false
         },
         {
           "gate": 9,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+          "evidence": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "source_evidence_exact": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_EXPLICIT_SCOPE",
+          "target_sentence_ids": [],
+          "target_evidence_exact": [],
+          "relation_is_verified": false
         },
         {
           "gate": 10,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+          "evidence": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "source_evidence_exact": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_EXPLICIT_SCOPE",
+          "target_sentence_ids": [],
+          "target_evidence_exact": [],
+          "relation_is_verified": false
         },
         {
           "gate": 11,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+          "evidence": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "source_evidence_exact": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_EXPLICIT_SCOPE",
+          "target_sentence_ids": [],
+          "target_evidence_exact": [],
+          "relation_is_verified": false
         },
         {
           "gate": 12,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+          "evidence": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "source_evidence_exact": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_EXPLICIT_SCOPE",
+          "target_sentence_ids": [],
+          "target_evidence_exact": [],
+          "relation_is_verified": false
         },
         {
           "gate": 13,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+          "evidence": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "source_evidence_exact": "וכל שערי זה המאמר ארבעה עשר הם; וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם",
+          "evidence_status": "SOURCE_QUOTE_ATTACHED_EXPLICIT_SCOPE",
+          "target_sentence_ids": [],
+          "target_evidence_exact": [],
+          "relation_is_verified": false
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
@@ -8028,7 +8482,8 @@
           "chapter_end_char": 4612,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     },
     {
       "sentence_id": "G14-S034",
@@ -8147,7 +8602,18 @@
           "chapter_end_char": 4665,
           "role_status": "UNCLASSIFIED"
         }
-      ]
+      ],
+      "deferred_link_candidates": []
     }
-  ]
+  ],
+  "link_evidence_audit": {
+    "schema": "WANGA_GATE14_LINK_EVIDENCE_AUDIT_V1",
+    "status": "CANDIDATES_REQUIRE_REVIEW",
+    "active_candidate_links": 25,
+    "explicit_scope_references": 13,
+    "deferred_unsupported_candidates": 3,
+    "exact_source_excerpt_validation": "PASS",
+    "exact_target_excerpt_validation": "PASS",
+    "policy": "Every active candidate has an exact Gate XIV source excerpt and exact prior-gate sentence excerpt. Candidate status is not verification; deferred candidates are preserved separately."
+  }
 }
