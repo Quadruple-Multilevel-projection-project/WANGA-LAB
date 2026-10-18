@@ -3,7 +3,7 @@
 from __future__ import annotations
 
 import json
-import sys
+import re
 from pathlib import Path
 from typing import Any
 
@@ -12,14 +12,11 @@ CONTRACT_PATH = ROOT / "milaot-hahigayon/integration/INTERNAL_FRAMEWORK_CONTRACT
 SOURCE_PATH = ROOT / "milaot-hahigayon/sentences/שער-יד.md"
 OUTPUT_PATH = ROOT / "artifacts/gate14_structural_integration.json"
 REPORT_PATH = ROOT / "artifacts/gate14_execution_audit.json"
+LINKS_PATH = ROOT / "milaot-hahigayon/integration/explicit_links.json"
+PRECEDING_SOURCE_REGISTRY_PATH = ROOT / "milaot-hahigayon/integration/gates_1_8_source_registry.json"
 
-FORBIDDEN_OUTPUT_KEYS = {
-    "interpretation",
-    "explanation",
-    "commentary",
-    "external_theory",
-    "summary"
-}
+SOURCE_COMMIT = "d1106d9a66528dc3e39cf1ea0732782927d9f678"
+FORBIDDEN_OUTPUT_KEYS = {"interpretation", "explanation", "commentary", "external_theory", "summary"}
 
 
 def load_json(path: Path) -> dict[str, Any]:
@@ -27,7 +24,6 @@ def load_json(path: Path) -> dict[str, Any]:
 
 
 def source_quotes(text: str) -> dict[str, str]:
-    import re
     result: dict[str, str] = {}
     current_id: str | None = None
     for line in text.splitlines():
@@ -42,7 +38,23 @@ def source_quotes(text: str) -> dict[str, str]:
     return result
 
 
-def audit(contract: dict[str, Any], source: str, output: dict[str, Any]) -> list[str]:
+def known_target_ids(registry: dict[str, Any]) -> set[str]:
+    ids = {item.get("target_unit_id") for item in registry.get("gates", [])}
+    paths = {
+        ROOT / "milaot-hahigayon/sentences/שער-ט.md": r"\bT9-\d{3}\b",
+        ROOT / "milaot-hahigayon/sentences/שער-י.md": r"\bT10-\d{3}\b",
+        ROOT / "milaot-hahigayon/sentences/שער-יא.md": r"\bT11-\d{3}\b",
+        ROOT / "milaot-hahigayon/sentences/שער-יב.md": r"\bT12-\d{3}\b",
+        ROOT / "docs/LOGIC/MILOT_HIGAYON_GATE_13_SENTENCE_REGISTRY.md": r"\b13\.\d{3}\b",
+    }
+    for path, pattern in paths.items():
+        if path.exists():
+            ids.update(re.findall(pattern, path.read_text(encoding="utf-8")))
+    return {value for value in ids if isinstance(value, str) and value}
+
+
+def audit(contract: dict[str, Any], source: str, output: dict[str, Any],
+          manifest: list[dict[str, Any]], registry: dict[str, Any]) -> list[str]:
     findings: list[str] = []
 
     if output.get("target_gate") != 14:
@@ -67,18 +79,43 @@ def audit(contract: dict[str, Any], source: str, output: dict[str, Any]) -> list
     if output.get("source_preserved") is not True:
         findings.append("SOURCE_PRESERVATION_NOT_ASSERTED")
 
+    registry_gates = sorted(item.get("gate") for item in registry.get("gates", []) if isinstance(item.get("gate"), int))
+    if registry.get("source_commit") != SOURCE_COMMIT or registry_gates != list(range(1, 9)):
+        findings.append("GATE_1_8_SOURCE_REGISTRY_MISMATCH")
+    if any(item.get("source_status") != "SOURCE-CHECKED" or not item.get("source_excerpt") for item in registry.get("gates", [])):
+        findings.append("GATE_1_8_SOURCE_EVIDENCE_INCOMPLETE")
+
+    source_ids = set(expected)
+    target_ids = known_target_ids(registry)
+    seen_links: list[dict[str, Any]] = []
     for unit in units:
         uid = unit.get("unit_id", "<missing-id>")
         if unit.get("source_status") == "VERIFIED":
             findings.append(f"UNSUPPORTED_SOURCE_VERIFICATION:{uid}")
         if unit.get("link_status") == "LINKED":
             for link in unit.get("structural_links", []):
-                if not all(link.get(k) for k in (
-                    "source_unit_id", "target_unit_id", "relationship_type", "evidence_reference"
-                )):
+                seen_links.append(link)
+                if not all(link.get(k) for k in ("source_unit_id", "target_unit_id", "relationship_type", "evidence_reference")):
                     findings.append(f"LINK_WITHOUT_EVIDENCE:{uid}")
+                if link.get("source_unit_id") not in source_ids:
+                    findings.append(f"UNKNOWN_LINK_SOURCE:{uid}")
+                if link.get("target_unit_id") not in target_ids:
+                    findings.append(f"UNKNOWN_LINK_TARGET:{uid}")
+                if len(str(link.get("evidence_reference", "")).strip()) < 20:
+                    findings.append(f"INSUFFICIENT_LINK_EVIDENCE:{uid}")
         elif unit.get("link_status") not in {"UNRESOLVED", "BLOCKED"}:
             findings.append(f"INVALID_LINK_STATUS:{uid}")
+
+    if len(seen_links) != len(manifest):
+        findings.append("MANIFEST_OUTPUT_LINK_COUNT_MISMATCH")
+    if output.get("rejected_links"):
+        findings.append("REJECTED_LINKS_PRESENT")
+    if output.get("coverage", {}).get("coverage_status") != "PASS":
+        findings.append("SOURCE_COVERAGE_NOT_PASS")
+    if output.get("coverage", {}).get("gate_1_8_registry_status") != "SOURCE-CHECKED":
+        findings.append("GATE_1_8_REGISTRY_NOT_SOURCE_CHECKED")
+    if output.get("status") != "READY_FOR_REVIEW":
+        findings.append("INTEGRATION_NOT_READY_FOR_REVIEW")
 
     def scan_keys(value: Any, path: str = "$") -> None:
         if isinstance(value, dict):
@@ -98,7 +135,9 @@ def main() -> int:
     contract = load_json(CONTRACT_PATH)
     output = load_json(OUTPUT_PATH)
     source = SOURCE_PATH.read_text(encoding="utf-8")
-    findings = audit(contract, source, output)
+    manifest = json.loads(LINKS_PATH.read_text(encoding="utf-8"))
+    registry = load_json(PRECEDING_SOURCE_REGISTRY_PATH)
+    findings = audit(contract, source, output, manifest, registry)
 
     report = {
         "audit_status": "PASS" if not findings else "FAIL",
@@ -106,9 +145,11 @@ def main() -> int:
         "integration_status": output.get("status"),
         "coverage_status": output.get("coverage", {}).get("coverage_status"),
         "units_audited": len(output.get("units", [])),
+        "links_audited": sum(len(unit.get("structural_links", [])) for unit in output.get("units", [])),
+        "gate_1_8_source_registry": output.get("coverage", {}).get("gate_1_8_registry_status"),
         "verification_boundary": (
-            "Audit PASS confirms only the tested invariants. It does not prove "
-            "semantic integration or source correctness beyond the checks performed."
+            "Audit PASS confirms source preservation, registry coverage, declared link targets, and required evidence fields. "
+            "It does not certify full sentence-level extraction of Gates 1-8 or prove semantic identity of structural correspondences."
         )
     }
     REPORT_PATH.parent.mkdir(parents=True, exist_ok=True)
