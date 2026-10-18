@@ -7638,13 +7638,85 @@
       "predicate_candidate": "14 שערים; 175 שמות; שמות גם בחכמות אחרות",
       "relation_pattern": "ספר → שערים → מונחים; היקף השימושים",
       "scope_or_conditions": "מניינים מפורשים: 14 ו־175",
-      "sequence_role": "סיכום היקף הספר",
+      "sequence_role": "Global scope/count statement: the 14-gate book and 175 names; explicit scope reference, not proof of each pairwise conceptual link.",
       "prior_gate_links": [
+        {
+          "gate": 1,
+          "type": "GLOBAL_SCOPE_REFERENCE",
+          "status": "EXPLICIT_REFERENCE",
+          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+        },
+        {
+          "gate": 2,
+          "type": "GLOBAL_SCOPE_REFERENCE",
+          "status": "EXPLICIT_REFERENCE",
+          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+        },
+        {
+          "gate": 3,
+          "type": "GLOBAL_SCOPE_REFERENCE",
+          "status": "EXPLICIT_REFERENCE",
+          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+        },
+        {
+          "gate": 4,
+          "type": "GLOBAL_SCOPE_REFERENCE",
+          "status": "EXPLICIT_REFERENCE",
+          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+        },
+        {
+          "gate": 5,
+          "type": "GLOBAL_SCOPE_REFERENCE",
+          "status": "EXPLICIT_REFERENCE",
+          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+        },
+        {
+          "gate": 6,
+          "type": "GLOBAL_SCOPE_REFERENCE",
+          "status": "EXPLICIT_REFERENCE",
+          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+        },
+        {
+          "gate": 7,
+          "type": "GLOBAL_SCOPE_REFERENCE",
+          "status": "EXPLICIT_REFERENCE",
+          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+        },
+        {
+          "gate": 8,
+          "type": "GLOBAL_SCOPE_REFERENCE",
+          "status": "EXPLICIT_REFERENCE",
+          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+        },
+        {
+          "gate": 9,
+          "type": "GLOBAL_SCOPE_REFERENCE",
+          "status": "EXPLICIT_REFERENCE",
+          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+        },
+        {
+          "gate": 10,
+          "type": "GLOBAL_SCOPE_REFERENCE",
+          "status": "EXPLICIT_REFERENCE",
+          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+        },
+        {
+          "gate": 11,
+          "type": "GLOBAL_SCOPE_REFERENCE",
+          "status": "EXPLICIT_REFERENCE",
+          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+        },
+        {
+          "gate": 12,
+          "type": "GLOBAL_SCOPE_REFERENCE",
+          "status": "EXPLICIT_REFERENCE",
+          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
+        },
         {
           "gate": 13,
           "type": "GLOBAL_SCOPE_REFERENCE",
           "status": "EXPLICIT_REFERENCE",
-          "evidence": "וכל השמות שיכללו אלה השערים"
+          "evidence": "Source sentence states: “וכל השמות שיכללו אלה השערים”; this is a scope reference to the book's gates, not a claim of a specific conceptual relation."
         }
       ],
       "classification_status": "DERIVED_STRUCTURAL_LABEL_REQUIRES_REVIEW",
