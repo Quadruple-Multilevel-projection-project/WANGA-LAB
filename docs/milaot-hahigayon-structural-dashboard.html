@@ -13,7 +13,7 @@
 <script>
 const base='https://raw.githubusercontent.com/Quadruple-Multilevel-projection-project/WANGA-LAB/milaot-hahigayon-structural-integration-v1/';
 const fmt=n=>Number(n||0).toLocaleString('he-IL');
-let corpus=null,matrix=null,analysis=null,wordMatrix=null;
+let corpus=null,matrix=null,analysis=null,wordMatrix=null,wordRoles=null;
 async function load(path){const r=await fetch(base+path,{cache:'no-store'});if(!r.ok)throw new Error(path+' HTTP '+r.status);return r.json()}
 function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!==undefined)n.textContent=text;return n}
 function render(){
@@ -35,8 +35,13 @@ function render(){
  ['מונח מקור','מופעים בשער י״ד','שערים קודמים עם התאמה','סטטוס'].forEach(x=>whr.append(el('th','',x)));wh.append(whr);const wb=el('tbody','');
  wordMatrix.overlaps.forEach(x=>{const tr=el('tr','');tr.append(el('td','',x.surface_term),el('td','',String(x.gate14_occurrences)),el('td','',x.prior_chapter_occurrences.map(p=>'שער '+p.chapter+' ('+p.occurrences+')').join(', ')),el('td','muted small',x.relation_status));wb.append(tr)});
  wtab.append(wh,wb);wmt.append(wtab);wm.append(wmt);document.querySelector('main').append(wm);
+ const wrp=el('section','section');wrp.style.marginTop='14px';wrp.append(el('h2','','כל מילות שער י״ד · תפקידים מועמדים'));wrp.append(el('p','muted small','תפקידים המבוססים על התאמת מחרוזת או כללי מונחים/קישוריות. הם מועמדים בלבד; טוקן שלא סווג נשאר מסומן לביקורת.'));
+ const wrt=el('div','tablewrap'),wrtab=el('table',''),wrh=el('thead',''),wrhr=el('tr','');
+ ['מזהה טוקן','מילה','משפט','מיקום במקור','תפקיד מועמד','סטטוס'].forEach(x=>wrhr.append(el('th','',x)));wrh.append(wrhr);const wrb=el('tbody','');
+ wordRoles.tokens.forEach(x=>{const tr=el('tr','');tr.append(el('td','',x.token_id),el('td','',x.surface),el('td','',x.sentence_id),el('td','',x.source_span.chapter_start_char+'–'+x.source_span.chapter_end_char),el('td','',x.role_candidate),el('td','muted small',x.status));wrb.append(tr)});
+ wrtab.append(wrh,wrb);wrt.append(wrtab);wrp.append(wrt);document.querySelector('main').append(wrp);
 }
 function renderRows(){const q=document.getElementById('q').value.toLowerCase(),gate=document.getElementById('gate').value,body=document.getElementById('rows');body.replaceChildren();const units=corpus.chapters.flatMap(c=>c.sentence_units.map(u=>Object.assign({},u,{chapter:c.chapter,chapter_label:c.chapter_label}))).filter(u=>(!gate||String(u.chapter)===gate)&&(!q||(u.original_text+' '+u.sentence_id).toLowerCase().includes(q)));units.slice(0,1000).forEach(u=>{const tr=el('tr','');tr.append(el('td','',u.sentence_id),el('td','', 'שער '+u.chapter_label),el('td','',u.original_text),el('td','',fmt(u.word_count)),el('td','amber',u.segmentation_status),el('td','',u.cross_references.length?'קיימים':'UNRESOLVED'));body.append(tr)})}
 function renderLinks(){const body=document.getElementById('links');body.replaceChildren();matrix.links.forEach(l=>{const tr=el('tr','');tr.append(el('td','',l.source_unit_id),el('td','',l.target_locator),el('td','', 'שער '+l.target_chapter),el('td','',l.relationship_type),el('td','',l.evidence_reference+' '+l.evidence_limit),el('td','amber',l.status));body.append(tr)})}
-Promise.all([load('artifacts/book_sentence_registry.json'),load('milaot-hahigayon/integration/gate14_relation_matrix.json'),load('artifacts/gate14_sentence_structure.json'),load('artifacts/gate14_word_occurrence_matrix.json')]).then(([c,m,a,w])=>{corpus=c;matrix=m;analysis=a;wordMatrix=w;render()}).catch(e=>{document.getElementById('overall').textContent='DATA LOAD FAILED';document.getElementById('error').append(el('pre','error',String(e)+'\nבדקו שקובצי JSON קיימים בענף ושהרשאות CORS מאפשרות טעינה.'))});
+Promise.all([load('artifacts/book_sentence_registry.json'),load('milaot-hahigayon/integration/gate14_relation_matrix.json'),load('artifacts/gate14_sentence_structure.json'),load('artifacts/gate14_word_occurrence_matrix.json'),load('artifacts/gate14_word_role_candidates.json')]).then(([c,m,a,w,wr])=>{corpus=c;matrix=m;analysis=a;wordMatrix=w;wordRoles=wr;render()}).catch(e=>{document.getElementById('overall').textContent='DATA LOAD FAILED';document.getElementById('error').append(el('pre','error',String(e)+'\nבדקו שקובצי JSON קיימים בענף ושהרשאות CORS מאפשרות טעינה.'))});
 </script></body></html>
