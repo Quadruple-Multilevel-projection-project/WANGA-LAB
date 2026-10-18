@@ -14,6 +14,8 @@ SOURCE_PATH = ROOT / "milaot-hahigayon/sentences/שער-יד.md"
 SOURCE_SNAPSHOT_PATH = ROOT / "milaot-hahigayon/source/milot_hahigayon_d1106d9a.html"
 BOOK_REGISTRY_PATH = ROOT / "artifacts/book_sentence_registry.json"
 FULL_MATRIX_PATH = ROOT / "artifacts/gate14_full_relation_matrix.json"
+CLAUSE_PATH = ROOT / "artifacts/gate14_clause_registry.json"
+REVIEW_QUEUE_PATH = ROOT / "artifacts/gate14_relation_review_queue.json"
 OUTPUT_PATH = ROOT / "artifacts/gate14_structural_integration.json"
 REPORT_PATH = ROOT / "artifacts/gate14_execution_audit.json"
 LINKS_PATH = ROOT / "milaot-hahigayon/integration/explicit_links.json"
@@ -199,6 +201,41 @@ def main() -> int:
             break
 
 
+    clause_registry = load_json(CLAUSE_PATH)
+    review_queue = load_json(REVIEW_QUEUE_PATH)
+    clauses = clause_registry.get("clauses", [])
+    queue_items = review_queue.get("items", [])
+    canonical_gate14_text = canonical_registry.get("chapters", [])[13].get("normalized_source_text", "") if len(canonical_registry.get("chapters", [])) >= 14 else ""
+    if clause_registry.get("token_coverage_complete") is not True or clause_registry.get("word_token_count") != 799:
+        findings.append("CLAUSE_TOKEN_COVERAGE_MISMATCH")
+    if clause_registry.get("source_span_failures") != 0:
+        findings.append("CLAUSE_SOURCE_SPAN_FAILURES")
+    if len(clauses) != clause_registry.get("clause_candidate_count"):
+        findings.append("CLAUSE_CANDIDATE_COUNT_MISMATCH")
+    for clause in clauses:
+        span = clause.get("source_span", {})
+        start, end = span.get("start_char", -1), span.get("end_char", -1)
+        if start < 0 or end < start or canonical_gate14_text[start:end] != clause.get("original_text"):
+            findings.append("CLAUSE_SOURCE_SPAN_MISMATCH")
+            break
+    matrix_by_pair = {(c.get("gate14_sentence_id"), c.get("prior_gate")): c for c in matrix_cells}
+    queue_pairs = [(item.get("gate14_sentence_id"), item.get("prior_gate")) for item in queue_items]
+    if len(queue_pairs) != len(set(queue_pairs)):
+        findings.append("DUPLICATE_RELATION_REVIEW_QUEUE_ITEM")
+    for item in queue_items:
+        cell = matrix_by_pair.get((item.get("gate14_sentence_id"), item.get("prior_gate")))
+        if not cell or cell.get("structural_link_status") != "UNRESOLVED":
+            findings.append("REVIEW_QUEUE_ITEM_NOT_UNRESOLVED")
+            break
+        actual_terms = {term.get("surface_term") for term in cell.get("exact_surface_overlap_terms", [])}
+        if not item.get("candidate_terms") or any(term.get("surface_term") not in actual_terms for term in item.get("candidate_terms", [])):
+            findings.append("REVIEW_QUEUE_TERM_EVIDENCE_MISMATCH")
+            break
+    if review_queue.get("full_matrix_cell_count") != len(matrix_cells):
+        findings.append("REVIEW_QUEUE_MATRIX_SIZE_MISMATCH")
+    if len(queue_items) + review_queue.get("unresolved_only_stopword_overlap", 0) + review_queue.get("unresolved_no_surface_overlap", 0) != review_queue.get("unresolved_pair_count"):
+        findings.append("REVIEW_QUEUE_COVERAGE_MISMATCH")
+
     report = {
         "audit_status": "PASS" if not findings else "FAIL",
         "findings": findings,
@@ -215,6 +252,12 @@ def main() -> int:
         "relation_matrix_structural_status_counts": full_matrix.get("structural_status_counts", {}),
         "relation_matrix_unresolved_with_lexical_overlap": full_matrix.get("unresolved_with_lexical_overlap"),
         "relation_matrix_unresolved_without_lexical_overlap": full_matrix.get("unresolved_without_lexical_overlap"),
+        "gate14_clause_candidate_count": clause_registry.get("clause_candidate_count", 0),
+        "gate14_clause_word_token_count": clause_registry.get("word_token_count", 0),
+        "gate14_clause_source_span_failures": clause_registry.get("source_span_failures", 0),
+        "relation_review_queue_count": len(queue_items),
+        "relation_review_queue_unresolved_only_stopwords": review_queue.get("unresolved_only_stopword_overlap", 0),
+        "relation_review_queue_unresolved_no_surface_overlap": review_queue.get("unresolved_no_surface_overlap", 0),
         "verification_boundary": (
             "Audit PASS confirms source preservation, registry coverage, declared link targets, and required evidence fields. "
             "It does not certify syntactic sentence boundaries or prove semantic identity of structural correspondences. The full matrix distinguishes candidate links, explicit scope references, lexical overlap, and unresolved pairs."
