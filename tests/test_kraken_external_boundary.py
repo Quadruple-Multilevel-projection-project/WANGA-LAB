@@ -40,7 +40,7 @@ def test_connector_requires_external_permission():
         KimiConnector(api_key="test").complete(request, permissions=set())
 
 def test_routing_is_deterministic_for_unambiguous_request():
-    assert route_request("Calculate the distance") == "Sphere_INTELLECT"
+    assert route_request("Calculate 2 + 2") == "Sphere_INTELLECT"
 
 def test_ambiguous_routing_fails_closed():
     with pytest.raises(ValueError):
