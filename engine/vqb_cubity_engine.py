@@ -31,6 +31,7 @@ class EulerianSubSpace:
     external_node_id: str
     neighbor_ids: tuple[int, ...]
     scale_offsets: tuple[int, ...] = MULTISCALE_OFFSETS
+    self_similar_template_ref: str = "VQB_36_TEMPLATE"
 
 
 @dataclass(frozen=True, slots=True)
@@ -78,7 +79,7 @@ class SimulationReport:
 
 
 def build_eulerian_sub_spaces(count: int = SUB_SPACE_COUNT) -> tuple[EulerianSubSpace, ...]:
-    """Build a 36-node cyclic multi-scale graph with inner and outer node IDs."""
+    """Build a 36-node cyclic multi-scale graph with inner/outer node IDs."""
     if count != SUB_SPACE_COUNT:
         raise ValueError(f"this configuration requires exactly {SUB_SPACE_COUNT} sub-spaces")
     neighbors: list[set[int]] = [set() for _ in range(count)]
@@ -189,6 +190,7 @@ class VQBCubityEngine:
             "sub_space_count": len(self.sub_spaces),
             "sub_spaces": [asdict(space) for space in self.sub_spaces],
             "multiscale_offsets": list(MULTISCALE_OFFSETS),
+            "self_similarity": "each sub-space references VQB_36_TEMPLATE; recursive copies are represented symbolically rather than infinitely expanded",
             "active_space_semantics": "one visible sub-space per simulation step; each command records ON then OFF",
             "physics_status": "software abstraction only; no physical tunnelling or time-jump claim",
         }
