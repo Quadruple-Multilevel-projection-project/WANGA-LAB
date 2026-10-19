@@ -107,6 +107,13 @@ def validate_drift_status() -> dict:
             if not isinstance(crash_map, dict):
                 errors.append("ITERATIVE_MAP_TOP_LEVEL_NOT_OBJECT")
             else:
+                if isinstance(matrix, dict):
+                    matrix_canonical = json.dumps(matrix, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+                    expected_matrix_hash = hashlib.sha256(matrix_canonical.encode("utf-8")).hexdigest()
+                    if crash_map.get("source_matrix_sha256") != expected_matrix_hash:
+                        errors.append("ITERATIVE_MAP_SOURCE_MATRIX_HASH_MISMATCH")
+                    if crash_map.get("source_matrix_version") != matrix.get("cartography_version"):
+                        errors.append("ITERATIVE_MAP_SOURCE_MATRIX_VERSION_MISMATCH")
                 nodes = crash_map.get("nodes")
                 edges = crash_map.get("edges")
                 if not isinstance(nodes, list):
