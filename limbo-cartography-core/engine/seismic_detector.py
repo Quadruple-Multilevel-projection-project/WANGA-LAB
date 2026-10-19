@@ -61,7 +61,7 @@ def record_seismic_events() -> dict:
         MATRIX_PATH.write_text(json.dumps(matrix, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     state = "UPDATED" if added else ("ALREADY_CURRENT" if already_present else "NO_INPUTS")
     result = {"status": state, "added": len(added), "already_present": already_present, "rejected": 0,
-              "matrix_record_count": len(records) + len(added), "history_preserved": True,
+              "matrix_record_count": len(records), "history_preserved": True,
               "input_directory": str(INBOX.relative_to(ROOT))}
     print(json.dumps(result, ensure_ascii=False, indent=2))
     return result
