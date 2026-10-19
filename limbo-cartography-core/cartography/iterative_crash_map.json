@@ -1,0 +1,26 @@
+{
+  "map_version": "1.0.0",
+  "map_status": "NOT_BUILT_NO_OBSERVATIONS",
+  "monitoring_horizon_years": 20,
+  "history_retention": "APPEND_ONLY_NO_AUTOMATIC_PRUNING",
+  "source_matrix_version": "1.1.0",
+  "source_matrix_sha256": null,
+  "node_count": 0,
+  "edge_count": 0,
+  "nodes": [],
+  "edges": [],
+  "state_estimate": {
+    "status": "INSUFFICIENT_EVIDENCE",
+    "as_of_latest_recorded_time_utc": null,
+    "latest_crash_point": null,
+    "registered_incident_count": 0,
+    "registered_history_event_count": 0,
+    "affected_components": [],
+    "retest_result_counts": {},
+    "incidents_without_latest_passing_retest": [],
+    "registered_incident_follow_up": [],
+    "trend_estimate": "NOT_ESTIMABLE_WITHOUT_SOURCE_COVERAGE_METADATA",
+    "interpretation_boundary": "No registered crash points; this is not evidence of a clean or stable system."
+  },
+  "map_sha256": null
+}
