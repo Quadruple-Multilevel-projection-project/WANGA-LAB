@@ -1,0 +1,86 @@
+{
+  "bundle_id": "VITRUVIUS-QUEUE-CONTRACT-RECURRENCE",
+  "version": "0.1.0",
+  "source_refs": [
+    "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/tests/test_research_agent_work_queue.py",
+    "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38376796038",
+    "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38530242493",
+    "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38699326662",
+    "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38866187447",
+    "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39012060675",
+    "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39107063451",
+    "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39218819457"
+  ],
+  "structure": {
+    "type": "RECURRING_OUTPUT_CONTRACT_MISMATCH",
+    "observed_signature": {
+      "repeated_runs": [
+        38376796038,
+        38530242493,
+        38699326662,
+        38866187447,
+        39012060675,
+        39107063451,
+        39218819457
+      ],
+      "failed_assertions": [
+        "missing orchestrator key",
+        "stages is an integer, not an iterable stage sequence",
+        "missing gates key"
+      ],
+      "recurrence_count": 7,
+      "first_observed_at_utc": "2026-10-13T09:30:25Z",
+      "last_observed_at_utc": "2026-10-19T07:52:31Z"
+    },
+    "source_contract": {
+      "test_file": "tests/test_research_agent_work_queue.py",
+      "test_source_version": "a9272050422f5ee96c3bcaec5306f1babc2bf514",
+      "exact_locator": "test_network_has_six_specialists_and_orchestrator; test_pipeline_dependencies_are_ordered; test_hard_gates_present",
+      "requirements": {
+        "agents": 7,
+        "orchestrator": "OR-01",
+        "stages": [
+          {
+            "stage": "FORMALIZATION",
+            "depends_on": [
+              "SOURCE"
+            ]
+          },
+          {
+            "stage": "CROSS_CORPUS",
+            "depends_on": [
+              "SOURCE",
+              "FORMALIZATION"
+            ]
+          },
+          {
+            "stage": "DELTA",
+            "depends_on": [
+              "SOURCE",
+              "FORMALIZATION",
+              "CROSS_CORPUS",
+              "CLAIM_FORENSICS"
+            ]
+          }
+        ],
+        "gates": [
+          "EVIDENCE_CHAIN",
+          "STATUS_OWNERSHIP",
+          "HISTORICAL_ISOLATION",
+          "CORPUS_COVERAGE",
+          "NEGATIVE_FINDINGS"
+        ]
+      }
+    },
+    "root_cause_status": "NOT_YET_ESTABLISHED",
+    "candidate_action": "Reconcile the queue generator's actual serialized output with the test-defined contract, then rerun the exact test suite and GitHub workflow.",
+    "validation_plan": [
+      "Inspect scripts/build_research_agent_work_queue.py and its output schema.",
+      "Run tests/test_research_agent_work_queue.py and the full Vitruvius workflow.",
+      "Verify orchestrator, stages dependency order, and gates from actual generated JSON.",
+      "Record the fix and passing retest as linked Limbo history events before proposing release."
+    ],
+    "release_gate": "HOLD_UNTIL_IMPLEMENTATION_AND_RETEST",
+    "scope": "A source-grounded proposed configuration contract derived from seven observed CI failures; root cause and fix are not asserted as established."
+  }
+}
