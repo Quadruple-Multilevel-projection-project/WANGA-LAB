@@ -51,6 +51,7 @@ def test_graph_has_36_spaces_with_inner_and_outer_nodes_and_edges():
     assert len({space.internal_node_id for space in spaces}) == 36
     assert len({space.external_node_id for space in spaces}) == 36
     assert all(space.neighbor_ids for space in spaces)
+    assert all(space.self_similar_template_ref == "VQB_36_TEMPLATE" for space in spaces)
     assert all(1 <= neighbor <= 36 for space in spaces for neighbor in space.neighbor_ids)
     assert all(space.sub_space_id not in space.neighbor_ids for space in spaces)
 
