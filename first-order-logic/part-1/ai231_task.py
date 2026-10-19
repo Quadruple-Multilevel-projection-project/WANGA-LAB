@@ -1,11 +1,11 @@
 """AI231 deterministic decision boundary.
 
 This is an operational gate, not an interpretation of the canonical text.
-The source-reference resolver must be backed by the locked sentence registry.
+known_source_refs must come from the locked sentence registry, not neural output.
 Neural proposals are recorded as advisory input and never determine outcome.
 """
 from dataclasses import dataclass
-from typing import Literal, Optional
+from typing import Collection, Literal, Optional
 
 FormalDecision = Literal["ACCEPT", "REJECT", "REQUIRES_REVIEW"]
 
@@ -22,11 +22,11 @@ def ai231_task(
     *,
     formal_decision: str,
     source_ref: Optional[str],
-    source_ref_resolved: bool,
+    known_source_refs: Collection[str],
     neural_proposal: Optional[str] = None,
 ) -> DecisionResult:
-    """Return a result controlled only by the formal gate and source evidence."""
-    if not source_ref or not source_ref_resolved:
+    """Return a result controlled only by the formal gate and locked source registry."""
+    if not source_ref or source_ref not in known_source_refs:
         return DecisionResult(
             status="REQUIRES_REVIEW",
             source_ref=source_ref,
