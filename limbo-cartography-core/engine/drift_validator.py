@@ -35,6 +35,7 @@ EXPECTED_FILES = [
     "tests/test_cartography.py",
     "tests/test_history_links.py",
     "tests/test_iterative_map.py",
+    "tests/test_seismic_detector.py",
 ]
 EXPECTED_DIRS = [
     ".github/agents", ".github/workflows", "engine", "schemas",
