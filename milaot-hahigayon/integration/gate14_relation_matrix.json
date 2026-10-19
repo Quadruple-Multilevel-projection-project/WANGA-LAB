@@ -1,0 +1,153 @@
+{
+  "schema": "WANGA_GATE14_RELATION_MATRIX_V1",
+  "work": "מילות ההגיון",
+  "target_chapter": 14,
+  "preceding_chapters": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "status": "CANDIDATE_LINKS_REQUIRING_SOURCE_REVIEW",
+  "source_commit": "d1106d9a66528dc3e39cf1ea0732782927d9f678",
+  "relation_status_definitions": {
+    "EXPLICIT_TERM_REUSE": "Exact term reuse visible in both source units; does not alone prove a conceptual relation.",
+    "STRUCTURAL_CORRESPONDENCE": "Analyst-proposed structural correspondence; requires review and must not be represented as source-authored.",
+    "FUNCTIONAL_CORRESPONDENCE": "Analyst-proposed functional relation; requires review.",
+    "UNRESOLVED": "No accepted relation recorded."
+  },
+  "links": [
+    {
+      "source_unit_id": "T14-005",
+      "target_locator": "G01-S01",
+      "target_chapter": 1,
+      "relationship_type": "STRUCTURAL_CORRESPONDENCE",
+      "status": "REVIEW_REQUIRED",
+      "evidence_reference": "Gate XIV T14-005: “המליצה בלשון מהענין ההוא הנרשם בנפש”; Gate I source excerpt: “וכלל הדבור המרכב מהסיפור והמסופר ממנו ... יקרא – המשפט”.",
+      "evidence_limit": "Structural metadata proposal; target locator is a legacy chapter-level source locator, not a canonical sentence ID."
+    },
+    {
+      "source_unit_id": "T14-011",
+      "target_locator": "G02-S01",
+      "target_chapter": 2,
+      "relationship_type": "STRUCTURAL_CORRESPONDENCE",
+      "status": "REVIEW_REQUIRED",
+      "evidence_reference": "Gate XIV T14-011: “עד שלא תוסיף המליצה על הענין אשר בנפש ולא תחסר ממנו”; Gate II source excerpt records the four quantified judgment types.",
+      "evidence_limit": "Structural metadata proposal; not an explicit source-authored cross-reference."
+    },
+    {
+      "source_unit_id": "T14-006",
+      "target_locator": "G03-S01",
+      "target_chapter": 3,
+      "relationship_type": "EXPLICIT_TERM_REUSE",
+      "status": "REVIEW_REQUIRED",
+      "evidence_reference": "Gate XIV T14-006 uses “הדבור הפנימי”; Gate III G03-S01 uses “הדיבור” in a terminology statement.",
+      "evidence_limit": "Term reuse alone does not prove the proposed conceptual relation."
+    },
+    {
+      "source_unit_id": "T14-007",
+      "target_locator": "G04-S01",
+      "target_chapter": 4,
+      "relationship_type": "STRUCTURAL_CORRESPONDENCE",
+      "status": "REVIEW_REQUIRED",
+      "evidence_reference": "Gate XIV T14-007 names protection from error and arrival at truth; Gate IV source excerpt defines opposed judgments.",
+      "evidence_limit": "Structural metadata proposal; not an explicit source-authored cross-reference."
+    },
+    {
+      "source_unit_id": "T14-010",
+      "target_locator": "G05-S01",
+      "target_chapter": 5,
+      "relationship_type": "STRUCTURAL_CORRESPONDENCE",
+      "status": "REVIEW_REQUIRED",
+      "evidence_reference": "Gate XIV T14-010 requires expression to be fitting and equal to what is in the soul; Gate V discusses reversal preserving truth.",
+      "evidence_limit": "Structural metadata proposal; semantic relation requires review."
+    },
+    {
+      "source_unit_id": "T14-030",
+      "target_locator": "G06-S01",
+      "target_chapter": 6,
+      "relationship_type": "FUNCTIONAL_CORRESPONDENCE",
+      "status": "REVIEW_REQUIRED",
+      "evidence_reference": "Gate XIV T14-030 states “היא כלי לחכמה”; Gate VI defines inference through premises and a conclusion.",
+      "evidence_limit": "Functional relation proposed for review; not a source-authored cross-reference."
+    },
+    {
+      "source_unit_id": "T14-007",
+      "target_locator": "G07-S01",
+      "target_chapter": 7,
+      "relationship_type": "EXPLICIT_TERM_REUSE",
+      "status": "REVIEW_REQUIRED",
+      "evidence_reference": "Gate XIV T14-007: “תשמרהו מן הטעות”; Gate VII: “היקשים מטעים”.",
+      "evidence_limit": "Term reuse alone does not prove the proposed conceptual relation."
+    },
+    {
+      "source_unit_id": "T14-007",
+      "target_locator": "G08-S01",
+      "target_chapter": 8,
+      "relationship_type": "STRUCTURAL_CORRESPONDENCE",
+      "status": "REVIEW_REQUIRED",
+      "evidence_reference": "Gate XIV T14-007 concerns reaching truth and avoiding error; Gate VIII begins with judgments known without proof.",
+      "evidence_limit": "Structural metadata proposal; not an explicit source-authored cross-reference."
+    },
+    {
+      "source_unit_id": "T14-028",
+      "target_locator": "T9-009",
+      "target_chapter": 9,
+      "relationship_type": "EXPLICIT_TERM_REUSE",
+      "status": "REVIEW_REQUIRED",
+      "evidence_reference": "Gate XIV T14-028: “הסבות הרחוקות”; Gate IX T9-009: “כי אלו הסבות ארבע, מהן קרובות ומהן רחוקות.”",
+      "evidence_limit": "Term reuse supported by quoted registry excerpts; exact source offsets need normalization."
+    },
+    {
+      "source_unit_id": "T14-025",
+      "target_locator": "T10-004",
+      "target_chapter": 10,
+      "relationship_type": "EXPLICIT_TERM_REUSE",
+      "status": "REVIEW_REQUIRED",
+      "evidence_reference": "Gate XIV T14-025: “במקריהם כולם ובסגולותיהם וסבותם”; Gate X T10-004 defines סגולה and T10-005 defines מקרה.",
+      "evidence_limit": "Term reuse supported by quoted registry excerpts; exact source offsets need normalization."
+    },
+    {
+      "source_unit_id": "T14-038",
+      "target_locator": "T11-021",
+      "target_chapter": 11,
+      "relationship_type": "EXPLICIT_TERM_REUSE",
+      "status": "REVIEW_REQUIRED",
+      "evidence_reference": "Gate XIV T14-038: “יתארו הדבור גם כן”; Gate XI T11-021 includes “והדבור והאלמות”.",
+      "evidence_limit": "Term reuse supported by quoted registry excerpts; exact source offsets need normalization."
+    },
+    {
+      "source_unit_id": "T14-040",
+      "target_locator": "T12-009",
+      "target_chapter": 12,
+      "relationship_type": "EXPLICIT_TERM_REUSE",
+      "status": "REVIEW_REQUIRED",
+      "evidence_reference": "Gate XIV T14-040 refers to “הטוב המדומה”; Gate XII source registry has a related terminology entry; exact match must be checked against canonical source.",
+      "evidence_limit": "Proposed term relation; canonical source check still required."
+    },
+    {
+      "source_unit_id": "T14-041",
+      "target_locator": "13.010",
+      "target_chapter": 13,
+      "relationship_type": "EXPLICIT_TERM_REUSE",
+      "status": "REVIEW_REQUIRED",
+      "evidence_reference": "Gate XIV T14-041 refers to verbal expression of an action; Gate XIII registry contains “השמות הנגזרים”.",
+      "evidence_limit": "Term relation proposed for review; not an established source-authored link."
+    }
+  ],
+  "controls": {
+    "no_auto_verification": true,
+    "no_keyword_only_links": true,
+    "source_text_never_overwritten": true,
+    "all_candidate_links_need_human_source_review": true
+  }
+}
