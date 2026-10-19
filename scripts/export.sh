@@ -4,14 +4,14 @@ IFS=$'\n\t'
 
 usage() {
   echo "Usage: scripts/export.sh <version> <output-directory>" >&2
-  echo "Requires: git, python3, syft, cosign, tar, sha256sum, and a clean tracked/untracked tree." >&2
+  echo "Requires: git, python3, syft, gitleaks, cosign, tar, sha256sum, and a clean tracked/untracked tree." >&2
   exit 2
 }
 [[ $# -eq 2 ]] || usage
 VERSION="$1"
 OUT_DIR="$2"
 [[ "$VERSION" =~ ^[0-9]+\.[0-9]+\.[0-9]+([+-][0-9A-Za-z.-]+)?$ ]] || { echo "Invalid semantic version: $VERSION" >&2; exit 2; }
-command -v git >/dev/null && command -v python3 >/dev/null && command -v syft >/dev/null && command -v cosign >/dev/null && command -v tar >/dev/null && command -v sha256sum >/dev/null || {
+command -v git >/dev/null && command -v python3 >/dev/null && command -v syft >/dev/null && command -v gitleaks >/dev/null && command -v cosign >/dev/null && command -v tar >/dev/null && command -v sha256sum >/dev/null || {
   echo "BLOCKED: a required export tool is missing." >&2; exit 3;
 }
 : "${COSIGN_KEY:?Set COSIGN_KEY to the approved signing-key path; key contents are never printed.}"
@@ -40,6 +40,9 @@ if find "$STAGE" \( -name '.env' -o -name '.env.*' -o -iname '*.pem' -o -iname '
   echo "BLOCKED: staged source contains a prohibited secret/key/upload/customer-data path." >&2
   exit 5
 fi
+
+# Scan staged source content for likely secrets. Any finding blocks export.
+gitleaks dir --no-git --redact "$STAGE"
 
 # Generate an SPDX SBOM from the staged source. This is not a vulnerability scan.
 syft "dir:$STAGE" -o spdx-json="$STAGE/SBOM.spdx.json"
