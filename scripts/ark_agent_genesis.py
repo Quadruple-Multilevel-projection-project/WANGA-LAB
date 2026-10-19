@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
-"""Create a deterministic *proposed* ARK agent registry from an explicit seed file.
+"""Create a deterministic *proposed* ARK agent registry from a sourced seed.
 
-This tool does not create accounts, provision agents, access secrets, delete nodes,
-or mutate Layer 4. It emits a reviewable registry proposal only. Input JSON:
-{"agents":[{"agent_id":"L1-001","level":"L1","parent_id":null,"source_reference":"..."}]}
+This tool does not create accounts, provision external agents, access secrets,
+delete nodes, or mutate Layer 4. It emits a reviewable registry proposal only.
+Input JSON: {"agents":[{"agent_id":"L1-001","level":"L1",
+"parent_id":null,"source_reference":"path/to/source.md#section"}]}
 """
 from __future__ import annotations
 
@@ -21,8 +22,8 @@ ID_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9._:-]{0,127}$")
 def load_seed(path: Path) -> list[dict]:
     payload = json.loads(path.read_text(encoding="utf-8"))
     rows = payload.get("agents")
-    if not isinstance(rows, list):
-        raise ValueError("Input must contain an 'agents' array.")
+    if not isinstance(rows, list) or not rows:
+        raise ValueError("Input must contain a non-empty 'agents' array.")
     seen: set[str] = set()
     for row in rows:
         if not isinstance(row, dict):
@@ -47,38 +48,41 @@ def load_seed(path: Path) -> list[dict]:
 
 
 def build_registry(seed: list[dict], children_per_agent: int) -> dict:
-    agents = []
-    for row in seed:
-        level_index = LEVELS.index(row["level"])
+    agents: list[dict] = []
+    seen_ids: set[str] = set()
+
+    def add_agent(agent_id: str, level: str, parent_id: str | None,
+                  source_reference: str, status: str) -> None:
+        if agent_id in seen_ids:
+            raise ValueError(f"Generated agent ID collision: {agent_id}")
+        seen_ids.add(agent_id)
         agents.append({
-            "agent_id": row["agent_id"],
-            "level": row["level"],
-            "parent_id": row.get("parent_id"),
-            "source_reference": row["source_reference"].strip(),
-            "status": "PLANNED",
+            "agent_id": agent_id,
+            "level": level,
+            "parent_id": parent_id,
+            "source_reference": source_reference,
+            "status": status,
             "execution_authorized": False,
             "capabilities": [],
             "created_by": "ark_agent_genesis.py",
         })
-        if level_index < len(LEVELS) - 1:
+        level_index = LEVELS.index(level)
+        if children_per_agent and level_index < len(LEVELS) - 1:
+            child_level = LEVELS[level_index + 1]
             for n in range(1, children_per_agent + 1):
-                child_level = LEVELS[level_index + 1]
-                child_id = f"{row['agent_id']}.{child_level}.{n:03d}"
-                agents.append({
-                    "agent_id": child_id,
-                    "level": child_level,
-                    "parent_id": row["agent_id"],
-                    "source_reference": row["source_reference"].strip(),
-                    "status": "PROPOSED",
-                    "execution_authorized": False,
-                    "capabilities": [],
-                    "created_by": "ark_agent_genesis.py",
-                })
-    ids = [a["agent_id"] for a in agents]
-    if len(ids) != len(set(ids)):
-        raise ValueError("Generated IDs collide; change the seed IDs or child count.")
-    if len(agents) > MAX_AGENTS:
-        raise ValueError(f"Proposal exceeds safety cap ({MAX_AGENTS} agents).")
+                child_id = f"{agent_id}.{child_level}.{n:03d}"
+                add_agent(child_id, child_level, agent_id, source_reference, "PROPOSED")
+                if len(agents) > MAX_AGENTS:
+                    raise ValueError(f"Proposal exceeds safety cap ({MAX_AGENTS} agents).")
+
+    for row in seed:
+        add_agent(
+            row["agent_id"], row["level"], row.get("parent_id"),
+            row["source_reference"].strip(), "PLANNED",
+        )
+        if len(agents) > MAX_AGENTS:
+            raise ValueError(f"Proposal exceeds safety cap ({MAX_AGENTS} agents).")
+
     return {
         "schema_version": "1.0",
         "record_type": "PROPOSED_AGENT_REGISTRY",
@@ -99,10 +103,12 @@ def build_registry(seed: list[dict], children_per_agent: int) -> dict:
 
 def main() -> int:
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--seed", required=True, type=Path, help="JSON file with explicitly sourced seed agents.")
-    parser.add_argument("--out", required=True, type=Path, help="Output JSON path.")
+    parser.add_argument("--seed", required=True, type=Path,
+                        help="JSON file with explicitly sourced seed agents.")
+    parser.add_argument("--out", required=True, type=Path,
+                        help="Output JSON path.")
     parser.add_argument("--children-per-agent", type=int, default=0,
-                        help="Propose this many next-level children per seed (default: 0).")
+                        help="Propose this many children at every level through L4 (default: 0).")
     args = parser.parse_args()
     if not 0 <= args.children_per_agent <= 10:
         parser.error("--children-per-agent must be between 0 and 10.")
@@ -110,7 +116,10 @@ def main() -> int:
         seed = load_seed(args.seed)
         registry = build_registry(seed, args.children_per_agent)
         args.out.parent.mkdir(parents=True, exist_ok=True)
-        args.out.write_text(json.dumps(registry, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+        args.out.write_text(
+            json.dumps(registry, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
     except (OSError, json.JSONDecodeError, ValueError) as exc:
         print(f"ERROR: {exc}", file=sys.stderr)
         return 2
