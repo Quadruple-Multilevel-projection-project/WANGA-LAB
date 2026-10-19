@@ -3,13 +3,13 @@
 ## Implemented model
 
 - 36 named sub-spaces, each with INNER_nn and OUTER_nn node IDs.
-- A deterministic connected multi-scale cyclic graph using offsets 1, 2, 4, 8, 16.
+- A deterministic connected multi-scale cyclic graph using offsets 1, 2, 4, 8, 16. Each node references VQB_36_TEMPLATE to represent recursive self-similarity symbolically, without infinitely expanding the graph.
 - One visible/active sub-space per simulation step; every command records visibility ["ON", "OFF"].
 - Fusion of wave, particle, and time feature vectors into a LanguagePoint using an explicit equal mean.
 - Exactly three LanguagePoints fused through the recurrence x[t+1] = gamma*x[t] + (1-gamma)*W*sign(x[t]).
 - A dimensionless five-coordinate ring-like embedding.
 - A 120-step deterministic run emits 120 MAJORANA_2 command records and visits all 36 sub-spaces. The mode field is MAJORANA_2_ENTANGLE.
-- JSON command report and SVG graph are emitted by tools/run_vqb_cubity_simulation.py.
+- JSON command report, SVG topology map, and self-contained HTML animation (play/pause/step) are emitted by tools/run_vqb_cubity_simulation.py.
 
 ## Explicit defaults
 
