@@ -4,7 +4,8 @@ from __future__ import annotations
 import hashlib
 import json
 import sys
-from collections import Counter
+from collections import Counter, defaultdict
+from datetime import datetime
 from pathlib import Path
 from typing import Any
 
@@ -199,8 +200,66 @@ def build_iterative_map(
     event_counts = Counter(item.get("result", "NOT_APPLICABLE") for item in events if item.get("event_type") == "RETEST")
     unresolved = [item["incident_id"] for item in incident_assessments if item["follow_up_state"] != "PASS_RECORDED"]
     components = sorted({item.get("affected_component") for item in incidents if item.get("affected_component")})
+
+    # Recurrence is a descriptive map feature: group only identical recorded
+    # component/state labels. It is not causal attribution or an extrapolated forecast.
+    grouped_incidents: dict[tuple[str, str], list[dict]] = defaultdict(list)
+    for incident in incidents:
+        component = str(incident.get("affected_component") or "UNSPECIFIED_COMPONENT")
+        signature = str(incident.get("observed_state") or "UNSPECIFIED_STATE")
+        grouped_incidents[(component, signature)].append(incident)
+
+    follow_up_by_incident = {item["incident_id"]: item for item in incident_assessments}
+    recurrence_clusters = []
+    for (component, signature), members in sorted(grouped_incidents.items()):
+        members = sorted(members, key=lambda item: (item.get("timestamp_utc", ""), item.get("coordinate_id", "")))
+        times = []
+        for member in members:
+            try:
+                times.append(datetime.fromisoformat(member["timestamp_utc"].replace("Z", "+00:00")))
+            except (KeyError, TypeError, ValueError):
+                times.append(None)
+        intervals = []
+        for left, right in zip(times, times[1:]):
+            if left is not None and right is not None:
+                hours = (right - left).total_seconds() / 3600.0
+                if hours >= 0:
+                    intervals.append(round(hours, 3))
+        member_ids = [item["coordinate_id"] for item in members]
+        member_follow_up = [follow_up_by_incident.get(item_id, {}).get("follow_up_state", "NO_RETEST_RECORDED") for item_id in member_ids]
+        pass_count = sum(status == "PASS_RECORDED" for status in member_follow_up)
+        if len(members) > 1 and pass_count == 0:
+            cluster_status = "RECURRENT_UNRESOLVED"
+        elif len(members) > 1 and pass_count < len(members):
+            cluster_status = "RECURRENT_PARTIALLY_RETESTED"
+        elif len(members) > 1:
+            cluster_status = "RECURRENT_ALL_HAVE_PASS_RETEST"
+        elif pass_count == 1:
+            cluster_status = "SINGLE_POINT_WITH_PASS_RETEST"
+        else:
+            cluster_status = "SINGLE_POINT_UNRESOLVED"
+        recurrence_clusters.append({
+            "cluster_id": "CLUSTER-" + sha256_json({"component": component, "observed_state": signature})[:16],
+            "component": component,
+            "observed_state_signature": signature,
+            "incident_ids": member_ids,
+            "observation_count": len(members),
+            "first_observed_at_utc": members[0].get("timestamp_utc"),
+            "last_observed_at_utc": members[-1].get("timestamp_utc"),
+            "observed_intervals_hours": intervals,
+            "retest_pass_count": pass_count,
+            "incident_count_without_passing_retest": len(members) - pass_count,
+            "cluster_status": cluster_status,
+            "source_refs": sorted({source for item in members for source in item.get("source_refs", [])}),
+            "interpretation_boundary": "Exact component/observed-state grouping only; recurrence is observed, cause and future continuation are not inferred."
+        })
+    recurrence_clusters.sort(key=lambda item: (-item["observation_count"], item["component"], item["observed_state_signature"]))
+    recurring_unresolved_count = sum(
+        item["observation_count"] > 1 and item["cluster_status"] in {"RECURRENT_UNRESOLVED", "RECURRENT_PARTIALLY_RETESTED"}
+        for item in recurrence_clusters
+    )
     state_estimate = {
-        "status": "INSUFFICIENT_EVIDENCE" if not incidents else "LAST_OBSERVATION_ONLY",
+        "status": "INSUFFICIENT_EVIDENCE" if not incidents else ("RECURRENCE_PATTERN_OBSERVED" if recurring_unresolved_count else "LAST_OBSERVATION_ONLY"),
         "as_of_latest_recorded_time_utc": as_of,
         "latest_crash_point": None if latest_incident is None else {
             "incident_id": latest_incident.get("coordinate_id"),
@@ -215,7 +274,9 @@ def build_iterative_map(
         "retest_result_counts": dict(sorted(event_counts.items())),
         "incidents_without_latest_passing_retest": sorted(unresolved),
         "registered_incident_follow_up": incident_assessments,
-        "trend_estimate": "NOT_ESTIMABLE_WITHOUT_SOURCE_COVERAGE_METADATA",
+        "recurrence_clusters": recurrence_clusters,
+        "recurring_unresolved_cluster_count": recurring_unresolved_count,
+        "trend_estimate": ("RECURRENCE_OBSERVED_NO_COVERAGE_BASELINE_FOR_EXTRAPOLATION" if recurring_unresolved_count else "NOT_ESTIMABLE_WITHOUT_SOURCE_COVERAGE_METADATA"),
         "interpretation_boundary": (
             "This is a description of the latest registered observation and recorded follow-ups, "
             "not a verified assessment of the whole system or a forecast."
