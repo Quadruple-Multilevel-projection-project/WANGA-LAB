@@ -9,11 +9,17 @@ sys.path.insert(
 from ai231_task import ai231_task  # noqa: E402
 
 
+KNOWN_TEST_REFS = {
+    "TEST-FIXTURE:G14-SENTENCE-001",
+    "TEST-FIXTURE:INTRO-SENTENCE-001",
+}
+
+
 def test_neural_proposal_cannot_override_formal_reject():
     result = ai231_task(
         formal_decision="REJECT",
-        source_ref="G14:SENTENCE-TEST-FIXTURE",
-        source_ref_resolved=True,
+        source_ref="TEST-FIXTURE:G14-SENTENCE-001",
+        known_source_refs=KNOWN_TEST_REFS,
         neural_proposal="ACCEPT",
     )
     assert result.status == "REJECT"
@@ -23,8 +29,8 @@ def test_neural_proposal_cannot_override_formal_reject():
 def test_neural_proposal_cannot_override_formal_accept():
     result = ai231_task(
         formal_decision="ACCEPT",
-        source_ref="INTRO:SENTENCE-TEST-FIXTURE",
-        source_ref_resolved=True,
+        source_ref="TEST-FIXTURE:INTRO-SENTENCE-001",
+        known_source_refs=KNOWN_TEST_REFS,
         neural_proposal="REJECT",
     )
     assert result.status == "ACCEPT"
@@ -34,7 +40,7 @@ def test_missing_source_ref_halts_for_review():
     result = ai231_task(
         formal_decision="ACCEPT",
         source_ref=None,
-        source_ref_resolved=False,
+        known_source_refs=KNOWN_TEST_REFS,
         neural_proposal="ACCEPT",
     )
     assert result.status == "REQUIRES_REVIEW"
@@ -44,8 +50,8 @@ def test_missing_source_ref_halts_for_review():
 def test_unresolved_source_ref_halts_for_review():
     result = ai231_task(
         formal_decision="ACCEPT",
-        source_ref="UNKNOWN:SENTENCE",
-        source_ref_resolved=False,
+        source_ref="UNREGISTERED:SENTENCE",
+        known_source_refs=KNOWN_TEST_REFS,
         neural_proposal="ACCEPT",
     )
     assert result.status == "REQUIRES_REVIEW"
@@ -54,8 +60,8 @@ def test_unresolved_source_ref_halts_for_review():
 def test_unknown_formal_decision_fails_closed():
     result = ai231_task(
         formal_decision="MAYBE",
-        source_ref="G14:SENTENCE-TEST-FIXTURE",
-        source_ref_resolved=True,
+        source_ref="TEST-FIXTURE:G14-SENTENCE-001",
+        known_source_refs=KNOWN_TEST_REFS,
         neural_proposal="ACCEPT",
     )
     assert result.status == "REQUIRES_REVIEW"
