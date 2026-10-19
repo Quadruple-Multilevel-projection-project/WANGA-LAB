@@ -22,8 +22,8 @@ From this directory, using Python 3.12 or later:
     python engine/history_link_validator.py
     python engine/axiomatic_stress_tester.py
     python engine/tuning_candidate_builder.py
-    python engine/iterative_map_builder.py
     python engine/logic_bundle_builder.py
+    python engine/iterative_map_builder.py
     python engine/drift_validator.py
 
 The daily workflow for this package is activated at the parent repository's .github/workflows/daily-limbo-cartography-agent.yml, because GitHub Actions only discovers workflow files under the repository-root .github/workflows/ directory. The copy under this package documents the portable standalone layout.
