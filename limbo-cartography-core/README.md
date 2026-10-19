@@ -22,6 +22,7 @@ From this directory, using Python 3.12 or later:
     python engine/history_link_validator.py
     python engine/axiomatic_stress_tester.py
     python engine/tuning_candidate_builder.py
+    python engine/iterative_map_builder.py
     python engine/logic_bundle_builder.py
     python engine/drift_validator.py
 
@@ -36,6 +37,12 @@ The daily workflow for this package is activated at the parent repository's .git
 - Never use generated output directories as input. This prevents output-to-input feedback loops.
 - Raw private conversation exports must not be placed in this public repository.
 - A passing schema or unit test is not proof of source truth or semantic validity.
+
+## Iterative forensic map
+
+The source of truth is the append-only `cartography/reality_matrix.json`. Each cycle rebuilds `cartography/iterative_crash_map.json` deterministically from the registered crash points, linked history events, and recorded configuration candidates. The graph includes explicit predecessor, affected-incident, change/retest, and configuration-to-incident links; a recorded link is not causal proof or semantic entailment.
+
+The map keeps a rolling 20-year monitoring-horizon setting while retaining older history: no automatic pruning is permitted. Its state estimate reports the latest recorded crash point, follow-up/retest status, registered counts, and provenance. It does not label the whole system stable or collapsing when coverage is absent. Trend estimates remain unavailable until source-coverage metadata is recorded. An empty matrix produces `NO_REGISTERED_POINTS` and `INSUFFICIENT_EVIDENCE`, not a clean bill of health.
 
 ## Cumulative history and tuning
 
