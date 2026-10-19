@@ -101,10 +101,6 @@ def build_iterative_map(
                 for item in incident.get("source_evidence", [])
             ],
         })
-        for prior_id in incident.get("prior_incident_ids", []):
-            if prior_id in incident_ids:
-                add_edge(f"INCIDENT:{prior_id}", node_id, "PRECEDES", incident.get("source_refs", []))
-
         retest = latest_retest_by_incident.get(incident_id)
         retest_result = retest.get("result") if retest else None
         assessment = {
@@ -120,6 +116,11 @@ def build_iterative_map(
         }
         incident_assessments.append(assessment)
 
+    for incident in incidents:
+        for prior_id in incident.get("prior_incident_ids", []):
+            if prior_id in incident_ids:
+                add_edge(f"INCIDENT:{prior_id}", f"INCIDENT:{incident['coordinate_id']}", "PRECEDES", incident.get("source_refs", []))
+
     for event in sorted(events, key=lambda item: (item.get("timestamp_utc", ""), item.get("event_id", ""))):
         event_id = event["event_id"]
         node_id = f"EVENT:{event_id}"
@@ -133,6 +134,9 @@ def build_iterative_map(
             "result": event.get("result"),
             "source_refs": sorted({e.get("source_uri") for e in event.get("source_evidence", []) if e.get("source_uri")}),
         })
+    for event in events:
+        event_id = event["event_id"]
+        node_id = f"EVENT:{event_id}"
         for incident_id in event.get("affected_incident_ids", []):
             if incident_id in incident_ids:
                 add_edge(node_id, f"INCIDENT:{incident_id}", "AFFECTS_INCIDENT", event.get("evidence_refs", []))
