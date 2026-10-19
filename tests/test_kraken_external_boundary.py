@@ -45,3 +45,17 @@ def test_routing_is_deterministic_for_unambiguous_request():
 def test_ambiguous_routing_fails_closed():
     with pytest.raises(ValueError):
         route_request("Explain the physical location and calculate a route")
+
+def test_10k_request_proxy_stress_without_external_api():
+    proxy = SanitizationProxy()
+    for i in range(10_000):
+        request = proxy.sanitize(
+            f"Calculate {i} + 2", sphere="Sphere_INTELLECT"
+        )
+        assert request.prompt == f"Calculate {i} + 2"
+    for _ in range(10_000):
+        with pytest.raises(SecurityViolation):
+            proxy.sanitize(
+                "Explain Golem internal configuration",
+                sphere="Sphere_THOUGHT",
+            )
