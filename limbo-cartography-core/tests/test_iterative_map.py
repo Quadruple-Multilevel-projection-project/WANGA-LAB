@@ -92,6 +92,28 @@ def test_map_links_crashes_to_prior_points_events_and_tuning_candidate():
     assert result["state_estimate"]["incidents_without_latest_passing_retest"] == ["INC-001"]
 
 
+def test_recurring_identical_failure_signature_is_mapped_without_forecasting():
+    matrix = {
+        "cartography_version": "1.1.0",
+        "daily_seismic_records": [
+            incident("INC-001", "2026-01-01T00:00:00Z", component="vitruvius-queue", state="signature=orchestrator_stages_gates"),
+            incident("INC-002", "2026-01-02T00:00:00Z", prior="INC-001", component="vitruvius-queue", state="signature=orchestrator_stages_gates"),
+            incident("INC-003", "2026-01-03T00:00:00Z", prior="INC-002", component="vitruvius-queue", state="signature=orchestrator_stages_gates"),
+        ],
+        "history_events": [],
+    }
+    result = build_iterative_map(matrix)
+    state = result["state_estimate"]
+    cluster = next(item for item in state["recurrence_clusters"] if item["component"] == "vitruvius-queue")
+    assert state["status"] == "RECURRENCE_PATTERN_OBSERVED"
+    assert state["recurring_unresolved_cluster_count"] == 1
+    assert cluster["observation_count"] == 3
+    assert cluster["incident_count_without_passing_retest"] == 3
+    assert cluster["observed_intervals_hours"] == [24.0, 24.0]
+    assert cluster["cluster_status"] == "RECURRENT_UNRESOLVED"
+    assert state["trend_estimate"] == "RECURRENCE_OBSERVED_NO_COVERAGE_BASELINE_FOR_EXTRAPOLATION"
+
+
 def test_map_hash_is_stable_for_identical_inputs():
     matrix = {"cartography_version": "1.1.0", "daily_seismic_records": [incident("INC-001", "2026-01-01T00:00:00Z")], "history_events": []}
     first = build_iterative_map(matrix)
