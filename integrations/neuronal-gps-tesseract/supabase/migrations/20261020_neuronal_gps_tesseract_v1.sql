@@ -165,6 +165,20 @@ select 'OMEGA_CENTER', 'TESSERACT_V' || lpad(n::text, 2, '0'), 'TESSERACT_VERTEX
 from generate_series(0, 15) as n
 on conflict (source_node_id, target_node_id, edge_type) do nothing;
 
+-- The 32 actual tesseract edges: connect vertex addresses that differ in exactly one bit.
+insert into public.logic_edges (source_node_id, target_node_id, edge_type, status, metadata)
+select
+  'TESSERACT_V' || lpad(a::text, 2, '0'),
+  'TESSERACT_V' || lpad(b::text, 2, '0'),
+  'TESSERACT_HYPERCUBE_EDGE',
+  'SPECIFIED_NOT_DEPLOYED',
+  '{"topology":"4D hypercube edge; symbolic graph only"}'::jsonb
+from generate_series(0, 15) as a
+cross join generate_series(0, 15) as b
+where a < b
+  and ((a # b) & ((a # b) - 1)) = 0
+on conflict (source_node_id, target_node_id, edge_type) do nothing;
+
 -- Deliberately no weights, astronomy positions, or root/config assignments are fabricated.
 -- Expected seed counts: 1 center + 16 tesseract vertices; 1,028 plugin instances;
--- 1,028 center-routing edges + 16 center-to-vertex edges.
+-- 1,028 center-routing edges + 16 center-to-vertex links + 32 tesseract edges.
