@@ -1,0 +1,82 @@
+{
+  "schema_version": "NEURONAL_GPS_TESSERACT_v1",
+  "project": "Tripartita Logos / Sefer HaLogic",
+  "deployment_status": "SPECIFIED_NOT_DEPLOYED",
+  "target": {
+    "backend": "Supabase Postgres",
+    "source_control": "GitHub",
+    "canonical_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "supabase_project_ref": "zotkrcgzfymqbfdtpsab",
+    "current_supabase_status": "INACTIVE"
+  },
+  "topology": {
+    "center_node_id": "OMEGA_CENTER",
+    "requested_master_plugin_instances": 1028,
+    "tesseract_dimension": 4,
+    "tesseract_vertices": 16,
+    "tesseract_edges": 32,
+    "center_is_separate_from_1028_instances": true,
+    "instance_id_pattern": "MASTER-PLUGIN-{ordinal:04d}",
+    "quadrant_ids": [
+      "Q1_NORTH",
+      "Q2_EAST",
+      "Q3_SOUTH",
+      "Q4_WEST"
+    ],
+    "root_id": null,
+    "config_id": null,
+    "assignments_status": "UNRESOLVED"
+  },
+  "position_contract": {
+    "astronomy_coordinates": {
+      "fields": [
+        "coordinate_source",
+        "coordinate_frame",
+        "observed_at",
+        "right_ascension_deg",
+        "declination_deg",
+        "distance_value",
+        "distance_unit",
+        "evidence_ref"
+      ],
+      "status": "UNRESOLVED",
+      "note": "Do not assign astronomical coordinates until a real ephemeris/catalog source, reference frame, epoch and identity mapping are supplied."
+    },
+    "symbolic_coordinates": {
+      "fields": [
+        "symbolic_x",
+        "symbolic_y",
+        "symbolic_z",
+        "tesseract_vertex_id"
+      ],
+      "status": "UNRESOLVED",
+      "note": "Keep symbolic geometry separate from astronomical coordinates."
+    },
+    "requested_update_interval_ms": 10,
+    "requested_samples_per_second_per_instance": 100,
+    "aggregate_samples_per_second_at_1028_instances": 102800,
+    "retention_policy": "NOT_CONFIGURED",
+    "note": "100 Hz per instance requires a real telemetry source and capacity/retention design; latest-state upserts should be separate from historical samples."
+  },
+  "logic_weights": {
+    "status": "UNRESOLVED_WEIGHTS",
+    "numeric_values_created": false,
+    "activation_rule": "Only activate when derivation or measurement and evidence references are recorded."
+  },
+  "required_connections": {
+    "github_supabase_native_integration": "NOT_VERIFIED",
+    "github_actions_to_supabase": "NOT_CONFIGURED",
+    "supabase_service_secret": "NOT_REQUESTED_OR_STORED",
+    "realtime_stream": "NOT_CONFIGURED"
+  },
+  "gates": [
+    "Restore or otherwise activate Supabase project and verify cost/status",
+    "Review and apply migration",
+    "Run count, foreign-key and RLS verification queries",
+    "Configure GitHub Actions with a least-privilege Supabase credential through secret settings",
+    "Test 3-instance routing prototype before scaling",
+    "Connect a real astronomy/ephemeris feed only if astronomy coordinates are actually required",
+    "Load source-grounded root/config mappings",
+    "Keep all weights unresolved until evidenced"
+  ]
+}
