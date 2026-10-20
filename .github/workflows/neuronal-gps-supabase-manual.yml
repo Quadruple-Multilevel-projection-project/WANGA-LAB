@@ -1,0 +1,52 @@
+name: Neuronal GPS — manual Supabase schema apply
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_apply:
+        description: "Type APPLY to run the idempotent registry SQL against the configured Supabase database"
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+jobs:
+  apply-registry:
+    if: ${{ inputs.confirm_apply == 'APPLY' }}
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    env:
+      SUPABASE_DB_URL: ${{ secrets.SUPABASE_DB_URL }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Require database secret
+        shell: bash
+        run: |
+          if [[ -z "${SUPABASE_DB_URL}" ]]; then
+            echo "::error::Repository secret SUPABASE_DB_URL is missing. Add it in GitHub Settings > Secrets and variables > Actions."
+            exit 1
+          fi
+
+      - name: Install PostgreSQL client
+        run: |
+          sudo apt-get update
+          sudo apt-get install --yes postgresql-client
+
+      - name: Apply registry schema and seed
+        shell: bash
+        run: |
+          psql "${SUPABASE_DB_URL}" --set ON_ERROR_STOP=1 --file integrations/neuronal-gps-tesseract/supabase/migrations/20261020_neuronal_gps_tesseract_v1.sql
+
+      - name: Verify registry counts
+        shell: bash
+        run: |
+          psql "${SUPABASE_DB_URL}" --set ON_ERROR_STOP=1 --tuples-only --no-align --command "
+            SELECT 'instances=' || count(*) FROM public.master_plugin_instances;
+            SELECT 'center=' || count(*) FROM public.logic_nodes WHERE node_id = 'OMEGA_CENTER';
+            SELECT 'tesseract_vertices=' || count(*) FROM public.logic_nodes WHERE node_kind = 'TESSERACT_VERTEX';
+            SELECT 'tesseract_edges=' || count(*) FROM public.logic_edges WHERE edge_type = 'TESSERACT_HYPERCUBE_EDGE';
+            SELECT 'weights_unresolved=' || count(*) FROM public.logic_weight_slots WHERE weight_status = 'UNRESOLVED';
+          "
