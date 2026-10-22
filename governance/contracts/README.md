@@ -3,6 +3,10 @@
 **Registry status:** CREATED AS A SOURCE INDEX; not a contract signature or verification receipt.  
 **Rule:** Never reconstruct or silently replace an authoritative contract from a summary. Preserve original source links and record missing artifacts as blocked.
 
+## Dedicated contract portal
+
+- [PCE Contract Registry website](https://pce-contract-registry-5dlcky.v2.appdeploy.ai/) — deployed source-linked portal; deployment status `ready` with no reported frontend/backend errors.
+
 ## Governing baseline
 
 - [WANGA MASTER CONTRACT v1.0](../WANGA_MASTER_CONTRACT_v1.0.md) — existing master governance contract. It states the source-to-weights order, provenance/lineage requirements, drift handling, verification vocabulary, and that weights remain forbidden until required logic and verification gates pass.
