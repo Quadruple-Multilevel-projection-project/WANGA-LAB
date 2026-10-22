@@ -50,5 +50,10 @@
     "Missing required evidence blocks dependent transitions",
     "A file upload or commit is not proof of contract sealing or runtime execution",
     "Preserve provenance, exact wording, version history, and unresolved items"
-  ]
+  ],
+  "portal": {
+    "url": "https://pce-contract-registry-5dlcky.v2.appdeploy.ai/",
+    "status": "DEPLOYED_READY",
+    "purpose": "Dedicated source-linked contract portal"
+  }
 }
