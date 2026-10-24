@@ -1,0 +1,19 @@
+{
+  "snapshot_date": "2026-10-24",
+  "priority_order_index": 20,
+  "after_last_scanned": "AmbassadorOv/branches-",
+  "next_batch": [
+    "AmbassadorOv/desktop",
+    "AmbassadorOv/extensions",
+    "AmbassadorOv/docs",
+    "AmbassadorOv/generative-ai-docs",
+    "AmbassadorOv/python-genai",
+    "AmbassadorOv/multi-agent-orchestator",
+    "AmbassadorOv/https-AmbassadorOv.io",
+    "AmbassadorOv/vqbshtfsprojects.org",
+    "AmbassadorOv/chatgpt-scientific-publications-extension",
+    "AmbassadorOv/test-notebook-links"
+  ],
+  "remaining_public_repositories": 38,
+  "policy": "Bounded batch of approximately 10 repositories; do not infer absence from search or README 404."
+}
