@@ -1,0 +1,1168 @@
+{
+  "schema_version": "wanga-repository-inventory/1.1",
+  "snapshot_date": "2026-10-24",
+  "generated_at_utc": "2026-10-24T04:30:14.776Z",
+  "source": "Live connected GitHub repository inventory; page_size=100, page_offset=0; affiliation lists refreshed in this cycle.",
+  "inventory_status": "SNAPSHOT_NOT_EXHAUSTIVE_OF_UNEXPOSED_ACCOUNTS",
+  "visible_repository_count": 62,
+  "public_repository_count": 58,
+  "private_repository_count": 4,
+  "unknown_visibility_count": 0,
+  "affiliation_counts": {
+    "owner": 37,
+    "collaborator": 13,
+    "organization_member": 25,
+    "unique_union": 62,
+    "note": "Affiliation sets overlap; do not sum them to derive unique repositories."
+  },
+  "private_repository_handling": "Private repositories are connector-visible, but names, paths and content are omitted from this public registry; aggregate count only.",
+  "permission_note": "Connector returned permission flags for visible repositories. These are connector-exposed metadata, not an independent permission audit.",
+  "latest_update_note": "The live repository listing did not expose updated_at timestamps; no timestamps were inferred.",
+  "batch_size": 10,
+  "scanned_repositories": [
+    "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "AmbassadorOv/AmbassadorOv",
+    "AmbassadorOv/TTTT-0.0.0.0.1",
+    "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+    "Quadruple-Multilevel-projection-project/AI231.meta.io",
+    "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+    "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+    "Quadruple-Multilevel-projection-project/MNM",
+    "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+    "Quadruple-Multilevel-projection-project/skills",
+    "AmbassadorOv/-artificial-y",
+    "AmbassadorOv/AG-triple-X-",
+    "AmbassadorOv/Nanomathematics",
+    "AmbassadorOv/O-Ms",
+    "AmbassadorOv/Qualia",
+    "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+    "AmbassadorOv/TTTTproject-un.govt",
+    "AmbassadorOv/World-Party-Federation-Branches-managers",
+    "AmbassadorOv/awesome-chatgpt-prompts",
+    "AmbassadorOv/branches-"
+  ],
+  "scanned_readme_count": 18,
+  "readme_fetch_gap_count": 2,
+  "additional_targeted_docs_read": 2,
+  "remaining_public_repository_count": 38,
+  "next_cursor": {
+    "priority_order_index": 20,
+    "next_batch": [
+      "AmbassadorOv/desktop",
+      "AmbassadorOv/extensions",
+      "AmbassadorOv/docs",
+      "AmbassadorOv/generative-ai-docs",
+      "AmbassadorOv/python-genai",
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/https-AmbassadorOv.io",
+      "AmbassadorOv/vqbshtfsprojects.org",
+      "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "AmbassadorOv/test-notebook-links"
+    ],
+    "after_last_scanned": "AmbassadorOv/branches-"
+  },
+  "repositories": [
+    {
+      "full_name": "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
+      "readme_summary": "README is a title only; same blob as AG-triple-X- and TTTTproject-un.govt.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/googleapis",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/Nanomathematics",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "readme_summary": "README contains only the title Nanomathematics; identical README blob also observed in sibling repositories.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/desktop",
+      "default_branch": "development",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/platform-samples",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/extensions",
+      "default_branch": "next",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "d2664df6ce794e353a4d1b04682627c3b13f0bb9",
+      "readme_summary": "Positions Logic Research as inquiry into logical structures, relations, constraints, rules, derivations and validity conditions.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "ac7a2d203877442ddba493889239e61aed56ec78",
+      "readme_summary": "Describes research-team coordination and a meta-orchestrator for connecting, abstracting, comparing, verifying and routing team outputs.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/TTTTproject-un.govt",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
+      "readme_summary": "README title points to World-Party-Federation-Branches-managers; byte identity only.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/mermaid",
+      "default_branch": "develop",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/eslint",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/openai_tiktoken",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/-artificial-y",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_ACCESS_GAP_2026-10-24",
+      "readme_blob_sha1": null,
+      "readme_summary": "README.md fetch returned GitHub 404; this is not evidence that the repository has no relevant files.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/Qualia",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "readme_summary": "README contains a title and an external blog link; no WANGA integration established.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/O-Ms",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "5477f49658507c3de65a774eb54976d22a3e0c52",
+      "readme_summary": "README contains only the title O-Ms.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/generative-ai-docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/mujoco",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/cookbook",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/vscode-docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/mediapipe",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/python-genai",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/branches-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "26ee6fb7d42d9c86e1dee2a4082f9276a52815a2",
+      "readme_summary": "README embeds an HTML concept for a Quilia interactive hub/governance page; no direct relationship to WANGA-LAB is established. The unusual default branch name is preserved verbatim in inventory.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/fluffy-parakeet",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/https-AmbassadorOv.io",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/vqbshtfsprojects.org",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/awesome-chatgpt-prompts",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "25c6254b882a96645aeacb866e735a14040913dc",
+      "readme_summary": "Large README (142,443 characters) describes an Awesome ChatGPT Prompts repository; no WANGA-specific integration established by this bounded README-only scan.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/multi-agent-orchestator",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/unetbootin",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/test-notebook-links",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/AG-triple-X-",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
+      "readme_summary": "README consists of a title pointing to World-Party-Federation-Branches-managers; identical README blob observed in two other repositories in this batch.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "readme_summary": "README title is Nanomathematics; same README blob as three other repositories.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "readme_summary": "README title only; insufficient evidence to infer implementation.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/MNM",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "readme_summary": "README blob SHA matches sibling -logicl-neural-order README; establishes README byte identity only.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/-",
+      "default_branch": "feat-yellow-quantic-simulation",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/globalSpeed",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6",
+      "readme_summary": "README is a single external project link; no architecture claim extracted.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/Qualia",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "1530209671f6f76eb1808cf17d9584437e1e867b",
+      "readme_summary": "Describes Terraform infrastructure for deploying AI chat/API services across environments and regions; README warns main may be out of date.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/branches-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/-from-Corsican-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
+      "readme_summary": "README title only; purpose and implementation remain unverified from this surface.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": null,
+      "readme_summary": "README fetch returned 404 despite visible repository metadata; treat as an access/source gap, not proof of absent documentation.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/skills",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "2246383e993f161fd909122d01769059adfb9eab",
+      "readme_summary": "Describes a CLI for an open agent-skills ecosystem; no WANGA-specific integration established.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32",
+      "readme_summary": "Canonical research and engineering repository for AI evidence integrity, drift forensics, provenance reconstruction, verification and continuous logic mining; separates operational evidence work from future-facing logic engineering.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/unetbootin",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/Qdprojects",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/mermaid",
+      "default_branch": "develop",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/copilot-cli",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/-logicl-neural-order",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/MAM-parsed",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    }
+  ]
+}
