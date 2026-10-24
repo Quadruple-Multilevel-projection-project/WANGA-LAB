@@ -1,0 +1,354 @@
+{
+  "map_version": "1.0.0",
+  "map_status": "BUILT_FROM_REGISTERED_RECORDS",
+  "monitoring_horizon_years": 20,
+  "history_retention": "APPEND_ONLY_NO_AUTOMATIC_PRUNING",
+  "source_matrix_version": "1.2.0",
+  "source_matrix_sha256": "2aaeeeb473f972dd24b9066ab18ad412c784cf5243869d2c2a507aa278d064a8",
+  "node_count": 9,
+  "edge_count": 6,
+  "nodes": [
+    {
+      "node_id": "INCIDENT:CRASH-GHA-37763700482",
+      "node_type": "CRASH_POINT",
+      "record_id": "CRASH-GHA-37763700482",
+      "timestamp_utc": "2026-10-08T10:28:31Z",
+      "component": "Daily Autonomous Operations / scripts/vitruvius_forensic_research.py compile stage",
+      "status": "OBSERVED",
+      "observed_state": "workflow=FAILURE; compileall=FAILURE; syntax_error_at_line=93",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/37763700482"
+      ],
+      "source_locators": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/37763700482",
+          "source_version": "aa719ed2e673e1be93df79b2fbe1f0fef9ac7058",
+          "source_sha256": null,
+          "exact_locator": "run 37763700482 > job operations (113266879412) > compileall output > scripts/vitruvius_forensic_research.py:93",
+          "permission_scope": "PUBLIC_SOURCE"
+        }
+      ]
+    },
+    {
+      "node_id": "INCIDENT:CRASH-GHA-38376796038",
+      "node_type": "CRASH_POINT",
+      "record_id": "CRASH-GHA-38376796038",
+      "timestamp_utc": "2026-10-13T09:30:25Z",
+      "component": "Vitruvius Research Index / build-index test contract",
+      "status": "OBSERVED",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38376796038"
+      ],
+      "source_locators": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38376796038",
+          "source_version": "5a741dc5ad598823b23ed44c412a09a63d8bb73a",
+          "source_sha256": null,
+          "exact_locator": "run 38376796038 > job build-index (115227090229) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "permission_scope": "PUBLIC_SOURCE"
+        }
+      ]
+    },
+    {
+      "node_id": "INCIDENT:CRASH-GHA-38530242493",
+      "node_type": "CRASH_POINT",
+      "record_id": "CRASH-GHA-38530242493",
+      "timestamp_utc": "2026-10-14T07:43:52Z",
+      "component": "Vitruvius Research Index / build-index test contract",
+      "status": "OBSERVED",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38530242493"
+      ],
+      "source_locators": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38530242493",
+          "source_version": "9d86c9545643f0ac08ea3644c9ca3748ce0dfd3c",
+          "source_sha256": null,
+          "exact_locator": "run 38530242493 > job build-index (115740124798) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "permission_scope": "PUBLIC_SOURCE"
+        }
+      ]
+    },
+    {
+      "node_id": "INCIDENT:CRASH-GHA-38699326662",
+      "node_type": "CRASH_POINT",
+      "record_id": "CRASH-GHA-38699326662",
+      "timestamp_utc": "2026-10-15T07:31:27Z",
+      "component": "Vitruvius Research Index / build-index test contract",
+      "status": "OBSERVED",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38699326662"
+      ],
+      "source_locators": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38699326662",
+          "source_version": "dcf9c08bb54b84b4b7abbb23729da43ada8acede",
+          "source_sha256": null,
+          "exact_locator": "run 38699326662 > job build-index (116303399273) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "permission_scope": "PUBLIC_SOURCE"
+        }
+      ]
+    },
+    {
+      "node_id": "INCIDENT:CRASH-GHA-38866187447",
+      "node_type": "CRASH_POINT",
+      "record_id": "CRASH-GHA-38866187447",
+      "timestamp_utc": "2026-10-16T07:16:38Z",
+      "component": "Vitruvius Research Index / build-index test contract",
+      "status": "OBSERVED",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38866187447"
+      ],
+      "source_locators": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38866187447",
+          "source_version": "2f989802e6197f75a89947f46682054cd9db8235",
+          "source_sha256": null,
+          "exact_locator": "run 38866187447 > job build-index (116859445272) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "permission_scope": "PUBLIC_SOURCE"
+        }
+      ]
+    },
+    {
+      "node_id": "INCIDENT:CRASH-GHA-39012060675",
+      "node_type": "CRASH_POINT",
+      "record_id": "CRASH-GHA-39012060675",
+      "timestamp_utc": "2026-10-17T07:01:04Z",
+      "component": "Vitruvius Research Index / build-index test contract",
+      "status": "OBSERVED",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39012060675"
+      ],
+      "source_locators": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39012060675",
+          "source_version": "fe8def78d7de55be0b66d330a6f72a4ac27cce1a",
+          "source_sha256": null,
+          "exact_locator": "run 39012060675 > job build-index (117336500585) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "permission_scope": "PUBLIC_SOURCE"
+        }
+      ]
+    },
+    {
+      "node_id": "INCIDENT:CRASH-GHA-39107063451",
+      "node_type": "CRASH_POINT",
+      "record_id": "CRASH-GHA-39107063451",
+      "timestamp_utc": "2026-10-18T07:16:43Z",
+      "component": "Vitruvius Research Index / build-index test contract",
+      "status": "OBSERVED",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39107063451"
+      ],
+      "source_locators": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39107063451",
+          "source_version": "698a8fa7131991b08dd979f8424fe166aadcdfe5",
+          "source_sha256": null,
+          "exact_locator": "run 39107063451 > job build-index (117615119990) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "permission_scope": "PUBLIC_SOURCE"
+        }
+      ]
+    },
+    {
+      "node_id": "INCIDENT:CRASH-GHA-39218819457",
+      "node_type": "CRASH_POINT",
+      "record_id": "CRASH-GHA-39218819457",
+      "timestamp_utc": "2026-10-19T07:52:31Z",
+      "component": "Vitruvius Research Index / build-index test contract",
+      "status": "OBSERVED",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39218819457"
+      ],
+      "source_locators": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39218819457",
+          "source_version": "8e685afebdbe763832ad653a93c8c9a71892cbb2",
+          "source_sha256": null,
+          "exact_locator": "run 39218819457 > job build-index (117949009476) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "permission_scope": "PUBLIC_SOURCE"
+        }
+      ]
+    },
+    {
+      "node_id": "INCIDENT:CRASH-GHA-39239703376",
+      "node_type": "CRASH_POINT",
+      "record_id": "CRASH-GHA-39239703376",
+      "timestamp_utc": "2026-10-19T10:45:18Z",
+      "component": "Logic Wiki generated-report proposal workflow",
+      "status": "OBSERVED",
+      "observed_state": "build_and_tests=PASS; proposal_step=FAILURE; root_cause=UNRESOLVED",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39239703376"
+      ],
+      "source_locators": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39239703376",
+          "source_version": "8e685afebdbe763832ad653a93c8c9a71892cbb2",
+          "source_sha256": null,
+          "exact_locator": "run 39239703376 > job validate-build-report (118017255669) > step Propose generated wiki/report updates (no auto-merge)",
+          "permission_scope": "PUBLIC_SOURCE"
+        }
+      ]
+    }
+  ],
+  "edges": [
+    {
+      "edge_id": "EDGE-546f464b614f9a03033d",
+      "source": "INCIDENT:CRASH-GHA-38376796038",
+      "target": "INCIDENT:CRASH-GHA-38530242493",
+      "relation": "PRECEDES",
+      "evidence_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38530242493"
+      ],
+      "epistemic_status": "RECORDED_LINK"
+    },
+    {
+      "edge_id": "EDGE-18940efab9f7576f976c",
+      "source": "INCIDENT:CRASH-GHA-38530242493",
+      "target": "INCIDENT:CRASH-GHA-38699326662",
+      "relation": "PRECEDES",
+      "evidence_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38699326662"
+      ],
+      "epistemic_status": "RECORDED_LINK"
+    },
+    {
+      "edge_id": "EDGE-4bea68ed391bb4b156e5",
+      "source": "INCIDENT:CRASH-GHA-38699326662",
+      "target": "INCIDENT:CRASH-GHA-38866187447",
+      "relation": "PRECEDES",
+      "evidence_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38866187447"
+      ],
+      "epistemic_status": "RECORDED_LINK"
+    },
+    {
+      "edge_id": "EDGE-664777ae67ed584a506a",
+      "source": "INCIDENT:CRASH-GHA-38866187447",
+      "target": "INCIDENT:CRASH-GHA-39012060675",
+      "relation": "PRECEDES",
+      "evidence_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39012060675"
+      ],
+      "epistemic_status": "RECORDED_LINK"
+    },
+    {
+      "edge_id": "EDGE-f54cd034bb969602045d",
+      "source": "INCIDENT:CRASH-GHA-39012060675",
+      "target": "INCIDENT:CRASH-GHA-39107063451",
+      "relation": "PRECEDES",
+      "evidence_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39107063451"
+      ],
+      "epistemic_status": "RECORDED_LINK"
+    },
+    {
+      "edge_id": "EDGE-988a842a58d88885e280",
+      "source": "INCIDENT:CRASH-GHA-39107063451",
+      "target": "INCIDENT:CRASH-GHA-39218819457",
+      "relation": "PRECEDES",
+      "evidence_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39218819457"
+      ],
+      "epistemic_status": "RECORDED_LINK"
+    }
+  ],
+  "state_estimate": {
+    "status": "LAST_OBSERVATION_ONLY",
+    "as_of_latest_recorded_time_utc": "2026-10-19T10:45:18Z",
+    "latest_crash_point": {
+      "incident_id": "CRASH-GHA-39239703376",
+      "timestamp_utc": "2026-10-19T10:45:18Z",
+      "component": "Logic Wiki generated-report proposal workflow",
+      "observed_state": "build_and_tests=PASS; proposal_step=FAILURE; root_cause=UNRESOLVED",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39239703376"
+      ]
+    },
+    "registered_incident_count": 9,
+    "registered_history_event_count": 0,
+    "affected_components": [
+      "Daily Autonomous Operations / scripts/vitruvius_forensic_research.py compile stage",
+      "Logic Wiki generated-report proposal workflow",
+      "Vitruvius Research Index / build-index test contract"
+    ],
+    "retest_result_counts": {},
+    "incidents_without_latest_passing_retest": [
+      "CRASH-GHA-37763700482",
+      "CRASH-GHA-38376796038",
+      "CRASH-GHA-38530242493",
+      "CRASH-GHA-38699326662",
+      "CRASH-GHA-38866187447",
+      "CRASH-GHA-39012060675",
+      "CRASH-GHA-39107063451",
+      "CRASH-GHA-39218819457",
+      "CRASH-GHA-39239703376"
+    ],
+    "registered_incident_follow_up": [
+      {
+        "incident_id": "CRASH-GHA-37763700482",
+        "latest_retest_event_id": null,
+        "latest_retest_result": null,
+        "follow_up_state": "NO_RETEST_RECORDED"
+      },
+      {
+        "incident_id": "CRASH-GHA-38376796038",
+        "latest_retest_event_id": null,
+        "latest_retest_result": null,
+        "follow_up_state": "NO_RETEST_RECORDED"
+      },
+      {
+        "incident_id": "CRASH-GHA-38530242493",
+        "latest_retest_event_id": null,
+        "latest_retest_result": null,
+        "follow_up_state": "NO_RETEST_RECORDED"
+      },
+      {
+        "incident_id": "CRASH-GHA-38699326662",
+        "latest_retest_event_id": null,
+        "latest_retest_result": null,
+        "follow_up_state": "NO_RETEST_RECORDED"
+      },
+      {
+        "incident_id": "CRASH-GHA-38866187447",
+        "latest_retest_event_id": null,
+        "latest_retest_result": null,
+        "follow_up_state": "NO_RETEST_RECORDED"
+      },
+      {
+        "incident_id": "CRASH-GHA-39012060675",
+        "latest_retest_event_id": null,
+        "latest_retest_result": null,
+        "follow_up_state": "NO_RETEST_RECORDED"
+      },
+      {
+        "incident_id": "CRASH-GHA-39107063451",
+        "latest_retest_event_id": null,
+        "latest_retest_result": null,
+        "follow_up_state": "NO_RETEST_RECORDED"
+      },
+      {
+        "incident_id": "CRASH-GHA-39218819457",
+        "latest_retest_event_id": null,
+        "latest_retest_result": null,
+        "follow_up_state": "NO_RETEST_RECORDED"
+      },
+      {
+        "incident_id": "CRASH-GHA-39239703376",
+        "latest_retest_event_id": null,
+        "latest_retest_result": null,
+        "follow_up_state": "NO_RETEST_RECORDED"
+      }
+    ],
+    "trend_estimate": "NOT_ESTIMABLE_WITHOUT_SOURCE_COVERAGE_METADATA",
+    "interpretation_boundary": "This is a description of the latest registered observation and recorded follow-ups, not a verified assessment of the whole system or a forecast."
+  },
+  "map_sha256": "60b39c6d38e03cc10bdea31ffe8267a5a71a09b53ff46ad098d12e1a1855de2a"
+}
