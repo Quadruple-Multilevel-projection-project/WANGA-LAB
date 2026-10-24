@@ -32,6 +32,12 @@ jobs:
       - name: Create execution log
         working-directory: limbo-cartography-core
         run: python engine/deterministic_executor.py
+      # The map is a deterministic derivative of reality_matrix.json. Rebuild it before
+      # validating matrix/map consistency so a newly appended source record does not
+      # fail the baseline check against yesterday's generated map.
+      - name: Rebuild existing cumulative map before baseline validation
+        working-directory: limbo-cartography-core
+        run: python engine/iterative_map_builder.py
       - name: Validate repository baseline
         working-directory: limbo-cartography-core
         run: python engine/drift_validator.py
