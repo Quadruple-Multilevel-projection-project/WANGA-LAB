@@ -7,11 +7,11 @@
   "test_cases": 0,
   "benchmark_suites": 0,
   "independent_review_cycles": 0,
-  "critical_core_contradictions": 0,
+  "critical_core_contradictions": null,
   "deterministic_build": true,
   "holdout_split": false,
   "mirror_review": false,
-  "note": "2 active composition rules are defined with explicit contracts in logic_fractal/data/composition_rules.json. This is a source/specification count, not a benchmark score. Benchmark cases remain 0 until a reviewed ground-truth test suite is registered and executed.",
+  "note": "No independent core-contradiction inventory is registered. Unknown is not equivalent to zero; readiness remains blocked until a reviewed inventory exists.",
   "deterministic_build_evidence": {
     "status": "TESTED_ON_SYNTHETIC_FIXTURES",
     "source": "scripts/build_first_fractal_model.py",
@@ -39,5 +39,6 @@
       "readiness_gate": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
       "note": "Catalog graph paths only; not 189 verified logic units or conversation-derived fragments."
     }
-  }
+  },
+  "contradiction_inventory_available": false
 }
