@@ -605,7 +605,7 @@
       "branch_ref": "main",
       "exact_file_path": "README.md",
       "source_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
-      "exact_locator": "README.md:Lnull",
+      "exact_locator": "README.md:L9",
       "literal_excerpt": "Setting use_google_tool=False configuration for data retrieval agent will create knowledge base from local json dataset inside \"retrievers\" folder and store it in lanceDB.",
       "secondary_literal_excerpt": "By default configuration is use_google_tool=True",
       "primitives": [
