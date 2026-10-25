@@ -65,6 +65,18 @@ jobs:
       - name: Validate resulting state
         working-directory: limbo-cartography-core
         run: python engine/drift_validator.py
+      - name: Archive generated Limbo outputs for review
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: limbo-cartography-generated-outputs
+          path: |
+            limbo-cartography-core/cartography/iterative_crash_map.json
+            limbo-cartography-core/cartography/tuning_candidates/*.json
+            limbo-cartography-core/cartography/logic_bundles/*.json
+            limbo-cartography-core/cartography/run_logs/latest_execution.json
+          if-no-files-found: warn
+          retention-days: 30
       - name: Open or update automation PR (never push directly to the default branch)
         if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         uses: peter-evans/create-pull-request@v7
