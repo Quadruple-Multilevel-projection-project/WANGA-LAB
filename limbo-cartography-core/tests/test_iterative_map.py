@@ -129,13 +129,13 @@ def test_map_hash_is_stable_for_identical_inputs():
 def test_committed_map_matches_rebuild_from_registered_inputs():
     matrix = json.loads((ROOT / "cartography/reality_matrix.json").read_text(encoding="utf-8"))
     tuning = []
-    for path in sorted((root / "cartography/tuning_candidates").glob("*.json")):
+    for path in sorted((ROOT / "cartography/tuning_candidates").glob("*.json")):
         item = json.loads(path.read_text(encoding="utf-8"))
         if isinstance(item, dict) and isinstance(item.get("candidate_id"), str):
             tuning.append(item)
     bundles = []
-    for path in sorted((root / "cartography/logic_bundles").glob("*.json")):
-        item = __import__("json").loads(path.read_text(encoding="utf-8"))
+    for path in sorted((ROOT / "cartography/logic_bundles").glob("*.json")):
+        item = json.loads(path.read_text(encoding="utf-8"))
         if isinstance(item, dict) and isinstance(item.get("bundle_id"), str):
             bundles.append(item)
     committed = json.loads((ROOT / "cartography/iterative_crash_map.json").read_text(encoding="utf-8"))
