@@ -1,6 +1,10 @@
 import copy
+import json
+from pathlib import Path
 
 from engine.iterative_map_builder import build_iterative_map
+
+ROOT = Path(__file__).resolve().parents[1]
 
 
 def incident(incident_id, timestamp, prior=None, component="runtime-a", state="failure-observed"):
@@ -123,11 +127,10 @@ def test_map_hash_is_stable_for_identical_inputs():
 
 
 def test_committed_map_matches_rebuild_from_registered_inputs():
-    root = __import__("pathlib").Path(__file__).resolve().parents[1]
-    matrix = __import__("json").loads((root / "cartography/reality_matrix.json").read_text(encoding="utf-8"))
+    matrix = json.loads((ROOT / "cartography/reality_matrix.json").read_text(encoding="utf-8"))
     tuning = []
     for path in sorted((root / "cartography/tuning_candidates").glob("*.json")):
-        item = __import__("json").loads(path.read_text(encoding="utf-8"))
+        item = json.loads(path.read_text(encoding="utf-8"))
         if isinstance(item, dict) and isinstance(item.get("candidate_id"), str):
             tuning.append(item)
     bundles = []
@@ -135,7 +138,7 @@ def test_committed_map_matches_rebuild_from_registered_inputs():
         item = __import__("json").loads(path.read_text(encoding="utf-8"))
         if isinstance(item, dict) and isinstance(item.get("bundle_id"), str):
             bundles.append(item)
-    committed = __import__("json").loads((root / "cartography/iterative_crash_map.json").read_text(encoding="utf-8"))
+    committed = json.loads((ROOT / "cartography/iterative_crash_map.json").read_text(encoding="utf-8"))
     rebuilt = build_iterative_map(matrix, tuning, bundles)
     assert committed == rebuilt
     assert committed["source_matrix_version"] == matrix["cartography_version"]
