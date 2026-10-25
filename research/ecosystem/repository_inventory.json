@@ -1,9 +1,9 @@
 {
   "schema_version": "wanga-repository-inventory/1.1",
-  "snapshot_date": "2026-10-24",
-  "generated_at_utc": "2026-10-24T04:30:14.776Z",
+  "snapshot_date": "2026-10-25",
+  "generated_at_utc": "2026-10-25T05:50:17Z",
   "source": "Live connected GitHub repository inventory; page_size=100, page_offset=0; affiliation lists refreshed in this cycle.",
-  "inventory_status": "SNAPSHOT_NOT_EXHAUSTIVE_OF_UNEXPOSED_ACCOUNTS",
+  "inventory_status": "LIVE_SNAPSHOT_WITH_BOUNDED_BATCH",
   "visible_repository_count": 62,
   "public_repository_count": 58,
   "private_repository_count": 4,
@@ -12,8 +12,7 @@
     "owner": 37,
     "collaborator": 13,
     "organization_member": 25,
-    "unique_union": 62,
-    "note": "Affiliation sets overlap; do not sum them to derive unique repositories."
+    "unique_union": 62
   },
   "private_repository_handling": "Private repositories are connector-visible, but names, paths and content are omitted from this public registry; aggregate count only.",
   "permission_note": "Connector returned permission flags for visible repositories. These are connector-exposed metadata, not an independent permission audit.",
@@ -39,27 +38,37 @@
     "AmbassadorOv/TTTTproject-un.govt",
     "AmbassadorOv/World-Party-Federation-Branches-managers",
     "AmbassadorOv/awesome-chatgpt-prompts",
-    "AmbassadorOv/branches-"
+    "AmbassadorOv/branches-",
+    "AmbassadorOv/desktop",
+    "AmbassadorOv/extensions",
+    "AmbassadorOv/docs",
+    "AmbassadorOv/generative-ai-docs",
+    "AmbassadorOv/python-genai",
+    "AmbassadorOv/multi-agent-orchestator",
+    "AmbassadorOv/https-AmbassadorOv.io",
+    "AmbassadorOv/vqbshtfsprojects.org",
+    "AmbassadorOv/chatgpt-scientific-publications-extension",
+    "AmbassadorOv/test-notebook-links"
   ],
-  "scanned_readme_count": 18,
-  "readme_fetch_gap_count": 2,
+  "scanned_readme_count": 26,
+  "readme_fetch_gap_count": 4,
   "additional_targeted_docs_read": 2,
-  "remaining_public_repository_count": 38,
+  "remaining_public_repository_count": 28,
   "next_cursor": {
-    "priority_order_index": 20,
+    "priority_order_index": 30,
     "next_batch": [
-      "AmbassadorOv/desktop",
-      "AmbassadorOv/extensions",
-      "AmbassadorOv/docs",
-      "AmbassadorOv/generative-ai-docs",
-      "AmbassadorOv/python-genai",
-      "AmbassadorOv/multi-agent-orchestator",
-      "AmbassadorOv/https-AmbassadorOv.io",
-      "AmbassadorOv/vqbshtfsprojects.org",
-      "AmbassadorOv/chatgpt-scientific-publications-extension",
-      "AmbassadorOv/test-notebook-links"
+      "AmbassadorOv/googleapis",
+      "AmbassadorOv/platform-samples",
+      "AmbassadorOv/mermaid",
+      "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "AmbassadorOv/eslint",
+      "AmbassadorOv/openai_tiktoken",
+      "AmbassadorOv/mujoco",
+      "AmbassadorOv/cookbook",
+      "AmbassadorOv/vscode-docs",
+      "AmbassadorOv/mediapipe"
     ],
-    "after_last_scanned": "AmbassadorOv/branches-"
+    "after_last_scanned": "AmbassadorOv/test-notebook-links"
   },
   "repositories": [
     {
@@ -133,10 +142,11 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "c7702d385076e80f365a23d17dc868b9ecb6a5ad",
+      "readme_summary": "README identifies an Electron desktop application written with TypeScript and React; no direct WANGA integration evidence in README.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
     },
     {
       "full_name": "AmbassadorOv/platform-samples",
@@ -171,10 +181,11 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "6ef8b6a54813922bf64bad64c8e7301f8dc620c2",
+      "readme_summary": "README describes Firebase Extensions source and installation/configuration guidance; no direct WANGA logic/fractal evidence in README.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
     },
     {
       "full_name": "AmbassadorOv/AmbassadorOv",
@@ -247,10 +258,11 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "69090a601896b5189a5b3ee42105ed42638016be",
+      "readme_summary": "README identifies source for the GitHub Docs website and Markdown content; no direct WANGA integration evidence in README.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
     },
     {
       "full_name": "AmbassadorOv/mermaid",
@@ -399,10 +411,11 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "1bf3babd967e73a1cff092805c4ff151fba95baf",
+      "readme_summary": "README describes source files for Gemini API developer documentation, notebooks, demos and examples; API overlap only, no WANGA backend configuration evidence.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
     },
     {
       "full_name": "AmbassadorOv/mujoco",
@@ -494,10 +507,11 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+      "readme_summary": "README describes Google Gen AI Python SDK for Gemini Developer API and Vertex AI; no WANGA backend selected or configured by this README.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
     },
     {
       "full_name": "AmbassadorOv/branches-",
@@ -570,10 +584,11 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "scan_status": "README_FETCH_GAP_404_2026-10-25",
       "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "readme_summary": "README.md fetch returned 404; no inference about other documentation.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
     },
     {
       "full_name": "AmbassadorOv/vqbshtfsprojects.org",
@@ -589,10 +604,11 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "scan_status": "REPOSITORY_EMPTY_CONFIRMED_2026-10-25",
       "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "readme_summary": "GitHub API reports this repository is empty; no README content exists in this snapshot.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
     },
     {
       "full_name": "AmbassadorOv/awesome-chatgpt-prompts",
@@ -627,10 +643,11 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+      "readme_summary": "README describes a coordinator with classification, data-retrieval and reasoning agents, and a configurable local-JSON/LanceDB retrieval path; candidate overlap only, not execution evidence.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
     },
     {
       "full_name": "AmbassadorOv/unetbootin",
@@ -665,10 +682,11 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "cad8e71d3b07510fbcf15d7051db725b9a579cae",
+      "readme_summary": "README lists notebook/Colab link tests only; no direct logic, fractal, NTM or provenance architecture evidence.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
     },
     {
       "full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
@@ -684,10 +702,11 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "2866fa41c2232edaf4bfa82e299e22d54ed267ec",
+      "readme_summary": "README describes SciGPT as a bot for scientists and researchers; agent/research overlap is only a discovery cue, not evidence of WANGA integration.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
     },
     {
       "full_name": "AmbassadorOv/AG-triple-X-",
