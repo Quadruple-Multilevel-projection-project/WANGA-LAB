@@ -1,0 +1,5625 @@
+{
+  "schema": "WANGA_GATE14_CLAUSE_CANDIDATE_REGISTRY_V1",
+  "work": "מילות ההגיון",
+  "target_gate": 14,
+  "source_commit": "d1106d9a66528dc3e39cf1ea0732782927d9f678",
+  "status": "CANDIDATE_CLAUSE_SEGMENTATION_NOT_VERIFIED",
+  "policy": {
+    "source_text_preserved": true,
+    "split_rules": "SEMICOLON_COLON_SOF_PASUQ_AND_COMMA_BEFORE_SELECTED_CONNECTIVES",
+    "boundaries_are_candidates": true,
+    "no_semantic_relations_inferred": true,
+    "word_offsets_use_normalized_gate14_source_text": true
+  },
+  "sentence_candidate_count": 34,
+  "clause_candidate_count": 54,
+  "word_token_count": 799,
+  "expected_word_token_count": 799,
+  "token_coverage_complete": true,
+  "clauses": [
+    {
+      "clause_id": "G14-S001-C01",
+      "sentence_id": "G14-S001",
+      "source_span": {
+        "start_char": 0,
+        "end_char": 81
+      },
+      "original_text": "השם דבור, מהסכמת הקדמונים מחכמי האומות השלמות, הוא שם משותף יפול אל שלשה עניינים.",
+      "word_token_count": 14,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "השם",
+          "start_char": 0,
+          "end_char": 3
+        },
+        {
+          "index": 1,
+          "surface": "דבור",
+          "start_char": 4,
+          "end_char": 8
+        },
+        {
+          "index": 2,
+          "surface": "מהסכמת",
+          "start_char": 10,
+          "end_char": 16
+        },
+        {
+          "index": 3,
+          "surface": "הקדמונים",
+          "start_char": 17,
+          "end_char": 25
+        },
+        {
+          "index": 4,
+          "surface": "מחכמי",
+          "start_char": 26,
+          "end_char": 31
+        },
+        {
+          "index": 5,
+          "surface": "האומות",
+          "start_char": 32,
+          "end_char": 38
+        },
+        {
+          "index": 6,
+          "surface": "השלמות",
+          "start_char": 39,
+          "end_char": 45
+        },
+        {
+          "index": 7,
+          "surface": "הוא",
+          "start_char": 47,
+          "end_char": 50
+        },
+        {
+          "index": 8,
+          "surface": "שם",
+          "start_char": 51,
+          "end_char": 53
+        },
+        {
+          "index": 9,
+          "surface": "משותף",
+          "start_char": 54,
+          "end_char": 59
+        },
+        {
+          "index": 10,
+          "surface": "יפול",
+          "start_char": 60,
+          "end_char": 64
+        },
+        {
+          "index": 11,
+          "surface": "אל",
+          "start_char": 65,
+          "end_char": 67
+        },
+        {
+          "index": 12,
+          "surface": "שלשה",
+          "start_char": 68,
+          "end_char": 72
+        },
+        {
+          "index": 13,
+          "surface": "עניינים",
+          "start_char": 73,
+          "end_char": 80
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S002-C01",
+      "sentence_id": "G14-S002",
+      "source_span": {
+        "start_char": 82,
+        "end_char": 113
+      },
+      "original_text": "הראשון הוא הכח אשר יחד בו האדם,",
+      "word_token_count": 7,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "הראשון",
+          "start_char": 82,
+          "end_char": 88
+        },
+        {
+          "index": 1,
+          "surface": "הוא",
+          "start_char": 89,
+          "end_char": 92
+        },
+        {
+          "index": 2,
+          "surface": "הכח",
+          "start_char": 93,
+          "end_char": 96
+        },
+        {
+          "index": 3,
+          "surface": "אשר",
+          "start_char": 97,
+          "end_char": 100
+        },
+        {
+          "index": 4,
+          "surface": "יחד",
+          "start_char": 101,
+          "end_char": 104
+        },
+        {
+          "index": 5,
+          "surface": "בו",
+          "start_char": 105,
+          "end_char": 107
+        },
+        {
+          "index": 6,
+          "surface": "האדם",
+          "start_char": 108,
+          "end_char": 112
+        }
+      ],
+      "boundary_after": "COMMA_BEFORE_CONNECTIVE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S002-C02",
+      "sentence_id": "G14-S002",
+      "source_span": {
+        "start_char": 114,
+        "end_char": 219
+      },
+      "original_text": "אשר בו ישכיל המושכלות וילמוד המלאכות ויכיר המגונה והנאה, ויקרא זה – הכח הדבור, ויקרא גם כן – הנפש המדברת.",
+      "word_token_count": 18,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "אשר",
+          "start_char": 114,
+          "end_char": 117
+        },
+        {
+          "index": 1,
+          "surface": "בו",
+          "start_char": 118,
+          "end_char": 120
+        },
+        {
+          "index": 2,
+          "surface": "ישכיל",
+          "start_char": 121,
+          "end_char": 126
+        },
+        {
+          "index": 3,
+          "surface": "המושכלות",
+          "start_char": 127,
+          "end_char": 135
+        },
+        {
+          "index": 4,
+          "surface": "וילמוד",
+          "start_char": 136,
+          "end_char": 142
+        },
+        {
+          "index": 5,
+          "surface": "המלאכות",
+          "start_char": 143,
+          "end_char": 150
+        },
+        {
+          "index": 6,
+          "surface": "ויכיר",
+          "start_char": 151,
+          "end_char": 156
+        },
+        {
+          "index": 7,
+          "surface": "המגונה",
+          "start_char": 157,
+          "end_char": 163
+        },
+        {
+          "index": 8,
+          "surface": "והנאה",
+          "start_char": 164,
+          "end_char": 169
+        },
+        {
+          "index": 9,
+          "surface": "ויקרא",
+          "start_char": 171,
+          "end_char": 176
+        },
+        {
+          "index": 10,
+          "surface": "זה",
+          "start_char": 177,
+          "end_char": 179
+        },
+        {
+          "index": 11,
+          "surface": "הכח",
+          "start_char": 182,
+          "end_char": 185
+        },
+        {
+          "index": 12,
+          "surface": "הדבור",
+          "start_char": 186,
+          "end_char": 191
+        },
+        {
+          "index": 13,
+          "surface": "ויקרא",
+          "start_char": 193,
+          "end_char": 198
+        },
+        {
+          "index": 14,
+          "surface": "גם",
+          "start_char": 199,
+          "end_char": 201
+        },
+        {
+          "index": 15,
+          "surface": "כן",
+          "start_char": 202,
+          "end_char": 204
+        },
+        {
+          "index": 16,
+          "surface": "הנפש",
+          "start_char": 207,
+          "end_char": 211
+        },
+        {
+          "index": 17,
+          "surface": "המדברת",
+          "start_char": 212,
+          "end_char": 218
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S003-C01",
+      "sentence_id": "G14-S003",
+      "source_span": {
+        "start_char": 220,
+        "end_char": 306
+      },
+      "original_text": "והענין השני הוא המושכל עצמו אשר כבר השכילהו האדם, ויקרא זה הענין גם כן – הדבור הפנימי.",
+      "word_token_count": 16,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "והענין",
+          "start_char": 220,
+          "end_char": 226
+        },
+        {
+          "index": 1,
+          "surface": "השני",
+          "start_char": 227,
+          "end_char": 231
+        },
+        {
+          "index": 2,
+          "surface": "הוא",
+          "start_char": 232,
+          "end_char": 235
+        },
+        {
+          "index": 3,
+          "surface": "המושכל",
+          "start_char": 236,
+          "end_char": 242
+        },
+        {
+          "index": 4,
+          "surface": "עצמו",
+          "start_char": 243,
+          "end_char": 247
+        },
+        {
+          "index": 5,
+          "surface": "אשר",
+          "start_char": 248,
+          "end_char": 251
+        },
+        {
+          "index": 6,
+          "surface": "כבר",
+          "start_char": 252,
+          "end_char": 255
+        },
+        {
+          "index": 7,
+          "surface": "השכילהו",
+          "start_char": 256,
+          "end_char": 263
+        },
+        {
+          "index": 8,
+          "surface": "האדם",
+          "start_char": 264,
+          "end_char": 268
+        },
+        {
+          "index": 9,
+          "surface": "ויקרא",
+          "start_char": 270,
+          "end_char": 275
+        },
+        {
+          "index": 10,
+          "surface": "זה",
+          "start_char": 276,
+          "end_char": 278
+        },
+        {
+          "index": 11,
+          "surface": "הענין",
+          "start_char": 279,
+          "end_char": 284
+        },
+        {
+          "index": 12,
+          "surface": "גם",
+          "start_char": 285,
+          "end_char": 287
+        },
+        {
+          "index": 13,
+          "surface": "כן",
+          "start_char": 288,
+          "end_char": 290
+        },
+        {
+          "index": 14,
+          "surface": "הדבור",
+          "start_char": 293,
+          "end_char": 298
+        },
+        {
+          "index": 15,
+          "surface": "הפנימי",
+          "start_char": 299,
+          "end_char": 305
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S004-C01",
+      "sentence_id": "G14-S004",
+      "source_span": {
+        "start_char": 307,
+        "end_char": 400
+      },
+      "original_text": "והעניין השלישי הוא המליצה בלשון מהענין ההוא הנרשם בנפש, ויקרא זה הענין גם כן – הדבור החיצוני.",
+      "word_token_count": 16,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "והעניין",
+          "start_char": 307,
+          "end_char": 314
+        },
+        {
+          "index": 1,
+          "surface": "השלישי",
+          "start_char": 315,
+          "end_char": 321
+        },
+        {
+          "index": 2,
+          "surface": "הוא",
+          "start_char": 322,
+          "end_char": 325
+        },
+        {
+          "index": 3,
+          "surface": "המליצה",
+          "start_char": 326,
+          "end_char": 332
+        },
+        {
+          "index": 4,
+          "surface": "בלשון",
+          "start_char": 333,
+          "end_char": 338
+        },
+        {
+          "index": 5,
+          "surface": "מהענין",
+          "start_char": 339,
+          "end_char": 345
+        },
+        {
+          "index": 6,
+          "surface": "ההוא",
+          "start_char": 346,
+          "end_char": 350
+        },
+        {
+          "index": 7,
+          "surface": "הנרשם",
+          "start_char": 351,
+          "end_char": 356
+        },
+        {
+          "index": 8,
+          "surface": "בנפש",
+          "start_char": 357,
+          "end_char": 361
+        },
+        {
+          "index": 9,
+          "surface": "ויקרא",
+          "start_char": 363,
+          "end_char": 368
+        },
+        {
+          "index": 10,
+          "surface": "זה",
+          "start_char": 369,
+          "end_char": 371
+        },
+        {
+          "index": 11,
+          "surface": "הענין",
+          "start_char": 372,
+          "end_char": 377
+        },
+        {
+          "index": 12,
+          "surface": "גם",
+          "start_char": 378,
+          "end_char": 380
+        },
+        {
+          "index": 13,
+          "surface": "כן",
+          "start_char": 381,
+          "end_char": 383
+        },
+        {
+          "index": 14,
+          "surface": "הדבור",
+          "start_char": 386,
+          "end_char": 391
+        },
+        {
+          "index": 15,
+          "surface": "החיצוני",
+          "start_char": 392,
+          "end_char": 399
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S005-C01",
+      "sentence_id": "G14-S005",
+      "source_span": {
+        "start_char": 401,
+        "end_char": 481
+      },
+      "original_text": "ובעבור שזאת המלאכה אשר הניחה אריסטוטלוס והשלים חלקיה בשמונה ספרים תתן לכח המדבר,",
+      "word_token_count": 13,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "ובעבור",
+          "start_char": 401,
+          "end_char": 407
+        },
+        {
+          "index": 1,
+          "surface": "שזאת",
+          "start_char": 408,
+          "end_char": 412
+        },
+        {
+          "index": 2,
+          "surface": "המלאכה",
+          "start_char": 413,
+          "end_char": 419
+        },
+        {
+          "index": 3,
+          "surface": "אשר",
+          "start_char": 420,
+          "end_char": 423
+        },
+        {
+          "index": 4,
+          "surface": "הניחה",
+          "start_char": 424,
+          "end_char": 429
+        },
+        {
+          "index": 5,
+          "surface": "אריסטוטלוס",
+          "start_char": 430,
+          "end_char": 440
+        },
+        {
+          "index": 6,
+          "surface": "והשלים",
+          "start_char": 441,
+          "end_char": 447
+        },
+        {
+          "index": 7,
+          "surface": "חלקיה",
+          "start_char": 448,
+          "end_char": 453
+        },
+        {
+          "index": 8,
+          "surface": "בשמונה",
+          "start_char": 454,
+          "end_char": 460
+        },
+        {
+          "index": 9,
+          "surface": "ספרים",
+          "start_char": 461,
+          "end_char": 466
+        },
+        {
+          "index": 10,
+          "surface": "תתן",
+          "start_char": 467,
+          "end_char": 470
+        },
+        {
+          "index": 11,
+          "surface": "לכח",
+          "start_char": 471,
+          "end_char": 474
+        },
+        {
+          "index": 12,
+          "surface": "המדבר",
+          "start_char": 475,
+          "end_char": 480
+        }
+      ],
+      "boundary_after": "COMMA_BEFORE_CONNECTIVE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S005-C02",
+      "sentence_id": "G14-S005",
+      "source_span": {
+        "start_char": 482,
+        "end_char": 516
+      },
+      "original_text": "והוא הדבור הפנימי, דרכים במושכלות,",
+      "word_token_count": 5,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "והוא",
+          "start_char": 482,
+          "end_char": 486
+        },
+        {
+          "index": 1,
+          "surface": "הדבור",
+          "start_char": 487,
+          "end_char": 492
+        },
+        {
+          "index": 2,
+          "surface": "הפנימי",
+          "start_char": 493,
+          "end_char": 499
+        },
+        {
+          "index": 3,
+          "surface": "דרכים",
+          "start_char": 501,
+          "end_char": 506
+        },
+        {
+          "index": 4,
+          "surface": "במושכלות",
+          "start_char": 507,
+          "end_char": 515
+        }
+      ],
+      "boundary_after": "COMMA_BEFORE_CONNECTIVE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S005-C03",
+      "sentence_id": "G14-S005",
+      "source_span": {
+        "start_char": 517,
+        "end_char": 606
+      },
+      "original_text": "עד שתשמרהו מן הטעות ותדריכהו על היושר עד שתגיע לו האמת בכל מה שבכח האדם שתגיע לו האמת בו;",
+      "word_token_count": 19,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "עד",
+          "start_char": 517,
+          "end_char": 519
+        },
+        {
+          "index": 1,
+          "surface": "שתשמרהו",
+          "start_char": 520,
+          "end_char": 527
+        },
+        {
+          "index": 2,
+          "surface": "מן",
+          "start_char": 528,
+          "end_char": 530
+        },
+        {
+          "index": 3,
+          "surface": "הטעות",
+          "start_char": 531,
+          "end_char": 536
+        },
+        {
+          "index": 4,
+          "surface": "ותדריכהו",
+          "start_char": 537,
+          "end_char": 545
+        },
+        {
+          "index": 5,
+          "surface": "על",
+          "start_char": 546,
+          "end_char": 548
+        },
+        {
+          "index": 6,
+          "surface": "היושר",
+          "start_char": 549,
+          "end_char": 554
+        },
+        {
+          "index": 7,
+          "surface": "עד",
+          "start_char": 555,
+          "end_char": 557
+        },
+        {
+          "index": 8,
+          "surface": "שתגיע",
+          "start_char": 558,
+          "end_char": 563
+        },
+        {
+          "index": 9,
+          "surface": "לו",
+          "start_char": 564,
+          "end_char": 566
+        },
+        {
+          "index": 10,
+          "surface": "האמת",
+          "start_char": 567,
+          "end_char": 571
+        },
+        {
+          "index": 11,
+          "surface": "בכל",
+          "start_char": 572,
+          "end_char": 575
+        },
+        {
+          "index": 12,
+          "surface": "מה",
+          "start_char": 576,
+          "end_char": 578
+        },
+        {
+          "index": 13,
+          "surface": "שבכח",
+          "start_char": 579,
+          "end_char": 583
+        },
+        {
+          "index": 14,
+          "surface": "האדם",
+          "start_char": 584,
+          "end_char": 588
+        },
+        {
+          "index": 15,
+          "surface": "שתגיע",
+          "start_char": 589,
+          "end_char": 594
+        },
+        {
+          "index": 16,
+          "surface": "לו",
+          "start_char": 595,
+          "end_char": 597
+        },
+        {
+          "index": 17,
+          "surface": "האמת",
+          "start_char": 598,
+          "end_char": 602
+        },
+        {
+          "index": 18,
+          "surface": "בו",
+          "start_char": 603,
+          "end_char": 605
+        }
+      ],
+      "boundary_after": "SEMICOLON",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S005-C04",
+      "sentence_id": "G14-S005",
+      "source_span": {
+        "start_char": 607,
+        "end_char": 706
+      },
+      "original_text": "ותתן זאת המלאכה גם כן דרכים משותפים לכל הלשונות ידריכו בהם הדבור החיצוני אל הישר וישמרוהו מן הטעות,",
+      "word_token_count": 18,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "ותתן",
+          "start_char": 607,
+          "end_char": 611
+        },
+        {
+          "index": 1,
+          "surface": "זאת",
+          "start_char": 612,
+          "end_char": 615
+        },
+        {
+          "index": 2,
+          "surface": "המלאכה",
+          "start_char": 616,
+          "end_char": 622
+        },
+        {
+          "index": 3,
+          "surface": "גם",
+          "start_char": 623,
+          "end_char": 625
+        },
+        {
+          "index": 4,
+          "surface": "כן",
+          "start_char": 626,
+          "end_char": 628
+        },
+        {
+          "index": 5,
+          "surface": "דרכים",
+          "start_char": 629,
+          "end_char": 634
+        },
+        {
+          "index": 6,
+          "surface": "משותפים",
+          "start_char": 635,
+          "end_char": 642
+        },
+        {
+          "index": 7,
+          "surface": "לכל",
+          "start_char": 643,
+          "end_char": 646
+        },
+        {
+          "index": 8,
+          "surface": "הלשונות",
+          "start_char": 647,
+          "end_char": 654
+        },
+        {
+          "index": 9,
+          "surface": "ידריכו",
+          "start_char": 655,
+          "end_char": 661
+        },
+        {
+          "index": 10,
+          "surface": "בהם",
+          "start_char": 662,
+          "end_char": 665
+        },
+        {
+          "index": 11,
+          "surface": "הדבור",
+          "start_char": 666,
+          "end_char": 671
+        },
+        {
+          "index": 12,
+          "surface": "החיצוני",
+          "start_char": 672,
+          "end_char": 679
+        },
+        {
+          "index": 13,
+          "surface": "אל",
+          "start_char": 680,
+          "end_char": 682
+        },
+        {
+          "index": 14,
+          "surface": "הישר",
+          "start_char": 683,
+          "end_char": 687
+        },
+        {
+          "index": 15,
+          "surface": "וישמרוהו",
+          "start_char": 688,
+          "end_char": 696
+        },
+        {
+          "index": 16,
+          "surface": "מן",
+          "start_char": 697,
+          "end_char": 699
+        },
+        {
+          "index": 17,
+          "surface": "הטעות",
+          "start_char": 700,
+          "end_char": 705
+        }
+      ],
+      "boundary_after": "COMMA_BEFORE_CONNECTIVE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S005-C05",
+      "sentence_id": "G14-S005",
+      "source_span": {
+        "start_char": 707,
+        "end_char": 877
+      },
+      "original_text": "עד שיהיה מה שתליץ בו הלשון נאות למה שבנפש ומשתוה לו עד שלא תוסיף המליצה על הענין אשר בנפש ולא תחסר ממנו, הנה בעבור אלו העניינים אשר תועיל זאת המלאכה קראוה – מלאכת ההגיון.",
+      "word_token_count": 33,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "עד",
+          "start_char": 707,
+          "end_char": 709
+        },
+        {
+          "index": 1,
+          "surface": "שיהיה",
+          "start_char": 710,
+          "end_char": 715
+        },
+        {
+          "index": 2,
+          "surface": "מה",
+          "start_char": 716,
+          "end_char": 718
+        },
+        {
+          "index": 3,
+          "surface": "שתליץ",
+          "start_char": 719,
+          "end_char": 724
+        },
+        {
+          "index": 4,
+          "surface": "בו",
+          "start_char": 725,
+          "end_char": 727
+        },
+        {
+          "index": 5,
+          "surface": "הלשון",
+          "start_char": 728,
+          "end_char": 733
+        },
+        {
+          "index": 6,
+          "surface": "נאות",
+          "start_char": 734,
+          "end_char": 738
+        },
+        {
+          "index": 7,
+          "surface": "למה",
+          "start_char": 739,
+          "end_char": 742
+        },
+        {
+          "index": 8,
+          "surface": "שבנפש",
+          "start_char": 743,
+          "end_char": 748
+        },
+        {
+          "index": 9,
+          "surface": "ומשתוה",
+          "start_char": 749,
+          "end_char": 755
+        },
+        {
+          "index": 10,
+          "surface": "לו",
+          "start_char": 756,
+          "end_char": 758
+        },
+        {
+          "index": 11,
+          "surface": "עד",
+          "start_char": 759,
+          "end_char": 761
+        },
+        {
+          "index": 12,
+          "surface": "שלא",
+          "start_char": 762,
+          "end_char": 765
+        },
+        {
+          "index": 13,
+          "surface": "תוסיף",
+          "start_char": 766,
+          "end_char": 771
+        },
+        {
+          "index": 14,
+          "surface": "המליצה",
+          "start_char": 772,
+          "end_char": 778
+        },
+        {
+          "index": 15,
+          "surface": "על",
+          "start_char": 779,
+          "end_char": 781
+        },
+        {
+          "index": 16,
+          "surface": "הענין",
+          "start_char": 782,
+          "end_char": 787
+        },
+        {
+          "index": 17,
+          "surface": "אשר",
+          "start_char": 788,
+          "end_char": 791
+        },
+        {
+          "index": 18,
+          "surface": "בנפש",
+          "start_char": 792,
+          "end_char": 796
+        },
+        {
+          "index": 19,
+          "surface": "ולא",
+          "start_char": 797,
+          "end_char": 800
+        },
+        {
+          "index": 20,
+          "surface": "תחסר",
+          "start_char": 801,
+          "end_char": 805
+        },
+        {
+          "index": 21,
+          "surface": "ממנו",
+          "start_char": 806,
+          "end_char": 810
+        },
+        {
+          "index": 22,
+          "surface": "הנה",
+          "start_char": 812,
+          "end_char": 815
+        },
+        {
+          "index": 23,
+          "surface": "בעבור",
+          "start_char": 816,
+          "end_char": 821
+        },
+        {
+          "index": 24,
+          "surface": "אלו",
+          "start_char": 822,
+          "end_char": 825
+        },
+        {
+          "index": 25,
+          "surface": "העניינים",
+          "start_char": 826,
+          "end_char": 834
+        },
+        {
+          "index": 26,
+          "surface": "אשר",
+          "start_char": 835,
+          "end_char": 838
+        },
+        {
+          "index": 27,
+          "surface": "תועיל",
+          "start_char": 839,
+          "end_char": 844
+        },
+        {
+          "index": 28,
+          "surface": "זאת",
+          "start_char": 845,
+          "end_char": 848
+        },
+        {
+          "index": 29,
+          "surface": "המלאכה",
+          "start_char": 849,
+          "end_char": 855
+        },
+        {
+          "index": 30,
+          "surface": "קראוה",
+          "start_char": 856,
+          "end_char": 861
+        },
+        {
+          "index": 31,
+          "surface": "מלאכת",
+          "start_char": 864,
+          "end_char": 869
+        },
+        {
+          "index": 32,
+          "surface": "ההגיון",
+          "start_char": 870,
+          "end_char": 876
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S006-C01",
+      "sentence_id": "G14-S006",
+      "source_span": {
+        "start_char": 878,
+        "end_char": 883
+      },
+      "original_text": "אמרו:",
+      "word_token_count": 1,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "אמרו",
+          "start_char": 878,
+          "end_char": 882
+        }
+      ],
+      "boundary_after": "COLON",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S006-C02",
+      "sentence_id": "G14-S006",
+      "source_span": {
+        "start_char": 884,
+        "end_char": 940
+      },
+      "original_text": "מדרגת מלאכת ההגיון מן השכל כמדרגת מלאכת הדקדוק מן הלשון.",
+      "word_token_count": 10,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "מדרגת",
+          "start_char": 884,
+          "end_char": 889
+        },
+        {
+          "index": 1,
+          "surface": "מלאכת",
+          "start_char": 890,
+          "end_char": 895
+        },
+        {
+          "index": 2,
+          "surface": "ההגיון",
+          "start_char": 896,
+          "end_char": 902
+        },
+        {
+          "index": 3,
+          "surface": "מן",
+          "start_char": 903,
+          "end_char": 905
+        },
+        {
+          "index": 4,
+          "surface": "השכל",
+          "start_char": 906,
+          "end_char": 910
+        },
+        {
+          "index": 5,
+          "surface": "כמדרגת",
+          "start_char": 911,
+          "end_char": 917
+        },
+        {
+          "index": 6,
+          "surface": "מלאכת",
+          "start_char": 918,
+          "end_char": 923
+        },
+        {
+          "index": 7,
+          "surface": "הדקדוק",
+          "start_char": 924,
+          "end_char": 930
+        },
+        {
+          "index": 8,
+          "surface": "מן",
+          "start_char": 931,
+          "end_char": 933
+        },
+        {
+          "index": 9,
+          "surface": "הלשון",
+          "start_char": 934,
+          "end_char": 939
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S007-C01",
+      "sentence_id": "G14-S007",
+      "source_span": {
+        "start_char": 941,
+        "end_char": 1148
+      },
+      "original_text": "והשם \"מלאכה\" אצל הקודמים שם משותף, יפילוהו על כל חכמה עיונית, ויפילוהו גם כן על כל המעשים המלאכתיים, ויקראו כל חכמה מחכמת הפילוסופיה – מלאכה עיונית, ויקראו כל אחת מהנגרות והחצבות ומה שדומה להן – מלאכה מעשית.",
+      "word_token_count": 35,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "והשם",
+          "start_char": 941,
+          "end_char": 945
+        },
+        {
+          "index": 1,
+          "surface": "מלאכה",
+          "start_char": 947,
+          "end_char": 952
+        },
+        {
+          "index": 2,
+          "surface": "אצל",
+          "start_char": 954,
+          "end_char": 957
+        },
+        {
+          "index": 3,
+          "surface": "הקודמים",
+          "start_char": 958,
+          "end_char": 965
+        },
+        {
+          "index": 4,
+          "surface": "שם",
+          "start_char": 966,
+          "end_char": 968
+        },
+        {
+          "index": 5,
+          "surface": "משותף",
+          "start_char": 969,
+          "end_char": 974
+        },
+        {
+          "index": 6,
+          "surface": "יפילוהו",
+          "start_char": 976,
+          "end_char": 983
+        },
+        {
+          "index": 7,
+          "surface": "על",
+          "start_char": 984,
+          "end_char": 986
+        },
+        {
+          "index": 8,
+          "surface": "כל",
+          "start_char": 987,
+          "end_char": 989
+        },
+        {
+          "index": 9,
+          "surface": "חכמה",
+          "start_char": 990,
+          "end_char": 994
+        },
+        {
+          "index": 10,
+          "surface": "עיונית",
+          "start_char": 995,
+          "end_char": 1001
+        },
+        {
+          "index": 11,
+          "surface": "ויפילוהו",
+          "start_char": 1003,
+          "end_char": 1011
+        },
+        {
+          "index": 12,
+          "surface": "גם",
+          "start_char": 1012,
+          "end_char": 1014
+        },
+        {
+          "index": 13,
+          "surface": "כן",
+          "start_char": 1015,
+          "end_char": 1017
+        },
+        {
+          "index": 14,
+          "surface": "על",
+          "start_char": 1018,
+          "end_char": 1020
+        },
+        {
+          "index": 15,
+          "surface": "כל",
+          "start_char": 1021,
+          "end_char": 1023
+        },
+        {
+          "index": 16,
+          "surface": "המעשים",
+          "start_char": 1024,
+          "end_char": 1030
+        },
+        {
+          "index": 17,
+          "surface": "המלאכתיים",
+          "start_char": 1031,
+          "end_char": 1040
+        },
+        {
+          "index": 18,
+          "surface": "ויקראו",
+          "start_char": 1042,
+          "end_char": 1048
+        },
+        {
+          "index": 19,
+          "surface": "כל",
+          "start_char": 1049,
+          "end_char": 1051
+        },
+        {
+          "index": 20,
+          "surface": "חכמה",
+          "start_char": 1052,
+          "end_char": 1056
+        },
+        {
+          "index": 21,
+          "surface": "מחכמת",
+          "start_char": 1057,
+          "end_char": 1062
+        },
+        {
+          "index": 22,
+          "surface": "הפילוסופיה",
+          "start_char": 1063,
+          "end_char": 1073
+        },
+        {
+          "index": 23,
+          "surface": "מלאכה",
+          "start_char": 1076,
+          "end_char": 1081
+        },
+        {
+          "index": 24,
+          "surface": "עיונית",
+          "start_char": 1082,
+          "end_char": 1088
+        },
+        {
+          "index": 25,
+          "surface": "ויקראו",
+          "start_char": 1090,
+          "end_char": 1096
+        },
+        {
+          "index": 26,
+          "surface": "כל",
+          "start_char": 1097,
+          "end_char": 1099
+        },
+        {
+          "index": 27,
+          "surface": "אחת",
+          "start_char": 1100,
+          "end_char": 1103
+        },
+        {
+          "index": 28,
+          "surface": "מהנגרות",
+          "start_char": 1104,
+          "end_char": 1111
+        },
+        {
+          "index": 29,
+          "surface": "והחצבות",
+          "start_char": 1112,
+          "end_char": 1119
+        },
+        {
+          "index": 30,
+          "surface": "ומה",
+          "start_char": 1120,
+          "end_char": 1123
+        },
+        {
+          "index": 31,
+          "surface": "שדומה",
+          "start_char": 1124,
+          "end_char": 1129
+        },
+        {
+          "index": 32,
+          "surface": "להן",
+          "start_char": 1130,
+          "end_char": 1133
+        },
+        {
+          "index": 33,
+          "surface": "מלאכה",
+          "start_char": 1136,
+          "end_char": 1141
+        },
+        {
+          "index": 34,
+          "surface": "מעשית",
+          "start_char": 1142,
+          "end_char": 1147
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S008-C01",
+      "sentence_id": "G14-S008",
+      "source_span": {
+        "start_char": 1149,
+        "end_char": 1370
+      },
+      "original_text": "ושם ה\"פילוסופיה\" שם משותף, פעמים יקראו בו מלאכת המופת, ופעמים יקראו בו החכמות, ויפול אצלם השם הזה על שתי חכמות, יקראו אחת משתי החכמות – הפילוסופיה העיונית, והחכמה האחרת – הפילוסופיה המעשית, ותקרא גם כן – פילוסופיה אנושית.",
+      "word_token_count": 36,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "ושם",
+          "start_char": 1149,
+          "end_char": 1152
+        },
+        {
+          "index": 1,
+          "surface": "ה",
+          "start_char": 1153,
+          "end_char": 1154
+        },
+        {
+          "index": 2,
+          "surface": "פילוסופיה",
+          "start_char": 1155,
+          "end_char": 1164
+        },
+        {
+          "index": 3,
+          "surface": "שם",
+          "start_char": 1166,
+          "end_char": 1168
+        },
+        {
+          "index": 4,
+          "surface": "משותף",
+          "start_char": 1169,
+          "end_char": 1174
+        },
+        {
+          "index": 5,
+          "surface": "פעמים",
+          "start_char": 1176,
+          "end_char": 1181
+        },
+        {
+          "index": 6,
+          "surface": "יקראו",
+          "start_char": 1182,
+          "end_char": 1187
+        },
+        {
+          "index": 7,
+          "surface": "בו",
+          "start_char": 1188,
+          "end_char": 1190
+        },
+        {
+          "index": 8,
+          "surface": "מלאכת",
+          "start_char": 1191,
+          "end_char": 1196
+        },
+        {
+          "index": 9,
+          "surface": "המופת",
+          "start_char": 1197,
+          "end_char": 1202
+        },
+        {
+          "index": 10,
+          "surface": "ופעמים",
+          "start_char": 1204,
+          "end_char": 1210
+        },
+        {
+          "index": 11,
+          "surface": "יקראו",
+          "start_char": 1211,
+          "end_char": 1216
+        },
+        {
+          "index": 12,
+          "surface": "בו",
+          "start_char": 1217,
+          "end_char": 1219
+        },
+        {
+          "index": 13,
+          "surface": "החכמות",
+          "start_char": 1220,
+          "end_char": 1226
+        },
+        {
+          "index": 14,
+          "surface": "ויפול",
+          "start_char": 1228,
+          "end_char": 1233
+        },
+        {
+          "index": 15,
+          "surface": "אצלם",
+          "start_char": 1234,
+          "end_char": 1238
+        },
+        {
+          "index": 16,
+          "surface": "השם",
+          "start_char": 1239,
+          "end_char": 1242
+        },
+        {
+          "index": 17,
+          "surface": "הזה",
+          "start_char": 1243,
+          "end_char": 1246
+        },
+        {
+          "index": 18,
+          "surface": "על",
+          "start_char": 1247,
+          "end_char": 1249
+        },
+        {
+          "index": 19,
+          "surface": "שתי",
+          "start_char": 1250,
+          "end_char": 1253
+        },
+        {
+          "index": 20,
+          "surface": "חכמות",
+          "start_char": 1254,
+          "end_char": 1259
+        },
+        {
+          "index": 21,
+          "surface": "יקראו",
+          "start_char": 1261,
+          "end_char": 1266
+        },
+        {
+          "index": 22,
+          "surface": "אחת",
+          "start_char": 1267,
+          "end_char": 1270
+        },
+        {
+          "index": 23,
+          "surface": "משתי",
+          "start_char": 1271,
+          "end_char": 1275
+        },
+        {
+          "index": 24,
+          "surface": "החכמות",
+          "start_char": 1276,
+          "end_char": 1282
+        },
+        {
+          "index": 25,
+          "surface": "הפילוסופיה",
+          "start_char": 1285,
+          "end_char": 1295
+        },
+        {
+          "index": 26,
+          "surface": "העיונית",
+          "start_char": 1296,
+          "end_char": 1303
+        },
+        {
+          "index": 27,
+          "surface": "והחכמה",
+          "start_char": 1305,
+          "end_char": 1311
+        },
+        {
+          "index": 28,
+          "surface": "האחרת",
+          "start_char": 1312,
+          "end_char": 1317
+        },
+        {
+          "index": 29,
+          "surface": "הפילוסופיה",
+          "start_char": 1320,
+          "end_char": 1330
+        },
+        {
+          "index": 30,
+          "surface": "המעשית",
+          "start_char": 1331,
+          "end_char": 1337
+        },
+        {
+          "index": 31,
+          "surface": "ותקרא",
+          "start_char": 1339,
+          "end_char": 1344
+        },
+        {
+          "index": 32,
+          "surface": "גם",
+          "start_char": 1345,
+          "end_char": 1347
+        },
+        {
+          "index": 33,
+          "surface": "כן",
+          "start_char": 1348,
+          "end_char": 1350
+        },
+        {
+          "index": 34,
+          "surface": "פילוסופיה",
+          "start_char": 1353,
+          "end_char": 1362
+        },
+        {
+          "index": 35,
+          "surface": "אנושית",
+          "start_char": 1363,
+          "end_char": 1369
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S009-C01",
+      "sentence_id": "G14-S009",
+      "source_span": {
+        "start_char": 1371,
+        "end_char": 1398
+      },
+      "original_text": "ותקרא גם כן, החכמה המדינית.",
+      "word_token_count": 5,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "ותקרא",
+          "start_char": 1371,
+          "end_char": 1376
+        },
+        {
+          "index": 1,
+          "surface": "גם",
+          "start_char": 1377,
+          "end_char": 1379
+        },
+        {
+          "index": 2,
+          "surface": "כן",
+          "start_char": 1380,
+          "end_char": 1382
+        },
+        {
+          "index": 3,
+          "surface": "החכמה",
+          "start_char": 1384,
+          "end_char": 1389
+        },
+        {
+          "index": 4,
+          "surface": "המדינית",
+          "start_char": 1390,
+          "end_char": 1397
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S010-C01",
+      "sentence_id": "G14-S010",
+      "source_span": {
+        "start_char": 1399,
+        "end_char": 1437
+      },
+      "original_text": "והפילוסופיה העיונית נחלקת לשלשה חלקים:",
+      "word_token_count": 5,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "והפילוסופיה",
+          "start_char": 1399,
+          "end_char": 1410
+        },
+        {
+          "index": 1,
+          "surface": "העיונית",
+          "start_char": 1411,
+          "end_char": 1418
+        },
+        {
+          "index": 2,
+          "surface": "נחלקת",
+          "start_char": 1419,
+          "end_char": 1424
+        },
+        {
+          "index": 3,
+          "surface": "לשלשה",
+          "start_char": 1425,
+          "end_char": 1430
+        },
+        {
+          "index": 4,
+          "surface": "חלקים",
+          "start_char": 1431,
+          "end_char": 1436
+        }
+      ],
+      "boundary_after": "COLON",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S010-C02",
+      "sentence_id": "G14-S010",
+      "source_span": {
+        "start_char": 1438,
+        "end_char": 1462
+      },
+      "original_text": "הלמודית, הטבעית והאלהית.",
+      "word_token_count": 3,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "הלמודית",
+          "start_char": 1438,
+          "end_char": 1445
+        },
+        {
+          "index": 1,
+          "surface": "הטבעית",
+          "start_char": 1447,
+          "end_char": 1453
+        },
+        {
+          "index": 2,
+          "surface": "והאלהית",
+          "start_char": 1454,
+          "end_char": 1461
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S011-C01",
+      "sentence_id": "G14-S011",
+      "source_span": {
+        "start_char": 1463,
+        "end_char": 1510
+      },
+      "original_text": "אמנם החכמה הלמודית לא תעין בגשמים במה שהם עליו,",
+      "word_token_count": 9,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "אמנם",
+          "start_char": 1463,
+          "end_char": 1467
+        },
+        {
+          "index": 1,
+          "surface": "החכמה",
+          "start_char": 1468,
+          "end_char": 1473
+        },
+        {
+          "index": 2,
+          "surface": "הלמודית",
+          "start_char": 1474,
+          "end_char": 1481
+        },
+        {
+          "index": 3,
+          "surface": "לא",
+          "start_char": 1482,
+          "end_char": 1484
+        },
+        {
+          "index": 4,
+          "surface": "תעין",
+          "start_char": 1485,
+          "end_char": 1489
+        },
+        {
+          "index": 5,
+          "surface": "בגשמים",
+          "start_char": 1490,
+          "end_char": 1496
+        },
+        {
+          "index": 6,
+          "surface": "במה",
+          "start_char": 1497,
+          "end_char": 1500
+        },
+        {
+          "index": 7,
+          "surface": "שהם",
+          "start_char": 1501,
+          "end_char": 1504
+        },
+        {
+          "index": 8,
+          "surface": "עליו",
+          "start_char": 1505,
+          "end_char": 1509
+        }
+      ],
+      "boundary_after": "COMMA_BEFORE_CONNECTIVE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S011-C02",
+      "sentence_id": "G14-S011",
+      "source_span": {
+        "start_char": 1511,
+        "end_char": 1589
+      },
+      "original_text": "אבל תעין בענינים משוללים מחמריהם, עם היות הענינים ההם בלתי נמצאים כי אם בחומר.",
+      "word_token_count": 14,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "אבל",
+          "start_char": 1511,
+          "end_char": 1514
+        },
+        {
+          "index": 1,
+          "surface": "תעין",
+          "start_char": 1515,
+          "end_char": 1519
+        },
+        {
+          "index": 2,
+          "surface": "בענינים",
+          "start_char": 1520,
+          "end_char": 1527
+        },
+        {
+          "index": 3,
+          "surface": "משוללים",
+          "start_char": 1528,
+          "end_char": 1535
+        },
+        {
+          "index": 4,
+          "surface": "מחמריהם",
+          "start_char": 1536,
+          "end_char": 1543
+        },
+        {
+          "index": 5,
+          "surface": "עם",
+          "start_char": 1545,
+          "end_char": 1547
+        },
+        {
+          "index": 6,
+          "surface": "היות",
+          "start_char": 1548,
+          "end_char": 1552
+        },
+        {
+          "index": 7,
+          "surface": "הענינים",
+          "start_char": 1553,
+          "end_char": 1560
+        },
+        {
+          "index": 8,
+          "surface": "ההם",
+          "start_char": 1561,
+          "end_char": 1564
+        },
+        {
+          "index": 9,
+          "surface": "בלתי",
+          "start_char": 1565,
+          "end_char": 1569
+        },
+        {
+          "index": 10,
+          "surface": "נמצאים",
+          "start_char": 1570,
+          "end_char": 1576
+        },
+        {
+          "index": 11,
+          "surface": "כי",
+          "start_char": 1577,
+          "end_char": 1579
+        },
+        {
+          "index": 12,
+          "surface": "אם",
+          "start_char": 1580,
+          "end_char": 1582
+        },
+        {
+          "index": 13,
+          "surface": "בחומר",
+          "start_char": 1583,
+          "end_char": 1588
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S012-C01",
+      "sentence_id": "G14-S012",
+      "source_span": {
+        "start_char": 1590,
+        "end_char": 1629
+      },
+      "original_text": "וחלקי החכמה אשר הם שרשיה ארבעה הם, והם:",
+      "word_token_count": 8,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "וחלקי",
+          "start_char": 1590,
+          "end_char": 1595
+        },
+        {
+          "index": 1,
+          "surface": "החכמה",
+          "start_char": 1596,
+          "end_char": 1601
+        },
+        {
+          "index": 2,
+          "surface": "אשר",
+          "start_char": 1602,
+          "end_char": 1605
+        },
+        {
+          "index": 3,
+          "surface": "הם",
+          "start_char": 1606,
+          "end_char": 1608
+        },
+        {
+          "index": 4,
+          "surface": "שרשיה",
+          "start_char": 1609,
+          "end_char": 1614
+        },
+        {
+          "index": 5,
+          "surface": "ארבעה",
+          "start_char": 1615,
+          "end_char": 1620
+        },
+        {
+          "index": 6,
+          "surface": "הם",
+          "start_char": 1621,
+          "end_char": 1623
+        },
+        {
+          "index": 7,
+          "surface": "והם",
+          "start_char": 1625,
+          "end_char": 1628
+        }
+      ],
+      "boundary_after": "COLON",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S012-C02",
+      "sentence_id": "G14-S012",
+      "source_span": {
+        "start_char": 1630,
+        "end_char": 1701
+      },
+      "original_text": "חכמת המספר, חכמת השעורים, חכמת הכוכבים וחכמת חבור הנגונים והיא המוסיקא.",
+      "word_token_count": 11,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "חכמת",
+          "start_char": 1630,
+          "end_char": 1634
+        },
+        {
+          "index": 1,
+          "surface": "המספר",
+          "start_char": 1635,
+          "end_char": 1640
+        },
+        {
+          "index": 2,
+          "surface": "חכמת",
+          "start_char": 1642,
+          "end_char": 1646
+        },
+        {
+          "index": 3,
+          "surface": "השעורים",
+          "start_char": 1647,
+          "end_char": 1654
+        },
+        {
+          "index": 4,
+          "surface": "חכמת",
+          "start_char": 1656,
+          "end_char": 1660
+        },
+        {
+          "index": 5,
+          "surface": "הכוכבים",
+          "start_char": 1661,
+          "end_char": 1668
+        },
+        {
+          "index": 6,
+          "surface": "וחכמת",
+          "start_char": 1669,
+          "end_char": 1674
+        },
+        {
+          "index": 7,
+          "surface": "חבור",
+          "start_char": 1675,
+          "end_char": 1679
+        },
+        {
+          "index": 8,
+          "surface": "הנגונים",
+          "start_char": 1680,
+          "end_char": 1687
+        },
+        {
+          "index": 9,
+          "surface": "והיא",
+          "start_char": 1688,
+          "end_char": 1692
+        },
+        {
+          "index": 10,
+          "surface": "המוסיקא",
+          "start_char": 1693,
+          "end_char": 1700
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S013-C01",
+      "sentence_id": "G14-S013",
+      "source_span": {
+        "start_char": 1702,
+        "end_char": 1739
+      },
+      "original_text": "ויקראו כל אלו החלקים – החכמה השמושית.",
+      "word_token_count": 6,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "ויקראו",
+          "start_char": 1702,
+          "end_char": 1708
+        },
+        {
+          "index": 1,
+          "surface": "כל",
+          "start_char": 1709,
+          "end_char": 1711
+        },
+        {
+          "index": 2,
+          "surface": "אלו",
+          "start_char": 1712,
+          "end_char": 1715
+        },
+        {
+          "index": 3,
+          "surface": "החלקים",
+          "start_char": 1716,
+          "end_char": 1722
+        },
+        {
+          "index": 4,
+          "surface": "החכמה",
+          "start_char": 1725,
+          "end_char": 1730
+        },
+        {
+          "index": 5,
+          "surface": "השמושית",
+          "start_char": 1731,
+          "end_char": 1738
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S014-C01",
+      "sentence_id": "G14-S014",
+      "source_span": {
+        "start_char": 1740,
+        "end_char": 1972
+      },
+      "original_text": "והחכמה הטבעית תעין בגשמים הנמצאים בטבע לא ברצון האדם כמיני המקורים ומיני הצמחים ומיני בעלי־חיים, הנה החכמה הטבעית תעין בכל אלו ובכל מה שימצא בהם, רצוני לומר, במקריהם כולם ובסגולותיהם וסבותם ובכל מה שימצאו הם בו, בזמן, המקום והתנועה.",
+      "word_token_count": 39,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "והחכמה",
+          "start_char": 1740,
+          "end_char": 1746
+        },
+        {
+          "index": 1,
+          "surface": "הטבעית",
+          "start_char": 1747,
+          "end_char": 1753
+        },
+        {
+          "index": 2,
+          "surface": "תעין",
+          "start_char": 1754,
+          "end_char": 1758
+        },
+        {
+          "index": 3,
+          "surface": "בגשמים",
+          "start_char": 1759,
+          "end_char": 1765
+        },
+        {
+          "index": 4,
+          "surface": "הנמצאים",
+          "start_char": 1766,
+          "end_char": 1773
+        },
+        {
+          "index": 5,
+          "surface": "בטבע",
+          "start_char": 1774,
+          "end_char": 1778
+        },
+        {
+          "index": 6,
+          "surface": "לא",
+          "start_char": 1779,
+          "end_char": 1781
+        },
+        {
+          "index": 7,
+          "surface": "ברצון",
+          "start_char": 1782,
+          "end_char": 1787
+        },
+        {
+          "index": 8,
+          "surface": "האדם",
+          "start_char": 1788,
+          "end_char": 1792
+        },
+        {
+          "index": 9,
+          "surface": "כמיני",
+          "start_char": 1793,
+          "end_char": 1798
+        },
+        {
+          "index": 10,
+          "surface": "המקורים",
+          "start_char": 1799,
+          "end_char": 1806
+        },
+        {
+          "index": 11,
+          "surface": "ומיני",
+          "start_char": 1807,
+          "end_char": 1812
+        },
+        {
+          "index": 12,
+          "surface": "הצמחים",
+          "start_char": 1813,
+          "end_char": 1819
+        },
+        {
+          "index": 13,
+          "surface": "ומיני",
+          "start_char": 1820,
+          "end_char": 1825
+        },
+        {
+          "index": 14,
+          "surface": "בעלי־חיים",
+          "start_char": 1826,
+          "end_char": 1835
+        },
+        {
+          "index": 15,
+          "surface": "הנה",
+          "start_char": 1837,
+          "end_char": 1840
+        },
+        {
+          "index": 16,
+          "surface": "החכמה",
+          "start_char": 1841,
+          "end_char": 1846
+        },
+        {
+          "index": 17,
+          "surface": "הטבעית",
+          "start_char": 1847,
+          "end_char": 1853
+        },
+        {
+          "index": 18,
+          "surface": "תעין",
+          "start_char": 1854,
+          "end_char": 1858
+        },
+        {
+          "index": 19,
+          "surface": "בכל",
+          "start_char": 1859,
+          "end_char": 1862
+        },
+        {
+          "index": 20,
+          "surface": "אלו",
+          "start_char": 1863,
+          "end_char": 1866
+        },
+        {
+          "index": 21,
+          "surface": "ובכל",
+          "start_char": 1867,
+          "end_char": 1871
+        },
+        {
+          "index": 22,
+          "surface": "מה",
+          "start_char": 1872,
+          "end_char": 1874
+        },
+        {
+          "index": 23,
+          "surface": "שימצא",
+          "start_char": 1875,
+          "end_char": 1880
+        },
+        {
+          "index": 24,
+          "surface": "בהם",
+          "start_char": 1881,
+          "end_char": 1884
+        },
+        {
+          "index": 25,
+          "surface": "רצוני",
+          "start_char": 1886,
+          "end_char": 1891
+        },
+        {
+          "index": 26,
+          "surface": "לומר",
+          "start_char": 1892,
+          "end_char": 1896
+        },
+        {
+          "index": 27,
+          "surface": "במקריהם",
+          "start_char": 1898,
+          "end_char": 1905
+        },
+        {
+          "index": 28,
+          "surface": "כולם",
+          "start_char": 1906,
+          "end_char": 1910
+        },
+        {
+          "index": 29,
+          "surface": "ובסגולותיהם",
+          "start_char": 1911,
+          "end_char": 1922
+        },
+        {
+          "index": 30,
+          "surface": "וסבותם",
+          "start_char": 1923,
+          "end_char": 1929
+        },
+        {
+          "index": 31,
+          "surface": "ובכל",
+          "start_char": 1930,
+          "end_char": 1934
+        },
+        {
+          "index": 32,
+          "surface": "מה",
+          "start_char": 1935,
+          "end_char": 1937
+        },
+        {
+          "index": 33,
+          "surface": "שימצאו",
+          "start_char": 1938,
+          "end_char": 1944
+        },
+        {
+          "index": 34,
+          "surface": "הם",
+          "start_char": 1945,
+          "end_char": 1947
+        },
+        {
+          "index": 35,
+          "surface": "בו",
+          "start_char": 1948,
+          "end_char": 1950
+        },
+        {
+          "index": 36,
+          "surface": "בזמן",
+          "start_char": 1952,
+          "end_char": 1956
+        },
+        {
+          "index": 37,
+          "surface": "המקום",
+          "start_char": 1958,
+          "end_char": 1963
+        },
+        {
+          "index": 38,
+          "surface": "והתנועה",
+          "start_char": 1964,
+          "end_char": 1971
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S015-C01",
+      "sentence_id": "G14-S015",
+      "source_span": {
+        "start_char": 1973,
+        "end_char": 2053
+      },
+      "original_text": "והחכמה האלהית תחלק לשני חלקים, אחד מהם הוא העיון בכל נמצא שאינו גשם ולא כח בגשם,",
+      "word_token_count": 16,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "והחכמה",
+          "start_char": 1973,
+          "end_char": 1979
+        },
+        {
+          "index": 1,
+          "surface": "האלהית",
+          "start_char": 1980,
+          "end_char": 1986
+        },
+        {
+          "index": 2,
+          "surface": "תחלק",
+          "start_char": 1987,
+          "end_char": 1991
+        },
+        {
+          "index": 3,
+          "surface": "לשני",
+          "start_char": 1992,
+          "end_char": 1996
+        },
+        {
+          "index": 4,
+          "surface": "חלקים",
+          "start_char": 1997,
+          "end_char": 2002
+        },
+        {
+          "index": 5,
+          "surface": "אחד",
+          "start_char": 2004,
+          "end_char": 2007
+        },
+        {
+          "index": 6,
+          "surface": "מהם",
+          "start_char": 2008,
+          "end_char": 2011
+        },
+        {
+          "index": 7,
+          "surface": "הוא",
+          "start_char": 2012,
+          "end_char": 2015
+        },
+        {
+          "index": 8,
+          "surface": "העיון",
+          "start_char": 2016,
+          "end_char": 2021
+        },
+        {
+          "index": 9,
+          "surface": "בכל",
+          "start_char": 2022,
+          "end_char": 2025
+        },
+        {
+          "index": 10,
+          "surface": "נמצא",
+          "start_char": 2026,
+          "end_char": 2030
+        },
+        {
+          "index": 11,
+          "surface": "שאינו",
+          "start_char": 2031,
+          "end_char": 2036
+        },
+        {
+          "index": 12,
+          "surface": "גשם",
+          "start_char": 2037,
+          "end_char": 2040
+        },
+        {
+          "index": 13,
+          "surface": "ולא",
+          "start_char": 2041,
+          "end_char": 2044
+        },
+        {
+          "index": 14,
+          "surface": "כח",
+          "start_char": 2045,
+          "end_char": 2047
+        },
+        {
+          "index": 15,
+          "surface": "בגשם",
+          "start_char": 2048,
+          "end_char": 2052
+        }
+      ],
+      "boundary_after": "COMMA_BEFORE_CONNECTIVE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S015-C02",
+      "sentence_id": "G14-S015",
+      "source_span": {
+        "start_char": 2054,
+        "end_char": 2106
+      },
+      "original_text": "והוא הדבור במה שנתלה באל, יתעלה שמו, ובמלאכים גם כן,",
+      "word_token_count": 10,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "והוא",
+          "start_char": 2054,
+          "end_char": 2058
+        },
+        {
+          "index": 1,
+          "surface": "הדבור",
+          "start_char": 2059,
+          "end_char": 2064
+        },
+        {
+          "index": 2,
+          "surface": "במה",
+          "start_char": 2065,
+          "end_char": 2068
+        },
+        {
+          "index": 3,
+          "surface": "שנתלה",
+          "start_char": 2069,
+          "end_char": 2074
+        },
+        {
+          "index": 4,
+          "surface": "באל",
+          "start_char": 2075,
+          "end_char": 2078
+        },
+        {
+          "index": 5,
+          "surface": "יתעלה",
+          "start_char": 2080,
+          "end_char": 2085
+        },
+        {
+          "index": 6,
+          "surface": "שמו",
+          "start_char": 2086,
+          "end_char": 2089
+        },
+        {
+          "index": 7,
+          "surface": "ובמלאכים",
+          "start_char": 2091,
+          "end_char": 2099
+        },
+        {
+          "index": 8,
+          "surface": "גם",
+          "start_char": 2100,
+          "end_char": 2102
+        },
+        {
+          "index": 9,
+          "surface": "כן",
+          "start_char": 2103,
+          "end_char": 2105
+        }
+      ],
+      "boundary_after": "COMMA_BEFORE_CONNECTIVE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S015-C03",
+      "sentence_id": "G14-S015",
+      "source_span": {
+        "start_char": 2107,
+        "end_char": 2116
+      },
+      "original_text": "לפי דעתם,",
+      "word_token_count": 2,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "לפי",
+          "start_char": 2107,
+          "end_char": 2110
+        },
+        {
+          "index": 1,
+          "surface": "דעתם",
+          "start_char": 2111,
+          "end_char": 2115
+        }
+      ],
+      "boundary_after": "COMMA_BEFORE_CONNECTIVE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S015-C04",
+      "sentence_id": "G14-S015",
+      "source_span": {
+        "start_char": 2117,
+        "end_char": 2148
+      },
+      "original_text": "כי הם לא יסברו שהמלאכים גשמיים,",
+      "word_token_count": 6,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "כי",
+          "start_char": 2117,
+          "end_char": 2119
+        },
+        {
+          "index": 1,
+          "surface": "הם",
+          "start_char": 2120,
+          "end_char": 2122
+        },
+        {
+          "index": 2,
+          "surface": "לא",
+          "start_char": 2123,
+          "end_char": 2125
+        },
+        {
+          "index": 3,
+          "surface": "יסברו",
+          "start_char": 2126,
+          "end_char": 2131
+        },
+        {
+          "index": 4,
+          "surface": "שהמלאכים",
+          "start_char": 2132,
+          "end_char": 2140
+        },
+        {
+          "index": 5,
+          "surface": "גשמיים",
+          "start_char": 2141,
+          "end_char": 2147
+        }
+      ],
+      "boundary_after": "COMMA_BEFORE_CONNECTIVE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S015-C05",
+      "sentence_id": "G14-S015",
+      "source_span": {
+        "start_char": 2149,
+        "end_char": 2210
+      },
+      "original_text": "אבל יקראו אותם השכלים הנפרדים, ירצו בזה, שהם נבדלים מן החומר.",
+      "word_token_count": 11,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "אבל",
+          "start_char": 2149,
+          "end_char": 2152
+        },
+        {
+          "index": 1,
+          "surface": "יקראו",
+          "start_char": 2153,
+          "end_char": 2158
+        },
+        {
+          "index": 2,
+          "surface": "אותם",
+          "start_char": 2159,
+          "end_char": 2163
+        },
+        {
+          "index": 3,
+          "surface": "השכלים",
+          "start_char": 2164,
+          "end_char": 2170
+        },
+        {
+          "index": 4,
+          "surface": "הנפרדים",
+          "start_char": 2171,
+          "end_char": 2178
+        },
+        {
+          "index": 5,
+          "surface": "ירצו",
+          "start_char": 2180,
+          "end_char": 2184
+        },
+        {
+          "index": 6,
+          "surface": "בזה",
+          "start_char": 2185,
+          "end_char": 2188
+        },
+        {
+          "index": 7,
+          "surface": "שהם",
+          "start_char": 2190,
+          "end_char": 2193
+        },
+        {
+          "index": 8,
+          "surface": "נבדלים",
+          "start_char": 2194,
+          "end_char": 2200
+        },
+        {
+          "index": 9,
+          "surface": "מן",
+          "start_char": 2201,
+          "end_char": 2203
+        },
+        {
+          "index": 10,
+          "surface": "החומר",
+          "start_char": 2204,
+          "end_char": 2209
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S016-C01",
+      "sentence_id": "G14-S016",
+      "source_span": {
+        "start_char": 2211,
+        "end_char": 2296
+      },
+      "original_text": "והחלק השני בחכמה האלהית העיון בסבות הרחוקות מאד מכל מה שיכללו עליו שאר החכמות האחרות.",
+      "word_token_count": 15,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "והחלק",
+          "start_char": 2211,
+          "end_char": 2216
+        },
+        {
+          "index": 1,
+          "surface": "השני",
+          "start_char": 2217,
+          "end_char": 2221
+        },
+        {
+          "index": 2,
+          "surface": "בחכמה",
+          "start_char": 2222,
+          "end_char": 2227
+        },
+        {
+          "index": 3,
+          "surface": "האלהית",
+          "start_char": 2228,
+          "end_char": 2234
+        },
+        {
+          "index": 4,
+          "surface": "העיון",
+          "start_char": 2235,
+          "end_char": 2240
+        },
+        {
+          "index": 5,
+          "surface": "בסבות",
+          "start_char": 2241,
+          "end_char": 2246
+        },
+        {
+          "index": 6,
+          "surface": "הרחוקות",
+          "start_char": 2247,
+          "end_char": 2254
+        },
+        {
+          "index": 7,
+          "surface": "מאד",
+          "start_char": 2255,
+          "end_char": 2258
+        },
+        {
+          "index": 8,
+          "surface": "מכל",
+          "start_char": 2259,
+          "end_char": 2262
+        },
+        {
+          "index": 9,
+          "surface": "מה",
+          "start_char": 2263,
+          "end_char": 2265
+        },
+        {
+          "index": 10,
+          "surface": "שיכללו",
+          "start_char": 2266,
+          "end_char": 2272
+        },
+        {
+          "index": 11,
+          "surface": "עליו",
+          "start_char": 2273,
+          "end_char": 2277
+        },
+        {
+          "index": 12,
+          "surface": "שאר",
+          "start_char": 2278,
+          "end_char": 2281
+        },
+        {
+          "index": 13,
+          "surface": "החכמות",
+          "start_char": 2282,
+          "end_char": 2288
+        },
+        {
+          "index": 14,
+          "surface": "האחרות",
+          "start_char": 2289,
+          "end_char": 2295
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S017-C01",
+      "sentence_id": "G14-S017",
+      "source_span": {
+        "start_char": 2297,
+        "end_char": 2341
+      },
+      "original_text": "ויקראו גם כן את החכמה האלהית – מה שאחר הטבע.",
+      "word_token_count": 9,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "ויקראו",
+          "start_char": 2297,
+          "end_char": 2303
+        },
+        {
+          "index": 1,
+          "surface": "גם",
+          "start_char": 2304,
+          "end_char": 2306
+        },
+        {
+          "index": 2,
+          "surface": "כן",
+          "start_char": 2307,
+          "end_char": 2309
+        },
+        {
+          "index": 3,
+          "surface": "את",
+          "start_char": 2310,
+          "end_char": 2312
+        },
+        {
+          "index": 4,
+          "surface": "החכמה",
+          "start_char": 2313,
+          "end_char": 2318
+        },
+        {
+          "index": 5,
+          "surface": "האלהית",
+          "start_char": 2319,
+          "end_char": 2325
+        },
+        {
+          "index": 6,
+          "surface": "מה",
+          "start_char": 2328,
+          "end_char": 2330
+        },
+        {
+          "index": 7,
+          "surface": "שאחר",
+          "start_char": 2331,
+          "end_char": 2335
+        },
+        {
+          "index": 8,
+          "surface": "הטבע",
+          "start_char": 2336,
+          "end_char": 2340
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S018-C01",
+      "sentence_id": "G14-S018",
+      "source_span": {
+        "start_char": 2342,
+        "end_char": 2372
+      },
+      "original_text": "הנה כל אלו הן החכמות הראשונות.",
+      "word_token_count": 6,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "הנה",
+          "start_char": 2342,
+          "end_char": 2345
+        },
+        {
+          "index": 1,
+          "surface": "כל",
+          "start_char": 2346,
+          "end_char": 2348
+        },
+        {
+          "index": 2,
+          "surface": "אלו",
+          "start_char": 2349,
+          "end_char": 2352
+        },
+        {
+          "index": 3,
+          "surface": "הן",
+          "start_char": 2353,
+          "end_char": 2355
+        },
+        {
+          "index": 4,
+          "surface": "החכמות",
+          "start_char": 2356,
+          "end_char": 2362
+        },
+        {
+          "index": 5,
+          "surface": "הראשונות",
+          "start_char": 2363,
+          "end_char": 2371
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S019-C01",
+      "sentence_id": "G14-S019",
+      "source_span": {
+        "start_char": 2373,
+        "end_char": 2418
+      },
+      "original_text": "ואולם מלאכת ההגיון הנה אינה אצלם מכלל החכמות,",
+      "word_token_count": 8,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "ואולם",
+          "start_char": 2373,
+          "end_char": 2378
+        },
+        {
+          "index": 1,
+          "surface": "מלאכת",
+          "start_char": 2379,
+          "end_char": 2384
+        },
+        {
+          "index": 2,
+          "surface": "ההגיון",
+          "start_char": 2385,
+          "end_char": 2391
+        },
+        {
+          "index": 3,
+          "surface": "הנה",
+          "start_char": 2392,
+          "end_char": 2395
+        },
+        {
+          "index": 4,
+          "surface": "אינה",
+          "start_char": 2396,
+          "end_char": 2400
+        },
+        {
+          "index": 5,
+          "surface": "אצלם",
+          "start_char": 2401,
+          "end_char": 2405
+        },
+        {
+          "index": 6,
+          "surface": "מכלל",
+          "start_char": 2406,
+          "end_char": 2410
+        },
+        {
+          "index": 7,
+          "surface": "החכמות",
+          "start_char": 2411,
+          "end_char": 2417
+        }
+      ],
+      "boundary_after": "COMMA_BEFORE_CONNECTIVE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S019-C02",
+      "sentence_id": "G14-S019",
+      "source_span": {
+        "start_char": 2419,
+        "end_char": 2437
+      },
+      "original_text": "אבל היא כלי לחכמה.",
+      "word_token_count": 4,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "אבל",
+          "start_char": 2419,
+          "end_char": 2422
+        },
+        {
+          "index": 1,
+          "surface": "היא",
+          "start_char": 2423,
+          "end_char": 2426
+        },
+        {
+          "index": 2,
+          "surface": "כלי",
+          "start_char": 2427,
+          "end_char": 2430
+        },
+        {
+          "index": 3,
+          "surface": "לחכמה",
+          "start_char": 2431,
+          "end_char": 2436
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S020-C01",
+      "sentence_id": "G14-S020",
+      "source_span": {
+        "start_char": 2438,
+        "end_char": 2494
+      },
+      "original_text": "אמרו, שלא יכשר ללמוד או ללמד על דבר כי אם במלאכת ההגיון,",
+      "word_token_count": 12,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "אמרו",
+          "start_char": 2438,
+          "end_char": 2442
+        },
+        {
+          "index": 1,
+          "surface": "שלא",
+          "start_char": 2444,
+          "end_char": 2447
+        },
+        {
+          "index": 2,
+          "surface": "יכשר",
+          "start_char": 2448,
+          "end_char": 2452
+        },
+        {
+          "index": 3,
+          "surface": "ללמוד",
+          "start_char": 2453,
+          "end_char": 2458
+        },
+        {
+          "index": 4,
+          "surface": "או",
+          "start_char": 2459,
+          "end_char": 2461
+        },
+        {
+          "index": 5,
+          "surface": "ללמד",
+          "start_char": 2462,
+          "end_char": 2466
+        },
+        {
+          "index": 6,
+          "surface": "על",
+          "start_char": 2467,
+          "end_char": 2469
+        },
+        {
+          "index": 7,
+          "surface": "דבר",
+          "start_char": 2470,
+          "end_char": 2473
+        },
+        {
+          "index": 8,
+          "surface": "כי",
+          "start_char": 2474,
+          "end_char": 2476
+        },
+        {
+          "index": 9,
+          "surface": "אם",
+          "start_char": 2477,
+          "end_char": 2479
+        },
+        {
+          "index": 10,
+          "surface": "במלאכת",
+          "start_char": 2480,
+          "end_char": 2486
+        },
+        {
+          "index": 11,
+          "surface": "ההגיון",
+          "start_char": 2487,
+          "end_char": 2493
+        }
+      ],
+      "boundary_after": "COMMA_BEFORE_CONNECTIVE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S020-C02",
+      "sentence_id": "G14-S020",
+      "source_span": {
+        "start_char": 2495,
+        "end_char": 2527
+      },
+      "original_text": "כי היא הכלי לכל דבר ולא מן הדבר.",
+      "word_token_count": 8,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "כי",
+          "start_char": 2495,
+          "end_char": 2497
+        },
+        {
+          "index": 1,
+          "surface": "היא",
+          "start_char": 2498,
+          "end_char": 2501
+        },
+        {
+          "index": 2,
+          "surface": "הכלי",
+          "start_char": 2502,
+          "end_char": 2506
+        },
+        {
+          "index": 3,
+          "surface": "לכל",
+          "start_char": 2507,
+          "end_char": 2510
+        },
+        {
+          "index": 4,
+          "surface": "דבר",
+          "start_char": 2511,
+          "end_char": 2514
+        },
+        {
+          "index": 5,
+          "surface": "ולא",
+          "start_char": 2515,
+          "end_char": 2518
+        },
+        {
+          "index": 6,
+          "surface": "מן",
+          "start_char": 2519,
+          "end_char": 2521
+        },
+        {
+          "index": 7,
+          "surface": "הדבר",
+          "start_char": 2522,
+          "end_char": 2526
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S021-C01",
+      "sentence_id": "G14-S021",
+      "source_span": {
+        "start_char": 2528,
+        "end_char": 2566
+      },
+      "original_text": "ואולם החכמה המדינית תחלק לארבעה חלקים:",
+      "word_token_count": 6,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "ואולם",
+          "start_char": 2528,
+          "end_char": 2533
+        },
+        {
+          "index": 1,
+          "surface": "החכמה",
+          "start_char": 2534,
+          "end_char": 2539
+        },
+        {
+          "index": 2,
+          "surface": "המדינית",
+          "start_char": 2540,
+          "end_char": 2547
+        },
+        {
+          "index": 3,
+          "surface": "תחלק",
+          "start_char": 2548,
+          "end_char": 2552
+        },
+        {
+          "index": 4,
+          "surface": "לארבעה",
+          "start_char": 2553,
+          "end_char": 2559
+        },
+        {
+          "index": 5,
+          "surface": "חלקים",
+          "start_char": 2560,
+          "end_char": 2565
+        }
+      ],
+      "boundary_after": "COLON",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S021-C02",
+      "sentence_id": "G14-S021",
+      "source_span": {
+        "start_char": 2567,
+        "end_char": 2677
+      },
+      "original_text": "הראשון – הוא הנהגת האדם נפשו, השני – הנהגת הבית, השלישי – הנהגת המדינה, הרביעי – הנהגת האומה הגדולה או האומות.",
+      "word_token_count": 17,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "הראשון",
+          "start_char": 2567,
+          "end_char": 2573
+        },
+        {
+          "index": 1,
+          "surface": "הוא",
+          "start_char": 2576,
+          "end_char": 2579
+        },
+        {
+          "index": 2,
+          "surface": "הנהגת",
+          "start_char": 2580,
+          "end_char": 2585
+        },
+        {
+          "index": 3,
+          "surface": "האדם",
+          "start_char": 2586,
+          "end_char": 2590
+        },
+        {
+          "index": 4,
+          "surface": "נפשו",
+          "start_char": 2591,
+          "end_char": 2595
+        },
+        {
+          "index": 5,
+          "surface": "השני",
+          "start_char": 2597,
+          "end_char": 2601
+        },
+        {
+          "index": 6,
+          "surface": "הנהגת",
+          "start_char": 2604,
+          "end_char": 2609
+        },
+        {
+          "index": 7,
+          "surface": "הבית",
+          "start_char": 2610,
+          "end_char": 2614
+        },
+        {
+          "index": 8,
+          "surface": "השלישי",
+          "start_char": 2616,
+          "end_char": 2622
+        },
+        {
+          "index": 9,
+          "surface": "הנהגת",
+          "start_char": 2625,
+          "end_char": 2630
+        },
+        {
+          "index": 10,
+          "surface": "המדינה",
+          "start_char": 2631,
+          "end_char": 2637
+        },
+        {
+          "index": 11,
+          "surface": "הרביעי",
+          "start_char": 2639,
+          "end_char": 2645
+        },
+        {
+          "index": 12,
+          "surface": "הנהגת",
+          "start_char": 2648,
+          "end_char": 2653
+        },
+        {
+          "index": 13,
+          "surface": "האומה",
+          "start_char": 2654,
+          "end_char": 2659
+        },
+        {
+          "index": 14,
+          "surface": "הגדולה",
+          "start_char": 2660,
+          "end_char": 2666
+        },
+        {
+          "index": 15,
+          "surface": "או",
+          "start_char": 2667,
+          "end_char": 2669
+        },
+        {
+          "index": 16,
+          "surface": "האומות",
+          "start_char": 2670,
+          "end_char": 2676
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S022-C01",
+      "sentence_id": "G14-S022",
+      "source_span": {
+        "start_char": 2678,
+        "end_char": 2771
+      },
+      "original_text": "אמנם הנהגת האדם נפשו היא שיקנה אותה אל המדות הנכבדות ויסיר ממנה הפחיתיות, אם היה שכבר הגיעוה.",
+      "word_token_count": 17,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "אמנם",
+          "start_char": 2678,
+          "end_char": 2682
+        },
+        {
+          "index": 1,
+          "surface": "הנהגת",
+          "start_char": 2683,
+          "end_char": 2688
+        },
+        {
+          "index": 2,
+          "surface": "האדם",
+          "start_char": 2689,
+          "end_char": 2693
+        },
+        {
+          "index": 3,
+          "surface": "נפשו",
+          "start_char": 2694,
+          "end_char": 2698
+        },
+        {
+          "index": 4,
+          "surface": "היא",
+          "start_char": 2699,
+          "end_char": 2702
+        },
+        {
+          "index": 5,
+          "surface": "שיקנה",
+          "start_char": 2703,
+          "end_char": 2708
+        },
+        {
+          "index": 6,
+          "surface": "אותה",
+          "start_char": 2709,
+          "end_char": 2713
+        },
+        {
+          "index": 7,
+          "surface": "אל",
+          "start_char": 2714,
+          "end_char": 2716
+        },
+        {
+          "index": 8,
+          "surface": "המדות",
+          "start_char": 2717,
+          "end_char": 2722
+        },
+        {
+          "index": 9,
+          "surface": "הנכבדות",
+          "start_char": 2723,
+          "end_char": 2730
+        },
+        {
+          "index": 10,
+          "surface": "ויסיר",
+          "start_char": 2731,
+          "end_char": 2736
+        },
+        {
+          "index": 11,
+          "surface": "ממנה",
+          "start_char": 2737,
+          "end_char": 2741
+        },
+        {
+          "index": 12,
+          "surface": "הפחיתיות",
+          "start_char": 2742,
+          "end_char": 2750
+        },
+        {
+          "index": 13,
+          "surface": "אם",
+          "start_char": 2752,
+          "end_char": 2754
+        },
+        {
+          "index": 14,
+          "surface": "היה",
+          "start_char": 2755,
+          "end_char": 2758
+        },
+        {
+          "index": 15,
+          "surface": "שכבר",
+          "start_char": 2759,
+          "end_char": 2763
+        },
+        {
+          "index": 16,
+          "surface": "הגיעוה",
+          "start_char": 2764,
+          "end_char": 2770
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S023-C01",
+      "sentence_id": "G14-S023",
+      "source_span": {
+        "start_char": 2772,
+        "end_char": 2850
+      },
+      "original_text": "והמדות הן התכונות הנפשיות שתגענה בנפש עד שעור היותן לקנין ותסדרנה מהן הפעולות.",
+      "word_token_count": 13,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "והמדות",
+          "start_char": 2772,
+          "end_char": 2778
+        },
+        {
+          "index": 1,
+          "surface": "הן",
+          "start_char": 2779,
+          "end_char": 2781
+        },
+        {
+          "index": 2,
+          "surface": "התכונות",
+          "start_char": 2782,
+          "end_char": 2789
+        },
+        {
+          "index": 3,
+          "surface": "הנפשיות",
+          "start_char": 2790,
+          "end_char": 2797
+        },
+        {
+          "index": 4,
+          "surface": "שתגענה",
+          "start_char": 2798,
+          "end_char": 2804
+        },
+        {
+          "index": 5,
+          "surface": "בנפש",
+          "start_char": 2805,
+          "end_char": 2809
+        },
+        {
+          "index": 6,
+          "surface": "עד",
+          "start_char": 2810,
+          "end_char": 2812
+        },
+        {
+          "index": 7,
+          "surface": "שעור",
+          "start_char": 2813,
+          "end_char": 2817
+        },
+        {
+          "index": 8,
+          "surface": "היותן",
+          "start_char": 2818,
+          "end_char": 2823
+        },
+        {
+          "index": 9,
+          "surface": "לקנין",
+          "start_char": 2824,
+          "end_char": 2829
+        },
+        {
+          "index": 10,
+          "surface": "ותסדרנה",
+          "start_char": 2830,
+          "end_char": 2837
+        },
+        {
+          "index": 11,
+          "surface": "מהן",
+          "start_char": 2838,
+          "end_char": 2841
+        },
+        {
+          "index": 12,
+          "surface": "הפעולות",
+          "start_char": 2842,
+          "end_char": 2849
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S024-C01",
+      "sentence_id": "G14-S024",
+      "source_span": {
+        "start_char": 2851,
+        "end_char": 3042
+      },
+      "original_text": "והפילוסופים יתארו המדות במעלות ובפחיתיות, ותקראנה המדות החשובות – מעלות המדות, והמדות המגונות – פחיתות המדות, והמעלות הבאות מהמדות החשובות תקראנה – טובות, והבאות מהמדות המגונות תקראנה – רעות.",
+      "word_token_count": 25,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "והפילוסופים",
+          "start_char": 2851,
+          "end_char": 2862
+        },
+        {
+          "index": 1,
+          "surface": "יתארו",
+          "start_char": 2863,
+          "end_char": 2868
+        },
+        {
+          "index": 2,
+          "surface": "המדות",
+          "start_char": 2869,
+          "end_char": 2874
+        },
+        {
+          "index": 3,
+          "surface": "במעלות",
+          "start_char": 2875,
+          "end_char": 2881
+        },
+        {
+          "index": 4,
+          "surface": "ובפחיתיות",
+          "start_char": 2882,
+          "end_char": 2891
+        },
+        {
+          "index": 5,
+          "surface": "ותקראנה",
+          "start_char": 2893,
+          "end_char": 2900
+        },
+        {
+          "index": 6,
+          "surface": "המדות",
+          "start_char": 2901,
+          "end_char": 2906
+        },
+        {
+          "index": 7,
+          "surface": "החשובות",
+          "start_char": 2907,
+          "end_char": 2914
+        },
+        {
+          "index": 8,
+          "surface": "מעלות",
+          "start_char": 2917,
+          "end_char": 2922
+        },
+        {
+          "index": 9,
+          "surface": "המדות",
+          "start_char": 2923,
+          "end_char": 2928
+        },
+        {
+          "index": 10,
+          "surface": "והמדות",
+          "start_char": 2930,
+          "end_char": 2936
+        },
+        {
+          "index": 11,
+          "surface": "המגונות",
+          "start_char": 2937,
+          "end_char": 2944
+        },
+        {
+          "index": 12,
+          "surface": "פחיתות",
+          "start_char": 2947,
+          "end_char": 2953
+        },
+        {
+          "index": 13,
+          "surface": "המדות",
+          "start_char": 2954,
+          "end_char": 2959
+        },
+        {
+          "index": 14,
+          "surface": "והמעלות",
+          "start_char": 2961,
+          "end_char": 2968
+        },
+        {
+          "index": 15,
+          "surface": "הבאות",
+          "start_char": 2969,
+          "end_char": 2974
+        },
+        {
+          "index": 16,
+          "surface": "מהמדות",
+          "start_char": 2975,
+          "end_char": 2981
+        },
+        {
+          "index": 17,
+          "surface": "החשובות",
+          "start_char": 2982,
+          "end_char": 2989
+        },
+        {
+          "index": 18,
+          "surface": "תקראנה",
+          "start_char": 2990,
+          "end_char": 2996
+        },
+        {
+          "index": 19,
+          "surface": "טובות",
+          "start_char": 2999,
+          "end_char": 3004
+        },
+        {
+          "index": 20,
+          "surface": "והבאות",
+          "start_char": 3006,
+          "end_char": 3012
+        },
+        {
+          "index": 21,
+          "surface": "מהמדות",
+          "start_char": 3013,
+          "end_char": 3019
+        },
+        {
+          "index": 22,
+          "surface": "המגונות",
+          "start_char": 3020,
+          "end_char": 3027
+        },
+        {
+          "index": 23,
+          "surface": "תקראנה",
+          "start_char": 3028,
+          "end_char": 3034
+        },
+        {
+          "index": 24,
+          "surface": "רעות",
+          "start_char": 3037,
+          "end_char": 3041
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S025-C01",
+      "sentence_id": "G14-S025",
+      "source_span": {
+        "start_char": 3043,
+        "end_char": 3065
+      },
+      "original_text": "וכן יתארו הדבור גם כן,",
+      "word_token_count": 5,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "וכן",
+          "start_char": 3043,
+          "end_char": 3046
+        },
+        {
+          "index": 1,
+          "surface": "יתארו",
+          "start_char": 3047,
+          "end_char": 3052
+        },
+        {
+          "index": 2,
+          "surface": "הדבור",
+          "start_char": 3053,
+          "end_char": 3058
+        },
+        {
+          "index": 3,
+          "surface": "גם",
+          "start_char": 3059,
+          "end_char": 3061
+        },
+        {
+          "index": 4,
+          "surface": "כן",
+          "start_char": 3062,
+          "end_char": 3064
+        }
+      ],
+      "boundary_after": "COMMA_BEFORE_CONNECTIVE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S025-C02",
+      "sentence_id": "G14-S025",
+      "source_span": {
+        "start_char": 3066,
+        "end_char": 3143
+      },
+      "original_text": "והוא ציור המושכלות, במעלות ובפחיתות, ונאמר \"מעלות דבוריות\" ו\"פחיתות דבוריות\".",
+      "word_token_count": 11,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "והוא",
+          "start_char": 3066,
+          "end_char": 3070
+        },
+        {
+          "index": 1,
+          "surface": "ציור",
+          "start_char": 3071,
+          "end_char": 3075
+        },
+        {
+          "index": 2,
+          "surface": "המושכלות",
+          "start_char": 3076,
+          "end_char": 3084
+        },
+        {
+          "index": 3,
+          "surface": "במעלות",
+          "start_char": 3086,
+          "end_char": 3092
+        },
+        {
+          "index": 4,
+          "surface": "ובפחיתות",
+          "start_char": 3093,
+          "end_char": 3101
+        },
+        {
+          "index": 5,
+          "surface": "ונאמר",
+          "start_char": 3103,
+          "end_char": 3108
+        },
+        {
+          "index": 6,
+          "surface": "מעלות",
+          "start_char": 3110,
+          "end_char": 3115
+        },
+        {
+          "index": 7,
+          "surface": "דבוריות",
+          "start_char": 3116,
+          "end_char": 3123
+        },
+        {
+          "index": 8,
+          "surface": "ו",
+          "start_char": 3125,
+          "end_char": 3126
+        },
+        {
+          "index": 9,
+          "surface": "פחיתות",
+          "start_char": 3127,
+          "end_char": 3133
+        },
+        {
+          "index": 10,
+          "surface": "דבוריות",
+          "start_char": 3134,
+          "end_char": 3141
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S026-C01",
+      "sentence_id": "G14-S026",
+      "source_span": {
+        "start_char": 3144,
+        "end_char": 3217
+      },
+      "original_text": "ולפילוסופים ספרים רבים במדות, וכל הנהגה ינהיג בה האדם זולתו נקראת – חוֹק.",
+      "word_token_count": 12,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "ולפילוסופים",
+          "start_char": 3144,
+          "end_char": 3155
+        },
+        {
+          "index": 1,
+          "surface": "ספרים",
+          "start_char": 3156,
+          "end_char": 3161
+        },
+        {
+          "index": 2,
+          "surface": "רבים",
+          "start_char": 3162,
+          "end_char": 3166
+        },
+        {
+          "index": 3,
+          "surface": "במדות",
+          "start_char": 3167,
+          "end_char": 3172
+        },
+        {
+          "index": 4,
+          "surface": "וכל",
+          "start_char": 3174,
+          "end_char": 3177
+        },
+        {
+          "index": 5,
+          "surface": "הנהגה",
+          "start_char": 3178,
+          "end_char": 3183
+        },
+        {
+          "index": 6,
+          "surface": "ינהיג",
+          "start_char": 3184,
+          "end_char": 3189
+        },
+        {
+          "index": 7,
+          "surface": "בה",
+          "start_char": 3190,
+          "end_char": 3192
+        },
+        {
+          "index": 8,
+          "surface": "האדם",
+          "start_char": 3193,
+          "end_char": 3197
+        },
+        {
+          "index": 9,
+          "surface": "זולתו",
+          "start_char": 3198,
+          "end_char": 3203
+        },
+        {
+          "index": 10,
+          "surface": "נקראת",
+          "start_char": 3204,
+          "end_char": 3209
+        },
+        {
+          "index": 11,
+          "surface": "חוֹק",
+          "start_char": 3212,
+          "end_char": 3216
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S027-C01",
+      "sentence_id": "G14-S027",
+      "source_span": {
+        "start_char": 3218,
+        "end_char": 3357
+      },
+      "original_text": "ואולם הנהגת הבית היא שידע, איך יעזרו קצתם את קצתם, ובמה יסתפקו עד שיכשר תיקון עניינם לפי היכולת ולפי הענינים הראויים בזמן ההוא ובמקום ההוא.",
+      "word_token_count": 25,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "ואולם",
+          "start_char": 3218,
+          "end_char": 3223
+        },
+        {
+          "index": 1,
+          "surface": "הנהגת",
+          "start_char": 3224,
+          "end_char": 3229
+        },
+        {
+          "index": 2,
+          "surface": "הבית",
+          "start_char": 3230,
+          "end_char": 3234
+        },
+        {
+          "index": 3,
+          "surface": "היא",
+          "start_char": 3235,
+          "end_char": 3238
+        },
+        {
+          "index": 4,
+          "surface": "שידע",
+          "start_char": 3239,
+          "end_char": 3243
+        },
+        {
+          "index": 5,
+          "surface": "איך",
+          "start_char": 3245,
+          "end_char": 3248
+        },
+        {
+          "index": 6,
+          "surface": "יעזרו",
+          "start_char": 3249,
+          "end_char": 3254
+        },
+        {
+          "index": 7,
+          "surface": "קצתם",
+          "start_char": 3255,
+          "end_char": 3259
+        },
+        {
+          "index": 8,
+          "surface": "את",
+          "start_char": 3260,
+          "end_char": 3262
+        },
+        {
+          "index": 9,
+          "surface": "קצתם",
+          "start_char": 3263,
+          "end_char": 3267
+        },
+        {
+          "index": 10,
+          "surface": "ובמה",
+          "start_char": 3269,
+          "end_char": 3273
+        },
+        {
+          "index": 11,
+          "surface": "יסתפקו",
+          "start_char": 3274,
+          "end_char": 3280
+        },
+        {
+          "index": 12,
+          "surface": "עד",
+          "start_char": 3281,
+          "end_char": 3283
+        },
+        {
+          "index": 13,
+          "surface": "שיכשר",
+          "start_char": 3284,
+          "end_char": 3289
+        },
+        {
+          "index": 14,
+          "surface": "תיקון",
+          "start_char": 3290,
+          "end_char": 3295
+        },
+        {
+          "index": 15,
+          "surface": "עניינם",
+          "start_char": 3296,
+          "end_char": 3302
+        },
+        {
+          "index": 16,
+          "surface": "לפי",
+          "start_char": 3303,
+          "end_char": 3306
+        },
+        {
+          "index": 17,
+          "surface": "היכולת",
+          "start_char": 3307,
+          "end_char": 3313
+        },
+        {
+          "index": 18,
+          "surface": "ולפי",
+          "start_char": 3314,
+          "end_char": 3318
+        },
+        {
+          "index": 19,
+          "surface": "הענינים",
+          "start_char": 3319,
+          "end_char": 3326
+        },
+        {
+          "index": 20,
+          "surface": "הראויים",
+          "start_char": 3327,
+          "end_char": 3334
+        },
+        {
+          "index": 21,
+          "surface": "בזמן",
+          "start_char": 3335,
+          "end_char": 3339
+        },
+        {
+          "index": 22,
+          "surface": "ההוא",
+          "start_char": 3340,
+          "end_char": 3344
+        },
+        {
+          "index": 23,
+          "surface": "ובמקום",
+          "start_char": 3345,
+          "end_char": 3351
+        },
+        {
+          "index": 24,
+          "surface": "ההוא",
+          "start_char": 3352,
+          "end_char": 3356
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S028-C01",
+      "sentence_id": "G14-S028",
+      "source_span": {
+        "start_char": 3358,
+        "end_char": 3671
+      },
+      "original_text": "ואולם הנהגת המדינה הנה היא חכמה תקנה בעליה ידיעת ההצלחה האמיתית ותראה להם ההתפשטות בהגעתו ידיעת הרעה האמתית, ותראה להם ההתפשטוה בשמירה ממנה והשתמש במדותיהם בעזיבת ההצלחה המדומה עד שלא יתאר אותה ולא יחיו נפשם בה, ותבאר להם הרעה המדומה עד אשר לא יכאבו בה ולא יעזבו אותה, וכן תניח דרכי הישר יסדה בם קבוציהם סדור נאה.",
+      "word_token_count": 57,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "ואולם",
+          "start_char": 3358,
+          "end_char": 3363
+        },
+        {
+          "index": 1,
+          "surface": "הנהגת",
+          "start_char": 3364,
+          "end_char": 3369
+        },
+        {
+          "index": 2,
+          "surface": "המדינה",
+          "start_char": 3370,
+          "end_char": 3376
+        },
+        {
+          "index": 3,
+          "surface": "הנה",
+          "start_char": 3377,
+          "end_char": 3380
+        },
+        {
+          "index": 4,
+          "surface": "היא",
+          "start_char": 3381,
+          "end_char": 3384
+        },
+        {
+          "index": 5,
+          "surface": "חכמה",
+          "start_char": 3385,
+          "end_char": 3389
+        },
+        {
+          "index": 6,
+          "surface": "תקנה",
+          "start_char": 3390,
+          "end_char": 3394
+        },
+        {
+          "index": 7,
+          "surface": "בעליה",
+          "start_char": 3395,
+          "end_char": 3400
+        },
+        {
+          "index": 8,
+          "surface": "ידיעת",
+          "start_char": 3401,
+          "end_char": 3406
+        },
+        {
+          "index": 9,
+          "surface": "ההצלחה",
+          "start_char": 3407,
+          "end_char": 3413
+        },
+        {
+          "index": 10,
+          "surface": "האמיתית",
+          "start_char": 3414,
+          "end_char": 3421
+        },
+        {
+          "index": 11,
+          "surface": "ותראה",
+          "start_char": 3422,
+          "end_char": 3427
+        },
+        {
+          "index": 12,
+          "surface": "להם",
+          "start_char": 3428,
+          "end_char": 3431
+        },
+        {
+          "index": 13,
+          "surface": "ההתפשטות",
+          "start_char": 3432,
+          "end_char": 3440
+        },
+        {
+          "index": 14,
+          "surface": "בהגעתו",
+          "start_char": 3441,
+          "end_char": 3447
+        },
+        {
+          "index": 15,
+          "surface": "ידיעת",
+          "start_char": 3448,
+          "end_char": 3453
+        },
+        {
+          "index": 16,
+          "surface": "הרעה",
+          "start_char": 3454,
+          "end_char": 3458
+        },
+        {
+          "index": 17,
+          "surface": "האמתית",
+          "start_char": 3459,
+          "end_char": 3465
+        },
+        {
+          "index": 18,
+          "surface": "ותראה",
+          "start_char": 3467,
+          "end_char": 3472
+        },
+        {
+          "index": 19,
+          "surface": "להם",
+          "start_char": 3473,
+          "end_char": 3476
+        },
+        {
+          "index": 20,
+          "surface": "ההתפשטוה",
+          "start_char": 3477,
+          "end_char": 3485
+        },
+        {
+          "index": 21,
+          "surface": "בשמירה",
+          "start_char": 3486,
+          "end_char": 3492
+        },
+        {
+          "index": 22,
+          "surface": "ממנה",
+          "start_char": 3493,
+          "end_char": 3497
+        },
+        {
+          "index": 23,
+          "surface": "והשתמש",
+          "start_char": 3498,
+          "end_char": 3504
+        },
+        {
+          "index": 24,
+          "surface": "במדותיהם",
+          "start_char": 3505,
+          "end_char": 3513
+        },
+        {
+          "index": 25,
+          "surface": "בעזיבת",
+          "start_char": 3514,
+          "end_char": 3520
+        },
+        {
+          "index": 26,
+          "surface": "ההצלחה",
+          "start_char": 3521,
+          "end_char": 3527
+        },
+        {
+          "index": 27,
+          "surface": "המדומה",
+          "start_char": 3528,
+          "end_char": 3534
+        },
+        {
+          "index": 28,
+          "surface": "עד",
+          "start_char": 3535,
+          "end_char": 3537
+        },
+        {
+          "index": 29,
+          "surface": "שלא",
+          "start_char": 3538,
+          "end_char": 3541
+        },
+        {
+          "index": 30,
+          "surface": "יתאר",
+          "start_char": 3542,
+          "end_char": 3546
+        },
+        {
+          "index": 31,
+          "surface": "אותה",
+          "start_char": 3547,
+          "end_char": 3551
+        },
+        {
+          "index": 32,
+          "surface": "ולא",
+          "start_char": 3552,
+          "end_char": 3555
+        },
+        {
+          "index": 33,
+          "surface": "יחיו",
+          "start_char": 3556,
+          "end_char": 3560
+        },
+        {
+          "index": 34,
+          "surface": "נפשם",
+          "start_char": 3561,
+          "end_char": 3565
+        },
+        {
+          "index": 35,
+          "surface": "בה",
+          "start_char": 3566,
+          "end_char": 3568
+        },
+        {
+          "index": 36,
+          "surface": "ותבאר",
+          "start_char": 3570,
+          "end_char": 3575
+        },
+        {
+          "index": 37,
+          "surface": "להם",
+          "start_char": 3576,
+          "end_char": 3579
+        },
+        {
+          "index": 38,
+          "surface": "הרעה",
+          "start_char": 3580,
+          "end_char": 3584
+        },
+        {
+          "index": 39,
+          "surface": "המדומה",
+          "start_char": 3585,
+          "end_char": 3591
+        },
+        {
+          "index": 40,
+          "surface": "עד",
+          "start_char": 3592,
+          "end_char": 3594
+        },
+        {
+          "index": 41,
+          "surface": "אשר",
+          "start_char": 3595,
+          "end_char": 3598
+        },
+        {
+          "index": 42,
+          "surface": "לא",
+          "start_char": 3599,
+          "end_char": 3601
+        },
+        {
+          "index": 43,
+          "surface": "יכאבו",
+          "start_char": 3602,
+          "end_char": 3607
+        },
+        {
+          "index": 44,
+          "surface": "בה",
+          "start_char": 3608,
+          "end_char": 3610
+        },
+        {
+          "index": 45,
+          "surface": "ולא",
+          "start_char": 3611,
+          "end_char": 3614
+        },
+        {
+          "index": 46,
+          "surface": "יעזבו",
+          "start_char": 3615,
+          "end_char": 3620
+        },
+        {
+          "index": 47,
+          "surface": "אותה",
+          "start_char": 3621,
+          "end_char": 3625
+        },
+        {
+          "index": 48,
+          "surface": "וכן",
+          "start_char": 3627,
+          "end_char": 3630
+        },
+        {
+          "index": 49,
+          "surface": "תניח",
+          "start_char": 3631,
+          "end_char": 3635
+        },
+        {
+          "index": 50,
+          "surface": "דרכי",
+          "start_char": 3636,
+          "end_char": 3640
+        },
+        {
+          "index": 51,
+          "surface": "הישר",
+          "start_char": 3641,
+          "end_char": 3645
+        },
+        {
+          "index": 52,
+          "surface": "יסדה",
+          "start_char": 3646,
+          "end_char": 3650
+        },
+        {
+          "index": 53,
+          "surface": "בם",
+          "start_char": 3651,
+          "end_char": 3653
+        },
+        {
+          "index": 54,
+          "surface": "קבוציהם",
+          "start_char": 3654,
+          "end_char": 3661
+        },
+        {
+          "index": 55,
+          "surface": "סדור",
+          "start_char": 3662,
+          "end_char": 3666
+        },
+        {
+          "index": 56,
+          "surface": "נאה",
+          "start_char": 3667,
+          "end_char": 3670
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S029-C01",
+      "sentence_id": "G14-S029",
+      "source_span": {
+        "start_char": 3672,
+        "end_char": 3823
+      },
+      "original_text": "וכן חכמי האומות השלמות יניחו הנהגות ודרכים לפי שלמות כל איש מהם, ינהגו בהם עבדיהם הסרים למשמעתם ויקראו אותם – נמוסים, והיו האומות מתנהגות בנימוסים ההם.",
+      "word_token_count": 25,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "וכן",
+          "start_char": 3672,
+          "end_char": 3675
+        },
+        {
+          "index": 1,
+          "surface": "חכמי",
+          "start_char": 3676,
+          "end_char": 3680
+        },
+        {
+          "index": 2,
+          "surface": "האומות",
+          "start_char": 3681,
+          "end_char": 3687
+        },
+        {
+          "index": 3,
+          "surface": "השלמות",
+          "start_char": 3688,
+          "end_char": 3694
+        },
+        {
+          "index": 4,
+          "surface": "יניחו",
+          "start_char": 3695,
+          "end_char": 3700
+        },
+        {
+          "index": 5,
+          "surface": "הנהגות",
+          "start_char": 3701,
+          "end_char": 3707
+        },
+        {
+          "index": 6,
+          "surface": "ודרכים",
+          "start_char": 3708,
+          "end_char": 3714
+        },
+        {
+          "index": 7,
+          "surface": "לפי",
+          "start_char": 3715,
+          "end_char": 3718
+        },
+        {
+          "index": 8,
+          "surface": "שלמות",
+          "start_char": 3719,
+          "end_char": 3724
+        },
+        {
+          "index": 9,
+          "surface": "כל",
+          "start_char": 3725,
+          "end_char": 3727
+        },
+        {
+          "index": 10,
+          "surface": "איש",
+          "start_char": 3728,
+          "end_char": 3731
+        },
+        {
+          "index": 11,
+          "surface": "מהם",
+          "start_char": 3732,
+          "end_char": 3735
+        },
+        {
+          "index": 12,
+          "surface": "ינהגו",
+          "start_char": 3737,
+          "end_char": 3742
+        },
+        {
+          "index": 13,
+          "surface": "בהם",
+          "start_char": 3743,
+          "end_char": 3746
+        },
+        {
+          "index": 14,
+          "surface": "עבדיהם",
+          "start_char": 3747,
+          "end_char": 3753
+        },
+        {
+          "index": 15,
+          "surface": "הסרים",
+          "start_char": 3754,
+          "end_char": 3759
+        },
+        {
+          "index": 16,
+          "surface": "למשמעתם",
+          "start_char": 3760,
+          "end_char": 3767
+        },
+        {
+          "index": 17,
+          "surface": "ויקראו",
+          "start_char": 3768,
+          "end_char": 3774
+        },
+        {
+          "index": 18,
+          "surface": "אותם",
+          "start_char": 3775,
+          "end_char": 3779
+        },
+        {
+          "index": 19,
+          "surface": "נמוסים",
+          "start_char": 3782,
+          "end_char": 3788
+        },
+        {
+          "index": 20,
+          "surface": "והיו",
+          "start_char": 3790,
+          "end_char": 3794
+        },
+        {
+          "index": 21,
+          "surface": "האומות",
+          "start_char": 3795,
+          "end_char": 3801
+        },
+        {
+          "index": 22,
+          "surface": "מתנהגות",
+          "start_char": 3802,
+          "end_char": 3809
+        },
+        {
+          "index": 23,
+          "surface": "בנימוסים",
+          "start_char": 3810,
+          "end_char": 3818
+        },
+        {
+          "index": 24,
+          "surface": "ההם",
+          "start_char": 3819,
+          "end_char": 3822
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S030-C01",
+      "sentence_id": "G14-S030",
+      "source_span": {
+        "start_char": 3824,
+        "end_char": 4011
+      },
+      "original_text": "ולפילוסופים בכל אלו הדברים ספרים הרבה שכבר יצאו בלשון הערב, ואולי לא יצאו יותר מהם, והנה איננו צריכים באלו הזמנים אל כל זה, רצוני לומר, החקים, הדתות, הנמוסים והנהגת האנשים בעניינים אלהים.",
+      "word_token_count": 32,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "ולפילוסופים",
+          "start_char": 3824,
+          "end_char": 3835
+        },
+        {
+          "index": 1,
+          "surface": "בכל",
+          "start_char": 3836,
+          "end_char": 3839
+        },
+        {
+          "index": 2,
+          "surface": "אלו",
+          "start_char": 3840,
+          "end_char": 3843
+        },
+        {
+          "index": 3,
+          "surface": "הדברים",
+          "start_char": 3844,
+          "end_char": 3850
+        },
+        {
+          "index": 4,
+          "surface": "ספרים",
+          "start_char": 3851,
+          "end_char": 3856
+        },
+        {
+          "index": 5,
+          "surface": "הרבה",
+          "start_char": 3857,
+          "end_char": 3861
+        },
+        {
+          "index": 6,
+          "surface": "שכבר",
+          "start_char": 3862,
+          "end_char": 3866
+        },
+        {
+          "index": 7,
+          "surface": "יצאו",
+          "start_char": 3867,
+          "end_char": 3871
+        },
+        {
+          "index": 8,
+          "surface": "בלשון",
+          "start_char": 3872,
+          "end_char": 3877
+        },
+        {
+          "index": 9,
+          "surface": "הערב",
+          "start_char": 3878,
+          "end_char": 3882
+        },
+        {
+          "index": 10,
+          "surface": "ואולי",
+          "start_char": 3884,
+          "end_char": 3889
+        },
+        {
+          "index": 11,
+          "surface": "לא",
+          "start_char": 3890,
+          "end_char": 3892
+        },
+        {
+          "index": 12,
+          "surface": "יצאו",
+          "start_char": 3893,
+          "end_char": 3897
+        },
+        {
+          "index": 13,
+          "surface": "יותר",
+          "start_char": 3898,
+          "end_char": 3902
+        },
+        {
+          "index": 14,
+          "surface": "מהם",
+          "start_char": 3903,
+          "end_char": 3906
+        },
+        {
+          "index": 15,
+          "surface": "והנה",
+          "start_char": 3908,
+          "end_char": 3912
+        },
+        {
+          "index": 16,
+          "surface": "איננו",
+          "start_char": 3913,
+          "end_char": 3918
+        },
+        {
+          "index": 17,
+          "surface": "צריכים",
+          "start_char": 3919,
+          "end_char": 3925
+        },
+        {
+          "index": 18,
+          "surface": "באלו",
+          "start_char": 3926,
+          "end_char": 3930
+        },
+        {
+          "index": 19,
+          "surface": "הזמנים",
+          "start_char": 3931,
+          "end_char": 3937
+        },
+        {
+          "index": 20,
+          "surface": "אל",
+          "start_char": 3938,
+          "end_char": 3940
+        },
+        {
+          "index": 21,
+          "surface": "כל",
+          "start_char": 3941,
+          "end_char": 3943
+        },
+        {
+          "index": 22,
+          "surface": "זה",
+          "start_char": 3944,
+          "end_char": 3946
+        },
+        {
+          "index": 23,
+          "surface": "רצוני",
+          "start_char": 3948,
+          "end_char": 3953
+        },
+        {
+          "index": 24,
+          "surface": "לומר",
+          "start_char": 3954,
+          "end_char": 3958
+        },
+        {
+          "index": 25,
+          "surface": "החקים",
+          "start_char": 3960,
+          "end_char": 3965
+        },
+        {
+          "index": 26,
+          "surface": "הדתות",
+          "start_char": 3967,
+          "end_char": 3972
+        },
+        {
+          "index": 27,
+          "surface": "הנמוסים",
+          "start_char": 3974,
+          "end_char": 3981
+        },
+        {
+          "index": 28,
+          "surface": "והנהגת",
+          "start_char": 3982,
+          "end_char": 3988
+        },
+        {
+          "index": 29,
+          "surface": "האנשים",
+          "start_char": 3989,
+          "end_char": 3995
+        },
+        {
+          "index": 30,
+          "surface": "בעניינים",
+          "start_char": 3996,
+          "end_char": 4004
+        },
+        {
+          "index": 31,
+          "surface": "אלהים",
+          "start_char": 4005,
+          "end_char": 4010
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S031-C01",
+      "sentence_id": "G14-S031",
+      "source_span": {
+        "start_char": 4012,
+        "end_char": 4069
+      },
+      "original_text": "וכל הדברים שהתבארו ענייניהם בזה השער שבעה ועשרים שמות הם.",
+      "word_token_count": 10,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "וכל",
+          "start_char": 4012,
+          "end_char": 4015
+        },
+        {
+          "index": 1,
+          "surface": "הדברים",
+          "start_char": 4016,
+          "end_char": 4022
+        },
+        {
+          "index": 2,
+          "surface": "שהתבארו",
+          "start_char": 4023,
+          "end_char": 4030
+        },
+        {
+          "index": 3,
+          "surface": "ענייניהם",
+          "start_char": 4031,
+          "end_char": 4039
+        },
+        {
+          "index": 4,
+          "surface": "בזה",
+          "start_char": 4040,
+          "end_char": 4043
+        },
+        {
+          "index": 5,
+          "surface": "השער",
+          "start_char": 4044,
+          "end_char": 4048
+        },
+        {
+          "index": 6,
+          "surface": "שבעה",
+          "start_char": 4049,
+          "end_char": 4053
+        },
+        {
+          "index": 7,
+          "surface": "ועשרים",
+          "start_char": 4054,
+          "end_char": 4060
+        },
+        {
+          "index": 8,
+          "surface": "שמות",
+          "start_char": 4061,
+          "end_char": 4065
+        },
+        {
+          "index": 9,
+          "surface": "הם",
+          "start_char": 4066,
+          "end_char": 4068
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S032-C01",
+      "sentence_id": "G14-S032",
+      "source_span": {
+        "start_char": 4070,
+        "end_char": 4074
+      },
+      "original_text": "והם:",
+      "word_token_count": 1,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "והם",
+          "start_char": 4070,
+          "end_char": 4073
+        }
+      ],
+      "boundary_after": "COLON",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S032-C02",
+      "sentence_id": "G14-S032",
+      "source_span": {
+        "start_char": 4075,
+        "end_char": 4426
+      },
+      "original_text": "הכח המדבר, הנפש המדברת, הדבור הפנימי, הדבור החיצוני, ההגיון, מלאכות עיוניות, מלאכות מעשיות, פילוסופיה, פילוסופיה אנושית, החכמה הלמודית, השמושית, החכמה הטבעית, החכמה האלהית, מה שאחר הטבע, הנהגת האדם נפשו, הנהגת הבית, הנהגת המדינה, הנהגת האומה, חקים, נמוסים, המדות, התכונות הנפשיות, המדות המעלות, המדות הפחותות, פעולות טובות, פעולות רעות, מעלות דבוריות.",
+      "word_token_count": 50,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "הכח",
+          "start_char": 4075,
+          "end_char": 4078
+        },
+        {
+          "index": 1,
+          "surface": "המדבר",
+          "start_char": 4079,
+          "end_char": 4084
+        },
+        {
+          "index": 2,
+          "surface": "הנפש",
+          "start_char": 4086,
+          "end_char": 4090
+        },
+        {
+          "index": 3,
+          "surface": "המדברת",
+          "start_char": 4091,
+          "end_char": 4097
+        },
+        {
+          "index": 4,
+          "surface": "הדבור",
+          "start_char": 4099,
+          "end_char": 4104
+        },
+        {
+          "index": 5,
+          "surface": "הפנימי",
+          "start_char": 4105,
+          "end_char": 4111
+        },
+        {
+          "index": 6,
+          "surface": "הדבור",
+          "start_char": 4113,
+          "end_char": 4118
+        },
+        {
+          "index": 7,
+          "surface": "החיצוני",
+          "start_char": 4119,
+          "end_char": 4126
+        },
+        {
+          "index": 8,
+          "surface": "ההגיון",
+          "start_char": 4128,
+          "end_char": 4134
+        },
+        {
+          "index": 9,
+          "surface": "מלאכות",
+          "start_char": 4136,
+          "end_char": 4142
+        },
+        {
+          "index": 10,
+          "surface": "עיוניות",
+          "start_char": 4143,
+          "end_char": 4150
+        },
+        {
+          "index": 11,
+          "surface": "מלאכות",
+          "start_char": 4152,
+          "end_char": 4158
+        },
+        {
+          "index": 12,
+          "surface": "מעשיות",
+          "start_char": 4159,
+          "end_char": 4165
+        },
+        {
+          "index": 13,
+          "surface": "פילוסופיה",
+          "start_char": 4167,
+          "end_char": 4176
+        },
+        {
+          "index": 14,
+          "surface": "פילוסופיה",
+          "start_char": 4178,
+          "end_char": 4187
+        },
+        {
+          "index": 15,
+          "surface": "אנושית",
+          "start_char": 4188,
+          "end_char": 4194
+        },
+        {
+          "index": 16,
+          "surface": "החכמה",
+          "start_char": 4196,
+          "end_char": 4201
+        },
+        {
+          "index": 17,
+          "surface": "הלמודית",
+          "start_char": 4202,
+          "end_char": 4209
+        },
+        {
+          "index": 18,
+          "surface": "השמושית",
+          "start_char": 4211,
+          "end_char": 4218
+        },
+        {
+          "index": 19,
+          "surface": "החכמה",
+          "start_char": 4220,
+          "end_char": 4225
+        },
+        {
+          "index": 20,
+          "surface": "הטבעית",
+          "start_char": 4226,
+          "end_char": 4232
+        },
+        {
+          "index": 21,
+          "surface": "החכמה",
+          "start_char": 4234,
+          "end_char": 4239
+        },
+        {
+          "index": 22,
+          "surface": "האלהית",
+          "start_char": 4240,
+          "end_char": 4246
+        },
+        {
+          "index": 23,
+          "surface": "מה",
+          "start_char": 4248,
+          "end_char": 4250
+        },
+        {
+          "index": 24,
+          "surface": "שאחר",
+          "start_char": 4251,
+          "end_char": 4255
+        },
+        {
+          "index": 25,
+          "surface": "הטבע",
+          "start_char": 4256,
+          "end_char": 4260
+        },
+        {
+          "index": 26,
+          "surface": "הנהגת",
+          "start_char": 4262,
+          "end_char": 4267
+        },
+        {
+          "index": 27,
+          "surface": "האדם",
+          "start_char": 4268,
+          "end_char": 4272
+        },
+        {
+          "index": 28,
+          "surface": "נפשו",
+          "start_char": 4273,
+          "end_char": 4277
+        },
+        {
+          "index": 29,
+          "surface": "הנהגת",
+          "start_char": 4279,
+          "end_char": 4284
+        },
+        {
+          "index": 30,
+          "surface": "הבית",
+          "start_char": 4285,
+          "end_char": 4289
+        },
+        {
+          "index": 31,
+          "surface": "הנהגת",
+          "start_char": 4291,
+          "end_char": 4296
+        },
+        {
+          "index": 32,
+          "surface": "המדינה",
+          "start_char": 4297,
+          "end_char": 4303
+        },
+        {
+          "index": 33,
+          "surface": "הנהגת",
+          "start_char": 4305,
+          "end_char": 4310
+        },
+        {
+          "index": 34,
+          "surface": "האומה",
+          "start_char": 4311,
+          "end_char": 4316
+        },
+        {
+          "index": 35,
+          "surface": "חקים",
+          "start_char": 4318,
+          "end_char": 4322
+        },
+        {
+          "index": 36,
+          "surface": "נמוסים",
+          "start_char": 4324,
+          "end_char": 4330
+        },
+        {
+          "index": 37,
+          "surface": "המדות",
+          "start_char": 4332,
+          "end_char": 4337
+        },
+        {
+          "index": 38,
+          "surface": "התכונות",
+          "start_char": 4339,
+          "end_char": 4346
+        },
+        {
+          "index": 39,
+          "surface": "הנפשיות",
+          "start_char": 4347,
+          "end_char": 4354
+        },
+        {
+          "index": 40,
+          "surface": "המדות",
+          "start_char": 4356,
+          "end_char": 4361
+        },
+        {
+          "index": 41,
+          "surface": "המעלות",
+          "start_char": 4362,
+          "end_char": 4368
+        },
+        {
+          "index": 42,
+          "surface": "המדות",
+          "start_char": 4370,
+          "end_char": 4375
+        },
+        {
+          "index": 43,
+          "surface": "הפחותות",
+          "start_char": 4376,
+          "end_char": 4383
+        },
+        {
+          "index": 44,
+          "surface": "פעולות",
+          "start_char": 4385,
+          "end_char": 4391
+        },
+        {
+          "index": 45,
+          "surface": "טובות",
+          "start_char": 4392,
+          "end_char": 4397
+        },
+        {
+          "index": 46,
+          "surface": "פעולות",
+          "start_char": 4399,
+          "end_char": 4405
+        },
+        {
+          "index": 47,
+          "surface": "רעות",
+          "start_char": 4406,
+          "end_char": 4410
+        },
+        {
+          "index": 48,
+          "surface": "מעלות",
+          "start_char": 4412,
+          "end_char": 4417
+        },
+        {
+          "index": 49,
+          "surface": "דבוריות",
+          "start_char": 4418,
+          "end_char": 4425
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S033-C01",
+      "sentence_id": "G14-S033",
+      "source_span": {
+        "start_char": 4427,
+        "end_char": 4458
+      },
+      "original_text": "וכל שערי זה המאמר ארבעה עשר הם;",
+      "word_token_count": 7,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "וכל",
+          "start_char": 4427,
+          "end_char": 4430
+        },
+        {
+          "index": 1,
+          "surface": "שערי",
+          "start_char": 4431,
+          "end_char": 4435
+        },
+        {
+          "index": 2,
+          "surface": "זה",
+          "start_char": 4436,
+          "end_char": 4438
+        },
+        {
+          "index": 3,
+          "surface": "המאמר",
+          "start_char": 4439,
+          "end_char": 4444
+        },
+        {
+          "index": 4,
+          "surface": "ארבעה",
+          "start_char": 4445,
+          "end_char": 4450
+        },
+        {
+          "index": 5,
+          "surface": "עשר",
+          "start_char": 4451,
+          "end_char": 4454
+        },
+        {
+          "index": 6,
+          "surface": "הם",
+          "start_char": 4455,
+          "end_char": 4457
+        }
+      ],
+      "boundary_after": "SEMICOLON",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S033-C02",
+      "sentence_id": "G14-S033",
+      "source_span": {
+        "start_char": 4459,
+        "end_char": 4506
+      },
+      "original_text": "וכל השמות שיכללו אלה השערים מאה שבעים וחמשה הם;",
+      "word_token_count": 9,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "וכל",
+          "start_char": 4459,
+          "end_char": 4462
+        },
+        {
+          "index": 1,
+          "surface": "השמות",
+          "start_char": 4463,
+          "end_char": 4468
+        },
+        {
+          "index": 2,
+          "surface": "שיכללו",
+          "start_char": 4469,
+          "end_char": 4475
+        },
+        {
+          "index": 3,
+          "surface": "אלה",
+          "start_char": 4476,
+          "end_char": 4479
+        },
+        {
+          "index": 4,
+          "surface": "השערים",
+          "start_char": 4480,
+          "end_char": 4486
+        },
+        {
+          "index": 5,
+          "surface": "מאה",
+          "start_char": 4487,
+          "end_char": 4490
+        },
+        {
+          "index": 6,
+          "surface": "שבעים",
+          "start_char": 4491,
+          "end_char": 4496
+        },
+        {
+          "index": 7,
+          "surface": "וחמשה",
+          "start_char": 4497,
+          "end_char": 4502
+        },
+        {
+          "index": 8,
+          "surface": "הם",
+          "start_char": 4503,
+          "end_char": 4505
+        }
+      ],
+      "boundary_after": "SEMICOLON",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S033-C03",
+      "sentence_id": "G14-S033",
+      "source_span": {
+        "start_char": 4507,
+        "end_char": 4613
+      },
+      "original_text": "וכל אלה השמות הכוללים הנופלים על ההגיון, ובהם גם כן קצת שמות שמוסכמים עליהם בחכמה הטבעית, האלהית והמדינית.",
+      "word_token_count": 18,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "וכל",
+          "start_char": 4507,
+          "end_char": 4510
+        },
+        {
+          "index": 1,
+          "surface": "אלה",
+          "start_char": 4511,
+          "end_char": 4514
+        },
+        {
+          "index": 2,
+          "surface": "השמות",
+          "start_char": 4515,
+          "end_char": 4520
+        },
+        {
+          "index": 3,
+          "surface": "הכוללים",
+          "start_char": 4521,
+          "end_char": 4528
+        },
+        {
+          "index": 4,
+          "surface": "הנופלים",
+          "start_char": 4529,
+          "end_char": 4536
+        },
+        {
+          "index": 5,
+          "surface": "על",
+          "start_char": 4537,
+          "end_char": 4539
+        },
+        {
+          "index": 6,
+          "surface": "ההגיון",
+          "start_char": 4540,
+          "end_char": 4546
+        },
+        {
+          "index": 7,
+          "surface": "ובהם",
+          "start_char": 4548,
+          "end_char": 4552
+        },
+        {
+          "index": 8,
+          "surface": "גם",
+          "start_char": 4553,
+          "end_char": 4555
+        },
+        {
+          "index": 9,
+          "surface": "כן",
+          "start_char": 4556,
+          "end_char": 4558
+        },
+        {
+          "index": 10,
+          "surface": "קצת",
+          "start_char": 4559,
+          "end_char": 4562
+        },
+        {
+          "index": 11,
+          "surface": "שמות",
+          "start_char": 4563,
+          "end_char": 4567
+        },
+        {
+          "index": 12,
+          "surface": "שמוסכמים",
+          "start_char": 4568,
+          "end_char": 4576
+        },
+        {
+          "index": 13,
+          "surface": "עליהם",
+          "start_char": 4577,
+          "end_char": 4582
+        },
+        {
+          "index": 14,
+          "surface": "בחכמה",
+          "start_char": 4583,
+          "end_char": 4588
+        },
+        {
+          "index": 15,
+          "surface": "הטבעית",
+          "start_char": 4589,
+          "end_char": 4595
+        },
+        {
+          "index": 16,
+          "surface": "האלהית",
+          "start_char": 4597,
+          "end_char": 4603
+        },
+        {
+          "index": 17,
+          "surface": "והמדינית",
+          "start_char": 4604,
+          "end_char": 4612
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    },
+    {
+      "clause_id": "G14-S034-C01",
+      "sentence_id": "G14-S034",
+      "source_span": {
+        "start_char": 4614,
+        "end_char": 4666
+      },
+      "original_text": "זהו מה שראיתי לזכרו ואולי יאות אל הכונה אם ירצה האל.",
+      "word_token_count": 11,
+      "word_tokens": [
+        {
+          "index": 0,
+          "surface": "זהו",
+          "start_char": 4614,
+          "end_char": 4617
+        },
+        {
+          "index": 1,
+          "surface": "מה",
+          "start_char": 4618,
+          "end_char": 4620
+        },
+        {
+          "index": 2,
+          "surface": "שראיתי",
+          "start_char": 4621,
+          "end_char": 4627
+        },
+        {
+          "index": 3,
+          "surface": "לזכרו",
+          "start_char": 4628,
+          "end_char": 4633
+        },
+        {
+          "index": 4,
+          "surface": "ואולי",
+          "start_char": 4634,
+          "end_char": 4639
+        },
+        {
+          "index": 5,
+          "surface": "יאות",
+          "start_char": 4640,
+          "end_char": 4644
+        },
+        {
+          "index": 6,
+          "surface": "אל",
+          "start_char": 4645,
+          "end_char": 4647
+        },
+        {
+          "index": 7,
+          "surface": "הכונה",
+          "start_char": 4648,
+          "end_char": 4653
+        },
+        {
+          "index": 8,
+          "surface": "אם",
+          "start_char": 4654,
+          "end_char": 4656
+        },
+        {
+          "index": 9,
+          "surface": "ירצה",
+          "start_char": 4657,
+          "end_char": 4661
+        },
+        {
+          "index": 10,
+          "surface": "האל",
+          "start_char": 4662,
+          "end_char": 4665
+        }
+      ],
+      "boundary_after": "END_OF_SENTENCE",
+      "boundary_status": "PUNCTUATION_BASED_CANDIDATE_NOT_SYNTAX_VERIFIED",
+      "structural_role_status": "UNCLASSIFIED_PENDING_CLAUSE_REVIEW"
+    }
+  ]
+}

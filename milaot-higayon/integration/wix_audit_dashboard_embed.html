@@ -1,0 +1,100 @@
+<script>
+(function(){
+ if(window.__wangaMilaotAuditLoaded)return;window.__wangaMilaotAuditLoaded=true;
+ const branchBase='https://raw.githubusercontent.com/Quadruple-Multilevel-projection-project/WANGA-LAB/milaot-hahigayon-structural-integration-v1/';
+ const apiBase='https://api.github.com/repos/Quadruple-Multilevel-projection-project/WANGA-LAB';
+ const css=document.createElement('style');css.textContent=
+ '#wanga-audit-launch{position:fixed;left:18px;bottom:18px;z-index:2147483000;background:#0b132b;color:#fff;border:1px solid #5bc0be;border-radius:10px;padding:12px 16px;font:600 14px system-ui;cursor:pointer;box-shadow:0 8px 28px #0007}'+
+ '#wanga-audit-overlay{position:fixed;inset:0;z-index:2147483001;background:#07101eee;color:#f5f7ff;font:14px/1.5 system-ui,Arial,sans-serif;padding:2vh 2vw;overflow:auto;direction:rtl}'+
+ '#wanga-audit-overlay *{box-sizing:border-box}#wanga-audit-overlay .wa-top{display:flex;justify-content:space-between;gap:12px;align-items:center;flex-wrap:wrap}'+
+ '#wanga-audit-overlay h2{margin:0;font-size:25px}#wanga-audit-overlay .wa-muted{color:#a6b8d0}'+
+ '#wanga-audit-overlay .wa-card{background:#121f3d;border:1px solid #253657;border-radius:10px;padding:12px;min-width:150px;flex:1}'+
+ '#wanga-audit-overlay .wa-metrics{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}#wanga-audit-overlay .wa-num{font-size:24px;font-weight:700}'+
+ '#wanga-audit-overlay .wa-green{color:#52c78f}#wanga-audit-overlay .wa-amber{color:#f7ad40}#wanga-audit-overlay .wa-teal{color:#5bc0be}'+
+ '#wanga-audit-overlay button,#wanga-audit-overlay input,#wanga-audit-overlay select{background:#192a4f;color:#fff;border:1px solid #35486a;border-radius:6px;padding:9px}'+
+ '#wanga-audit-overlay button{cursor:pointer}#wanga-audit-overlay .wa-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}'+
+ '#wanga-audit-overlay .wa-panel{background:#121f3d;border:1px solid #253657;border-radius:10px;padding:14px;margin:12px 0;min-width:0}'+
+ '#wanga-audit-overlay .wa-table{overflow:auto;max-height:42vh}#wanga-audit-overlay table{border-collapse:collapse;width:100%;min-width:750px}'+
+ '#wanga-audit-overlay th,#wanga-audit-overlay td{border-bottom:1px solid #2a3a59;padding:8px;text-align:right;vertical-align:top}'+
+ '#wanga-audit-overlay th{position:sticky;top:0;background:#192a4f}#wanga-audit-overlay a{color:#5bc0be}#wanga-audit-overlay .wa-controls{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0}'+
+ '#wanga-audit-overlay .wa-error{color:#ed6262;white-space:pre-wrap}#wanga-audit-overlay .wa-step{padding:6px 0;border-bottom:1px solid #2a3a59}'+
+ '@media(max-width:800px){#wanga-audit-overlay .wa-grid{grid-template-columns:1fr}#wanga-audit-overlay{padding:10px}}';
+ document.head.appendChild(css);
+ const launch=document.createElement('button');launch.id='wanga-audit-launch';launch.textContent='בדיקות ספר ההיגיון';document.body.appendChild(launch);
+ let overlay=null,corpus=null,matrix=null,fullMatrix=null,analysis=null,wordMatrix=null,wordRoles=null,auditStatus=null,runData=null,jobsData=null;
+ const E=(tag,cls,txt)=>{const n=document.createElement(tag);if(cls)n.className=cls;if(txt!==undefined)n.textContent=txt;return n};
+ async function getJson(url){const r=await fetch(url,{headers:{Accept:'application/vnd.github+json'},cache:'no-store'});if(!r.ok)throw new Error(url+' → HTTP '+r.status);return r.json()}
+ function link(url,label){const a=E('a','',label);a.href=url;a.target='_blank';a.rel='noreferrer';return a}
+ function card(title,value,detail,color){const d=E('div','wa-card');d.append(E('div','wa-muted',title),E('div','wa-num '+color,value),E('div','wa-muted',detail));return d}
+ async function loadData(){
+  const tasks=await Promise.all([
+   getJson(branchBase+'artifacts/book_sentence_registry.json'),
+   getJson(branchBase+'milaot-hahigayon/integration/gate14_relation_matrix.json'),
+   getJson(branchBase+'artifacts/gate14_full_relation_matrix.json'),
+   getJson(branchBase+'artifacts/gate14_sentence_structure.json'),
+   getJson(branchBase+'artifacts/gate14_word_occurrence_matrix.json'),
+   getJson(branchBase+'artifacts/gate14_word_role_candidates.json'),
+   getJson(branchBase+'artifacts/current_audit_status.json'),
+   getJson(apiBase+'/actions/workflows/milaot-hahigayon-structural-audit.yml/runs?branch=milaot-hahigayon-structural-integration-v1&per_page=1')
+  ]);
+  corpus=tasks[0];matrix=tasks[1];fullMatrix=tasks[2];analysis=tasks[3];wordMatrix=tasks[4];wordRoles=tasks[5];auditStatus=tasks[6];runData=tasks[7].workflow_runs&&tasks[7].workflow_runs[0];
+  if(runData)jobsData=await getJson(apiBase+'/actions/runs/'+runData.id+'/jobs?per_page=100');
+ }
+ function render(){
+  overlay.replaceChildren();
+  const top=E('div','wa-top');const heading=E('div','');heading.append(E('h2','','מילות ההיגיון · שילוב מבני של שער י״ד'),E('div','wa-muted','WANGA-LAB · מקור → חילוץ → מטריצה → ביקורת ראיות'));top.append(heading);
+  const close=E('button','','סגירה ✕');close.onclick=()=>{overlay.remove();overlay=null};top.append(close);overlay.append(top);
+  const metrics=E('div','wa-metrics');metrics.append(card('שערים במקור',String(corpus.chapter_count),'כותרות מקור שנקלטו','wa-teal'),card('מועמדי משפטים',String(corpus.total_candidate_sentences),'חלוקה לפי פיסוק; טרם אומתה','wa-amber'),card('מילות מקור',String(corpus.total_words),'טוקניזציה לקסיקלית מועמדת','wa-teal'),card('קשרים מוצעים',String(matrix.links.length),'כולם דורשים ביקורת מקור','wa-amber'));
+  if(runData)metrics.append(card('ריצת CI אחרונה',String(runData.conclusion||runData.status).toUpperCase(),'Run #'+runData.run_number+' · '+runData.head_sha.slice(0,7),runData.conclusion==='success'?'wa-green':'wa-amber'));
+  overlay.append(metrics);
+  const grid=E('div','wa-grid'),tests=E('section','wa-panel'),coverage=E('section','wa-panel');
+  tests.append(E('h3','','בדיקות ממוכנות — תוצאה בפועל'));
+  tests.append(E('h4','','מצב ביקורת שמור מה־CI'));
+  const auditRows=[
+   ['תוצאה מכנית',auditStatus.overall_mechanical_status],
+   ['כיסוי מקור קנוני',auditStatus.canonical_source_coverage_status],
+   ['כיסוי שערים',auditStatus.coverage_status],
+   ['מצב שילוב',auditStatus.integration_status],
+   ['כיסוי רישום שער י״ד הישן',auditStatus.legacy_gate14_registry_coverage+' · '+auditStatus.legacy_gate14_exact_quote_matches+'/'+auditStatus.legacy_gate14_unit_count+' ציטוטים מדויקים'],
+   ['מועמדי משפטים',String(auditStatus.candidate_sentence_count)],
+   ['טוקנים בשער י״ד',String(auditStatus.gate14_word_token_count)],
+   ['טוקנים לא משויכים',String((auditStatus.word_role_counts||{}).UNASSIGNED_REQUIRES_REVIEW||0)]
+  ];
+  auditRows.forEach(item=>{const row=E('div','wa-step');row.append(E('span','wa-muted',item[0]+' — '),E('span',item[1]==='PASS'?'wa-green':item[1]==='FAIL'?'wa-error':'wa-amber',String(item[1])));tests.append(row)});
+  if(auditStatus.run&&auditStatus.run.url)tests.append(link(auditStatus.run.url,'ריצת CI שממנה נוצר דוח המצב'));
+  tests.append(E('div','wa-muted','עודכן: '+auditStatus.generated_at_utc));
+  if(runData){tests.append(E('div','wa-muted','ריצה: '+runData.created_at+' · אירוע: '+runData.event+' · '+runData.html_url));tests.append(link(runData.html_url,'פתיחת הריצה ב־GitHub'));const jobs=jobsData&&jobsData.jobs||[];jobs.forEach(job=>{tests.append(E('h4','',job.name+' · '+String(job.conclusion||job.status).toUpperCase()));(job.steps||[]).forEach(step=>{const row=E('div','wa-step');row.textContent=step.number+'. '+step.name+' — '+String(step.conclusion||step.status).toUpperCase();row.className+=' '+(step.conclusion==='success'?'wa-green':step.conclusion==='failure'?'wa-error':'wa-muted');tests.append(row)})})}
+  else tests.append(E('div','wa-error','לא נמצאה ריצת Actions. אין להציג PASS ללא ריצה מתועדת.'));
+  tests.append(E('p','wa-muted','גבול אימות: הצלחת שלבי CI אינה מוכיחה שהקשרים הסמנטיים נכונים או שהשילוב הושלם.'));
+  coverage.append(E('h3','','כיסוי לפי שער'));corpus.chapters.forEach(ch=>{const d=E('div','wa-step');d.textContent='שער '+ch.chapter_label+' · '+ch.sentence_candidate_count+' מועמדי משפטים · '+ch.word_count+' מילים';coverage.append(d)});
+  grid.append(tests,coverage);overlay.append(grid);
+  const sentencePanel=E('section','wa-panel');sentencePanel.append(E('h3','','רישום משפטים ומילים'));
+  const controls=E('div','wa-controls'),search=E('input','');search.placeholder='חיפוש במזהה או בטקסט';const gate=E('select','');gate.append(E('option','','כל השערים'));corpus.chapters.forEach(c=>{const o=E('option','','שער '+c.chapter_label);o.value=String(c.chapter);gate.append(o)});controls.append(search,gate);sentencePanel.append(controls);
+  const tableWrap=E('div','wa-table'),table=E('table',''),thead=E('thead',''),trh=E('tr','');['מזהה','שער','טקסט מקור','מספר מילים','סטטוס'].forEach(x=>trh.append(E('th','',x)));thead.append(trh);const tbody=E('tbody','');table.append(thead,tbody);tableWrap.append(table);sentencePanel.append(tableWrap);overlay.append(sentencePanel);
+  function fillRows(){tbody.replaceChildren();const q=search.value.toLowerCase();let count=0;for(const ch of corpus.chapters){if(gate.value&&String(ch.chapter)!==gate.value)continue;for(const u of ch.sentence_units){if(q&&!(u.sentence_id+' '+u.original_text).toLowerCase().includes(q))continue;const tr=E('tr','');tr.append(E('td','',u.sentence_id),E('td','','שער '+ch.chapter_label),E('td','',u.original_text),E('td','',String(u.word_count)),E('td','wa-amber',u.segmentation_status));tbody.append(tr);count++;if(count>=500)return}}}
+  search.addEventListener('input',fillRows);gate.addEventListener('change',fillRows);fillRows();
+  const analysisPanel=E('section','wa-panel');analysisPanel.append(E('h3','','ניתוח מבני — 34 מועמדי משפטי שער י״ד'));analysisPanel.append(E('p','wa-muted','התוויות נגזרות מהמבנה; אינן נוסח מקור ואינן מאומתות סמנטית.'));
+  const atw=E('div','wa-table'),at=E('table',''),ath=E('thead',''),atr=E('tr','');['מזהה','סוג','נושא מועמד','נשוא מועמד','תבנית יחס','קשרים מועמדים'].forEach(x=>atr.append(E('th','',x)));ath.append(atr);const ab=E('tbody','');
+  analysis.units.forEach(u=>{const tr=E('tr','');tr.append(E('td','',u.sentence_id),E('td','',u.structural_type),E('td','',u.subject_candidate),E('td','',u.predicate_candidate),E('td','',u.relation_pattern),E('td','',u.prior_gate_links.map(l=>'שער '+l.gate+': '+l.type+' ['+l.status+']').join('; ')||'UNRESOLVED'));ab.append(tr)});at.append(ath,ab);atw.append(at);analysisPanel.append(atw);overlay.append(analysisPanel);
+  const wordPanel=E('section','wa-panel');wordPanel.append(E('h3','','חפיפת מילים מדויקת — לא קשר סמנטי'));wordPanel.append(E('p','wa-muted','התאמת פני־מילה בלבד; אינה מוכיחה זהות מושגית.'));
+  const wtw=E('div','wa-table'),wt=E('table',''),wth=E('thead',''),wtr=E('tr','');['מונח מקור','מופעים בשער י״ד','שערים קודמים עם התאמה','סטטוס'].forEach(x=>wtr.append(E('th','',x)));wth.append(wtr);const wb=E('tbody','');
+  wordMatrix.overlaps.forEach(x=>{const tr=E('tr','');tr.append(E('td','',x.surface_term),E('td','',String(x.gate14_occurrences)),E('td','',x.prior_chapter_occurrences.map(p=>'שער '+p.chapter+' ('+p.occurrences+')').join(', ')),E('td','wa-muted',x.relation_status));wb.append(tr)});wt.append(wth,wb);wtw.append(wt);wordPanel.append(wtw);overlay.append(wordPanel);
+  const rolePanel=E('section','wa-panel');rolePanel.append(E('h3','','כל מילות שער י״ד — תפקידים מועמדים'));rolePanel.append(E('p','wa-muted','כל 799 הטוקנים עם מיקום במקור. תפקידים הם מועמדים לפי התאמת מחרוזת או כללים; UNCLASSIFIED מחייב ביקורת.'));
+  const rtw=E('div','wa-table'),rt=E('table',''),rth=E('thead',''),rtr=E('tr','');['מזהה טוקן','מילה','משפט','מיקום במקור','תפקיד מועמד','סטטוס'].forEach(x=>rtr.append(E('th','',x)));rth.append(rtr);const rb=E('tbody','');
+  wordRoles.tokens.forEach(x=>{const tr=E('tr','');tr.append(E('td','',x.token_id),E('td','',x.surface),E('td','',x.sentence_id),E('td','',x.source_span.chapter_start_char+'–'+x.source_span.chapter_end_char),E('td','',x.role_candidate),E('td','wa-muted',x.status));rb.append(tr)});rt.append(rth,rb);rtw.append(rt);rolePanel.append(rtw);overlay.append(rolePanel);
+  const matrixPanel=E('section','wa-panel');matrixPanel.append(E('h3','','מטריצת זוגות מלאה — 34 × 13'));
+  matrixPanel.append(E('p','wa-muted','SCOPE = הפניית היקף; CAND = קשר מוצע; LEX = חפיפת מילה בלבד; — = לא נטען קשר.'));
+  matrixPanel.append(E('p','wa-muted','442 תאים · '+(fullMatrix.structural_status_counts.STRUCTURAL_LINK_CANDIDATE||0)+' מועמדים · '+(fullMatrix.structural_status_counts.EXPLICIT_SCOPE_REFERENCE||0)+' היקף · '+(fullMatrix.structural_status_counts.UNRESOLVED||0)+' לא פתורים · '+fullMatrix.unresolved_with_lexical_overlap+' עם חפיפה.'));
+  const mtw=E('div','wa-table'),mt=E('table',''),mthead=E('thead',''),mtr=E('tr','');mtr.append(E('th','','משפט'));
+  const gateNames=['א׳','ב׳','ג׳','ד׳','ה׳','ו׳','ז׳','ח׳','ט׳','י׳','י״א','י״ב','י״ג'];gateNames.forEach(x=>mtr.append(E('th','',x)));mthead.append(mtr);const mb=E('tbody','');const byPair=new Map();fullMatrix.cells.forEach(c=>byPair.set(c.gate14_sentence_id+'|'+c.prior_gate,c));
+  analysis.units.forEach(u=>{const tr=E('tr','');tr.append(E('td','',u.sentence_id));for(let gate=1;gate<=13;gate++){const c=byPair.get(u.sentence_id+'|'+gate);let label='—',cls='wa-muted';if(c.structural_link_status==='EXPLICIT_SCOPE_REFERENCE'){label='SCOPE';cls='wa-teal'}else if(c.structural_link_status==='STRUCTURAL_LINK_CANDIDATE'){label='CAND';cls='wa-amber'}else if(c.exact_surface_overlap_count>0){label='LEX';cls='';}const td=E('td',cls,label);td.style.minWidth='42px';td.title=c.structural_link_status+'; overlap='+c.exact_surface_overlap_count;if(label==='LEX')td.style.color='#8dbdff';tr.append(td)}mb.append(tr)});mt.append(mthead,mb);mtw.append(mt);matrixPanel.append(mtw);overlay.append(matrixPanel);
+  const foot=E('section','wa-panel');foot.append(E('h3','','מקורות'));foot.append(link('https://github.com/Sivan22/otzaria-library/tree/d1106d9a66528dc3e39cf1ea0732782927d9f678','מקור קנוני · commit נעול'));foot.append(E('p','wa-muted','SOURCE LOCATED ≠ SENTENCE EXTRACTED ≠ STRUCTURALLY LINKED ≠ VERIFIED.'));
+  foot.append(E('p','wa-muted','WebMCP: '+(window.__wangaWebMCPStatus||'not detected')+' · read-only tools; support depends on browser runtime.'));foot.append(link('https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/tree/milaot-hahigayon-structural-integration-v1','ענף העבודה ב־WANGA-LAB'));overlay.append(foot);
+ }
+ launch.onclick=async function(){
+  if(overlay){return}
+  overlay=E('div','');overlay.id='wanga-audit-overlay';overlay.append(E('h2','','טוען רישום המקור ותוצאות CI…'));document.body.appendChild(overlay);
+  try{await loadData();render()}catch(e){overlay.replaceChildren(E('h2','','טעינת נתוני הביקורת נכשלה'),E('pre','wa-error',String(e)));const b=E('button','','סגירה');b.onclick=()=>{overlay.remove();overlay=null};overlay.append(b)}
+ };
+})();
+</script>
