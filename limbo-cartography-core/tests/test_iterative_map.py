@@ -120,3 +120,22 @@ def test_map_hash_is_stable_for_identical_inputs():
     second = build_iterative_map(copy.deepcopy(matrix))
     assert first["map_sha256"] == second["map_sha256"]
     assert first == second
+
+
+def test_committed_map_matches_rebuild_from_registered_inputs():
+    root = __import__("pathlib").Path(__file__).resolve().parents[1]
+    matrix = __import__("json").loads((root / "cartography/reality_matrix.json").read_text(encoding="utf-8"))
+    tuning = []
+    for path in sorted((root / "cartography/tuning_candidates").glob("*.json")):
+        item = __import__("json").loads(path.read_text(encoding="utf-8"))
+        if isinstance(item, dict) and isinstance(item.get("candidate_id"), str):
+            tuning.append(item)
+    bundles = []
+    for path in sorted((root / "cartography/logic_bundles").glob("*.json")):
+        item = __import__("json").loads(path.read_text(encoding="utf-8"))
+        if isinstance(item, dict) and isinstance(item.get("bundle_id"), str):
+            bundles.append(item)
+    committed = __import__("json").loads((root / "cartography/iterative_crash_map.json").read_text(encoding="utf-8"))
+    rebuilt = build_iterative_map(matrix, tuning, bundles)
+    assert committed == rebuilt
+    assert committed["source_matrix_version"] == matrix["cartography_version"]
