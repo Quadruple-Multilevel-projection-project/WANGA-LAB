@@ -14,15 +14,31 @@ OUTPUT = ROOT / "research" / "reports" / "logic-fractal" / "typed-first-model-ca
 
 class FirstModelBuilderRegressionTests(unittest.TestCase):
     def test_builder_archives_reproducible_release_blocked_candidate(self):
-        completed = subprocess.run(
+        first_run = subprocess.run(
             [sys.executable, str(BUILDER)],
             cwd=ROOT,
             capture_output=True,
             text=True,
             check=True,
         )
-        self.assertIn("CANDIDATE_NOT_RELEASED", completed.stdout)
+        first_artifact = json.loads(OUTPUT.read_text(encoding="utf-8"))
+
+        second_run = subprocess.run(
+            [sys.executable, str(BUILDER)],
+            cwd=ROOT,
+            capture_output=True,
+            text=True,
+            check=True,
+        )
         artifact = json.loads(OUTPUT.read_text(encoding="utf-8"))
+
+        self.assertIn("CANDIDATE_NOT_RELEASED", first_run.stdout)
+        self.assertIn("CANDIDATE_NOT_RELEASED", second_run.stdout)
+        self.assertEqual(
+            first_artifact,
+            artifact,
+            "A clean repeated builder execution must produce byte-equivalent JSON data.",
+        )
 
         self.assertEqual(artifact["status"], "CANDIDATE_NOT_RELEASED")
         self.assertEqual(artifact["semantic_status"], "NOT_YET_VERIFIED")
