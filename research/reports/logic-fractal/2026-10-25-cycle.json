@@ -180,6 +180,17 @@
       "failure": "Non-fast-forward push from detached PR merge checkout; no branch update occurred.",
       "follow_up_commit": "82c6c673d47c6a81ba9801fecf7cad051496b796",
       "follow_up_status": "PENDING_CI"
+    },
+    "ecosystem_report_pr": {
+      "run_id": 40167405653,
+      "run_number": 65,
+      "status": "SUCCESS",
+      "repository_integrity_run_id": 40167405682,
+      "repository_integrity_run_number": 810,
+      "repository_integrity_status": "SUCCESS",
+      "codeql_run_id": 40167405665,
+      "codeql_run_number": 1292,
+      "codeql_status": "SUCCESS"
     }
   },
   "MODEL_HASH": {
@@ -248,7 +259,7 @@
     ]
   },
   "BUILT": "Logic Fractal candidate rebuilt in GitHub Actions run 40166948323 from synthetic fixtures; typed model hash a16a83... and status CANDIDATE_NOT_RELEASED. Separate catalog graph candidate hash fa22ea... has 523 structural substructures, not semantic validation. Limbo map rebuilt in run 22 but not persisted; run 23 now adds artifact upload and is in progress.",
-  "TESTED": "Logic Fractal Wiki Research run 144, Repository Integrity run 799 and CodeQL run 1281 passed. PR #132's Logic Fractal run 145, Repository Integrity run 800 and CodeQL run 1282 also passed; the generated report confirms an unknown contradiction inventory keeps the gate blocked. Limbo run 23 passed and archived outputs; run 24's branch persistence step failed non-fast-forward, and a corrected persistence step is committed pending CI.",
+  "TESTED": "Logic Fractal Wiki Research run 144, Repository Integrity run 799 and CodeQL run 1281 passed. PR #132's Logic Fractal run 145, Repository Integrity run 800 and CodeQL run 1282 also passed; the generated report confirms an unknown contradiction inventory keeps the gate blocked. Limbo run 23 passed and archived outputs; run 24's branch persistence step failed non-fast-forward, and a corrected persistence step is committed pending CI. Ecosystem report/registry branch CI also passed: WANGA Ecosystem Agent Sweep run 65, Repository Integrity 810 and CodeQL 1292.",
   "VERIFIED": "Catalog structural validation, synthetic builder execution, software test outcomes, artifact hashes, and PR #132's fail-closed unknown-metric behavior are supported by CI evidence. The Limbo generated output is archived and structurally validated, but not yet committed to the PR branch. No semantic truth, source-grounded entailment, independent contradiction inventory, trained neural model or AGI claim is verified.",
   "BLOCKED": [
     "FIRST_MODEL_ALPHA gate remains blocked by source/provenance unit deficits, composition contract count, zero source-grounded counterexamples, zero semantic cases/suites, zero independent reviews, missing holdout and missing MIRROR review.",
