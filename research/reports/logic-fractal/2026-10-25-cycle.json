@@ -209,7 +209,7 @@
       "repository_integrity_run_id": 40167526556,
       "repository_integrity_status": "SUCCESS",
       "codeql_run_id": 40167526592,
-      "codeql_status": "IN_PROGRESS_AT_LAST_CHECK"
+      "codeql_status": "SUCCESS"
     },
     "current_limbo_branch": {
       "branch": "deploy/limbo-cartography-core-v1",
@@ -290,7 +290,7 @@
     ]
   },
   "BUILT": "Logic Fractal candidate rebuilt in GitHub Actions run 40166948323 from synthetic fixtures; typed model hash a16a83... and status CANDIDATE_NOT_RELEASED. Separate catalog graph candidate hash fa22ea... has 523 structural substructures, not semantic validation. Limbo map rebuilt in run 22 but not persisted; run 23 now adds artifact upload and is in progress.",
-  "TESTED": "Logic Fractal Wiki Research run 144, Repository Integrity 799 and CodeQL 1281 passed. PR #132's Logic Fractal run 145, Repository Integrity 800 and CodeQL 1282 passed. Limbo run 25 persisted the generated outputs; run 30 passed the committed-map rebuild regression, all Limbo software tests and validators, with Repository Integrity 816 passed. CodeQL 1298 was still in progress at last check.",
+  "TESTED": "Logic Fractal Wiki Research run 144, Repository Integrity 799 and CodeQL 1281 passed. PR #132's Logic Fractal run 145, Repository Integrity 800 and CodeQL 1282 passed. Limbo run 25 persisted the generated outputs; run 30 passed the committed-map rebuild regression, all Limbo software tests and validators, with Repository Integrity 816 passed. CodeQL 1298 also passed.",
   "VERIFIED": "Catalog structural validation, synthetic builder execution, software test outcomes, artifact hashes, PR #132's fail-closed unknown-metric behavior, and the committed Limbo map's match to a deterministic rebuild are supported by CI evidence. The map now matches matrix v1.3.0. Tuning replay remains NOT_RUN; the logic bundle remains DRAFT_UNVERIFIED. No semantic truth, source-grounded entailment, independent contradiction inventory, trained neural model or AGI claim is verified.",
   "BLOCKED": [
     "FIRST_MODEL_ALPHA gate remains blocked by source/provenance unit deficits, composition contract count, zero source-grounded counterexamples, zero semantic cases/suites, zero independent reviews, missing holdout and missing MIRROR review.",
