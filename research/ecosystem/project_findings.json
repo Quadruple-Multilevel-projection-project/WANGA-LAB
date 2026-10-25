@@ -1,7 +1,7 @@
 {
   "schema_version": "wanga-project-findings/1.1",
-  "snapshot_date": "2026-10-24",
-  "generated_at_utc": "2026-10-24T04:30:14.776Z",
+  "snapshot_date": "2026-10-25",
+  "generated_at_utc": "2026-10-25T05:50:17Z",
   "scope": "20 distinct public repositories across the 2026-10-23 and 2026-10-24 bounded batches; 10 current-batch README scans plus two previously scanned targeted documents.",
   "claims_added": 0,
   "logic_units_added": 0,
@@ -346,34 +346,289 @@
       "scan_status": "READ",
       "next_action": "Read targeted architecture, manifests and workflows before making integration claims.",
       "scan_time_utc": "2026-10-24T04:30:14.776Z"
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/desktop/blob/development/README.md",
+      "repository_full_name": "AmbassadorOv/desktop",
+      "branch_ref": "development",
+      "exact_file_path": "README.md",
+      "git_blob_sha1": "c7702d385076e80f365a23d17dc868b9ecb6a5ad",
+      "excerpt_or_summary": "README identifies an Electron desktop application written with TypeScript and React; no direct WANGA integration evidence in README.",
+      "epistemic_status": "README_SURFACE_CUES_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-25T05:50:17Z",
+      "next_action": "Read targeted docs only if a later source cue establishes direct WANGA relevance."
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/extensions/blob/next/README.md",
+      "repository_full_name": "AmbassadorOv/extensions",
+      "branch_ref": "next",
+      "exact_file_path": "README.md",
+      "git_blob_sha1": "6ef8b6a54813922bf64bad64c8e7301f8dc620c2",
+      "excerpt_or_summary": "README describes Firebase Extensions source and installation/configuration guidance; no direct WANGA logic/fractal evidence in README.",
+      "epistemic_status": "README_SURFACE_CUES_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-25T05:50:17Z",
+      "next_action": "Read targeted docs only if a later source cue establishes direct WANGA relevance."
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/docs/blob/main/README.md",
+      "repository_full_name": "AmbassadorOv/docs",
+      "branch_ref": "main",
+      "exact_file_path": "README.md",
+      "git_blob_sha1": "69090a601896b5189a5b3ee42105ed42638016be",
+      "excerpt_or_summary": "README identifies source for the GitHub Docs website and Markdown content; no direct WANGA integration evidence in README.",
+      "epistemic_status": "README_SURFACE_CUES_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-25T05:50:17Z",
+      "next_action": "Read targeted docs only if a later source cue establishes direct WANGA relevance."
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/generative-ai-docs/blob/main/README.md",
+      "repository_full_name": "AmbassadorOv/generative-ai-docs",
+      "branch_ref": "main",
+      "exact_file_path": "README.md",
+      "git_blob_sha1": "1bf3babd967e73a1cff092805c4ff151fba95baf",
+      "excerpt_or_summary": "README describes source files for Gemini API developer documentation, notebooks, demos and examples; API overlap only, no WANGA backend configuration evidence.",
+      "epistemic_status": "README_SURFACE_CUES_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-25T05:50:17Z",
+      "next_action": "Read targeted docs only if a later source cue establishes direct WANGA relevance."
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/python-genai/blob/main/README.md",
+      "repository_full_name": "AmbassadorOv/python-genai",
+      "branch_ref": "main",
+      "exact_file_path": "README.md",
+      "git_blob_sha1": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+      "excerpt_or_summary": "README describes Google Gen AI Python SDK for Gemini Developer API and Vertex AI; no WANGA backend selected or configured by this README.",
+      "epistemic_status": "README_SURFACE_CUES_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-25T05:50:17Z",
+      "next_action": "Read targeted docs only if a later source cue establishes direct WANGA relevance."
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "README.md",
+      "git_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+      "excerpt_or_summary": "README describes a coordinator with classification, data-retrieval and reasoning agents, and a configurable local-JSON/LanceDB retrieval path; candidate overlap only, not execution evidence.",
+      "epistemic_status": "README_SURFACE_CUES_ONLY",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-25T05:50:17Z",
+      "next_action": "Review three candidate logic units; no direct repository write.",
+      "candidate_logic_unit_ids": [
+        "EXT-MAORCH-UNIT-001",
+        "EXT-MAORCH-UNIT-002",
+        "EXT-MAORCH-UNIT-003"
+      ]
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/https-AmbassadorOv.io/blob/main/README.md",
+      "repository_full_name": "AmbassadorOv/https-AmbassadorOv.io",
+      "branch_ref": "main",
+      "exact_file_path": "README.md",
+      "git_blob_sha1": null,
+      "excerpt_or_summary": "README.md fetch returned 404; absence of other documentation is not inferred.",
+      "epistemic_status": "ACCESS_GAP_README_FETCH_404",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "FETCH_GAP",
+      "scan_time_utc": "2026-10-25T05:50:17Z",
+      "next_action": "Check alternate README filename only if a later integration need justifies it."
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/vqbshtfsprojects.org/blob/main/README.md",
+      "repository_full_name": "AmbassadorOv/vqbshtfsprojects.org",
+      "branch_ref": "main",
+      "exact_file_path": "README.md",
+      "git_blob_sha1": null,
+      "excerpt_or_summary": "GitHub API explicitly reports the repository is empty; no README content exists in this snapshot.",
+      "epistemic_status": "REPOSITORY_EMPTY_CONFIRMED_BY_API",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "EMPTY_REPOSITORY",
+      "scan_time_utc": "2026-10-25T05:50:17Z",
+      "next_action": "Recheck repository contents in a later snapshot."
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/chatgpt-scientific-publications-extension/blob/main/README.md",
+      "repository_full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "branch_ref": "main",
+      "exact_file_path": "README.md",
+      "git_blob_sha1": "2866fa41c2232edaf4bfa82e299e22d54ed267ec",
+      "excerpt_or_summary": "README describes SciGPT as a bot for scientists and researchers; agent/research overlap is only a discovery cue, not evidence of WANGA integration.",
+      "epistemic_status": "README_SURFACE_CUES_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-25T05:50:17Z",
+      "next_action": "Read targeted docs only if a later source cue establishes direct WANGA relevance."
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/test-notebook-links/blob/master/README.md",
+      "repository_full_name": "AmbassadorOv/test-notebook-links",
+      "branch_ref": "master",
+      "exact_file_path": "README.md",
+      "git_blob_sha1": "cad8e71d3b07510fbcf15d7051db725b9a579cae",
+      "excerpt_or_summary": "README lists notebook/Colab link tests only; no direct logic, fractal, NTM or provenance architecture evidence.",
+      "epistemic_status": "README_SURFACE_CUES_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-25T05:50:17Z",
+      "next_action": "Read targeted docs only if a later source cue establishes direct WANGA relevance."
     }
   ],
   "duplicate_readme_clusters": [
     {
-      "git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "git_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
       "repositories": [
-        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
-        "Quadruple-Multilevel-projection-project/MNM",
-        "AmbassadorOv/Nanomathematics",
-        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos"
+        "AmbassadorOv/World-Party-Federation-Branches-managers",
+        "AmbassadorOv/TTTTproject-un.govt",
+        "AmbassadorOv/AG-triple-X-"
       ],
       "scope": "README blob identity only; not repository identity, code equivalence or semantic relationship."
     },
     {
-      "git_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
+      "git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
       "repositories": [
-        "AmbassadorOv/AG-triple-X-",
-        "AmbassadorOv/TTTTproject-un.govt",
-        "AmbassadorOv/World-Party-Federation-Branches-managers"
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/MNM"
       ],
       "scope": "README blob identity only; not repository identity, code equivalence or semantic relationship."
     }
   ],
   "gaps": [
-    "No user-provided ChatGPT export was identified in the targeted Library search or first 100 Library metadata items; the Library listing has a next cursor, so this is not proof of global absence.",
-    "Repository updated_at timestamps are not exposed by the current connector response.",
-    "README fetch returned 404 for two public repositories across the two batches; neither 404 is treated as proof of absent documentation.",
-    "No source-grounded logic units or semantic entailment edges were added in this batch.",
-    "Private repository names and contents are excluded from this public registry."
+    "No ChatGPT conversation export was returned by targeted Library searches in this cycle. Search results included HTML/PDF research files; this is not proof of global absence, and no private transcript was ingested.",
+    "One local Library HTML source was hashed and inspected, but its content and hash remain outside the public registry pending privacy review; no excerpt was published.",
+    "Repository updated_at timestamps are not exposed by the connector.",
+    "README fetch returned 404 for four public repositories across the cumulative sweep; 404 is not treated as proof of missing documentation. One current repository is explicitly empty according to the GitHub API.",
+    "No new units were added to logic_wiki/data/articles.json; three cross-repository source-text candidates are registered for review only and are not readiness-gate units.",
+    "No source-grounded semantic benchmark cases or independent review cycles are registered.",
+    "Wix manifest remains PUBLISHED_READ_BACK_PARTIAL; no approved catalog change was merged and no Wix write/read-back was performed."
+  ],
+  "candidate_logic_units_registered": 3,
+  "candidate_logic_units": [
+    {
+      "stable_id": "EXT-MAORCH-UNIT-001",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "README.md",
+      "source_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+      "exact_locator": "README.md:L2",
+      "literal_excerpt": "Implementation of an orchestrator that coordinates multiple specialized AI agents to solve complex tasks.",
+      "primitives": [
+        "orchestrator",
+        "specialized AI agents",
+        "complex task"
+      ],
+      "relation_candidates": [
+        "coordinates(orchestrator, specialized_agent_set)",
+        "goal(agent_set, solve(complex_task))"
+      ],
+      "interpretation": "README-level architecture description; no execution result was verified.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Does not establish that WANGA implements this architecture or that the referenced orchestrator executes successfully.",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json",
+        "WANGA-LAB/research/ecosystem/agent_registry.json"
+      ],
+      "next_action": "Compare role/interface definitions after scope review; do not import as a WANGA claim without separate review."
+    },
+    {
+      "stable_id": "EXT-MAORCH-UNIT-002",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "README.md",
+      "source_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+      "exact_locator": "README.md:L4",
+      "literal_excerpt": "There are three agents in the system",
+      "primitives": [
+        "agent role",
+        "agent set",
+        "classification agent",
+        "data retrieval agent",
+        "reasoning agent"
+      ],
+      "relation_candidates": [
+        "member_of(classification_agent, agent_set)",
+        "member_of(data_retrieval_agent, agent_set)",
+        "member_of(reasoning_agent, agent_set)",
+        "cardinality(agent_set, 3)"
+      ],
+      "interpretation": "The following role list is a source-stated inventory; no runtime roster was inspected.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "A README list is not proof that all three roles are implemented or independently running.",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json"
+      ],
+      "next_action": "Use as a cross-repository role-set candidate, not as a readiness-gate logic unit."
+    },
+    {
+      "stable_id": "EXT-MAORCH-UNIT-003",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "README.md",
+      "source_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+      "exact_locator": "README.md:Lnull",
+      "literal_excerpt": "Setting use_google_tool=False configuration for data retrieval agent will create knowledge base from local json dataset inside \"retrievers\" folder and store it in lanceDB.",
+      "secondary_literal_excerpt": "By default configuration is use_google_tool=True",
+      "primitives": [
+        "retrieval configuration",
+        "local JSON dataset",
+        "LanceDB",
+        "default external-tool setting"
+      ],
+      "relation_candidates": [
+        "mode(use_google_tool=false) -> local_json_knowledge_base",
+        "local_json_knowledge_base -> stored_in(LanceDB)",
+        "default(use_google_tool=true)"
+      ],
+      "interpretation": "README describes a configuration branch; the behavior was not executed or independently verified.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "No external API was called; no key was read or used; this is not a recommendation to configure a backend.",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/research_metrics.json",
+        "WANGA-LAB/logic_wiki/data/agent_registry.json"
+      ],
+      "next_action": "Keep as a configuration-boundary candidate; verify only in an authorized isolated test before any integration proposal."
+    }
   ]
 }
