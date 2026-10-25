@@ -1,0 +1,58 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/participant.schema.json",
+  "title": "Participant",
+  "description": "Draft only; participant identity and privacy requirements need owner review.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "participant_id",
+    "lane",
+    "status"
+  ],
+  "properties": {
+    "participant_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "lane": {
+      "type": "string",
+      "enum": [
+        "L0",
+        "L1",
+        "L2",
+        "L3",
+        "L4",
+        "L0-AUDIT"
+      ]
+    },
+    "repository": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PROPOSED",
+        "SPECIFIED",
+        "PROTOTYPED",
+        "TESTED",
+        "VERIFIED",
+        "DISABLED",
+        "REQUIRES_REVIEW"
+      ]
+    },
+    "evidence_ref": {
+      "type": "string",
+      "pattern": "^sha256:[a-fA-F0-9]{64}$"
+    }
+  }
+}

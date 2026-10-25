@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/schemas/verification_result.schema.json",
+  "title": "Verification Result",
+  "description": "Draft only. Does not define the semantic criteria for Gate 14.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "result_id",
+    "status",
+    "source_sentence_ids",
+    "evidence_refs",
+    "checked_at"
+  ],
+  "properties": {
+    "result_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "PROPOSED",
+        "SPECIFIED",
+        "PROTOTYPED",
+        "TESTED",
+        "VERIFIED",
+        "NOT_YET_VERIFIED",
+        "UNRESOLVED",
+        "REQUIRES_REVIEW",
+        "BLOCKED"
+      ]
+    },
+    "source_sentence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^sha256:[a-fA-F0-9]{64}$"
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "checked_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "test_run_id": {
+      "type": "string"
+    },
+    "metrics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": [
+          "number",
+          "integer",
+          "string"
+        ]
+      }
+    }
+  }
+}
