@@ -107,5 +107,23 @@
     "Review the three cross-repository candidate logic units against WANGA's agent contracts; do not promote them to the formal catalog without source and scope review.",
     "Keep the local HTML artifact in private review until specific excerpts are approved for publication.",
     "Do not sync Wix until a catalog/report change is approved and deployment read-back can be recorded."
-  ]
+  ],
+  "CI": {
+    "ecosystem_agent_sweep": {
+      "run_id": 40167405653,
+      "run_number": 65,
+      "status": "SUCCESS"
+    },
+    "repository_integrity": {
+      "run_id": 40167405682,
+      "run_number": 810,
+      "status": "SUCCESS"
+    },
+    "codeql": {
+      "run_id": 40167405665,
+      "run_number": 1292,
+      "status": "SUCCESS"
+    },
+    "scope": "Checks ran against the report/registry branch. No merge to main."
+  }
 }
