@@ -65,8 +65,8 @@
     "new_source_validated_compositions": 0
   },
   "CONTRADICTIONS": {
-    "limbo_structural_drift": "reality_matrix.json v1.3.0 has 10 incident records and 2 history events; committed iterative_crash_map.json still references matrix v1.2.0 and has 9 nodes / 6 edges.",
-    "limbo_runner_output": "PR #122 run 23 archived the generated map and inputs. Artifact contains matrix v1.3.0-derived map (14 nodes, 19 edges; map_sha256 46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5), tuning candidate TUNE-9c166900cc4ad5dd (replay NOT_RUN), and logic bundle VITRUVIUS-QUEUE-CONTRACT-RECURRENCE (DRAFT_UNVERIFIED). These outputs are reviewed but not yet committed to the PR branch.",
+    "limbo_structural_drift": "RESOLVED_FOR_THE_COMMITTED_MAP: live PR #122 branch read-back shows source_matrix_version=1.3.0, matching reality_matrix.json v1.3.0; the committed map has 14 nodes and 19 edges, and the committed-map replay regression passed in CI run 30. This resolves the stale derived-file mismatch only; it does not verify the full system or complete tuning replay.",
+    "limbo_runner_output": "Generated map, tuning candidate and logic bundle are now committed on PR #122 branch after run 25. The committed map hash is 46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5. TUNE-9c166900cc4ad5dd remains CANDIDATE_REPLAY_REQUIRED / NOT_RUN; VITRUVIUS-QUEUE-CONTRACT-RECURRENCE remains DRAFT_UNVERIFIED.",
     "readiness_report_disagreement": "PR #132 CI passed. Its generated readiness report now records critical_core_contradictions=null, contradiction_inventory_available=false, and checks.critical_core_contradictions=false. The fix is not merged to main, so main still has the old unsupported zero.",
     "core_contradiction_inventory": "NOT_MEASURED_NO_INDEPENDENT_INVENTORY; do not claim zero unresolved core contradictions.",
     "repository_readme_duplicates": "Duplicate groups indicate README blob identity only, not repository identity, code equivalence or semantic relation."
@@ -177,9 +177,7 @@
       "run_id": 40167326277,
       "run_number": 24,
       "status": "FAILURE",
-      "failure": "Non-fast-forward push from detached PR merge checkout; no branch update occurred.",
-      "follow_up_commit": "82c6c673d47c6a81ba9801fecf7cad051496b796",
-      "follow_up_status": "PENDING_CI"
+      "failure": "Non-fast-forward push from detached PR merge checkout; corrected by fetching the remote PR branch tip before restoring and pushing generated outputs."
     },
     "ecosystem_report_pr": {
       "run_id": 40167405653,
@@ -191,6 +189,39 @@
       "codeql_run_id": 40167405665,
       "codeql_run_number": 1292,
       "codeql_status": "SUCCESS"
+    },
+    "limbo_persist_fix": {
+      "run_id": 40167377093,
+      "run_number": 25,
+      "status": "SUCCESS",
+      "repository_integrity_run_id": 40167377079,
+      "repository_integrity_status": "SUCCESS",
+      "persisted_branch_head_after_run": "333a6fa1e9ca03f56f2c71b006c4daf62a173dc5"
+    },
+    "limbo_committed_map_regression": {
+      "failed_run_id": 40167446548,
+      "failed_run_number": 28,
+      "failure": "NameError in new test helper variable; no map mismatch was reported.",
+      "fix_commit": "3d529bd5cee2c3b1ff2b3d6e180bc0ca4b3bff56",
+      "passing_run_id": 40167526599,
+      "passing_run_number": 30,
+      "status": "SUCCESS",
+      "repository_integrity_run_id": 40167526556,
+      "repository_integrity_status": "SUCCESS",
+      "codeql_run_id": 40167526592,
+      "codeql_status": "IN_PROGRESS_AT_LAST_CHECK"
+    },
+    "current_limbo_branch": {
+      "branch": "deploy/limbo-cartography-core-v1",
+      "head_sha": "f70e09e61b9850f446a1f54450e732287b3f248e",
+      "map_blob_sha": "3617504c68262f71366a244563fc06b1be270da2",
+      "map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+      "source_matrix_version": "1.3.0",
+      "nodes": 14,
+      "edges": 19,
+      "tuning_candidate_status": "CANDIDATE_REPLAY_REQUIRED",
+      "tuning_replay_status": "NOT_RUN",
+      "logic_bundle_status": "DRAFT_UNVERIFIED"
     }
   },
   "MODEL_HASH": {
@@ -259,19 +290,19 @@
     ]
   },
   "BUILT": "Logic Fractal candidate rebuilt in GitHub Actions run 40166948323 from synthetic fixtures; typed model hash a16a83... and status CANDIDATE_NOT_RELEASED. Separate catalog graph candidate hash fa22ea... has 523 structural substructures, not semantic validation. Limbo map rebuilt in run 22 but not persisted; run 23 now adds artifact upload and is in progress.",
-  "TESTED": "Logic Fractal Wiki Research run 144, Repository Integrity run 799 and CodeQL run 1281 passed. PR #132's Logic Fractal run 145, Repository Integrity run 800 and CodeQL run 1282 also passed; the generated report confirms an unknown contradiction inventory keeps the gate blocked. Limbo run 23 passed and archived outputs; run 24's branch persistence step failed non-fast-forward, and a corrected persistence step is committed pending CI. Ecosystem report/registry branch CI also passed: WANGA Ecosystem Agent Sweep run 65, Repository Integrity 810 and CodeQL 1292.",
-  "VERIFIED": "Catalog structural validation, synthetic builder execution, software test outcomes, artifact hashes, and PR #132's fail-closed unknown-metric behavior are supported by CI evidence. The Limbo generated output is archived and structurally validated, but not yet committed to the PR branch. No semantic truth, source-grounded entailment, independent contradiction inventory, trained neural model or AGI claim is verified.",
+  "TESTED": "Logic Fractal Wiki Research run 144, Repository Integrity 799 and CodeQL 1281 passed. PR #132's Logic Fractal run 145, Repository Integrity 800 and CodeQL 1282 passed. Limbo run 25 persisted the generated outputs; run 30 passed the committed-map rebuild regression, all Limbo software tests and validators, with Repository Integrity 816 passed. CodeQL 1298 was still in progress at last check.",
+  "VERIFIED": "Catalog structural validation, synthetic builder execution, software test outcomes, artifact hashes, PR #132's fail-closed unknown-metric behavior, and the committed Limbo map's match to a deterministic rebuild are supported by CI evidence. The map now matches matrix v1.3.0. Tuning replay remains NOT_RUN; the logic bundle remains DRAFT_UNVERIFIED. No semantic truth, source-grounded entailment, independent contradiction inventory, trained neural model or AGI claim is verified.",
   "BLOCKED": [
     "FIRST_MODEL_ALPHA gate remains blocked by source/provenance unit deficits, composition contract count, zero source-grounded counterexamples, zero semantic cases/suites, zero independent reviews, missing holdout and missing MIRROR review.",
-    "Limbo PR #122 map is stale until generated map and candidate inputs are committed and replayed against matrix v1.3.0.",
     "Wix remains unchanged; manifest is PUBLISHED_READ_BACK_PARTIAL and catalog/topic read-back is incomplete.",
     "No actual ChatGPT export was ingested.",
     "PR #132's fail-closed fix passed CI but remains an open Draft PR; main is unchanged until reviewed and merged.",
-    "Limbo run 24's push failed because the checkout was detached at the PR merge commit; corrected branch-tip checkout/push logic is in commit 82c6c673d47c6a81ba9801fecf7cad051496b796 and awaits CI."
+    "Limbo tuning candidate TUNE-9c166900cc4ad5dd has replay_status=NOT_RUN; no tuning outcome is established. The logic bundle remains DRAFT_UNVERIFIED."
   ],
   "NEXT": [
-    "Verify CI for Limbo workflow commit 82c6c673d47c6a81ba9801fecf7cad051496b796; confirm it fast-forwards generated map, tuning candidate and logic bundle onto the PR branch.",
-    "After persistence, fetch the branch map and confirm source_matrix_version=1.3.0, map hash and candidate status; run a consistency replay.",
+    "Check completion of CodeQL run 1298 on PR #122.",
+    "Keep the tuning candidate bounded and unexecuted until a documented replay plan, input scope and expected outcome are reviewed; then record the result as a new history event without overwriting incidents.",
+    "Review PR #122 with the committed-map replay passing; keep Draft until human review and any remaining CI requirements are satisfied.",
     "Review PR #132's passing fail-closed readiness fix; do not auto-merge.",
     "Continue repository sweep from priority index 30.",
     "Build reviewed source-grounded benchmarks, holdout and independent MIRROR review.",
@@ -334,9 +365,9 @@
     },
     {
       "role": "Limbo Cartography",
-      "status": "IN_PROGRESS",
-      "evidence": "Run 23 adds artifact upload; previous run built the map but did not persist it.",
-      "next": "Persist generated map plus candidate inputs and replay."
+      "status": "MAP_PERSISTED_REPLAY_TESTED_TUNING_REPLAY_PENDING",
+      "evidence": "PR #122 branch now has map derived from matrix v1.3.0, 14 nodes/19 edges; run 30 passed the committed-map rebuild regression and full software validators. Tuning candidate remains NOT_RUN.",
+      "next": "Review CodeQL and PR; only then plan a bounded tuning replay with new history event."
     },
     {
       "role": "Report Publisher",
