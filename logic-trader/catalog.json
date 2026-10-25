@@ -1,0 +1,51 @@
+{
+  "schema_version": "1.0.0",
+  "catalog_id": "WANGA-LOGIC-TRADER-CATALOG",
+  "status": "PROTOTYPED",
+  "commerce_mode": "DRAFT_CATALOG_NO_CHECKOUT",
+  "currency": null,
+  "pricing_status": "NOT_SET_BY_OWNER",
+  "items": [
+    {
+      "logic_id": "ECM-01",
+      "name": "Evidence Gatekeeper",
+      "description": "Checks evidence references, distinguishes supported inputs from unsupported claims, and preserves NOT_YET_VERIFIED status.",
+      "lifecycle_state": "SPECIFIED",
+      "listing_state": "DRAFT_NOT_PUBLISHED",
+      "price": null,
+      "nft_metadata": "nft/ECM-01.metadata.json",
+      "nft_state": "METADATA_DRAFT_NOT_MINTED"
+    },
+    {
+      "logic_id": "ECM-02",
+      "name": "Task Decomposer & Scope Binder",
+      "description": "Binds a requested task to explicit scope, required inputs, acceptance criteria, and prohibited out-of-scope actions.",
+      "lifecycle_state": "SPECIFIED",
+      "listing_state": "DRAFT_NOT_PUBLISHED",
+      "price": null,
+      "nft_metadata": null,
+      "nft_state": "NOT_PREPARED"
+    },
+    {
+      "logic_id": "ECM-03",
+      "name": "Deterministic Action Filter",
+      "description": "Evaluates proposed actions against explicit allow/deny rules and returns a traceable decision record.",
+      "lifecycle_state": "SPECIFIED",
+      "listing_state": "DRAFT_NOT_PUBLISHED",
+      "price": null,
+      "nft_metadata": null,
+      "nft_state": "NOT_PREPARED"
+    },
+    {
+      "logic_id": "LTA-01",
+      "name": "Logic Trader — Paper Risk Gate",
+      "description": "Synthetic-price demo of trend-rule decisions, position caps, abrupt-move halts, and simulated fills; not connected to a broker or exchange.",
+      "lifecycle_state": "PROTOTYPED",
+      "listing_state": "DRAFT_NOT_PUBLISHED",
+      "price": null,
+      "nft_metadata": null,
+      "nft_state": "NOT_PREPARED"
+    }
+  ],
+  "commercial_boundary": "No live checkout, payment processing, wallet, token minting, or real-money trading is configured. Price, license, chain, token contract, and publication target require owner configuration."
+}
