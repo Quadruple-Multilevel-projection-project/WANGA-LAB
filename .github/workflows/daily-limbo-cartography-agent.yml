@@ -77,6 +77,23 @@ jobs:
             limbo-cartography-core/cartography/run_logs/latest_execution.json
           if-no-files-found: warn
           retention-days: 30
+      - name: Persist validated generated outputs on the same-repository PR branch
+        if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository }}
+        env:
+          PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add limbo-cartography-core/cartography/iterative_crash_map.json
+          git add limbo-cartography-core/cartography/tuning_candidates/*.json
+          git add limbo-cartography-core/cartography/logic_bundles/*.json
+          git add limbo-cartography-core/cartography/run_logs/latest_execution.json
+          if git diff --cached --quiet; then
+            echo "No generated output changes to persist."
+          else
+            git commit -m "cartography: persist validated generated outputs"
+            git push origin "HEAD:${PR_HEAD_REF}"
+          fi
       - name: Open or update automation PR (never push directly to the default branch)
         if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         uses: peter-evans/create-pull-request@v7
