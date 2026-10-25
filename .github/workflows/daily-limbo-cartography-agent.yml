@@ -81,16 +81,32 @@ jobs:
         if: ${{ github.event_name == 'pull_request' && github.event.pull_request.head.repo.full_name == github.repository }}
         env:
           PR_HEAD_REF: ${{ github.event.pull_request.head.ref }}
+        shell: bash
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add limbo-cartography-core/cartography/iterative_crash_map.json
-          git add limbo-cartography-core/cartography/tuning_candidates/*.json
-          git add limbo-cartography-core/cartography/logic_bundles/*.json
-          git add limbo-cartography-core/cartography/run_logs/latest_execution.json
+          set -euo pipefail
+          tmpdir="$(mktemp -d)"
+          mkdir -p "$tmpdir/limbo-cartography-core/cartography"
+          cp -a limbo-cartography-core/cartography/iterative_crash_map.json "$tmpdir/limbo-cartography-core/cartography/"
+          for directory in tuning_candidates logic_bundles run_logs; do
+            if [[ -d "limbo-cartography-core/cartography/$directory" ]]; then
+              cp -a "limbo-cartography-core/cartography/$directory" "$tmpdir/limbo-cartography-core/cartography/"
+            fi
+          done
+          git fetch origin "+refs/heads/${PR_HEAD_REF}:refs/remotes/origin/${PR_HEAD_REF}"
+          git checkout -B "${PR_HEAD_REF}" "refs/remotes/origin/${PR_HEAD_REF}"
+          cp -a "$tmpdir/limbo-cartography-core/cartography/iterative_crash_map.json" "limbo-cartography-core/cartography/"
+          for directory in tuning_candidates logic_bundles run_logs; do
+            if [[ -d "$tmpdir/limbo-cartography-core/cartography/$directory" ]]; then
+              mkdir -p "limbo-cartography-core/cartography/$directory"
+              cp -a "$tmpdir/limbo-cartography-core/cartography/$directory/." "limbo-cartography-core/cartography/$directory/"
+            fi
+          done
+          git add -A -- limbo-cartography-core/cartography/iterative_crash_map.json limbo-cartography-core/cartography/tuning_candidates limbo-cartography-core/cartography/logic_bundles limbo-cartography-core/cartography/run_logs
           if git diff --cached --quiet; then
             echo "No generated output changes to persist."
           else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
             git commit -m "cartography: persist validated generated outputs"
             git push origin "HEAD:${PR_HEAD_REF}"
           fi
