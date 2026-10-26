@@ -1,7 +1,7 @@
 {
   "schema_version": "wanga-repository-inventory/1.1",
-  "snapshot_date": "2026-10-25",
-  "generated_at_utc": "2026-10-25T05:50:17Z",
+  "snapshot_date": "2026-10-26",
+  "generated_at_utc": "2026-10-26T05:19:32Z",
   "source": "Live connected GitHub repository inventory; page_size=100, page_offset=0; affiliation lists refreshed in this cycle.",
   "inventory_status": "LIVE_SNAPSHOT_WITH_BOUNDED_BATCH",
   "visible_repository_count": 62,
@@ -48,27 +48,37 @@
     "AmbassadorOv/https-AmbassadorOv.io",
     "AmbassadorOv/vqbshtfsprojects.org",
     "AmbassadorOv/chatgpt-scientific-publications-extension",
-    "AmbassadorOv/test-notebook-links"
+    "AmbassadorOv/test-notebook-links",
+    "AmbassadorOv/googleapis",
+    "AmbassadorOv/platform-samples",
+    "AmbassadorOv/mermaid",
+    "AmbassadorOv/vscode-azure-blockchain-ethereum",
+    "AmbassadorOv/eslint",
+    "AmbassadorOv/openai_tiktoken",
+    "AmbassadorOv/mujoco",
+    "AmbassadorOv/cookbook",
+    "AmbassadorOv/vscode-docs",
+    "AmbassadorOv/mediapipe"
   ],
-  "scanned_readme_count": 26,
+  "scanned_readme_count": 36,
   "readme_fetch_gap_count": 4,
   "additional_targeted_docs_read": 2,
-  "remaining_public_repository_count": 28,
+  "remaining_public_repository_count": 18,
   "next_cursor": {
-    "priority_order_index": 30,
+    "priority_order_index": 40,
     "next_batch": [
-      "AmbassadorOv/googleapis",
-      "AmbassadorOv/platform-samples",
-      "AmbassadorOv/mermaid",
-      "AmbassadorOv/vscode-azure-blockchain-ethereum",
-      "AmbassadorOv/eslint",
-      "AmbassadorOv/openai_tiktoken",
-      "AmbassadorOv/mujoco",
-      "AmbassadorOv/cookbook",
-      "AmbassadorOv/vscode-docs",
-      "AmbassadorOv/mediapipe"
+      "AmbassadorOv/fluffy-parakeet",
+      "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "AmbassadorOv/unetbootin",
+      "Quadruple-Multilevel-projection-project/-",
+      "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "Quadruple-Multilevel-projection-project/globalSpeed",
+      "Quadruple-Multilevel-projection-project/Qualia",
+      "Quadruple-Multilevel-projection-project/branches-",
+      "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "Quadruple-Multilevel-projection-project/-from-Corsican-"
     ],
-    "after_last_scanned": "AmbassadorOv/test-notebook-links"
+    "after_last_scanned": "AmbassadorOv/mediapipe"
   },
   "repositories": [
     {
@@ -104,9 +114,9 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "6ba73116d009c622bf3057f81a563b2070daea51",
+      "readme_summary": "README describes public Google API interface definitions and Protocol Buffers IDL supporting REST/gRPC and client-library generation; README surface only, no WANGA-specific logic or provenance contract.",
       "source_scope": "PUBLIC_REPOSITORY_READ"
     },
     {
@@ -162,9 +172,9 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "a2bb146a181b60c3df0d077c55b197287074ec53",
+      "readme_summary": "README catalogs GitHub Platform API, GraphQL, webhook, pre-receive-hook, and repository-maintenance examples; no direct WANGA-specific logical content.",
       "source_scope": "PUBLIC_REPOSITORY_READ"
     },
     {
@@ -278,9 +288,9 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "456747132cbc6ed1dde4f8d5f0712deb71b47be8",
+      "readme_summary": "README describes Mermaid as markdown-like text-to-diagram tooling; visualization overlap candidate only, not a semantic graph or logic-entailment engine.",
       "source_scope": "PUBLIC_REPOSITORY_READ"
     },
     {
@@ -297,9 +307,9 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "readme_summary": "README describes Azure Blockchain Development Kit for creating and deploying Ethereum smart contracts; no direct WANGA provenance or logic-fractal content.",
       "source_scope": "PUBLIC_REPOSITORY_READ"
     },
     {
@@ -316,9 +326,9 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "326c6121e810f4d1edfbc781eff4d5b7f46d1c36",
+      "readme_summary": "README describes AST-based JavaScript linting and pluggable rules; a static-validation pattern cue only, not evidence of WANGA integration.",
       "source_scope": "PUBLIC_REPOSITORY_READ"
     },
     {
@@ -335,9 +345,9 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "ad8d88b13f731c1d946a4fc5bd3fc3a153393775",
+      "readme_summary": "README describes reversible byte-pair tokenization and tokenizer APIs; text-preprocessing cue only, not semantic logic-extraction evidence.",
       "source_scope": "PUBLIC_REPOSITORY_READ"
     },
     {
@@ -431,9 +441,9 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "62d57c19af93682355c27e668422bf8aa87c430b",
+      "readme_summary": "README describes physics simulation for articulated systems and robotics/machine-learning research; no direct WANGA logic-forensics content.",
       "source_scope": "PUBLIC_REPOSITORY_READ"
     },
     {
@@ -450,9 +460,9 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "646c146ea44ee0175fccf62427bcc03dd88ed1b6",
+      "readme_summary": "README describes Gemini API quickstarts and examples, including browser, code-execution, and function-calling guides; no WANGA integration evidence.",
       "source_scope": "PUBLIC_REPOSITORY_READ"
     },
     {
@@ -469,9 +479,9 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
+      "readme_summary": "README identifies the repository as Visual Studio Code documentation content and describes its contribution/publishing workflow; documentation pattern only.",
       "source_scope": "PUBLIC_REPOSITORY_READ"
     },
     {
@@ -488,9 +498,9 @@
       },
       "latest_update": null,
       "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "e4f5dd182813dc073e0845be06d23d2c58bbeafb",
+      "readme_summary": "README describes cross-platform/on-device machine-learning libraries, models, and evaluation tools; no direct WANGA logic-forensics content.",
       "source_scope": "PUBLIC_REPOSITORY_READ"
     },
     {
