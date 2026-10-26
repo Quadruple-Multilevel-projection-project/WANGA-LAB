@@ -1,0 +1,351 @@
+{
+  "report_id": "WANGA-UNIFIED-WORK-LOOP-2026-10-26",
+  "generated_at_utc": "2026-10-26T05:19:32Z",
+  "run_status": "PARTIAL_COMPLETED_WITH_BLOCKERS",
+  "SOURCES_SCANNED": {
+    "github_visible_repositories": 62,
+    "public_repositories": 58,
+    "private_repositories_omitted_from_public_registry": 4,
+    "public_repositories_scanned_current_batch": 10,
+    "public_repositories_scanned_cumulative": 40,
+    "readmes_read_cumulative": 36,
+    "readme_fetch_gaps_cumulative": 4,
+    "library_search_queries": 3,
+    "library_ranked_results_returned": 10,
+    "conversation_exports_identified": 0,
+    "logic_catalog": {
+      "path": "logic_wiki/data/articles.json",
+      "blob_sha1": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed",
+      "articles": 28,
+      "sources": 17,
+      "source_classes": 11,
+      "relation_edges": 111,
+      "articles_with_resolved_sources": 28,
+      "dangling_source_refs": 0,
+      "dangling_relation_refs": 0,
+      "duplicate_article_ids": 0,
+      "duplicate_source_ids": 0
+    },
+    "composition_contracts": {
+      "path": "logic_fractal/data/composition_rules.json",
+      "blob_sha1": "3d8bc142785d7d401b705736fe0f384d33d996f3",
+      "total_rules": 3,
+      "active_specified_rules": 2,
+      "draft_not_executed": 1
+    },
+    "semantic_benchmark_manifest": {
+      "path": "formal_reasoning/examples/source_grounded_benchmark_manifest.json",
+      "blob_sha1": "ad3ecfb9562caaa00770ea96322497ecce1908e3",
+      "source_grounded_cases": 0,
+      "status": "BLOCKED_EMPTY_WAITING_REVIEWED_CASES"
+    },
+    "semantic_benchmark_plan": {
+      "path": "logic_fractal/data/semantic_benchmark_plan_v1.json",
+      "blob_sha1": "c06d0629965ef2ee392d7dd7df28ee20b9a88154",
+      "status": "SPECIFIED_NOT_POPULATED",
+      "required_suite_minima": {
+        "positive": 30,
+        "negative": 30,
+        "boundary": 40
+      }
+    },
+    "taxonomy": {
+      "path": "logic_wiki/data/fractal_taxonomy.json",
+      "blob_sha1": "355a9253cc5920d11b0b804e1561f38b51a4f2c3",
+      "nodes": 27,
+      "status": "CANDIDATE_MAP_NOT_ENTAILMENT_GRAPH"
+    }
+  },
+  "ACCESS_GAPS": [
+    "No ChatGPT export was returned by three targeted Library queries; this is not proof of global absence and no private transcript was ingested.",
+    "Repository updated_at timestamps are not exposed by the connector.",
+    "No independent core-contradiction inventory is available; critical_core_contradictions remains UNKNOWN, not zero.",
+    "Wix manifest remains PUBLISHED_READ_BACK_PARTIAL; no approved catalog change was made, so no Wix write/read-back was attempted.",
+    "The current PR #122 head has workflow runs with conclusion action_required; its latest commit has not yet completed fresh CI."
+  ],
+  "NEW_OR_DUPLICATE_SOURCES": {
+    "readme_sources_added": 10,
+    "duplicate_readme_clusters_added": [],
+    "formal_logic_units_added": 0,
+    "candidate_logic_units_registered_from_this_batch": 0,
+    "semantic_entailments_asserted": 0,
+    "note": "README-only surface cues were registered with branch/path/blob SHA-1; no source-grounded logical relation was inferred."
+  },
+  "CLAIMS_ADDED": 0,
+  "LOGIC_UNITS": {
+    "existing_catalog_units_with_resolved_sources": 28,
+    "new_formal_catalog_units_added": 0,
+    "cross_repo_candidate_units_registered_cumulatively": 3,
+    "semantic_entailments_asserted": 0
+  },
+  "COMPOSITION_COUNT": {
+    "total_rules": 3,
+    "active_specified_rules": 2,
+    "draft_not_executed": 1,
+    "new_source_validated_compositions": 0
+  },
+  "CONTRADICTIONS": {
+    "limbo_committed_map": {
+      "status": "MAP_MATCHES_SOURCE_MATRIX_VERSION",
+      "branch": "deploy/limbo-cartography-core-v1",
+      "head_sha": "f70e09e61b9850f446a1f54450e732287b3f248e",
+      "source_matrix_version": "1.3.0",
+      "nodes": 14,
+      "edges": 19,
+      "map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+      "map_blob_sha1": "3617504c68262f71366a244563fc06b1be270da2",
+      "note": "Committed map is aligned with the source matrix on the PR branch; this resolves the derived-file version mismatch only."
+    },
+    "limbo_ci": {
+      "latest_head_run_id": 40167547736,
+      "latest_head_conclusion": "action_required",
+      "repository_integrity_run_id": 40167547828,
+      "repository_integrity_conclusion": "action_required",
+      "codeql_run_id": 40167547744,
+      "codeql_conclusion": "action_required",
+      "prior_successful_run_id": 40167526599,
+      "prior_successful_run_sha": "3d529bd5cee2c3b1ff2b3d6e180bc0ca4b3bff56",
+      "jobs_returned_for_latest_action_required_run": 0
+    },
+    "limbo_tuning_candidate": {
+      "blob_sha1": "3c18338fba440158a2feb6ecc84c08258118f282",
+      "status": "CANDIDATE_REPLAY_REQUIRED",
+      "replay_status": "NOT_RUN"
+    },
+    "limbo_logic_bundle": {
+      "blob_sha1": "2133344b33cbf5640e03421f4b4977d080182e7a",
+      "status": "DRAFT_UNVERIFIED"
+    },
+    "core_contradictions": "NOT_MEASURED_NO_INDEPENDENT_INVENTORY; PR #132 remains an open Draft proposal to fail closed when the inventory is unavailable."
+  },
+  "BENCHMARKS": {
+    "catalog_structural_validation": {
+      "status": "PASS_RECOMPUTED_FROM_LIVE_JSON",
+      "articles": 28,
+      "sources": 17,
+      "source_classes": 11,
+      "relation_edges": 111,
+      "articles_with_resolved_sources": 28,
+      "dangling_source_refs": 0,
+      "dangling_relation_refs": 0,
+      "duplicate_article_ids": 0,
+      "duplicate_source_ids": 0
+    },
+    "synthetic_propositional_fixture_cases": {
+      "count": 5,
+      "source_grounded": false,
+      "semantic_status": "TEST_FIXTURE_ONLY"
+    },
+    "prior_ci_synthetic_typed_cases": {
+      "count": 7,
+      "status": "PASS_IN_PRIOR_CI_2026-10-25",
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    "source_grounded_semantic_cases": {
+      "count": 0,
+      "status": "BLOCKED_EMPTY_WAITING_REVIEWED_CASES"
+    },
+    "benchmark_suites": 0,
+    "holdout_split": false,
+    "independent_review_cycles": 0
+  },
+  "CI": {
+    "ecosystem_prior_head": {
+      "ecosystem_agent_sweep": {
+        "run_id": 40167620534,
+        "status": "SUCCESS"
+      },
+      "repository_integrity": {
+        "run_id": 40167620454,
+        "status": "SUCCESS"
+      },
+      "codeql": {
+        "run_id": 40167620476,
+        "status": "SUCCESS"
+      }
+    },
+    "limbo_current_head": {
+      "run_id": 40167547736,
+      "status": "ACTION_REQUIRED",
+      "repository_integrity_run_id": 40167547828,
+      "repository_integrity_status": "ACTION_REQUIRED",
+      "codeql_run_id": 40167547744,
+      "codeql_status": "ACTION_REQUIRED"
+    },
+    "limbo_prior_head": {
+      "run_id": 40167526599,
+      "status": "SUCCESS",
+      "repository_integrity_run_id": 40167526556,
+      "repository_integrity_status": "SUCCESS",
+      "codeql_run_id": 40167526592,
+      "codeql_status": "SUCCESS"
+    },
+    "current_report_update": "PENDING"
+  },
+  "MODEL_HASH": {
+    "typed_first_model": {
+      "value": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+      "status": "PRIOR_CI_SYNTHETIC_CANDIDATE_NOT_REBUILT_IN_THIS_CYCLE",
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    "logic_wiki_candidate": {
+      "value": "fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf",
+      "status": "PRIOR_CI_CANDIDATE_NOT_RELEASED"
+    }
+  },
+  "READINESS_GATE": {
+    "gate_id": "FIRST_MODEL_ALPHA_V1",
+    "policy_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "decision": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "observed": {
+      "source_records": 17,
+      "source_classes": 11,
+      "logic_units_with_provenance": 28,
+      "composition_rules_with_contracts": 2,
+      "counterexample_cases": 0,
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "dangling_source_refs": 0,
+      "dangling_relation_refs": 0,
+      "duplicate_article_ids": 0,
+      "duplicate_source_ids": 0,
+      "critical_core_contradictions": "UNKNOWN_NO_INDEPENDENT_INVENTORY",
+      "deterministic_build": "PRIOR_CI_TESTED_ON_SYNTHETIC_FIXTURES",
+      "holdout_split": false,
+      "mirror_review": false
+    },
+    "thresholds": {
+      "min_source_records": 20,
+      "min_source_classes": 3,
+      "min_logic_units_with_provenance": 50,
+      "min_composition_rules_with_contracts": 20,
+      "min_counterexample_cases": 30,
+      "min_test_cases": 100,
+      "min_benchmark_suites": 3,
+      "min_independent_review_cycles": 2,
+      "unresolved_dangling_source_refs": 0,
+      "unresolved_duplicate_stable_ids": 0,
+      "critical_core_contradictions": 0,
+      "deterministic_build_required": true,
+      "holdout_split_required": true,
+      "mirror_review_required": true
+    },
+    "missing": [
+      "source_records",
+      "logic_units_with_provenance",
+      "composition_rules_with_contracts",
+      "counterexample_cases",
+      "semantic_test_cases",
+      "benchmark_suites",
+      "independent_review_cycles",
+      "independent_core_contradiction_inventory",
+      "holdout_split",
+      "MIRROR_review"
+    ]
+  },
+  "BUILT": "The typed candidate hash is carried forward from prior successful CI; no new build result is claimed for this cycle. A local clone attempt was blocked because the runtime could not resolve github.com; no paid compute or external API was used.",
+  "TESTED": "Live catalog structure was recomputed from articles.json and all source/relation references resolved. Prior Limbo run 40167526599 passed the map-rebuild regression and software validators on commit 3d529bd5; latest head f70e09e has action_required workflows, so fresh CI is not verified.",
+  "VERIFIED": "Verified only: current catalog structural counts/reference checks and the content of the committed Limbo map/tuning/bundle files on the live PR branch. No semantic truth, causal link, source-grounded entailment, tuning replay, or independent contradiction inventory is verified.",
+  "BLOCKED": [
+    "FIRST_MODEL_ALPHA readiness gate remains blocked by missing source/provenance units, composition contracts, source-grounded counterexamples, semantic cases/suites, independent reviews, holdout, MIRROR review, and an independent contradiction inventory.",
+    "PR #122 latest-head CI is action_required; no jobs were returned for those latest runs.",
+    "Tuning candidate replay_status=NOT_RUN and logic bundle DRAFT_UNVERIFIED.",
+    "No conversation export was found in current targeted Library results.",
+    "Wix remains unchanged because no approved catalog change exists and full public read-back is incomplete."
+  ],
+  "NEXT": [
+    "Finish this 10-repository batch and advance the cursor to the next 10 repositories.",
+    "Obtain authorized execution of PR #122 checks on head f70e09e; keep the PR draft and do not merge automatically.",
+    "Plan a bounded replay for TUNE-9c166900cc4ad5dd only after its input scope and expected outcome are reviewed; record the result as a new history event.",
+    "Review PR #132's fail-closed contradiction metric proposal; do not treat UNKNOWN as zero.",
+    "Build source-grounded semantic cases and freeze train/validation/holdout before tuning.",
+    "Keep Logic Fractal Alpha unreleased until every readiness gate passes.",
+    "Do not sync Wix without an approved catalog change and confirmed deployment read-back."
+  ],
+  "agent_roles": [
+    {
+      "role": "Repository Inventory",
+      "status": "COMPLETED",
+      "evidence": "Live affiliation sweep returned 37 owner, 13 collaborator and 25 organization-member records; union snapshot 62 unique repositories (58 public, 4 private). Ten current-batch public README files fetched with blob SHA-1.",
+      "next": "Continue from priority index 40."
+    },
+    {
+      "role": "Project README/Docs Collector",
+      "status": "COMPLETED",
+      "evidence": "10/10 README files read; no current-batch README fetch gaps. Repository updated_at fields remain unavailable.",
+      "next": "Inspect targeted docs only if direct relevance emerges."
+    },
+    {
+      "role": "Conversation Export Collector",
+      "status": "COMPLETED_WITH_ACCESS_GAP",
+      "evidence": "Three targeted Library queries returned ten ranked items and no ChatGPT export artifact; this is not an exhaustive history scan.",
+      "next": "Process only an exposed export or a user-provided export privately."
+    },
+    {
+      "role": "Logic/Fractal Extractor",
+      "status": "COMPLETED_REVIEW_ONLY",
+      "evidence": "Recomputed 28 catalog articles/17 source records/111 editorial relation links; no new formal logic units or semantic entailments added.",
+      "next": "Require exact source spans and review before promotion."
+    },
+    {
+      "role": "Cross-Repo Relationship Mapper",
+      "status": "CANDIDATE_ONLY",
+      "evidence": "Mermaid, ESLint and tiktoken README surfaces provide possible visualization/static-validation/text-intake adjacency cues only.",
+      "next": "Do not formalize or implement these overlaps without source and scope review."
+    },
+    {
+      "role": "Mirror/Contradiction Reviewer",
+      "status": "BLOCKED_NO_INDEPENDENT_REVIEW",
+      "evidence": "No independent review cycles; critical contradiction inventory is unknown.",
+      "next": "Run a distinct review cycle and record counter-readings with provenance."
+    },
+    {
+      "role": "Provenance Checker",
+      "status": "COMPLETED_STRUCTURAL",
+      "evidence": "All 28 articles have resolved source references; no dangling source/relation references or duplicate article/source IDs in current catalog.",
+      "next": "Continue source-span-level provenance checks for any new unit."
+    },
+    {
+      "role": "Test/CI Evaluator",
+      "status": "PARTIAL_BLOCKED",
+      "evidence": "Prior ecosystem CI succeeded; latest PR #122 head runs are action_required and returned no jobs.",
+      "next": "Obtain fresh CI on current head; do not infer pass from prior SHA."
+    },
+    {
+      "role": "Wiki Curator",
+      "status": "NO_CATALOG_CHANGE",
+      "evidence": "No reviewed source-grounded entry was eligible for promotion; catalog unchanged.",
+      "next": "Keep current source cues in ecosystem registry only."
+    },
+    {
+      "role": "Publisher/Wix",
+      "status": "NOT_RUN_NO_APPROVED_CHANGE",
+      "evidence": "Manifest remains PUBLISHED_READ_BACK_PARTIAL; no catalog change approved.",
+      "next": "Use authorized Wix connector only after approval and perform read-back."
+    },
+    {
+      "role": "Limbo Cartography",
+      "status": "MAP_PERSISTED_REPLAY_TESTED_TUNING_PENDING",
+      "evidence": "PR #122 branch map matches source matrix v1.3.0 (14 nodes/19 edges, hash 46646b…); tuning replay is NOT_RUN and logic bundle is DRAFT_UNVERIFIED.",
+      "next": "Keep draft; get latest-head CI and plan bounded replay."
+    },
+    {
+      "role": "Report Publisher",
+      "status": "IN_PROGRESS",
+      "evidence": "Current cycle report and ecosystem registries are being updated on the existing report PR branch, not main.",
+      "next": "Read back changes and inspect CI before final status."
+    }
+  ],
+  "WIX_SYNC": {
+    "manifest_blob_sha1": "d4dcaa4c439d66b380ffa7be5d3169de78104395",
+    "status": "NO_UPDATE_THIS_CYCLE",
+    "manifest_status": "PUBLISHED_READ_BACK_PARTIAL",
+    "last_sync_date": "2026-10-12",
+    "legacy_synced_article_count": 18,
+    "main_page_card_count": 27,
+    "research_catalog_article_count": 28,
+    "decision": "NO_UPDATE",
+    "reason": "No approved catalog change; Wix read-back is partial. Reports/registries are internal and must not be auto-published."
+  }
+}
