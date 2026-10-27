@@ -1,0 +1,1228 @@
+{
+  "schema_version": "wanga-repository-inventory/1.1",
+  "snapshot_date": "2026-10-27",
+  "generated_at_utc": "2026-10-27T05:15:40Z",
+  "source": "Live connected GitHub repository inventory; page_size=100, page_offset=0; affiliation lists refreshed in this cycle.",
+  "inventory_status": "LIVE_SNAPSHOT_WITH_BOUNDED_BATCH",
+  "visible_repository_count": 62,
+  "public_repository_count": 58,
+  "private_repository_count": 4,
+  "unknown_visibility_count": 0,
+  "affiliation_counts": {
+    "owner": 37,
+    "collaborator": 13,
+    "organization_member": 25,
+    "unique_union": 62
+  },
+  "private_repository_handling": "Private repositories are connector-visible, but names, paths and content are omitted from this public registry; aggregate count only.",
+  "permission_note": "Connector returned permission flags for visible repositories. These are connector-exposed metadata, not an independent permission audit.",
+  "latest_update_note": "The live repository listing did not expose updated_at timestamps; no timestamps were inferred.",
+  "batch_size": 10,
+  "scanned_repositories": [
+    "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "AmbassadorOv/AmbassadorOv",
+    "AmbassadorOv/TTTT-0.0.0.0.1",
+    "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+    "Quadruple-Multilevel-projection-project/AI231.meta.io",
+    "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+    "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+    "Quadruple-Multilevel-projection-project/MNM",
+    "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+    "Quadruple-Multilevel-projection-project/skills",
+    "AmbassadorOv/-artificial-y",
+    "AmbassadorOv/AG-triple-X-",
+    "AmbassadorOv/Nanomathematics",
+    "AmbassadorOv/O-Ms",
+    "AmbassadorOv/Qualia",
+    "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+    "AmbassadorOv/TTTTproject-un.govt",
+    "AmbassadorOv/World-Party-Federation-Branches-managers",
+    "AmbassadorOv/awesome-chatgpt-prompts",
+    "AmbassadorOv/branches-",
+    "AmbassadorOv/desktop",
+    "AmbassadorOv/extensions",
+    "AmbassadorOv/docs",
+    "AmbassadorOv/generative-ai-docs",
+    "AmbassadorOv/python-genai",
+    "AmbassadorOv/multi-agent-orchestator",
+    "AmbassadorOv/https-AmbassadorOv.io",
+    "AmbassadorOv/vqbshtfsprojects.org",
+    "AmbassadorOv/chatgpt-scientific-publications-extension",
+    "AmbassadorOv/test-notebook-links",
+    "AmbassadorOv/googleapis",
+    "AmbassadorOv/platform-samples",
+    "AmbassadorOv/mermaid",
+    "AmbassadorOv/vscode-azure-blockchain-ethereum",
+    "AmbassadorOv/eslint",
+    "AmbassadorOv/openai_tiktoken",
+    "AmbassadorOv/mujoco",
+    "AmbassadorOv/cookbook",
+    "AmbassadorOv/vscode-docs",
+    "AmbassadorOv/mediapipe",
+    "AmbassadorOv/fluffy-parakeet",
+    "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+    "AmbassadorOv/unetbootin",
+    "Quadruple-Multilevel-projection-project/-",
+    "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+    "Quadruple-Multilevel-projection-project/globalSpeed",
+    "Quadruple-Multilevel-projection-project/Qualia",
+    "Quadruple-Multilevel-projection-project/branches-",
+    "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+    "Quadruple-Multilevel-projection-project/-from-Corsican-"
+  ],
+  "scanned_readme_count": 44,
+  "readme_fetch_gap_count": 6,
+  "additional_targeted_docs_read": 2,
+  "remaining_public_repository_count": 8,
+  "next_cursor": {
+    "snapshot_date": "2026-10-27",
+    "priority_order_index": 50,
+    "after_last_scanned": "Quadruple-Multilevel-projection-project/-from-Corsican-",
+    "next_batch": [
+      "tribal-archery/-logicl-neural-order",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/Qdprojects",
+      "tribal-archery/copilot-cli",
+      "tribal-archery/mermaid",
+      "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "tribal-archery/unetbootin",
+      "tribal-archery/vscode-azure-blockchain-ethereum"
+    ],
+    "remaining_public_repositories": 8,
+    "policy": "Bounded batch of approximately 10 repositories; do not infer absence from search or README 404."
+  },
+  "repositories": [
+    {
+      "full_name": "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
+      "readme_summary": "README is a title only; same blob as AG-triple-X- and TTTTproject-un.govt.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/googleapis",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "6ba73116d009c622bf3057f81a563b2070daea51",
+      "readme_summary": "README describes public Google API interface definitions and Protocol Buffers IDL supporting REST/gRPC and client-library generation; README surface only, no WANGA-specific logic or provenance contract.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/Nanomathematics",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "readme_summary": "README contains only the title Nanomathematics; identical README blob also observed in sibling repositories.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/desktop",
+      "default_branch": "development",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "c7702d385076e80f365a23d17dc868b9ecb6a5ad",
+      "readme_summary": "README identifies an Electron desktop application written with TypeScript and React; no direct WANGA integration evidence in README.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+    },
+    {
+      "full_name": "AmbassadorOv/platform-samples",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "a2bb146a181b60c3df0d077c55b197287074ec53",
+      "readme_summary": "README catalogs GitHub Platform API, GraphQL, webhook, pre-receive-hook, and repository-maintenance examples; no direct WANGA-specific logical content.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/extensions",
+      "default_branch": "next",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "6ef8b6a54813922bf64bad64c8e7301f8dc620c2",
+      "readme_summary": "README describes Firebase Extensions source and installation/configuration guidance; no direct WANGA logic/fractal evidence in README.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+    },
+    {
+      "full_name": "AmbassadorOv/AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "d2664df6ce794e353a4d1b04682627c3b13f0bb9",
+      "readme_summary": "Positions Logic Research as inquiry into logical structures, relations, constraints, rules, derivations and validity conditions.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "ac7a2d203877442ddba493889239e61aed56ec78",
+      "readme_summary": "Describes research-team coordination and a meta-orchestrator for connecting, abstracting, comparing, verifying and routing team outputs.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/TTTTproject-un.govt",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
+      "readme_summary": "README title points to World-Party-Federation-Branches-managers; byte identity only.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "69090a601896b5189a5b3ee42105ed42638016be",
+      "readme_summary": "README identifies source for the GitHub Docs website and Markdown content; no direct WANGA integration evidence in README.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+    },
+    {
+      "full_name": "AmbassadorOv/mermaid",
+      "default_branch": "develop",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "456747132cbc6ed1dde4f8d5f0712deb71b47be8",
+      "readme_summary": "README describes Mermaid as markdown-like text-to-diagram tooling; visualization overlap candidate only, not a semantic graph or logic-entailment engine.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "readme_summary": "README describes Azure Blockchain Development Kit for creating and deploying Ethereum smart contracts; no direct WANGA provenance or logic-fractal content.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/eslint",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "326c6121e810f4d1edfbc781eff4d5b7f46d1c36",
+      "readme_summary": "README describes AST-based JavaScript linting and pluggable rules; a static-validation pattern cue only, not evidence of WANGA integration.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/openai_tiktoken",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "ad8d88b13f731c1d946a4fc5bd3fc3a153393775",
+      "readme_summary": "README describes reversible byte-pair tokenization and tokenizer APIs; text-preprocessing cue only, not semantic logic-extraction evidence.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/-artificial-y",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_ACCESS_GAP_2026-10-24",
+      "readme_blob_sha1": null,
+      "readme_summary": "README.md fetch returned GitHub 404; this is not evidence that the repository has no relevant files.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/Qualia",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "readme_summary": "README contains a title and an external blog link; no WANGA integration established.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/O-Ms",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "5477f49658507c3de65a774eb54976d22a3e0c52",
+      "readme_summary": "README contains only the title O-Ms.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/generative-ai-docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "1bf3babd967e73a1cff092805c4ff151fba95baf",
+      "readme_summary": "README describes source files for Gemini API developer documentation, notebooks, demos and examples; API overlap only, no WANGA backend configuration evidence.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+    },
+    {
+      "full_name": "AmbassadorOv/mujoco",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "62d57c19af93682355c27e668422bf8aa87c430b",
+      "readme_summary": "README describes physics simulation for articulated systems and robotics/machine-learning research; no direct WANGA logic-forensics content.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/cookbook",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "646c146ea44ee0175fccf62427bcc03dd88ed1b6",
+      "readme_summary": "README describes Gemini API quickstarts and examples, including browser, code-execution, and function-calling guides; no WANGA integration evidence.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/vscode-docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
+      "readme_summary": "README identifies the repository as Visual Studio Code documentation content and describes its contribution/publishing workflow; documentation pattern only.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/mediapipe",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-26",
+      "readme_blob_sha1": "e4f5dd182813dc073e0845be06d23d2c58bbeafb",
+      "readme_summary": "README describes cross-platform/on-device machine-learning libraries, models, and evaluation tools; no direct WANGA logic-forensics content.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/python-genai",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+      "readme_summary": "README describes Google Gen AI Python SDK for Gemini Developer API and Vertex AI; no WANGA backend selected or configured by this README.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+    },
+    {
+      "full_name": "AmbassadorOv/branches-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "26ee6fb7d42d9c86e1dee2a4082f9276a52815a2",
+      "readme_summary": "README embeds an HTML concept for a Quilia interactive hub/governance page; no direct relationship to WANGA-LAB is established. The unusual default branch name is preserved verbatim in inventory.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/fluffy-parakeet",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-27",
+      "readme_blob_sha1": "70944f7da15632788024530d0c7faf9d91d74381",
+      "readme_summary": "README is a one-line title only; exact blob identity with Quadruple-Multilevel-projection-project/-from-Corsican-.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-27T05:15:40Z",
+      "readme_fetch_status": "SUCCESS"
+    },
+    {
+      "full_name": "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-27",
+      "readme_blob_sha1": "3dd3c4fdfda2e43c50ba4e706ee16344d9f21488",
+      "readme_summary": "README is an interdisciplinary computational project template with simulation and symbolic-linguistics sections; it contains proposed structure and placeholders, not evidence that the listed systems are implemented.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-27T05:15:40Z",
+      "readme_fetch_status": "SUCCESS"
+    },
+    {
+      "full_name": "AmbassadorOv/https-AmbassadorOv.io",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_FETCH_GAP_404_2026-10-25",
+      "readme_blob_sha1": null,
+      "readme_summary": "README.md fetch returned 404; no inference about other documentation.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+    },
+    {
+      "full_name": "AmbassadorOv/vqbshtfsprojects.org",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "REPOSITORY_EMPTY_CONFIRMED_2026-10-25",
+      "readme_blob_sha1": null,
+      "readme_summary": "GitHub API reports this repository is empty; no README content exists in this snapshot.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+    },
+    {
+      "full_name": "AmbassadorOv/awesome-chatgpt-prompts",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "25c6254b882a96645aeacb866e735a14040913dc",
+      "readme_summary": "Large README (142,443 characters) describes an Awesome ChatGPT Prompts repository; no WANGA-specific integration established by this bounded README-only scan.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/multi-agent-orchestator",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+      "readme_summary": "README describes a coordinator with classification, data-retrieval and reasoning agents, and a configurable local-JSON/LanceDB retrieval path; candidate overlap only, not execution evidence.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+    },
+    {
+      "full_name": "AmbassadorOv/unetbootin",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_FETCH_GAP_404_2026-10-27",
+      "readme_blob_sha1": null,
+      "readme_summary": "README fetch returned HTTP 404; documentation absence is not inferred.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-27T05:15:40Z",
+      "readme_fetch_status": "HTTP_404"
+    },
+    {
+      "full_name": "AmbassadorOv/test-notebook-links",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "cad8e71d3b07510fbcf15d7051db725b9a579cae",
+      "readme_summary": "README lists notebook/Colab link tests only; no direct logic, fractal, NTM or provenance architecture evidence.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+    },
+    {
+      "full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-25",
+      "readme_blob_sha1": "2866fa41c2232edaf4bfa82e299e22d54ed267ec",
+      "readme_summary": "README describes SciGPT as a bot for scientists and researchers; agent/research overlap is only a discovery cue, not evidence of WANGA integration.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+    },
+    {
+      "full_name": "AmbassadorOv/AG-triple-X-",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
+      "readme_summary": "README consists of a title pointing to World-Party-Federation-Branches-managers; identical README blob observed in two other repositories in this batch.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-24",
+      "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "readme_summary": "README title is Nanomathematics; same README blob as three other repositories.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "readme_summary": "README title only; insufficient evidence to infer implementation.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/MNM",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "readme_summary": "README blob SHA matches sibling -logicl-neural-order README; establishes README byte identity only.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/-",
+      "default_branch": "feat-yellow-quantic-simulation",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_FETCH_GAP_404_2026-10-27",
+      "readme_blob_sha1": null,
+      "readme_summary": "README fetch returned HTTP 404; documentation absence is not inferred.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-27T05:15:40Z",
+      "readme_fetch_status": "HTTP_404"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-27",
+      "readme_blob_sha1": "5bce36b9ed2ffd0c0ebfec2a5e806e974c12ca05",
+      "readme_summary": "README contains an example that concatenates predefined sections into a long-form article; no execution or WANGA integration was verified.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-27T05:15:40Z",
+      "readme_fetch_status": "SUCCESS"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/globalSpeed",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-27",
+      "readme_blob_sha1": "a6976e6480700db0264d5dd7a20267a04f9209f0",
+      "readme_summary": "README describes a browser media playback-speed extension; no direct WANGA logic-forensics overlap was established.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-27T05:15:40Z",
+      "readme_fetch_status": "SUCCESS"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6",
+      "readme_summary": "README is a single external project link; no architecture claim extracted.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/Qualia",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-27",
+      "readme_blob_sha1": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "readme_summary": "README is a short project title and blog URL only; it provides no implementation evidence.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-27T05:15:40Z",
+      "readme_fetch_status": "SUCCESS"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "1530209671f6f76eb1808cf17d9584437e1e867b",
+      "readme_summary": "Describes Terraform infrastructure for deploying AI chat/API services across environments and regions; README warns main may be out of date.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/branches-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-27",
+      "readme_blob_sha1": "3c2d05890db488362257aa6bf373620050d7477d",
+      "readme_summary": "README is a curated directory of repository/site links and placeholders; links do not establish repository identity, integration or implementation.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-27T05:15:40Z",
+      "readme_fetch_status": "SUCCESS"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-27",
+      "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
+      "readme_summary": "README is a one-line title; exact blob identity extends an existing duplicate README cluster. This does not establish repository identity or code equivalence.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-27T05:15:40Z",
+      "readme_fetch_status": "SUCCESS"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/-from-Corsican-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "README_READ_2026-10-27",
+      "readme_blob_sha1": "70944f7da15632788024530d0c7faf9d91d74381",
+      "readme_summary": "README is a one-line title only; exact blob identity with AmbassadorOv/fluffy-parakeet.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "last_scan_time_utc": "2026-10-27T05:15:40Z",
+      "readme_fetch_status": "SUCCESS"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
+      "readme_summary": "README title only; purpose and implementation remain unverified from this surface.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": null,
+      "readme_summary": "README fetch returned 404 despite visible repository metadata; treat as an access/source gap, not proof of absent documentation.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/skills",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "2246383e993f161fd909122d01769059adfb9eab",
+      "readme_summary": "Describes a CLI for an open agent-skills ecosystem; no WANGA-specific integration established.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "readme_blob_sha1": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32",
+      "readme_summary": "Canonical research and engineering repository for AI evidence integrity, drift forensics, provenance reconstruction, verification and continuous logic mining; separates operational evidence work from future-facing logic engineering.",
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/unetbootin",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/Qdprojects",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/mermaid",
+      "default_branch": "develop",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/copilot-cli",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/-logicl-neural-order",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    },
+    {
+      "full_name": "tribal-archery/MAM-parsed",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level_exposed_by_connector": "admin",
+      "permission_flags_exposed_by_connector": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_update": null,
+      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
+      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "readme_blob_sha1": null,
+      "readme_summary": null,
+      "source_scope": "PUBLIC_REPOSITORY_READ"
+    }
+  ]
+}
