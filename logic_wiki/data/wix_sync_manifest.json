@@ -12,7 +12,7 @@
   "homepage_card_verified": true,
   "existing_model_builder_preserved": true,
   "existing_corpus_atlas_preserved": true,
-  "verification_method": "Wix upload API returned HTTP 200. Public fetch confirmed the new research page title, navigation from homepage and Logic Wiki, and links to the GitHub catalog/taxonomy. Extracted public page text was partial, so exact topic-by-topic read-back remains incomplete.",
+  "verification_method": "Wix upload API returned HTTP 200. Public fetch confirmed the new research page title, navigation from homepage and Logic Wiki, and links to the GitHub catalog/taxonomy. Extracted public page text was partial, so exact topic-by-topic read-back remains incomplete. Read-back on 2026-10-27 used a JavaScript-rendered public-page fetch for the main Logic Wiki, fractal-research page and evidence-status page. The main page reports 28 entries, matching the current GitHub catalog; the fractal-research page reports 27 entries/16 sources versus GitHub 28/17, and the main page retains a 2026-10-12 ecosystem-sweep section. Site context confirms Published; no Wix write or deployment revision was returned.",
   "automation_boundary": "Connected Wix upload/read-back was used. GitHub Actions does not have Wix credentials; scheduled research must use the connected Wix integration and record a read-back result.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
   "note": "18 legacy catalog entries remain on the core Logic Wiki. The GitHub research catalog contains 27 entries, including 9 new concepts described on the supplemental fractal-research page. Publication is not semantic verification.",
@@ -112,5 +112,41 @@
   ],
   "main_page_catalog_article_count": 18,
   "research_catalog_article_count": 27,
-  "supplemental_research_concept_count": 9
+  "supplemental_research_concept_count": 9,
+  "last_readback_date": "2026-10-27",
+  "readback_status": "PAGE_FETCH_CONFIRMED_WITH_CONTENT_DRIFT",
+  "deployment_revision": "NOT_EXPOSED",
+  "source_catalog_snapshot": {
+    "date": "2026-10-27",
+    "git_blob_sha1": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed",
+    "article_count": 28,
+    "source_record_count": 17,
+    "source_class_count": 11,
+    "relation_link_count": 111,
+    "dangling_source_refs": 0,
+    "dangling_relation_refs": 0
+  },
+  "page_readback": [
+    {
+      "url": "/logic-wiki.html",
+      "fetch_status": "SUCCESS",
+      "visible_description_count": 28,
+      "comparison": "ARTICLE_COUNT_MATCHES_GITHUB_CATALOG",
+      "stale_embedded_section": "ECOSYSTEM AGENT SWEEP · 2026-10-12"
+    },
+    {
+      "url": "/logic-wiki-fractal-research.html",
+      "fetch_status": "SUCCESS",
+      "visible_catalog_article_count": 27,
+      "visible_source_record_count": 16,
+      "comparison": "STALE_GITHUB_MAIN_HAS_28_ARTICLES_AND_17_SOURCES"
+    },
+    {
+      "url": "/logic-wiki-evidence-status.html",
+      "fetch_status": "SUCCESS",
+      "comparison": "STATUS_DEFINITIONS_VISIBLE_NO_NUMERIC_CATALOG_CLAIM"
+    }
+  ],
+  "write_performed": false,
+  "sync_decision": "NO_WRITE_NO_APPROVED_CATALOG_CHANGE; REVIEW_PAGE_LEVEL_COUNT_DRIFT_BEFORE_NEXT_PUBLICATION"
 }
