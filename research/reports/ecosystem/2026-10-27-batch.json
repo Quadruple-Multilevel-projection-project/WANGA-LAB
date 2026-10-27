@@ -279,11 +279,38 @@
     "sync_status": "PUBLISHED_READ_BACK_PARTIAL"
   },
   "ci": {
-    "new_pr_head_status": "PENDING",
-    "pr131_head": "4f01d69cfd77cb356ca1cc1086144d80235c4bfc",
-    "pr131_ci": "SUCCESS",
-    "pr131_branch_relation_to_main": "AHEAD_35_BEHIND_21",
-    "pr122_current_head_ci": "ACTION_REQUIRED"
+    "initial_report_commit": "115b1c903138fb54cee2225a9bb0cc65d1128097",
+    "runs": [
+      {
+        "name": "CodeQL Advanced",
+        "run_id": 40455159634,
+        "status": "SUCCESS"
+      },
+      {
+        "name": "Logic Fractal Wiki Research",
+        "run_id": 40455159578,
+        "status": "SUCCESS"
+      },
+      {
+        "name": "WANGA Ecosystem Agent Sweep",
+        "run_id": 40455159669,
+        "status": "SUCCESS_WITH_SCOPE_BLOCKER"
+      },
+      {
+        "name": "Repository Integrity",
+        "run_id": 40455159587,
+        "status": "SUCCESS"
+      }
+    ],
+    "ecosystem_workflow_scope": {
+      "mode": "CURRENT_REPOSITORY_ONLY",
+      "repositories_scanned": 1,
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "relevant_paths": 40,
+      "cross_repo_read_token_configured": false,
+      "inventory_error": "HTTP 403 Resource not accessible by integration"
+    },
+    "report_followup_commit": "PENDING"
   },
   "cursor": {
     "priority_order_index": 50,
@@ -377,6 +404,22 @@
     "Two README fetches returned HTTP 404.",
     "Four private repositories omitted from public registry.",
     "Wix supplemental page and embedded ecosystem section have stale counts.",
-    "PR122 current-head workflows are ACTION_REQUIRED."
-  ]
+    "PR122 current-head workflows are ACTION_REQUIRED.",
+    "GitHub Actions ecosystem workflow is limited to the current WANGA-LAB repository because CROSS_REPO_READ_TOKEN is not configured (HTTP 403). The connected GitHub integration separately exposed 62 unique repositories and completed the manual 10-repository batch."
+  ],
+  "internal_document_scan": {
+    "documents_read": 6,
+    "source_records_added": 6,
+    "candidate_logic_units_added": 16,
+    "formal_logic_units_added": 0
+  },
+  "workflow_agent_cycle": {
+    "run_id": 40455159578,
+    "agents": 12,
+    "candidate_substructures": 523,
+    "candidate_compositions": 523,
+    "active_contracts": 2,
+    "source_grounded_cases": 0,
+    "readiness_gate": "NOT_READY_INTERNAL_CANDIDATE_ONLY"
+  }
 }
