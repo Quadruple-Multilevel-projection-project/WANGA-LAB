@@ -779,6 +779,102 @@
       "scan_status": "READ",
       "scan_time_utc": "2026-10-27T05:15:40Z",
       "next_action": "No WANGA integration claim. Inspect targeted docs only if later evidence establishes direct relevance."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/agents/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "agents/README.md",
+      "git_blob_sha1": "d40c5da193c7a3b335f0df9de89f46a74b1bacbf",
+      "excerpt_or_summary": "Defines agent-role boundaries, explicit cross-domain handoffs, separation of observation from verification, and evidence-status ownership invariants.",
+      "language": "en",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-27T05:15:40Z",
+      "next_action": "Inspect linked schemas, code and test artifacts; formalize only after exact-source review."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/first-order-logic/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "first-order-logic/README.md",
+      "git_blob_sha1": "fae0583477fb31c80f603b4b8053d3f47b817b1b",
+      "excerpt_or_summary": "Defines source extraction before modern logical machinery, keeps Part 1/2/3 distinct, and labels the circular structure as a hypothesis.",
+      "language": "en+he",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-27T05:15:40Z",
+      "next_action": "Inspect linked schemas, code and test artifacts; formalize only after exact-source review."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/first-order-logic/part-1/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "first-order-logic/part-1/README.md",
+      "git_blob_sha1": "29c93fbb717fd9c09dabfd8161e98711d2211ffb",
+      "excerpt_or_summary": "Preserves Part 1 as its own source-defined unit and prohibits premature modern category assignment.",
+      "language": "en+he",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-27T05:15:40Z",
+      "next_action": "Inspect linked schemas, code and test artifacts; formalize only after exact-source review."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/artifacts/drift-known-risk-001/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "artifacts/drift-known-risk-001/README.md",
+      "git_blob_sha1": "f0d0bed13c3606fc72597548f111316dd52bf184",
+      "excerpt_or_summary": "Describes a controlled synthetic criterion-drift case with unchanged model output and changed acceptance criterion; underlying replay was not rerun in this cycle.",
+      "language": "en",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-27T05:15:40Z",
+      "next_action": "Inspect linked schemas, code and test artifacts; formalize only after exact-source review."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/apps/vitruvius-architect/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "apps/vitruvius-architect/README.md",
+      "git_blob_sha1": "93c48369dda174554a8b32658af10c9bef751309",
+      "excerpt_or_summary": "Describes Vitruvius Architect as a prototype and explicitly marks it not tested or verified.",
+      "language": "en",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-27T05:15:40Z",
+      "next_action": "Inspect linked schemas, code and test artifacts; formalize only after exact-source review."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/neural-network-research-core/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/neural-network-research-core/README.md",
+      "git_blob_sha1": "028a9da18cd2ea74a476f1fdd9010f1b22756684",
+      "excerpt_or_summary": "Defines a measurement-to-behavior research chain and constraints against causal inference from temporal order or replacing missing measurements.",
+      "language": "en",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-27T05:15:40Z",
+      "next_action": "Inspect linked schemas, code and test artifacts; formalize only after exact-source review."
     }
   ],
   "duplicate_readme_clusters": [
@@ -820,7 +916,9 @@
     "README fetch returned HTTP 404 for six public repositories cumulatively (four earlier gaps plus two in the 2026-10-27 batch); 404 is not treated as proof that documentation does not exist.",
     "No ChatGPT conversation export was returned by targeted Files searches in this run. Eight distinct Library file names surfaced and eight read requests were made; some PDF reads were partial. This is not proof of global absence, and no transcript was ingested.",
     "Private Library material was reviewed only within the current conversation scope; no private content, excerpts, or file names were copied into the public registry. SHA-256 values for those Library files were not computed.",
-    "Wix read-back on 2026-10-27 found the main Logic Wiki page describing 28 entries, matching the current GitHub catalog count; the fractal-research page still reports 27 entries/16 sources while GitHub has 28/17. The main page also embeds an older 2026-10-12 ecosystem sweep section. No Wix write was performed."
+    "Wix read-back on 2026-10-27 found the main Logic Wiki page describing 28 entries, matching the current GitHub catalog count; the fractal-research page still reports 27 entries/16 sources while GitHub has 28/17. The main page also embeds an older 2026-10-12 ecosystem sweep section. No Wix write was performed.",
+    "Six WANGA internal README documents yielded 16 source-span candidates and one synthetic counterexample candidate; none is formalized or counted toward FIRST_MODEL_ALPHA readiness. The underlying drift replay was not rerun.",
+    "The 2026-10-27 generated readiness report shows critical_core_contradictions=0, while the agent-cycle gatekeeper reports null and contradiction_inventory_available=false. Treat core contradictions as NOT_MEASURED until a reviewed inventory exists."
   ],
   "candidate_logic_units_registered": 3,
   "candidate_logic_units": [
@@ -916,6 +1014,427 @@
         "WANGA-LAB/logic_wiki/data/agent_registry.json"
       ],
       "next_action": "Keep as a configuration-boundary candidate; verify only in an authorized isolated test before any integration proposal."
+    },
+    {
+      "stable_id": "WANGA-AGENT-ROLE-RUNTIME-001",
+      "source_path": "agents/README.md",
+      "line": 5,
+      "literal_excerpt": "Agents are roles",
+      "primitives": [
+        "agent_role",
+        "runtime_instance",
+        "model_slot"
+      ],
+      "relation_candidates": [
+        "separate_concerns(agent_role,runtime_instance)"
+      ],
+      "interpretation": "Role identity and runtime/model-slot identity are declared as separate concerns.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "README-level project statement; runtime topology not independently inspected.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/agents/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "d40c5da193c7a3b335f0df9de89f46a74b1bacbf",
+      "exact_locator": "agents/README.md:L5",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "WANGA-AGENT-HANDOFF-BOUNDARY-001",
+      "source_path": "agents/README.md",
+      "line": 8,
+      "literal_excerpt": "explicit interface/handoff",
+      "primitives": [
+        "agent_domain",
+        "cross_domain_transition",
+        "interface"
+      ],
+      "relation_candidates": [
+        "cross_domain_transition_requires(explicit_interface_or_handoff)"
+      ],
+      "interpretation": "Cross-domain movement is constrained by an explicit handoff.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Operational contract statement; runtime enforcement not tested in this cycle.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/agents/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "d40c5da193c7a3b335f0df9de89f46a74b1bacbf",
+      "exact_locator": "agents/README.md:L8",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "WANGA-AGENT-OBSERVATION-VERIFICATION-001",
+      "source_path": "agents/README.md",
+      "line": 20,
+      "literal_excerpt": "Observation ≠ Verification",
+      "primitives": [
+        "observation",
+        "verification"
+      ],
+      "relation_candidates": [
+        "not_equivalent(observation,verification)"
+      ],
+      "interpretation": "An observation record does not by itself establish verification.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Boundary statement; no universal formal semantics inferred.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/agents/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "d40c5da193c7a3b335f0df9de89f46a74b1bacbf",
+      "exact_locator": "agents/README.md:L20",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "WANGA-AGENT-EVIDENCE-OWNERSHIP-001",
+      "source_path": "agents/README.md",
+      "line": 46,
+      "literal_excerpt": "No agent changes another agent's evidence status",
+      "primitives": [
+        "agent",
+        "evidence_status",
+        "ownership"
+      ],
+      "relation_candidates": [
+        "agent_cannot_mutate(other_agent_evidence_status)"
+      ],
+      "interpretation": "Evidence-status changes are authority-bounded.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "README policy; implementation enforcement not tested.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/agents/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "d40c5da193c7a3b335f0df9de89f46a74b1bacbf",
+      "exact_locator": "agents/README.md:L46",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "FOL-SOURCE-EXTRACTION-ORDER-001",
+      "source_path": "first-order-logic/README.md",
+      "line": 7,
+      "literal_excerpt": "source-grounded definitions must be extracted",
+      "primitives": [
+        "source_definition",
+        "modern_logical_machinery"
+      ],
+      "relation_candidates": [
+        "extract_from_source_before(assign_modern_machinery)"
+      ],
+      "interpretation": "The repository contract requires source extraction before architectural assignment.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Project method statement; does not authenticate the underlying historical interpretation.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/first-order-logic/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "fae0583477fb31c80f603b4b8053d3f47b817b1b",
+      "exact_locator": "first-order-logic/README.md:L7",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "FOL-PART3-RELATIONAL-ANALOGY-001",
+      "source_path": "first-order-logic/README.md",
+      "line": 9,
+      "literal_excerpt": "relational analogy supplied for understanding Part 3",
+      "primitives": [
+        "Part_1",
+        "Part_2",
+        "Part_3",
+        "relational_analogy"
+      ],
+      "relation_candidates": [
+        "specialized_terms_apply_as_analogy_to(Part_3)"
+      ],
+      "interpretation": "The source explicitly denies using the analogy as a definition of Part 1 or Part 2.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Analogy boundary only; no equivalence with modern universal/particular categories.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/first-order-logic/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "fae0583477fb31c80f603b4b8053d3f47b817b1b",
+      "exact_locator": "first-order-logic/README.md:L9",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "FOL-WORKING-UNIT-001",
+      "source_path": "first-order-logic/README.md",
+      "line": 30,
+      "literal_excerpt": "meaningful occurrence understood together with its relation/context",
+      "primitives": [
+        "meaningful_occurrence",
+        "relation",
+        "context"
+      ],
+      "relation_candidates": [
+        "unit_includes(occurrence,relation_and_context)"
+      ],
+      "interpretation": "The proposed extraction unit is relational/contextual rather than token-only or sentence-only.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Project working definition; not yet validated against a reviewed corpus.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/first-order-logic/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "fae0583477fb31c80f603b4b8053d3f47b817b1b",
+      "exact_locator": "first-order-logic/README.md:L30",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "FOL-CIRCULAR-STRUCTURE-HYPOTHESIS-001",
+      "source_path": "first-order-logic/README.md",
+      "line": 97,
+      "literal_excerpt": "HYPOTHESIS",
+      "primitives": [
+        "second_order_structure",
+        "relation",
+        "context",
+        "convergence"
+      ],
+      "relation_candidates": [
+        "possible_non_linear_relation_convergence"
+      ],
+      "interpretation": "The source proposes a non-linear/circular representation as a research hypothesis.",
+      "epistemic_status": "HYPOTHESIS_SOURCE_TEXT_ONLY",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Not attributed as an explicit doctrine of Maimonides; not a formalized logic.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/first-order-logic/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "fae0583477fb31c80f603b4b8053d3f47b817b1b",
+      "exact_locator": "first-order-logic/README.md:L97",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "FOL-PART1-IDENTITY-BOUNDARY-001",
+      "source_path": "first-order-logic/part-1/README.md",
+      "line": 5,
+      "literal_excerpt": "only as Part 1",
+      "primitives": [
+        "Part_1",
+        "identity_boundary"
+      ],
+      "relation_candidates": [
+        "preserve_label_identity(Part_1)"
+      ],
+      "interpretation": "Part 1 is kept distinct pending source-grounded definition.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "No modern category assigned at this stage.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/first-order-logic/part-1/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "29c93fbb717fd9c09dabfd8161e98711d2211ffb",
+      "exact_locator": "first-order-logic/part-1/README.md:L5",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "DRIFT-CRITERION-CHANGE-001",
+      "source_path": "artifacts/drift-known-risk-001/README.md",
+      "lines": [
+        9,
+        23,
+        25,
+        27,
+        31
+      ],
+      "literal_excerpt": "criterion-drift finding; same synthetic model output; threshold 0.80 → REJECT; threshold 0.60 → ACCEPT; score 0.75",
+      "primitives": [
+        "model_output",
+        "evaluation_criterion",
+        "threshold",
+        "decision"
+      ],
+      "relation_candidates": [
+        "criterion_changed=true",
+        "model_output_changed=false",
+        "decision_changed=true"
+      ],
+      "interpretation": "Synthetic counterexample candidate: a decision change can occur from criterion change while the model output remains constant.",
+      "epistemic_status": "SYNTHETIC_COUNTEREXAMPLE_CANDIDATE_NOT_GATE_ELIGIBLE",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Synthetic fixture only; underlying replay/verification artifacts were not rerun in this cycle.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/artifacts/drift-known-risk-001/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "f0d0bed13c3606fc72597548f111316dd52bf184",
+      "exact_locator": "artifacts/drift-known-risk-001/README.md:L9; artifacts/drift-known-risk-001/README.md:L23; artifacts/drift-known-risk-001/README.md:L25; artifacts/drift-known-risk-001/README.md:L27; artifacts/drift-known-risk-001/README.md:L31",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "VITRUVIUS-PROTOTYPE-STATUS-001",
+      "source_path": "apps/vitruvius-architect/README.md",
+      "lines": [
+        3,
+        24
+      ],
+      "literal_excerpt": "Status: PROTOTYPED; not TESTED or VERIFIED",
+      "primitives": [
+        "implementation_status",
+        "test_status",
+        "verification_status"
+      ],
+      "relation_candidates": [
+        "PROTOTYPED_does_not_imply_TESTED_or_VERIFIED"
+      ],
+      "interpretation": "The source explicitly separates prototype existence from testing and verification.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "README status; no browser runtime test performed.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/apps/vitruvius-architect/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "93c48369dda174554a8b32658af10c9bef751309",
+      "exact_locator": "apps/vitruvius-architect/README.md:L3; apps/vitruvius-architect/README.md:L24",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "VITRUVIUS-ARCHITECTURE-HANDOFF-001",
+      "source_path": "apps/vitruvius-architect/README.md",
+      "lines": [
+        11,
+        15
+      ],
+      "literal_excerpt": "highest architectural orchestration layer; boundary between lineage knowledge and Rational Logic",
+      "primitives": [
+        "Vitruvius",
+        "lineage_knowledge",
+        "Rational_Logic",
+        "handoff"
+      ],
+      "relation_candidates": [
+        "Vitruvius_precedes(Rational_Logic)",
+        "model_selection_is_boundary(lineage_knowledge,Rational_Logic)"
+      ],
+      "interpretation": "A proposed architectural handoff boundary is described.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Architecture description only; integration contract not tested.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/apps/vitruvius-architect/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "93c48369dda174554a8b32658af10c9bef751309",
+      "exact_locator": "apps/vitruvius-architect/README.md:L11; apps/vitruvius-architect/README.md:L15",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "NNRC-OBSERVATION-CHAIN-001",
+      "source_path": "ai-drift-forensics/global-drift-network/neural-network-research-core/README.md",
+      "line": 14,
+      "literal_excerpt": "INPUT → PROCESSING OBSERVATIONS → REPRESENTATIONS → STATE → TRANSITION → OUTPUT → BEHAVIOR",
+      "primitives": [
+        "input",
+        "observation",
+        "representation",
+        "state",
+        "transition",
+        "output",
+        "behavior"
+      ],
+      "relation_candidates": [
+        "ordered_research_chain_as_stated_in_source"
+      ],
+      "interpretation": "The source declares a staged measurement/research chain.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "This is a research chain, not a proven causal model.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/neural-network-research-core/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "028a9da18cd2ea74a476f1fdd9010f1b22756684",
+      "exact_locator": "ai-drift-forensics/global-drift-network/neural-network-research-core/README.md:L14",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "NNRC-TEMPORAL-CAUSAL-BOUNDARY-001",
+      "source_path": "ai-drift-forensics/global-drift-network/neural-network-research-core/README.md",
+      "line": 32,
+      "literal_excerpt": "No causal claim follows from temporal order alone.",
+      "primitives": [
+        "temporal_order",
+        "causal_claim"
+      ],
+      "relation_candidates": [
+        "temporal_precedence_not_sufficient_for_causation"
+      ],
+      "interpretation": "Temporal order alone is declared insufficient for causal attribution.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Methodological rule; causal attribution still requires a defined evidence method.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/neural-network-research-core/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "028a9da18cd2ea74a476f1fdd9010f1b22756684",
+      "exact_locator": "ai-drift-forensics/global-drift-network/neural-network-research-core/README.md:L32",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "NNRC-MISSING-MEASUREMENT-BOUNDARY-001",
+      "source_path": "ai-drift-forensics/global-drift-network/neural-network-research-core/README.md",
+      "line": 34,
+      "literal_excerpt": "Missing measurements remain missing",
+      "primitives": [
+        "measurement",
+        "missing_value",
+        "synthetic_observation"
+      ],
+      "relation_candidates": [
+        "do_not_replace_missing_measurement_with_synthetic_observation"
+      ],
+      "interpretation": "Missingness must be preserved rather than silently imputed as observed data.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Project research policy; implementation checks not run here.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/neural-network-research-core/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "028a9da18cd2ea74a476f1fdd9010f1b22756684",
+      "exact_locator": "ai-drift-forensics/global-drift-network/neural-network-research-core/README.md:L34",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
+    },
+    {
+      "stable_id": "NNRC-EXPERIMENT-IMMUTABILITY-001",
+      "source_path": "ai-drift-forensics/global-drift-network/neural-network-research-core/README.md",
+      "line": 33,
+      "literal_excerpt": "immutable within an experiment",
+      "primitives": [
+        "method",
+        "probe_definition",
+        "baseline",
+        "threshold",
+        "version"
+      ],
+      "relation_candidates": [
+        "experiment_configuration_is_immutable_within_experiment"
+      ],
+      "interpretation": "Experiment settings are required to remain fixed within a run.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Policy statement; no experiment replay performed.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/neural-network-research-core/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "source_blob_sha1": "028a9da18cd2ea74a476f1fdd9010f1b22756684",
+      "exact_locator": "ai-drift-forensics/global-drift-network/neural-network-research-core/README.md:L33",
+      "next_action": "Review source context and linked implementation/tests before formalization or readiness counting."
     }
   ],
   "private_library_scan": {
@@ -928,5 +1447,29 @@
     "private_content_published": 0,
     "sha256_computed_for_private_files": 0,
     "status": "PRIVATE_REVIEW_ONLY_NO_PUBLIC_EXCERPTS"
+  },
+  "candidate_counterexamples": [
+    {
+      "stable_id": "DRIFT-CRITERION-CHANGE-001",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/artifacts/drift-known-risk-001/README.md",
+      "source_blob_sha1": "f0d0bed13c3606fc72597548f111316dd52bf184",
+      "exact_locator": "artifacts/drift-known-risk-001/README.md:L23-L39",
+      "status": "SYNTHETIC_COUNTEREXAMPLE_CANDIDATE_NOT_GATE_ELIGIBLE",
+      "observed": "Same synthetic output score 0.75; criterion threshold changes from 0.80 (REJECT) to 0.60 (ACCEPT).",
+      "counter_reading_candidate": "An apparent decision change does not by itself establish a model-output change.",
+      "replay_status": "NOT_RERUN_IN_2026-10-27_CYCLE",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "note": "The README states that the fixture is synthetic; it is not counted as a source-grounded readiness benchmark."
+    }
+  ],
+  "internal_document_scan": {
+    "date": "2026-10-27",
+    "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "documents_read": 6,
+    "source_records_added": 6,
+    "candidate_logic_units_added": 16,
+    "formal_logic_units_added": 0,
+    "synthetic_counterexample_candidates_added": 1,
+    "semantic_entailments_asserted": 0
   }
 }
