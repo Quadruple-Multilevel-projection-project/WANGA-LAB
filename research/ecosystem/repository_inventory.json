@@ -1,95 +1,93 @@
 {
   "schema_version": "wanga-repository-inventory/1.1",
-  "snapshot_date": "2026-10-27",
-  "generated_at_utc": "2026-10-27T05:15:40Z",
+  "snapshot_date": "2026-10-28",
+  "generated_at_utc": "2026-10-28T05:11:07Z",
   "source": "Live connected GitHub repository inventory; page_size=100, page_offset=0; affiliation lists refreshed in this cycle.",
-  "inventory_status": "LIVE_SNAPSHOT_WITH_BOUNDED_BATCH",
-  "visible_repository_count": 62,
+  "inventory_status": "PUBLIC_INVENTORY_COMPLETE_README_SWEEP_COMPLETE_WITH_GAPS_AND_POLICY_SKIP",
+  "visible_repository_count": 63,
   "public_repository_count": 58,
-  "private_repository_count": 4,
+  "private_repository_count": 5,
   "unknown_visibility_count": 0,
   "affiliation_counts": {
-    "owner": 37,
+    "owner": 38,
     "collaborator": 13,
-    "organization_member": 25,
-    "unique_union": 62
+    "organization_member": 25
   },
   "private_repository_handling": "Private repositories are connector-visible, but names, paths and content are omitted from this public registry; aggregate count only.",
   "permission_note": "Connector returned permission flags for visible repositories. These are connector-exposed metadata, not an independent permission audit.",
-  "latest_update_note": "The live repository listing did not expose updated_at timestamps; no timestamps were inferred.",
+  "latest_update_note": "GitHub REST updated_at and pushed_at were read for the final cursor batch; other older records retain NOT_RETRIEVED_IN_THIS_BATCH unless previously updated.",
   "batch_size": 10,
   "scanned_repositories": [
-    "Quadruple-Multilevel-projection-project/WANGA-LAB",
-    "AmbassadorOv/AmbassadorOv",
-    "AmbassadorOv/TTTT-0.0.0.0.1",
-    "Quadruple-Multilevel-projection-project/-logicl-neural-order",
-    "Quadruple-Multilevel-projection-project/AI231.meta.io",
-    "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
-    "Quadruple-Multilevel-projection-project/ai-agent-terraform",
-    "Quadruple-Multilevel-projection-project/MNM",
-    "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
-    "Quadruple-Multilevel-projection-project/skills",
     "AmbassadorOv/-artificial-y",
     "AmbassadorOv/AG-triple-X-",
+    "AmbassadorOv/AmbassadorOv",
     "AmbassadorOv/Nanomathematics",
     "AmbassadorOv/O-Ms",
     "AmbassadorOv/Qualia",
     "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+    "AmbassadorOv/TTTT-0.0.0.0.1",
     "AmbassadorOv/TTTTproject-un.govt",
     "AmbassadorOv/World-Party-Federation-Branches-managers",
     "AmbassadorOv/awesome-chatgpt-prompts",
     "AmbassadorOv/branches-",
-    "AmbassadorOv/desktop",
-    "AmbassadorOv/extensions",
-    "AmbassadorOv/docs",
-    "AmbassadorOv/generative-ai-docs",
-    "AmbassadorOv/python-genai",
-    "AmbassadorOv/multi-agent-orchestator",
-    "AmbassadorOv/https-AmbassadorOv.io",
-    "AmbassadorOv/vqbshtfsprojects.org",
     "AmbassadorOv/chatgpt-scientific-publications-extension",
-    "AmbassadorOv/test-notebook-links",
-    "AmbassadorOv/googleapis",
-    "AmbassadorOv/platform-samples",
-    "AmbassadorOv/mermaid",
-    "AmbassadorOv/vscode-azure-blockchain-ethereum",
-    "AmbassadorOv/eslint",
-    "AmbassadorOv/openai_tiktoken",
-    "AmbassadorOv/mujoco",
     "AmbassadorOv/cookbook",
-    "AmbassadorOv/vscode-docs",
-    "AmbassadorOv/mediapipe",
+    "AmbassadorOv/desktop",
+    "AmbassadorOv/docs",
+    "AmbassadorOv/eslint",
+    "AmbassadorOv/extensions",
     "AmbassadorOv/fluffy-parakeet",
+    "AmbassadorOv/generative-ai-docs",
+    "AmbassadorOv/googleapis",
+    "AmbassadorOv/https-AmbassadorOv.io",
+    "AmbassadorOv/mediapipe",
+    "AmbassadorOv/mermaid",
+    "AmbassadorOv/mujoco",
+    "AmbassadorOv/multi-agent-orchestator",
+    "AmbassadorOv/openai_tiktoken",
+    "AmbassadorOv/platform-samples",
+    "AmbassadorOv/python-genai",
     "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+    "AmbassadorOv/test-notebook-links",
     "AmbassadorOv/unetbootin",
+    "AmbassadorOv/vqbshtfsprojects.org",
+    "AmbassadorOv/vscode-azure-blockchain-ethereum",
+    "AmbassadorOv/vscode-docs",
     "Quadruple-Multilevel-projection-project/-",
-    "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
-    "Quadruple-Multilevel-projection-project/globalSpeed",
+    "Quadruple-Multilevel-projection-project/-from-Corsican-",
+    "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+    "Quadruple-Multilevel-projection-project/AI231.meta.io",
+    "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+    "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+    "Quadruple-Multilevel-projection-project/MNM",
     "Quadruple-Multilevel-projection-project/Qualia",
+    "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "Quadruple-Multilevel-projection-project/ai-agent-terraform",
     "Quadruple-Multilevel-projection-project/branches-",
+    "Quadruple-Multilevel-projection-project/globalSpeed",
+    "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+    "Quadruple-Multilevel-projection-project/skills",
     "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
-    "Quadruple-Multilevel-projection-project/-from-Corsican-"
+    "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+    "tribal-archery/-logicl-neural-order",
+    "tribal-archery/MAM-parsed",
+    "tribal-archery/Qdprojects",
+    "tribal-archery/copilot-cli",
+    "tribal-archery/mermaid",
+    "tribal-archery/unetbootin",
+    "tribal-archery/vscode-azure-blockchain-ethereum"
   ],
-  "scanned_readme_count": 44,
-  "readme_fetch_gap_count": 6,
+  "scanned_readme_count": 50,
+  "readme_fetch_gap_count": 7,
   "additional_targeted_docs_read": 2,
-  "remaining_public_repository_count": 8,
+  "remaining_public_repository_count": 0,
   "next_cursor": {
-    "snapshot_date": "2026-10-27",
-    "priority_order_index": 50,
-    "after_last_scanned": "Quadruple-Multilevel-projection-project/-from-Corsican-",
-    "next_batch": [
-      "tribal-archery/-logicl-neural-order",
-      "tribal-archery/MAM-parsed",
-      "tribal-archery/Qdprojects",
-      "tribal-archery/copilot-cli",
-      "tribal-archery/mermaid",
-      "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
-      "tribal-archery/unetbootin",
-      "tribal-archery/vscode-azure-blockchain-ethereum"
-    ],
-    "remaining_public_repositories": 8,
-    "policy": "Bounded batch of approximately 10 repositories; do not infer absence from search or README 404."
+    "snapshot_date": "2026-10-28",
+    "priority_order_index": 58,
+    "after_last_scanned": "tribal-archery/vscode-azure-blockchain-ethereum",
+    "next_batch": [],
+    "remaining_public_repositories": 0,
+    "policy": "Public README sweep exhausted for the current 58-repository access snapshot. Full code/content audit remains separate and incomplete."
   },
   "repositories": [
     {
@@ -109,7 +107,10 @@
       "scan_status": "README_READ_2026-10-24",
       "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
       "readme_summary": "README is a title only; same blob as AG-triple-X- and TTTTproject-un.govt.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/googleapis",
@@ -128,7 +129,10 @@
       "scan_status": "README_READ_2026-10-26",
       "readme_blob_sha1": "6ba73116d009c622bf3057f81a563b2070daea51",
       "readme_summary": "README describes public Google API interface definitions and Protocol Buffers IDL supporting REST/gRPC and client-library generation; README surface only, no WANGA-specific logic or provenance contract.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/Nanomathematics",
@@ -147,7 +151,10 @@
       "scan_status": "README_READ_2026-10-24",
       "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
       "readme_summary": "README contains only the title Nanomathematics; identical README blob also observed in sibling repositories.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/desktop",
@@ -167,7 +174,10 @@
       "readme_blob_sha1": "c7702d385076e80f365a23d17dc868b9ecb6a5ad",
       "readme_summary": "README identifies an Electron desktop application written with TypeScript and React; no direct WANGA integration evidence in README.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/platform-samples",
@@ -186,7 +196,10 @@
       "scan_status": "README_READ_2026-10-26",
       "readme_blob_sha1": "a2bb146a181b60c3df0d077c55b197287074ec53",
       "readme_summary": "README catalogs GitHub Platform API, GraphQL, webhook, pre-receive-hook, and repository-maintenance examples; no direct WANGA-specific logical content.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/extensions",
@@ -206,7 +219,10 @@
       "readme_blob_sha1": "6ef8b6a54813922bf64bad64c8e7301f8dc620c2",
       "readme_summary": "README describes Firebase Extensions source and installation/configuration guidance; no direct WANGA logic/fractal evidence in README.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/AmbassadorOv",
@@ -225,7 +241,10 @@
       "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
       "readme_blob_sha1": "d2664df6ce794e353a4d1b04682627c3b13f0bb9",
       "readme_summary": "Positions Logic Research as inquiry into logical structures, relations, constraints, rules, derivations and validity conditions.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
@@ -244,7 +263,10 @@
       "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
       "readme_blob_sha1": "ac7a2d203877442ddba493889239e61aed56ec78",
       "readme_summary": "Describes research-team coordination and a meta-orchestrator for connecting, abstracting, comparing, verifying and routing team outputs.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/TTTTproject-un.govt",
@@ -263,7 +285,10 @@
       "scan_status": "README_READ_2026-10-24",
       "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
       "readme_summary": "README title points to World-Party-Federation-Branches-managers; byte identity only.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/docs",
@@ -283,7 +308,10 @@
       "readme_blob_sha1": "69090a601896b5189a5b3ee42105ed42638016be",
       "readme_summary": "README identifies source for the GitHub Docs website and Markdown content; no direct WANGA integration evidence in README.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/mermaid",
@@ -302,7 +330,10 @@
       "scan_status": "README_READ_2026-10-26",
       "readme_blob_sha1": "456747132cbc6ed1dde4f8d5f0712deb71b47be8",
       "readme_summary": "README describes Mermaid as markdown-like text-to-diagram tooling; visualization overlap candidate only, not a semantic graph or logic-entailment engine.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
@@ -321,7 +352,10 @@
       "scan_status": "README_READ_2026-10-26",
       "readme_blob_sha1": "625c97bbc9115e868a9217bdc729341f8a0d1759",
       "readme_summary": "README describes Azure Blockchain Development Kit for creating and deploying Ethereum smart contracts; no direct WANGA provenance or logic-fractal content.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/eslint",
@@ -340,7 +374,10 @@
       "scan_status": "README_READ_2026-10-26",
       "readme_blob_sha1": "326c6121e810f4d1edfbc781eff4d5b7f46d1c36",
       "readme_summary": "README describes AST-based JavaScript linting and pluggable rules; a static-validation pattern cue only, not evidence of WANGA integration.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/openai_tiktoken",
@@ -359,7 +396,10 @@
       "scan_status": "README_READ_2026-10-26",
       "readme_blob_sha1": "ad8d88b13f731c1d946a4fc5bd3fc3a153393775",
       "readme_summary": "README describes reversible byte-pair tokenization and tokenizer APIs; text-preprocessing cue only, not semantic logic-extraction evidence.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/-artificial-y",
@@ -378,7 +418,10 @@
       "scan_status": "README_ACCESS_GAP_2026-10-24",
       "readme_blob_sha1": null,
       "readme_summary": "README.md fetch returned GitHub 404; this is not evidence that the repository has no relevant files.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/Qualia",
@@ -397,7 +440,10 @@
       "scan_status": "README_READ_2026-10-24",
       "readme_blob_sha1": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
       "readme_summary": "README contains a title and an external blog link; no WANGA integration established.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/O-Ms",
@@ -416,7 +462,10 @@
       "scan_status": "README_READ_2026-10-24",
       "readme_blob_sha1": "5477f49658507c3de65a774eb54976d22a3e0c52",
       "readme_summary": "README contains only the title O-Ms.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/generative-ai-docs",
@@ -436,7 +485,10 @@
       "readme_blob_sha1": "1bf3babd967e73a1cff092805c4ff151fba95baf",
       "readme_summary": "README describes source files for Gemini API developer documentation, notebooks, demos and examples; API overlap only, no WANGA backend configuration evidence.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/mujoco",
@@ -455,7 +507,10 @@
       "scan_status": "README_READ_2026-10-26",
       "readme_blob_sha1": "62d57c19af93682355c27e668422bf8aa87c430b",
       "readme_summary": "README describes physics simulation for articulated systems and robotics/machine-learning research; no direct WANGA logic-forensics content.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/cookbook",
@@ -474,7 +529,10 @@
       "scan_status": "README_READ_2026-10-26",
       "readme_blob_sha1": "646c146ea44ee0175fccf62427bcc03dd88ed1b6",
       "readme_summary": "README describes Gemini API quickstarts and examples, including browser, code-execution, and function-calling guides; no WANGA integration evidence.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/vscode-docs",
@@ -493,7 +551,10 @@
       "scan_status": "README_READ_2026-10-26",
       "readme_blob_sha1": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
       "readme_summary": "README identifies the repository as Visual Studio Code documentation content and describes its contribution/publishing workflow; documentation pattern only.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/mediapipe",
@@ -512,7 +573,10 @@
       "scan_status": "README_READ_2026-10-26",
       "readme_blob_sha1": "e4f5dd182813dc073e0845be06d23d2c58bbeafb",
       "readme_summary": "README describes cross-platform/on-device machine-learning libraries, models, and evaluation tools; no direct WANGA logic-forensics content.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/python-genai",
@@ -532,7 +596,10 @@
       "readme_blob_sha1": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
       "readme_summary": "README describes Google Gen AI Python SDK for Gemini Developer API and Vertex AI; no WANGA backend selected or configured by this README.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/branches-",
@@ -551,7 +618,10 @@
       "scan_status": "README_READ_2026-10-24",
       "readme_blob_sha1": "26ee6fb7d42d9c86e1dee2a4082f9276a52815a2",
       "readme_summary": "README embeds an HTML concept for a Quilia interactive hub/governance page; no direct relationship to WANGA-LAB is established. The unusual default branch name is preserved verbatim in inventory.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/fluffy-parakeet",
@@ -572,7 +642,10 @@
       "readme_summary": "README is a one-line title only; exact blob identity with Quadruple-Multilevel-projection-project/-from-Corsican-.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "last_scan_time_utc": "2026-10-27T05:15:40Z",
-      "readme_fetch_status": "SUCCESS"
+      "readme_fetch_status": "SUCCESS",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
@@ -593,7 +666,10 @@
       "readme_summary": "README is an interdisciplinary computational project template with simulation and symbolic-linguistics sections; it contains proposed structure and placeholders, not evidence that the listed systems are implemented.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "last_scan_time_utc": "2026-10-27T05:15:40Z",
-      "readme_fetch_status": "SUCCESS"
+      "readme_fetch_status": "SUCCESS",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/https-AmbassadorOv.io",
@@ -613,7 +689,10 @@
       "readme_blob_sha1": null,
       "readme_summary": "README.md fetch returned 404; no inference about other documentation.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/vqbshtfsprojects.org",
@@ -633,7 +712,10 @@
       "readme_blob_sha1": null,
       "readme_summary": "GitHub API reports this repository is empty; no README content exists in this snapshot.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/awesome-chatgpt-prompts",
@@ -652,7 +734,10 @@
       "scan_status": "README_READ_2026-10-24",
       "readme_blob_sha1": "25c6254b882a96645aeacb866e735a14040913dc",
       "readme_summary": "Large README (142,443 characters) describes an Awesome ChatGPT Prompts repository; no WANGA-specific integration established by this bounded README-only scan.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/multi-agent-orchestator",
@@ -672,7 +757,10 @@
       "readme_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
       "readme_summary": "README describes a coordinator with classification, data-retrieval and reasoning agents, and a configurable local-JSON/LanceDB retrieval path; candidate overlap only, not execution evidence.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/unetbootin",
@@ -693,7 +781,10 @@
       "readme_summary": "README fetch returned HTTP 404; documentation absence is not inferred.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "last_scan_time_utc": "2026-10-27T05:15:40Z",
-      "readme_fetch_status": "HTTP_404"
+      "readme_fetch_status": "HTTP_404",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/test-notebook-links",
@@ -713,7 +804,10 @@
       "readme_blob_sha1": "cad8e71d3b07510fbcf15d7051db725b9a579cae",
       "readme_summary": "README lists notebook/Colab link tests only; no direct logic, fractal, NTM or provenance architecture evidence.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
@@ -733,7 +827,10 @@
       "readme_blob_sha1": "2866fa41c2232edaf4bfa82e299e22d54ed267ec",
       "readme_summary": "README describes SciGPT as a bot for scientists and researchers; agent/research overlap is only a discovery cue, not evidence of WANGA integration.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z"
+      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/AG-triple-X-",
@@ -752,7 +849,10 @@
       "scan_status": "README_READ_2026-10-24",
       "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
       "readme_summary": "README consists of a title pointing to World-Party-Federation-Branches-managers; identical README blob observed in two other repositories in this batch.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
@@ -771,7 +871,10 @@
       "scan_status": "README_READ_2026-10-24",
       "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
       "readme_summary": "README title is Nanomathematics; same README blob as three other repositories.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "owner"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
@@ -790,7 +893,11 @@
       "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
       "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
       "readme_summary": "README title only; insufficient evidence to infer implementation.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/MNM",
@@ -809,7 +916,11 @@
       "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
       "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
       "readme_summary": "README blob SHA matches sibling -logicl-neural-order README; establishes README byte identity only.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/-",
@@ -830,7 +941,11 @@
       "readme_summary": "README fetch returned HTTP 404; documentation absence is not inferred.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "last_scan_time_utc": "2026-10-27T05:15:40Z",
-      "readme_fetch_status": "HTTP_404"
+      "readme_fetch_status": "HTTP_404",
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
@@ -851,7 +966,11 @@
       "readme_summary": "README contains an example that concatenates predefined sections into a long-form article; no execution or WANGA integration was verified.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "last_scan_time_utc": "2026-10-27T05:15:40Z",
-      "readme_fetch_status": "SUCCESS"
+      "readme_fetch_status": "SUCCESS",
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/globalSpeed",
@@ -872,7 +991,11 @@
       "readme_summary": "README describes a browser media playback-speed extension; no direct WANGA logic-forensics overlap was established.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "last_scan_time_utc": "2026-10-27T05:15:40Z",
-      "readme_fetch_status": "SUCCESS"
+      "readme_fetch_status": "SUCCESS",
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
@@ -891,7 +1014,11 @@
       "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
       "readme_blob_sha1": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6",
       "readme_summary": "README is a single external project link; no architecture claim extracted.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/Qualia",
@@ -912,7 +1039,10 @@
       "readme_summary": "README is a short project title and blog URL only; it provides no implementation evidence.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "last_scan_time_utc": "2026-10-27T05:15:40Z",
-      "readme_fetch_status": "SUCCESS"
+      "readme_fetch_status": "SUCCESS",
+      "affiliations": [
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
@@ -931,7 +1061,11 @@
       "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
       "readme_blob_sha1": "1530209671f6f76eb1808cf17d9584437e1e867b",
       "readme_summary": "Describes Terraform infrastructure for deploying AI chat/API services across environments and regions; README warns main may be out of date.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/branches-",
@@ -952,7 +1086,10 @@
       "readme_summary": "README is a curated directory of repository/site links and placeholders; links do not establish repository identity, integration or implementation.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "last_scan_time_utc": "2026-10-27T05:15:40Z",
-      "readme_fetch_status": "SUCCESS"
+      "readme_fetch_status": "SUCCESS",
+      "affiliations": [
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
@@ -973,7 +1110,10 @@
       "readme_summary": "README is a one-line title; exact blob identity extends an existing duplicate README cluster. This does not establish repository identity or code equivalence.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "last_scan_time_utc": "2026-10-27T05:15:40Z",
-      "readme_fetch_status": "SUCCESS"
+      "readme_fetch_status": "SUCCESS",
+      "affiliations": [
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/-from-Corsican-",
@@ -994,7 +1134,11 @@
       "readme_summary": "README is a one-line title only; exact blob identity with AmbassadorOv/fluffy-parakeet.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "last_scan_time_utc": "2026-10-27T05:15:40Z",
-      "readme_fetch_status": "SUCCESS"
+      "readme_fetch_status": "SUCCESS",
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
@@ -1013,7 +1157,11 @@
       "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
       "readme_blob_sha1": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
       "readme_summary": "README title only; purpose and implementation remain unverified from this surface.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
@@ -1027,12 +1175,21 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "latest_update": "2026-10-22T06:50:54Z",
+      "latest_update_status": "GITHUB_REST_REPOSITORY_METADATA_READ",
+      "scan_status": "SKIPPED_BY_POLICY_CREDENTIAL_NAMED_2026-10-28",
       "readme_blob_sha1": null,
       "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "latest_update_metadata": {
+        "updated_at": "2026-10-05T08:21:43Z",
+        "pushed_at": "2026-10-22T06:50:54Z"
+      },
+      "last_scan_time_utc": "2026-10-28T05:11:07Z"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
@@ -1051,7 +1208,11 @@
       "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
       "readme_blob_sha1": null,
       "readme_summary": "README fetch returned 404 despite visible repository metadata; treat as an access/source gap, not proof of absent documentation.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/skills",
@@ -1070,7 +1231,11 @@
       "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
       "readme_blob_sha1": "2246383e993f161fd909122d01769059adfb9eab",
       "readme_summary": "Describes a CLI for an open agent-skills ecosystem; no WANGA-specific integration established.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
@@ -1089,7 +1254,11 @@
       "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
       "readme_blob_sha1": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32",
       "readme_summary": "Canonical research and engineering repository for AI evidence integrity, drift forensics, provenance reconstruction, verification and continuous logic mining; separates operational evidence work from future-facing logic engineering.",
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ]
     },
     {
       "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
@@ -1103,12 +1272,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "latest_update": "2026-10-22T06:51:24Z",
+      "latest_update_status": "GITHUB_REST_REPOSITORY_METADATA_READ",
+      "scan_status": "README_READ_2026-10-28",
+      "readme_blob_sha1": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "readme_summary": "README describes an Azure Blockchain Development Kit extension for VS Code; no direct WANGA logic-forensics relationship established.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "organization_member"
+      ],
+      "latest_update_metadata": {
+        "updated_at": "2020-04-20T04:05:20Z",
+        "pushed_at": "2026-10-22T06:51:24Z"
+      },
+      "last_scan_time_utc": "2026-10-28T05:11:07Z"
     },
     {
       "full_name": "tribal-archery/unetbootin",
@@ -1122,12 +1299,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
+      "latest_update": "2026-10-22T06:51:33Z",
+      "latest_update_status": "GITHUB_REST_REPOSITORY_METADATA_READ",
+      "scan_status": "README_FETCH_GAP_2026-10-28",
       "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "readme_summary": "README endpoint returned HTTP 404; repository metadata was accessible, but no README content was read.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "organization_member"
+      ],
+      "latest_update_metadata": {
+        "updated_at": "2021-02-21T13:56:37Z",
+        "pushed_at": "2026-10-22T06:51:33Z"
+      },
+      "last_scan_time_utc": "2026-10-28T05:11:07Z"
     },
     {
       "full_name": "tribal-archery/Qdprojects",
@@ -1141,12 +1326,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "latest_update": "2026-10-22T06:51:49Z",
+      "latest_update_status": "GITHUB_REST_REPOSITORY_METADATA_READ",
+      "scan_status": "README_READ_2026-10-28",
+      "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "readme_summary": "README is the title “Nanomathematics” only; exact blob duplicate of other distinct repository READMEs.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "organization_member"
+      ],
+      "latest_update_metadata": {
+        "updated_at": "2025-01-06T00:57:14Z",
+        "pushed_at": "2026-10-22T06:51:49Z"
+      },
+      "last_scan_time_utc": "2026-10-28T05:11:07Z"
     },
     {
       "full_name": "tribal-archery/mermaid",
@@ -1160,12 +1353,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "latest_update": "2026-10-22T06:52:04Z",
+      "latest_update_status": "GITHUB_REST_REPOSITORY_METADATA_READ",
+      "scan_status": "README_READ_2026-10-28",
+      "readme_blob_sha1": "280725af7ea2fec9941f5711283c65a94523d60c",
+      "readme_summary": "README describes text-to-diagram rendering; visualization infrastructure, not logical proof or semantic verification.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "organization_member"
+      ],
+      "latest_update_metadata": {
+        "updated_at": "2025-02-02T08:51:53Z",
+        "pushed_at": "2026-10-22T06:52:04Z"
+      },
+      "last_scan_time_utc": "2026-10-28T05:11:07Z"
     },
     {
       "full_name": "tribal-archery/copilot-cli",
@@ -1179,12 +1380,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "latest_update": "2026-10-22T06:52:12Z",
+      "latest_update_status": "GITHUB_REST_REPOSITORY_METADATA_READ",
+      "scan_status": "README_READ_2026-10-28",
+      "readme_blob_sha1": "1cff9f51b830cee89bfc656ddc6ab140141226cf",
+      "readme_summary": "GitHub Copilot CLI public-preview README describes terminal-native agentic coding, GitHub context and MCP extensibility; no WANGA integration established.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "organization_member"
+      ],
+      "latest_update_metadata": {
+        "updated_at": "2025-12-13T22:23:45Z",
+        "pushed_at": "2026-10-22T06:52:12Z"
+      },
+      "last_scan_time_utc": "2026-10-28T05:11:07Z"
     },
     {
       "full_name": "tribal-archery/-logicl-neural-order",
@@ -1198,12 +1407,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "latest_update": "2026-10-22T06:52:20Z",
+      "latest_update_status": "GITHUB_REST_REPOSITORY_METADATA_READ",
+      "scan_status": "README_READ_2026-10-28",
+      "readme_blob_sha1": "0ffc15fb869fd479081714d71464b1a77563b92e",
+      "readme_summary": "NTM/WANGA orchestration repository; V1 control-plane skeleton, 28 thought modes, provider-neutral adapter, evidence/provenance and verification boundaries.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "organization_member"
+      ],
+      "latest_update_metadata": {
+        "updated_at": "2026-10-08T13:22:35Z",
+        "pushed_at": "2026-10-22T06:52:20Z"
+      },
+      "last_scan_time_utc": "2026-10-28T05:11:07Z"
     },
     {
       "full_name": "tribal-archery/MAM-parsed",
@@ -1217,12 +1434,125 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "NOT_SCANNED_IN_CURRENT_TWO_BATCH_WINDOW",
-      "readme_blob_sha1": null,
-      "readme_summary": null,
-      "source_scope": "PUBLIC_REPOSITORY_READ"
+      "latest_update": "2026-10-22T06:52:28Z",
+      "latest_update_status": "GITHUB_REST_REPOSITORY_METADATA_READ",
+      "scan_status": "README_READ_2026-10-28",
+      "readme_blob_sha1": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c",
+      "readme_summary": "Miqra According to the Masorah in two parsed JSON formats, one JSON file per 24 books; upstream source is a Google Sheet and the format is explicitly not stable.",
+      "source_scope": "PUBLIC_REPOSITORY_READ",
+      "affiliations": [
+        "organization_member"
+      ],
+      "latest_update_metadata": {
+        "updated_at": "2026-10-02T01:05:37Z",
+        "pushed_at": "2026-10-22T06:52:28Z"
+      },
+      "last_scan_time_utc": "2026-10-28T05:11:07Z"
     }
-  ]
+  ],
+  "policy_skipped_count": 1,
+  "policy_skipped_repositories": [
+    "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY"
+  ],
+  "additional_targeted_docs_read_current_cycle": 6,
+  "current_batch": {
+    "attempted_repositories": [
+      "tribal-archery/-logicl-neural-order",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/Qdprojects",
+      "tribal-archery/copilot-cli",
+      "tribal-archery/mermaid",
+      "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "tribal-archery/unetbootin",
+      "tribal-archery/vscode-azure-blockchain-ethereum"
+    ],
+    "readme_successes": [
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "path": "README.md",
+        "git_blob_sha1": "0ffc15fb869fd479081714d71464b1a77563b92e"
+      },
+      {
+        "repository_full_name": "tribal-archery/MAM-parsed",
+        "path": "README.md",
+        "git_blob_sha1": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c"
+      },
+      {
+        "repository_full_name": "tribal-archery/Qdprojects",
+        "path": "README.md",
+        "git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107"
+      },
+      {
+        "repository_full_name": "tribal-archery/copilot-cli",
+        "path": "README.md",
+        "git_blob_sha1": "1cff9f51b830cee89bfc656ddc6ab140141226cf"
+      },
+      {
+        "repository_full_name": "tribal-archery/mermaid",
+        "path": "README.md",
+        "git_blob_sha1": "280725af7ea2fec9941f5711283c65a94523d60c"
+      },
+      {
+        "repository_full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
+        "path": "README.md",
+        "git_blob_sha1": "625c97bbc9115e868a9217bdc729341f8a0d1759"
+      }
+    ],
+    "readme_gaps": [
+      {
+        "repository_full_name": "tribal-archery/unetbootin",
+        "branch_ref": "master",
+        "exact_file_path": "README.md",
+        "source_uri": "https://github.com/tribal-archery/unetbootin/blob/master/README.md",
+        "git_blob_sha1": null,
+        "excerpt_or_summary": "README endpoint returned HTTP 404; repository metadata was accessible, but no README content was read.",
+        "epistemic_status": "ACCESS_GAP",
+        "permission_scope": "PUBLIC_REPOSITORY_READ",
+        "scan_status": "FETCH_GAP_HTTP_404",
+        "next_action": "Retry only through an explicitly exposed tree/path; do not infer repository content or absence."
+      }
+    ],
+    "policy_skips": [
+      {
+        "repository_full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+        "reason": "Credential-like repository name; content was intentionally not opened in this cycle.",
+        "epistemic_status": "BLOCKED",
+        "permission_scope": "PUBLIC_METADATA_ONLY",
+        "scan_status": "SKIPPED_BY_POLICY_CREDENTIAL_NAMED"
+      }
+    ],
+    "targeted_documents_read": [
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "path": "AGENTS.md",
+        "git_blob_sha1": "ca0531df522da9f03f280cbc2b2633bb4b473e0f"
+      },
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "path": "ORGANIZATION_INDEX.md",
+        "git_blob_sha1": "9dc029448928dd7c5a5b3c901b13cf64e6018cba"
+      },
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "path": "PROJECT_STATUS_V1.md",
+        "git_blob_sha1": "16353e3b29aeff19721a553eefa094dc4498b660"
+      },
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "path": "NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+        "git_blob_sha1": "68c171349aedc8f9c24d3a795de7bcde9eb07539"
+      },
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "path": "NEURAL_ORCHESTRATION/PROTOTYPE_READINESS_V1.md",
+        "git_blob_sha1": "d3dce812dff67247c5f9c21ee00f9e1e49bfdfdc"
+      },
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "path": "NEURAL_ORCHESTRATION/orchestrator.py",
+        "git_blob_sha1": "b087449d057f5367f2f7508441d8286551306e4e"
+      }
+    ],
+    "scan_time_utc": "2026-10-28T05:11:07Z"
+  }
 }
