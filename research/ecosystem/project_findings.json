@@ -1084,21 +1084,6 @@
       "scan_status": "READ",
       "next_action": "Retry via an explicitly exposed path in a later batch; do not infer absence.",
       "scan_time_utc": "2026-10-28T05:11:07Z"
-    },
-    {
-      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/GOOGLE_API_KEY/blob/main/README.md",
-      "repository_full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
-      "branch_ref": "main",
-      "exact_file_path": "README.md",
-      "git_blob_sha1": null,
-      "excerpt_or_summary": "Content intentionally not fetched because the repository name is credential-like; public metadata only.",
-      "epistemic_status": "BLOCKED",
-      "overlap_candidates": [],
-      "contradictions": [],
-      "permission_scope": "PUBLIC_REPOSITORY_READ",
-      "scan_status": "READ",
-      "next_action": "Do not inspect or copy credential-like material without a clearly safe, authorized scope.",
-      "scan_time_utc": "2026-10-28T05:11:07Z"
     }
   ],
   "duplicate_readme_clusters": [
@@ -1777,5 +1762,14 @@
     ],
     "status": "DIRECT_TEXTUAL_EVIDENCE_ONLY"
   },
-  "no_claims_or_logic_units_promoted": true
+  "no_claims_or_logic_units_promoted": true,
+  "policy_skips_current_cycle": [
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "status": "SKIPPED_BY_POLICY",
+      "reason": "Credential-like repository name; metadata only. No README path was asserted or content fetched.",
+      "permission_scope": "PUBLIC_METADATA_ONLY",
+      "scan_time_utc": "2026-10-28T05:11:07Z"
+    }
+  ]
 }
