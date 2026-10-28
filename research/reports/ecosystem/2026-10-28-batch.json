@@ -1,0 +1,268 @@
+{
+  "schema_version": "wanga-ecosystem-cycle-report/1.0",
+  "report_id": "WANGA-ECOSYSTEM-BATCH-2026-10-28",
+  "generated_at_utc": "2026-10-28T05:11:07Z",
+  "snapshot_date": "2026-10-28",
+  "inventory": {
+    "unique_repositories": 63,
+    "owner_affiliations": 38,
+    "collaborator_affiliations": 13,
+    "organization_member_affiliations": 25,
+    "public_repositories": 58,
+    "private_repositories_omitted": 5,
+    "unknown_visibility_repositories": 0,
+    "scanned_public_repositories_cumulative": 58,
+    "readme_reads_cumulative": 50,
+    "readme_fetch_gaps_cumulative": 7,
+    "policy_skips_cumulative": 1,
+    "remaining_public_repositories": 0,
+    "inventory_name_diff": {
+      "missing_from_existing": [],
+      "no_longer_visible": []
+    }
+  },
+  "batch": {
+    "attempted_repositories": [
+      "tribal-archery/-logicl-neural-order",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/Qdprojects",
+      "tribal-archery/copilot-cli",
+      "tribal-archery/mermaid",
+      "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "tribal-archery/unetbootin",
+      "tribal-archery/vscode-azure-blockchain-ethereum"
+    ],
+    "readme_successes": [
+      {
+        "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/README.md",
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "branch_ref": "master",
+        "exact_file_path": "README.md",
+        "git_blob_sha1": "0ffc15fb869fd479081714d71464b1a77563b92e",
+        "excerpt_or_summary": "NTM/WANGA orchestration repository; V1 control-plane skeleton, 28 thought modes, provider-neutral adapter, evidence/provenance and verification boundaries.",
+        "epistemic_status": "README_SURFACE_CUES_ONLY",
+        "permission_scope": "PUBLIC_REPOSITORY_READ",
+        "scan_time_utc": "2026-10-28T05:11:07Z"
+      },
+      {
+        "source_uri": "https://github.com/tribal-archery/MAM-parsed/blob/main/README.md",
+        "repository_full_name": "tribal-archery/MAM-parsed",
+        "branch_ref": "main",
+        "exact_file_path": "README.md",
+        "git_blob_sha1": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c",
+        "excerpt_or_summary": "Miqra According to the Masorah in two parsed JSON formats, one JSON file per 24 books; upstream source is a Google Sheet and the format is explicitly not stable.",
+        "epistemic_status": "README_SURFACE_CUES_ONLY",
+        "permission_scope": "PUBLIC_REPOSITORY_READ",
+        "scan_time_utc": "2026-10-28T05:11:07Z"
+      },
+      {
+        "source_uri": "https://github.com/tribal-archery/Qdprojects/blob/master/README.md",
+        "repository_full_name": "tribal-archery/Qdprojects",
+        "branch_ref": "master",
+        "exact_file_path": "README.md",
+        "git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+        "excerpt_or_summary": "README is the title “Nanomathematics” only; exact blob duplicate of other distinct repository READMEs.",
+        "epistemic_status": "README_SURFACE_CUES_ONLY",
+        "permission_scope": "PUBLIC_REPOSITORY_READ",
+        "scan_time_utc": "2026-10-28T05:11:07Z"
+      },
+      {
+        "source_uri": "https://github.com/tribal-archery/copilot-cli/blob/main/README.md",
+        "repository_full_name": "tribal-archery/copilot-cli",
+        "branch_ref": "main",
+        "exact_file_path": "README.md",
+        "git_blob_sha1": "1cff9f51b830cee89bfc656ddc6ab140141226cf",
+        "excerpt_or_summary": "GitHub Copilot CLI public-preview README describes terminal-native agentic coding, GitHub context and MCP extensibility; no WANGA integration established.",
+        "epistemic_status": "README_SURFACE_CUES_ONLY",
+        "permission_scope": "PUBLIC_REPOSITORY_READ",
+        "scan_time_utc": "2026-10-28T05:11:07Z"
+      },
+      {
+        "source_uri": "https://github.com/tribal-archery/mermaid/blob/develop/README.md",
+        "repository_full_name": "tribal-archery/mermaid",
+        "branch_ref": "develop",
+        "exact_file_path": "README.md",
+        "git_blob_sha1": "280725af7ea2fec9941f5711283c65a94523d60c",
+        "excerpt_or_summary": "README describes text-to-diagram rendering; visualization infrastructure, not logical proof or semantic verification.",
+        "epistemic_status": "README_SURFACE_CUES_ONLY",
+        "permission_scope": "PUBLIC_REPOSITORY_READ",
+        "scan_time_utc": "2026-10-28T05:11:07Z"
+      },
+      {
+        "source_uri": "https://github.com/tribal-archery/vscode-azure-blockchain-ethereum/blob/master/README.md",
+        "repository_full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
+        "branch_ref": "master",
+        "exact_file_path": "README.md",
+        "git_blob_sha1": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+        "excerpt_or_summary": "README describes an Azure Blockchain Development Kit extension for VS Code; no direct WANGA logic-forensics relationship established.",
+        "epistemic_status": "README_SURFACE_CUES_ONLY",
+        "permission_scope": "PUBLIC_REPOSITORY_READ",
+        "scan_time_utc": "2026-10-28T05:11:07Z"
+      }
+    ],
+    "readme_fetch_gaps": [
+      {
+        "repository_full_name": "tribal-archery/unetbootin",
+        "branch_ref": "master",
+        "exact_file_path": "README.md",
+        "source_uri": "https://github.com/tribal-archery/unetbootin/blob/master/README.md",
+        "git_blob_sha1": null,
+        "excerpt_or_summary": "README endpoint returned HTTP 404; repository metadata was accessible, but no README content was read.",
+        "epistemic_status": "ACCESS_GAP",
+        "permission_scope": "PUBLIC_REPOSITORY_READ",
+        "scan_status": "FETCH_GAP_HTTP_404",
+        "next_action": "Retry only through an explicitly exposed tree/path; do not infer repository content or absence."
+      }
+    ],
+    "policy_skips": [
+      {
+        "repository_full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+        "reason": "Credential-like repository name; content was intentionally not opened in this cycle.",
+        "epistemic_status": "BLOCKED",
+        "permission_scope": "PUBLIC_METADATA_ONLY",
+        "scan_status": "SKIPPED_BY_POLICY_CREDENTIAL_NAMED"
+      }
+    ],
+    "targeted_ntm_documents": [
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "branch_ref": "master",
+        "exact_file_path": "AGENTS.md",
+        "git_blob_sha1": "ca0531df522da9f03f280cbc2b2633bb4b473e0f",
+        "summary": "Agent contract fixes the execution order PRIORITY→CONTEXT→INTENT→ROUTE→EVIDENCE→COMPUTE→VERIFY→SELF-AUDIT→RESULT; preserves task, machine, provenance and parent IDs; a Decision Gate authorizes system action."
+      },
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "branch_ref": "master",
+        "exact_file_path": "ORGANIZATION_INDEX.md",
+        "git_blob_sha1": "9dc029448928dd7c5a5b3c901b13cf64e6018cba",
+        "summary": "Organization index names NTM, Neural OS, Brain Network, AI Drift Forensics, AI231, Ontometric Research and WANGA Infrastructure; M001–M100+ is a logical scaling target, not proof of live provider connections."
+      },
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "branch_ref": "master",
+        "exact_file_path": "PROJECT_STATUS_V1.md",
+        "git_blob_sha1": "16353e3b29aeff19721a553eefa094dc4498b660",
+        "summary": "V1 status lists an orchestration kernel, 28 modes, deterministic capability routing, registry abstraction, provider-neutral ModelAdapter, task/result envelopes, verification gate and audit/provenance; parallel dispatch, task graph, persistent audit and drift feedback remain milestones."
+      },
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "branch_ref": "master",
+        "exact_file_path": "NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+        "git_blob_sha1": "68c171349aedc8f9c24d3a795de7bcde9eb07539",
+        "summary": "Architecture specifies shared task identity, context/state protocol, evidence/provenance, verification, drift taxonomy and decision gate; the document is an architecture target, not evidence of production deployment."
+      },
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "branch_ref": "master",
+        "exact_file_path": "NEURAL_ORCHESTRATION/PROTOTYPE_READINESS_V1.md",
+        "git_blob_sha1": "d3dce812dff67247c5f9c21ee00f9e1e49bfdfdc",
+        "summary": "Prototype DoD requires deterministic routing, evidence retrieval, a verifier separate from generation, provenance, contradiction preservation and drift records; this document is a readiness contract, not proof each item is implemented."
+      },
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "branch_ref": "master",
+        "exact_file_path": "NEURAL_ORCHESTRATION/orchestrator.py",
+        "git_blob_sha1": "b087449d057f5367f2f7508441d8286551306e4e",
+        "summary": "Code defines TaskEnvelope, MachineRegistry, ComputationAllocator, VerificationGate and AuditRecorder. The inspected execute() loop iterates machine IDs sequentially; max_parallel bounds selection but does not itself establish concurrent dispatch."
+      }
+    ],
+    "targeted_refreshes_not_counted_as_new_batch": [
+      "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "Quadruple-Multilevel-projection-project/globalSpeed",
+      "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "Quadruple-Multilevel-projection-project/MNM",
+      "Quadruple-Multilevel-projection-project/skills",
+      "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department"
+    ],
+    "duplicate_readme_cluster_extended": {
+      "git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "repositories": [
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/MNM",
+        "tribal-archery/Qdprojects"
+      ],
+      "scope": "Exact README blob identity only; no repository identity, code equivalence or semantic relationship inferred."
+    }
+  },
+  "source_extraction": {
+    "claims_added": 0,
+    "logic_units_added": 0,
+    "semantic_entailments_asserted": 0,
+    "source_spans_added": 0,
+    "composition_candidates_added": 0,
+    "status": "NO_SEMANTIC_PROMOTION",
+    "reason": "README and architecture documents were registered as source evidence; no reversible sentence/span mapping into accepted logical units was created in this batch."
+  },
+  "integration_proposals": [
+    {
+      "proposal_id": "NTM-WANGA-INTEROP-2026-10-28",
+      "status": "PROPOSAL_NOT_IMPLEMENTED",
+      "source_repositories": [
+        "tribal-archery/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "evidence_paths": [
+        "tribal-archery/-logicl-neural-order/AGENTS.md",
+        "tribal-archery/-logicl-neural-order/NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+        "tribal-archery/-logicl-neural-order/NEURAL_ORCHESTRATION/orchestrator.py",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB/logic_wiki/data/agent_registry.json"
+      ],
+      "overlap": "Task identity, machine identity, evidence references, provenance, verification gate and drift classification.",
+      "proposal": "Draft a WANGA-side adapter contract mapping NTM TaskEnvelope/DispatchResult to WANGA source/rule/goal/constraint and evidence envelopes. Preserve task_id, machine_id, parent IDs, input hashes and verifier separation.",
+      "implementation_gap": "The inspected NTM execute() loop is sequential; max_parallel bounds selected machines but does not establish concurrent dispatch. Provider adapters and persistent audit are listed as future milestones.",
+      "constraints": [
+        "No write to the NTM repository in this cycle.",
+        "No model endpoint or credential configured.",
+        "No semantic entailment inferred from architecture overlap.",
+        "Review branch and tests required before implementation."
+      ]
+    },
+    {
+      "proposal_id": "MAM-PARSED-SOURCE-INGESTION-2026-10-28",
+      "status": "PROPOSAL_NOT_IMPLEMENTED",
+      "source_repositories": [
+        "tribal-archery/MAM-parsed"
+      ],
+      "evidence_paths": [
+        "tribal-archery/MAM-parsed/README.md"
+      ],
+      "overlap": "Potential structured textual corpus for source collection and reversible normalization.",
+      "proposal": "Before ingestion, pin the upstream MAM Google Sheet revision, exact book/file hashes, parser/schema version and stable source spans; keep parsed-format differences explicit.",
+      "implementation_gap": "The README says the parsed format is not yet stable and describes differences between plain and plus formats.",
+      "constraints": [
+        "Do not auto-ingest as authoritative text.",
+        "No logic units added.",
+        "No cross-repository write."
+      ]
+    }
+  ],
+  "library": {
+    "search_calls": 3,
+    "full_file_reads": 3,
+    "transcripts_ingested": 0,
+    "conversation_export_found": false,
+    "private_content_published": 0,
+    "private_file_hashes_computed": 0,
+    "limitation": "Targeted Library semantic search only; no full Library inventory and no access to unseen private ChatGPT conversations."
+  },
+  "access_gaps": [
+    "Five private repositories are omitted from public registry names, paths and content; no approved private reporting destination was used.",
+    "One public README fetch returned HTTP 404: tribal-archery/unetbootin.",
+    "One credential-like public repository was metadata-only and skipped by policy.",
+    "No ChatGPT export JSON/ZIP is present in research/inbox/conversations; that directory exposes only its README intake contract.",
+    "GitHub Actions cross-repository scout remains limited by missing CROSS_REPO_READ_TOKEN (previous run reported HTTP 403); connected integration inventory is separate.",
+    "Public README sweep completion is not a full code/content audit."
+  ],
+  "next_cursor": {
+    "priority_order_index": 58,
+    "next_batch": [],
+    "remaining_public_repositories": 0
+  },
+  "status": "PUBLIC_README_SWEEP_COMPLETE_WITH_GAPS; FULL_ECOSYSTEM_AUDIT_IN_PROGRESS"
+}
