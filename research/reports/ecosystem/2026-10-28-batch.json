@@ -264,5 +264,37 @@
     "next_batch": [],
     "remaining_public_repositories": 0
   },
-  "status": "PUBLIC_README_SWEEP_COMPLETE_WITH_GAPS; FULL_ECOSYSTEM_AUDIT_IN_PROGRESS"
+  "status": "PUBLIC_README_SWEEP_COMPLETE_WITH_GAPS; FULL_CODE_AUDIT_IN_PROGRESS; PR_CI_SOFTWARE_CHECKS_PASS",
+  "github_actions_scout": {
+    "workflow_run_id": 40637362516,
+    "conclusion": "SUCCESS_WITH_SCOPE_BLOCKER",
+    "artifact_id": 12794281393,
+    "artifact_size_bytes": 3224,
+    "artifact_sha256": "1dfc1d92e799cd5db22e5db2d82df8ccd3f941c5ff895db926170e80f885f232",
+    "mode": "CURRENT_REPOSITORY_ONLY",
+    "repositories_scanned": 1,
+    "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "cross_repo_token_configured": false,
+    "error": "HTTP 403 Resource not accessible by integration",
+    "note": "The GitHub Actions runner cannot replace the connected GitHub integration's 63-repository affiliation snapshot."
+  },
+  "current_pr_ci": {
+    "head_sha": "ca2ab82b9547a2891a4ae2cd1e2005fdf44e8693",
+    "logic_fractal_wiki": {
+      "run_id": 40637362514,
+      "conclusion": "success"
+    },
+    "repository_integrity": {
+      "run_id": 40637362551,
+      "conclusion": "success"
+    },
+    "codeql": {
+      "run_id": 40637362522,
+      "conclusion": "success"
+    },
+    "ecosystem_sweep": {
+      "run_id": 40637362516,
+      "conclusion": "success_with_scope_blocker"
+    }
+  }
 }
