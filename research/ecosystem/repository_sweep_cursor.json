@@ -1,17 +1,8 @@
 {
-  "snapshot_date": "2026-10-27",
-  "priority_order_index": 50,
-  "after_last_scanned": "Quadruple-Multilevel-projection-project/-from-Corsican-",
-  "next_batch": [
-    "tribal-archery/-logicl-neural-order",
-    "tribal-archery/MAM-parsed",
-    "tribal-archery/Qdprojects",
-    "tribal-archery/copilot-cli",
-    "tribal-archery/mermaid",
-    "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
-    "tribal-archery/unetbootin",
-    "tribal-archery/vscode-azure-blockchain-ethereum"
-  ],
-  "remaining_public_repositories": 8,
-  "policy": "Bounded batch of approximately 10 repositories; do not infer absence from search or README 404."
+  "snapshot_date": "2026-10-28",
+  "priority_order_index": 58,
+  "after_last_scanned": "tribal-archery/vscode-azure-blockchain-ethereum",
+  "next_batch": [],
+  "remaining_public_repositories": 0,
+  "policy": "The 58 public repositories in the current connected snapshot have had README-level attempts; 50 reads, 7 HTTP 404 gaps and 1 policy skip. Re-open the cursor if the access inventory changes. Full repository content audit remains incomplete."
 }
