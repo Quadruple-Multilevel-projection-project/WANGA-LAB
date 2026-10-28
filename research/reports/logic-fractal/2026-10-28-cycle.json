@@ -47,7 +47,22 @@
     "source_grounded_benchmark_status": "BLOCKED_INSUFFICIENT_REVIEWED_CASES",
     "holdout_split": false,
     "independent_review_cycles": 0,
-    "model_backend": "NOT_CONFIGURED"
+    "model_backend": "NOT_CONFIGURED",
+    "source_grounded_report": {
+      "status": "BLOCKED_INSUFFICIENT_REVIEWED_CASES",
+      "case_count": 0,
+      "reviewed_executable_case_count": 0,
+      "risk_case_counts": {
+        "BOUNDARY": 0,
+        "COUNTEREXAMPLE": 0,
+        "NEGATIVE": 0
+      },
+      "source_class_count": 0,
+      "reviewed_splits": [],
+      "holdout_score": null,
+      "semantic_status": "NOT_YET_VERIFIED",
+      "report_sha256": "7e8ff3b836020e6deffa9c22be99e98836dbc615b913f0e025e6065446da0195"
+    }
   },
   "first_model": {
     "readiness_gate": "FIRST_MODEL_ALPHA_V1",
@@ -92,12 +107,12 @@
     "semantic_status": "NOT_YET_VERIFIED",
     "release_status": "CANDIDATE_NOT_RELEASED",
     "artifact": {
-      "workflow_run_id": 40455458179,
-      "artifact_id": 12712004545,
+      "workflow_run_id": 40637362514,
+      "artifact_id": 12793498446,
       "artifact_name": "logic-wiki-research-report",
-      "size_bytes": 81550,
-      "artifact_sha256": "86bfa1535ad7eac89731f83cc4a2bbe214910021d38d73e4e19dd3c589eaf65c",
-      "created_at": "2026-10-27T05:28:07Z"
+      "size_bytes": 89057,
+      "artifact_sha256": "7b36d640a23beaef7a7a074eb05c898c50b372371c6149bbc0e19324e153fce0",
+      "created_at": "2026-10-28T05:20:09Z"
     }
   },
   "limbo": {
@@ -135,10 +150,44 @@
       "root_cause_status": "NOT_YET_ESTABLISHED"
     },
     "unresolved_incidents_without_latest_passing_retest": 9,
-    "current_head_ci": "ACTION_REQUIRED",
+    "current_head_ci": {
+      "workflow_runs": [
+        40167547736,
+        40167547828,
+        40167547744
+      ],
+      "conclusion": "ACTION_REQUIRED",
+      "jobs_returned": 0,
+      "current_head_verified": false
+    },
     "current_head_jobs_returned": 0,
     "previous_commit_ci": "PASS",
-    "state_assessment": "RECURRENCE_PATTERN_OBSERVED_CURRENT_SYSTEM_STATE_UNASSESSED"
+    "state_assessment": "RECURRENCE_PATTERN_OBSERVED_CURRENT_SYSTEM_STATE_UNASSESSED",
+    "recurrence": {
+      "cluster_id": "CLUSTER-3ce9a39032dad563",
+      "status": "RECURRENT_UNRESOLVED",
+      "incident_count": 7,
+      "retest_pass_count": 0,
+      "observed_intervals_hours": [
+        22.224,
+        23.793,
+        23.753,
+        23.741,
+        24.261,
+        24.597
+      ],
+      "interpretation_boundary": "Exact component/observed-state grouping only; no cause or future continuation inferred."
+    },
+    "single_point_unresolved_incidents": [
+      "CRASH-GHA-37763700482",
+      "CRASH-GHA-39239703376"
+    ],
+    "local_replay": {
+      "status": "BLOCKED",
+      "attempted": "Sparse clone of public PR #122 branch for local test replay",
+      "result": "Container could not resolve github.com; no local test code was executed.",
+      "next_action": "Require GitHub Actions approval/current-head CI or a reachable runner."
+    }
   },
   "wix": {
     "status": "PUBLISHED_READ_BACK_PARTIAL",
@@ -151,25 +200,26 @@
     "decision": "NO_CATALOG_CHANGE; NO_WIX_WRITE; retain mismatch for approved reconciliation."
   },
   "ci": {
-    "previous_pr_head": "c9ec019cb0305260cbe946c3b7f8d71f1a958651",
+    "current_head": "ca2ab82b9547a2891a4ae2cd1e2005fdf44e8693",
     "logic_fractal_wiki": {
-      "run_id": 40455458179,
+      "run_id": 40637362514,
       "conclusion": "success"
     },
     "repository_integrity": {
-      "run_id": 40455458240,
+      "run_id": 40637362551,
       "conclusion": "success"
     },
     "codeql": {
-      "run_id": 40455458450,
+      "run_id": 40637362522,
       "conclusion": "success"
     },
     "ecosystem_sweep": {
-      "run_id": 40455159669,
+      "run_id": 40637362516,
       "conclusion": "success_with_scope_blocker",
-      "scope": "CURRENT_REPOSITORY_ONLY"
+      "scope": "CURRENT_REPOSITORY_ONLY",
+      "cross_repo_token_configured": false
     },
-    "current_update_ci": "PENDING"
+    "all_software_checks": "PASS_WITH_ECOSYSTEM_SCOPE_BLOCKER"
   },
   "pull_requests": {
     "current_report_pr": 133,
@@ -244,9 +294,9 @@
     },
     {
       "role": "Test/CI Evaluator",
-      "status": "COMPLETED_ON_PREVIOUS_HEAD",
+      "status": "COMPLETED_SOFTWARE_CI_PASS_SEMANTIC_BLOCKED",
       "input": "GitHub Actions run 40455458179 and artifacts",
-      "output": "Software tests PASS; semantic benchmark cases 0",
+      "output": "Logic Fractal Wiki Research, Repository Integrity and CodeQL passed on the updated PR #133 head; Ecosystem Agent Sweep succeeded in CURRENT_REPOSITORY_ONLY mode with HTTP 403 scope blocker; semantic cases remain 0.",
       "next_action": "Check CI for this report update commit."
     },
     {
@@ -258,24 +308,26 @@
     },
     {
       "role": "Report Publisher",
-      "status": "IN_PROGRESS",
+      "status": "COMPLETED_DRAFT_PR_UPDATED_CI_PASS",
       "input": "Updated inventory/findings/cursor and cycle reports",
-      "output": "Updating existing Draft PR #133",
-      "next_action": "Verify new head CI; keep draft pending human review."
+      "output": "Updated registries, cursor and 2026-10-28 reports on existing PR #133 branch; no merge.",
+      "next_action": "Keep Draft pending human review and current base-branch reconciliation."
     }
   ],
   "blocked": [
-    "No GitHub Actions workflow-dispatch tool is exposed to this runtime; the most recent successful Logic Fractal run was used instead of triggering a duplicate run.",
-    "PR #122 current-head workflows require action; no current-head jobs are available to rerun.",
-    "Wix supplemental page read-back remains stale; no catalog changes approved in this cycle.",
-    "Full ChatGPT conversation export and private Library hash workflow are unavailable."
+    "PR #122 current-head workflows are ACTION_REQUIRED and return zero jobs.",
+    "Local PR #122 replay could not start because the container could not resolve github.com.",
+    "No GitHub Actions workflow-dispatch or workflow-approval action is exposed to this runtime.",
+    "Wix supplemental page remains stale; no approved catalog changes were made.",
+    "Full ChatGPT export and private Library hash workflow remain unavailable."
   ],
   "next": [
-    "Verify CI on the updated PR #133 head.",
-    "Resolve PR #132 contradiction inventory semantics before readiness counts can pass.",
-    "Replay the TUNE candidate and reconcile its NOT_RUN status with the recorded incident PASS event.",
-    "Reproduce the seven-run Vitruvius queue-contract recurrence against actual generated JSON and append a linked retest event.",
-    "Create reviewed source-grounded negative/boundary/counterexample cases and frozen holdout before changing weights.",
-    "Keep MLN as the continuous numeric/operator prototype, NTM as orchestration/evidence/replay, and LNL as explicit typed logic language; do not merge their roles."
+    "Keep PR #133 Draft; its current head software checks pass, but no auto-merge.",
+    "Resolve PR #132 so contradiction inventory is explicitly unknown until reviewed, not zero.",
+    "Reconcile the Limbo incident PASS event with TUNE-9c166900cc4ad5dd replay_status=NOT_RUN; run a current-head replay when Actions approval is available.",
+    "Address the seven-run Vitruvius queue-contract recurrence with linked source evidence and a retest; preserve all prior incidents.",
+    "Create source-grounded negative/boundary/counterexample cases, reviewed suites and frozen holdout before changing weights.",
+    "Review NTM adapter interoperability and MAM-parsed source-versioning proposals; do not write to collaborator repositories.",
+    "Do not publish to Wix until approved catalog changes exist and deployment read-back is available."
   ]
 }
