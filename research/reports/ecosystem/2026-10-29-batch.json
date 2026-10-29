@@ -236,10 +236,33 @@
       "state": "OPEN_DRAFT",
       "head": "automation/wanga-unified-work-loop-2026-10-27",
       "head_sha": "49be9ef23d17e4952653d196a5616771e69c1eca",
-      "ahead_by": 26,
+      "ahead_by": 33,
       "behind_by": 10,
       "base": "main",
-      "merge_status": "NOT_MERGED"
+      "merge_status": "NOT_MERGED",
+      "head_sha_before_post_commit_status_update": "d4b2234f8b9fa37f0b37ca1a92aebbb4ee1f59a2",
+      "ci_after_report_commit": [
+        {
+          "id": 40823563328,
+          "name": "WANGA Ecosystem Agent Sweep",
+          "conclusion": "success"
+        },
+        {
+          "id": 40823563382,
+          "name": "Logic Fractal Wiki Research",
+          "conclusion": "success"
+        },
+        {
+          "id": 40823563383,
+          "name": "Repository Integrity",
+          "conclusion": "success"
+        },
+        {
+          "id": 40823563273,
+          "name": "CodeQL Advanced",
+          "conclusion": "success"
+        }
+      ]
     },
     "ci_on_previous_head": {
       "workflow_runs": [
@@ -267,7 +290,7 @@
       ]
     }
   },
-  "status": "COMPLETED_WITH_ACCESS_AND_CONFIGURATION_GAPS",
+  "status": "COMPLETED_REPORTS_COMMITTED_CI_PASS_WITH_ACCESS_AND_CONFIGURATION_GAPS",
   "next": [
     "Keep the 58-repository README cursor exhausted unless the visible inventory changes.",
     "Configure and validate a real model/backend before interpreting the regional probe metadata.",
