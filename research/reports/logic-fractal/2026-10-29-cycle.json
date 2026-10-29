@@ -375,7 +375,7 @@
     },
     {
       "agent": "publisher",
-      "status": "IN_PROGRESS",
+      "status": "COMPLETED_REPORTS_AND_REGISTRIES_COMMITTED",
       "output": "Reports and registries are being added to the existing Draft PR branch; Wix publication not attempted."
     }
   ],
@@ -395,5 +395,51 @@
     "Add an explicit reviewed core-contradiction inventory; unknown must remain NOT_MEASURED.",
     "Reconcile PR #133 with current main and run fresh CI before any merge consideration.",
     "Only publish reviewed source-backed catalog/report changes to Wix, then download/read back the deployment."
-  ]
+  ],
+  "post_commit_verification": {
+    "checked_head": "d4b2234f8b9fa37f0b37ca1a92aebbb4ee1f59a2",
+    "branch_ahead_by": 33,
+    "branch_behind_by": 10,
+    "ci": [
+      {
+        "run_id": 40823563328,
+        "name": "WANGA Ecosystem Agent Sweep",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "run_id": 40823563382,
+        "name": "Logic Fractal Wiki Research",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "run_id": 40823563383,
+        "name": "Repository Integrity",
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "run_id": 40823563273,
+        "name": "CodeQL Advanced",
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "artifacts": [
+      {
+        "run_id": 40823563328,
+        "artifact_id": 12875757090,
+        "name": "wanga-ecosystem-sweep-91",
+        "size_bytes": 3224
+      },
+      {
+        "run_id": 40823563382,
+        "artifact_id": 12875761812,
+        "name": "logic-wiki-research-report",
+        "size_bytes": 98992
+      }
+    ],
+    "note": "These checks validate the report/registry update branch head recorded above. PR #133 remains Draft and is still 10 commits behind main."
+  }
 }
