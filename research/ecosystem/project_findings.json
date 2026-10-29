@@ -1,8 +1,8 @@
 {
   "schema_version": "wanga-project-findings/1.1",
-  "snapshot_date": "2026-10-28",
-  "generated_at_utc": "2026-10-28T05:11:07Z",
-  "scope": "40 distinct public repositories scanned across the 2026-10-23 through 2026-10-26 bounded batches; 10 current-batch README reads plus earlier targeted documents. README cues do not establish integration or semantic entailment.",
+  "snapshot_date": "2026-10-29",
+  "generated_at_utc": "2026-10-29T05:20:03Z",
+  "scope": "Current connected snapshot: 63 unique repositories (58 public, 5 private omitted). The 58-public README attempt sweep remains complete with 50 reads, 7 HTTP 404 gaps and 1 policy skip. This cycle revalidated 10 high-relevance READMEs and their latest default-branch commits, and registered 8 new WANGA regional observation JSON files. README cues and raw observation metadata do not establish semantic entailment.",
   "claims_added": 0,
   "logic_units_added": 0,
   "semantic_entailments_asserted": 0,
@@ -1084,6 +1084,246 @@
       "scan_status": "READ",
       "next_action": "Retry via an explicitly exposed path in a later batch; do not infer absence.",
       "scan_time_utc": "2026-10-28T05:11:07Z"
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025255Z-REG-OCEANIA.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025255Z-REG-OCEANIA.json",
+      "git_blob_sha1": "5a7e82ea991bc8d3d63e00e6c5220e84a0606ae7",
+      "source_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+      "excerpt_or_summary": "Six regional probe records for REG-OCEANIA (en); every record has status NOT_CONFIGURED, an empty model field and synthetic=false. The file contains input snapshot hashes but no model output or computed drift result.",
+      "epistemic_status": "RAW_OBSERVATION_METADATA_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-29-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-OCEANIA",
+      "language": "en",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "next_action": "Do not infer drift or causality. Wait for a configured model/backend and a documented baseline/output contract before interpreting probe results.",
+      "scan_time_utc": "2026-10-29T05:20:03Z"
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025256Z-REG-AFRICA.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025256Z-REG-AFRICA.json",
+      "git_blob_sha1": "cce0016034d8c52337dcf2c52cbff030e37b8900",
+      "source_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+      "excerpt_or_summary": "Six regional probe records for REG-AFRICA (en); every record has status NOT_CONFIGURED, an empty model field and synthetic=false. The file contains input snapshot hashes but no model output or computed drift result.",
+      "epistemic_status": "RAW_OBSERVATION_METADATA_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-29-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-AFRICA",
+      "language": "en",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "next_action": "Do not infer drift or causality. Wait for a configured model/backend and a documented baseline/output contract before interpreting probe results.",
+      "scan_time_utc": "2026-10-29T05:20:03Z"
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025256Z-REG-LATAM.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025256Z-REG-LATAM.json",
+      "git_blob_sha1": "f4b527ecd573b0f393e5e38b927a2773fe4363aa",
+      "source_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+      "excerpt_or_summary": "Six regional probe records for REG-LATAM (es); every record has status NOT_CONFIGURED, an empty model field and synthetic=false. The file contains input snapshot hashes but no model output or computed drift result.",
+      "epistemic_status": "RAW_OBSERVATION_METADATA_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-29-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-LATAM",
+      "language": "es",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "next_action": "Do not infer drift or causality. Wait for a configured model/backend and a documented baseline/output contract before interpreting probe results.",
+      "scan_time_utc": "2026-10-29T05:20:03Z"
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025256Z-REG-SA.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025256Z-REG-SA.json",
+      "git_blob_sha1": "f44ebbd659faf09b1dd597047e7d84af887c7275",
+      "source_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+      "excerpt_or_summary": "Six regional probe records for REG-SA (en); every record has status NOT_CONFIGURED, an empty model field and synthetic=false. The file contains input snapshot hashes but no model output or computed drift result.",
+      "epistemic_status": "RAW_OBSERVATION_METADATA_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-29-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-SA",
+      "language": "en",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "next_action": "Do not infer drift or causality. Wait for a configured model/backend and a documented baseline/output contract before interpreting probe results.",
+      "scan_time_utc": "2026-10-29T05:20:03Z"
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025257Z-REG-EA.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025257Z-REG-EA.json",
+      "git_blob_sha1": "4201d355b8457917929fd8890cd22fb984e70f82",
+      "source_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+      "excerpt_or_summary": "Six regional probe records for REG-EA (en); every record has status NOT_CONFIGURED, an empty model field and synthetic=false. The file contains input snapshot hashes but no model output or computed drift result.",
+      "epistemic_status": "RAW_OBSERVATION_METADATA_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-29-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-EA",
+      "language": "en",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "next_action": "Do not infer drift or causality. Wait for a configured model/backend and a documented baseline/output contract before interpreting probe results.",
+      "scan_time_utc": "2026-10-29T05:20:03Z"
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025257Z-REG-EU.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025257Z-REG-EU.json",
+      "git_blob_sha1": "73430fc99465730e598c81d30fa3091974da681c",
+      "source_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+      "excerpt_or_summary": "Six regional probe records for REG-EU (en); every record has status NOT_CONFIGURED, an empty model field and synthetic=false. The file contains input snapshot hashes but no model output or computed drift result.",
+      "epistemic_status": "RAW_OBSERVATION_METADATA_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-29-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-EU",
+      "language": "en",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "next_action": "Do not infer drift or causality. Wait for a configured model/backend and a documented baseline/output contract before interpreting probe results.",
+      "scan_time_utc": "2026-10-29T05:20:03Z"
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025257Z-REG-IL-ME.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025257Z-REG-IL-ME.json",
+      "git_blob_sha1": "c19e1c46ae9f58c147ee068fa3190579733cc95d",
+      "source_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+      "excerpt_or_summary": "Six regional probe records for REG-IL-ME (he); every record has status NOT_CONFIGURED, an empty model field and synthetic=false. The file contains input snapshot hashes but no model output or computed drift result.",
+      "epistemic_status": "RAW_OBSERVATION_METADATA_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-29-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-IL-ME",
+      "language": "he",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "next_action": "Do not infer drift or causality. Wait for a configured model/backend and a documented baseline/output contract before interpreting probe results.",
+      "scan_time_utc": "2026-10-29T05:20:03Z"
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025257Z-REG-US.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261029T025257Z-REG-US.json",
+      "git_blob_sha1": "c937dacfc85343cc3929421d3207599ac30fe9c4",
+      "source_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+      "excerpt_or_summary": "Six regional probe records for REG-US (en); every record has status NOT_CONFIGURED, an empty model field and synthetic=false. The file contains input snapshot hashes but no model output or computed drift result.",
+      "epistemic_status": "RAW_OBSERVATION_METADATA_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-29-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-US",
+      "language": "en",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "next_action": "Do not infer drift or causality. Wait for a configured model/backend and a documented baseline/output contract before interpreting probe results.",
+      "scan_time_utc": "2026-10-29T05:20:03Z"
     }
   ],
   "duplicate_readme_clusters": [
@@ -1140,7 +1380,9 @@
       "permission_scope": "PUBLIC_REPOSITORY_READ",
       "scan_status": "FETCH_GAP_HTTP_404",
       "next_action": "Retry only through an explicitly exposed tree/path; do not infer repository content or absence."
-    }
+    },
+    "2026-10-29 WANGA regional observation batch contains 48 metadata records across 8 regions; every record is NOT_CONFIGURED with an empty model field, so it is not evidence of drift or model behavior.",
+    "No ChatGPT conversations.json/ZIP export surfaced in the targeted Files search this cycle; no transcript was ingested and no claim of global conversation coverage is made."
   ],
   "candidate_logic_units_registered": 3,
   "candidate_logic_units": [
@@ -1771,5 +2013,120 @@
       "permission_scope": "PUBLIC_METADATA_ONLY",
       "scan_time_utc": "2026-10-28T05:11:07Z"
     }
-  ]
+  ],
+  "current_cycle": {
+    "date": "2026-10-29",
+    "source_commit": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/commit/af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+    "regional_observation_files": 8,
+    "regional_observation_records": 48,
+    "unique_observation_ids": 48,
+    "unique_input_snapshot_hashes_across_batch": 6,
+    "all_status_not_configured": true,
+    "all_model_fields_empty": true,
+    "all_synthetic_false": true,
+    "claims_added": 0,
+    "logic_units_added": 0,
+    "semantic_entailments_asserted": 0,
+    "new_compositions": 0,
+    "interpretation": "Raw operational metadata only; no drift score, model result, causal relation or logical unit is established."
+  },
+  "repository_revalidation_2026_10_29": {
+    "repositories": [
+      {
+        "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+        "branch_ref": "main",
+        "readme_git_blob_sha1": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32",
+        "latest_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+        "latest_commit_created_at": "2026-10-29T02:53:32Z",
+        "status": "DUPLICATE_REVALIDATION_NO_NEW_README_SOURCE"
+      },
+      {
+        "repository_full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "branch_ref": "master",
+        "readme_git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+        "latest_commit_sha": "2a658768ba0112f74e70956588b0f8e6d958f971",
+        "latest_commit_created_at": "2026-10-05T08:21:03Z",
+        "status": "DUPLICATE_REVALIDATION_NO_NEW_README_SOURCE"
+      },
+      {
+        "repository_full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+        "branch_ref": "main",
+        "readme_git_blob_sha1": "1530209671f6f76eb1808cf17d9584437e1e867b",
+        "latest_commit_sha": "fb7ecae90a26ad4cac786d39b7bcb90fb31b5614",
+        "latest_commit_created_at": "2026-10-05T08:21:23Z",
+        "status": "DUPLICATE_REVALIDATION_NO_NEW_README_SOURCE"
+      },
+      {
+        "repository_full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+        "branch_ref": "main",
+        "readme_git_blob_sha1": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6",
+        "latest_commit_sha": "9f10f1919596084f7983804a9682a18b1e7960a3",
+        "latest_commit_created_at": "2026-10-22T07:25:03Z",
+        "status": "DUPLICATE_REVALIDATION_NO_NEW_README_SOURCE"
+      },
+      {
+        "repository_full_name": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+        "branch_ref": "main",
+        "readme_git_blob_sha1": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
+        "latest_commit_sha": "d6137618ecb3a055f908deda690845a05372d29c",
+        "latest_commit_created_at": "2026-10-05T08:21:35Z",
+        "status": "DUPLICATE_REVALIDATION_NO_NEW_README_SOURCE"
+      },
+      {
+        "repository_full_name": "Quadruple-Multilevel-projection-project/MNM",
+        "branch_ref": "master",
+        "readme_git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+        "latest_commit_sha": "2fe3f3516a656b95a41d0020e71133646e7b0fbb",
+        "latest_commit_created_at": "2026-10-05T08:21:07Z",
+        "status": "DUPLICATE_REVALIDATION_NO_NEW_README_SOURCE"
+      },
+      {
+        "repository_full_name": "Quadruple-Multilevel-projection-project/skills",
+        "branch_ref": "main",
+        "readme_git_blob_sha1": "2246383e993f161fd909122d01769059adfb9eab",
+        "latest_commit_sha": "3e20332d62908d30420e223a2f2ba2fca48148ba",
+        "latest_commit_created_at": "2026-10-08T13:22:22Z",
+        "status": "DUPLICATE_REVALIDATION_NO_NEW_README_SOURCE"
+      },
+      {
+        "repository_full_name": "tribal-archery/-logicl-neural-order",
+        "branch_ref": "master",
+        "readme_git_blob_sha1": "0ffc15fb869fd479081714d71464b1a77563b92e",
+        "latest_commit_sha": "65ea228176634abc1bafbc351fa016de82be8f74",
+        "latest_commit_created_at": "2026-10-08T13:22:29Z",
+        "status": "DUPLICATE_REVALIDATION_NO_NEW_README_SOURCE"
+      },
+      {
+        "repository_full_name": "tribal-archery/MAM-parsed",
+        "branch_ref": "main",
+        "readme_git_blob_sha1": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c",
+        "latest_commit_sha": "d07ad9704386dc564a1c214852ca2b544cc973bf",
+        "latest_commit_created_at": "2026-10-02T01:05:33Z",
+        "status": "DUPLICATE_REVALIDATION_NO_NEW_README_SOURCE"
+      },
+      {
+        "repository_full_name": "tribal-archery/Qdprojects",
+        "branch_ref": "master",
+        "readme_git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+        "latest_commit_sha": "15c8fe9fa3bc940ac52f2489d2c103990717bd3e",
+        "latest_commit_created_at": "2025-01-06T00:57:10Z",
+        "status": "DUPLICATE_REVALIDATION_NO_NEW_README_SOURCE"
+      }
+    ],
+    "count": 10,
+    "new_readme_sources": 0,
+    "note": "The exact README blob e0fa7f84c36601e9895a7306f5b18dbaf7d09107 was re-confirmed in three repositories in this batch: Quadruple-Multilevel-projection-project/-logicl-neural-order, Quadruple-Multilevel-projection-project/MNM and tribal-archery/Qdprojects. Blob identity is not repository identity or semantic equivalence."
+  },
+  "library_scan_2026_10_29": {
+    "generated_at_utc": "2026-10-29T05:20:03Z",
+    "search_calls": 2,
+    "full_file_reads": 0,
+    "query_scope": "Targeted search for ChatGPT export artifacts and Limbo/WANGA archive references across exposed conversation and Library surfaces.",
+    "conversation_export_found": false,
+    "transcripts_ingested": 0,
+    "raw_private_content_published": 0,
+    "private_file_hashes_computed": 0,
+    "status": "TARGETED_SEARCH_NO_EXPORT_SURFACED",
+    "limitation": "This is not a complete Library inventory and does not establish that no export exists elsewhere."
+  }
 }
