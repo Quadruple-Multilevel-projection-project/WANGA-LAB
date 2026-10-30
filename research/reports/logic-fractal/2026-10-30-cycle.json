@@ -7,7 +7,7 @@
     "github_repositories": 10,
     "public_repositories": 7,
     "private_repositories_sampled": 3,
-    "public_documents_added": 4,
+    "public_documents_added": 14,
     "wanga_core_files_reviewed": 22,
     "private_library_files_reviewed": 4,
     "conversation_exports_ingested": 0
@@ -19,22 +19,29 @@
     "PR #122 current-head workflows remain ACTION_REQUIRED with zero jobs; no replay can be claimed."
   ],
   "new_sources": {
-    "public_document_sources": 4,
+    "public_document_sources": 14,
     "private_library_sources": 4,
     "private_library_publication": "NONE",
     "new_readme_sources": 0,
-    "duplicate_readme_revalidations": 6
+    "duplicate_readme_revalidations": 6,
+    "new_readme_versions": 1,
+    "version_discrepancy": {
+      "repository": "AmbassadorOv/multi-agent-orchestator",
+      "previous_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+      "current_blob_sha1": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+      "status": "UNRECONCILED"
+    }
   },
   "claims_added": 0,
   "logic_units": {
     "formal_units_added": 0,
-    "candidate_public_units_added": 6,
+    "candidate_public_units_added": 14,
     "private_candidate_units": 9,
     "semantic_entailments_asserted": 0,
     "weights_applied": false
   },
   "candidate_counterexamples": {
-    "new_source_backed_candidates": 5,
+    "new_source_backed_candidates": 11,
     "gate_eligible_source_grounded_counterexamples": 0,
     "review_status": "CANDIDATE_REVIEW_REQUIRED_NOT_BENCHMARK_ELIGIBLE"
   },
@@ -134,15 +141,15 @@
     "semantic_status": "NOT_YET_VERIFIED",
     "candidate_json_bytes": 9843,
     "candidate_json_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
-    "latest_ci_run_id": 40823695587,
-    "artifact_id": 12875199543,
-    "artifact_size_bytes": 99257,
-    "artifact_sha256": "d267bcdffe168e5f3f7203ce12a4545997d3d34f3d69c73f8f5e7194674afee8",
-    "artifact_created_at": "2026-10-29T05:29:46Z",
+    "latest_ci_run_id": 41011934449,
+    "artifact_id": 12958310956,
+    "artifact_size_bytes": 107498,
+    "artifact_sha256": "10e84ce407a5a2a999cec32616aa87933d24f4fc7f8664f670ecb786ec40e140",
+    "artifact_created_at": "2026-10-30T06:04:36Z",
     "runner": "ubuntu-latest",
     "latest_build_step": "SUCCESS",
-    "build_date": "2026-10-29",
-    "rebuild_this_cycle": "NOT_YET_RUN"
+    "build_date": "2026-10-30",
+    "rebuild_this_cycle": "SUCCESS"
   },
   "limbo": {
     "pr": 122,
@@ -199,7 +206,18 @@
     },
     "pr122": "ACTION_REQUIRED_ZERO_JOBS",
     "pr132": "OPEN_DRAFT_UNMERGED_FAIL_CLOSED_CONTRADICTION_GUARD",
-    "pr134": "OPEN_ACTION_REQUIRED"
+    "pr134": "OPEN_ACTION_REQUIRED",
+    "current_cycle": {
+      "logic_run_id": 41011934449,
+      "logic_conclusion": "SUCCESS",
+      "repository_integrity_run_id": 41011934404,
+      "repository_integrity_conclusion": "SUCCESS",
+      "codeql_run_id": 41011934413,
+      "codeql_conclusion": "SUCCESS",
+      "ecosystem_run_id": 41011934412,
+      "ecosystem_workflow_conclusion": "SUCCESS_WITH_SCOPE_BLOCKER",
+      "ecosystem_scope_blocker": "CROSS_REPO_READ_TOKEN unavailable; Actions artifact reports only the current WANGA-LAB repository."
+    }
   },
   "agent_roles": [
     {
@@ -220,12 +238,12 @@
     {
       "role": "Source Registrar",
       "status": "COMPLETED",
-      "output": "4 new public source-document records; 4 private Library records retained locally only."
+      "output": "14 public document records; 4 private Library sources retained locally only."
     },
     {
       "role": "Logic Extractor/Normalizer",
       "status": "COMPLETED_CANDIDATE_ONLY",
-      "output": "6 public candidate logic units and 9 private candidates; 0 formal units promoted."
+      "output": "14 public candidate units and 9 private candidates; 0 formal units promoted."
     },
     {
       "role": "Fractal Composer",
@@ -235,7 +253,7 @@
     {
       "role": "Mirror Reviewer",
       "status": "COMPLETED_CANDIDATE_ONLY",
-      "output": "5 candidate negative/boundary cases; none counted as benchmark cases."
+      "output": "11 candidate negative/boundary cases; none benchmark-eligible."
     },
     {
       "role": "Benchmark Evaluator",
@@ -250,7 +268,7 @@
     {
       "role": "Report Publisher",
       "status": "IN_PROGRESS",
-      "output": "Reports and registries added to existing Draft PR #133 branch; no merge."
+      "output": "Reports and registries are on Draft PR #133 branch; first fresh CI cycle passed."
     },
     {
       "role": "Wix Sync Auditor",
@@ -272,6 +290,7 @@
     "PR #133 is behind main and remains Draft pending reconciliation."
   ],
   "next": [
+    "Reconcile the multi-agent-orchestator README source-version mismatch before reusing its earlier candidate units.",
     "Run fresh CI on the updated PR #133 branch; archive the new builder artifact and actual results.",
     "Have the six public candidate units and five boundary cases reviewed before formalization or benchmark promotion.",
     "Create source-grounded semantic cases with three suites, frozen build/train split and independent holdout.",
