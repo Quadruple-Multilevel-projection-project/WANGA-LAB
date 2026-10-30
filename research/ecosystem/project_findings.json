@@ -1396,6 +1396,207 @@
       "scan_status": "READ",
       "next_action": "Compare gate ordering and evidence-status boundaries; no integration until tests establish enforcement.",
       "scan_time_utc": "2026-10-30T05:51:37Z"
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "README.md",
+      "git_blob_sha1": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+      "previous_candidate_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+      "excerpt_or_summary": "Current default-branch README blob differs from the earlier candidate-source blob recorded in project findings. Preserve both versions until the prior source ref is reconciled.",
+      "epistemic_status": "SOURCE_VERSION_REVALIDATION_HASH_DIFFERENCE",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json",
+        "WANGA-LAB/research/ecosystem/agent_registry.json"
+      ],
+      "contradictions": [
+        "Historical candidate records cite a different README blob SHA-1; exact source-version mapping remains unresolved."
+      ],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ_VERSION_REVALIDATION",
+      "next_action": "Reconcile prior source commit/ref before reusing earlier candidate units.",
+      "scan_time_utc": "2026-10-30T05:51:37Z"
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/relay_agent.py",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "relay/relay_agent.py",
+      "git_blob_sha1": "d1a7731b6532f4d44e819a702f5b7a051367150d",
+      "excerpt_or_summary": "Relay lifecycle creates task/message identity, records status receipts and blocks delivery when human approval is required.",
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json",
+        "WANGA-LAB/formal_reasoning"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ_CODE_OR_SCHEMA_ONLY",
+      "next_action": "Treat as external implementation evidence; compare contracts and run isolated tests before proposing integration.",
+      "scan_time_utc": "2026-10-30T05:51:37Z"
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/context_manager.py",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "relay/context_manager.py",
+      "git_blob_sha1": "6e9878f017c4d6d21387b142795b9d3660d67017",
+      "excerpt_or_summary": "Context projection returns only explicitly requested keys and does not forward global context implicitly.",
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json",
+        "WANGA-LAB/formal_reasoning"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ_CODE_OR_SCHEMA_ONLY",
+      "next_action": "Treat as external implementation evidence; compare contracts and run isolated tests before proposing integration.",
+      "scan_time_utc": "2026-10-30T05:51:37Z"
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/routing_engine.py",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "relay/routing_engine.py",
+      "git_blob_sha1": "9b7bac51221f66223182403a470d7fa3b50b2b12",
+      "excerpt_or_summary": "Capability-based routing selects a registered group; multiple matches are not explicitly disambiguated beyond registry order.",
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json",
+        "WANGA-LAB/formal_reasoning"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ_CODE_OR_SCHEMA_ONLY",
+      "next_action": "Treat as external implementation evidence; compare contracts and run isolated tests before proposing integration.",
+      "scan_time_utc": "2026-10-30T05:51:37Z"
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/message_schema.json",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "relay/message_schema.json",
+      "git_blob_sha1": "6eb08566f52c2e88774a5fcfed8dec3ce4f79579",
+      "excerpt_or_summary": "Message schema requires task/message identity, source/destination groups, context/evidence references, verification state and timestamp.",
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json",
+        "WANGA-LAB/formal_reasoning"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ_CODE_OR_SCHEMA_ONLY",
+      "next_action": "Treat as external implementation evidence; compare contracts and run isolated tests before proposing integration.",
+      "scan_time_utc": "2026-10-30T05:51:37Z"
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/verification_bridge.py",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "relay/verification_bridge.py",
+      "git_blob_sha1": "02fd6d30910af5adc806ae890a8a1b06354ca04f",
+      "excerpt_or_summary": "Verification bridge validates the allowed state label set and copies evidence references when supplied; an evidence-required rule for VERIFIED is not visible in these files.",
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json",
+        "WANGA-LAB/formal_reasoning"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ_CODE_OR_SCHEMA_ONLY",
+      "next_action": "Treat as external implementation evidence; compare contracts and run isolated tests before proposing integration.",
+      "scan_time_utc": "2026-10-30T05:51:37Z"
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/task_state.schema.json",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "relay/task_state.schema.json",
+      "git_blob_sha1": "ca90cfc174efa5b002fc69e20f36ed87a88afe14",
+      "excerpt_or_summary": "Task-state schema defines CREATED, ROUTED, SENT, ACKNOWLEDGED, IN_PROGRESS, WAITING, COMPLETED, FAILED, ESCALATED and CANCELLED.",
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json",
+        "WANGA-LAB/formal_reasoning"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ_CODE_OR_SCHEMA_ONLY",
+      "next_action": "Treat as external implementation evidence; compare contracts and run isolated tests before proposing integration.",
+      "scan_time_utc": "2026-10-30T05:51:37Z"
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/group_registry.yaml",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "relay/group_registry.yaml",
+      "git_blob_sha1": "ea2718e60b82f7201f5acd2e14ab688c70249854",
+      "excerpt_or_summary": "Group registry declares capability sets and accepted/returned message types for research, documents, browser and presentation groups.",
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json",
+        "WANGA-LAB/formal_reasoning"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ_CODE_OR_SCHEMA_ONLY",
+      "next_action": "Treat as external implementation evidence; compare contracts and run isolated tests before proposing integration.",
+      "scan_time_utc": "2026-10-30T05:51:37Z"
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/receipt_logger.py",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "relay/receipt_logger.py",
+      "git_blob_sha1": "cda6f4c689235c9f788bd59c24a060f98d8a5ce4",
+      "excerpt_or_summary": "Receipt logger appends message/task/group/status/timestamp records in memory; persistence across process restarts is not established.",
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json",
+        "WANGA-LAB/formal_reasoning"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ_CODE_OR_SCHEMA_ONLY",
+      "next_action": "Treat as external implementation evidence; compare contracts and run isolated tests before proposing integration.",
+      "scan_time_utc": "2026-10-30T05:51:37Z"
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/tests_relay.py",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "tests_relay.py",
+      "git_blob_sha1": "a8f47fda9e55c52b4b6e1172b68b3ffb1184ef49",
+      "excerpt_or_summary": "Test source asserts capability routing, explicit context projection and human-approval blocking; tests were inspected but not executed in this run.",
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json",
+        "WANGA-LAB/formal_reasoning"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ_CODE_OR_SCHEMA_ONLY",
+      "next_action": "Treat as external implementation evidence; compare contracts and run isolated tests before proposing integration.",
+      "scan_time_utc": "2026-10-30T05:51:37Z"
+    },
+    {
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/TEMPORAL_NETWORK_ROUTING_V0_1.md",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "exact_file_path": "TEMPORAL_NETWORK_ROUTING_V0_1.md",
+      "git_blob_sha1": "c7d88552d8d301832110c3b88fe28ac7f34fd271",
+      "excerpt_or_summary": "Temporal routing specification treats repository state as time-varying, requires a captured snapshot and says a newer snapshot must not silently replace it during replay.",
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/agent_registry.json",
+        "WANGA-LAB/formal_reasoning"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ_CODE_OR_SCHEMA_ONLY",
+      "next_action": "Treat as external implementation evidence; compare contracts and run isolated tests before proposing integration.",
+      "scan_time_utc": "2026-10-30T05:51:37Z"
     }
   ],
   "duplicate_readme_clusters": [
@@ -1456,7 +1657,7 @@
     "2026-10-29 WANGA regional observation batch contains 48 metadata records across 8 regions; every record is NOT_CONFIGURED with an empty model field, so it is not evidence of drift or model behavior.",
     "No ChatGPT conversations.json/ZIP export surfaced in the targeted Files search this cycle; no transcript was ingested and no claim of global conversation coverage is made."
   ],
-  "candidate_logic_units_registered": 9,
+  "candidate_logic_units_registered": 17,
   "candidate_logic_units": [
     {
       "stable_id": "EXT-MAORCH-UNIT-001",
@@ -2127,6 +2328,158 @@
       "weights_status": "NOT_APPLIED",
       "scope_limit": "Method statement only; no universal formal semantics inferred.",
       "next_action": "Use as a candidate boundary set for formal review."
+    },
+    {
+      "stable_id": "EXT-RELAY-CONTEXT-ALLOWLIST-001",
+      "source_path": "relay/context_manager.py",
+      "source_blob_sha1": "6e9878f017c4d6d21387b142795b9d3660d67017",
+      "exact_locator": "select_context()",
+      "relation_candidates": [
+        "forwarded_context_keys_subset_of(requested_context_refs)",
+        "global_context_not_forwarded_implicitly"
+      ],
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "No runtime test was executed in this cycle.",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/context_manager.py",
+      "interpretation": "Candidate extracted from an external source; no semantic entailment is asserted.",
+      "next_action": "Compare with WANGA contracts and run isolated tests before integration."
+    },
+    {
+      "stable_id": "EXT-RELAY-HUMAN-APPROVAL-001",
+      "source_path": "relay/relay_agent.py",
+      "source_blob_sha1": "d1a7731b6532f4d44e819a702f5b7a051367150d",
+      "exact_locator": "RelayAgent.send()",
+      "relation_candidates": [
+        "requires_human_approval -> WAITING",
+        "approval_required -> handler_not_called"
+      ],
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Code inspection only; not a WANGA runtime guarantee.",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/relay_agent.py",
+      "interpretation": "Candidate extracted from an external source; no semantic entailment is asserted.",
+      "next_action": "Compare with WANGA contracts and run isolated tests before integration."
+    },
+    {
+      "stable_id": "EXT-RELAY-CAPABILITY-ROUTING-001",
+      "source_path": "relay/routing_engine.py",
+      "source_blob_sha1": "9b7bac51221f66223182403a470d7fa3b50b2b12",
+      "exact_locator": "RoutingEngine.resolve()",
+      "relation_candidates": [
+        "route_to(group) only_if capability_in(group.capabilities)",
+        "no_matching_group -> RoutingError"
+      ],
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "No routing test was run; ambiguity behavior needs explicit tests.",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/routing_engine.py",
+      "interpretation": "Candidate extracted from an external source; no semantic entailment is asserted.",
+      "next_action": "Compare with WANGA contracts and run isolated tests before integration."
+    },
+    {
+      "stable_id": "EXT-RELAY-VERIFICATION-STATE-001",
+      "source_path": "relay/message_schema.json",
+      "source_blob_sha1": "6eb08566f52c2e88774a5fcfed8dec3ce4f79579",
+      "exact_locator": "properties.verification_state; relay/verification_bridge.py#VerificationBridge.attach",
+      "relation_candidates": [
+        "verification_state_in_allowed_label_set",
+        "VERIFIED_requires_evidence_policy"
+      ],
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Label validity is not evidence validity; no runtime behavior was tested.",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/message_schema.json",
+      "interpretation": "Candidate extracted from an external source; no semantic entailment is asserted.",
+      "next_action": "Compare with WANGA contracts and run isolated tests before integration."
+    },
+    {
+      "stable_id": "EXT-RELAY-TASK-TRACE-001",
+      "source_path": "relay/relay_agent.py",
+      "source_blob_sha1": "d1a7731b6532f4d44e819a702f5b7a051367150d",
+      "exact_locator": "RelayAgent.create_request(); RelayAgent.thread(); relay/task_state.schema.json",
+      "relation_candidates": [
+        "message_belongs_to(task_id)",
+        "parent_task_id_links_task_lineage",
+        "thread(task_id) returns messages_for_task"
+      ],
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "The receipt logger is in-memory; durable replay is not established.",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/relay_agent.py",
+      "interpretation": "Candidate extracted from an external source; no semantic entailment is asserted.",
+      "next_action": "Compare with WANGA contracts and run isolated tests before integration."
+    },
+    {
+      "stable_id": "EXT-RELAY-APPEND-ONLY-RECEIPTS-001",
+      "source_path": "relay/receipt_logger.py",
+      "source_blob_sha1": "cda6f4c689235c9f788bd59c24a060f98d8a5ce4",
+      "exact_locator": "ReceiptLogger.record(); ReceiptLogger.thread()",
+      "relation_candidates": [
+        "record(message,state) -> append(receipt)"
+      ],
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Append-only behavior is in-memory, not persistent.",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/receipt_logger.py",
+      "interpretation": "Candidate extracted from an external source; no semantic entailment is asserted.",
+      "next_action": "Compare with WANGA contracts and run isolated tests before integration."
+    },
+    {
+      "stable_id": "EXT-TEMPORAL-SNAPSHOT-PROVENANCE-001",
+      "source_path": "TEMPORAL_NETWORK_ROUTING_V0_1.md",
+      "source_blob_sha1": "c7d88552d8d301832110c3b88fe28ac7f34fd271",
+      "exact_locator": "## Temporal snapshot; ## Thinking Machine boundary",
+      "relation_candidates": [
+        "replay_requires_captured_snapshot",
+        "captured_snapshot_not_silently_replaced"
+      ],
+      "epistemic_status": "SPECIFIED_NOT_TESTED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Specification only; no replay test was run.",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/TEMPORAL_NETWORK_ROUTING_V0_1.md",
+      "interpretation": "Candidate extracted from an external source; no semantic entailment is asserted.",
+      "next_action": "Compare with WANGA contracts and run isolated tests before integration."
+    },
+    {
+      "stable_id": "EXT-RELAY-TEST-ASSERTIONS-001",
+      "source_path": "tests_relay.py",
+      "source_blob_sha1": "a8f47fda9e55c52b4b6e1172b68b3ffb1184ef49",
+      "exact_locator": "test_routes_by_capability_and_preserves_task_thread(); test_human_approval_blocks_delivery()",
+      "relation_candidates": [
+        "test_asserts(context_projection)",
+        "test_asserts(approval_blocks_handler)"
+      ],
+      "epistemic_status": "TEST_ASSERTION_SOURCE_ONLY_NOT_RUN",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Test code is not a test result.",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/tests_relay.py",
+      "interpretation": "Candidate extracted from an external source; no semantic entailment is asserted.",
+      "next_action": "Compare with WANGA contracts and run isolated tests before integration."
     }
   ],
   "private_library_scan": {
@@ -2207,6 +2560,84 @@
       "expected_boundary": "REQUIRE_EXECUTED_TEST_EVIDENCE",
       "semantic_status": "NOT_YET_VERIFIED",
       "review_required": true
+    },
+    {
+      "stable_id": "CE-RELAY-CONTEXT-SCOPE-001",
+      "source_path": "relay/context_manager.py",
+      "source_blob_sha1": "6e9878f017c4d6d21387b142795b9d3660d67017",
+      "status": "CANDIDATE_SOURCE_BACKED_NOT_BENCHMARK_ELIGIBLE",
+      "counter_reading_candidate": "If an unrequested context key is forwarded to another group, reject the handoff.",
+      "expected_boundary": "ONLY_EXPLICIT_CONTEXT_REFS_FORWARD",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "review_required": true,
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/context_manager.py"
+    },
+    {
+      "stable_id": "CE-RELAY-APPROVAL-GATE-001",
+      "source_path": "relay/relay_agent.py",
+      "source_blob_sha1": "d1a7731b6532f4d44e819a702f5b7a051367150d",
+      "status": "CANDIDATE_SOURCE_BACKED_NOT_BENCHMARK_ELIGIBLE",
+      "counter_reading_candidate": "If a handler is called while human approval is required, reject delivery and preserve WAITING state.",
+      "expected_boundary": "APPROVAL_REQUIRED_BLOCKS_HANDLER",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "review_required": true,
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/relay_agent.py"
+    },
+    {
+      "stable_id": "CE-RELAY-AMBIGUOUS-ROUTE-001",
+      "source_path": "relay/routing_engine.py",
+      "source_blob_sha1": "9b7bac51221f66223182403a470d7fa3b50b2b12",
+      "status": "CANDIDATE_CODE_REVIEW_BOUNDARY_NOT_BENCHMARK_ELIGIBLE",
+      "counter_reading_candidate": "If multiple groups expose the same capability, routing must not silently depend on registry insertion order.",
+      "expected_boundary": "REJECT_AMBIGUOUS_MATCH_OR_USE_EXPLICIT_TIE_BREAK",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "review_required": true,
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/routing_engine.py"
+    },
+    {
+      "stable_id": "CE-RELAY-HANDLER-ERROR-STATE-001",
+      "source_path": "relay/relay_agent.py",
+      "source_blob_sha1": "d1a7731b6532f4d44e819a702f5b7a051367150d",
+      "status": "CANDIDATE_CODE_REVIEW_BOUNDARY_NOT_BENCHMARK_ELIGIBLE",
+      "counter_reading_candidate": "If a handler raises after SENT, record a failure state rather than leaving the task in SENT.",
+      "expected_boundary": "HANDLER_EXCEPTION_RECORDED_AS_FAILED",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "review_required": true,
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/relay_agent.py"
+    },
+    {
+      "stable_id": "CE-RELAY-VERIFIED-EVIDENCE-001",
+      "source_path": "relay/verification_bridge.py",
+      "source_blob_sha1": "02fd6d30910af5adc806ae890a8a1b06354ca04f",
+      "status": "CANDIDATE_CODE_REVIEW_BOUNDARY_NOT_BENCHMARK_ELIGIBLE",
+      "counter_reading_candidate": "If VERIFIED is accepted without evidence references or an independent verification record, reject the promotion.",
+      "expected_boundary": "VERIFIED_REQUIRES_EVIDENCE_AND_REVIEW",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "review_required": true,
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/verification_bridge.py"
+    },
+    {
+      "stable_id": "CE-TEMPORAL-SNAPSHOT-REPLACE-001",
+      "source_path": "TEMPORAL_NETWORK_ROUTING_V0_1.md",
+      "source_blob_sha1": "c7d88552d8d301832110c3b88fe28ac7f34fd271",
+      "status": "CANDIDATE_SOURCE_BACKED_NOT_BENCHMARK_ELIGIBLE",
+      "counter_reading_candidate": "If processing silently substitutes a newer repository snapshot for the captured one, reject replay identity.",
+      "expected_boundary": "CAPTURED_SNAPSHOT_PRESERVED_DURING_REPLAY",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "review_required": true,
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch_ref": "main",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/TEMPORAL_NETWORK_ROUTING_V0_1.md"
     }
   ],
   "internal_document_scan": {
@@ -2279,6 +2710,24 @@
       ],
       "summary": "A private repository README describes a source parser that emits two JSON formats. This suggests a possible source-ingestion adapter, but the schemas and implementation were not inspected or copied.",
       "next_action": "Only inspect schema and source data under explicit access review; require version pinning, exact locators and hashes before integration."
+    },
+    {
+      "proposal_id": "INT-RELAY-PROTOCOL-MAPPING-001",
+      "status": "PROPOSAL_ONLY_NOT_IMPLEMENTED",
+      "evidence": [
+        "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/relay_agent.py",
+        "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/context_manager.py",
+        "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/routing_engine.py",
+        "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/message_schema.json",
+        "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/verification_bridge.py",
+        "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/task_state.schema.json",
+        "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/group_registry.yaml",
+        "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/relay/receipt_logger.py",
+        "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/tests_relay.py",
+        "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/TEMPORAL_NETWORK_ROUTING_V0_1.md"
+      ],
+      "summary": "Compare the external relay's context projection, approval gate, capability routing, task/thread identity, receipt log and temporal snapshot envelope with WANGA NTM/LNL contracts. No runtime equivalence or verified integration is claimed.",
+      "next_action": "Define a WANGA adapter contract and run isolated boundary tests before any integration."
     }
   ],
   "library_scan_current_cycle": {
@@ -2433,7 +2882,7 @@
   },
   "internal_document_scan_2026_10_30": {
     "date": "2026-10-30",
-    "public_documents_read": 4,
+    "public_documents_read": 14,
     "documents": [
       {
         "path": "architecture/ARTIFICIAL_PHILOSOPHER_ORCHESTRATION.md",
@@ -2450,10 +2899,50 @@
       {
         "path": "AI-AGENT-HANDOFF-NOTICE.md",
         "sha1": "2e2698d337a60a93059d85d4302ea01cc3837b7b"
+      },
+      {
+        "path": "relay/relay_agent.py",
+        "sha1": "d1a7731b6532f4d44e819a702f5b7a051367150d"
+      },
+      {
+        "path": "relay/context_manager.py",
+        "sha1": "6e9878f017c4d6d21387b142795b9d3660d67017"
+      },
+      {
+        "path": "relay/routing_engine.py",
+        "sha1": "9b7bac51221f66223182403a470d7fa3b50b2b12"
+      },
+      {
+        "path": "relay/message_schema.json",
+        "sha1": "6eb08566f52c2e88774a5fcfed8dec3ce4f79579"
+      },
+      {
+        "path": "relay/verification_bridge.py",
+        "sha1": "02fd6d30910af5adc806ae890a8a1b06354ca04f"
+      },
+      {
+        "path": "relay/task_state.schema.json",
+        "sha1": "ca90cfc174efa5b002fc69e20f36ed87a88afe14"
+      },
+      {
+        "path": "relay/group_registry.yaml",
+        "sha1": "ea2718e60b82f7201f5acd2e14ab688c70249854"
+      },
+      {
+        "path": "relay/receipt_logger.py",
+        "sha1": "cda6f4c689235c9f788bd59c24a060f98d8a5ce4"
+      },
+      {
+        "path": "tests_relay.py",
+        "sha1": "a8f47fda9e55c52b4b6e1172b68b3ffb1184ef49"
+      },
+      {
+        "path": "TEMPORAL_NETWORK_ROUTING_V0_1.md",
+        "sha1": "c7d88552d8d301832110c3b88fe28ac7f34fd271"
       }
     ],
-    "candidate_logic_units_added": 6,
-    "candidate_counterexample_candidates_added": 5,
+    "candidate_logic_units_added": 14,
+    "candidate_counterexample_candidates_added": 11,
     "formal_logic_units_added": 0,
     "semantic_entailments_asserted": 0,
     "status": "SOURCE_TEXT_CANDIDATES_ONLY"
@@ -2561,7 +3050,15 @@
     "count": 10,
     "new_readme_sources": 0,
     "new_public_document_sources": 4,
-    "notes": "Six public README reads were revalidations; four additional public documents were read. Private names/content remain excluded."
+    "notes": "Six public README reads were revalidations; four additional public documents were read. Private names/content remain excluded.",
+    "multi_agent_orchestator": {
+      "latest_commit_sha": "76c4595e87db40d2cc85a14a13ad6c37653b7401",
+      "latest_commit_created_at": "2026-10-02T11:48:41Z",
+      "current_readme_blob_sha1": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+      "previous_candidate_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+      "version_reconciliation": "PENDING",
+      "targeted_documents_read": 10
+    }
   },
   "external_pr_reviews_2026_10_30": [
     {
@@ -2582,13 +3079,25 @@
     "date": "2026-10-30",
     "claims_added": 0,
     "formal_logic_units_added": 0,
-    "candidate_logic_units_added": 6,
-    "candidate_counterexamples_added": 5,
+    "candidate_logic_units_added": 14,
+    "candidate_counterexamples_added": 11,
     "new_compositions": 0,
     "semantic_entailments_asserted": 0,
     "source_grounded_benchmarks_added": 0,
     "private_library_files_reviewed": 4,
     "private_content_published": 0,
-    "conversation_exports_ingested": 0
-  }
+    "conversation_exports_ingested": 0,
+    "new_public_documents": 14,
+    "new_readme_versions": 1
+  },
+  "source_version_conflicts": [
+    {
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "path": "README.md",
+      "previous_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+      "current_blob_sha1": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+      "status": "UNRECONCILED_SOURCE_VERSION_DIFFERENCE",
+      "note": "Preserve both versions until the prior source ref is reconciled."
+    }
+  ]
 }
