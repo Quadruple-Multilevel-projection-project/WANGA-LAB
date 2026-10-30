@@ -10,13 +10,16 @@
     "public_documents_added": 14,
     "wanga_core_files_reviewed": 19,
     "private_library_files_reviewed": 4,
-    "conversation_exports_ingested": 0
+    "conversation_exports_ingested": 0,
+    "regional_observation_files": 8,
+    "regional_observation_records": 48
   },
   "access_gaps": [
     "No ChatGPT export was found in the currently exposed conversation/Library search surfaces. This is not a global scan of private ChatGPT history.",
     "Private Library sources remain PRIVATE_REVIEW_ONLY_NOT_APPROVED; no raw excerpts or hashes were published.",
     "Core contradiction inventory is NOT_MEASURED; the legacy main-branch zero is not accepted as a measured result.",
-    "PR #122 current-head workflows remain ACTION_REQUIRED with zero jobs; no replay can be claimed."
+    "PR #122 current-head workflows remain ACTION_REQUIRED with zero jobs; no replay can be claimed.",
+    "The 48 regional observation records are metadata-only: all have NOT_CONFIGURED status and empty model fields. They do not establish drift or model behavior."
   ],
   "new_sources": {
     "public_document_sources": 14,
@@ -30,7 +33,9 @@
       "previous_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
       "current_blob_sha1": "f41d34bb0019e03f269a723f424f38856bfa6c44",
       "status": "UNRECONCILED"
-    }
+    },
+    "regional_observation_files": 8,
+    "regional_observation_records": 48
   },
   "claims_added": 0,
   "logic_units": {
@@ -316,6 +321,7 @@
     "PR #133 is behind main and remains Draft pending reconciliation."
   ],
   "next": [
+    "Configure the regional probe/model pipeline before interpreting future regional observation records as drift evidence.",
     "Reconcile the multi-agent-orchestator README source-version mismatch before reusing its earlier candidate units.",
     "Run fresh CI on the updated PR #133 branch; archive the new builder artifact and actual results.",
     "Have the six public candidate units and five boundary cases reviewed before formalization or benchmark promotion.",
@@ -324,5 +330,88 @@
     "Resolve PR #122 ACTION_REQUIRED state, replay TUNE-9c166900cc4ad5dd, and append results without deleting incident history.",
     "Reconcile Wix page counts/content before any upload; do not publish private Library material.",
     "Do not integrate PR #134 until source retrieval is real, validation is fail-closed and writes are branch/PR-only."
-  ]
+  ],
+  "regional_observation_batch": {
+    "commit_sha": "c4d4d2ed9f53be4f5e2efdfca16f8219bf689704",
+    "commit_created_at": "2026-10-30T01:14:22Z",
+    "files": 8,
+    "records": 48,
+    "unique_ids": 48,
+    "duplicate_ids": 0,
+    "regions": [
+      "REG-EU",
+      "REG-OCEANIA",
+      "REG-AFRICA",
+      "REG-EA",
+      "REG-IL-ME",
+      "REG-LATAM",
+      "REG-SA",
+      "REG-US"
+    ],
+    "probes_per_region": 6,
+    "languages": [
+      "en",
+      "he",
+      "es"
+    ],
+    "status_distribution": {
+      "NOT_CONFIGURED": 48
+    },
+    "models_configured": 0,
+    "synthetic_records": 0,
+    "unique_input_snapshot_hashes": 6,
+    "files_detail": [
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011352Z-REG-EU.json",
+        "blob_sha1": "060d269c858fb528fb63e1ba5e424b761b368838",
+        "node": "REG-EU",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011352Z-REG-OCEANIA.json",
+        "blob_sha1": "a744967f79f13b17f5f7f0c2cc62dab227153d61",
+        "node": "REG-OCEANIA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-AFRICA.json",
+        "blob_sha1": "5d47ba89a6bf8b29c41cecf85c3d6568c643f41a",
+        "node": "REG-AFRICA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-EA.json",
+        "blob_sha1": "35115beec59756fd54b80b4bfa63da143639f43e",
+        "node": "REG-EA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-IL-ME.json",
+        "blob_sha1": "4f0f1a4ba1780c7ddfae2559347397c892fce02c",
+        "node": "REG-IL-ME",
+        "language": "he"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-LATAM.json",
+        "blob_sha1": "53ebf921141dfa562f131cf162e9294a1247c668",
+        "node": "REG-LATAM",
+        "language": "es"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-SA.json",
+        "blob_sha1": "d03203e7af15821bcb9e0022ecb85dcf7e7a8de0",
+        "node": "REG-SA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011354Z-REG-US.json",
+        "blob_sha1": "d753f627da77be1589332450721f6d7eb5e4bf3a",
+        "node": "REG-US",
+        "language": "en"
+      }
+    ],
+    "epistemic_status": "RAW_OPERATIONAL_METADATA_NOT_CONFIGURED",
+    "claims_added": 0,
+    "logic_units_added": 0
+  }
 }
