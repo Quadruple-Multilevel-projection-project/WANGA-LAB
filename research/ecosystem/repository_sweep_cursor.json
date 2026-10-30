@@ -1,8 +1,8 @@
 {
-  "snapshot_date": "2026-10-29",
+  "snapshot_date": "2026-10-30",
   "priority_order_index": 58,
   "after_last_scanned": "tribal-archery/vscode-azure-blockchain-ethereum",
   "next_batch": [],
   "remaining_public_repositories": 0,
-  "policy": "The 58 public repositories in the current 63-repository access snapshot have already had README-level attempts. A focused 10-repository revalidation batch ran on 2026-10-29; there are no remaining unattempted public README repositories in this snapshot. Restart only if inventory changes or a newly changed high-relevance repository is identified. Full code/content audit remains incomplete."
+  "policy": "The 58 public repositories in the current 63-repository access snapshot have had README-level attempts. A 10-repository focused review ran on 2026-10-30 (7 public, 3 private with names/content redacted). No public README repositories remain unattempted. Restart only if the inventory changes or a newly changed high-relevance repository is identified; full code/content audit remains incomplete."
 }
