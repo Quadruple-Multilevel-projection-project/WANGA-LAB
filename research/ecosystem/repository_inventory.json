@@ -1,9 +1,9 @@
 {
   "schema_version": "wanga-repository-inventory/1.1",
-  "snapshot_date": "2026-10-29",
-  "generated_at_utc": "2026-10-29T05:20:03Z",
-  "source": "Live GitHub affiliation inventory refreshed 2026-10-29; current 63-repository snapshot revalidated. Latest commit created_at was retrieved for a focused 10-repository batch; the connector did not expose repository updated_at/pushed_at directly.",
-  "inventory_status": "PUBLIC_INVENTORY_COMPLETE_README_SWEEP_COMPLETE_WITH_GAPS_AND_POLICY_SKIP",
+  "snapshot_date": "2026-10-30",
+  "generated_at_utc": "2026-10-30T05:51:37Z",
+  "source": "Live GitHub affiliation inventory revalidated 2026-10-30. The 58-public README sweep remains exhausted; this cycle reviewed 7 public repositories and 3 private repositories in a bounded direct-relevance batch. Private names/content are redacted.",
+  "inventory_status": "PUBLIC_README_SWEEP_COMPLETE_FOCUSED_DOC_REVIEW_WITH_PRIVATE_REDACTION",
   "visible_repository_count": 63,
   "public_repository_count": 58,
   "private_repository_count": 5,
@@ -15,7 +15,7 @@
   },
   "private_repository_handling": "Private repositories are connector-visible, but names, paths and content are omitted from this public registry; aggregate count only.",
   "permission_note": "Connector returned permission flags for visible repositories. These are connector-exposed metadata, not an independent permission audit.",
-  "latest_update_note": "Latest default-branch commit created_at and SHA are recorded for the 10 repositories in revalidation_batches. Other repository timestamps remain NOT_RETRIEVED_IN_THIS_BATCH; do not infer them.",
+  "latest_update_note": "Latest default-branch commit SHA and author timestamp were retrieved for the 7 public repositories in the 2026-10-30 batch. The connector does not expose repository updated_at/pushed_at directly. Private repository details are omitted.",
   "batch_size": 10,
   "scanned_repositories": [
     "AmbassadorOv/-artificial-y",
@@ -79,15 +79,15 @@
   ],
   "scanned_readme_count": 50,
   "readme_fetch_gap_count": 7,
-  "additional_targeted_docs_read": 2,
+  "additional_targeted_docs_read": 6,
   "remaining_public_repository_count": 0,
   "next_cursor": {
-    "snapshot_date": "2026-10-29",
+    "snapshot_date": "2026-10-30",
     "priority_order_index": 58,
     "after_last_scanned": "tribal-archery/vscode-azure-blockchain-ethereum",
     "next_batch": [],
     "remaining_public_repositories": 0,
-    "policy": "The 58 public repositories in the current 63-repository access snapshot have already had README-level attempts. A focused 10-repository revalidation batch ran on 2026-10-29. Restart the public sweep only if the visible inventory changes or a newly changed high-relevance repository is identified; full code/content audit remains incomplete."
+    "policy": "All 58 public repositories in the current 63-repository snapshot have had README-level attempts. This cycle performed a separate 10-repository focused review (7 public, 3 private with names/content redacted). Restart the README sweep only if inventory changes or a newly changed high-relevance repository is identified; full code/content audit remains incomplete."
   },
   "repositories": [
     {
@@ -146,15 +146,18 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-24",
+      "latest_update": "2020-04-18T03:34:25Z",
+      "latest_update_status": "DEFAULT_BRANCH_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "READ_REVALIDATED",
       "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
       "readme_summary": "README contains only the title Nanomathematics; identical README blob also observed in sibling repositories.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "owner"
-      ]
+      ],
+      "latest_commit_sha": "6eba57c8e4b4c434a2bde5df9df1c61f8f370d74",
+      "last_scan_time_utc": "2026-10-30T05:51:37Z",
+      "source_status": "DUPLICATE_README_REVALIDATION"
     },
     {
       "full_name": "AmbassadorOv/desktop",
@@ -258,15 +261,18 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "latest_update": "2026-10-22T06:42:13Z",
+      "latest_update_status": "DEFAULT_BRANCH_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "READ",
       "readme_blob_sha1": "ac7a2d203877442ddba493889239e61aed56ec78",
       "readme_summary": "Describes research-team coordination and a meta-orchestrator for connecting, abstracting, comparing, verifying and routing team outputs.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "owner"
-      ]
+      ],
+      "latest_commit_sha": "2c355168bb639ff1be22a918bc2838c54cea4ead",
+      "last_scan_time_utc": "2026-10-30T05:51:37Z",
+      "source_status": "NEW_TARGETED_DOCUMENTS_READ"
     },
     {
       "full_name": "AmbassadorOv/TTTTproject-un.govt",
@@ -751,16 +757,18 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-25",
-      "readme_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+      "latest_update": "2026-10-02T11:48:41Z",
+      "latest_update_status": "DEFAULT_BRANCH_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "READ_REVALIDATED",
+      "readme_blob_sha1": "f41d34bb0019e03f269a723f424f38856bfa6c44",
       "readme_summary": "README describes a coordinator with classification, data-retrieval and reasoning agents, and a configurable local-JSON/LanceDB retrieval path; candidate overlap only, not execution evidence.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "last_scan_time_utc": "2026-10-30T05:51:37Z",
       "affiliations": [
         "owner"
-      ]
+      ],
+      "latest_commit_sha": "76c4595e87db40d2cc85a14a13ad6c37653b7401",
+      "source_status": "DUPLICATE_REVALIDATION"
     },
     {
       "full_name": "AmbassadorOv/unetbootin",
@@ -866,15 +874,18 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-24",
+      "latest_update": "2026-10-17T08:41:31Z",
+      "latest_update_status": "DEFAULT_BRANCH_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "READ_REVALIDATED",
       "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
       "readme_summary": "README title is Nanomathematics; same README blob as three other repositories.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "owner"
-      ]
+      ],
+      "latest_commit_sha": "02a287e57d162bc2b0a15b2fc3b53627443733d7",
+      "last_scan_time_utc": "2026-10-30T05:51:37Z",
+      "source_status": "DUPLICATE_README_REVALIDATION"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
@@ -963,18 +974,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-27",
+      "latest_update": "2026-10-05T08:21:13Z",
+      "latest_update_status": "DEFAULT_BRANCH_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "READ",
       "readme_blob_sha1": "5bce36b9ed2ffd0c0ebfec2a5e806e974c12ca05",
       "readme_summary": "README contains an example that concatenates predefined sections into a long-form article; no execution or WANGA integration was verified.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-27T05:15:40Z",
+      "last_scan_time_utc": "2026-10-30T05:51:37Z",
       "readme_fetch_status": "SUCCESS",
       "affiliations": [
         "collaborator",
         "organization_member"
-      ]
+      ],
+      "latest_commit_sha": "f5cc8c2a52eeff604d6b365f2aabb311935bef7a",
+      "source_status": "NEW_TARGETED_DOCUMENTS_READ"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/globalSpeed",
@@ -1038,17 +1051,19 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-27",
+      "latest_update": "2026-10-05T08:21:20Z",
+      "latest_update_status": "DEFAULT_BRANCH_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "READ_REVALIDATED",
       "readme_blob_sha1": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
       "readme_summary": "README is a short project title and blog URL only; it provides no implementation evidence.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-27T05:15:40Z",
+      "last_scan_time_utc": "2026-10-30T05:51:37Z",
       "readme_fetch_status": "SUCCESS",
       "affiliations": [
         "organization_member"
-      ]
+      ],
+      "latest_commit_sha": "acc5d5722baffd8114fefbb0610373947bd26dea",
+      "source_status": "DUPLICATE_REVALIDATION"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
@@ -1262,8 +1277,8 @@
         "triage": true
       },
       "latest_update": "2026-10-29T02:53:32Z",
-      "latest_update_status": "LATEST_DEFAULT_BRANCH_COMMIT_CREATED_AT_FROM_FETCH_COMMIT",
-      "scan_status": "REVALIDATED_README_AND_LATEST_COMMIT_2026-10-29",
+      "latest_update_status": "DEFAULT_BRANCH_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "TARGETED_FILES_READ_NOT_README_REREAD",
       "readme_blob_sha1": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32",
       "readme_summary": "Canonical research and engineering repository for AI evidence integrity, drift forensics, provenance reconstruction, verification and continuous logic mining; separates operational evidence work from future-facing logic engineering.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
@@ -1272,7 +1287,9 @@
         "organization_member"
       ],
       "latest_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
-      "latest_commit_message": "data: regional drift observation batch"
+      "latest_commit_message": "data: regional drift observation batch",
+      "last_scan_time_utc": "2026-10-30T05:51:37Z",
+      "source_status": "REGIONAL_RAW_OBSERVATION_METADATA_REVIEWED"
     },
     {
       "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
@@ -1474,106 +1491,58 @@
   "policy_skipped_repositories": [
     "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY"
   ],
-  "additional_targeted_docs_read_current_cycle": 6,
+  "additional_targeted_docs_read_current_cycle": 4,
   "current_batch": {
-    "attempted_repositories": [
-      "tribal-archery/-logicl-neural-order",
-      "tribal-archery/MAM-parsed",
-      "tribal-archery/Qdprojects",
-      "tribal-archery/copilot-cli",
-      "tribal-archery/mermaid",
-      "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
-      "tribal-archery/unetbootin",
-      "tribal-archery/vscode-azure-blockchain-ethereum"
+    "scan_time_utc": "2026-10-30T05:51:37Z",
+    "batch_id": "ECOSYSTEM-FOCUSED-REVIEW-2026-10-30",
+    "purpose": "Focused review of 10 direct-relevance repositories after the public README cursor was exhausted.",
+    "attempted_public_repositories": [
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/TTTT-0.0.0.0.1",
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "Quadruple-Multilevel-projection-project/Qualia",
+      "Quadruple-Multilevel-projection-project/WANGA-LAB"
     ],
-    "readme_successes": [
-      {
-        "repository_full_name": "tribal-archery/-logicl-neural-order",
-        "path": "README.md",
-        "git_blob_sha1": "0ffc15fb869fd479081714d71464b1a77563b92e"
-      },
-      {
-        "repository_full_name": "tribal-archery/MAM-parsed",
-        "path": "README.md",
-        "git_blob_sha1": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c"
-      },
-      {
-        "repository_full_name": "tribal-archery/Qdprojects",
-        "path": "README.md",
-        "git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107"
-      },
-      {
-        "repository_full_name": "tribal-archery/copilot-cli",
-        "path": "README.md",
-        "git_blob_sha1": "1cff9f51b830cee89bfc656ddc6ab140141226cf"
-      },
-      {
-        "repository_full_name": "tribal-archery/mermaid",
-        "path": "README.md",
-        "git_blob_sha1": "280725af7ea2fec9941f5711283c65a94523d60c"
-      },
-      {
-        "repository_full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
-        "path": "README.md",
-        "git_blob_sha1": "625c97bbc9115e868a9217bdc729341f8a0d1759"
-      }
-    ],
-    "readme_gaps": [
-      {
-        "repository_full_name": "tribal-archery/unetbootin",
-        "branch_ref": "master",
-        "exact_file_path": "README.md",
-        "source_uri": "https://github.com/tribal-archery/unetbootin/blob/master/README.md",
-        "git_blob_sha1": null,
-        "excerpt_or_summary": "README endpoint returned HTTP 404; repository metadata was accessible, but no README content was read.",
-        "epistemic_status": "ACCESS_GAP",
-        "permission_scope": "PUBLIC_REPOSITORY_READ",
-        "scan_status": "FETCH_GAP_HTTP_404",
-        "next_action": "Retry only through an explicitly exposed tree/path; do not infer repository content or absence."
-      }
-    ],
-    "policy_skips": [
-      {
-        "repository_full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
-        "reason": "Credential-like repository name; content was intentionally not opened in this cycle.",
-        "epistemic_status": "BLOCKED",
-        "permission_scope": "PUBLIC_METADATA_ONLY",
-        "scan_status": "SKIPPED_BY_POLICY_CREDENTIAL_NAMED"
-      }
-    ],
+    "private_repository_count": 3,
+    "private_repository_results": {
+      "readme_readable": 2,
+      "empty_repository": 1,
+      "details_redacted": true
+    },
+    "readme_successes": 6,
+    "readme_fetch_gaps": 0,
+    "readme_revalidations": 6,
+    "new_readme_sources": 0,
+    "new_public_document_sources": 4,
     "targeted_documents_read": [
       {
-        "repository_full_name": "tribal-archery/-logicl-neural-order",
-        "path": "AGENTS.md",
-        "git_blob_sha1": "ca0531df522da9f03f280cbc2b2633bb4b473e0f"
+        "repository_full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+        "path": "architecture/ARTIFICIAL_PHILOSOPHER_ORCHESTRATION.md",
+        "git_blob_sha1": "28ae6093db718fc14efdc9306b61d9803c40ee45"
       },
       {
-        "repository_full_name": "tribal-archery/-logicl-neural-order",
-        "path": "ORGANIZATION_INDEX.md",
-        "git_blob_sha1": "9dc029448928dd7c5a5b3c901b13cf64e6018cba"
+        "repository_full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+        "path": "architecture/NEURAL_SUBSTRATE_UPDATE.md",
+        "git_blob_sha1": "99557b9c038df1f1480784dcd87eabf1e5164498"
       },
       {
-        "repository_full_name": "tribal-archery/-logicl-neural-order",
-        "path": "PROJECT_STATUS_V1.md",
-        "git_blob_sha1": "16353e3b29aeff19721a553eefa094dc4498b660"
+        "repository_full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+        "path": "architecture/ALGORITHMIC_INTERIOR_REGISTRY.md",
+        "git_blob_sha1": "fa4dcee62706b4aea37afdfd013d2a3e2b2f8a2e"
       },
       {
-        "repository_full_name": "tribal-archery/-logicl-neural-order",
-        "path": "NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
-        "git_blob_sha1": "68c171349aedc8f9c24d3a795de7bcde9eb07539"
-      },
-      {
-        "repository_full_name": "tribal-archery/-logicl-neural-order",
-        "path": "NEURAL_ORCHESTRATION/PROTOTYPE_READINESS_V1.md",
-        "git_blob_sha1": "d3dce812dff67247c5f9c21ee00f9e1e49bfdfdc"
-      },
-      {
-        "repository_full_name": "tribal-archery/-logicl-neural-order",
-        "path": "NEURAL_ORCHESTRATION/orchestrator.py",
-        "git_blob_sha1": "b087449d057f5367f2f7508441d8286551306e4e"
+        "repository_full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+        "path": "AI-AGENT-HANDOFF-NOTICE.md",
+        "git_blob_sha1": "2e2698d337a60a93059d85d4302ea01cc3837b7b"
       }
     ],
-    "scan_time_utc": "2026-10-28T05:11:07Z"
+    "wanga_targeted_files_read": 9,
+    "regional_observation_commit": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+    "regional_observation_files": 8,
+    "regional_observation_records": 48,
+    "status": "COMPLETED_WITH_NO_NEW_README_SOURCES_AND_PRIVATE_DETAILS_REDACTED"
   },
   "revalidation_batches": [
     {
@@ -1728,6 +1697,110 @@
       "new_operational_observation_files": 8,
       "operational_observation_records": 48,
       "note": "README re-reads did not add logic claims. The 8 new regional JSON files are raw observation metadata only; all records have status NOT_CONFIGURED and an empty model field."
+    },
+    {
+      "scan_time_utc": "2026-10-30T05:51:37Z",
+      "batch_id": "ECOSYSTEM-FOCUSED-REVIEW-2026-10-30",
+      "purpose": "Focused code/docs review after the 58-public README sweep was exhausted.",
+      "repositories": [
+        {
+          "full_name": "AmbassadorOv/Nanomathematics",
+          "branch_ref": "master",
+          "latest_commit_sha": "6eba57c8e4b4c434a2bde5df9df1c61f8f370d74",
+          "latest_commit_created_at": "2020-04-18T03:34:25Z",
+          "readme_git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+          "readme_status": "READ_REVALIDATED",
+          "source_status": "DUPLICATE_README_REVALIDATION",
+          "permission_level_exposed_by_connector": "admin",
+          "visibility": "public"
+        },
+        {
+          "full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+          "branch_ref": "main",
+          "latest_commit_sha": "2c355168bb639ff1be22a918bc2838c54cea4ead",
+          "latest_commit_created_at": "2026-10-22T06:42:13Z",
+          "readme_git_blob_sha1": "ac7a2d203877442ddba493889239e61aed56ec78",
+          "readme_status": "READ",
+          "source_status": "NEW_TARGETED_DOCUMENTS_READ",
+          "permission_level_exposed_by_connector": "admin",
+          "visibility": "public"
+        },
+        {
+          "full_name": "AmbassadorOv/multi-agent-orchestator",
+          "branch_ref": "main",
+          "latest_commit_sha": "76c4595e87db40d2cc85a14a13ad6c37653b7401",
+          "latest_commit_created_at": "2026-10-02T11:48:41Z",
+          "readme_git_blob_sha1": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+          "readme_status": "READ_REVALIDATED",
+          "source_status": "DUPLICATE_REVALIDATION",
+          "permission_level_exposed_by_connector": "admin",
+          "visibility": "public"
+        },
+        {
+          "full_name": "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+          "branch_ref": "master",
+          "latest_commit_sha": "02a287e57d162bc2b0a15b2fc3b53627443733d7",
+          "latest_commit_created_at": "2026-10-17T08:41:31Z",
+          "readme_git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+          "readme_status": "READ_REVALIDATED",
+          "source_status": "DUPLICATE_README_REVALIDATION",
+          "permission_level_exposed_by_connector": "admin",
+          "visibility": "public"
+        },
+        {
+          "full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+          "branch_ref": "master",
+          "latest_commit_sha": "f5cc8c2a52eeff604d6b365f2aabb311935bef7a",
+          "latest_commit_created_at": "2026-10-05T08:21:13Z",
+          "readme_git_blob_sha1": "5bce36b9ed2ffd0c0ebfec2a5e806e974c12ca05",
+          "readme_status": "READ",
+          "source_status": "NEW_TARGETED_DOCUMENTS_READ",
+          "permission_level_exposed_by_connector": "admin",
+          "visibility": "public"
+        },
+        {
+          "full_name": "Quadruple-Multilevel-projection-project/Qualia",
+          "branch_ref": "main",
+          "latest_commit_sha": "acc5d5722baffd8114fefbb0610373947bd26dea",
+          "latest_commit_created_at": "2026-10-05T08:21:20Z",
+          "readme_git_blob_sha1": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+          "readme_status": "READ_REVALIDATED",
+          "source_status": "DUPLICATE_REVALIDATION",
+          "permission_level_exposed_by_connector": "admin",
+          "visibility": "public"
+        },
+        {
+          "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+          "branch_ref": "main",
+          "latest_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+          "latest_commit_created_at": "2026-10-29T02:53:32Z",
+          "readme_git_blob_sha1": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32",
+          "readme_status": "TARGETED_FILES_READ_NOT_README_REREAD",
+          "source_status": "REGIONAL_RAW_OBSERVATION_METADATA_REVIEWED",
+          "permission_level_exposed_by_connector": "admin",
+          "visibility": "public"
+        }
+      ],
+      "private_repository_aggregate": {
+        "attempted": 3,
+        "readme_readable": 2,
+        "empty_repository": 1,
+        "full_names_omitted": true,
+        "content_omitted": true
+      },
+      "new_public_document_sources": 4,
+      "readme_revalidations": 6,
+      "new_readme_sources": 0,
+      "notes": "README blob identity is only byte identity. No repo identity, lineage or semantic equivalence inferred."
     }
-  ]
+  ],
+  "readme_revalidation_reads_current_cycle": 6,
+  "private_repository_scan_aggregate": {
+    "date": "2026-10-30",
+    "attempted": 3,
+    "readme_readable": 2,
+    "empty_repository": 1,
+    "names_and_content": "REDACTED_FROM_PUBLIC_REGISTRY",
+    "private_content_published": 0
+  }
 }
