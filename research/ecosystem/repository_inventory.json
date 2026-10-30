@@ -1643,7 +1643,7 @@
     "wanga_targeted_files_read": 19,
     "regional_observation_commit": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
     "regional_observation_files": 8,
-    "regional_observation_records": 48,
+    "regional_observation_records": "NOT_RECOUNTED_THIS_CYCLE",
     "status": "COMPLETED_WITH_NO_NEW_README_SOURCES_AND_PRIVATE_DETAILS_REDACTED",
     "new_readme_versions": 1,
     "targeted_documents_read_count": 24,
@@ -1653,7 +1653,8 @@
       "previous_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
       "current_blob_sha1": "f41d34bb0019e03f269a723f424f38856bfa6c44",
       "status": "UNRECONCILED"
-    }
+    },
+    "regional_observation_status": "COMMIT_METADATA_ONLY"
   },
   "revalidation_batches": [
     {
