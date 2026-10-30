@@ -1278,8 +1278,8 @@
         "push": true,
         "triage": true
       },
-      "latest_update": "2026-10-29T02:53:32Z",
-      "latest_update_status": "DEFAULT_BRANCH_COMMIT_CREATED_AT_RETRIEVED",
+      "latest_update": "2026-10-30T01:14:22Z",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
       "scan_status": "TARGETED_FILES_READ_NOT_README_REREAD",
       "readme_blob_sha1": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32",
       "readme_summary": "Canonical research and engineering repository for AI evidence integrity, drift forensics, provenance reconstruction, verification and continuous logic mining; separates operational evidence work from future-facing logic engineering.",
@@ -1288,10 +1288,12 @@
         "collaborator",
         "organization_member"
       ],
-      "latest_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+      "latest_commit_sha": "c4d4d2ed9f53be4f5e2efdfca16f8219bf689704",
       "latest_commit_message": "data: regional drift observation batch",
       "last_scan_time_utc": "2026-10-30T05:51:37Z",
-      "source_status": "REGIONAL_RAW_OBSERVATION_METADATA_REVIEWED"
+      "source_status": "REGIONAL_RAW_OBSERVATION_METADATA_REVIEWED",
+      "previous_latest_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+      "previous_latest_update": "2026-10-29T02:53:32Z"
     },
     {
       "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
@@ -1641,9 +1643,9 @@
       }
     ],
     "wanga_targeted_files_read": 19,
-    "regional_observation_commit": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
+    "regional_observation_commit": "c4d4d2ed9f53be4f5e2efdfca16f8219bf689704",
     "regional_observation_files": 8,
-    "regional_observation_records": "NOT_RECOUNTED_THIS_CYCLE",
+    "regional_observation_records": 48,
     "status": "COMPLETED_WITH_NO_NEW_README_SOURCES_AND_PRIVATE_DETAILS_REDACTED",
     "new_readme_versions": 1,
     "targeted_documents_read_count": 24,
@@ -1654,7 +1656,80 @@
       "current_blob_sha1": "f41d34bb0019e03f269a723f424f38856bfa6c44",
       "status": "UNRECONCILED"
     },
-    "regional_observation_status": "COMMIT_METADATA_ONLY"
+    "regional_observation_status": "ALL_NOT_CONFIGURED",
+    "latest_wanga_main_commit_sha": "c4d4d2ed9f53be4f5e2efdfca16f8219bf689704",
+    "latest_wanga_main_commit_created_at": "2026-10-30T01:14:22Z",
+    "regional_observation_unique_ids": 48,
+    "regional_observation_duplicate_ids": 0,
+    "regional_observation_nodes": [
+      "REG-EU",
+      "REG-OCEANIA",
+      "REG-AFRICA",
+      "REG-EA",
+      "REG-IL-ME",
+      "REG-LATAM",
+      "REG-SA",
+      "REG-US"
+    ],
+    "regional_observation_languages": [
+      "en",
+      "he",
+      "es"
+    ],
+    "regional_observation_models_configured": false,
+    "regional_observation_synthetic": false,
+    "regional_observation_unique_input_snapshot_hashes": 6,
+    "regional_observation_file_records": [
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011352Z-REG-EU.json",
+        "sha": "060d269c858fb528fb63e1ba5e424b761b368838",
+        "node": "REG-EU",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011352Z-REG-OCEANIA.json",
+        "sha": "a744967f79f13b17f5f7f0c2cc62dab227153d61",
+        "node": "REG-OCEANIA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-AFRICA.json",
+        "sha": "5d47ba89a6bf8b29c41cecf85c3d6568c643f41a",
+        "node": "REG-AFRICA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-EA.json",
+        "sha": "35115beec59756fd54b80b4bfa63da143639f43e",
+        "node": "REG-EA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-IL-ME.json",
+        "sha": "4f0f1a4ba1780c7ddfae2559347397c892fce02c",
+        "node": "REG-IL-ME",
+        "language": "he"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-LATAM.json",
+        "sha": "53ebf921141dfa562f131cf162e9294a1247c668",
+        "node": "REG-LATAM",
+        "language": "es"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-SA.json",
+        "sha": "d03203e7af15821bcb9e0022ecb85dcf7e7a8de0",
+        "node": "REG-SA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011354Z-REG-US.json",
+        "sha": "d753f627da77be1589332450721f6d7eb5e4bf3a",
+        "node": "REG-US",
+        "language": "en"
+      }
+    ],
+    "regional_observation_interpretation": "Metadata records only; no configured model outputs and no drift claim."
   },
   "revalidation_batches": [
     {
