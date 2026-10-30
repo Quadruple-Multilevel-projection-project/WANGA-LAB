@@ -78,8 +78,8 @@
       {
         "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
         "branch": "main",
-        "latest_commit": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
-        "latest_commit_created_at": "2026-10-29T02:53:32Z",
+        "latest_commit": "c4d4d2ed9f53be4f5e2efdfca16f8219bf689704",
+        "latest_commit_created_at": "2026-10-30T01:14:22Z",
         "readme_blob": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32"
       }
     ],
@@ -155,7 +155,88 @@
         "path": "TEMPORAL_NETWORK_ROUTING_V0_1.md",
         "blob_sha1": "c7d88552d8d301832110c3b88fe28ac7f34fd271"
       }
-    ]
+    ],
+    "regional_observation_batch": {
+      "commit_sha": "c4d4d2ed9f53be4f5e2efdfca16f8219bf689704",
+      "commit_created_at": "2026-10-30T01:14:22Z",
+      "files": 8,
+      "records": 48,
+      "unique_ids": 48,
+      "duplicate_ids": 0,
+      "regions": [
+        "REG-EU",
+        "REG-OCEANIA",
+        "REG-AFRICA",
+        "REG-EA",
+        "REG-IL-ME",
+        "REG-LATAM",
+        "REG-SA",
+        "REG-US"
+      ],
+      "probes_per_region": 6,
+      "languages": [
+        "en",
+        "he",
+        "es"
+      ],
+      "status_distribution": {
+        "NOT_CONFIGURED": 48
+      },
+      "models_configured": 0,
+      "synthetic_records": 0,
+      "unique_input_snapshot_hashes": 6,
+      "files_detail": [
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011352Z-REG-EU.json",
+          "blob_sha1": "060d269c858fb528fb63e1ba5e424b761b368838",
+          "node": "REG-EU",
+          "language": "en"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011352Z-REG-OCEANIA.json",
+          "blob_sha1": "a744967f79f13b17f5f7f0c2cc62dab227153d61",
+          "node": "REG-OCEANIA",
+          "language": "en"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-AFRICA.json",
+          "blob_sha1": "5d47ba89a6bf8b29c41cecf85c3d6568c643f41a",
+          "node": "REG-AFRICA",
+          "language": "en"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-EA.json",
+          "blob_sha1": "35115beec59756fd54b80b4bfa63da143639f43e",
+          "node": "REG-EA",
+          "language": "en"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-IL-ME.json",
+          "blob_sha1": "4f0f1a4ba1780c7ddfae2559347397c892fce02c",
+          "node": "REG-IL-ME",
+          "language": "he"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-LATAM.json",
+          "blob_sha1": "53ebf921141dfa562f131cf162e9294a1247c668",
+          "node": "REG-LATAM",
+          "language": "es"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-SA.json",
+          "blob_sha1": "d03203e7af15821bcb9e0022ecb85dcf7e7a8de0",
+          "node": "REG-SA",
+          "language": "en"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011354Z-REG-US.json",
+          "blob_sha1": "d753f627da77be1589332450721f6d7eb5e4bf3a",
+          "node": "REG-US",
+          "language": "en"
+        }
+      ],
+      "interpretation": "Operational observation metadata only; no configured model output and no drift claim."
+    }
   },
   "new_public_documents": [
     {
@@ -283,7 +364,8 @@
     "Five private repositories are omitted from the public registry. Three were sampled this cycle: two README files were readable and one repository was empty.",
     "The GitHub Actions cross-repository scout previously reported HTTP 403 because CROSS_REPO_READ_TOKEN is unavailable; connected GitHub reads are a separate capability.",
     "A public Wix page fetch was inaccessible through the current web reader; the last connector-backed read-back remains partial and shows page/catalog drift.",
-    "A previously registered multi-agent-orchestator README candidate cites blob 0842f720..., while the current main branch returns f41d34...; preserve both versions until the source ref is reconciled."
+    "A previously registered multi-agent-orchestator README candidate cites blob 0842f720..., while the current main branch returns f41d34...; preserve both versions until the source ref is reconciled.",
+    "The latest WANGA-LAB main commit adds 8 regional observation files (48 records); all are NOT_CONFIGURED with empty model fields, so they do not establish observed drift."
   ],
   "ci": {
     "pr133_previous_head": {
@@ -356,5 +438,86 @@
     "Keep public README cursor exhausted unless the live inventory changes; continue targeted code/doc review by relevance.",
     "Review candidate logic units and counter-readings before any formal promotion.",
     "Do not write to private or collaborator repositories; integration proposals remain in WANGA-LAB only."
-  ]
+  ],
+  "regional_observation_batch": {
+    "commit_sha": "c4d4d2ed9f53be4f5e2efdfca16f8219bf689704",
+    "commit_created_at": "2026-10-30T01:14:22Z",
+    "files": 8,
+    "records": 48,
+    "unique_ids": 48,
+    "duplicate_ids": 0,
+    "regions": [
+      "REG-EU",
+      "REG-OCEANIA",
+      "REG-AFRICA",
+      "REG-EA",
+      "REG-IL-ME",
+      "REG-LATAM",
+      "REG-SA",
+      "REG-US"
+    ],
+    "probes_per_region": 6,
+    "languages": [
+      "en",
+      "he",
+      "es"
+    ],
+    "status_distribution": {
+      "NOT_CONFIGURED": 48
+    },
+    "models_configured": 0,
+    "synthetic_records": 0,
+    "unique_input_snapshot_hashes": 6,
+    "files_detail": [
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011352Z-REG-EU.json",
+        "blob_sha1": "060d269c858fb528fb63e1ba5e424b761b368838",
+        "node": "REG-EU",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011352Z-REG-OCEANIA.json",
+        "blob_sha1": "a744967f79f13b17f5f7f0c2cc62dab227153d61",
+        "node": "REG-OCEANIA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-AFRICA.json",
+        "blob_sha1": "5d47ba89a6bf8b29c41cecf85c3d6568c643f41a",
+        "node": "REG-AFRICA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-EA.json",
+        "blob_sha1": "35115beec59756fd54b80b4bfa63da143639f43e",
+        "node": "REG-EA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-IL-ME.json",
+        "blob_sha1": "4f0f1a4ba1780c7ddfae2559347397c892fce02c",
+        "node": "REG-IL-ME",
+        "language": "he"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-LATAM.json",
+        "blob_sha1": "53ebf921141dfa562f131cf162e9294a1247c668",
+        "node": "REG-LATAM",
+        "language": "es"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011353Z-REG-SA.json",
+        "blob_sha1": "d03203e7af15821bcb9e0022ecb85dcf7e7a8de0",
+        "node": "REG-SA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261030T011354Z-REG-US.json",
+        "blob_sha1": "d753f627da77be1589332450721f6d7eb5e4bf3a",
+        "node": "REG-US",
+        "language": "en"
+      }
+    ],
+    "interpretation": "Operational observation metadata only; no configured model output and no drift claim."
+  }
 }
