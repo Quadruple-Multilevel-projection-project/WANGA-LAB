@@ -1,7 +1,7 @@
 {
   "schema_version": "wanga-project-findings/1.1",
-  "snapshot_date": "2026-10-29",
-  "generated_at_utc": "2026-10-29T05:20:03Z",
+  "snapshot_date": "2026-10-31",
+  "generated_at_utc": "2026-10-31T05:07:24Z",
   "scope": "Current connected snapshot: 63 unique repositories (58 public, 5 private omitted). The 58-public README attempt sweep remains complete with 50 reads, 7 HTTP 404 gaps and 1 policy skip. This cycle revalidated 10 high-relevance READMEs and their latest default-branch commits, and registered 8 new WANGA regional observation JSON files. README cues and raw observation metadata do not establish semantic entailment.",
   "claims_added": 0,
   "logic_units_added": 0,
@@ -18,9 +18,9 @@
       "overlap_candidates": [],
       "contradictions": [],
       "permission_scope": "PUBLIC_REPOSITORY_READ",
-      "scan_status": "READ",
+      "scan_status": "READ_REVALIDATED_2026-10-31",
       "next_action": "Read targeted architecture, manifests and workflows before making integration claims.",
-      "scan_time_utc": "2026-10-23T04:25:06Z"
+      "scan_time_utc": "2026-10-31T05:07:24Z"
     },
     {
       "source_uri": "https://github.com/AmbassadorOv/AmbassadorOv/blob/main/README.md",
@@ -889,9 +889,9 @@
       ],
       "contradictions": [],
       "permission_scope": "PUBLIC_REPOSITORY_READ",
-      "scan_status": "READ",
+      "scan_status": "READ_REVALIDATED_2026-10-31",
       "next_action": "Compare the exact NTM task/result envelope and verification schema with WANGA-LAB; no external write until an adapter contract is reviewed.",
-      "scan_time_utc": "2026-10-28T05:11:07Z"
+      "scan_time_utc": "2026-10-31T05:07:24Z"
     },
     {
       "source_uri": "https://github.com/tribal-archery/MAM-parsed/blob/main/README.md",
@@ -1059,16 +1059,16 @@
       "branch_ref": "master",
       "exact_file_path": "NEURAL_ORCHESTRATION/orchestrator.py",
       "git_blob_sha1": "b087449d057f5367f2f7508441d8286551306e4e",
-      "excerpt_or_summary": "Code defines TaskEnvelope, MachineRegistry, ComputationAllocator, VerificationGate and AuditRecorder. The inspected execute() loop iterates machine IDs sequentially; max_parallel bounds selection but does not itself establish concurrent dispatch.",
+      "excerpt_or_summary": "Revalidated V1 execute() path: candidate machine IDs are selected up to max_parallel, then adapter.generate is called inside a synchronous for loop. This code path does not establish concurrent dispatch.",
       "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE",
       "overlap_candidates": [
         "Quadruple-Multilevel-projection-project/WANGA-LAB"
       ],
       "contradictions": [],
       "permission_scope": "PUBLIC_REPOSITORY_READ",
-      "scan_status": "READ",
+      "scan_status": "READ_REVALIDATED_2026-10-31",
       "next_action": "Add a bounded-concurrency implementation test before describing dispatch as parallel; keep provider endpoints NOT_CONFIGURED until real adapters are selected.",
-      "scan_time_utc": "2026-10-28T05:11:07Z"
+      "scan_time_utc": "2026-10-31T05:07:24Z"
     },
     {
       "source_uri": "https://github.com/tribal-archery/unetbootin/blob/master/README.md",
@@ -1597,6 +1597,266 @@
       "scan_status": "READ_CODE_OR_SCHEMA_ONLY",
       "next_action": "Treat as external implementation evidence; compare contracts and run isolated tests before proposing integration.",
       "scan_time_utc": "2026-10-30T05:51:37Z"
+    },
+    {
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/.github/copilot-instructions.md",
+      "repository_full_name": "tribal-archery/-logicl-neural-order",
+      "branch_ref": "master",
+      "exact_file_path": ".github/copilot-instructions.md",
+      "git_blob_sha1": "978222cef331d4b87725dd2ba84ff43421a07d69",
+      "source_commit_sha": "65ea228176634abc1bafbc351fa016de82be8f74",
+      "excerpt_or_summary": "Repository operating contract separates observation, interpretation, authorization, decision, execution and verification; defines a typed node contract and requires evidence/provenance, uncertainty and drift checks.",
+      "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/evidence-status",
+        "WANGA-LAB/research/LOGIC_FRACTAL_PROGRAM_V1.md",
+        "WANGA-LAB/logic_fractal/data/recursive_composition_contracts_v1.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "scan_time_utc": "2026-10-31T05:07:24Z",
+      "next_action": "Compare declared node and decision-gate requirements against runtime and tests; do not promote text to implemented capability."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022150Z-REG-AFRICA.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022150Z-REG-AFRICA.json",
+      "git_blob_sha1": "8f22cfec6d3596e6ae93e84b56d928a8020c069e",
+      "source_commit_sha": "25a8aa15b63962442c2f4d0f91da988f5240009d",
+      "excerpt_or_summary": "Six probe metadata records for REG-AFRICA (en); all NOT_CONFIGURED with empty model fields and synthetic=false. No model output or computed drift result is present.",
+      "epistemic_status": "RAW_OPERATIONAL_OBSERVATION_METADATA_NOT_CONFIGURED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-31-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-AFRICA",
+      "language": "en",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "scan_time_utc": "2026-10-31T05:07:24Z",
+      "next_action": "Preserve metadata; do not infer drift or causality. Require a configured model/backend and baseline/output contract before interpreting future records."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022150Z-REG-LATAM.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022150Z-REG-LATAM.json",
+      "git_blob_sha1": "d500773b415316f317221e83dd788323f2875c1a",
+      "source_commit_sha": "25a8aa15b63962442c2f4d0f91da988f5240009d",
+      "excerpt_or_summary": "Six probe metadata records for REG-LATAM (es); all NOT_CONFIGURED with empty model fields and synthetic=false. No model output or computed drift result is present.",
+      "epistemic_status": "RAW_OPERATIONAL_OBSERVATION_METADATA_NOT_CONFIGURED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-31-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-LATAM",
+      "language": "es",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "scan_time_utc": "2026-10-31T05:07:24Z",
+      "next_action": "Preserve metadata; do not infer drift or causality. Require a configured model/backend and baseline/output contract before interpreting future records."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022150Z-REG-OCEANIA.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022150Z-REG-OCEANIA.json",
+      "git_blob_sha1": "23be6d12972b1c46e0fc1e56afffbb7babd1f7bc",
+      "source_commit_sha": "25a8aa15b63962442c2f4d0f91da988f5240009d",
+      "excerpt_or_summary": "Six probe metadata records for REG-OCEANIA (en); all NOT_CONFIGURED with empty model fields and synthetic=false. No model output or computed drift result is present.",
+      "epistemic_status": "RAW_OPERATIONAL_OBSERVATION_METADATA_NOT_CONFIGURED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-31-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-OCEANIA",
+      "language": "en",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "scan_time_utc": "2026-10-31T05:07:24Z",
+      "next_action": "Preserve metadata; do not infer drift or causality. Require a configured model/backend and baseline/output contract before interpreting future records."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022150Z-REG-US.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022150Z-REG-US.json",
+      "git_blob_sha1": "9258a69e92ad7ed3b70b93ffbb10af13a4a3357f",
+      "source_commit_sha": "25a8aa15b63962442c2f4d0f91da988f5240009d",
+      "excerpt_or_summary": "Six probe metadata records for REG-US (en); all NOT_CONFIGURED with empty model fields and synthetic=false. No model output or computed drift result is present.",
+      "epistemic_status": "RAW_OPERATIONAL_OBSERVATION_METADATA_NOT_CONFIGURED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-31-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-US",
+      "language": "en",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "scan_time_utc": "2026-10-31T05:07:24Z",
+      "next_action": "Preserve metadata; do not infer drift or causality. Require a configured model/backend and baseline/output contract before interpreting future records."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022151Z-REG-EA.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022151Z-REG-EA.json",
+      "git_blob_sha1": "8b6cffcf36ef128c5ddbefaa2ec997342c0247eb",
+      "source_commit_sha": "25a8aa15b63962442c2f4d0f91da988f5240009d",
+      "excerpt_or_summary": "Six probe metadata records for REG-EA (en); all NOT_CONFIGURED with empty model fields and synthetic=false. No model output or computed drift result is present.",
+      "epistemic_status": "RAW_OPERATIONAL_OBSERVATION_METADATA_NOT_CONFIGURED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-31-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-EA",
+      "language": "en",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "scan_time_utc": "2026-10-31T05:07:24Z",
+      "next_action": "Preserve metadata; do not infer drift or causality. Require a configured model/backend and baseline/output contract before interpreting future records."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022151Z-REG-EU.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022151Z-REG-EU.json",
+      "git_blob_sha1": "c830ad117e7979b3bb9c3da175c2e4ab1d68b9b0",
+      "source_commit_sha": "25a8aa15b63962442c2f4d0f91da988f5240009d",
+      "excerpt_or_summary": "Six probe metadata records for REG-EU (en); all NOT_CONFIGURED with empty model fields and synthetic=false. No model output or computed drift result is present.",
+      "epistemic_status": "RAW_OPERATIONAL_OBSERVATION_METADATA_NOT_CONFIGURED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-31-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-EU",
+      "language": "en",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "scan_time_utc": "2026-10-31T05:07:24Z",
+      "next_action": "Preserve metadata; do not infer drift or causality. Require a configured model/backend and baseline/output contract before interpreting future records."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022151Z-REG-IL-ME.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022151Z-REG-IL-ME.json",
+      "git_blob_sha1": "7b786afa04b0c60d01d25f9851600bd498797e61",
+      "source_commit_sha": "25a8aa15b63962442c2f4d0f91da988f5240009d",
+      "excerpt_or_summary": "Six probe metadata records for REG-IL-ME (he); all NOT_CONFIGURED with empty model fields and synthetic=false. No model output or computed drift result is present.",
+      "epistemic_status": "RAW_OPERATIONAL_OBSERVATION_METADATA_NOT_CONFIGURED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-31-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-IL-ME",
+      "language": "he",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "scan_time_utc": "2026-10-31T05:07:24Z",
+      "next_action": "Preserve metadata; do not infer drift or causality. Require a configured model/backend and baseline/output contract before interpreting future records."
+    },
+    {
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022151Z-REG-SA.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch_ref": "main",
+      "exact_file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022151Z-REG-SA.json",
+      "git_blob_sha1": "4533725aac9ac723b636f10b435e62f5a8f73703",
+      "source_commit_sha": "25a8aa15b63962442c2f4d0f91da988f5240009d",
+      "excerpt_or_summary": "Six probe metadata records for REG-SA (en); all NOT_CONFIGURED with empty model fields and synthetic=false. No model output or computed drift result is present.",
+      "epistemic_status": "RAW_OPERATIONAL_OBSERVATION_METADATA_NOT_CONFIGURED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_status": "READ",
+      "observation_batch_id": "OBS-BATCH-2026-10-31-REGIONAL",
+      "observation_count": 6,
+      "region_code": "REG-SA",
+      "language": "en",
+      "status_values": [
+        "NOT_CONFIGURED"
+      ],
+      "model_values": [
+        ""
+      ],
+      "synthetic_values": [
+        false
+      ],
+      "unique_input_snapshot_hashes": 6,
+      "scan_time_utc": "2026-10-31T05:07:24Z",
+      "next_action": "Preserve metadata; do not infer drift or causality. Require a configured model/backend and baseline/output contract before interpreting future records."
     }
   ],
   "duplicate_readme_clusters": [
@@ -1657,7 +1917,7 @@
     "2026-10-29 WANGA regional observation batch contains 48 metadata records across 8 regions; every record is NOT_CONFIGURED with an empty model field, so it is not evidence of drift or model behavior.",
     "No ChatGPT conversations.json/ZIP export surfaced in the targeted Files search this cycle; no transcript was ingested and no claim of global conversation coverage is made."
   ],
-  "candidate_logic_units_registered": 17,
+  "candidate_logic_units_registered": 35,
   "candidate_logic_units": [
     {
       "stable_id": "EXT-MAORCH-UNIT-001",
@@ -2480,6 +2740,73 @@
       "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/tests_relay.py",
       "interpretation": "Candidate extracted from an external source; no semantic entailment is asserted.",
       "next_action": "Compare with WANGA contracts and run isolated tests before integration."
+    },
+    {
+      "stable_id": "NTM-COPILOT-OBS-AUTH-001",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/.github/copilot-instructions.md",
+      "repository_full_name": "tribal-archery/-logicl-neural-order",
+      "branch_ref": "master",
+      "exact_file_path": ".github/copilot-instructions.md",
+      "source_blob_sha1": "978222cef331d4b87725dd2ba84ff43421a07d69",
+      "exact_locator": ".github/copilot-instructions.md > Rational Logic Kernel",
+      "literal_excerpt": "Separate observation, interpretation, authorization, decision, execution, and verification.",
+      "primitives": [
+        "observation",
+        "interpretation",
+        "authorization",
+        "decision",
+        "execution",
+        "verification"
+      ],
+      "relation_candidates": [
+        "requires_distinction(observation, interpretation, authorization, decision, execution, verification)"
+      ],
+      "interpretation": "A repository operating instruction requires these operational categories to remain distinct.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "Instruction text does not establish that the runtime enforces these distinctions.",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/evidence-status",
+        "WANGA-LAB/research/LOGIC_FRACTAL_PROGRAM_V1.md"
+      ],
+      "next_action": "Compare against execution code and tests; retain as a candidate until reviewed."
+    },
+    {
+      "stable_id": "NTM-COPILOT-NODE-CONTRACT-001",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/.github/copilot-instructions.md",
+      "repository_full_name": "tribal-archery/-logicl-neural-order",
+      "branch_ref": "master",
+      "exact_file_path": ".github/copilot-instructions.md",
+      "source_blob_sha1": "978222cef331d4b87725dd2ba84ff43421a07d69",
+      "exact_locator": ".github/copilot-instructions.md > Node contract",
+      "literal_excerpt": "Each node must declare: machine_id, role, capabilities, constraints, model/provider reference, input schema, output schema, evidence policy, verification policy, and status.",
+      "primitives": [
+        "node",
+        "machine_id",
+        "role",
+        "capabilities",
+        "constraints",
+        "model/provider reference",
+        "input schema",
+        "output schema",
+        "evidence policy",
+        "verification policy",
+        "status"
+      ],
+      "relation_candidates": [
+        "declares(node, required_node_contract_fields)"
+      ],
+      "interpretation": "The repository text defines a typed node-interface requirement.",
+      "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+      "entailment_status": "NOT_ASSERTED",
+      "weights_status": "NOT_APPLIED",
+      "scope_limit": "A declared contract is not proof that every node instance validates or satisfies the fields.",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_fractal/data/recursive_composition_contracts_v1.json",
+        "WANGA-LAB/research/LOGIC_FRACTAL_PROGRAM_V1.md"
+      ],
+      "next_action": "Map fields to current NTM schemas and verify enforcement tests."
     }
   ],
   "private_library_scan": {
@@ -2638,6 +2965,36 @@
       "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
       "branch_ref": "main",
       "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/TEMPORAL_NETWORK_ROUTING_V0_1.md"
+    },
+    {
+      "stable_id": "NTM-BOUNDARY-PARALLEL-DISPATCH-001",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/orchestrator.py",
+      "repository_full_name": "tribal-archery/-logicl-neural-order",
+      "branch_ref": "master",
+      "exact_file_path": "NEURAL_ORCHESTRATION/orchestrator.py",
+      "source_blob_sha1": "b087449d057f5367f2f7508441d8286551306e4e",
+      "exact_locator": "NeuralThinkingMachine.execute() > for machine_id in decision.machine_ids",
+      "status": "SOURCE_GROUNDED_BOUNDARY_CANDIDATE_NOT_BENCHMARK_ELIGIBLE",
+      "observed": "The current execute path calls adapter.generate inside a synchronous for loop after selecting up to task.max_parallel machines.",
+      "counter_reading_candidate": "max_parallel bounds candidate selection; it does not by itself establish concurrent dispatch.",
+      "replay_status": "STATIC_CODE_REVIEW_ONLY",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "note": "This is a bounded implementation observation for this execute() path, not a claim about every runtime path."
+    },
+    {
+      "stable_id": "NTM-BOUNDARY-DECISION-GATE-ENFORCEMENT-001",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/.github/copilot-instructions.md",
+      "repository_full_name": "tribal-archery/-logicl-neural-order",
+      "branch_ref": "master",
+      "exact_file_path": ".github/copilot-instructions.md",
+      "source_blob_sha1": "978222cef331d4b87725dd2ba84ff43421a07d69",
+      "exact_locator": ".github/copilot-instructions.md > Rational Logic Kernel",
+      "status": "DOCUMENTATION_BOUNDARY_CANDIDATE_NOT_BENCHMARK_ELIGIBLE",
+      "observed": "The document requires a Decision Gate and separate authorization, decision, execution and verification states.",
+      "counter_reading_candidate": "A documented gate does not prove runtime enforcement without implementation and tests.",
+      "replay_status": "NOT_RUN",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "note": "Not a contradiction claim; a verification boundary."
     }
   ],
   "internal_document_scan": {
@@ -3225,5 +3582,232 @@
     "logic_units_added": 0,
     "interpretation": "The batch records probe metadata and input snapshot hashes only. Empty model fields and NOT_CONFIGURED status mean no configured model observations; do not infer drift, failure or causal state from these records.",
     "next_action": "Configure the intended regional probe/model pipeline before treating future records as drift observations; preserve these 48 metadata records unchanged."
-  }
+  },
+  "private_repository_scan_2026_10_31": {
+    "repositories_sampled": 1,
+    "readme_successes": 1,
+    "names_and_content_published": 0,
+    "permission_scope": "PRIVATE_REPOSITORY_READ",
+    "publication_status": "REDACTED_FROM_PUBLIC_REGISTRY"
+  },
+  "private_library_scan_2026_10_31": {
+    "files_reviewed": 4,
+    "candidate_units_extracted": 9,
+    "formal_logic_units_added": 0,
+    "semantic_entailments_asserted": 0,
+    "source_grounded_benchmarks_added": 0,
+    "publication_status": "PRIVATE_REVIEW_ONLY_NOT_APPROVED",
+    "private_hashes_published": 0,
+    "raw_private_content_published": 0
+  },
+  "current_cycle_2026_10_31": {
+    "date": "2026-10-31",
+    "repositories_attempted": 10,
+    "public_repositories": 9,
+    "private_repositories_sampled": 1,
+    "public_readme_successes": 8,
+    "public_readme_404": 1,
+    "private_readme_successes": 1,
+    "new_public_document_sources": 1,
+    "new_regional_observation_files": 8,
+    "new_regional_observation_records": 48,
+    "candidate_logic_units_added": 2,
+    "candidate_boundary_cases_added": 2,
+    "formal_logic_units_added": 0,
+    "claims_added": 0,
+    "new_compositions": 0,
+    "semantic_entailments_asserted": 0,
+    "weights_applied": false,
+    "conversation_exports_ingested": 0,
+    "private_library_files_reviewed": 4,
+    "private_candidate_units": 9,
+    "private_content_published": 0
+  },
+  "repository_revalidation_2026_10_31": [
+    {
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "latest_commit_sha": "25a8aa15b63962442c2f4d0f91da988f5240009d",
+      "readme_blob_sha1": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32",
+      "readme_status": "READ"
+    },
+    {
+      "repository": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "branch": "master",
+      "latest_commit_sha": "2a658768ba0112f74e70956588b0f8e6d958f971",
+      "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "readme_status": "READ"
+    },
+    {
+      "repository": "tribal-archery/-logicl-neural-order",
+      "branch": "master",
+      "latest_commit_sha": "65ea228176634abc1bafbc351fa016de82be8f74",
+      "readme_blob_sha1": "0ffc15fb869fd479081714d71464b1a77563b92e",
+      "readme_status": "READ"
+    },
+    {
+      "repository": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "branch": "main",
+      "latest_commit_sha": "9f10f1919596084f7983804a9682a18b1e7960a3",
+      "readme_blob_sha1": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6",
+      "readme_status": "READ"
+    },
+    {
+      "repository": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "branch": "main",
+      "latest_commit_sha": "d6137618ecb3a055f908deda690845a05372d29c",
+      "readme_blob_sha1": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
+      "readme_status": "READ"
+    },
+    {
+      "repository": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "branch": "main",
+      "latest_commit_sha": "fb7ecae90a26ad4cac786d39b7bcb90fb31b5614",
+      "readme_blob_sha1": "1530209671f6f76eb1808cf17d9584437e1e867b",
+      "readme_status": "READ"
+    },
+    {
+      "repository": "Quadruple-Multilevel-projection-project/MNM",
+      "branch": "master",
+      "latest_commit_sha": "2fe3f3516a656b95a41d0020e71133646e7b0fbb",
+      "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "readme_status": "READ"
+    },
+    {
+      "repository": "Quadruple-Multilevel-projection-project/globalSpeed",
+      "branch": "master",
+      "latest_commit_sha": "9d1d5b074c47bffad8f1afea46983318e158bd44",
+      "readme_blob_sha1": "a6976e6480700db0264d5dd7a20267a04f9209f0",
+      "readme_status": "READ"
+    },
+    {
+      "repository": "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "branch": "main",
+      "latest_commit_sha": "9fd1ec4beb88da258559990fcc2597cbb761f0a5",
+      "readme_blob_sha1": null,
+      "readme_status": "HTTP_404"
+    }
+  ],
+  "regional_observation_batch_2026_10_31": {
+    "commit_sha": "25a8aa15b63962442c2f4d0f91da988f5240009d",
+    "files": [
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022150Z-REG-AFRICA.json",
+        "sha": "8f22cfec6d3596e6ae93e84b56d928a8020c069e",
+        "node": "REG-AFRICA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022150Z-REG-LATAM.json",
+        "sha": "d500773b415316f317221e83dd788323f2875c1a",
+        "node": "REG-LATAM",
+        "language": "es"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022150Z-REG-OCEANIA.json",
+        "sha": "23be6d12972b1c46e0fc1e56afffbb7babd1f7bc",
+        "node": "REG-OCEANIA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022150Z-REG-US.json",
+        "sha": "9258a69e92ad7ed3b70b93ffbb10af13a4a3357f",
+        "node": "REG-US",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022151Z-REG-EA.json",
+        "sha": "8b6cffcf36ef128c5ddbefaa2ec997342c0247eb",
+        "node": "REG-EA",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022151Z-REG-EU.json",
+        "sha": "c830ad117e7979b3bb9c3da175c2e4ab1d68b9b0",
+        "node": "REG-EU",
+        "language": "en"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022151Z-REG-IL-ME.json",
+        "sha": "7b786afa04b0c60d01d25f9851600bd498797e61",
+        "node": "REG-IL-ME",
+        "language": "he"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261031T022151Z-REG-SA.json",
+        "sha": "4533725aac9ac723b636f10b435e62f5a8f73703",
+        "node": "REG-SA",
+        "language": "en"
+      }
+    ],
+    "record_count": 48,
+    "unique_observation_ids": 48,
+    "duplicate_observation_ids": 0,
+    "nodes": [
+      "REG-AFRICA",
+      "REG-LATAM",
+      "REG-OCEANIA",
+      "REG-US",
+      "REG-EA",
+      "REG-EU",
+      "REG-IL-ME",
+      "REG-SA"
+    ],
+    "probes_per_node": 6,
+    "languages": [
+      "en",
+      "es",
+      "he"
+    ],
+    "status_distribution": {
+      "NOT_CONFIGURED": 48
+    },
+    "configured_model_count": 0,
+    "synthetic_records": 0,
+    "unique_input_snapshot_hashes": 6,
+    "claims_added": 0,
+    "logic_units_added": 0,
+    "interpretation": "Operational metadata only; empty model fields and NOT_CONFIGURED status do not establish drift, model behavior or causal state."
+  },
+  "wix_audit_2026_10_31": {
+    "site_name": "Logic Engine Research Lab",
+    "site_status": "PUBLISHED",
+    "site_context_updated_at": "2026-10-12",
+    "page_level_readback": "BLOCKED_PUBLIC_PAGE_FETCH_INACCESSIBLE",
+    "last_manifest_readback": "2026-10-27",
+    "last_readback_status": "PAGE_FETCH_CONFIRMED_WITH_CONTENT_DRIFT",
+    "write_performed": false,
+    "sync_decision": "NO_WRITE_NO_APPROVED_CATALOG_CHANGE"
+  },
+  "limbo_cartography_2026_10_31": {
+    "pull_request": 122,
+    "status": "OPEN_ACTION_REQUIRED",
+    "branch": "deploy/limbo-cartography-core-v1",
+    "source_matrix_sha256": "fe50da1b94ff1f303e112d8c586f4da42ac54d18e304529024129ce39f711e13",
+    "crash_map_blob_sha1": "3617504c68262f71366a244563fc06b1be270da2",
+    "crash_map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+    "nodes": 14,
+    "edges": 19,
+    "incidents": 10,
+    "history_events": 2,
+    "unresolved_recurrence_clusters": 1,
+    "incidents_without_latest_passing_retest": 9,
+    "recorded_passing_retests": 1,
+    "tuning_candidate_id": "TUNE-9c166900cc4ad5dd",
+    "tuning_replay_status": "NOT_RUN",
+    "latest_execution_status": "EXECUTION_RECORD_ONLY",
+    "latest_execution_utc": "2026-10-25T06:00:16Z",
+    "new_crash_inputs": 0,
+    "input_status": "NO_INPUTS",
+    "semantic_verification": "NOT_PERFORMED",
+    "workflow_jobs_per_run": 0
+  },
+  "access_gaps_2026_10_31": [
+    "No complete private ChatGPT conversation history is exposed; no conversation export was ingested.",
+    "Five private repositories remain omitted from the public inventory; one private repository was sampled with name/content redacted.",
+    "Actions cross-repository scout lacks CROSS_REPO_READ_TOKEN.",
+    "Public Logic Wiki page fetch is inaccessible; Wix site context is available but is not page-level read-back.",
+    "One public README fetch returned HTTP 404.",
+    "The guessed NEURAL_ORCHESTRATION/README.md path returned HTTP 404; this is not proof that documentation is absent."
+  ]
 }
