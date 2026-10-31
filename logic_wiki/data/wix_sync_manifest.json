@@ -1,1 +1,162 @@
-2beaa646f628e9b4d66da68fe69a5666712b6d37
+{
+  "schema_version": "logic-wiki-wix-sync/1.0",
+  "last_sync_date": "2026-10-12",
+  "status": "PUBLISHED_READ_BACK_PARTIAL",
+  "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
+  "wiki_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
+  "source_catalog": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/articles.json",
+  "synced_article_count": 18,
+  "source_record_count": 16,
+  "relation_link_count": 102,
+  "homepage_navigation_verified": true,
+  "homepage_card_verified": true,
+  "existing_model_builder_preserved": true,
+  "existing_corpus_atlas_preserved": true,
+  "verification_method": "Wix upload API returned HTTP 200. Public fetch confirmed the new research page title, navigation from homepage and Logic Wiki, and links to the GitHub catalog/taxonomy. Extracted public page text was partial, so exact topic-by-topic read-back remains incomplete. Read-back on 2026-10-27 used a JavaScript-rendered public-page fetch for the main Logic Wiki, fractal-research page and evidence-status page. The main page reports 28 entries, matching the current GitHub catalog; the fractal-research page reports 27 entries/16 sources versus GitHub 28/17, and the main page retains a 2026-10-12 ecosystem-sweep section. Site context confirms Published; no Wix write or deployment revision was returned.",
+  "automation_boundary": "Connected Wix upload/read-back was used. GitHub Actions does not have Wix credentials; scheduled research must use the connected Wix integration and record a read-back result.",
+  "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
+  "note": "18 legacy catalog entries remain on the core Logic Wiki. The GitHub research catalog contains 27 entries, including 9 new concepts described on the supplemental fractal-research page. Publication is not semantic verification.",
+  "extended_topic_page_count": 10,
+  "main_page_card_count": 27,
+  "extended_page_resources": [
+    {
+      "id": "wiki-page-research-status",
+      "url": "/logic-wiki-research-status.html",
+      "source_refs": [
+        "research/reports/logic-fractal/2026-10-12-readiness-snapshot.md",
+        "logic_wiki/data/readiness_gate.json"
+      ]
+    },
+    {
+      "id": "wiki-page-fractal-model",
+      "url": "/logic-wiki-fractal-model.html",
+      "source_refs": [
+        "research/LOGIC_FRACTAL_PROGRAM_V1.md",
+        "scripts/build_first_fractal_model.py"
+      ]
+    },
+    {
+      "id": "wiki-page-fractal-logic",
+      "url": "/logic-wiki-fractal-logic.html",
+      "source_refs": [
+        "logic_fractal/fragment_composer.py",
+        "logic_fractal/data/composition_rules.json"
+      ]
+    },
+    {
+      "id": "wiki-page-typed-fragment",
+      "url": "/logic-wiki-typed-fragment.html",
+      "source_refs": [
+        "logic_fractal/data/typed_fragments_fixture.json",
+        "logic_fractal/fragment_composer.py"
+      ]
+    },
+    {
+      "id": "wiki-page-mln-field",
+      "url": "/logic-wiki-mln-field.html",
+      "source_refs": [
+        "logic_wiki/data/articles.json"
+      ],
+      "source_status": "LOCAL_ARCHIVE_NOT_PUBLICLY_LINKED"
+    },
+    {
+      "id": "wiki-page-231-gates",
+      "url": "/logic-wiki-231-gates.html",
+      "source_refs": [
+        "https://www.sefaria.org/Sefer_Yetzirah_Gra_Version.2.4",
+        "research/data/LETTER_GATE_MAP_231_V1.json"
+      ]
+    },
+    {
+      "id": "wiki-page-logic-before-weight",
+      "url": "/logic-wiki-logic-before-weight.html",
+      "source_refs": [
+        "research/LOGIC_MINE_RESEARCH_TRACKS.md",
+        "research/LOGIC_FRACTAL_PROGRAM_V1.md"
+      ]
+    },
+    {
+      "id": "wiki-page-evidence-status",
+      "url": "/logic-wiki-evidence-status.html",
+      "source_refs": [
+        "logic_engine_v1/logic_kernel.py",
+        "research/reports/logic-fractal/2026-10-12-readiness-snapshot.md"
+      ]
+    },
+    {
+      "id": "wiki-page-ntm",
+      "url": "/logic-wiki-ntm.html",
+      "source_refs": [
+        "logic_model_builder_v1/README.md",
+        "research/LOGIC_FRACTAL_PROGRAM_V1.md"
+      ],
+      "source_status": "LOCAL_ARCHIVE_INTEGRATION_PENDING"
+    },
+    {
+      "id": "wiki-page-fractal-research",
+      "url": "/logic-wiki-fractal-research.html",
+      "source_refs": [
+        "logic_wiki/data/articles.json",
+        "logic_wiki/data/fractal_taxonomy.json",
+        "logic_fractal/data/recursive_composition_contracts_v1.json",
+        "logic_wiki/data/readiness_gate.json"
+      ]
+    }
+  ],
+  "stable_extended_ids_verified": 10,
+  "all_extended_resources_have_source_or_explicit_local_boundary": true,
+  "fractal_research_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki-fractal-research.html",
+  "fractal_research_navigation_verified": true,
+  "additional_pages": [
+    "logic-wiki-fractal-research.html"
+  ],
+  "main_page_catalog_article_count": 18,
+  "research_catalog_article_count": 27,
+  "supplemental_research_concept_count": 9,
+  "last_readback_date": "2026-10-31",
+  "readback_status": "BLOCKED_PUBLIC_PAGE_FETCH_INACCESSIBLE",
+  "deployment_revision": "NOT_EXPOSED",
+  "source_catalog_snapshot": {
+    "date": "2026-10-27",
+    "git_blob_sha1": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed",
+    "article_count": 28,
+    "source_record_count": 17,
+    "source_class_count": 11,
+    "relation_link_count": 111,
+    "dangling_source_refs": 0,
+    "dangling_relation_refs": 0
+  },
+  "page_readback": [
+    {
+      "url": "/logic-wiki.html",
+      "fetch_status": "SUCCESS",
+      "visible_description_count": 28,
+      "comparison": "ARTICLE_COUNT_MATCHES_GITHUB_CATALOG",
+      "stale_embedded_section": "ECOSYSTEM AGENT SWEEP · 2026-10-12"
+    },
+    {
+      "url": "/logic-wiki-fractal-research.html",
+      "fetch_status": "SUCCESS",
+      "visible_catalog_article_count": 27,
+      "visible_source_record_count": 16,
+      "comparison": "STALE_GITHUB_MAIN_HAS_28_ARTICLES_AND_17_SOURCES"
+    },
+    {
+      "url": "/logic-wiki-evidence-status.html",
+      "fetch_status": "SUCCESS",
+      "comparison": "STATUS_DEFINITIONS_VISIBLE_NO_NUMERIC_CATALOG_CLAIM"
+    }
+  ],
+  "write_performed": false,
+  "sync_decision": "NO_WRITE_NO_APPROVED_CATALOG_CHANGE; REVIEW_PAGE_LEVEL_COUNT_DRIFT_BEFORE_NEXT_PUBLICATION",
+  "last_readback_status": "BLOCKED_PUBLIC_PAGE_FETCH_INACCESSIBLE",
+  "page_level_readback": "BLOCKED_PUBLIC_PAGE_FETCH_INACCESSIBLE",
+  "current_cycle_audit": {
+    "date": "2026-10-31",
+    "site_context_last_recorded_updated_at": "2026-10-12",
+    "page_level_readback": "BLOCKED_PUBLIC_PAGE_FETCH_INACCESSIBLE",
+    "write_performed": false,
+    "sync_decision": "NO_WRITE_NO_APPROVED_CATALOG_CHANGE",
+    "note": "No approved catalog delta was produced. The public page could not be read back in this cycle; the last recorded partial read-back remains 2026-10-27 with content drift."
+  }
+}
