@@ -1,0 +1,326 @@
+{
+  "cartography_version": "1.3.0",
+  "last_updated": "2026-10-19",
+  "system_state": "RECURRENCE_PATTERN_OBSERVED_CURRENT_SYSTEM_STATE_UNASSESSED",
+  "daily_seismic_records": [
+    {
+      "coordinate_id": "CRASH-GHA-37763700482",
+      "timestamp_utc": "2026-10-08T10:28:31Z",
+      "status": "OBSERVED",
+      "legacy_system_status": "LOCAL_STRUCTURE_FAILURE",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/37763700482"
+      ],
+      "source_evidence": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/37763700482",
+          "source_version": "aa719ed2e673e1be93df79b2fbe1f0fef9ac7058",
+          "source_sha256": null,
+          "exact_locator": "run 37763700482 > job operations (113266879412) > compileall output > scripts/vitruvius_forensic_research.py:93",
+          "language": "en",
+          "permission_scope": "PUBLIC_SOURCE",
+          "excerpt_or_summary": "Observed SyntaxError at line 93 while compiling scripts/vitruvius_forensic_research.py; the Actions run concluded failure."
+        }
+      ],
+      "context": "WANGA-LAB main-branch GitHub Actions failure observed in Daily Autonomous Operations. Scope is this workflow run and its failing stage; this record does not assert whole-system collapse.",
+      "failure_observation": "python -m compileall -q scripts tools tests failed before later steps: scripts/vitruvius_forensic_research.py:93 raised SyntaxError at a task(...) call containing a keyword-style pair written with ':'.",
+      "affected_component": "Daily Autonomous Operations / scripts/vitruvius_forensic_research.py compile stage",
+      "observed_state": "workflow=FAILURE; compileall=FAILURE; syntax_error_at_line=93",
+      "prior_incident_ids": []
+    },
+    {
+      "coordinate_id": "CRASH-GHA-38376796038",
+      "timestamp_utc": "2026-10-13T09:30:25Z",
+      "status": "OBSERVED",
+      "legacy_system_status": "LOCAL_STRUCTURE_FAILURE",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38376796038"
+      ],
+      "source_evidence": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38376796038",
+          "source_version": "5a741dc5ad598823b23ed44c412a09a63d8bb73a",
+          "source_sha256": null,
+          "exact_locator": "run 38376796038 > job build-index (115227090229) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "language": "en",
+          "permission_scope": "PUBLIC_SOURCE",
+          "excerpt_or_summary": "Three Vitruvius tests failed (8 passed): KeyError 'orchestrator', TypeError 'int' object is not iterable for stages, and KeyError 'gates'."
+        }
+      ],
+      "context": "WANGA-LAB main-branch GitHub Actions failure observed in Vitruvius Research Index. Scope is this workflow run and its failing stage; this record does not assert whole-system collapse.",
+      "failure_observation": "The build-index job failed in Run Vitruvius tests: 3 tests failed and 8 passed. Failures: KeyError 'orchestrator' (test_research_agent_work_queue.py:18), TypeError: 'int' object is not iterable for data['stages'] (line 22), and KeyError 'gates' (line 29).",
+      "affected_component": "Vitruvius Research Index / build-index test contract",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "prior_incident_ids": []
+    },
+    {
+      "coordinate_id": "CRASH-GHA-38530242493",
+      "timestamp_utc": "2026-10-14T07:43:52Z",
+      "status": "OBSERVED",
+      "legacy_system_status": "LOCAL_STRUCTURE_FAILURE",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38530242493"
+      ],
+      "source_evidence": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38530242493",
+          "source_version": "9d86c9545643f0ac08ea3644c9ca3748ce0dfd3c",
+          "source_sha256": null,
+          "exact_locator": "run 38530242493 > job build-index (115740124798) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "language": "en",
+          "permission_scope": "PUBLIC_SOURCE",
+          "excerpt_or_summary": "Three Vitruvius tests failed (8 passed): KeyError 'orchestrator', TypeError 'int' object is not iterable for stages, and KeyError 'gates'."
+        }
+      ],
+      "context": "WANGA-LAB main-branch GitHub Actions failure observed in Vitruvius Research Index. Scope is this workflow run and its failing stage; this record does not assert whole-system collapse.",
+      "failure_observation": "The build-index job failed in Run Vitruvius tests: 3 tests failed and 8 passed. Failures: KeyError 'orchestrator' (test_research_agent_work_queue.py:18), TypeError: 'int' object is not iterable for data['stages'] (line 22), and KeyError 'gates' (line 29).",
+      "affected_component": "Vitruvius Research Index / build-index test contract",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "prior_incident_ids": [
+        "CRASH-GHA-38376796038"
+      ]
+    },
+    {
+      "coordinate_id": "CRASH-GHA-38699326662",
+      "timestamp_utc": "2026-10-15T07:31:27Z",
+      "status": "OBSERVED",
+      "legacy_system_status": "LOCAL_STRUCTURE_FAILURE",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38699326662"
+      ],
+      "source_evidence": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38699326662",
+          "source_version": "dcf9c08bb54b84b4b7abbb23729da43ada8acede",
+          "source_sha256": null,
+          "exact_locator": "run 38699326662 > job build-index (116303399273) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "language": "en",
+          "permission_scope": "PUBLIC_SOURCE",
+          "excerpt_or_summary": "Three Vitruvius tests failed (8 passed): KeyError 'orchestrator', TypeError 'int' object is not iterable for stages, and KeyError 'gates'."
+        }
+      ],
+      "context": "WANGA-LAB main-branch GitHub Actions failure observed in Vitruvius Research Index. Scope is this workflow run and its failing stage; this record does not assert whole-system collapse.",
+      "failure_observation": "The build-index job failed in Run Vitruvius tests: 3 tests failed and 8 passed. Failures: KeyError 'orchestrator' (test_research_agent_work_queue.py:18), TypeError: 'int' object is not iterable for data['stages'] (line 22), and KeyError 'gates' (line 29).",
+      "affected_component": "Vitruvius Research Index / build-index test contract",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "prior_incident_ids": [
+        "CRASH-GHA-38530242493"
+      ]
+    },
+    {
+      "coordinate_id": "CRASH-GHA-38866187447",
+      "timestamp_utc": "2026-10-16T07:16:38Z",
+      "status": "OBSERVED",
+      "legacy_system_status": "LOCAL_STRUCTURE_FAILURE",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38866187447"
+      ],
+      "source_evidence": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/38866187447",
+          "source_version": "2f989802e6197f75a89947f46682054cd9db8235",
+          "source_sha256": null,
+          "exact_locator": "run 38866187447 > job build-index (116859445272) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "language": "en",
+          "permission_scope": "PUBLIC_SOURCE",
+          "excerpt_or_summary": "Three Vitruvius tests failed (8 passed): KeyError 'orchestrator', TypeError 'int' object is not iterable for stages, and KeyError 'gates'."
+        }
+      ],
+      "context": "WANGA-LAB main-branch GitHub Actions failure observed in Vitruvius Research Index. Scope is this workflow run and its failing stage; this record does not assert whole-system collapse.",
+      "failure_observation": "The build-index job failed in Run Vitruvius tests: 3 tests failed and 8 passed. Failures: KeyError 'orchestrator' (test_research_agent_work_queue.py:18), TypeError: 'int' object is not iterable for data['stages'] (line 22), and KeyError 'gates' (line 29).",
+      "affected_component": "Vitruvius Research Index / build-index test contract",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "prior_incident_ids": [
+        "CRASH-GHA-38699326662"
+      ]
+    },
+    {
+      "coordinate_id": "CRASH-GHA-39012060675",
+      "timestamp_utc": "2026-10-17T07:01:04Z",
+      "status": "OBSERVED",
+      "legacy_system_status": "LOCAL_STRUCTURE_FAILURE",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39012060675"
+      ],
+      "source_evidence": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39012060675",
+          "source_version": "fe8def78d7de55be0b66d330a6f72a4ac27cce1a",
+          "source_sha256": null,
+          "exact_locator": "run 39012060675 > job build-index (117336500585) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "language": "en",
+          "permission_scope": "PUBLIC_SOURCE",
+          "excerpt_or_summary": "Three Vitruvius tests failed (8 passed): KeyError 'orchestrator', TypeError 'int' object is not iterable for stages, and KeyError 'gates'."
+        }
+      ],
+      "context": "WANGA-LAB main-branch GitHub Actions failure observed in Vitruvius Research Index. Scope is this workflow run and its failing stage; this record does not assert whole-system collapse.",
+      "failure_observation": "The build-index job failed in Run Vitruvius tests: 3 tests failed and 8 passed. Failures: KeyError 'orchestrator' (test_research_agent_work_queue.py:18), TypeError: 'int' object is not iterable for data['stages'] (line 22), and KeyError 'gates' (line 29).",
+      "affected_component": "Vitruvius Research Index / build-index test contract",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "prior_incident_ids": [
+        "CRASH-GHA-38866187447"
+      ]
+    },
+    {
+      "coordinate_id": "CRASH-GHA-39107063451",
+      "timestamp_utc": "2026-10-18T07:16:43Z",
+      "status": "OBSERVED",
+      "legacy_system_status": "LOCAL_STRUCTURE_FAILURE",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39107063451"
+      ],
+      "source_evidence": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39107063451",
+          "source_version": "698a8fa7131991b08dd979f8424fe166aadcdfe5",
+          "source_sha256": null,
+          "exact_locator": "run 39107063451 > job build-index (117615119990) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "language": "en",
+          "permission_scope": "PUBLIC_SOURCE",
+          "excerpt_or_summary": "Three Vitruvius tests failed (8 passed): KeyError 'orchestrator', TypeError 'int' object is not iterable for stages, and KeyError 'gates'."
+        }
+      ],
+      "context": "WANGA-LAB main-branch GitHub Actions failure observed in Vitruvius Research Index. Scope is this workflow run and its failing stage; this record does not assert whole-system collapse.",
+      "failure_observation": "The build-index job failed in Run Vitruvius tests: 3 tests failed and 8 passed. Failures: KeyError 'orchestrator' (test_research_agent_work_queue.py:18), TypeError: 'int' object is not iterable for data['stages'] (line 22), and KeyError 'gates' (line 29).",
+      "affected_component": "Vitruvius Research Index / build-index test contract",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "prior_incident_ids": [
+        "CRASH-GHA-39012060675"
+      ]
+    },
+    {
+      "coordinate_id": "CRASH-GHA-39218819457",
+      "timestamp_utc": "2026-10-19T07:52:31Z",
+      "status": "OBSERVED",
+      "legacy_system_status": "LOCAL_STRUCTURE_FAILURE",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39218819457"
+      ],
+      "source_evidence": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39218819457",
+          "source_version": "8e685afebdbe763832ad653a93c8c9a71892cbb2",
+          "source_sha256": null,
+          "exact_locator": "run 39218819457 > job build-index (117949009476) > step Run Vitruvius tests > tests/test_research_agent_work_queue.py:18,22,29",
+          "language": "en",
+          "permission_scope": "PUBLIC_SOURCE",
+          "excerpt_or_summary": "Three Vitruvius tests failed (8 passed): KeyError 'orchestrator', TypeError 'int' object is not iterable for stages, and KeyError 'gates'."
+        }
+      ],
+      "context": "WANGA-LAB main-branch GitHub Actions failure observed in Vitruvius Research Index. Scope is this workflow run and its failing stage; this record does not assert whole-system collapse.",
+      "failure_observation": "The build-index job failed in Run Vitruvius tests: 3 tests failed and 8 passed. Failures: KeyError 'orchestrator' (test_research_agent_work_queue.py:18), TypeError: 'int' object is not iterable for data['stages'] (line 22), and KeyError 'gates' (line 29).",
+      "affected_component": "Vitruvius Research Index / build-index test contract",
+      "observed_state": "workflow=FAILURE; test_results=3_failed_8_passed; signature=orchestrator_stages_gates",
+      "prior_incident_ids": [
+        "CRASH-GHA-39107063451"
+      ]
+    },
+    {
+      "coordinate_id": "CRASH-GHA-39239703376",
+      "timestamp_utc": "2026-10-19T10:45:18Z",
+      "status": "OBSERVED",
+      "legacy_system_status": "LOCAL_STRUCTURE_FAILURE",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39239703376"
+      ],
+      "source_evidence": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39239703376",
+          "source_version": "8e685afebdbe763832ad653a93c8c9a71892cbb2",
+          "source_sha256": null,
+          "exact_locator": "run 39239703376 > job validate-build-report (118017255669) > step Propose generated wiki/report updates (no auto-merge)",
+          "language": "en",
+          "permission_scope": "PUBLIC_SOURCE",
+          "excerpt_or_summary": "All build and test steps passed, then the proposal step failed; the log tail reports untracked files and an unexpected error, without identifying the root cause."
+        }
+      ],
+      "context": "WANGA-LAB main-branch GitHub Actions failure observed in Logic Fractal Wiki Research. Scope is this workflow run and its failing stage; this record does not assert whole-system collapse.",
+      "failure_observation": "Build and tests completed successfully, but the proposal step 'Propose generated wiki/report updates (no auto-merge)' failed. Its log contained 'nothing added to commit but untracked files present' followed by 'Unexpected error'; the root cause is unresolved.",
+      "affected_component": "Logic Wiki generated-report proposal workflow",
+      "observed_state": "build_and_tests=PASS; proposal_step=FAILURE; root_cause=UNRESOLVED",
+      "prior_incident_ids": []
+    },
+    {
+      "coordinate_id": "CRASH-GHA-39312967972",
+      "timestamp_utc": "2026-10-19T19:40:40Z",
+      "status": "OBSERVED",
+      "legacy_system_status": "LOCAL_STRUCTURE_FAILURE",
+      "source_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39312967972"
+      ],
+      "source_evidence": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39312967972",
+          "source_version": "fb24c2c33e2b7d3887d6f0181c952e6dcc4984de",
+          "source_sha256": null,
+          "exact_locator": "run 39312967972 > job validate-and-propose (118267062737) > step Run software tests > tests/test_seismic_detector.py::test_ordered_batch_links_prior_points_and_is_idempotent",
+          "language": "en",
+          "permission_scope": "PUBLIC_SOURCE",
+          "excerpt_or_summary": "The test suite reported 14 passed and 1 failed. The crash-intake test hit ValueError because its pytest temporary inbox was outside the repository root."
+        }
+      ],
+      "context": "WANGA-LAB pull-request CI failure in the Limbo crash-intake test. Scope is the isolated test inbox path and its reporting behavior, not a claim of whole-system collapse.",
+      "failure_observation": "record_seismic_events() raised ValueError when INBOX.relative_to(ROOT) was evaluated for a temporary inbox outside ROOT.",
+      "affected_component": "limbo-cartography-core/engine/seismic_detector.py / test inbox path reporting",
+      "observed_state": "pytest=FAILURE; passed=14; failed=1; signature=temporary_inbox_outside_repo_root",
+      "prior_incident_ids": []
+    }
+  ],
+  "history_events": [
+    {
+      "event_id": "CHANGE-GHA-39312967972-INPUT-PATH-FIX",
+      "event_type": "CHANGE_APPLIED",
+      "timestamp_utc": "2026-10-19T19:41:38Z",
+      "affected_incident_ids": [
+        "CRASH-GHA-39312967972"
+      ],
+      "component": "limbo-cartography-core/engine/seismic_detector.py / test inbox path reporting",
+      "source_evidence": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/commit/756990b9c958fd1c96cac27e17229c90e3d34755",
+          "source_version": "756990b9c958fd1c96cac27e17229c90e3d34755",
+          "source_sha256": null,
+          "exact_locator": "limbo-cartography-core/engine/seismic_detector.py > record_seismic_events() > input_directory fallback",
+          "language": "python",
+          "permission_scope": "PUBLIC_SOURCE",
+          "excerpt_or_summary": "Added a ValueError fallback so a test inbox outside the repository root is reported by absolute path instead of breaking intake reporting."
+        }
+      ],
+      "previous_event_ids": [],
+      "change_summary": "Fall back to the absolute inbox path when INBOX.relative_to(ROOT) is not possible, allowing isolated temporary-inbox replay tests.",
+      "configuration_delta": {
+        "path": "limbo-cartography-core/engine/seismic_detector.py",
+        "change": "Catch ValueError from INBOX.relative_to(ROOT) and report the absolute path.",
+        "purpose": "Enable isolated temporary-inbox replay tests."
+      }
+    },
+    {
+      "event_id": "RETEST-GHA-39313112365",
+      "event_type": "RETEST",
+      "timestamp_utc": "2026-10-19T19:41:44Z",
+      "affected_incident_ids": [
+        "CRASH-GHA-39312967972"
+      ],
+      "component": "limbo-cartography-core/engine/seismic_detector.py / test inbox path reporting",
+      "source_evidence": [
+        {
+          "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39313112365",
+          "source_version": "756990b9c958fd1c96cac27e17229c90e3d34755",
+          "source_sha256": null,
+          "exact_locator": "run 39313112365 > job validate-and-propose (118267563060) > Run software tests (15 passed) > rebuild cumulative iterative crash map (9 nodes, 6 edges)",
+          "language": "en",
+          "permission_scope": "PUBLIC_SOURCE",
+          "excerpt_or_summary": "The Limbo workflow completed successfully; all 15 software tests passed and the map rebuild produced 9 nodes and 6 edges."
+        }
+      ],
+      "previous_event_ids": [
+        "CHANGE-GHA-39312967972-INPUT-PATH-FIX"
+      ],
+      "test_id": "PYTEST-15-39313112365",
+      "result": "PASS",
+      "evidence_refs": [
+        "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39313112365"
+      ]
+    }
+  ]
+}

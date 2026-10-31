@@ -1,0 +1,48 @@
+{
+  "candidate_id": "TUNE-9c166900cc4ad5dd",
+  "change_event_id": "CHANGE-GHA-39312967972-INPUT-PATH-FIX",
+  "component": "limbo-cartography-core/engine/seismic_detector.py / test inbox path reporting",
+  "configuration_delta": {
+    "change": "Catch ValueError from INBOX.relative_to(ROOT) and report the absolute path.",
+    "path": "limbo-cartography-core/engine/seismic_detector.py",
+    "purpose": "Enable isolated temporary-inbox replay tests."
+  },
+  "limitations": [
+    "A passing retest applies only to its recorded context.",
+    "Replay against the current target system remains required.",
+    "No weight, relation, or semantic claim is inferred from this candidate."
+  ],
+  "parent_incident_ids": [
+    "CRASH-GHA-39312967972"
+  ],
+  "replay_status": "NOT_RUN",
+  "retest_event_id": "RETEST-GHA-39313112365",
+  "retest_result": "PASS",
+  "scope": "Reuse of an explicitly recorded configuration change after a linked passing retest; no causal generalization is inferred.",
+  "semantic_status": "NOT_YET_VERIFIED",
+  "source_evidence": {
+    "change_event": [
+      {
+        "exact_locator": "limbo-cartography-core/engine/seismic_detector.py > record_seismic_events() > input_directory fallback",
+        "excerpt_or_summary": "Added a ValueError fallback so a test inbox outside the repository root is reported by absolute path instead of breaking intake reporting.",
+        "language": "python",
+        "permission_scope": "PUBLIC_SOURCE",
+        "source_sha256": null,
+        "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/commit/756990b9c958fd1c96cac27e17229c90e3d34755",
+        "source_version": "756990b9c958fd1c96cac27e17229c90e3d34755"
+      }
+    ],
+    "passing_retest": [
+      {
+        "exact_locator": "run 39313112365 > job validate-and-propose (118267563060) > Run software tests (15 passed) > rebuild cumulative iterative crash map (9 nodes, 6 edges)",
+        "excerpt_or_summary": "The Limbo workflow completed successfully; all 15 software tests passed and the map rebuild produced 9 nodes and 6 edges.",
+        "language": "en",
+        "permission_scope": "PUBLIC_SOURCE",
+        "source_sha256": null,
+        "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39313112365",
+        "source_version": "756990b9c958fd1c96cac27e17229c90e3d34755"
+      }
+    ]
+  },
+  "status": "CANDIDATE_REPLAY_REQUIRED"
+}
