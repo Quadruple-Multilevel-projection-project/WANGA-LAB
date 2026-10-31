@@ -99,7 +99,7 @@ Changes made during this pass:
 - No browser profile created or modified.
 - No Google Business Profile fields edited.
 - No ProductOS repository binding changed.
-- This dated configuration snapshot is the only planned repository change in this pass.
+- This dated configuration snapshot is the only repository change made in this pass.
 
 ## 7. Evidence vocabulary
 
