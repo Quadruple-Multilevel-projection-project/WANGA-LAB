@@ -1,7 +1,7 @@
 {
   "schema_version": "wanga-repository-inventory/1.1",
-  "snapshot_date": "2026-10-30",
-  "generated_at_utc": "2026-10-30T05:51:37Z",
+  "snapshot_date": "2026-10-31",
+  "generated_at_utc": "2026-10-31T05:07:24Z",
   "source": "Live GitHub affiliation inventory revalidated 2026-10-30. The 58-public README sweep remains exhausted; this cycle reviewed 7 public repositories and 3 private repositories in a bounded direct-relevance batch. Private names/content are redacted.",
   "inventory_status": "PUBLIC_README_SWEEP_COMPLETE_FOCUSED_DOC_REVIEW_WITH_PRIVATE_REDACTION",
   "visible_repository_count": 63,
@@ -902,17 +902,19 @@
         "triage": true
       },
       "latest_update": "2026-10-05T08:21:03Z",
-      "latest_update_status": "LATEST_DEFAULT_BRANCH_COMMIT_CREATED_AT_FROM_FETCH_COMMIT",
-      "scan_status": "REVALIDATED_README_AND_LATEST_COMMIT_2026-10-29",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "README_REVALIDATED_2026-10-31",
       "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
-      "readme_summary": "README title only; insufficient evidence to infer implementation.",
+      "readme_summary": "README title only; no implementation evidence.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "collaborator",
         "organization_member"
       ],
       "latest_commit_sha": "2a658768ba0112f74e70956588b0f8e6d958f971",
-      "latest_commit_message": "docs: add canonical AI agent handoff notice"
+      "latest_commit_message": "docs: add canonical AI agent handoff notice",
+      "last_scan_time_utc": "2026-10-31T05:07:24Z",
+      "readme_fetch_status": "SUCCESS"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/MNM",
@@ -927,17 +929,19 @@
         "triage": true
       },
       "latest_update": "2026-10-05T08:21:07Z",
-      "latest_update_status": "LATEST_DEFAULT_BRANCH_COMMIT_CREATED_AT_FROM_FETCH_COMMIT",
-      "scan_status": "REVALIDATED_README_AND_LATEST_COMMIT_2026-10-29",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "DUPLICATE_README_BLOB_REVALIDATED_2026-10-31",
       "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
-      "readme_summary": "README blob SHA matches sibling -logicl-neural-order README; establishes README byte identity only.",
+      "readme_summary": "README blob is byte-identical to sibling -logicl-neural-order README; this does not establish repository identity.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "collaborator",
         "organization_member"
       ],
       "latest_commit_sha": "2fe3f3516a656b95a41d0020e71133646e7b0fbb",
-      "latest_commit_message": "docs: add canonical AI agent handoff notice"
+      "latest_commit_message": "docs: add canonical AI agent handoff notice",
+      "last_scan_time_utc": "2026-10-31T05:07:24Z",
+      "readme_fetch_status": "SUCCESS"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/-",
@@ -1003,18 +1007,19 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-27",
+      "latest_update": "2026-10-05T08:21:15Z",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "README_REVALIDATED_2026-10-31",
       "readme_blob_sha1": "a6976e6480700db0264d5dd7a20267a04f9209f0",
-      "readme_summary": "README describes a browser media playback-speed extension; no direct WANGA logic-forensics overlap was established.",
+      "readme_summary": "Browser media playback-speed extension; no direct WANGA logic-forensics overlap established.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-27T05:15:40Z",
+      "last_scan_time_utc": "2026-10-31T05:07:24Z",
       "readme_fetch_status": "SUCCESS",
       "affiliations": [
         "collaborator",
         "organization_member"
-      ]
+      ],
+      "latest_commit_sha": "9d1d5b074c47bffad8f1afea46983318e158bd44"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
@@ -1029,17 +1034,19 @@
         "triage": true
       },
       "latest_update": "2026-10-22T07:25:03Z",
-      "latest_update_status": "LATEST_DEFAULT_BRANCH_COMMIT_CREATED_AT_FROM_FETCH_COMMIT",
-      "scan_status": "REVALIDATED_README_AND_LATEST_COMMIT_2026-10-29",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "README_REVALIDATED_2026-10-31",
       "readme_blob_sha1": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6",
-      "readme_summary": "README is a single external project link; no architecture claim extracted.",
+      "readme_summary": "README contains one external project link; no architecture claim extracted.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "collaborator",
         "organization_member"
       ],
       "latest_commit_sha": "9f10f1919596084f7983804a9682a18b1e7960a3",
-      "latest_commit_message": "docs(governance): link AI231 repository to PCE contract library"
+      "latest_commit_message": "docs(governance): link AI231 repository to PCE contract library",
+      "last_scan_time_utc": "2026-10-31T05:07:24Z",
+      "readme_fetch_status": "SUCCESS"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/Qualia",
@@ -1080,17 +1087,19 @@
         "triage": true
       },
       "latest_update": "2026-10-05T08:21:23Z",
-      "latest_update_status": "LATEST_DEFAULT_BRANCH_COMMIT_CREATED_AT_FROM_FETCH_COMMIT",
-      "scan_status": "REVALIDATED_README_AND_LATEST_COMMIT_2026-10-29",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "README_REVALIDATED_2026-10-31",
       "readme_blob_sha1": "1530209671f6f76eb1808cf17d9584437e1e867b",
-      "readme_summary": "Describes Terraform infrastructure for deploying AI chat/API services across environments and regions; README warns main may be out of date.",
+      "readme_summary": "Terraform infrastructure for AI chat/API services across environments and regions; README warns main may be out of date.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "collaborator",
         "organization_member"
       ],
       "latest_commit_sha": "fb7ecae90a26ad4cac786d39b7bcb90fb31b5614",
-      "latest_commit_message": "docs: add canonical AI agent handoff notice"
+      "latest_commit_message": "docs: add canonical AI agent handoff notice",
+      "last_scan_time_utc": "2026-10-31T05:07:24Z",
+      "readme_fetch_status": "SUCCESS"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/branches-",
@@ -1178,8 +1187,8 @@
         "triage": true
       },
       "latest_update": "2026-10-05T08:21:35Z",
-      "latest_update_status": "LATEST_DEFAULT_BRANCH_COMMIT_CREATED_AT_FROM_FETCH_COMMIT",
-      "scan_status": "REVALIDATED_README_AND_LATEST_COMMIT_2026-10-29",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "README_REVALIDATED_2026-10-31",
       "readme_blob_sha1": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
       "readme_summary": "README title only; purpose and implementation remain unverified from this surface.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
@@ -1188,7 +1197,9 @@
         "organization_member"
       ],
       "latest_commit_sha": "d6137618ecb3a055f908deda690845a05372d29c",
-      "latest_commit_message": "docs: add canonical AI agent handoff notice"
+      "latest_commit_message": "docs: add canonical AI agent handoff notice",
+      "last_scan_time_utc": "2026-10-31T05:07:24Z",
+      "readme_fetch_status": "SUCCESS"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
@@ -1230,16 +1241,19 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "SCANNED_PREVIOUS_BATCH_2026-10-23",
+      "latest_update": "2026-10-05T08:21:40Z",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "README_FETCH_404_REVALIDATED_2026-10-31",
       "readme_blob_sha1": null,
-      "readme_summary": "README fetch returned 404 despite visible repository metadata; treat as an access/source gap, not proof of absent documentation.",
+      "readme_summary": "README fetch returned HTTP 404 despite visible public repository metadata; source gap, not proof of absent documentation.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "collaborator",
         "organization_member"
-      ]
+      ],
+      "latest_commit_sha": "9fd1ec4beb88da258559990fcc2597cbb761f0a5",
+      "last_scan_time_utc": "2026-10-31T05:07:24Z",
+      "readme_fetch_status": "HTTP_404"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/skills",
@@ -1278,22 +1292,23 @@
         "push": true,
         "triage": true
       },
-      "latest_update": "2026-10-30T01:14:22Z",
+      "latest_update": "2026-10-31T02:22:21Z",
       "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
-      "scan_status": "TARGETED_FILES_READ_NOT_README_REREAD",
+      "scan_status": "TARGETED_README_AND_CORE_FILES_READ_2026-10-31",
       "readme_blob_sha1": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32",
-      "readme_summary": "Canonical research and engineering repository for AI evidence integrity, drift forensics, provenance reconstruction, verification and continuous logic mining; separates operational evidence work from future-facing logic engineering.",
+      "readme_summary": "Canonical WANGA-LAB research and engineering repository; latest commit adds regional observation metadata only.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "collaborator",
         "organization_member"
       ],
-      "latest_commit_sha": "c4d4d2ed9f53be4f5e2efdfca16f8219bf689704",
+      "latest_commit_sha": "25a8aa15b63962442c2f4d0f91da988f5240009d",
       "latest_commit_message": "data: regional drift observation batch",
-      "last_scan_time_utc": "2026-10-30T05:51:37Z",
+      "last_scan_time_utc": "2026-10-31T05:07:24Z",
       "source_status": "REGIONAL_RAW_OBSERVATION_METADATA_REVIEWED",
       "previous_latest_commit_sha": "af892ade90c91e36d82ffa0e98b16c11f0bf8cd5",
-      "previous_latest_update": "2026-10-29T02:53:32Z"
+      "previous_latest_update": "2026-10-29T02:53:32Z",
+      "readme_fetch_status": "SUCCESS"
     },
     {
       "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
@@ -1445,10 +1460,10 @@
         "triage": true
       },
       "latest_update": "2026-10-08T13:22:29Z",
-      "latest_update_status": "LATEST_DEFAULT_BRANCH_COMMIT_CREATED_AT_FROM_FETCH_COMMIT",
-      "scan_status": "REVALIDATED_README_AND_LATEST_COMMIT_2026-10-29",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "README_AND_TARGETED_DOCS_REVALIDATED_2026-10-31",
       "readme_blob_sha1": "0ffc15fb869fd479081714d71464b1a77563b92e",
-      "readme_summary": "NTM/WANGA orchestration repository; V1 control-plane skeleton, 28 thought modes, provider-neutral adapter, evidence/provenance and verification boundaries.",
+      "readme_summary": "NTM/WANGA orchestration workspace; provider-neutral control-plane design, task/result envelopes, verification, audit and provenance. Architecture statements are not deployment proof.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "organization_member"
@@ -1457,9 +1472,10 @@
         "updated_at": "2026-10-08T13:22:35Z",
         "pushed_at": "2026-10-22T06:52:20Z"
       },
-      "last_scan_time_utc": "2026-10-28T05:11:07Z",
+      "last_scan_time_utc": "2026-10-31T05:07:24Z",
       "latest_commit_sha": "65ea228176634abc1bafbc351fa016de82be8f74",
-      "latest_commit_message": "Add evidence watch for emerging agent logic capability market"
+      "latest_commit_message": "Add evidence watch for emerging agent logic capability market",
+      "readme_fetch_status": "SUCCESS"
     },
     {
       "full_name": "tribal-archery/MAM-parsed",
@@ -2112,5 +2128,55 @@
     "empty_repository": 1,
     "names_and_content": "REDACTED_FROM_PUBLIC_REGISTRY",
     "private_content_published": 0
-  }
+  },
+  "live_inventory_snapshot": {
+    "owner_repositories": 38,
+    "collaborator_repositories": 13,
+    "organization_member_repositories": 25,
+    "unique_repositories": 63,
+    "public_repositories": 58,
+    "private_repositories_omitted": 5,
+    "unknown_visibility": 0,
+    "checked_at_utc": "2026-10-31T05:07:24Z"
+  },
+  "focused_review_batch_2026_10_31": {
+    "repositories_attempted": 10,
+    "public_repositories": [
+      "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "tribal-archery/-logicl-neural-order",
+      "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "Quadruple-Multilevel-projection-project/MNM",
+      "Quadruple-Multilevel-projection-project/globalSpeed",
+      "Quadruple-Multilevel-projection-project/glowing-octo-waddle"
+    ],
+    "private_repositories_sampled": 1,
+    "public_readme_successes": 8,
+    "public_readme_404": 1,
+    "private_readme_successes": 1,
+    "private_names_and_content_published": 0
+  },
+  "readme_sweep_status": {
+    "attempted": 58,
+    "successful_reads": 50,
+    "http_404_gaps": 7,
+    "policy_skips": 1,
+    "remaining_unattempted": 0,
+    "coverage": "README_LEVEL_ONLY_NOT_FULL_CODE_AUDIT"
+  },
+  "focused_review_next_batch": [
+    "tribal-archery/MAM-parsed",
+    "tribal-archery/Qdprojects",
+    "Quadruple-Multilevel-projection-project/skills",
+    "AmbassadorOv/python-genai",
+    "AmbassadorOv/https-AmbassadorOv.io",
+    "AmbassadorOv/-artificial-y",
+    "AmbassadorOv/awesome-chatgpt-prompts",
+    "AmbassadorOv/chatgpt-scientific-publications-extension",
+    "AmbassadorOv/AmbassadorOv",
+    "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo"
+  ],
+  "scope_note": "Private repository names/content remain omitted. Public README cursor is exhausted; focused code/document review continues separately."
 }
