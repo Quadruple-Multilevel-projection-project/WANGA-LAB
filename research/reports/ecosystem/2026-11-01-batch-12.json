@@ -213,11 +213,12 @@
     "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
     "pull_request": 133,
     "branch": "automation/wanga-unified-work-loop-2026-10-27",
-    "branch_ahead_of_main": 66,
+    "branch_ahead_of_main": 74,
     "branch_behind_main": 26,
     "draft": true,
     "merge_performed": false,
-    "current_report_commit_ci": "PENDING"
+    "current_report_commit_ci": "PASS_LOGIC_FRACTAL_PASS_INTEGRITY_PASS_CODEQL_PASS_ECOSYSTEM_COMPLETED_WITH_SCOPE_BLOCKER",
+    "head_sha": "9c0f620aa7fc613a27e2ef7757d44cfdf6d4b103"
   },
   "next_priority_batch": [
     "AmbassadorOv/vscode-azure-blockchain-ethereum",
@@ -231,5 +232,59 @@
     "AmbassadorOv/vscode-docs",
     "AmbassadorOv/mediapipe"
   ],
-  "remaining_public_repositories_after_focused_review": 29
+  "remaining_public_repositories_after_focused_review": 29,
+  "ci": {
+    "logic_fractal": {
+      "run_id": 41277417328,
+      "run_number": 185,
+      "conclusion": "success"
+    },
+    "ecosystem_sweep": {
+      "run_id": 41277417317,
+      "run_number": 118,
+      "conclusion": "success",
+      "scope_status": "COMPLETED_WITH_SCOPE_BLOCKER",
+      "mode": "CURRENT_REPOSITORY_ONLY",
+      "repositories_scanned": 1,
+      "cross_repo_token_configured": false,
+      "inventory_error": "HTTP 403 Resource not accessible by integration"
+    },
+    "repository_integrity": {
+      "run_id": 41277417391,
+      "run_number": 866,
+      "conclusion": "success"
+    },
+    "codeql": {
+      "run_id": 41277417406,
+      "run_number": 1349,
+      "conclusion": "success"
+    },
+    "artifacts": {
+      "logic": {
+        "id": 13071662183,
+        "size_bytes": 125621,
+        "sha256": "280eddb02bd0c4b90e26eb61f14bb343e11a81feacc62d7fd689a2b219ec8d56"
+      },
+      "ecosystem": {
+        "id": 13071637286,
+        "size_bytes": 3223,
+        "sha256": "f99c5db6ac62fc23ad770640876d125a55810f98632ae07e1ee4a53584bac7a9"
+      }
+    },
+    "runner_metadata": "Runner names not exposed by the connector; Python 3.11.17 and 3.12.15 were visible in job logs."
+  },
+  "automation_scope_blocker": {
+    "run_id": 41277417317,
+    "run_number": 118,
+    "status": "COMPLETED_WITH_SCOPE_BLOCKER",
+    "mode": "CURRENT_REPOSITORY_ONLY",
+    "cross_repo_token_configured": false,
+    "repositories_returned": 1,
+    "public_batch_scanned": 1,
+    "inventory_error": "GitHub API HTTP 403: Resource not accessible by integration",
+    "artifact_id": 13071637286,
+    "artifact_size_bytes": 3223,
+    "artifact_sha256": "f99c5db6ac62fc23ad770640876d125a55810f98632ae07e1ee4a53584bac7a9",
+    "note": "This Actions scanner did not perform the ten-repository manual connector batch; it scanned WANGA-LAB only."
+  }
 }
