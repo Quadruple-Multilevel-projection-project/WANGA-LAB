@@ -1,8 +1,8 @@
 {
   "schema_version": "wanga-repository-inventory/1.1",
-  "snapshot_date": "2026-10-31",
-  "generated_at_utc": "2026-10-31T05:21:07Z",
-  "source": "Live GitHub affiliation inventory revalidated 2026-10-31T05:21:07Z; 63 unique repositories (58 public, 5 private), affiliation counts unchanged. Focused code/document batch 11 completed over ten additional public repositories.",
+  "snapshot_date": "2026-11-01",
+  "generated_at_utc": "2026-11-01T05:25:37Z",
+  "source": "Live GitHub affiliation inventory revalidated 2026-11-01T05:25:37Z; 63 unique repositories (58 public, 5 private), affiliation counts 38 owner / 13 collaborator / 25 organization-member. Focused batch 12 revalidated ten public repositories and one previously registered team-map document.",
   "inventory_status": "PUBLIC_README_SWEEP_COMPLETE_FOCUSED_DOC_REVIEW_WITH_PRIVATE_REDACTION",
   "visible_repository_count": 63,
   "public_repository_count": 58,
@@ -15,7 +15,7 @@
   },
   "private_repository_handling": "Private repositories are connector-visible, but names, paths and content are omitted from this public registry; aggregate count only.",
   "permission_note": "Connector returned permission flags for visible repositories. These are connector-exposed metadata, not an independent permission audit.",
-  "latest_update_note": "Latest default-branch commit SHA and author timestamp were retrieved for the 7 public repositories in the 2026-10-30 batch. The connector does not expose repository updated_at/pushed_at directly. Private repository details are omitted.",
+  "latest_update_note": "Latest default-branch commit SHA and commit-created timestamp were retrieved for all ten public repositories in the 2026-11-01 focused batch. Repository updated_at/pushed_at fields are not treated as interchangeable with commit-created timestamps.",
   "batch_size": 10,
   "scanned_repositories": [
     "AmbassadorOv/-artificial-y",
@@ -79,7 +79,7 @@
   ],
   "scanned_readme_count": 50,
   "readme_fetch_gap_count": 7,
-  "additional_targeted_docs_read": 26,
+  "additional_targeted_docs_read": 27,
   "remaining_public_repository_count": 0,
   "next_cursor": {
     "snapshot_date": "2026-10-30",
@@ -102,15 +102,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-24",
+      "latest_update": "2026-10-22T06:41:58Z",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "FOCUSED_REVALIDATED_2026-11-01_RUN12",
       "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
-      "readme_summary": "README is a title only; same blob as AG-triple-X- and TTTTproject-un.govt.",
+      "readme_summary": "README is title-only; exact blob is shared with three other distinct repository identifiers. Content identity does not establish repository identity.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "owner"
-      ]
+      ],
+      "latest_commit_sha": "f21eabfa0bc4c41512b7a4cbe6072996570fd4c5",
+      "latest_commit_created_at": "2026-10-22T06:41:58Z",
+      "last_scan_time_utc": "2026-11-01T05:25:37Z",
+      "readme_fetch_status": "SUCCESS",
+      "source_status": "DUPLICATE_REVALIDATION"
     },
     {
       "full_name": "AmbassadorOv/googleapis",
@@ -124,15 +129,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-26",
+      "latest_update": "2026-10-22T06:41:52Z",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "FOCUSED_REVALIDATED_2026-11-01_RUN12",
       "readme_blob_sha1": "6ba73116d009c622bf3057f81a563b2070daea51",
-      "readme_summary": "README describes public Google API interface definitions and Protocol Buffers IDL supporting REST/gRPC and client-library generation; README surface only, no WANGA-specific logic or provenance contract.",
+      "readme_summary": "README describes public Google API interface definitions and Protocol Buffers IDL for REST/gRPC and client-library generation; no WANGA-specific logic or provenance contract is established by this README.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "owner"
-      ]
+      ],
+      "latest_commit_sha": "bda86fbaa605e02ee544ec0d2230779755274265",
+      "latest_commit_created_at": "2026-10-22T06:41:52Z",
+      "last_scan_time_utc": "2026-11-01T05:25:37Z",
+      "readme_fetch_status": "SUCCESS",
+      "source_status": "DUPLICATE_REVALIDATION"
     },
     {
       "full_name": "AmbassadorOv/Nanomathematics",
@@ -147,17 +157,19 @@
         "triage": true
       },
       "latest_update": "2020-04-18T03:34:25Z",
-      "latest_update_status": "DEFAULT_BRANCH_COMMIT_CREATED_AT_RETRIEVED",
-      "scan_status": "READ_REVALIDATED",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "FOCUSED_REVALIDATED_2026-11-01_RUN12",
       "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
-      "readme_summary": "README contains only the title Nanomathematics; identical README blob also observed in sibling repositories.",
+      "readme_summary": "README contains only the title Nanomathematics; identical README blob is present in four other distinct repository identifiers.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "owner"
       ],
       "latest_commit_sha": "6eba57c8e4b4c434a2bde5df9df1c61f8f370d74",
-      "last_scan_time_utc": "2026-10-30T05:51:37Z",
-      "source_status": "DUPLICATE_README_REVALIDATION"
+      "last_scan_time_utc": "2026-11-01T05:25:37Z",
+      "source_status": "DUPLICATE_REVALIDATION",
+      "latest_commit_created_at": "2020-04-18T03:34:25Z",
+      "readme_fetch_status": "SUCCESS"
     },
     {
       "full_name": "AmbassadorOv/desktop",
@@ -171,16 +183,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-25",
+      "latest_update": "2026-10-22T06:42:01Z",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "FOCUSED_REVALIDATED_2026-11-01_RUN12",
       "readme_blob_sha1": "c7702d385076e80f365a23d17dc868b9ecb6a5ad",
-      "readme_summary": "README identifies an Electron desktop application written with TypeScript and React; no direct WANGA integration evidence in README.",
+      "readme_summary": "README identifies GitHub Desktop as an Electron application using TypeScript and React; no direct WANGA integration evidence is present in the README.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "last_scan_time_utc": "2026-11-01T05:25:37Z",
       "affiliations": [
         "owner"
-      ]
+      ],
+      "latest_commit_sha": "ad3506d380a8eae6db66205367b4ee7d9f1b58d9",
+      "latest_commit_created_at": "2026-10-22T06:42:01Z",
+      "readme_fetch_status": "SUCCESS",
+      "source_status": "DUPLICATE_REVALIDATION"
     },
     {
       "full_name": "AmbassadorOv/platform-samples",
@@ -194,15 +210,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-26",
+      "latest_update": "2020-03-20T14:20:20Z",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "FOCUSED_REVALIDATED_2026-11-01_RUN12",
       "readme_blob_sha1": "a2bb146a181b60c3df0d077c55b197287074ec53",
-      "readme_summary": "README catalogs GitHub Platform API, GraphQL, webhook, pre-receive-hook, and repository-maintenance examples; no direct WANGA-specific logical content.",
+      "readme_summary": "README describes GitHub Platform API, GraphQL, webhook, pre-receive-hook and repository-maintenance examples; no WANGA-specific logic is established.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "owner"
-      ]
+      ],
+      "latest_commit_sha": "4a10583e53d384f3846e7534608e40b0a42409b1",
+      "latest_commit_created_at": "2020-03-20T14:20:20Z",
+      "last_scan_time_utc": "2026-11-01T05:25:37Z",
+      "readme_fetch_status": "SUCCESS",
+      "source_status": "DUPLICATE_REVALIDATION"
     },
     {
       "full_name": "AmbassadorOv/extensions",
@@ -216,16 +237,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-25",
+      "latest_update": "2026-10-22T06:42:38Z",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "FOCUSED_REVALIDATED_2026-11-01_RUN12",
       "readme_blob_sha1": "6ef8b6a54813922bf64bad64c8e7301f8dc620c2",
-      "readme_summary": "README describes Firebase Extensions source and installation/configuration guidance; no direct WANGA logic/fractal evidence in README.",
+      "readme_summary": "README describes Firebase Extensions source and installation/configuration guidance; no direct WANGA logic or fractal evidence is established.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "last_scan_time_utc": "2026-11-01T05:25:37Z",
       "affiliations": [
         "owner"
-      ]
+      ],
+      "latest_commit_sha": "0a0d806ab156adf55e9401a15e73085c911825a9",
+      "latest_commit_created_at": "2026-10-22T06:42:38Z",
+      "readme_fetch_status": "SUCCESS",
+      "source_status": "DUPLICATE_REVALIDATION"
     },
     {
       "full_name": "AmbassadorOv/AmbassadorOv",
@@ -264,17 +289,27 @@
         "triage": true
       },
       "latest_update": "2026-10-22T06:42:13Z",
-      "latest_update_status": "DEFAULT_BRANCH_COMMIT_CREATED_AT_RETRIEVED",
-      "scan_status": "READ",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "FOCUSED_REVALIDATED_2026-11-01_RUN12",
       "readme_blob_sha1": "ac7a2d203877442ddba493889239e61aed56ec78",
-      "readme_summary": "Describes research-team coordination and a meta-orchestrator for connecting, abstracting, comparing, verifying and routing team outputs.",
+      "readme_summary": "README defines an Artificial Philosopher meta-orchestration role and an initial team map. These are repository architecture declarations, not proof of deployed orchestration or verified cross-repository lineage.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "owner"
       ],
       "latest_commit_sha": "2c355168bb639ff1be22a918bc2838c54cea4ead",
-      "last_scan_time_utc": "2026-10-30T05:51:37Z",
-      "source_status": "NEW_TARGETED_DOCUMENTS_READ"
+      "last_scan_time_utc": "2026-11-01T05:25:37Z",
+      "source_status": "DUPLICATE_REVALIDATION",
+      "latest_commit_created_at": "2026-10-22T06:42:13Z",
+      "readme_fetch_status": "SUCCESS",
+      "targeted_documents_read": [
+        {
+          "path": "teams/TEAM_MAP.md",
+          "git_blob_sha1": "461e53ab775e6933081664a89ce405fc8b40e610",
+          "scan_time_utc": "2026-11-01T05:25:37Z",
+          "status": "REVALIDATED_EXISTING_SOURCE"
+        }
+      ]
     },
     {
       "full_name": "AmbassadorOv/TTTTproject-un.govt",
@@ -288,15 +323,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-24",
+      "latest_update": "2026-10-22T06:42:10Z",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "FOCUSED_REVALIDATED_2026-11-01_RUN12",
       "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
-      "readme_summary": "README title points to World-Party-Federation-Branches-managers; byte identity only.",
+      "readme_summary": "README is title-only and byte-identical to three other repository READMEs; no repository identity or lineage is inferred.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "owner"
-      ]
+      ],
+      "latest_commit_sha": "7499b46eb8af0ad2604ec63dd07f383507df55ca",
+      "latest_commit_created_at": "2026-10-22T06:42:10Z",
+      "last_scan_time_utc": "2026-11-01T05:25:37Z",
+      "readme_fetch_status": "SUCCESS",
+      "source_status": "DUPLICATE_REVALIDATION"
     },
     {
       "full_name": "AmbassadorOv/docs",
@@ -310,16 +350,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-25",
+      "latest_update": "2024-11-13T16:17:05Z",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "FOCUSED_REVALIDATED_2026-11-01_RUN12",
       "readme_blob_sha1": "69090a601896b5189a5b3ee42105ed42638016be",
-      "readme_summary": "README identifies source for the GitHub Docs website and Markdown content; no direct WANGA integration evidence in README.",
+      "readme_summary": "README identifies the public GitHub Docs source repository; no direct WANGA-specific logic or integration is established.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
-      "last_scan_time_utc": "2026-10-25T05:50:17Z",
+      "last_scan_time_utc": "2026-11-01T05:25:37Z",
       "affiliations": [
         "owner"
-      ]
+      ],
+      "latest_commit_sha": "b64ffff717068813a6b6092e988713fc0469001e",
+      "latest_commit_created_at": "2024-11-13T16:17:05Z",
+      "readme_fetch_status": "SUCCESS",
+      "source_status": "DUPLICATE_REVALIDATION"
     },
     {
       "full_name": "AmbassadorOv/mermaid",
@@ -333,15 +377,20 @@
         "push": true,
         "triage": true
       },
-      "latest_update": null,
-      "latest_update_status": "NOT_EXPOSED_BY_CONNECTOR",
-      "scan_status": "README_READ_2026-10-26",
+      "latest_update": "2024-11-28T03:40:56Z",
+      "latest_update_status": "DEFAULT_BRANCH_LATEST_COMMIT_CREATED_AT_RETRIEVED",
+      "scan_status": "FOCUSED_REVALIDATED_2026-11-01_RUN12",
       "readme_blob_sha1": "456747132cbc6ed1dde4f8d5f0712deb71b47be8",
-      "readme_summary": "README describes Mermaid as markdown-like text-to-diagram tooling; visualization overlap candidate only, not a semantic graph or logic-entailment engine.",
+      "readme_summary": "README describes Mermaid as a Markdown-like diagram generation tool; no direct WANGA logic or integration is established.",
       "source_scope": "PUBLIC_REPOSITORY_READ",
       "affiliations": [
         "owner"
-      ]
+      ],
+      "latest_commit_sha": "df636c6d0a127a5ce3270672499dd7e230ce33fc",
+      "latest_commit_created_at": "2024-11-28T03:40:56Z",
+      "last_scan_time_utc": "2026-11-01T05:25:37Z",
+      "readme_fetch_status": "SUCCESS",
+      "source_status": "DUPLICATE_REVALIDATION"
     },
     {
       "full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
@@ -1522,7 +1571,7 @@
   "policy_skipped_repositories": [
     "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY"
   ],
-  "additional_targeted_docs_read_current_cycle": 14,
+  "additional_targeted_docs_read_current_cycle": 1,
   "current_batch": {
     "scan_time_utc": "2026-10-30T05:51:37Z",
     "batch_id": "ECOSYSTEM-FOCUSED-REVIEW-2026-10-30",
@@ -2131,7 +2180,7 @@
       ]
     }
   ],
-  "readme_revalidation_reads_current_cycle": 6,
+  "readme_revalidation_reads_current_cycle": 10,
   "private_repository_scan_aggregate": {
     "date": "2026-10-30",
     "attempted": 3,
@@ -2148,7 +2197,7 @@
     "public_repositories": 58,
     "private_repositories_omitted": 5,
     "unknown_visibility": 0,
-    "checked_at_utc": "2026-10-31T05:07:24Z"
+    "checked_at_utc": "2026-11-01T05:25:37Z"
   },
   "focused_review_batch_2026_10_31": {
     "repositories_attempted": 10,
@@ -2178,37 +2227,70 @@
     "coverage": "README_LEVEL_ONLY_NOT_FULL_CODE_AUDIT"
   },
   "focused_review_next_batch": [
-    "tribal-archery/MAM-parsed",
-    "tribal-archery/Qdprojects",
-    "Quadruple-Multilevel-projection-project/skills",
-    "AmbassadorOv/python-genai",
-    "AmbassadorOv/https-AmbassadorOv.io",
-    "AmbassadorOv/-artificial-y",
-    "AmbassadorOv/awesome-chatgpt-prompts",
-    "AmbassadorOv/chatgpt-scientific-publications-extension",
-    "AmbassadorOv/AmbassadorOv",
-    "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo"
+    "AmbassadorOv/vscode-azure-blockchain-ethereum",
+    "AmbassadorOv/eslint",
+    "AmbassadorOv/openai_tiktoken",
+    "AmbassadorOv/Qualia",
+    "AmbassadorOv/O-Ms",
+    "AmbassadorOv/generative-ai-docs",
+    "AmbassadorOv/mujoco",
+    "AmbassadorOv/cookbook",
+    "AmbassadorOv/vscode-docs",
+    "AmbassadorOv/mediapipe"
   ],
   "scope_note": "Private repository names/content remain omitted. Public README cursor is exhausted; focused code/document review continues separately.",
-  "last_live_inventory_check_utc": "2026-10-31T05:21:07Z",
+  "last_live_inventory_check_utc": "2026-11-01T05:25:37Z",
   "last_focused_batch": {
-    "date": "2026-10-31",
+    "date": "2026-11-01",
     "batch_size": 10,
     "public_repositories": [
-      "tribal-archery/MAM-parsed",
-      "tribal-archery/Qdprojects",
-      "Quadruple-Multilevel-projection-project/skills",
-      "AmbassadorOv/python-genai",
-      "AmbassadorOv/https-AmbassadorOv.io",
-      "AmbassadorOv/-artificial-y",
-      "AmbassadorOv/awesome-chatgpt-prompts",
-      "AmbassadorOv/chatgpt-scientific-publications-extension",
-      "AmbassadorOv/AmbassadorOv",
-      "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo"
+      "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "AmbassadorOv/googleapis",
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/desktop",
+      "AmbassadorOv/platform-samples",
+      "AmbassadorOv/extensions",
+      "AmbassadorOv/TTTT-0.0.0.0.1",
+      "AmbassadorOv/TTTTproject-un.govt",
+      "AmbassadorOv/docs",
+      "AmbassadorOv/mermaid"
     ],
-    "readme_successes": 8,
-    "readme_http_404": 2,
-    "additional_document_reads": 12,
+    "readme_successes": 10,
+    "readme_http_404": 0,
+    "additional_document_reads": 1,
     "private_repositories_sampled": 0
+  },
+  "focused_review_batch_2026_11_01": {
+    "repositories_attempted": 10,
+    "public_repositories": [
+      "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "AmbassadorOv/googleapis",
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/desktop",
+      "AmbassadorOv/platform-samples",
+      "AmbassadorOv/extensions",
+      "AmbassadorOv/TTTT-0.0.0.0.1",
+      "AmbassadorOv/TTTTproject-un.govt",
+      "AmbassadorOv/docs",
+      "AmbassadorOv/mermaid"
+    ],
+    "private_repositories_sampled": 0,
+    "readme_successes": 10,
+    "readme_http_404": 0,
+    "additional_document_reads": 1,
+    "new_public_document_sources": 0,
+    "duplicate_readme_revalidations": 10,
+    "next_priority_batch": [
+      "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "AmbassadorOv/eslint",
+      "AmbassadorOv/openai_tiktoken",
+      "AmbassadorOv/Qualia",
+      "AmbassadorOv/O-Ms",
+      "AmbassadorOv/generative-ai-docs",
+      "AmbassadorOv/mujoco",
+      "AmbassadorOv/cookbook",
+      "AmbassadorOv/vscode-docs",
+      "AmbassadorOv/mediapipe"
+    ]
   }
 }
