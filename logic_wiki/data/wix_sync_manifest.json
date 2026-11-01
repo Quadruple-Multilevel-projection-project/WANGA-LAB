@@ -113,8 +113,8 @@
   "main_page_catalog_article_count": 18,
   "research_catalog_article_count": 27,
   "supplemental_research_concept_count": 9,
-  "last_readback_date": "2026-10-31",
-  "readback_status": "BLOCKED_PUBLIC_PAGE_FETCH_INACCESSIBLE",
+  "last_readback_date": "2026-11-01",
+  "readback_status": "SUCCESS_WITH_SCOPE_DRIFT",
   "deployment_revision": "NOT_EXPOSED",
   "source_catalog_snapshot": {
     "date": "2026-10-27",
@@ -131,32 +131,47 @@
       "url": "/logic-wiki.html",
       "fetch_status": "SUCCESS",
       "visible_description_count": 28,
-      "comparison": "ARTICLE_COUNT_MATCHES_GITHUB_CATALOG",
-      "stale_embedded_section": "ECOSYSTEM AGENT SWEEP · 2026-10-12"
+      "visible_source_count": 17,
+      "comparison": "MAIN_PAGE_COUNTS_MATCH_CURRENT_GITHUB_CATALOG",
+      "title": "ויקיפדיית הלוגיקה | WANGA-LAB"
     },
     {
       "url": "/logic-wiki-fractal-research.html",
       "fetch_status": "SUCCESS",
       "visible_catalog_article_count": 27,
       "visible_source_record_count": 16,
-      "comparison": "STALE_GITHUB_MAIN_HAS_28_ARTICLES_AND_17_SOURCES"
+      "comparison": "RESEARCH_PAGE_COUNT_SCOPE_OR_SNAPSHOT_DRIFT_UNRESOLVED",
+      "title": "מחקר פרקטלים לוגיים | Logic Wiki · WANGA-LAB"
     },
     {
       "url": "/logic-wiki-evidence-status.html",
       "fetch_status": "SUCCESS",
-      "comparison": "STATUS_DEFINITIONS_VISIBLE_NO_NUMERIC_CATALOG_CLAIM"
+      "comparison": "STATUS_DEFINITIONS_VISIBLE_NO_NUMERIC_CATALOG_CLAIM",
+      "title": "סטטוסי ראיות ואימות | WANGA Logic Wiki"
     }
   ],
   "write_performed": false,
-  "sync_decision": "NO_WRITE_NO_APPROVED_CATALOG_CHANGE; REVIEW_PAGE_LEVEL_COUNT_DRIFT_BEFORE_NEXT_PUBLICATION",
-  "last_readback_status": "BLOCKED_PUBLIC_PAGE_FETCH_INACCESSIBLE",
-  "page_level_readback": "BLOCKED_PUBLIC_PAGE_FETCH_INACCESSIBLE",
+  "sync_decision": "NO_WRITE_NO_APPROVED_CATALOG_CHANGE; RESEARCH_PAGE_COUNT_SCOPE_DRIFT_UNRESOLVED",
+  "last_readback_status": "SUCCESS_WITH_SCOPE_DRIFT",
+  "page_level_readback": "SUCCESS",
   "current_cycle_audit": {
-    "date": "2026-10-31",
-    "site_context_last_recorded_updated_at": "2026-10-12",
-    "page_level_readback": "BLOCKED_PUBLIC_PAGE_FETCH_INACCESSIBLE",
+    "date": "2026-11-01",
+    "site_context_status": "PUBLISHED",
+    "site_context_updated_at": "2026-10-12T09:56",
+    "deployed_file_count": 29,
+    "page_level_readback": "SUCCESS",
+    "main_page_visible_counts": {
+      "articles": 28,
+      "sources": 17
+    },
+    "research_page_visible_counts": {
+      "articles": 27,
+      "sources": 16
+    },
+    "evidence_status_page": "READ_SUCCESS_NO_NUMERIC_CATALOG_CLAIM",
     "write_performed": false,
-    "sync_decision": "NO_WRITE_NO_APPROVED_CATALOG_CHANGE",
-    "note": "No approved catalog delta was produced. The public page could not be read back in this cycle; the last recorded partial read-back remains 2026-10-27 with content drift."
+    "sync_decision": "NO_WRITE_NO_APPROVED_CATALOG_CHANGE; RESEARCH_PAGE_COUNT_SCOPE_DRIFT_UNRESOLVED",
+    "deployment_revision": "NOT_EXPOSED",
+    "note": "Wix headless file helpers read the live deployed pages successfully. The main page matches the current GitHub catalog (28 articles/17 sources). The research page displays 27/16; its intended subset scope is not established, so no blind count replacement or deployment was made."
   }
 }
