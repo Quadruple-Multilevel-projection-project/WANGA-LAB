@@ -1,7 +1,7 @@
 {
   "schema_version": "wanga-project-findings/1.1",
   "snapshot_date": "2026-11-01",
-  "generated_at_utc": "2026-11-01T05:25:37Z",
+  "generated_at_utc": "2026-11-01T05:37:00Z",
   "scope": "Current connected snapshot: 63 unique repositories (58 public, 5 private omitted). This cycle revalidated ten public README files and one previously registered TTTT team-map document. Revalidation produced no new repository source records; one existing source was formalized as a structural candidate and two source-backed boundary candidates were added. No claims or formal logic units were promoted.",
   "claims_added": 0,
   "logic_units_added": 0,
@@ -4476,54 +4476,59 @@
     ],
     "notes": "The README and team-map records already existed in the registry; this cycle updated their revalidation timestamps and pinned source versions. Duplicate README bytes are not treated as repository identity or lineage.",
     "ci": {
+      "validated_revision": "42c3a5b5d2dc4e82276a7990b17553f71c16a365",
       "logic_fractal": {
-        "run_id": 41277417328,
-        "run_number": 185,
+        "run_id": 41277611659,
+        "run_number": 188,
         "conclusion": "success"
       },
-      "ecosystem_sweep": {
-        "run_id": 41277417317,
-        "run_number": 118,
-        "conclusion": "success",
-        "scope_status": "COMPLETED_WITH_SCOPE_BLOCKER",
-        "repositories_scanned": 1,
-        "cross_repo_token_configured": false
-      },
       "repository_integrity": {
-        "run_id": 41277417391,
-        "run_number": 866,
+        "run_id": 41277611522,
+        "run_number": 869,
         "conclusion": "success"
       },
       "codeql": {
-        "run_id": 41277417406,
-        "run_number": 1349,
+        "run_id": 41277611512,
+        "run_number": 1352,
         "conclusion": "success"
       },
-      "logic_artifact": {
-        "id": 13071662183,
-        "size_bytes": 125621,
-        "sha256": "280eddb02bd0c4b90e26eb61f14bb343e11a81feacc62d7fd689a2b219ec8d56"
+      "ecosystem_sweep": {
+        "run_id": 41277611523,
+        "run_number": 121,
+        "conclusion": "success",
+        "scope_status": "COMPLETED_WITH_SCOPE_BLOCKER",
+        "repositories_scanned": 1,
+        "cross_repo_token_configured": false,
+        "inventory_error": "HTTP 403 Resource not accessible by integration"
       },
-      "ecosystem_artifact": {
-        "id": 13071637286,
-        "size_bytes": 3223,
-        "sha256": "f99c5db6ac62fc23ad770640876d125a55810f98632ae07e1ee4a53584bac7a9"
+      "artifacts": {
+        "logic": {
+          "id": 13071901720,
+          "size_bytes": 127253,
+          "sha256": "f8af8df50e3ec8457acd7b5fe536d47dc99e9d84455e86155006e9ea89c4c865"
+        },
+        "ecosystem": {
+          "id": 13072290576,
+          "size_bytes": 3223,
+          "sha256": "d2d3847b12511562947706d62180c1c78315851c0ecbc39d12d5d62e7c95948d"
+        }
       },
-      "runner_metadata": "RUNNER_NAME_NOT_EXPOSED; workflow logs show Python 3.11.17 (Logic Fractal) and Python 3.12.15 (Repository Integrity)"
+      "runner_metadata": "Runner names not exposed; logs show Python 3.11.17 and Python 3.12.15.",
+      "report_metadata_update_commit": "PENDING"
     },
     "automation_scope_blocker": {
-      "run_id": 41277417317,
-      "run_number": 118,
+      "run_id": 41277611523,
+      "run_number": 121,
       "status": "COMPLETED_WITH_SCOPE_BLOCKER",
       "mode": "CURRENT_REPOSITORY_ONLY",
       "cross_repo_token_configured": false,
       "repositories_returned": 1,
       "public_batch_scanned": 1,
       "inventory_error": "GitHub API HTTP 403: Resource not accessible by integration",
-      "artifact_id": 13071637286,
+      "artifact_id": 13072290576,
       "artifact_size_bytes": 3223,
-      "artifact_sha256": "f99c5db6ac62fc23ad770640876d125a55810f98632ae07e1ee4a53584bac7a9",
-      "note": "This Actions scanner did not perform the ten-repository manual connector batch; it scanned WANGA-LAB only."
+      "artifact_sha256": "d2d3847b12511562947706d62180c1c78315851c0ecbc39d12d5d62e7c95948d",
+      "note": "Actions scanner scanned WANGA-LAB only. Manual connected-GitHub batch 12 separately revalidated ten public repositories."
     }
   },
   "repository_revalidation_2026_11_01_run12": {
@@ -4725,6 +4730,15 @@
         "critical_core_contradictions": null,
         "contradiction_inventory_available": false,
         "gate_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY"
+      },
+      "latest_validation_run": {
+        "run_id": 41277611659,
+        "run_number": 188,
+        "head_sha": "42c3a5b5d2dc4e82276a7990b17553f71c16a365",
+        "conclusion": "success",
+        "artifact_id": 13071901720,
+        "artifact_size_bytes": 127253,
+        "artifact_sha256": "f8af8df50e3ec8457acd7b5fe536d47dc99e9d84455e86155006e9ea89c4c865"
       }
     }
   ],
@@ -4757,5 +4771,46 @@
       "related_pr_status": "OPEN_DRAFT_NOT_MERGED",
       "next_action": "Review and merge/rebase the fail-closed correction through PR/CI; rerun both reports and confirm no zero is emitted without an available reviewed inventory."
     }
-  ]
+  ],
+  "latest_ci_validation": {
+    "validated_revision": "42c3a5b5d2dc4e82276a7990b17553f71c16a365",
+    "logic_fractal": {
+      "run_id": 41277611659,
+      "run_number": 188,
+      "conclusion": "success"
+    },
+    "repository_integrity": {
+      "run_id": 41277611522,
+      "run_number": 869,
+      "conclusion": "success"
+    },
+    "codeql": {
+      "run_id": 41277611512,
+      "run_number": 1352,
+      "conclusion": "success"
+    },
+    "ecosystem_sweep": {
+      "run_id": 41277611523,
+      "run_number": 121,
+      "conclusion": "success",
+      "scope_status": "COMPLETED_WITH_SCOPE_BLOCKER",
+      "repositories_scanned": 1,
+      "cross_repo_token_configured": false,
+      "inventory_error": "HTTP 403 Resource not accessible by integration"
+    },
+    "artifacts": {
+      "logic": {
+        "id": 13071901720,
+        "size_bytes": 127253,
+        "sha256": "f8af8df50e3ec8457acd7b5fe536d47dc99e9d84455e86155006e9ea89c4c865"
+      },
+      "ecosystem": {
+        "id": 13072290576,
+        "size_bytes": 3223,
+        "sha256": "d2d3847b12511562947706d62180c1c78315851c0ecbc39d12d5d62e7c95948d"
+      }
+    },
+    "runner_metadata": "Runner names not exposed; logs show Python 3.11.17 and Python 3.12.15.",
+    "report_metadata_update_commit": "PENDING"
+  }
 }
