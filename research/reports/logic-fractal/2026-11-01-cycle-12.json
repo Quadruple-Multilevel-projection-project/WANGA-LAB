@@ -118,8 +118,43 @@
     "last_builder_execution_utc": "2026-10-31T05:30:06Z",
     "scale_1_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
     "scale_2_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
-    "builder_workflow_run_id": 41172820264,
-    "decision": "BLOCKED_PENDING_REAL_SOURCE_FRAGMENTS_NEGATIVE_BOUNDARY_TESTS_AND_INDEPENDENT_REVIEW"
+    "builder_workflow_run_id": 41277417328,
+    "decision": "BLOCKED_PENDING_REAL_SOURCE_FRAGMENTS_NEGATIVE_BOUNDARY_TESTS_AND_INDEPENDENT_REVIEW",
+    "agent_cycle_model_hash": "fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf",
+    "catalog_hash": "3088e428358108293d5397ba7a15ab6c898ac791a2a83153c3a22ea0fe43018f",
+    "candidate_substructures": 523,
+    "candidate_compositions": 523,
+    "candidate_composition_status": "STRUCTURAL_CANDIDATES_NOT_SEMANTICALLY_VERIFIED",
+    "logic_brain_candidate": {
+      "candidate_id": "LT-c1918183cff25c53",
+      "model_hash": "c1918183cff25c536ce28d1771877bd0f92ee8246b113ee8409639f9b95e64d0",
+      "package_hash": "e462a18447565beea93eca29eebaea68a66d8ea10134debc44e43536bc06b984",
+      "status": "INTERNAL_CANDIDATE_NOT_RELEASED",
+      "graph": {
+        "nodes": 28,
+        "edges": 111,
+        "candidate_compositions": 523,
+        "shared_source_compositions": 8
+      },
+      "formalization_queue": {
+        "queue_item_id": "FORM-085788abb132f6bb",
+        "status": "READY_FOR_FORMALIZATION",
+        "missing_formal_fields": 7,
+        "solver_execution_status": "NOT_RUN_NO_FORMAL_AST"
+      },
+      "provenance_gate": {
+        "status": "PASS",
+        "source_count": 3,
+        "scope": "SOURCE_RESOLUTION_ONLY"
+      },
+      "mirror_review": {
+        "status": "COUNTER_READING_CANDIDATE",
+        "independent_review_count": 0,
+        "reciprocal_edge_review_candidates": 52
+      },
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    "artifact_sha256": "280eddb02bd0c4b90e26eb61f14bb343e11a81feacc62d7fd689a2b219ec8d56"
   },
   "readiness_gate": {
     "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
@@ -155,7 +190,8 @@
       "critical_core_contradictions": "NOT_MEASURED",
       "deterministic_build": true,
       "holdout_split": false,
-      "mirror_review": false
+      "mirror_review": false,
+      "contradiction_inventory_available": false
     },
     "deficits": {
       "source_records": 3,
@@ -168,6 +204,13 @@
       "holdout_split": 1,
       "mirror_review": 1,
       "critical_core_contradictions": "INVENTORY_MISSING"
+    },
+    "artifact_consistency_issue": {
+      "status": "OPEN",
+      "readiness_report_value": 0,
+      "agent_cycle_report_value": null,
+      "interpretation": "Use NOT_MEASURED until a reviewed contradiction inventory exists; readiness-report PASS is catalog validation only.",
+      "related_pr": 132
     }
   },
   "benchmarks": {
@@ -202,29 +245,55 @@
       "failed_agents": 0,
       "semantic_status": "NOT_YET_VERIFIED",
       "source_workflow_run_id": 41172014524
+    },
+    "logic_brain_formal_fixture": {
+      "status": "PASS",
+      "cases": 5,
+      "passed": 5,
+      "failed": 0,
+      "verification_status": "NOT_YET_VERIFIED",
+      "scope": "ENCODED_FIXTURE_ONLY"
     }
   },
   "ci": {
-    "latest_verified_pr_branch_runs": {
-      "logic_fractal": {
-        "run_id": 41172820264,
-        "conclusion": "success"
+    "validated_revision": "9c0f620aa7fc613a27e2ef7757d44cfdf6d4b103",
+    "logic_fractal": {
+      "run_id": 41277417328,
+      "run_number": 185,
+      "conclusion": "success"
+    },
+    "ecosystem_sweep": {
+      "run_id": 41277417317,
+      "run_number": 118,
+      "conclusion": "success",
+      "scope_status": "COMPLETED_WITH_SCOPE_BLOCKER",
+      "repositories_scanned": 1,
+      "cross_repo_token_configured": false
+    },
+    "repository_integrity": {
+      "run_id": 41277417391,
+      "run_number": 866,
+      "conclusion": "success"
+    },
+    "codeql": {
+      "run_id": 41277417406,
+      "run_number": 1349,
+      "conclusion": "success"
+    },
+    "artifacts": {
+      "logic": {
+        "id": 13071662183,
+        "size_bytes": 125621,
+        "sha256": "280eddb02bd0c4b90e26eb61f14bb343e11a81feacc62d7fd689a2b219ec8d56"
       },
-      "ecosystem_sweep": {
-        "run_id": 41172820258,
-        "conclusion": "success"
-      },
-      "repository_integrity": {
-        "run_id": 41172820232,
-        "conclusion": "success"
-      },
-      "codeql": {
-        "run_id": 41172820193,
-        "conclusion": "success"
+      "ecosystem": {
+        "id": 13071637286,
+        "size_bytes": 3223,
+        "sha256": "f99c5db6ac62fc23ad770640876d125a55810f98632ae07e1ee4a53584bac7a9"
       }
     },
-    "current_report_commit": "CI_PENDING",
-    "note": "The successful runs above validate the prior PR branch head. The new report commit will trigger a fresh PR CI cycle; no result is claimed before read-back."
+    "runner_metadata": "Runner name not exposed; Python 3.11.17 and 3.12.15 visible in logs.",
+    "report_metadata_update_commit": "PENDING"
   },
   "wix": {
     "site_status": "PUBLISHED",
@@ -305,7 +374,11 @@
       "AmbassadorOv/mediapipe"
     ],
     "remaining_focused_public_repositories": 29,
-    "no_collaborator_repository_writes": true
+    "no_collaborator_repository_writes": true,
+    "automation_workflow_scope": "CURRENT_REPOSITORY_ONLY_CROSS_REPO_TOKEN_NOT_CONFIGURED",
+    "automation_workflow_run_id": 41277417317,
+    "automation_workflow_repositories_scanned": 1,
+    "automation_workflow_error": "HTTP 403 Resource not accessible by integration"
   },
   "agents": [
     {
@@ -391,5 +464,11 @@
     "Obtain approval for PR #122 workflows, then run its current-head software tests and replay TUNE-9c166900cc4ad5dd.",
     "Reconcile the stale Draft PR branches with main before any merge decision.",
     "Clarify whether the Wix research page is a subset or stale snapshot before editing it."
-  ]
+  ],
+  "mirror_review": {
+    "reciprocal_edge_review_candidates": 52,
+    "independent_review_cycles": 0,
+    "status": "REVIEW_REQUIRED",
+    "semantic_status": "NOT_YET_VERIFIED"
+  }
 }
