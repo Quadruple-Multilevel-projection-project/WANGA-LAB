@@ -1,7 +1,7 @@
 {
   "schema_version": "wanga-logic-fractal-cycle-report/1.0",
   "report_id": "LOGIC-FRACTAL-CYCLE-2026-11-01-RUN12",
-  "generated_at_utc": "2026-11-01T05:25:37Z",
+  "generated_at_utc": "2026-11-01T05:37:00Z",
   "status": "CANDIDATE_RESEARCH_RECORDED_FIRST_MODEL_RELEASE_BLOCKED",
   "sources_scanned": {
     "live_repository_snapshot": {
@@ -256,43 +256,44 @@
     }
   },
   "ci": {
-    "validated_revision": "9c0f620aa7fc613a27e2ef7757d44cfdf6d4b103",
+    "validated_revision": "42c3a5b5d2dc4e82276a7990b17553f71c16a365",
     "logic_fractal": {
-      "run_id": 41277417328,
-      "run_number": 185,
+      "run_id": 41277611659,
+      "run_number": 188,
       "conclusion": "success"
     },
-    "ecosystem_sweep": {
-      "run_id": 41277417317,
-      "run_number": 118,
-      "conclusion": "success",
-      "scope_status": "COMPLETED_WITH_SCOPE_BLOCKER",
-      "repositories_scanned": 1,
-      "cross_repo_token_configured": false
-    },
     "repository_integrity": {
-      "run_id": 41277417391,
-      "run_number": 866,
+      "run_id": 41277611522,
+      "run_number": 869,
       "conclusion": "success"
     },
     "codeql": {
-      "run_id": 41277417406,
-      "run_number": 1349,
+      "run_id": 41277611512,
+      "run_number": 1352,
       "conclusion": "success"
+    },
+    "ecosystem_sweep": {
+      "run_id": 41277611523,
+      "run_number": 121,
+      "conclusion": "success",
+      "scope_status": "COMPLETED_WITH_SCOPE_BLOCKER",
+      "repositories_scanned": 1,
+      "cross_repo_token_configured": false,
+      "inventory_error": "HTTP 403 Resource not accessible by integration"
     },
     "artifacts": {
       "logic": {
-        "id": 13071662183,
-        "size_bytes": 125621,
-        "sha256": "280eddb02bd0c4b90e26eb61f14bb343e11a81feacc62d7fd689a2b219ec8d56"
+        "id": 13071901720,
+        "size_bytes": 127253,
+        "sha256": "f8af8df50e3ec8457acd7b5fe536d47dc99e9d84455e86155006e9ea89c4c865"
       },
       "ecosystem": {
-        "id": 13071637286,
+        "id": 13072290576,
         "size_bytes": 3223,
-        "sha256": "f99c5db6ac62fc23ad770640876d125a55810f98632ae07e1ee4a53584bac7a9"
+        "sha256": "d2d3847b12511562947706d62180c1c78315851c0ecbc39d12d5d62e7c95948d"
       }
     },
-    "runner_metadata": "Runner name not exposed; Python 3.11.17 and 3.12.15 visible in logs.",
+    "runner_metadata": "Runner names not exposed; logs show Python 3.11.17 and Python 3.12.15.",
     "report_metadata_update_commit": "PENDING"
   },
   "wix": {
@@ -376,9 +377,10 @@
     "remaining_focused_public_repositories": 29,
     "no_collaborator_repository_writes": true,
     "automation_workflow_scope": "CURRENT_REPOSITORY_ONLY_CROSS_REPO_TOKEN_NOT_CONFIGURED",
-    "automation_workflow_run_id": 41277417317,
+    "automation_workflow_run_id": 41277611523,
     "automation_workflow_repositories_scanned": 1,
-    "automation_workflow_error": "HTTP 403 Resource not accessible by integration"
+    "automation_workflow_error": "HTTP 403 Resource not accessible by integration",
+    "automation_workflow_status": "COMPLETED_WITH_SCOPE_BLOCKER"
   },
   "agents": [
     {
