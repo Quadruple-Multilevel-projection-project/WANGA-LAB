@@ -2177,7 +2177,9 @@
     "Twenty-nine public repositories remain in the focused code/document review cursor; README-level sweep is exhausted and does not imply full repository coverage.",
     "Wix read-back succeeded at file level, but the research page's 27/16 count scope differs from the main page's 28/17; no write was made while scope remains unresolved.",
     "Limbo PR #122 remains draft and its current-head workflows require approval; no jobs executed and no new crash inputs were observed.",
-    "The TTTT lineage rule is source text only; runtime enforcement has not been tested."
+    "The TTTT lineage rule is source text only; runtime enforcement has not been tested.",
+    "The Actions ecosystem sweep completed with a scope blocker: CROSS_REPO_READ_TOKEN is not configured; the workflow returned HTTP 403 and scanned WANGA-LAB only. The separate manual connected GitHub batch did read ten public repositories.",
+    "The generated readiness-report.json prints critical_core_contradictions=0 while agent_cycle_report.json reports null and contradiction_inventory_available=false. Treat the value as NOT_MEASURED; PR #132 contains the fail-closed correction and remains unmerged."
   ],
   "candidate_logic_units_registered": 38,
   "candidate_logic_units": [
@@ -4472,7 +4474,57 @@
       "AmbassadorOv/vscode-docs",
       "AmbassadorOv/mediapipe"
     ],
-    "notes": "The README and team-map records already existed in the registry; this cycle updated their revalidation timestamps and pinned source versions. Duplicate README bytes are not treated as repository identity or lineage."
+    "notes": "The README and team-map records already existed in the registry; this cycle updated their revalidation timestamps and pinned source versions. Duplicate README bytes are not treated as repository identity or lineage.",
+    "ci": {
+      "logic_fractal": {
+        "run_id": 41277417328,
+        "run_number": 185,
+        "conclusion": "success"
+      },
+      "ecosystem_sweep": {
+        "run_id": 41277417317,
+        "run_number": 118,
+        "conclusion": "success",
+        "scope_status": "COMPLETED_WITH_SCOPE_BLOCKER",
+        "repositories_scanned": 1,
+        "cross_repo_token_configured": false
+      },
+      "repository_integrity": {
+        "run_id": 41277417391,
+        "run_number": 866,
+        "conclusion": "success"
+      },
+      "codeql": {
+        "run_id": 41277417406,
+        "run_number": 1349,
+        "conclusion": "success"
+      },
+      "logic_artifact": {
+        "id": 13071662183,
+        "size_bytes": 125621,
+        "sha256": "280eddb02bd0c4b90e26eb61f14bb343e11a81feacc62d7fd689a2b219ec8d56"
+      },
+      "ecosystem_artifact": {
+        "id": 13071637286,
+        "size_bytes": 3223,
+        "sha256": "f99c5db6ac62fc23ad770640876d125a55810f98632ae07e1ee4a53584bac7a9"
+      },
+      "runner_metadata": "RUNNER_NAME_NOT_EXPOSED; workflow logs show Python 3.11.17 (Logic Fractal) and Python 3.12.15 (Repository Integrity)"
+    },
+    "automation_scope_blocker": {
+      "run_id": 41277417317,
+      "run_number": 118,
+      "status": "COMPLETED_WITH_SCOPE_BLOCKER",
+      "mode": "CURRENT_REPOSITORY_ONLY",
+      "cross_repo_token_configured": false,
+      "repositories_returned": 1,
+      "public_batch_scanned": 1,
+      "inventory_error": "GitHub API HTTP 403: Resource not accessible by integration",
+      "artifact_id": 13071637286,
+      "artifact_size_bytes": 3223,
+      "artifact_sha256": "f99c5db6ac62fc23ad770640876d125a55810f98632ae07e1ee4a53584bac7a9",
+      "note": "This Actions scanner did not perform the ten-repository manual connector batch; it scanned WANGA-LAB only."
+    }
   },
   "repository_revalidation_2026_11_01_run12": {
     "scan_time_utc": "2026-11-01T05:25:37Z",
@@ -4617,5 +4669,93 @@
     "public_derivatives_published": 0,
     "status": "SEARCH_ONLY_NOT_USED_FOR_PUBLIC_EXTRACTION",
     "note": "Library results were not read as complete documents or promoted into the public registry; no private file names or content are included."
-  }
+  },
+  "candidate_model_runs": [
+    {
+      "run_id": 41277417328,
+      "run_number": 185,
+      "run_status": "PASS",
+      "agent_cycle_model_hash": "fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf",
+      "catalog_hash": "3088e428358108293d5397ba7a15ab6c898ac791a2a83153c3a22ea0fe43018f",
+      "candidate_substructures": 523,
+      "candidate_compositions": 523,
+      "active_contract_count": 2,
+      "semantic_status": "STRUCTURAL_CANDIDATES_NOT_SEMANTICALLY_VERIFIED",
+      "logic_brain_candidate": {
+        "candidate_id": "LT-c1918183cff25c53",
+        "model_hash": "c1918183cff25c536ce28d1771877bd0f92ee8246b113ee8409639f9b95e64d0",
+        "package_hash": "e462a18447565beea93eca29eebaea68a66d8ea10134debc44e43536bc06b984",
+        "status": "INTERNAL_CANDIDATE_NOT_RELEASED",
+        "graph": {
+          "nodes": 28,
+          "edges": 111,
+          "candidate_compositions": 523,
+          "shared_source_compositions": 8
+        },
+        "formalization_queue": {
+          "queue_item_id": "FORM-085788abb132f6bb",
+          "status": "READY_FOR_FORMALIZATION",
+          "missing_formal_fields": 7,
+          "solver_execution_status": "NOT_RUN_NO_FORMAL_AST"
+        },
+        "provenance_gate": {
+          "status": "PASS",
+          "source_count": 3,
+          "scope": "SOURCE_RESOLUTION_ONLY"
+        },
+        "mirror_review": {
+          "status": "COUNTER_READING_CANDIDATE",
+          "independent_review_count": 0,
+          "reciprocal_edge_review_candidates": 52
+        },
+        "semantic_status": "NOT_YET_VERIFIED"
+      },
+      "typed_fixture_candidate": {
+        "status": "CANDIDATE_NOT_RELEASED",
+        "scale_1_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+        "scale_2_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+        "scope": "SYNTHETIC_TEST_FIXTURES_NOT_REAL_CONVERSATION_OR_EXTERNAL_FACTS"
+      },
+      "artifact": {
+        "id": 13071662183,
+        "size_bytes": 125621,
+        "sha256": "280eddb02bd0c4b90e26eb61f14bb343e11a81feacc62d7fd689a2b219ec8d56"
+      },
+      "readiness_agent_metrics": {
+        "critical_core_contradictions": null,
+        "contradiction_inventory_available": false,
+        "gate_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY"
+      }
+    }
+  ],
+  "pipeline_output_discrepancies": [
+    {
+      "id": "READINESS-CORE-CONTRADICTION-NULL-VS-ZERO-2026-11-01",
+      "observed_at_utc": "2026-11-01T05:34:10Z",
+      "workflow_run_id": 41277417328,
+      "artifact_id": 13071662183,
+      "artifact_sha256": "280eddb02bd0c4b90e26eb61f14bb343e11a81feacc62d7fd689a2b219ec8d56",
+      "source_files": [
+        "logic_wiki/generated/readiness-report.json",
+        "logic_wiki/generated/agent_cycle_report.json"
+      ],
+      "observed_conflict": {
+        "readiness_report": {
+          "critical_core_contradictions": 0,
+          "readiness_gate_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+          "status": "PASS"
+        },
+        "agent_cycle_report": {
+          "critical_core_contradictions": null,
+          "contradiction_inventory_available": false,
+          "first_model_gate": "NOT_READY_INTERNAL_CANDIDATE_ONLY"
+        }
+      },
+      "epistemic_status": "GENERATED_OUTPUT_CONTRADICTION_CONFIRMED",
+      "interpretation": "The readiness-report PASS denotes catalog validation, not FIRST_MODEL_ALPHA readiness. The zero contradiction count is unsupported while the contradiction inventory is absent; the agent-cycle report correctly retains null/NOT_MEASURED.",
+      "related_pr": 132,
+      "related_pr_status": "OPEN_DRAFT_NOT_MERGED",
+      "next_action": "Review and merge/rebase the fail-closed correction through PR/CI; rerun both reports and confirm no zero is emitted without an available reviewed inventory."
+    }
+  ]
 }
