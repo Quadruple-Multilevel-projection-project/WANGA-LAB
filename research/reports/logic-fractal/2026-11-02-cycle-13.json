@@ -64,7 +64,16 @@
     "scale_2_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
     "agent_cycle_model_hash": "fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf",
     "artifact_sha256": "280eddb02bd0c4b90e26eb61f14bb343e11a81feacc62d7fd689a2b219ec8d56",
-    "decision": "BLOCKED_PENDING_REAL_SOURCE_FRAGMENTS_NEGATIVE_BOUNDARY_TESTS_AND_INDEPENDENT_REVIEW"
+    "decision": "BLOCKED_PENDING_REAL_SOURCE_FRAGMENTS_NEGATIVE_BOUNDARY_TESTS_AND_INDEPENDENT_REVIEW",
+    "latest_builder_workflow_run_id": 41394233025,
+    "latest_builder_workflow_run_created_at_utc": "2026-11-02T05:28:32Z",
+    "latest_builder_step_conclusion": "success",
+    "latest_builder_step_timestamp": "NOT_EXPOSED",
+    "candidate_json_bytes": 9843,
+    "candidate_json_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+    "latest_logic_artifact_id": 13119180089,
+    "latest_logic_artifact_size_bytes": 134822,
+    "latest_logic_artifact_sha256": "8fe51b5c091d8034ed67fec4d67f8589cd1260df0bcb878707985ad90a37329f"
   },
   "readiness_gate": {
     "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
@@ -113,7 +122,17 @@
       "mirror_review": 1,
       "critical_core_contradictions": "INVENTORY_MISSING"
     },
-    "contradiction_inventory_available": false
+    "contradiction_inventory_available": false,
+    "catalog_validation_status": "PASS",
+    "readiness_report_artifact_value_critical_core_contradictions": 0,
+    "agent_cycle_report_value_critical_core_contradictions": null,
+    "effective_critical_core_contradictions": "NOT_MEASURED",
+    "artifact_consistency_issue": {
+      "status": "OPEN",
+      "issue": "logic_wiki/generated/readiness-report.json emits legacy 0 while logic_wiki/generated/agent_cycle_report.json emits null and contradiction_inventory_available=false.",
+      "decision": "Treat as NOT_MEASURED until a reviewed core-contradiction inventory exists.",
+      "related_pr": 132
+    }
   },
   "benchmarks": {
     "propositional_smoke": {
@@ -156,25 +175,35 @@
   },
   "ci": {
     "logic_fractal_branch_run": {
-      "run_id": 41277750554,
+      "run_id": 41394233025,
       "conclusion": "success",
-      "head_sha": "012d78c9b60711ebb64e97c90fadaa587f67e6dc"
+      "head_sha": "52b73c48bc255fac9382258e9f05c47006237c41"
     },
     "ecosystem_branch_run": {
-      "run_id": 41277750534,
+      "run_id": 41394233056,
       "conclusion": "success",
-      "scope_status": "COMPLETED_WITH_SCOPE_BLOCKER",
+      "artifact_scope_status": "COMPLETED_WITH_SCOPE_BLOCKER",
       "repositories_scanned_by_runner": 1
     },
-    "current_main_regional_drift_run": {
-      "run_id": 41375849054,
+    "repository_integrity": {
+      "run_id": 41394233011,
       "conclusion": "success",
-      "head_sha": "6dcba9cae429f17de1c9174942f22a291eb46d3e"
+      "head_sha": "52b73c48bc255fac9382258e9f05c47006237c41"
     },
-    "current_main_research_groups_run": {
-      "run_id": 41369398444,
+    "codeql": {
+      "run_id": 41394233026,
       "conclusion": "success",
-      "head_sha": "6dcba9cae429f17de1c9174942f22a291eb46d3e"
+      "head_sha": "52b73c48bc255fac9382258e9f05c47006237c41"
+    },
+    "logic_artifact": {
+      "id": 13119180089,
+      "size_bytes": 134822,
+      "sha256": "8fe51b5c091d8034ed67fec4d67f8589cd1260df0bcb878707985ad90a37329f"
+    },
+    "ecosystem_artifact": {
+      "id": 13118433069,
+      "size_bytes": 3224,
+      "sha256": "2d86cbb9693510856a1a7507eefc3144b7febc802fd0a7119bd8cc88d22c6048"
     },
     "runner_names": "NOT_EXPOSED"
   },
@@ -326,9 +355,9 @@
     },
     {
       "agent": "publisher",
-      "status": "IN_PROGRESS_PR133",
-      "output": "Reports and cursor committed to existing draft PR; CI pending.",
-      "next": "Inspect triggered checks; do not merge."
+      "status": "COMPLETED_WITH_SCOPE_BLOCKER",
+      "output": "Reports and cursor committed to PR #133; Logic Fractal, Repository Integrity and CodeQL passed; ecosystem workflow passed with current-repository-only scope blocker.",
+      "next": "Reconcile the draft branch with main before merge review."
     }
   ],
   "blocked": [
