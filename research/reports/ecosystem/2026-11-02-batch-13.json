@@ -221,7 +221,24 @@
     "behind_main": 32,
     "merge_performed": false,
     "auto_merge_enabled": false,
-    "ci_after_this_commit": "PENDING"
+    "ci_after_this_commit": "LOGIC_FRACTAL_PASS_REPOSITORY_INTEGRITY_PASS_CODEQL_PASS_ECOSYSTEM_WORKFLOW_PASS_WITH_SCOPE_BLOCKER",
+    "ci_runs": {
+      "logic_fractal": 41394233025,
+      "repository_integrity": 41394233011,
+      "codeql": 41394233026,
+      "ecosystem": 41394233056
+    },
+    "head_sha": "52b73c48bc255fac9382258e9f05c47006237c41",
+    "logic_artifact": {
+      "id": 13119180089,
+      "size_bytes": 134822,
+      "sha256": "8fe51b5c091d8034ed67fec4d67f8589cd1260df0bcb878707985ad90a37329f"
+    },
+    "ecosystem_artifact": {
+      "id": 13118433069,
+      "size_bytes": 3224,
+      "sha256": "2d86cbb9693510856a1a7507eefc3144b7febc802fd0a7119bd8cc88d22c6048"
+    }
   },
   "next": [
     "Continue the queued focused-review batch; do not infer repository identity from duplicate README blobs.",
