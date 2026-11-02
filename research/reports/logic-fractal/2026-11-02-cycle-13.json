@@ -1,0 +1,354 @@
+{
+  "schema_version": "wanga-logic-fractal-cycle-report/1.0",
+  "report_id": "LOGIC-FRACTAL-CYCLE-2026-11-02-RUN13",
+  "generated_at_utc": "2026-11-02T05:21:58Z",
+  "status": "CANDIDATE_RESEARCH_REVALIDATED_FIRST_MODEL_RELEASE_BLOCKED",
+  "sources_scanned": {
+    "live_repository_snapshot": {
+      "unique_repositories": 63,
+      "public": 58,
+      "private_omitted": 5
+    },
+    "focused_repository_batch": 10,
+    "readme_successes": 9,
+    "readme_access_gaps": 1,
+    "wanga_main_documents": 12,
+    "limbo_branch_documents": 5,
+    "conversation_exports_ingested": 0,
+    "library_full_text_reads": 0
+  },
+  "source_extraction": {
+    "new_source_records": 0,
+    "duplicate_revalidations": 9,
+    "claims_added": 0,
+    "candidate_logic_units_added": 0,
+    "formal_logic_units_added": 0,
+    "candidate_boundary_cases_added": 0,
+    "semantic_entailments_asserted": 0,
+    "weights_applied": false,
+    "new_compositions": 0
+  },
+  "current_catalog": {
+    "article_count": 28,
+    "unique_source_ids_referenced": 17,
+    "category_count": 9,
+    "source_classes": 11,
+    "source_class_basis": "Latest successful readiness report in Logic Fractal workflow 41277750554; no dedicated source registry was independently re-enumerated in this cycle.",
+    "provenance_linked_logic_units": 28,
+    "provenance_count_basis": "Latest successful readiness report; current live catalog has 28 articles and each entry carries source references."
+  },
+  "composition": {
+    "active_rules_with_contracts": 2,
+    "total_rules": 3,
+    "draft_rules": 1,
+    "active_rule_ids": [
+      "COMPOSE-CHAIN",
+      "COMPOSE-SHARED-SOURCE"
+    ],
+    "draft_rule_ids": [
+      "COMPOSE-RECURSIVE-LEVEL"
+    ],
+    "recursive_contracts_active_specified": 2,
+    "recursive_contracts_draft_or_required": 2,
+    "new_compositions": 0,
+    "semantic_entailments_asserted": 0,
+    "status": "CANDIDATE_COMPOSITION_NOT_SEMANTICALLY_VERIFIED"
+  },
+  "model_candidate": {
+    "status": "CANDIDATE_NOT_RELEASED",
+    "backend_status": "NOT_CONFIGURED",
+    "source_validation": "SYNTHETIC_FIXTURES_ONLY",
+    "last_builder_execution_utc": "2026-10-31T05:30:06Z",
+    "builder_workflow_run_id": 41277417328,
+    "scale_1_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+    "scale_2_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "agent_cycle_model_hash": "fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf",
+    "artifact_sha256": "280eddb02bd0c4b90e26eb61f14bb343e11a81feacc62d7fd689a2b219ec8d56",
+    "decision": "BLOCKED_PENDING_REAL_SOURCE_FRAGMENTS_NEGATIVE_BOUNDARY_TESTS_AND_INDEPENDENT_REVIEW"
+  },
+  "readiness_gate": {
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "threshold_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "thresholds": {
+      "source_records": 20,
+      "source_classes": 3,
+      "logic_units_with_provenance": 50,
+      "composition_rules_with_contracts": 20,
+      "counterexample_cases": 30,
+      "semantic_test_cases": 100,
+      "benchmark_suites": 3,
+      "independent_review_cycles": 2,
+      "unresolved_dangling_source_refs": 0,
+      "unresolved_duplicate_stable_ids": 0,
+      "critical_core_contradictions": 0,
+      "deterministic_build_required": true,
+      "holdout_split_required": true,
+      "mirror_review_required": true
+    },
+    "observed": {
+      "source_records": 17,
+      "source_classes": 11,
+      "logic_units_with_provenance": 28,
+      "composition_rules_with_contracts": 2,
+      "counterexample_cases": 0,
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "unresolved_dangling_source_refs": 0,
+      "unresolved_duplicate_stable_ids": 0,
+      "critical_core_contradictions": "NOT_MEASURED",
+      "deterministic_build": true,
+      "holdout_split": false,
+      "mirror_review": false
+    },
+    "deficits": {
+      "source_records": 3,
+      "logic_units_with_provenance": 22,
+      "composition_rules_with_contracts": 18,
+      "counterexample_cases": 30,
+      "semantic_test_cases": 100,
+      "benchmark_suites": 3,
+      "independent_review_cycles": 2,
+      "holdout_split": 1,
+      "mirror_review": 1,
+      "critical_core_contradictions": "INVENTORY_MISSING"
+    },
+    "contradiction_inventory_available": false
+  },
+  "benchmarks": {
+    "propositional_smoke": {
+      "status": "PASS",
+      "cases": 5,
+      "passed": 5,
+      "scope": "SYNTHETIC_FIXTURES_ONLY",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "source_run_id": 41172014524
+    },
+    "typed_formal": {
+      "status": "PASS",
+      "cases": 7,
+      "passed": 7,
+      "scope": "SYNTHETIC_FIXTURES_ONLY",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "source_run_id": 41172014524
+    },
+    "ark_swarm": {
+      "status": "PASS",
+      "agents": 10,
+      "passed_agents": 10,
+      "scope": "SOFTWARE_ROLE_EXECUTION_ONLY",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "source_run_id": 41172014524
+    },
+    "logic_brain_formal_fixture": {
+      "status": "PASS",
+      "cases": 5,
+      "passed": 5,
+      "scope": "ENCODED_FIXTURE_ONLY",
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    "source_grounded": {
+      "status": "BLOCKED_INSUFFICIENT_REVIEWED_CASES",
+      "cases": 0,
+      "eligible_executed_cases": 0,
+      "semantic_status": "NOT_YET_VERIFIED"
+    }
+  },
+  "ci": {
+    "logic_fractal_branch_run": {
+      "run_id": 41277750554,
+      "conclusion": "success",
+      "head_sha": "012d78c9b60711ebb64e97c90fadaa587f67e6dc"
+    },
+    "ecosystem_branch_run": {
+      "run_id": 41277750534,
+      "conclusion": "success",
+      "scope_status": "COMPLETED_WITH_SCOPE_BLOCKER",
+      "repositories_scanned_by_runner": 1
+    },
+    "current_main_regional_drift_run": {
+      "run_id": 41375849054,
+      "conclusion": "success",
+      "head_sha": "6dcba9cae429f17de1c9174942f22a291eb46d3e"
+    },
+    "current_main_research_groups_run": {
+      "run_id": 41369398444,
+      "conclusion": "success",
+      "head_sha": "6dcba9cae429f17de1c9174942f22a291eb46d3e"
+    },
+    "runner_names": "NOT_EXPOSED"
+  },
+  "wix": {
+    "site_name": "Logic Engine Research Lab",
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
+    "site_status": "PUBLISHED",
+    "deployed_file_count": 29,
+    "readback": "SUCCESS",
+    "pages_read": [
+      "logic-wiki.html",
+      "logic-wiki-research-status.html",
+      "logic-wiki-fractal-research.html",
+      "logic-wiki-fractal-model.html",
+      "logic-wiki-fractal-logic.html"
+    ],
+    "main_page": {
+      "articles": 28,
+      "sources": 17,
+      "comparison": "MATCHES_GITHUB_CATALOG"
+    },
+    "research_page": {
+      "articles": 27,
+      "sources": 16,
+      "comparison": "SCOPE_OR_SNAPSHOT_DRIFT_UNRESOLVED"
+    },
+    "last_sync_date_in_manifest": "2026-10-12",
+    "write_performed": false,
+    "reason_no_write": "No approved catalog changes; research-page count mismatch remains unresolved."
+  },
+  "limbo": {
+    "pull_request": 122,
+    "state": "OPEN_DRAFT",
+    "branch": "deploy/limbo-cartography-core-v1",
+    "head_sha": "f70e09e61b9850f446a1f54450e732287b3f248e",
+    "ahead_of_main": 59,
+    "behind_main": 133,
+    "matrix_version": "1.3.0",
+    "matrix_git_blob_sha1": "86593dd31e5c20bf47c81d09d527967cf0a22476",
+    "registered_incidents": 10,
+    "history_events": 2,
+    "map_version": "1.0.0",
+    "map_nodes": 14,
+    "map_edges": 19,
+    "map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+    "latest_recorded_time_utc": "2026-10-19T19:41:44Z",
+    "unresolved_incidents_without_latest_passing_retest": 9,
+    "recurring_unresolved_cluster_count": 1,
+    "inbox": {
+      "limbo_points": 0,
+      "history_events": 0,
+      "keystone_cases": 0,
+      "logic_bundles": 1,
+      "status": "NO_INPUTS"
+    },
+    "tuning_candidate": {
+      "id": "TUNE-9c166900cc4ad5dd",
+      "status": "CANDIDATE_REPLAY_REQUIRED",
+      "replay_status": "NOT_RUN",
+      "prior_retest_result": "PASS",
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    "logic_bundle": {
+      "id": "VITRUVIUS-QUEUE-CONTRACT-RECURRENCE",
+      "status": "DRAFT_UNVERIFIED",
+      "root_cause_status": "NOT_YET_ESTABLISHED"
+    },
+    "current_head_workflows": {
+      "conclusion": "ACTION_REQUIRED",
+      "run_ids": [
+        40167547736,
+        40167547828,
+        40167547744
+      ],
+      "jobs_returned": 0,
+      "combined_status_entries": 0
+    },
+    "semantic_verification": "NOT_PERFORMED"
+  },
+  "access_gaps": [
+    "No ChatGPT conversation export was surfaced or ingested.",
+    "No source-grounded semantic benchmark cases or independent reviews exist in the latest readiness snapshot.",
+    "No reviewed core-contradiction inventory exists; critical contradictions remain NOT_MEASURED.",
+    "The five private repositories remain redacted and were not sampled.",
+    "One public README fetch returned HTTP 404.",
+    "Wix research page remains 27 articles / 16 sources versus the main catalog's 28 / 17.",
+    "PR #122 current-head workflows remain action_required with no jobs returned."
+  ],
+  "built_tested_verified": {
+    "built": "Two-level typed candidate built on synthetic fixtures; hashes retained from the 2026-10-31 workflow.",
+    "tested": "Software/unit and synthetic benchmark steps passed in Logic Fractal workflow run 41277750554.",
+    "verified": "No semantic ground-truth verification, no source-grounded benchmark, no independent review, and no FIRST_MODEL_ALPHA release."
+  },
+  "agents": [
+    {
+      "agent": "repository-inventory",
+      "status": "COMPLETED",
+      "output": "63-repository live affiliation snapshot; ten project-relevant README revalidations.",
+      "next": "Continue queued focused-review priority batch."
+    },
+    {
+      "agent": "project-readme-docs-collector",
+      "status": "COMPLETED_WITH_ACCESS_GAP",
+      "output": "Nine README reads; one HTTP 404; no new source records.",
+      "next": "Retry the documented tree for glowing-octo-waddle."
+    },
+    {
+      "agent": "conversation-export-collector",
+      "status": "BLOCKED_NO_EXPORT",
+      "output": "Zero exports ingested; no automatic private chat-history access.",
+      "next": "Wait for an explicitly supplied export; keep raw transcripts private."
+    },
+    {
+      "agent": "logic-extractor",
+      "status": "COMPLETED_NO_NEW_UNIT",
+      "output": "Existing candidate observations revalidated; no new unit added.",
+      "next": "Wait for new source spans or inspect unreviewed primary files."
+    },
+    {
+      "agent": "normalizer",
+      "status": "NOT_STARTED",
+      "output": "No new accepted units to normalize.",
+      "next": "Run only after a source span is admitted."
+    },
+    {
+      "agent": "fractal-composer",
+      "status": "NOT_STARTED",
+      "output": "No new accepted typed units; no new composition.",
+      "next": "Compose only after source and relation closure checks."
+    },
+    {
+      "agent": "mirror-reviewer",
+      "status": "BLOCKED_NO_INDEPENDENT_REVIEW",
+      "output": "No independent review cycle registered.",
+      "next": "Obtain a separately recorded review."
+    },
+    {
+      "agent": "benchmark-evaluator",
+      "status": "BLOCKED_NO_GROUNDED_CASES",
+      "output": "Synthetic suites pass; zero source-grounded cases.",
+      "next": "Register reviewed positive, negative and boundary cases with frozen holdout."
+    },
+    {
+      "agent": "wiki-curator",
+      "status": "COMPLETED_NO_CATALOG_CHANGE",
+      "output": "No catalog change approved.",
+      "next": "Retain current statuses until evidence/review changes."
+    },
+    {
+      "agent": "publisher",
+      "status": "IN_PROGRESS_PR133",
+      "output": "Reports and cursor committed to existing draft PR; CI pending.",
+      "next": "Inspect triggered checks; do not merge."
+    }
+  ],
+  "blocked": [
+    "No conversation export.",
+    "No source-grounded semantic benchmark suite or holdout.",
+    "No independent MIRROR review.",
+    "No core contradiction inventory.",
+    "FIRST_MODEL_ALPHA readiness gate not met.",
+    "PR #122 is 133 commits behind main and current-head CI requires action.",
+    "PR #133 is 32 commits behind main and remains Draft.",
+    "Wix research-page scope mismatch remains unresolved."
+  ],
+  "next": [
+    "Continue the next priority batch in repository_sweep_cursor.json.",
+    "Retry the glowing-octo-waddle README path through repository tree and documented files.",
+    "Ingest a user-provided conversation export privately if one becomes available.",
+    "Add source-grounded positive, negative and boundary cases; freeze holdout before tuning.",
+    "Create a reviewed core-contradiction inventory before reporting a zero contradiction count.",
+    "Obtain required approval and fresh CI for PR #122; replay the tuning candidate on the current target.",
+    "Reconcile PR #133 with current main before any merge decision.",
+    "Resolve the Wix research-page catalog scope before publishing."
+  ]
+}
