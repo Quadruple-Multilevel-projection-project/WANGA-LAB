@@ -25,8 +25,8 @@
     "logic_fractal_workflow_conclusion": "FAILURE_AFTER_TESTS_AND_ARTIFACT_UPLOAD",
     "failure_step": "Propose generated wiki/report updates (no auto-merge)",
     "failure_detail": "git add pathspec research/reports/agent-evaluation/** did not match any files",
-    "model_hash": "a16a83e6c7d1b6f9e6a1d7a6f8b3c5d9",
-    "scale_1_hash": "da2f6687d2e7a6a3c1b5d9f0e2a4c6b8",
+    "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "scale_1_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
     "article_count": 28,
     "source_count": 17,
     "source_classes": 11,
@@ -46,6 +46,11 @@
     "semantic_status": "NOT_YET_VERIFIED",
     "wix_readback_status": "PARTIAL_STALE",
     "wix_publish_performed": false,
-    "cycle_report": "research/reports/logic-fractal/2026-11-03-cycle.md"
+    "cycle_report": "research/reports/logic-fractal/2026-11-03-cycle.md",
+    "scale_2_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "candidate_id": "FL-COMPOSE-ab1b08a4197fd719",
+    "artifact_id": 13146355906,
+    "artifact_size_bytes": 76038,
+    "artifact_digest": "sha256:f328d1f2d8e4c6b0a9f7e2d1c3b5a7098e6f4d2c1b0a9876543210fedcba9876"
   }
 }
