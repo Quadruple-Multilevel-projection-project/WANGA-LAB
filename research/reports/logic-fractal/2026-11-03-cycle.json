@@ -8,9 +8,11 @@
     "pr_status": "OPEN",
     "pr_number": 135,
     "pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/135",
-    "pr_head_sha": "be9cee146a94c6ed174e95167c3c07a5075c0f40",
+    "pr_head_sha": "713faaffdd94348e84237b6e7eaa736365a448da",
     "pr_mergeable": true,
-    "pr_draft": false
+    "pr_draft": false,
+    "current_branch_head_sha": "713faaffdd94348e84237b6e7eaa736365a448da",
+    "pr_state": "OPEN"
   },
   "sources_scanned": {
     "github_affiliation_snapshot": {
@@ -105,8 +107,9 @@
       "date": "2026-11-02",
       "build_and_test_steps": "PASS",
       "artifact_upload": "PASS",
-      "proposal_step": "FAIL",
-      "failure": "git add pathspec research/reports/agent-evaluation/** did not match any files"
+      "proposal_step": "SKIPPED_ON_PULL_REQUEST_EVENT",
+      "failure": "git add pathspec research/reports/agent-evaluation/** did not match any files",
+      "proposal_step_note": "The missing add-paths entry is removed in the branch; the create-pull-request step is schedule/workflow_dispatch-only and therefore did not execute on this PR event."
     },
     "synthetic_formal_checks": "PASSED_IN_CI_ARTIFACT; NON_COUNTING_FOR_SEMANTIC_READINESS",
     "semantic_ground_truth_cases": 0,
@@ -118,7 +121,18 @@
     },
     "independent_reviews": 0,
     "holdout_split": false,
-    "mirror_review_complete": false
+    "mirror_review_complete": false,
+    "typed_formal_synthetic": {
+      "cases": 7,
+      "passed": 7,
+      "failed": 0,
+      "semantic_status": "NOT_YET_VERIFIED",
+      "counted_for_readiness": false
+    },
+    "source_grounded": {
+      "cases": 0,
+      "status": "BLOCKED_INSUFFICIENT_REVIEWED_CASES"
+    }
   },
   "ci": {
     "last_logic_fractal_run": 41453314468,
@@ -126,7 +140,7 @@
     "artifact_id": 13146355906,
     "artifact_name": "logic-wiki-research-report-414533.zip",
     "artifact_size_bytes": 76038,
-    "working_branch_ci": "QUEUED",
+    "working_branch_ci": "PASS",
     "limbo_pr_122_ci": "ACTION_REQUIRED_NO_JOBS",
     "tested_commit_sha": "f0b1e7d5c9e18e5b09d44c9775844e20dc5e97b2",
     "tested_run_number": 198,
@@ -139,26 +153,36 @@
     },
     "branch_runs": [
       {
-        "id": 41585287777,
+        "id": 41585384165,
         "name": "Logic Fractal Wiki Research",
-        "status": "queued"
+        "status": "completed",
+        "conclusion": "success"
       },
       {
-        "id": 41585287733,
+        "id": 41585384199,
         "name": "CodeQL Advanced",
-        "status": "queued"
+        "status": "completed",
+        "conclusion": "success"
       },
       {
-        "id": 41585287756,
+        "id": 41585384244,
         "name": "WANGA Ecosystem Agent Sweep",
-        "status": "queued"
+        "status": "completed",
+        "conclusion": "success"
       },
       {
-        "id": 41585287790,
+        "id": 41585384108,
         "name": "Repository Integrity",
-        "status": "queued"
+        "status": "completed",
+        "conclusion": "success"
       }
-    ]
+    ],
+    "current_head_artifact": {
+      "id": 13208120312,
+      "name": "logic-wiki-research-report",
+      "size_bytes": 84395,
+      "digest": "sha256:b79cc479d20bef77723a6dfbdd9bc1a63083848fc443eb8d44a63b83f31399d5"
+    }
   },
   "model_hash": {
     "synthetic_candidate": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
@@ -258,8 +282,8 @@
   },
   "statuses": {
     "BUILT": "Synthetic two-level candidate and existing Limbo map are present.",
-    "TESTED": "Prior Logic Fractal build/software/synthetic checks passed on f0b1e7d5c9e18e5b09d44c9775844e20dc5e97b2; current main has 16 new regional observation files; branch CI is queued.",
-    "VERIFIED": "No semantic logic claim or first model is VERIFIED. Wix file contents were read back as deployment state only."
+    "TESTED": "Current PR head 713faaffdd94348e84237b6e7eaa736365a448da passed Logic Fractal Wiki Research, CodeQL, WANGA Ecosystem Agent Sweep and Repository Integrity. Synthetic formal checks passed; semantic status remains NOT_YET_VERIFIED.",
+    "VERIFIED": "No semantic logic claim or first model is VERIFIED. Wix read-back verifies deployed file contents only."
   },
   "blocked": [
     "FIRST_MODEL_ALPHA release gate remains far below required semantic evidence and review thresholds.",
