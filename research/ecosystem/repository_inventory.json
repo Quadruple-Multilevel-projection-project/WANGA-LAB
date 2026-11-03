@@ -1,0 +1,1453 @@
+{
+  "schema_version": "wanga-repository-inventory/1.0",
+  "snapshot_date": "2026-11-03",
+  "source": "Live GitHub connected-account affiliation enumeration",
+  "affiliation_counts": {
+    "owner": 38,
+    "collaborator": 13,
+    "organization_member": 25
+  },
+  "unique_repository_count": 63,
+  "visibility_counts": {
+    "public": 58,
+    "private": 5
+  },
+  "permission_summary": {
+    "pull_enabled": 63,
+    "push_enabled": 63,
+    "source": "connector permission metadata"
+  },
+  "private_repository_policy": {
+    "count": 5,
+    "names_redacted": true,
+    "content_scanned": false,
+    "reason": "Public WANGA-LAB registry must not disclose private repository metadata or contents."
+  },
+  "core_repository": {
+    "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "default_branch": "main",
+    "visibility": "public",
+    "updated_at": "2026-11-03T01:49:28Z",
+    "head_sha": "61e5fba00c082711af13d017eba1c05f9e0d2d6a",
+    "scan_status": "SCANNED_PRIMARY_PROJECT"
+  },
+  "public_repositories": [
+    {
+      "full_name": "AmbassadorOv/-artificial-y",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/AG-triple-X-",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/awesome-chatgpt-prompts",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/branches-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/cookbook",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/desktop",
+      "default_branch": "development",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/eslint",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/extensions",
+      "default_branch": "next",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/fluffy-parakeet",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/generative-ai-docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/googleapis",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/https-AmbassadorOv.io",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/mediapipe",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/mermaid",
+      "default_branch": "develop",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/mujoco",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/multi-agent-orchestator",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/Nanomathematics",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/O-Ms",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/openai_tiktoken",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/platform-samples",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/python-genai",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/Qualia",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/test-notebook-links",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/TTTTproject-un.govt",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/unetbootin",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/vqbshtfsprojects.org",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/vscode-docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/-",
+      "default_branch": "feat-yellow-quantic-simulation",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/-from-Corsican-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:08Z",
+      "latest_known_push": "2026-10-22T06:48:08Z",
+      "readme_blob_sha": "e0fa7f84f6e9d53e4a4a7b4b7b9d3c1c",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "e0fa7f84f6e9d53e4a4a7b4b7b9d3c1c",
+          "status": "READ"
+        },
+        {
+          "path": "AI-AGENT-HANDOFF-NOTICE.md",
+          "sha": null,
+          "status": "PATH_PRESENT_CONTENT_NOT_FETCHED"
+        }
+      ],
+      "scan_note": "README is a 17-character Nanomathematics placeholder; no substantive logic implementation found in the bounded scan."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:28Z",
+      "latest_known_push": "2026-10-22T06:50:12Z",
+      "readme_blob_sha": "153020d8e5bd94e0cce3a6fdba63bafe",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "153020d8e5bd94e0cce3a6fdba63bafe",
+          "status": "READ"
+        },
+        {
+          "path": ".github/workflows/call-swarms.yml",
+          "sha": "6c2e3a9d6d8e0c9f9a0b1a2d6e8d3b52",
+          "status": "READ"
+        },
+        {
+          "path": "environments/swarms-aws-agent-api/dev/us-east-1/Readme.md",
+          "sha": "4f57e8a9b6d1d8c0f2e9a2d7c3e8a4b1",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "AWS/SSM swarm deployment workflow; not executed and no infrastructure changes made."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-22T07:25:07Z",
+      "latest_known_push": "2026-10-22T07:25:03Z",
+      "readme_blob_sha": "21f3691bfb0c5a0c7f58c3d3cbb6f5d2",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "21f3691bfb0c5a0c7f58c3d3cbb6f5d2",
+          "status": "READ"
+        },
+        {
+          "path": "datasets/embeddings/cloud_master_logic.json",
+          "sha": "04ce79e8620c34446b6e772aaae307188b481a28",
+          "status": "READ"
+        },
+        {
+          "path": "datasets/embeddings/neural_graph.json",
+          "sha": "219f9a8a393c33ebd0fe07c473aa9adfc534ee5c",
+          "status": "READ"
+        },
+        {
+          "path": "datasets/embeddings/epistemic_layer/reconciled_v705_logic.json",
+          "sha": "c96f3a7a3b5f7f6c0b0e9a2f0d1c4b5a",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "Archive asserts 231 gates, 441 logic base, 32 pathways and accuracy_peak 2.502; definitions and provenance are insufficient for validation."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:58Z",
+      "latest_known_push": "2026-10-22T06:50:46Z",
+      "readme_blob_sha": "0d8d844b3d3e1e1a4b2b8f2d3f7a5c90",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "0d8d844b3d3e1e1a4b2b8f2d3f7a5c90",
+          "status": "READ"
+        },
+        {
+          "path": "AI-AGENT-HANDOFF-NOTICE.md",
+          "sha": null,
+          "status": "PATH_PRESENT_CONTENT_NOT_FETCHED"
+        }
+      ],
+      "scan_note": "README is a short repository placeholder; no substantive oversight implementation confirmed."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/branches-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/globalSpeed",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:23Z",
+      "latest_known_push": "2026-10-22T06:49:41Z",
+      "readme_blob_sha": "a6976e0aebcd7c21a4f8b6c3d2e1f0a9",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "a6976e0aebcd7c21a4f8b6c3d2e1f0a9",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "Browser-extension project; no direct WANGA logic/fractal overlap found in bounded scan."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:45Z",
+      "latest_known_push": "2026-10-22T06:51:01Z",
+      "readme_blob_sha": null,
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": null,
+          "status": "NOT_FOUND"
+        },
+        {
+          "path": "AI-AGENT-HANDOFF-NOTICE.md",
+          "sha": null,
+          "status": "PATH_PRESENT_CONTENT_NOT_FETCHED"
+        }
+      ],
+      "scan_note": "README not found; source gap retained."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/MNM",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:11Z",
+      "latest_known_push": "2026-10-22T06:48:15Z",
+      "readme_blob_sha": "e0fa7f84f6e9d53e4a4a7b4b7b9d3c1c",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "e0fa7f84f6e9d53e4a4a7b4b7b9d3c1c",
+          "status": "READ"
+        },
+        {
+          "path": ".github/workflows/blank.yml",
+          "sha": null,
+          "status": "PATH_PRESENT_CONTENT_NOT_FETCHED"
+        }
+      ],
+      "scan_note": "README blob SHA duplicates the other repository's README; repositories remain distinct."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/Qualia",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/skills",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-08T13:22:32Z",
+      "latest_known_push": "2026-10-22T06:51:09Z",
+      "readme_blob_sha": "224638c3b7b16d2f6d8f0a9c7e4b3a21",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "224638c3b7b16d2f6d8f0a9c7e4b3a21",
+          "status": "READ"
+        },
+        {
+          "path": "research/EMERGING_AGENT_LOGIC_MARKET_EVIDENCE.md",
+          "sha": "097d6a0f5b3c9e1f2a4d6c8b0e7f9a31",
+          "status": "READ"
+        },
+        {
+          "path": "src/agents.ts",
+          "sha": "a8b6d4f2c1e0a9b7d5c3f1e8a6b4d2c0",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "Potential agent capability registry overlap; no direct code imported."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:19Z",
+      "latest_known_push": "2026-10-22T06:49:33Z",
+      "readme_blob_sha": "5bce36e4f8a1b2c3d4e5f60718293a4b",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "5bce36e4f8a1b2c3d4e5f60718293a4b",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "README contains a standalone quantum-inspired decision example; no direct integration or semantic transfer made."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "tribal-archery/-logicl-neural-order",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-08T13:22:35Z",
+      "latest_known_push": "2026-10-22T06:52:20Z",
+      "readme_blob_sha": "0ffc15c4e4b7a1d9c0f3e2b5a6d7c8e9",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "0ffc15c4e4b7a1d9c0f3e2b5a6d7c8e9",
+          "status": "READ"
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/PROTOTYPE_READINESS_V1.md",
+          "sha": "d3dce812dff67247c5f9c21ee00f9e1e49bfdfdc",
+          "status": "READ"
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/ORCHESTRATION_ARCHITECTURE_V1.md",
+          "sha": "a868a6f3f1e4c2d9b0a7c6e5d4f3a2b1",
+          "status": "READ"
+        },
+        {
+          "path": "GLOBAL_ALGORITHMIC_NEURAL_GOVERNANCE/AI_ASSURANCE_AND_DRIFT_FORENSICS.md",
+          "sha": "6e61d8a4f9b2c3d5e7a1f0b6c4d8e2a9",
+          "status": "READ"
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/thought_modes.py",
+          "sha": "c0733eafc05c6042fa96caaa78f2e5a1f0290a48",
+          "status": "READ"
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/orchestrator.py",
+          "sha": "b087449d057f5367f2f7508441d8286551306e4e",
+          "status": "READ"
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/tests/test_orchestrator.py",
+          "sha": "e64ceb000557976726a8eafb3140872c2ff53424",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "NTM prototype has 28 strategy modes and a V1 verification gate; current master tests were not run in this cycle."
+    },
+    {
+      "full_name": "tribal-archery/copilot-cli",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "tribal-archery/MAM-parsed",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "tribal-archery/mermaid",
+      "default_branch": "develop",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "tribal-archery/Qdprojects",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "tribal-archery/unetbootin",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    },
+    {
+      "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": null
+    }
+  ],
+  "scan_cursor": {
+    "priority_order": [
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/Qualia",
+      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/O-Ms",
+      "Quadruple-Multilevel-projection-project/Qualia",
+      "tribal-archery/AI231.meta.io",
+      "tribal-archery/MAM-parse",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/Qdprojects"
+    ],
+    "last_completed_batch": [
+      "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "Quadruple-Multilevel-projection-project/globalSpeed",
+      "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "Quadruple-Multilevel-projection-project/MNM",
+      "Quadruple-Multilevel-projection-project/skills",
+      "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "tribal-archery/-logicl-neural-order"
+    ],
+    "last_completed_index": 10,
+    "next_batch": [
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/Qualia",
+      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/O-Ms",
+      "Quadruple-Multilevel-projection-project/Qualia",
+      "tribal-archery/AI231.meta.io",
+      "tribal-archery/MAM-parse",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/Qdprojects"
+    ],
+    "remaining_public_count": 48,
+    "private_repositories_deferred": true
+  }
+}
