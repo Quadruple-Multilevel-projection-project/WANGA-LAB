@@ -51,7 +51,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/AG-triple-X-",
@@ -72,7 +74,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/AmbassadorOv",
@@ -93,7 +97,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/awesome-chatgpt-prompts",
@@ -114,7 +120,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/branches-",
@@ -135,7 +143,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
@@ -156,7 +166,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/cookbook",
@@ -177,7 +189,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/desktop",
@@ -198,7 +212,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/docs",
@@ -219,7 +235,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/eslint",
@@ -240,7 +258,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/extensions",
@@ -261,7 +281,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/fluffy-parakeet",
@@ -282,7 +304,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/generative-ai-docs",
@@ -303,7 +327,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/googleapis",
@@ -324,7 +350,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/https-AmbassadorOv.io",
@@ -345,7 +373,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/mediapipe",
@@ -366,7 +396,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/mermaid",
@@ -387,7 +419,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/mujoco",
@@ -408,7 +442,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/multi-agent-orchestator",
@@ -429,7 +465,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/Nanomathematics",
@@ -450,7 +488,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/O-Ms",
@@ -471,7 +511,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/openai_tiktoken",
@@ -492,7 +534,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/platform-samples",
@@ -513,7 +557,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/python-genai",
@@ -534,7 +580,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/Qualia",
@@ -555,7 +603,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
@@ -576,7 +626,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
@@ -597,7 +649,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/test-notebook-links",
@@ -618,7 +672,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
@@ -639,7 +695,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/TTTTproject-un.govt",
@@ -660,7 +718,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/unetbootin",
@@ -681,7 +741,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/vqbshtfsprojects.org",
@@ -702,7 +764,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
@@ -723,7 +787,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/vscode-docs",
@@ -744,7 +810,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "AmbassadorOv/World-Party-Federation-Branches-managers",
@@ -765,7 +833,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/-",
@@ -787,7 +857,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/-from-Corsican-",
@@ -809,7 +881,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
@@ -842,7 +916,9 @@
           "status": "PATH_PRESENT_CONTENT_NOT_FETCHED"
         }
       ],
-      "scan_note": "README is a 17-character Nanomathematics placeholder; no substantive logic implementation found in the bounded scan."
+      "scan_note": "README is a 17-character Nanomathematics placeholder; no substantive logic implementation found in the bounded scan.",
+      "duplicate_status": "DUPLICATE_README_BLOB_WITH_OTHER_DISTINCT_REPOSITORY",
+      "source_gap_status": "README_PLACEHOLDER_ONLY"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
@@ -880,7 +956,9 @@
           "status": "READ"
         }
       ],
-      "scan_note": "AWS/SSM swarm deployment workflow; not executed and no infrastructure changes made."
+      "scan_note": "AWS/SSM swarm deployment workflow; not executed and no infrastructure changes made.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "NO_OBVIOUS_GAP_IN_BOUNDED_SCAN"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
@@ -923,7 +1001,9 @@
           "status": "READ"
         }
       ],
-      "scan_note": "Archive asserts 231 gates, 441 logic base, 32 pathways and accuracy_peak 2.502; definitions and provenance are insufficient for validation."
+      "scan_note": "Archive asserts 231 gates, 441 logic base, 32 pathways and accuracy_peak 2.502; definitions and provenance are insufficient for validation.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "NO_OBVIOUS_GAP_IN_BOUNDED_SCAN"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
@@ -956,7 +1036,9 @@
           "status": "PATH_PRESENT_CONTENT_NOT_FETCHED"
         }
       ],
-      "scan_note": "README is a short repository placeholder; no substantive oversight implementation confirmed."
+      "scan_note": "README is a short repository placeholder; no substantive oversight implementation confirmed.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "README_PLACEHOLDER_ONLY"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/branches-",
@@ -977,7 +1059,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/globalSpeed",
@@ -1005,7 +1089,9 @@
           "status": "READ"
         }
       ],
-      "scan_note": "Browser-extension project; no direct WANGA logic/fractal overlap found in bounded scan."
+      "scan_note": "Browser-extension project; no direct WANGA logic/fractal overlap found in bounded scan.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "NO_OBVIOUS_GAP_IN_BOUNDED_SCAN"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
@@ -1038,7 +1124,9 @@
           "status": "PATH_PRESENT_CONTENT_NOT_FETCHED"
         }
       ],
-      "scan_note": "README not found; source gap retained."
+      "scan_note": "README not found; source gap retained.",
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_NOT_FOUND; HANDOFF_NOTICE_PATH_PRESENT_NOT_READ"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
@@ -1060,7 +1148,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/MNM",
@@ -1093,7 +1183,9 @@
           "status": "PATH_PRESENT_CONTENT_NOT_FETCHED"
         }
       ],
-      "scan_note": "README blob SHA duplicates the other repository's README; repositories remain distinct."
+      "scan_note": "README blob SHA duplicates the other repository's README; repositories remain distinct.",
+      "duplicate_status": "DUPLICATE_README_BLOB_WITH_OTHER_DISTINCT_REPOSITORY",
+      "source_gap_status": "README_PLACEHOLDER_ONLY"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/Qualia",
@@ -1114,7 +1206,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/skills",
@@ -1152,7 +1246,9 @@
           "status": "READ"
         }
       ],
-      "scan_note": "Potential agent capability registry overlap; no direct code imported."
+      "scan_note": "Potential agent capability registry overlap; no direct code imported.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "NO_OBVIOUS_GAP_IN_BOUNDED_SCAN"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
@@ -1173,7 +1269,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
@@ -1201,7 +1299,9 @@
           "status": "READ"
         }
       ],
-      "scan_note": "README contains a standalone quantum-inspired decision example; no direct integration or semantic transfer made."
+      "scan_note": "README contains a standalone quantum-inspired decision example; no direct integration or semantic transfer made.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "NO_OBVIOUS_GAP_IN_BOUNDED_SCAN"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
@@ -1218,12 +1318,85 @@
         "collaborator",
         "organization_member"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_PRIMARY_PROJECT",
+      "latest_known_update": "2026-11-03T01:49:28Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null
+      "readme_blob_sha": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32",
+          "status": "READ"
+        },
+        {
+          "path": "logic_wiki/data/articles.json",
+          "sha": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed",
+          "status": "READ"
+        },
+        {
+          "path": "logic_wiki/data/fractal_taxonomy.json",
+          "sha": "355a9253cc5920d11b0b804e1561f38b51a4f2c3",
+          "status": "READ"
+        },
+        {
+          "path": "logic_wiki/data/readiness_gate.json",
+          "sha": "3e782e63ab7ac50e6e7152e938a6d8af169800e4",
+          "status": "READ"
+        },
+        {
+          "path": "logic_wiki/data/research_metrics.json",
+          "sha": "2b3b05dbc9d154ca916d00dfeb63a9522c37a266",
+          "status": "READ"
+        },
+        {
+          "path": "logic_wiki/data/wix_sync_manifest.json",
+          "sha": "d4dcaa4c439d66b380ffa7be5d3169de78104395",
+          "status": "READ"
+        },
+        {
+          "path": "logic_fractal/data/composition_rules.json",
+          "sha": "3d8bc142785d7d401b705736fe0f384d33d996f3",
+          "status": "READ"
+        },
+        {
+          "path": "logic_fractal/data/recursive_composition_contracts_v1.json",
+          "sha": "762f89ae972dbc58e92201e9c032b9da7b0e9f89",
+          "status": "READ"
+        },
+        {
+          "path": "logic_fractal/data/semantic_benchmark_plan_v1.json",
+          "sha": "c06d0629965ef2ee392d7dd7df28ee20b9a88154",
+          "status": "READ"
+        },
+        {
+          "path": "logic_fractal/fragment_composer.py",
+          "sha": "e0823383f8b768f1cb324ea07883c4d9798aa136",
+          "status": "READ"
+        },
+        {
+          "path": "scripts/build_first_fractal_model.py",
+          "sha": "f3416947a435b1bde0ddd3dc691503d130c88ef4",
+          "status": "READ"
+        },
+        {
+          "path": ".github/workflows/logic-fractal-wiki.yml",
+          "sha": "ddd6be4cc795bacf2aa5a276fe116ff0a7b1c2c8",
+          "status": "READ"
+        },
+        {
+          "path": "logic_wiki/tests/test_logic_wiki.py",
+          "sha": "ddd7d814923add9d5b58abd76f82de7d362c0973",
+          "status": "READ"
+        },
+        {
+          "path": "research/inbox/conversations/README.md",
+          "sha": "af1e6bd765c10b5c42c9d4ea9988643d38424507",
+          "status": "READ"
+        }
+      ],
+      "scan_note": null,
+      "source_gap_status": "TAXONOMY_MISSING_ONE_CURRENT_CATALOG_NODE_ON_MAIN; REPAIR_IN_REVIEW_BRANCH",
+      "duplicate_status": "NO_DUPLICATE_STABLE_IDS_IN_CURRENT_CATALOG"
     },
     {
       "full_name": "tribal-archery/-logicl-neural-order",
@@ -1280,7 +1453,9 @@
           "status": "READ"
         }
       ],
-      "scan_note": "NTM prototype has 28 strategy modes and a V1 verification gate; current master tests were not run in this cycle."
+      "scan_note": "NTM prototype has 28 strategy modes and a V1 verification gate; current master tests were not run in this cycle.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "NO_OBVIOUS_GAP_IN_BOUNDED_SCAN"
     },
     {
       "full_name": "tribal-archery/copilot-cli",
@@ -1301,7 +1476,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "tribal-archery/MAM-parsed",
@@ -1322,7 +1499,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "tribal-archery/mermaid",
@@ -1343,7 +1522,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "tribal-archery/Qdprojects",
@@ -1364,7 +1545,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "tribal-archery/unetbootin",
@@ -1385,7 +1568,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     },
     {
       "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
@@ -1406,7 +1591,9 @@
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "NOT_ASSESSED"
     }
   ],
   "scan_cursor": {
@@ -1447,7 +1634,10 @@
       "tribal-archery/MAM-parsed",
       "tribal-archery/Qdprojects"
     ],
-    "remaining_public_count": 48,
-    "private_repositories_deferred": true
+    "remaining_public_count": 47,
+    "private_repositories_deferred": true,
+    "scanned_public_count": 11,
+    "core_repository_scanned": true,
+    "next_action": "Continue with the listed next_batch; preserve private repository names and content as redacted."
   }
 }
