@@ -51,6 +51,23 @@
     "candidate_id": "FL-COMPOSE-ab1b08a4197fd719",
     "artifact_id": 13146355906,
     "artifact_size_bytes": 76038,
-    "artifact_digest_status": "NOT_RETAINED_IN_THIS_REPORT"
+    "artifact_digest_status": "NOT_RETAINED_IN_THIS_REPORT",
+    "workflow_run_head_sha": "f0b1e7d5c9e18e5b09d44c9775844e20dc5e97b2",
+    "workflow_run_number": 198,
+    "main_delta_commits_after_test": 2,
+    "regional_observation_files_added": 16,
+    "regional_observation_files_read": 1,
+    "regional_observation_files_unread": 15,
+    "regional_sample_status": "NOT_CONFIGURED",
+    "pr_number": 135,
+    "pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/135",
+    "pr_head_sha": "be9cee146a94c6ed174e95167c3c07a5075c0f40",
+    "pr_state": "OPEN",
+    "pr_mergeable": true,
+    "branch_ci_status": "QUEUED",
+    "branch_logic_fractal_run_id": 41585287777,
+    "branch_codeql_run_id": 41585287733,
+    "branch_ecosystem_run_id": 41585287756,
+    "branch_integrity_run_id": 41585287790
   }
 }
