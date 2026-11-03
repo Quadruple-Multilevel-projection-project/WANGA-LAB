@@ -51,6 +51,6 @@
     "candidate_id": "FL-COMPOSE-ab1b08a4197fd719",
     "artifact_id": 13146355906,
     "artifact_size_bytes": 76038,
-    "artifact_digest": "sha256:f328d1f2d8e4c6b0a9f7e2d1c3b5a7098e6f4d2c1b0a9876543210fedcba9876"
+    "artifact_digest_status": "NOT_RETAINED_IN_THIS_REPORT"
   }
 }
