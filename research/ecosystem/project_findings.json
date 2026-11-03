@@ -191,7 +191,7 @@
       "repository_full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
       "branch": "main",
       "file_path": ".github/workflows/call-swarms.yml",
-      "blob_sha": "6c2e3a9d6d8e0c9f9a0b1a2d6e8d3b52",
+      "blob_sha": "6c2e3aed21a726f24136e8ec3ed5f0a48b96328a",
       "excerpt_or_summary": "Workflow provides an AWS/SSM swarm deployment path. It was read only; no workflow execution, cloud provisioning or external action was performed.",
       "epistemic_status": "INFRASTRUCTURE_SOURCE_ONLY",
       "permission_scope": "PUBLIC_REPOSITORY",
@@ -207,7 +207,7 @@
       "repository_full_name": "Quadruple-Multilevel-projection-project/skills",
       "branch": "main",
       "file_path": "src/agents.ts",
-      "blob_sha": "a8b6d4f2c1e0a9b7d5c3f1e8a6b4d2c0",
+      "blob_sha": "a8b14aaa398012cf340760304903ad35edf0ed15",
       "excerpt_or_summary": "Agent capability/registry implementation is a possible taxonomy overlap; no WANGA source or logic relation was asserted.",
       "epistemic_status": "CANDIDATE_INTEGRATION_SOURCE",
       "permission_scope": "PUBLIC_REPOSITORY",
@@ -223,13 +223,17 @@
       "repository_full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order; Quadruple-Multilevel-projection-project/MNM",
       "branch": "master",
       "file_path": "README.md",
-      "blob_sha": "e0fa7f84f6e9d53e4a4a7b4b7b9d3c1c",
+      "blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
       "excerpt_or_summary": "The two distinct repositories expose the same short Nanomathematics README blob hash. This is duplicate content, not proof that the repositories are the same project.",
       "epistemic_status": "DUPLICATE_CONTENT_HASH_OBSERVED",
       "permission_scope": "PUBLIC_REPOSITORIES",
       "overlap_candidates": [],
       "contradictions": [],
-      "next_action": "Keep repository identities separate; inspect deeper files only if relevance warrants."
+      "next_action": "Keep repository identities separate; inspect deeper files only if relevance warrants.",
+      "source_uris": [
+        "https://github.com/Quadruple-Multilevel-projection-project/-logicl-neural-order/blob/master/README.md",
+        "https://github.com/Quadruple-Multilevel-projection-project/MNM/blob/master/README.md"
+      ]
     },
     {
       "id": "LIBRARY-MLN-001",
