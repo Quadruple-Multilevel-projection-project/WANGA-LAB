@@ -829,11 +829,11 @@
       "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
       "latest_known_update": "2026-10-05T08:21:08Z",
       "latest_known_push": "2026-10-22T06:48:08Z",
-      "readme_blob_sha": "e0fa7f84f6e9d53e4a4a7b4b7b9d3c1c",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
       "files_scanned": [
         {
           "path": "README.md",
-          "sha": "e0fa7f84f6e9d53e4a4a7b4b7b9d3c1c",
+          "sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
           "status": "READ"
         },
         {
@@ -862,21 +862,21 @@
       "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
       "latest_known_update": "2026-10-05T08:21:28Z",
       "latest_known_push": "2026-10-22T06:50:12Z",
-      "readme_blob_sha": "153020d8e5bd94e0cce3a6fdba63bafe",
+      "readme_blob_sha": "1530209671f6f76eb1808cf17d9584437e1e867b",
       "files_scanned": [
         {
           "path": "README.md",
-          "sha": "153020d8e5bd94e0cce3a6fdba63bafe",
+          "sha": "1530209671f6f76eb1808cf17d9584437e1e867b",
           "status": "READ"
         },
         {
           "path": ".github/workflows/call-swarms.yml",
-          "sha": "6c2e3a9d6d8e0c9f9a0b1a2d6e8d3b52",
+          "sha": "6c2e3aed21a726f24136e8ec3ed5f0a48b96328a",
           "status": "READ"
         },
         {
           "path": "environments/swarms-aws-agent-api/dev/us-east-1/Readme.md",
-          "sha": "4f57e8a9b6d1d8c0f2e9a2d7c3e8a4b1",
+          "sha": "4f57e601716766974a9f82b31432cc89c787162a",
           "status": "READ"
         }
       ],
@@ -900,11 +900,11 @@
       "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
       "latest_known_update": "2026-10-22T07:25:07Z",
       "latest_known_push": "2026-10-22T07:25:03Z",
-      "readme_blob_sha": "21f3691bfb0c5a0c7f58c3d3cbb6f5d2",
+      "readme_blob_sha": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6",
       "files_scanned": [
         {
           "path": "README.md",
-          "sha": "21f3691bfb0c5a0c7f58c3d3cbb6f5d2",
+          "sha": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6",
           "status": "READ"
         },
         {
@@ -919,7 +919,7 @@
         },
         {
           "path": "datasets/embeddings/epistemic_layer/reconciled_v705_logic.json",
-          "sha": "c96f3a7a3b5f7f6c0b0e9a2f0d1c4b5a",
+          "sha": "c96f422bdbd4d3d48f1ba787a7ed994e0090d939",
           "status": "READ"
         }
       ],
@@ -943,11 +943,11 @@
       "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
       "latest_known_update": "2026-10-05T08:21:58Z",
       "latest_known_push": "2026-10-22T06:50:46Z",
-      "readme_blob_sha": "0d8d844b3d3e1e1a4b2b8f2d3f7a5c90",
+      "readme_blob_sha": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
       "files_scanned": [
         {
           "path": "README.md",
-          "sha": "0d8d844b3d3e1e1a4b2b8f2d3f7a5c90",
+          "sha": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
           "status": "READ"
         },
         {
@@ -997,11 +997,11 @@
       "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
       "latest_known_update": "2026-10-05T08:21:23Z",
       "latest_known_push": "2026-10-22T06:49:41Z",
-      "readme_blob_sha": "a6976e0aebcd7c21a4f8b6c3d2e1f0a9",
+      "readme_blob_sha": "a6976e6480700db0264d5dd7a20267a04f9209f0",
       "files_scanned": [
         {
           "path": "README.md",
-          "sha": "a6976e0aebcd7c21a4f8b6c3d2e1f0a9",
+          "sha": "a6976e6480700db0264d5dd7a20267a04f9209f0",
           "status": "READ"
         }
       ],
@@ -1080,11 +1080,11 @@
       "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
       "latest_known_update": "2026-10-05T08:21:11Z",
       "latest_known_push": "2026-10-22T06:48:15Z",
-      "readme_blob_sha": "e0fa7f84f6e9d53e4a4a7b4b7b9d3c1c",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
       "files_scanned": [
         {
           "path": "README.md",
-          "sha": "e0fa7f84f6e9d53e4a4a7b4b7b9d3c1c",
+          "sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
           "status": "READ"
         },
         {
@@ -1134,21 +1134,21 @@
       "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
       "latest_known_update": "2026-10-08T13:22:32Z",
       "latest_known_push": "2026-10-22T06:51:09Z",
-      "readme_blob_sha": "224638c3b7b16d2f6d8f0a9c7e4b3a21",
+      "readme_blob_sha": "2246383e993f161fd909122d01769059adfb9eab",
       "files_scanned": [
         {
           "path": "README.md",
-          "sha": "224638c3b7b16d2f6d8f0a9c7e4b3a21",
+          "sha": "2246383e993f161fd909122d01769059adfb9eab",
           "status": "READ"
         },
         {
           "path": "research/EMERGING_AGENT_LOGIC_MARKET_EVIDENCE.md",
-          "sha": "097d6a0f5b3c9e1f2a4d6c8b0e7f9a31",
+          "sha": "097d569c5a285bc24352831d3af76a1872b10abe",
           "status": "READ"
         },
         {
           "path": "src/agents.ts",
-          "sha": "a8b6d4f2c1e0a9b7d5c3f1e8a6b4d2c0",
+          "sha": "a8b14aaa398012cf340760304903ad35edf0ed15",
           "status": "READ"
         }
       ],
@@ -1193,11 +1193,11 @@
       "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
       "latest_known_update": "2026-10-05T08:21:19Z",
       "latest_known_push": "2026-10-22T06:49:33Z",
-      "readme_blob_sha": "5bce36e4f8a1b2c3d4e5f60718293a4b",
+      "readme_blob_sha": "5bce36b9ed2ffd0c0ebfec2a5e806e974c12ca05",
       "files_scanned": [
         {
           "path": "README.md",
-          "sha": "5bce36e4f8a1b2c3d4e5f60718293a4b",
+          "sha": "5bce36b9ed2ffd0c0ebfec2a5e806e974c12ca05",
           "status": "READ"
         }
       ],
@@ -1242,11 +1242,11 @@
       "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
       "latest_known_update": "2026-10-08T13:22:35Z",
       "latest_known_push": "2026-10-22T06:52:20Z",
-      "readme_blob_sha": "0ffc15c4e4b7a1d9c0f3e2b5a6d7c8e9",
+      "readme_blob_sha": "0ffc15fb869fd479081714d71464b1a77563b92e",
       "files_scanned": [
         {
           "path": "README.md",
-          "sha": "0ffc15c4e4b7a1d9c0f3e2b5a6d7c8e9",
+          "sha": "0ffc15fb869fd479081714d71464b1a77563b92e",
           "status": "READ"
         },
         {
@@ -1256,12 +1256,12 @@
         },
         {
           "path": "NEURAL_ORCHESTRATION/ORCHESTRATION_ARCHITECTURE_V1.md",
-          "sha": "a868a6f3f1e4c2d9b0a7c6e5d4f3a2b1",
+          "sha": "a868c366cbaf856b62992ccd77d1ce128a35273c",
           "status": "READ"
         },
         {
           "path": "GLOBAL_ALGORITHMIC_NEURAL_GOVERNANCE/AI_ASSURANCE_AND_DRIFT_FORENSICS.md",
-          "sha": "6e61d8a4f9b2c3d5e7a1f0b6c4d8e2a9",
+          "sha": "6e616f8508cfff7592887263c90f42b194ecf4e8",
           "status": "READ"
         },
         {
