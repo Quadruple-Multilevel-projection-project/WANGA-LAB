@@ -61,13 +61,22 @@
     "regional_sample_status": "NOT_CONFIGURED",
     "pr_number": 135,
     "pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/135",
-    "pr_head_sha": "be9cee146a94c6ed174e95167c3c07a5075c0f40",
+    "pr_head_sha": "713faaffdd94348e84237b6e7eaa736365a448da",
     "pr_state": "OPEN",
     "pr_mergeable": true,
-    "branch_ci_status": "QUEUED",
-    "branch_logic_fractal_run_id": 41585287777,
-    "branch_codeql_run_id": 41585287733,
-    "branch_ecosystem_run_id": 41585287756,
-    "branch_integrity_run_id": 41585287790
+    "branch_ci_status": "PASS",
+    "branch_logic_fractal_run_id": 41585384165,
+    "branch_codeql_run_id": 41585384199,
+    "branch_ecosystem_run_id": 41585384244,
+    "branch_integrity_run_id": 41585384108,
+    "current_branch_head_sha": "713faaffdd94348e84237b6e7eaa736365a448da",
+    "branch_ci_completed_at": "2026-11-03T05:42:21Z",
+    "current_artifact_id": 13208120312,
+    "current_artifact_size_bytes": 84395,
+    "current_artifact_digest": "sha256:b79cc479d20bef77723a6dfbdd9bc1a63083848fc443eb8d44a63b83f31399d5",
+    "typed_formal_synthetic_cases": 7,
+    "typed_formal_synthetic_passed": 7,
+    "source_grounded_cases": 0,
+    "proposal_step_execution": "SKIPPED_ON_PULL_REQUEST_EVENT"
   }
 }
