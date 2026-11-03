@@ -34,7 +34,7 @@
 
 ## Access and automation
 
-- Review PR [#135](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/135) is OPEN; branch CI is queued. No automatic merge is enabled.
+- Review PR [#135](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/135) is OPEN and mergeable. Logic Fractal, CodeQL, Ecosystem Sweep and Repository Integrity all passed on head `713faaffdd94348e84237b6e7eaa736365a448da`. No automatic merge is enabled.
 - Since the last Logic Fractal run, `main` advanced by two commits adding 16 regional-observation JSON files. One file was sampled; 15 remain unread, so no batch-wide model status is inferred.
 
 - The GitHub connector can read the 63-repository snapshot; GitHub Actions still lacks `CROSS_REPO_READ_TOKEN`.
