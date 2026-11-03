@@ -298,7 +298,7 @@
       "file_path": "Library item: wanga_neural_graph.html",
       "blob_sha": null,
       "exact_locator": "nodes[] and edges[] in embedded script",
-      "excerpt_or_summary": "Simulation HTML defines 14 nodes and 21 explicit links and states that links are simulation/architecture links, not proof of Git ancestry.",
+      "excerpt_or_summary": "Simulation HTML defines explicit node and edge arrays and includes a direct disclaimer that its links are simulation/architecture links, not proof of Git ancestry. Node/edge counts were not recomputed in this cycle.",
       "epistemic_status": "SIMULATION_ONLY_EXPLICIT_LINKS",
       "permission_scope": "PRIVATE_LIBRARY_NOT_FOR_PUBLICATION",
       "overlap_candidates": [
