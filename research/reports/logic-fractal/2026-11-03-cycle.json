@@ -5,7 +5,12 @@
     "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
     "main_sha": "61e5fba00c082711af13d017eba1c05f9e0d2d6a",
     "working_branch": "automation/wanga-workloop-2026-11-03",
-    "pr_status": "PENDING_CREATION"
+    "pr_status": "OPEN",
+    "pr_number": 135,
+    "pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/135",
+    "pr_head_sha": "be9cee146a94c6ed174e95167c3c07a5075c0f40",
+    "pr_mergeable": true,
+    "pr_draft": false
   },
   "sources_scanned": {
     "github_affiliation_snapshot": {
@@ -21,14 +26,28 @@
     "core_github_files_read": 14,
     "library_items_read": 4,
     "real_conversation_exports": 0,
-    "repositories_remaining_public": 47
+    "repositories_remaining_public": 47,
+    "post_ci_main_delta": {
+      "commits": 2,
+      "files_added": 16,
+      "files_read": 1,
+      "files_not_read": 15,
+      "sample_path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261102T194229Z-REG-AFRICA.json",
+      "sample_blob_sha": "f129cd4112862fee46d0664bb2c3fa8f98aeadcf",
+      "sample_observation_count": 6,
+      "sample_status": "NOT_CONFIGURED",
+      "sample_model_id": "",
+      "sample_synthetic": false,
+      "interpretation": "One sample was inspected; no status claim is made for the other 15 files."
+    }
   },
   "access_gaps": [
     "No actual ChatGPT conversations.json/ZIP export is present in the accessible repository inbox or Library search results.",
     "Five private repositories are included only in aggregate inventory metadata; names and contents are redacted from the public registry.",
     "CROSS_REPO_READ_TOKEN is not configured in GitHub Actions; this batch was read through the connected GitHub tool.",
     "Original Rambam Milot HaHiggayon primary text with sentence-level locators was not found in the bounded Library search.",
-    "Wix research-status page is stale; no deployment update is permitted until the GitHub branch is reviewed and merged."
+    "Wix research-status page is stale; no deployment update is permitted until the GitHub branch is reviewed and merged.",
+    "Since the prior Logic Fractal run, main advanced by 2 commits adding 16 regional-observation JSON files; only one file was sampled in this cycle and 15 remain unread."
   ],
   "new_sources": {
     "catalog_records_added": 0,
@@ -107,8 +126,39 @@
     "artifact_id": 13146355906,
     "artifact_name": "logic-wiki-research-report-414533.zip",
     "artifact_size_bytes": 76038,
-    "working_branch_ci": "PENDING",
-    "limbo_pr_122_ci": "ACTION_REQUIRED_NO_JOBS"
+    "working_branch_ci": "QUEUED",
+    "limbo_pr_122_ci": "ACTION_REQUIRED_NO_JOBS",
+    "tested_commit_sha": "f0b1e7d5c9e18e5b09d44c9775844e20dc5e97b2",
+    "tested_run_number": 198,
+    "tested_run_date": "2026-11-02T13:28:43Z",
+    "main_delta_after_test": {
+      "commits": 2,
+      "files_added": 16,
+      "logic_catalog_changed": false,
+      "logic_builder_changed": false
+    },
+    "branch_runs": [
+      {
+        "id": 41585287777,
+        "name": "Logic Fractal Wiki Research",
+        "status": "queued"
+      },
+      {
+        "id": 41585287733,
+        "name": "CodeQL Advanced",
+        "status": "queued"
+      },
+      {
+        "id": 41585287756,
+        "name": "WANGA Ecosystem Agent Sweep",
+        "status": "queued"
+      },
+      {
+        "id": 41585287790,
+        "name": "Repository Integrity",
+        "status": "queued"
+      }
+    ]
   },
   "model_hash": {
     "synthetic_candidate": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
@@ -208,7 +258,7 @@
   },
   "statuses": {
     "BUILT": "Synthetic two-level candidate and existing Limbo map are present.",
-    "TESTED": "Logic Fractal build/software/formal synthetic checks passed in run 41453314468; final PR-proposal step failed.",
+    "TESTED": "Prior Logic Fractal build/software/synthetic checks passed on f0b1e7d5c9e18e5b09d44c9775844e20dc5e97b2; current main has 16 new regional observation files; branch CI is queued.",
     "VERIFIED": "No semantic logic claim or first model is VERIFIED. Wix file contents were read back as deployment state only."
   },
   "blocked": [
@@ -219,6 +269,7 @@
     "Conversation export is unavailable."
   ],
   "next": [
+    "Inspect the remaining 15 regional-observation files before classifying the full batch.",
     "Wait for CI on this branch/PR; do not merge automatically.",
     "Continue the repository sweep with the 10 repositories in repository_inventory.json next_batch.",
     "Register external NTM sources only after review; add a negative test for the empty-evidence-requirements boundary.",
