@@ -1,0 +1,229 @@
+{
+  "schema_version": "wanga-logic-fractal-cycle/1.0",
+  "date": "2026-11-03",
+  "repository": {
+    "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "main_sha": "61e5fba00c082711af13d017eba1c05f9e0d2d6a",
+    "working_branch": "automation/wanga-workloop-2026-11-03",
+    "pr_status": "PENDING_CREATION"
+  },
+  "sources_scanned": {
+    "github_affiliation_snapshot": {
+      "owner": 38,
+      "collaborator": 13,
+      "organization_member": 25,
+      "unique_repositories": 63,
+      "public": 58,
+      "private_redacted": 5
+    },
+    "external_repositories_scanned": 10,
+    "external_github_files_read": 22,
+    "core_github_files_read": 14,
+    "library_items_read": 4,
+    "real_conversation_exports": 0,
+    "repositories_remaining_public": 47
+  },
+  "access_gaps": [
+    "No actual ChatGPT conversations.json/ZIP export is present in the accessible repository inbox or Library search results.",
+    "Five private repositories are included only in aggregate inventory metadata; names and contents are redacted from the public registry.",
+    "CROSS_REPO_READ_TOKEN is not configured in GitHub Actions; this batch was read through the connected GitHub tool.",
+    "Original Rambam Milot HaHiggayon primary text with sentence-level locators was not found in the bounded Library search.",
+    "Wix research-status page is stale; no deployment update is permitted until the GitHub branch is reviewed and merged."
+  ],
+  "new_sources": {
+    "catalog_records_added": 0,
+    "external_candidate_sources": 3,
+    "library_archive_candidates": 4,
+    "duplicate_content_hashes": 1,
+    "duplicate_note": "README blob e0fa7f84c36601e9895a7306f5b18dbaf7d09107 appears in two distinct repositories; repositories are not merged or conflated."
+  },
+  "claims_added": {
+    "catalog_claims": 0,
+    "project_findings_added": 0,
+    "interpretations_promoted": 0
+  },
+  "logic_units": {
+    "existing_with_provenance": 28,
+    "candidate_structures_extracted": 3,
+    "new_units_added": 0,
+    "source_grounded_counterexamples": 0
+  },
+  "composition_count": {
+    "active_rules_with_contracts": 2,
+    "draft_rule_definitions": 1,
+    "recursive_contracts": {
+      "active_specified": 2,
+      "draft_for_testing": 1,
+      "required_not_satisfied": 1
+    },
+    "new_source_grounded_compositions": 0
+  },
+  "contradictions_and_gaps": [
+    {
+      "id": "TAXONOMY-CATALOG-GAP",
+      "status": "REPAIRED_IN_REVIEW_BRANCH",
+      "detail": "Main taxonomy had 27 nodes for 28 articles and omitted ark-swarm-logic-trader; branch adds the node and validates 28/28 coverage."
+    },
+    {
+      "id": "WIX-READBACK-DIVERGENCE",
+      "status": "OPEN",
+      "detail": "Live main Logic Wiki page shows 28/17/111; research-status page still shows 18 articles/11 sources from 2026-10-12; main-branch sync manifest was stale."
+    },
+    {
+      "id": "NTM-EVIDENCE-GATE-BOUNDARY",
+      "status": "COUNTER_READING_NOT_ADJUDICATED",
+      "detail": "NTM VerificationGate allows evidence_ok when evidence_requirements is empty; supported status can then be returned without evidence_refs."
+    },
+    {
+      "id": "AI231-METRIC-DEFINITION",
+      "status": "SOURCE_GAP",
+      "detail": "AI231 archive uses accuracy_peak 2.502 and Accuracy +250.2% without a metric definition or reproducible benchmark."
+    }
+  ],
+  "benchmarks": {
+    "software_ci": {
+      "run_id": 41453314468,
+      "date": "2026-11-02",
+      "build_and_test_steps": "PASS",
+      "artifact_upload": "PASS",
+      "proposal_step": "FAIL",
+      "failure": "git add pathspec research/reports/agent-evaluation/** did not match any files"
+    },
+    "synthetic_formal_checks": "PASSED_IN_CI_ARTIFACT; NON_COUNTING_FOR_SEMANTIC_READINESS",
+    "semantic_ground_truth_cases": 0,
+    "semantic_suites_populated": 0,
+    "required_suite_plan": {
+      "positive": 30,
+      "negative": 30,
+      "boundary": 40
+    },
+    "independent_reviews": 0,
+    "holdout_split": false,
+    "mirror_review_complete": false
+  },
+  "ci": {
+    "last_logic_fractal_run": 41453314468,
+    "result": "FAILURE_AFTER_BUILD_TESTS_AND_ARTIFACT_UPLOAD",
+    "artifact_id": 13146355906,
+    "artifact_name": "logic-wiki-research-report-414533.zip",
+    "artifact_size_bytes": 76038,
+    "working_branch_ci": "PENDING",
+    "limbo_pr_122_ci": "ACTION_REQUIRED_NO_JOBS"
+  },
+  "model_hash": {
+    "synthetic_candidate": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "scale_1": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+    "candidate_id": "FL-COMPOSE-ab1b08a4197fd719",
+    "status": "CANDIDATE_NOT_RELEASED",
+    "semantic_status": "NOT_YET_VERIFIED",
+    "fixtures": "SYNTHETIC_ONLY"
+  },
+  "readiness_gate": {
+    "id": "FIRST_MODEL_ALPHA_V1",
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "threshold_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "observed": {
+      "sources": 17,
+      "source_classes": 11,
+      "logic_units_with_provenance": 28,
+      "composition_rules_with_contracts": 2,
+      "counterexamples": 0,
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_reviews": 0,
+      "dangling_refs": 0,
+      "duplicate_ids": 0,
+      "core_contradictions": 0,
+      "deterministic_build": true,
+      "holdout_split": false,
+      "mirror_review": false
+    },
+    "required": {
+      "sources": 20,
+      "source_classes": 3,
+      "logic_units_with_provenance": 50,
+      "composition_rules_with_contracts": 20,
+      "counterexamples": 30,
+      "semantic_test_cases": 100,
+      "benchmark_suites": 3,
+      "independent_reviews": 2,
+      "deterministic_build": true,
+      "holdout_split": true,
+      "mirror_review": true
+    }
+  },
+  "limbo": {
+    "pr_number": 122,
+    "branch": "deploy/limbo-cartography-core-v1",
+    "state": "OPEN_DRAFT",
+    "ahead_by": 59,
+    "behind_by": 136,
+    "current_head_sha": "f70e09e61b9850f446a1f54450e732287b3f248e",
+    "map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+    "map": {
+      "nodes": 14,
+      "edges": 19,
+      "registered_incidents": 10,
+      "history_events": 2,
+      "recurring_unresolved_clusters": 1,
+      "passing_retests": 1,
+      "incidents_without_latest_passing_retest": 9
+    },
+    "latest_execution_record": {
+      "timestamp_utc": "2026-10-25T06:00:16Z",
+      "status": "EXECUTION_RECORD_ONLY",
+      "epistemic_attempt": false,
+      "drift_detected": null
+    },
+    "tuning_candidate": {
+      "id": "TUNE-9c166900cc4ad5dd",
+      "status": "CANDIDATE_REPLAY_REQUIRED",
+      "replay_status": "NOT_RUN",
+      "linked_retest": "PASS",
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    "inbox_status": "NO_INPUTS",
+    "interpretation": "No new crash point was added. Historical incidents remain append-only; no causal or trend extrapolation is made."
+  },
+  "wix": {
+    "site_name": "Logic Engine Research Lab",
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "deployed_files": 29,
+    "live_main_page": {
+      "articles": 28,
+      "sources": 17,
+      "relations": 111,
+      "active_contracts": "2/3",
+      "banner_date": "2026-10-12"
+    },
+    "live_fractal_research_page_cards": 13,
+    "live_status_page": {
+      "snapshot_date": "2026-10-12",
+      "articles": 18,
+      "sources": 11,
+      "stale": true
+    },
+    "publish_performed": false,
+    "reason": "Branch is unmerged; only the current deployment was read back. Manifest correction is on the review branch."
+  },
+  "statuses": {
+    "BUILT": "Synthetic two-level candidate and existing Limbo map are present.",
+    "TESTED": "Logic Fractal build/software/formal synthetic checks passed in run 41453314468; final PR-proposal step failed.",
+    "VERIFIED": "No semantic logic claim or first model is VERIFIED. Wix file contents were read back as deployment state only."
+  },
+  "blocked": [
+    "FIRST_MODEL_ALPHA release gate remains far below required semantic evidence and review thresholds.",
+    "No source-grounded benchmark suite, counterexample set, holdout or independent reviews.",
+    "Limbo PR #122 is 136 commits behind main and current workflow runs are action_required with no jobs.",
+    "Wix status page requires a reviewed deployment after branch approval.",
+    "Conversation export is unavailable."
+  ],
+  "next": [
+    "Wait for CI on this branch/PR; do not merge automatically.",
+    "Continue the repository sweep with the 10 repositories in repository_inventory.json next_batch.",
+    "Register external NTM sources only after review; add a negative test for the empty-evidence-requirements boundary.",
+    "Define and populate 100 reviewed semantic cases across positive/negative/boundary suites, with frozen holdout.",
+    "Refresh Limbo PR #122 through a reviewable branch update, run its CI and replay TUNE-9c166900cc4ad5dd before any tuning adoption.",
+    "After PR merge, publish the corrected research-status page through Wix and read back every affected page."
+  ]
+}
