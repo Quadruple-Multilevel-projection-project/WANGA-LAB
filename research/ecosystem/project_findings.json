@@ -698,19 +698,20 @@
     },
     {
       "role": "Test/CI Evaluator",
-      "status": "IN_PROGRESS",
+      "status": "COMPLETED",
       "input": "Latest Logic Fractal, Repository Integrity, CodeQL and regional drift runs",
-      "output": "Prior PR135 CI success; current branch PR to run CI; regional workflow policy mismatch found",
-      "evidence": "Workflow run IDs 41585730189 and 41760366466",
+      "output": "Logic Fractal, Repository Integrity, CodeQL and Ecosystem Sweep workflows passed on PR #136; ecosystem workflow remained current-repository-only because CROSS_REPO_READ_TOKEN was empty.",
+      "evidence": "Runs 41780771343, 41780771339, 41780771375, 41780771373",
       "next": "Verify new PR checks"
     },
     {
       "role": "Wiki Curator",
-      "status": "IN_PROGRESS",
+      "status": "COMPLETED_ON_REVIEW_BRANCH",
       "input": "articles.json and fractal_taxonomy.json",
-      "output": "28 articles/17 source records; taxonomy 27 nodes; 1 missing taxonomy node",
+      "output": "28-node taxonomy correction and catalog alignment test passed in PR #136 CI.",
       "evidence": "Current main blob SHAs",
-      "next": "Use PR135 taxonomy correction after review"
+      "next": "Use PR135 taxonomy correction after review",
+      "next_action": "Keep change pending review; do not claim main updated until merge."
     },
     {
       "role": "Report Publisher",
@@ -733,5 +734,16 @@
     "Five private repositories remain redacted in the public registry; their contents were not inspected or published in this batch.",
     "Regional model endpoint/token/model variables were empty in run 41760366466; no model output was generated.",
     "Wix site-level metadata is available, but page-level read-back was not available through the public fetch path in this run."
-  ]
+  ],
+  "latest_ci": {
+    "pr_number": 136,
+    "head_sha": "5a2bb08422bae39b930738f1074aea433e213021",
+    "logic_fractal_run_id": 41780771343,
+    "repository_integrity_run_id": 41780771339,
+    "codeql_run_id": 41780771375,
+    "ecosystem_sweep_run_id": 41780771373,
+    "status": "SUCCESS",
+    "ecosystem_sweep_scope": "CURRENT_REPOSITORY_ONLY",
+    "cross_repo_token_configured": false
+  }
 }
