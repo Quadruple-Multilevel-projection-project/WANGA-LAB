@@ -1,0 +1,142 @@
+{
+  "schema_version": "wanga-logic-fractal-backlog/1.0",
+  "date": "2026-11-04",
+  "status": "ACTIVE_CUMULATIVE_BACKLOG",
+  "carried_forward_from": "research/LOGIC_FRACTAL_BACKLOG_2026-11-03.json",
+  "preservation_rule": "The prior backlog is not overwritten; this file adds new items and status updates only.",
+  "items": [
+    {
+      "id": "FL-012",
+      "topic": "Register external NTM thought-mode source",
+      "status": "CANDIDATE_SOURCE_REVIEW",
+      "evidence": "tribal-archery/-logicl-neural-order/NEURAL_ORCHESTRATION/thought_modes.py",
+      "next": "Create a source record and reversible literal spans only after review."
+    },
+    {
+      "id": "FL-013",
+      "topic": "NTM VerificationGate empty-evidence boundary",
+      "status": "MIRROR_REVIEW_REQUIRED",
+      "evidence": "orchestrator.py lines 131-145",
+      "next": "Add negative/boundary tests; decide whether supported status requires evidence refs even when task requirements are empty."
+    },
+    {
+      "id": "FL-014",
+      "topic": "AI231 metric definitions and lineage",
+      "status": "SOURCE_GAP",
+      "evidence": "cloud_master_logic.json and neural_graph.json",
+      "next": "Define metric units, normalization, provenance and reproducible derivation before any FOL/SOL formalization."
+    },
+    {
+      "id": "FL-015",
+      "topic": "MLN archived package and regression tests",
+      "status": "LIBRARY_ARCHIVE_REVIEW_ONLY",
+      "evidence": "WANGA MLN Continuous Field Core V1 Library README",
+      "next": "Inspect actual package and execute tests; do not infer that the README's 21-test claim is verified."
+    },
+    {
+      "id": "FL-016",
+      "topic": "Limbo PR #122 stale branch and replay",
+      "status": "BLOCKED_STALE_HEAD_ACTION_REQUIRED",
+      "evidence": "PR #122 open draft; current comparison 59 commits ahead / 141 behind; latest-head workflow runs returned no jobs; tuning replay NOT_RUN.",
+      "next": "Create a refreshed review branch from current main, port the Limbo core deliberately, run tests, then replay the existing candidate."
+    },
+    {
+      "id": "FL-017",
+      "topic": "Wix research-status page synchronization",
+      "status": "PENDING_PR_APPROVAL_AND_READBACK",
+      "evidence": "Wix manifest last_sync_date 2026-10-12; current main catalog 28 articles/17 source records/111 editorial links; site metadata published, page-level readback unavailable this run.",
+      "next": "After reviewed catalog/report merge, upload approved static files through Wix connector and verify affected pages by deployment read-back."
+    },
+    {
+      "id": "FL-018",
+      "topic": "Populate semantic benchmark suites",
+      "status": "NOT_POPULATED",
+      "evidence": "semantic_benchmark_plan_v1.json",
+      "next": "Register 30 positive, 30 negative and 40 boundary cases with exact source spans, reviewer status and frozen holdout."
+    },
+    {
+      "id": "FL-019",
+      "topic": "Primary Rambam Gate XIV text and sentence IDs",
+      "status": "ACCESS_GAP",
+      "evidence": "Library contains a secondary summary but not the original primary text",
+      "next": "Obtain primary text and exact locators; do not count the summary as canonical evidence."
+    },
+    {
+      "id": "FL-020",
+      "topic": "Cross-repository batch continuation",
+      "status": "IN_PROGRESS",
+      "evidence": "2026-11-04 connector snapshot: 63 unique repositories; 21 public repositories scanned cumulatively; 37 public repositories remain.",
+      "next": "Scan the ten repositories in repository_inventory.json scan_cursor.next_batch."
+    },
+    {
+      "id": "FL-021",
+      "topic": "Regional drift collector has no configured model endpoint",
+      "status": "BLOCKED_NOT_CONFIGURED",
+      "evidence": "16 regional observation JSON files / 96 records; all status NOT_CONFIGURED, model empty, synthetic=false; run 41760366466 logs show DRIFT_ENDPOINT/TOKEN/MODEL empty.",
+      "next": "Do not count these as model observations or semantic cases; configure a real endpoint only with explicit authorization, otherwise store collection status separately."
+    },
+    {
+      "id": "FL-022",
+      "topic": "Regional observation workflow violates branch-to-PR policy",
+      "status": "POLICY_MISMATCH_OBSERVED",
+      "evidence": ".github/workflows/regional-drift-agents.yml publish-observations runs git commit and git push to main; run 41760366466 committed 8 files directly to main.",
+      "next": "Open a reviewed PR to replace direct push with PR creation and upload only the newly generated file."
+    },
+    {
+      "id": "FL-023",
+      "topic": "Regional artifact upload copies the full historical corpus",
+      "status": "EFFICIENCY_AND_PROVENANCE_GAP",
+      "evidence": "Latest regional job logs report 1,921 files uploaded per regional artifact although each job created one new six-record file.",
+      "next": "Emit the exact output file path from regional_collector.py and upload only that file."
+    },
+    {
+      "id": "FL-024",
+      "topic": "External Logic Book iteration protocol comparison",
+      "status": "CANDIDATE_SOURCE_REVIEW",
+      "evidence": "AmbassadorOv/multi-agent-orchestator/research/logic_book/iteration-protocol.md and schema.json; public Git blob hashes recorded.",
+      "next": "Map protocol fields to WANGA source/claim/provenance records without assuming equivalence."
+    },
+    {
+      "id": "FL-025",
+      "topic": "MAM parsed corpus topology integration",
+      "status": "CANDIDATE_SOURCE_REVIEW",
+      "evidence": "tribal-archery/MAM-parsed/ARCHITECTURE/MASORAH_REPOSITORY_TOPOLOGY.md; explicitly ARCHITECTURE_DEFINED / DATA_NOT_MODIFIED.",
+      "next": "Inspect corpus license and source lineage; generate an index only after provenance and permission review."
+    },
+    {
+      "id": "FL-026",
+      "topic": "Qualia sequential gate contract comparison",
+      "status": "CANDIDATE_CONTRACT_REVIEW",
+      "evidence": "Quadruple-Multilevel-projection-project/Qualia/AI-AGENT-HANDOFF-NOTICE.md; L1-L3, provenance and deterministic output gates.",
+      "next": "Compare against WANGA verifier contracts; do not treat project overlap as semantic equivalence."
+    },
+    {
+      "id": "FL-027",
+      "topic": "Repository README duplicate groups",
+      "status": "DUPLICATE_CONTENT_OBSERVED",
+      "evidence": "Git blob SHA e0fa7f84... appears in five distinct repositories; SHA 72a7d51... appears in two Qualia repositories.",
+      "next": "Preserve distinct repository identities and continue scanning non-README files in later batches."
+    },
+    {
+      "id": "FL-028",
+      "topic": "Logic Wiki taxonomy catalog alignment",
+      "status": "PENDING_PR_REVIEW",
+      "evidence": "Current main has 28 articles but 27 taxonomy nodes; PR #135 proposes the missing ark-swarm-logic-trader node and alignment test.",
+      "next": "Use the current-main-based review branch correction and require CI before merge."
+    },
+    {
+      "id": "FL-029",
+      "topic": "Wix page-level readback freshness",
+      "status": "BLOCKED_READBACK_UNAVAILABLE",
+      "evidence": "GetSiteContext confirms Logic Engine Research Lab is Published, but last site update is 2026-10-12; public fetch of three Logic Wiki pages failed in this run.",
+      "next": "Do not claim a fresh sync; perform upload and read-back only after reviewed PR changes."
+    },
+    {
+      "id": "FL-030",
+      "topic": "ChatGPT conversation export availability",
+      "status": "ACCESS_GAP",
+      "evidence": "research/inbox/conversations contains only README.md; bounded Library search returned private archive matches but no conversations.json or ZIP export.",
+      "next": "Wait for user-provided export; ingest to private review output only and publish no raw transcripts."
+    }
+  ]
+}
