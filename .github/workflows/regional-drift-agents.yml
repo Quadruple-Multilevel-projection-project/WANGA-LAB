@@ -8,6 +8,10 @@ on:
 permissions:
   contents: read
 
+concurrency:
+  group: regional-drift-agents
+  cancel-in-progress: false
+
 jobs:
   reg-us:
     runs-on: ubuntu-latest
@@ -22,9 +26,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Collect observations
+        id: collect
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
-        with: {name: regional-REG-US, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
+        with:
+          name: regional-REG-US
+          path: ${{ steps.collect.outputs.artifact_path }}
 
   reg-eu:
     runs-on: ubuntu-latest
@@ -39,9 +47,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Collect observations
+        id: collect
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
-        with: {name: regional-REG-EU, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
+        with:
+          name: regional-REG-EU
+          path: ${{ steps.collect.outputs.artifact_path }}
 
   reg-il-me:
     runs-on: ubuntu-latest
@@ -56,9 +68,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Collect observations
+        id: collect
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
-        with: {name: regional-REG-IL-ME, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
+        with:
+          name: regional-REG-IL-ME
+          path: ${{ steps.collect.outputs.artifact_path }}
 
   reg-sa:
     runs-on: ubuntu-latest
@@ -73,9 +89,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Collect observations
+        id: collect
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
-        with: {name: regional-REG-SA, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
+        with:
+          name: regional-REG-SA
+          path: ${{ steps.collect.outputs.artifact_path }}
 
   reg-ea:
     runs-on: ubuntu-latest
@@ -90,9 +110,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Collect observations
+        id: collect
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
-        with: {name: regional-REG-EA, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
+        with:
+          name: regional-REG-EA
+          path: ${{ steps.collect.outputs.artifact_path }}
 
   reg-latam:
     runs-on: ubuntu-latest
@@ -107,9 +131,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Collect observations
+        id: collect
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
-        with: {name: regional-REG-LATAM, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
+        with:
+          name: regional-REG-LATAM
+          path: ${{ steps.collect.outputs.artifact_path }}
 
   reg-oceania:
     runs-on: ubuntu-latest
@@ -124,9 +152,13 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Collect observations
+        id: collect
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
-        with: {name: regional-REG-OCEANIA, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
+        with:
+          name: regional-REG-OCEANIA
+          path: ${{ steps.collect.outputs.artifact_path }}
 
   reg-africa:
     runs-on: ubuntu-latest
@@ -141,33 +173,56 @@ jobs:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with: {python-version: "3.12"}
-      - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
+      - name: Collect observations
+        id: collect
+        run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
-        with: {name: regional-REG-AFRICA, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
+        with:
+          name: regional-REG-AFRICA
+          path: ${{ steps.collect.outputs.artifact_path }}
 
   publish-observations:
     needs: [reg-us, reg-eu, reg-il-me, reg-sa, reg-ea, reg-latam, reg-oceania, reg-africa]
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
         with:
           pattern: regional-*
           path: /tmp/regional
-      - name: Collect observations
+      - name: Collect only this run's observation files
         shell: bash
         run: |
           set -euo pipefail
-          mkdir -p ai-drift-forensics/global-drift-network/data/regional-observations
-          find /tmp/regional -type f -name '*.json' -exec cp {} ai-drift-forensics/global-drift-network/data/regional-observations/ \;
-      - name: Commit observations
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ai-drift-forensics/global-drift-network/data/regional-observations/
-          git diff --cached --quiet || git commit -m "data: regional drift observation batch"
-          git push
+          destination="ai-drift-forensics/global-drift-network/data/regional-observations"
+          mkdir -p "$destination"
+          mapfile -d '' files < <(find /tmp/regional -type f -name '*.json' -print0 | sort -z)
+          if [ "${#files[@]}" -ne 8 ]; then
+            echo "Expected exactly 8 regional observation files; found ${#files[@]}." >&2
+            exit 1
+          fi
+          for file in "${files[@]}"; do
+            name="$(basename "$file")"
+            case "$name" in
+              *-REG-*.json) cp -- "$file" "$destination/$name" ;;
+              *) echo "Unexpected regional artifact filename: $name" >&2; exit 1 ;;
+            esac
+          done
+          printf 'Collected %s new regional files; historical files were not re-uploaded.\n' "${#files[@]}"
+      - name: Open review pull request (no direct main push)
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: automation/regional-drift-observations
+          delete-branch: false
+          title: "data: regional drift observation batch"
+          commit-message: "data: regional drift observation batch"
+          body: |
+            Adds only the eight new regional observation files generated by this workflow run.
+            Historical observation files are preserved and are not copied into each artifact.
+            This workflow opens or updates a review pull request; it never pushes directly to main.
+          add-paths: |
+            ai-drift-forensics/global-drift-network/data/regional-observations/*.json
