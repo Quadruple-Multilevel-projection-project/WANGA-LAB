@@ -78,7 +78,8 @@ jobs:
           if-no-files-found: warn
           retention-days: 30
       # Pull-request runs validate and archive outputs only. Scheduled/manual runs
-      # propose generated updates through the bot PR below; PR validation does not push.\n      - name: Open or update automation PR (never push directly to the default branch)
+      # propose generated updates through the bot PR below; PR validation does not push.
+      - name: Open or update automation PR (never push directly to the default branch)
         if: ${{ github.event_name == 'schedule' || github.event_name == 'workflow_dispatch' }}
         uses: peter-evans/create-pull-request@v7
         with:
