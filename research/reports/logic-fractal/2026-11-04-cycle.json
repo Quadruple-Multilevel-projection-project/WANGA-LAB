@@ -1,0 +1,491 @@
+{
+  "schema_version": "wanga-autonomous-cycle-report/1.0",
+  "cycle_date": "2026-11-04",
+  "snapshot_time": "2026-11-04T07:21:43+02:00",
+  "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+  "main_commit": "aa9b087d74589a8ab0a3b301ae8a3ebed6771f44",
+  "SOURCES_SCANNED": {
+    "wanga_core": [
+      {
+        "path": "logic_wiki/data/articles.json",
+        "git_blob_sha": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed",
+        "result": "28 articles; 17 source records; 28/28 articles have source references"
+      },
+      {
+        "path": "logic_wiki/data/fractal_taxonomy.json",
+        "git_blob_sha": "355a9253cc5920d11b0b804e1561f38b51a4f2c3",
+        "result": "27 taxonomy nodes on main for 28 catalog articles"
+      },
+      {
+        "path": "logic_wiki/data/readiness_gate.json",
+        "git_blob_sha": "3e782e63ab7ac50e6e7152e938a6d8af169800e4",
+        "result": "FIRST_MODEL_ALPHA_V1 thresholds configured; explicitly not empirically validated"
+      },
+      {
+        "path": "logic_fractal/data/composition_rules.json",
+        "git_blob_sha": "3d8bc142785d7d401b705736fe0f384d33d996f3",
+        "result": "2 ACTIVE_SPECIFIED rules; 1 DRAFT_NOT_EXECUTED"
+      },
+      {
+        "path": "logic_fractal/data/recursive_composition_contracts_v1.json",
+        "git_blob_sha": "762f89ae972dbc58e92201e9c032b9da7b0e9f89",
+        "result": "2 ACTIVE_SPECIFIED contracts; L2 draft; L3 counterexample gate required but unsatisfied"
+      },
+      {
+        "path": "logic_fractal/data/semantic_benchmark_plan_v1.json",
+        "git_blob_sha": "c06d0629965ef2ee392d7dd7df28ee20b9a88154",
+        "result": "SPECIFIED_NOT_POPULATED; 30 positive, 30 negative, 40 boundary cases required"
+      },
+      {
+        "path": "formal_reasoning/examples/source_grounded_benchmark_manifest.json",
+        "result": "cases=[]; BLOCKED_EMPTY_WAITING_REVIEWED_CASES"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/agents/regional_collector.py",
+        "git_blob_sha": "3248ec01a6681d61acce1397b6bef80f7a37353c",
+        "result": "No endpoint means status NOT_CONFIGURED; still writes observation records"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/agents/regional_agents.json",
+        "git_blob_sha": "706a7b823e894f57236565bde29866ea45818a29",
+        "result": "8 regional nodes; 10 declared logical-agent roles per node"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/agents/probes/PROBE_SET_V1.json",
+        "git_blob_sha": "aa996ea55569e83c93584f085e4f24a24ffd1079",
+        "result": "6 neutral repeatable probes"
+      },
+      {
+        "path": ".github/workflows/regional-drift-agents.yml",
+        "git_blob_sha": "621b4390c3d04d0e742d221fa99c048f8155708f",
+        "result": "Scheduled workflow uploads whole historical directory and pushes directly to main"
+      }
+    ],
+    "regional_observation_files": [
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261103T221411Z-REG-EA.json",
+        "git_blob_sha": "1872fcfae75aae6327c3377ac4e524f6ace512fc",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261103T221411Z-REG-EU.json",
+        "git_blob_sha": "bcdd645f72c30a5d1da0204549d0971e8779bff4",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261103T221412Z-REG-AFRICA.json",
+        "git_blob_sha": "f26f3648ceec9f44e897b678c1cf7c574ec3ba72",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261103T221412Z-REG-OCEANIA.json",
+        "git_blob_sha": "323113bd0519b76959d5de58e6aabdccda89f943",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261103T221413Z-REG-IL-ME.json",
+        "git_blob_sha": "bc9507f7b04781c3da920366c6618e35f50688c8",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261103T221413Z-REG-LATAM.json",
+        "git_blob_sha": "66847e187416e48efec464deb436d3d9f6acc926",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261103T221413Z-REG-US.json",
+        "git_blob_sha": "9226967c97ffa8dadabda378e45a17a0575494bb",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261103T221414Z-REG-SA.json",
+        "git_blob_sha": "c53c27471936f54557435815ecdc3f596ed910cf",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261104T022301Z-REG-EU.json",
+        "git_blob_sha": "03a5f77899757400284e8dd1cf05e3880dbef927",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261104T022301Z-REG-OCEANIA.json",
+        "git_blob_sha": "ec83944f642a865b14ed5707a8d281d3e234ec05",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261104T022301Z-REG-US.json",
+        "git_blob_sha": "b7a33653be3b271976eb25ec3eff711fb2361c17",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261104T022302Z-REG-IL-ME.json",
+        "git_blob_sha": "3130f47123c0b6765a60ce8162ca3cd5aa7155c4",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261104T022302Z-REG-LATAM.json",
+        "git_blob_sha": "aead0a480f5e1cf9f7537c7332eae7ff6145b957",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261104T022303Z-REG-AFRICA.json",
+        "git_blob_sha": "8805cbecce504a52f753fa4d0d5d3166345aed35",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261104T022303Z-REG-SA.json",
+        "git_blob_sha": "50bb8929bc78a592390c21e20da6a63898b36ca9",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      },
+      {
+        "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261104T022309Z-REG-EA.json",
+        "git_blob_sha": "43b6c0abb2bcd6e1812d81a3cdb6dae7c23f5a97",
+        "records": 6,
+        "status": "NOT_CONFIGURED"
+      }
+    ],
+    "ecosystem": {
+      "visible_unique_repositories": 63,
+      "public_repositories": 58,
+      "private_repositories_redacted": 5,
+      "public_repositories_scanned_this_batch": 10,
+      "cumulative_public_repositories_scanned": 21,
+      "remaining_public_repositories": 37,
+      "readme_files_scanned": 10,
+      "bounded_tree_indexes_scanned": 10,
+      "additional_documents_read": 5,
+      "current_batch": [
+        "AmbassadorOv/multi-agent-orchestator",
+        "AmbassadorOv/Qualia",
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/O-Ms",
+        "Quadruple-Multilevel-projection-project/Qualia",
+        "tribal-archery/MAM-parsed",
+        "tribal-archery/Qdprojects",
+        "tribal-archery/copilot-cli",
+        "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo"
+      ],
+      "next_batch": [
+        "AmbassadorOv/-artificial-y",
+        "AmbassadorOv/AG-triple-X-",
+        "AmbassadorOv/AmbassadorOv",
+        "AmbassadorOv/awesome-chatgpt-prompts",
+        "AmbassadorOv/branches-",
+        "AmbassadorOv/chatgpt-scientific-publications-extension",
+        "AmbassadorOv/cookbook",
+        "AmbassadorOv/desktop",
+        "AmbassadorOv/docs",
+        "AmbassadorOv/eslint"
+      ],
+      "note": "Repository inventory is a current access snapshot; private repository names/content are not included in the public registry."
+    },
+    "library": {
+      "bounded_search_calls": 2,
+      "result_rows": 27,
+      "note": "Search results included private archive matches and secondary summaries. No raw private file or transcript content was published or materialized.",
+      "conversation_export_files_found": 0
+    },
+    "conversation_inbox": {
+      "path": "research/inbox/conversations/",
+      "visible_files": [
+        "README.md"
+      ],
+      "actual_conversation_exports": 0
+    },
+    "limbo": [
+      {
+        "path": "limbo-cartography-core/cartography/reality_matrix.json",
+        "git_blob_sha": "86593dd31e5c20bf47c81d09d527967cf0a22476",
+        "ref": "deploy/limbo-cartography-core-v1"
+      },
+      {
+        "path": "limbo-cartography-core/cartography/iterative_crash_map.json",
+        "git_blob_sha": "3617504c68262f71366a244563fc06b1be270da2",
+        "ref": "deploy/limbo-cartography-core-v1"
+      },
+      {
+        "path": "limbo-cartography-core/cartography/tuning_candidates/TUNE-9c166900cc4ad5dd.json",
+        "git_blob_sha": "3c18338fba440158a2feb6ecc84c08258118f282",
+        "ref": "deploy/limbo-cartography-core-v1"
+      },
+      {
+        "path": "limbo-cartography-core/cartography/run_logs/latest_execution.json",
+        "git_blob_sha": "e81ad691f5c5552910eec1e80fa2a3533d7030eb",
+        "ref": "deploy/limbo-cartography-core-v1"
+      }
+    ]
+  },
+  "ACCESS_GAPS": [
+    "No actual ChatGPT conversations.json or ZIP export is available in the current run; only research/inbox/conversations/README.md exists.",
+    "Library search exposed private archive matches, but raw private content was not materialized or published.",
+    "The scheduled WANGA Ecosystem Agent Sweep had CROSS_REPO_READ_TOKEN empty and scanned only WANGA-LAB; this run used the live connector for ten public repositories.",
+    "Five private repositories remain redacted and were not inspected in this public batch.",
+    "Regional DRIFT_ENDPOINT, DRIFT_TOKEN and DRIFT_MODEL were empty in run 41760366466; no model outputs were generated.",
+    "Fresh page-level Wix read-back was not available this run; public fetch failed and site metadata alone is insufficient.",
+    "Limbo PR #122 latest head is 141 commits behind main and its latest workflow runs have no jobs."
+  ],
+  "NEW_DUPLICATE_SOURCES": {
+    "new_external_candidate_sources": 3,
+    "candidates": [
+      "AmbassadorOv/multi-agent-orchestator/research/logic_book/iteration-protocol.md and schema.json",
+      "tribal-archery/MAM-parsed/ARCHITECTURE/MASORAH_REPOSITORY_TOPOLOGY.md",
+      "Quadruple-Multilevel-projection-project/Qualia/AI-AGENT-HANDOFF-NOTICE.md"
+    ],
+    "duplicate_groups": [
+      {
+        "git_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+        "repositories": 5,
+        "summary": "Same short Nanomathematics README content across five distinct repositories; repository identities remain separate."
+      },
+      {
+        "git_blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+        "repositories": 2,
+        "summary": "Same short Qualia README content across two distinct repositories."
+      }
+    ],
+    "regional_records": {
+      "files": 16,
+      "records": 96,
+      "statuses": [
+        "NOT_CONFIGURED"
+      ],
+      "interpretation": "Collection attempts without configured endpoint; not model outputs and not semantic test cases."
+    }
+  },
+  "CLAIMS_ADDED": {
+    "new_wanga_claims": 0,
+    "new_source_grounded_logic_units": 0,
+    "candidate_structures_added": 3,
+    "semantic_entailments_added": 0
+  },
+  "LOGIC_UNITS": {
+    "current_catalog_articles": 28,
+    "articles_with_sources": 28,
+    "source_records": 17,
+    "source_classes": 11,
+    "new_units_this_cycle": 0,
+    "source_grounded_counterexamples": 0
+  },
+  "COMPOSITION_COUNT": {
+    "active_specified_rules": 2,
+    "draft_not_executed_rules": 1,
+    "active_contracts": 2,
+    "recursive_l2_draft": 1,
+    "counterexample_gate_required_not_satisfied": 1,
+    "new_compositions_this_cycle": 0
+  },
+  "CONTRADICTIONS": {
+    "core_semantic_contradictions_reported": 0,
+    "taxonomy_gap_on_main": "28 articles vs 27 taxonomy nodes; candidate branch adds the missing node and alignment test",
+    "regional_data_gap": "96 records are NOT_CONFIGURED, not model outputs",
+    "duplicate_readme_groups": 2,
+    "new_adjudicated_semantic_contradictions": 0
+  },
+  "BENCHMARKS": {
+    "source_grounded_cases": 0,
+    "semantic_test_cases": 0,
+    "benchmark_suites": 0,
+    "independent_reviews": 0,
+    "holdout_split": false,
+    "mirror_review": false,
+    "synthetic_typed_formal_cases": 7,
+    "synthetic_typed_formal_passed": 7,
+    "counting_policy": "Synthetic tests and software/unit tests do not count toward semantic ground-truth thresholds."
+  },
+  "CI": {
+    "latest_logic_fractal_success_run": 41585730189,
+    "latest_repository_integrity_success_run": 41585730191,
+    "latest_codeql_success_run": 41585730188,
+    "latest_ecosystem_sweep_run": 41585730211,
+    "branch": "automation/wanga-workloop-2026-11-03",
+    "branch_head": "67f5b31c3c3434d91aacf6c18b845fcc2c574008",
+    "branch_compare_to_current_main": {
+      "ahead_by": 25,
+      "behind_by": 5,
+      "status": "diverged"
+    },
+    "branch_checks": "SUCCESS on current PR #135 head; PR remains open and unmerged",
+    "current_cycle_branch": "automation/wanga-cycle-2026-11-04",
+    "current_cycle_ci": "NOT_RUN_YET; PR not opened at report creation",
+    "regional_run": 41760366466,
+    "regional_run_conclusion": "SUCCESS",
+    "regional_run_policy": "Workflow directly pushed eight files to main; policy mismatch observed."
+  },
+  "MODEL_HASH": {
+    "model": "WANGA Typed Fractal Logic Candidate V0.1",
+    "candidate_id": "FL-COMPOSE-ab1b08a4197fd719",
+    "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "scale_1_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+    "scope": "SYNTHETIC_TEST_FIXTURES_NOT_REAL_CONVERSATION_OR_EXTERNAL_FACTS",
+    "status": "CANDIDATE_NOT_RELEASED",
+    "semantic_status": "NOT_YET_VERIFIED"
+  },
+  "READINESS_GATE": {
+    "gate_id": "FIRST_MODEL_ALPHA_V1",
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "thresholds_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "observed": {
+      "source_records": 17,
+      "source_classes": 11,
+      "logic_units_with_provenance": 28,
+      "composition_rules_with_contracts": 2,
+      "counterexample_cases": 0,
+      "test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "unresolved_dangling_source_refs": 0,
+      "unresolved_duplicate_stable_ids": 0,
+      "critical_core_contradictions": 0,
+      "deterministic_build": true,
+      "holdout_split": false,
+      "mirror_review": false
+    },
+    "missing_requirements": [
+      "source_records",
+      "logic_units_with_provenance",
+      "composition_rules_with_contracts",
+      "counterexample_cases",
+      "test_cases",
+      "benchmark_suites",
+      "independent_review_cycles",
+      "holdout_split_required",
+      "mirror_review_required"
+    ],
+    "taxonomy_alignment_gap_on_main": "27 taxonomy nodes for 28 articles"
+  },
+  "BUILT_TESTED_VERIFIED": {
+    "built": "Two-scale typed candidate built from three synthetic typed fragments; model hash recorded.",
+    "tested": "Deterministic builder and 7/7 synthetic typed-formal cases passed in prior Actions cycle; Logic Fractal, Repository Integrity and CodeQL passed on PR #135 head.",
+    "verified": "No source-grounded semantic correctness, no independent review, no holdout validation; candidate remains NOT_YET_VERIFIED."
+  },
+  "LIMBO": {
+    "status": "IN_PROGRESS_NO_INPUTS",
+    "pr_number": 122,
+    "pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/122",
+    "pr_state": "OPEN_DRAFT",
+    "branch": "deploy/limbo-cartography-core-v1",
+    "head_sha": "f70e09e61b9850f446a1f54450e732287b3f248e",
+    "ahead_by": 59,
+    "behind_by": 141,
+    "map_version": "1.0.0",
+    "map_blob_sha": "3617504c68262f71366a244563fc06b1be270da2",
+    "map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+    "source_matrix_sha256": "fe50da1b94ff1f303e112d8c586f4da42ac54d18e304529024129ce39f711e13",
+    "nodes": 14,
+    "edges": 19,
+    "incidents": 10,
+    "history_events": 2,
+    "passing_retests": 1,
+    "incidents_without_latest_passing_retest": 9,
+    "recurring_unresolved_clusters": 1,
+    "latest_incident": "CRASH-GHA-39312967972",
+    "latest_incident_time_utc": "2026-10-19T19:40:40Z",
+    "latest_execution_time_utc": "2026-10-25T06:00:16Z",
+    "latest_execution_status": "EXECUTION_RECORD_ONLY",
+    "epistemic_attempt": false,
+    "tuning_candidate_id": "TUNE-9c166900cc4ad5dd",
+    "tuning_candidate_replay_status": "NOT_RUN",
+    "prior_retest_result": "PASS for the recorded 2026-10-19 temporary-inbox fix only",
+    "latest_head_ci": "ACTION_REQUIRED / no jobs returned for latest-head runs",
+    "new_crash_inputs_this_cycle": 0,
+    "next": "Refresh PR #122 through a review branch from current main, preserve all incident/history IDs, run software tests, then replay TUNE-9c166900cc4ad5dd and append results."
+  },
+  "WIX": {
+    "site_name": "Logic Engine Research Lab",
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/",
+    "status": "PUBLISHED",
+    "site_last_updated": "2026-10-12",
+    "manifest_last_sync_date": "2026-10-12",
+    "last_known_readback": "2026-11-03 PR #135 report: main page 28 articles / 17 source records / 111 relation links; fractal-research page 13 cards; research-status page remains stale at 18 articles / 11 sources.",
+    "this_cycle_publish": "NOT_PERFORMED",
+    "this_cycle_page_readback": "NOT_VERIFIED",
+    "reason": "No reviewed PR was merged; public page fetch was inaccessible; do not claim Wix sync."
+  },
+  "AGENTS": [
+    {
+      "role": "Repository Inventory",
+      "status": "COMPLETED",
+      "result": "63 visible; 10 public scanned; 21 public scanned cumulatively; cursor updated"
+    },
+    {
+      "role": "Project README/Docs Collector",
+      "status": "COMPLETED",
+      "result": "10 READMEs, 10 tree indexes, 5 detailed docs"
+    },
+    {
+      "role": "Conversation Export Collector",
+      "status": "BLOCKED",
+      "result": "No conversations.json/ZIP; inbox contains README only"
+    },
+    {
+      "role": "Logic/Fractal Extractor",
+      "status": "COMPLETED",
+      "result": "3 candidate structures; 0 accepted WANGA logic units"
+    },
+    {
+      "role": "Normalizer",
+      "status": "COMPLETED",
+      "result": "Source identities, locators and Git blob hashes preserved"
+    },
+    {
+      "role": "Fractal Composer",
+      "status": "NOT_STARTED",
+      "result": "No new source-grounded composition; synthetic candidate remains separate"
+    },
+    {
+      "role": "Mirror Reviewer",
+      "status": "IN_PROGRESS",
+      "result": "3 new counter-readings recorded; none adjudicated"
+    },
+    {
+      "role": "Benchmark Evaluator",
+      "status": "BLOCKED",
+      "result": "No semantic cases or holdout"
+    },
+    {
+      "role": "Wiki Curator",
+      "status": "IN_PROGRESS",
+      "result": "28 catalog entries; main taxonomy gap proposed for correction"
+    },
+    {
+      "role": "Publisher",
+      "status": "IN_PROGRESS",
+      "result": "Reports and registries committed to review branch; no merge or Wix publish"
+    }
+  ],
+  "BLOCKED": [
+    "No actual ChatGPT conversation export.",
+    "No semantic benchmark cases, source-grounded counterexamples, holdout or independent reviews.",
+    "No configured regional model endpoint; regional records are NOT_CONFIGURED.",
+    "Regional drift workflow directly pushes to main and uploads the entire historical observation directory.",
+    "Limbo PR #122 is 141 commits behind main; tuning candidate replay is NOT_RUN.",
+    "Wix page-level readback not verified this cycle; status page last known stale.",
+    "Scheduled cross-repository workflow lacks CROSS_REPO_READ_TOKEN."
+  ],
+  "NEXT": [
+    "Open the current cycle branch as a PR and verify Logic Fractal, Repository Integrity and CodeQL CI.",
+    "Continue the repository sweep with the next ten public repositories in repository_inventory.json.",
+    "Build reviewed positive/negative/boundary semantic cases from exact source spans; freeze holdout before tuning.",
+    "Adjudicate the three cross-repository candidate structures before adding any WANGA logic unit.",
+    "Create a separate PR to replace the regional workflow direct-main push and stop uploading 1,921 historical files per node.",
+    "Refresh Limbo from current main without deleting incident history; run tests and replay the existing tuning candidate.",
+    "After reviewed catalog/report changes merge, use the Wix connector to publish and read back every affected page."
+  ]
+}
