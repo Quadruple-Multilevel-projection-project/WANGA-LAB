@@ -288,7 +288,11 @@
     "active_contracts": 2,
     "recursive_l2_draft": 1,
     "counterexample_gate_required_not_satisfied": 1,
-    "new_compositions_this_cycle": 0
+    "new_compositions_this_cycle": 0,
+    "structural_candidate_substructures": 523,
+    "candidate_compositions": 523,
+    "semantically_verified_compositions": 0,
+    "note": "523 are structural candidates from the graph miner/composer, not 523 source-backed semantic composition rules. Only 2 active contracts count toward the readiness gate."
   },
   "CONTRADICTIONS": {
     "core_semantic_contradictions_reported": 0,
@@ -306,7 +310,13 @@
     "mirror_review": false,
     "synthetic_typed_formal_cases": 7,
     "synthetic_typed_formal_passed": 7,
-    "counting_policy": "Synthetic tests and software/unit tests do not count toward semantic ground-truth thresholds."
+    "counting_policy": "Synthetic tests and software/unit tests do not count toward semantic ground-truth thresholds.",
+    "source_grounded_benchmark_status": "BLOCKED_INSUFFICIENT_REVIEWED_CASES",
+    "source_grounded_manifest_sha256": "8d1a76bfcecc0dbe87af32edd2bdff76e8386e8007bec4be97674fae4f263bde",
+    "typed_formal_benchmark_cases": 7,
+    "typed_formal_benchmark_passed": 7,
+    "typed_formal_benchmark_fixture_status": "SYNTHETIC_FORMAL_FIXTURES_NOT_SOURCE_GROUNDED",
+    "semantic_status": "NOT_YET_VERIFIED"
   },
   "CI": {
     "latest_logic_fractal_success_run": 41585730189,
@@ -322,10 +332,52 @@
     },
     "branch_checks": "SUCCESS on current PR #135 head; PR remains open and unmerged",
     "current_cycle_branch": "automation/wanga-cycle-2026-11-04",
-    "current_cycle_ci": "NOT_RUN_YET; PR not opened at report creation",
+    "current_cycle_ci": "SUCCESS",
     "regional_run": 41760366466,
     "regional_run_conclusion": "SUCCESS",
-    "regional_run_policy": "Workflow directly pushed eight files to main; policy mismatch observed."
+    "regional_run_policy": "Workflow directly pushed eight files to main; policy mismatch observed.",
+    "current_cycle_pr_number": 136,
+    "current_cycle_pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/136",
+    "current_cycle_pr_status": "OPEN_DRAFT_MERGEABLE",
+    "current_cycle_pr_head_sha": "5a2bb08422bae39b930738f1074aea433e213021",
+    "runs": [
+      {
+        "name": "Logic Fractal Wiki Research",
+        "run_id": 41780771343,
+        "status": "SUCCESS",
+        "started_at_utc": "2026-11-04T05:41:19Z",
+        "completed_at_utc": "2026-11-04T05:41:36Z",
+        "runner_image": "ubuntu-26.04",
+        "runner_version": "2.338.2",
+        "python": "3.11.17",
+        "artifact_id": 13298872065,
+        "artifact_size_bytes": 86254,
+        "artifact_sha256": "6b2f0c1b253484bbd553aa60263f5288152524b476d4e297b41e52116a42c620"
+      },
+      {
+        "name": "Repository Integrity",
+        "run_id": 41780771339,
+        "status": "SUCCESS"
+      },
+      {
+        "name": "CodeQL Advanced",
+        "run_id": 41780771375,
+        "status": "SUCCESS"
+      },
+      {
+        "name": "WANGA Ecosystem Agent Sweep",
+        "run_id": 41780771373,
+        "status": "SUCCESS",
+        "artifact_id": 13299525327,
+        "artifact_size_bytes": 3224,
+        "artifact_sha256": "46f00fb781b327816501778c0942dd67cdfe4c6b2dd85539934660a6aa737e43",
+        "scope": "CURRENT_REPOSITORY_ONLY",
+        "cross_repo_token_configured": false,
+        "selected_count": 1
+      }
+    ],
+    "logic_fractal_step_results": "Build first typed fractal model candidate, Logic Wiki tests, composer tests, typed multi-scale tests, formal reasoning tests and benchmark-intake audit all completed successfully; generated wiki/report proposal step was skipped on pull_request event.",
+    "pr135_status": "OPEN; 25 commits ahead and 5 behind current main; not merged"
   },
   "MODEL_HASH": {
     "model": "WANGA Typed Fractal Logic Candidate V0.1",
@@ -371,7 +423,7 @@
   },
   "BUILT_TESTED_VERIFIED": {
     "built": "Two-scale typed candidate built from three synthetic typed fragments; model hash recorded.",
-    "tested": "Deterministic builder and 7/7 synthetic typed-formal cases passed in prior Actions cycle; Logic Fractal, Repository Integrity and CodeQL passed on PR #135 head.",
+    "tested": "On PR #136, GitHub Actions run 41780771343 completed the builder, Logic Wiki tests, Logic Fractal Composer tests, typed multi-scale tests, formal reasoning tests and source-grounded benchmark readiness audit successfully. Synthetic typed-formal cases: 7/7 pass. Repository Integrity 41780771339 and CodeQL 41780771375 passed.",
     "verified": "No source-grounded semantic correctness, no independent review, no holdout validation; candidate remains NOT_YET_VERIFIED."
   },
   "LIMBO": {
@@ -446,8 +498,8 @@
     },
     {
       "role": "Fractal Composer",
-      "status": "NOT_STARTED",
-      "result": "No new source-grounded composition; synthetic candidate remains separate"
+      "status": "COMPLETED_SYNTHETIC_ONLY",
+      "result": "523 structural candidate compositions; 2 active contracts; 0 semantically verified compositions"
     },
     {
       "role": "Mirror Reviewer",
@@ -457,17 +509,17 @@
     {
       "role": "Benchmark Evaluator",
       "status": "BLOCKED",
-      "result": "No semantic cases or holdout"
+      "result": "7/7 synthetic typed-formal cases pass; source-grounded manifest has 0 cases"
     },
     {
       "role": "Wiki Curator",
-      "status": "IN_PROGRESS",
-      "result": "28 catalog entries; main taxonomy gap proposed for correction"
+      "status": "COMPLETED_ON_REVIEW_BRANCH",
+      "result": "28-node taxonomy correction and catalog alignment test passed in PR #136 CI"
     },
     {
       "role": "Publisher",
-      "status": "IN_PROGRESS",
-      "result": "Reports and registries committed to review branch; no merge or Wix publish"
+      "status": "COMPLETED_WITH_OPEN_PR",
+      "result": "PR #136 open draft, mergeable; Logic Fractal, Repository Integrity, CodeQL and Ecosystem Sweep workflows completed successfully; no merge or Wix publish"
     }
   ],
   "BLOCKED": [
@@ -480,10 +532,10 @@
     "Scheduled cross-repository workflow lacks CROSS_REPO_READ_TOKEN."
   ],
   "NEXT": [
-    "Open the current cycle branch as a PR and verify Logic Fractal, Repository Integrity and CodeQL CI.",
+    "Review PR #136; keep it unmerged until human review, and do not auto-merge.",
     "Continue the repository sweep with the next ten public repositories in repository_inventory.json.",
-    "Build reviewed positive/negative/boundary semantic cases from exact source spans; freeze holdout before tuning.",
-    "Adjudicate the three cross-repository candidate structures before adding any WANGA logic unit.",
+    "Populate reviewed positive, negative and boundary semantic cases; freeze holdout before tuning.",
+    "Adjudicate the three cross-repository candidate structures before accepting any WANGA logic unit.",
     "Create a separate PR to replace the regional workflow direct-main push and stop uploading 1,921 historical files per node.",
     "Refresh Limbo from current main without deleting incident history; run tests and replay the existing tuning candidate.",
     "After reviewed catalog/report changes merge, use the Wix connector to publish and read back every affected page."
