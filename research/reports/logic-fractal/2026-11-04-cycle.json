@@ -198,8 +198,12 @@
     "library": {
       "bounded_search_calls": 2,
       "result_rows": 27,
-      "note": "Search results included private archive matches and secondary summaries. No raw private file or transcript content was published or materialized.",
-      "conversation_export_files_found": 0
+      "note": "Additional Library and current-conversation metadata searches found no actual ChatGPT conversations.json/ZIP export. Four private Library items were read locally for provenance/status review; no raw text or private excerpts were copied into public repository files.",
+      "conversation_export_files_found": 0,
+      "follow_up_search_calls": 3,
+      "follow_up_private_files_read": 4,
+      "follow_up_conversation_export_files_found": 0,
+      "public_content_copied": false
     },
     "conversation_inbox": {
       "path": "research/inbox/conversations/",
@@ -237,8 +241,9 @@
     "The scheduled WANGA Ecosystem Agent Sweep had CROSS_REPO_READ_TOKEN empty and scanned only WANGA-LAB; this run used the live connector for ten public repositories.",
     "Five private repositories remain redacted and were not inspected in this public batch.",
     "Regional DRIFT_ENDPOINT, DRIFT_TOKEN and DRIFT_MODEL were empty in run 41760366466; no model outputs were generated.",
-    "Fresh page-level Wix read-back was not available this run; public fetch failed and site metadata alone is insufficient.",
-    "Limbo PR #122 latest head is 141 commits behind main and its latest workflow runs have no jobs."
+    "Limbo PR #122 latest head is 141 commits behind main and its latest workflow runs have no jobs.",
+    "No actual ChatGPT conversation export was exposed in the current conversation or Library search; no global private-chat history was scanned.",
+    "Wix write is deferred because PR #136 remains an unmerged draft; current published read-back is partial and the research-status page is stale."
   ],
   "NEW_DUPLICATE_SOURCES": {
     "new_external_candidate_sources": 3,
@@ -319,10 +324,10 @@
     "semantic_status": "NOT_YET_VERIFIED"
   },
   "CI": {
-    "latest_logic_fractal_success_run": 41585730189,
-    "latest_repository_integrity_success_run": 41585730191,
-    "latest_codeql_success_run": 41585730188,
-    "latest_ecosystem_sweep_run": 41585730211,
+    "latest_logic_fractal_success_run": 41781117479,
+    "latest_repository_integrity_success_run": 41781117567,
+    "latest_codeql_success_run": 41781117735,
+    "latest_ecosystem_sweep_run": 41781117550,
     "branch": "automation/wanga-workloop-2026-11-03",
     "branch_head": "67f5b31c3c3434d91aacf6c18b845fcc2c574008",
     "branch_compare_to_current_main": {
@@ -335,11 +340,11 @@
     "current_cycle_ci": "SUCCESS",
     "regional_run": 41760366466,
     "regional_run_conclusion": "SUCCESS",
-    "regional_run_policy": "Workflow directly pushed eight files to main; policy mismatch observed.",
+    "regional_run_policy": "Main still contains the direct-push/full-history-upload workflow until PR #137 is reviewed and merged.",
     "current_cycle_pr_number": 136,
     "current_cycle_pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/136",
     "current_cycle_pr_status": "OPEN_DRAFT_MERGEABLE",
-    "current_cycle_pr_head_sha": "5a2bb08422bae39b930738f1074aea433e213021",
+    "current_cycle_pr_head_sha": "43ab84f30a6ffd5f30eba3941c8d4666cf34f06e",
     "runs": [
       {
         "name": "Logic Fractal Wiki Research",
@@ -377,7 +382,32 @@
       }
     ],
     "logic_fractal_step_results": "Build first typed fractal model candidate, Logic Wiki tests, composer tests, typed multi-scale tests, formal reasoning tests and benchmark-intake audit all completed successfully; generated wiki/report proposal step was skipped on pull_request event.",
-    "pr135_status": "OPEN; 25 commits ahead and 5 behind current main; not merged"
+    "pr135_status": "OPEN; 25 commits ahead and 5 behind current main; not merged",
+    "regional_observation_directory_files": 1928,
+    "regional_remediation_pr_number": 137,
+    "regional_remediation_pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/137",
+    "regional_remediation_head_sha": "3e95728cf5ee5af523ced9eea3a45dfd385bc562",
+    "regional_remediation_status": "OPEN_DRAFT_CI_SUCCESS",
+    "regional_remediation_runs": {
+      "repository_integrity": 41782169930,
+      "codeql": 41782169947,
+      "security": 41782131126
+    },
+    "limbo_refresh_pr_number": 138,
+    "limbo_refresh_head_sha": "2b1a0bfe63784fc4fcf1a07d63ea7fe3689eec7d",
+    "limbo_refresh_status": "OPEN_DRAFT_CI_SUCCESS",
+    "limbo_refresh_runs": {
+      "limbo": 41783058646,
+      "repository_integrity": 41783058669,
+      "codeql": 41783058623
+    },
+    "limbo_intermediate_failure": {
+      "run_id": 41783010600,
+      "conclusion": "FAILURE",
+      "status": "TRANSIENT_WORKFLOW_YAML_PARSE_FAILURE",
+      "corrected_by_commit": "2b1a0bfe63784fc4fcf1a07d63ea7fe3689eec7d",
+      "final_current_head_checks": "SUCCESS"
+    }
   },
   "MODEL_HASH": {
     "model": "WANGA Typed Fractal Logic Candidate V0.1",
@@ -456,19 +486,42 @@
     "prior_retest_result": "PASS for the recorded 2026-10-19 temporary-inbox fix only",
     "latest_head_ci": "ACTION_REQUIRED / no jobs returned for latest-head runs",
     "new_crash_inputs_this_cycle": 0,
-    "next": "Refresh PR #122 through a review branch from current main, preserve all incident/history IDs, run software tests, then replay TUNE-9c166900cc4ad5dd and append results."
+    "next": "Refresh PR #122 through a review branch from current main, preserve all incident/history IDs, run software tests, then replay TUNE-9c166900cc4ad5dd and append results.",
+    "refresh_pr_number": 138,
+    "refresh_pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/138",
+    "refresh_branch": "fix/limbo-cartography-refresh-2026-11-04",
+    "refresh_head_sha": "2b1a0bfe63784fc4fcf1a07d63ea7fe3689eec7d",
+    "refresh_base_sha": "aa9b087d74589a8ab0a3b301ae8a3ebed6771f44",
+    "refresh_ported_files": 36,
+    "refresh_blob_hashes_match_source": true,
+    "refresh_ci": {
+      "limbo_workflow_run": 41783058646,
+      "repository_integrity_run": 41783058669,
+      "codeql_run": 41783058623,
+      "status": "SUCCESS"
+    },
+    "refresh_execution_record": {
+      "timestamp_utc": "2026-11-04T06:02:22+00:00",
+      "status": "EXECUTION_RECORD_ONLY",
+      "epistemic_attempt": false,
+      "drift_detected": null,
+      "keystone_verified": false
+    },
+    "map_status": "RECURRENCE_PATTERN_OBSERVED_CURRENT_SYSTEM_STATE_UNASSESSED",
+    "pr122_state": "OPEN_DRAFT_STALE_141_COMMITS_BEHIND_MAIN",
+    "note": "PR #138 ports only the 36 Limbo files from PR #122 onto current main. It preserves the exact source blobs for all 36 files. The first current-head Limbo workflow, Repository Integrity and CodeQL checks passed. No incident/history record changed; replay remains NOT_RUN."
   },
   "WIX": {
     "site_name": "Logic Engine Research Lab",
     "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
     "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/",
-    "status": "PUBLISHED",
+    "status": "PUBLISHED_READ_BACK_PARTIAL",
     "site_last_updated": "2026-10-12",
     "manifest_last_sync_date": "2026-10-12",
-    "last_known_readback": "2026-11-03 PR #135 report: main page 28 articles / 17 source records / 111 relation links; fractal-research page 13 cards; research-status page remains stale at 18 articles / 11 sources.",
-    "this_cycle_publish": "NOT_PERFORMED",
-    "this_cycle_page_readback": "NOT_VERIFIED",
-    "reason": "No reviewed PR was merged; public page fetch was inaccessible; do not claim Wix sync."
+    "last_known_readback": "2026-11-04 Wix Headless read-back: 29 files; logic-wiki.html has 28 entry elements and displays 28/17/111 with 2/3 active contracts; logic-wiki-fractal-research.html has 13 cards; logic-wiki-research-status.html remains at 2026-10-12 and 18/11.",
+    "this_cycle_publish": "NOT_PERFORMED_PENDING_PR_APPROVAL",
+    "this_cycle_page_readback": "VERIFIED_PARTIAL",
+    "reason": "The live main catalog and fractal-research pages match the current catalog counts. The research-status page remains stale at 18 articles/11 sources. PR #136 is still open and draft; no unapproved page update was published."
   },
   "AGENTS": [
     {
@@ -518,8 +571,18 @@
     },
     {
       "role": "Publisher",
-      "status": "COMPLETED_WITH_OPEN_PR",
-      "result": "PR #136 open draft, mergeable; Logic Fractal, Repository Integrity, CodeQL and Ecosystem Sweep workflows completed successfully; no merge or Wix publish"
+      "status": "COMPLETED_READBACK_PARTIAL_NO_PUBLISH",
+      "result": "Wix Headless read-back confirmed 29 files; live main/fractal pages match 28/17/111 and 13 cards; research-status page remains stale; no publish while PR #136 is draft."
+    },
+    {
+      "role": "Regional Workflow Safety",
+      "status": "COMPLETED_ON_REVIEW_BRANCH",
+      "result": "PR #137 removes direct-main push and full-history artifact upload; Repository Integrity and CodeQL passed."
+    },
+    {
+      "role": "Limbo Cartography",
+      "status": "COMPLETED_SOFTWARE_VALIDATION_NO_REPLAY",
+      "result": "PR #138 refreshes 36 files from PR #122 onto current main; Limbo workflow, Repository Integrity and CodeQL passed; 10 incidents/2 events preserved; no new inputs; tuning replay remains NOT_RUN."
     }
   ],
   "BLOCKED": [
@@ -527,17 +590,18 @@
     "No semantic benchmark cases, source-grounded counterexamples, holdout or independent reviews.",
     "No configured regional model endpoint; regional records are NOT_CONFIGURED.",
     "Regional drift workflow directly pushes to main and uploads the entire historical observation directory.",
-    "Limbo PR #122 is 141 commits behind main; tuning candidate replay is NOT_RUN.",
-    "Wix page-level readback not verified this cycle; status page last known stale.",
-    "Scheduled cross-repository workflow lacks CROSS_REPO_READ_TOKEN."
+    "Scheduled cross-repository workflow lacks CROSS_REPO_READ_TOKEN.",
+    "Regional workflow remediation PR #137 is open draft; main retains the direct-push/full-history-upload behavior until review and merge.",
+    "Limbo PR #122 remains stale; refreshed PR #138 passed software CI but the existing tuning candidate replay is still NOT_RUN and no new incident inputs exist.",
+    "Wix research-status page remains stale at 18 articles/11 sources; the correction is pending PR #136 review/merge, so no deployment was performed."
   ],
   "NEXT": [
+    "Review PR #136 (Logic Wiki/readiness), PR #137 (regional workflow safety), and PR #138 (Limbo refresh); keep all unmerged until human review and do not auto-merge.",
     "Review PR #136; keep it unmerged until human review, and do not auto-merge.",
     "Continue the repository sweep with the next ten public repositories in repository_inventory.json.",
     "Populate reviewed positive, negative and boundary semantic cases; freeze holdout before tuning.",
     "Adjudicate the three cross-repository candidate structures before accepting any WANGA logic unit.",
-    "Create a separate PR to replace the regional workflow direct-main push and stop uploading 1,921 historical files per node.",
-    "Refresh Limbo from current main without deleting incident history; run tests and replay the existing tuning candidate.",
-    "After reviewed catalog/report changes merge, use the Wix connector to publish and read back every affected page."
+    "After PR #136 is approved and merged, update only the stale Wix research-status page from the approved report, then read back all affected pages.",
+    "Replay TUNE-9c166900cc4ad5dd only when a source-backed replay input and explicit test target are available; otherwise retain NOT_RUN."
   ]
 }
