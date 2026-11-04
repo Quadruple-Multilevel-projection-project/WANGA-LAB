@@ -715,11 +715,44 @@
     },
     {
       "role": "Report Publisher",
-      "status": "IN_PROGRESS",
+      "status": "COMPLETED_WITH_OPEN_PR",
       "input": "Current cycle evidence",
-      "output": "New reports prepared on branch automation/wanga-cycle-2026-11-04",
+      "output": "PR #136 open draft, mergeable; four workflow checks completed successfully; no merge or Wix publish.",
       "evidence": "Current branch commits",
-      "next": "Open PR and await CI"
+      "next": "Open PR and await CI",
+      "next_action": "Await review; publish Wix only after approved merge and page-level read-back."
+    },
+    {
+      "role": "Source Registrar",
+      "status": "COMPLETED",
+      "input": "Current WANGA catalog and 10-repository batch",
+      "output": "28 articles, 17 source records, 11 source classes; three external candidate sources registered; no new WANGA source records",
+      "evidence": "articles.json and source-linked project_findings.json",
+      "next": "Continue source registration only with exact locators and permission scope."
+    },
+    {
+      "role": "Logic Normalizer",
+      "status": "COMPLETED",
+      "input": "28 catalog articles and 111 editorial relation links",
+      "output": "Structural map preserved; semantic status remains NOT_YET_VERIFIED",
+      "evidence": "logic_wiki/data/articles.json and generated readiness report",
+      "next": "Do not convert editorial links or similarity into entailment."
+    },
+    {
+      "role": "Fractal Composer",
+      "status": "COMPLETED_SYNTHETIC_ONLY",
+      "input": "Three synthetic typed fragments and two active composition contracts",
+      "output": "Two-scale candidate built; 523 structural candidate compositions; 0 semantically verified compositions",
+      "evidence": "PR #136 Logic Fractal run 41780771343 artifact",
+      "next": "Wait for source-grounded fragments and counterexample suites."
+    },
+    {
+      "role": "Benchmark Evaluator",
+      "status": "BLOCKED",
+      "input": "Source-grounded benchmark manifest and typed formal fixtures",
+      "output": "0 source-grounded cases; 7/7 synthetic typed-formal cases passed",
+      "evidence": "source-grounded-benchmark-latest.json and typed-formal-benchmark-latest.json",
+      "next": "Create reviewed positive, negative and boundary cases; keep holdout separate."
     }
   ],
   "access_gaps": [
