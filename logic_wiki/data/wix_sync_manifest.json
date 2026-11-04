@@ -12,10 +12,10 @@
   "homepage_card_verified": true,
   "existing_model_builder_preserved": true,
   "existing_corpus_atlas_preserved": true,
-  "verification_method": "Wix Headless read-back: files.list returned 29 published files; logic-wiki.html contains 28 entry elements and displays 28 articles, 17 source records and 111 relation links; logic-wiki-fractal-research.html contains 13 cards; logic-wiki-research-status.html still reports the 2026-10-12 snapshot of 18 articles and 11 source records. This is partial read-back, not a full site sync.",
+  "verification_method": "Fresh Wix Headless read-back on 2026-11-04: files.list returned 29 published files. logic-wiki.html has 28 class=entry elements (27 article tags) and displays 28 GitHub catalog articles, 17 source records, 111 relation links and 2/3 active composition contracts. logic-wiki-fractal-research.html has 13 article/card elements. logic-wiki-research-status.html remains on snapshot 2026-10-12 with 18 articles, 11 source records and NOT_READY_INTERNAL_CANDIDATE_ONLY. This is partial read-back, not a full site sync.",
   "automation_boundary": "The connected Wix integration is available for read-back. GitHub Actions has no Wix credentials. No publish was performed in this cycle because the status-page correction and catalog/taxonomy update are still on an unmerged review branch.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
-  "note": "The live main Logic Wiki page matches the current 28/17/111 catalog counts, but the research-status page remains stale at 18/11. The main-branch taxonomy also omitted ark-swarm-logic-trader; the review branch adds that node and a regression test. Publication is not semantic verification.",
+  "note": "Fresh read-back confirms the live main and fractal-research pages match the current catalog counts. The research-status page remains stale at 18/11. The taxonomy correction and current readiness report are still on open draft PR #136; no Wix files were changed.",
   "extended_topic_page_count": 10,
   "main_page_card_count": 28,
   "extended_page_resources": [
@@ -113,7 +113,7 @@
   "main_page_catalog_article_count": 28,
   "research_catalog_article_count": 28,
   "supplemental_research_concept_count": 9,
-  "last_readback_date": "2026-11-03",
+  "last_readback_date": "2026-11-04",
   "readback_status": "PARTIAL_STALE",
   "live_readback": {
     "site_name": "Logic Engine Research Lab",
@@ -123,6 +123,7 @@
     "pages": {
       "logic-wiki.html": {
         "entry_elements": 28,
+        "article_tag_count": 27,
         "displayed_article_count": 28,
         "displayed_source_record_count": 17,
         "relation_link_count": 111,
@@ -130,7 +131,8 @@
         "sync_banner_date": "2026-10-12"
       },
       "logic-wiki-fractal-research.html": {
-        "card_elements": 13
+        "card_elements": 13,
+        "article_tag_count": 13
       },
       "logic-wiki-research-status.html": {
         "snapshot_date": "2026-10-12",
@@ -151,6 +153,7 @@
       "taxonomy_node_count": 28,
       "taxonomy_status": "CANDIDATE_MAP_NOT_ENTAILMENT_GRAPH"
     },
-    "deployment_action": "NOT_PERFORMED_PENDING_PR_APPROVAL"
+    "deployment_action": "NOT_PERFORMED_PENDING_PR_APPROVAL",
+    "readback_date": "2026-11-04"
   }
 }
