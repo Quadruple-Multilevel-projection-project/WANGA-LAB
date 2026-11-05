@@ -1,0 +1,19 @@
+{
+  "schema_version": "WANGA-TINKIN-52-REGISTRY-V1",
+  "machine_id": "TINKIN-52",
+  "network_count": 52,
+  "layer_count": 4,
+  "networks_per_layer": 13,
+  "wheels_per_network": 3,
+  "gates_per_network": 33,
+  "letter_endpoints_per_network": 66,
+  "layers": [
+    {"layer": 0, "networks": [1,2,3,4,5,6,7,8,9,10,11,12,13]},
+    {"layer": 1, "networks": [14,15,16,17,18,19,20,21,22,23,24,25,26]},
+    {"layer": 2, "networks": [27,28,29,30,31,32,33,34,35,36,37,38,39]},
+    {"layer": 3, "networks": [40,41,42,43,44,45,46,47,48,49,50,51,52]}
+  ],
+  "ring_rule": "within each layer, left/right neighbors wrap modulo 13",
+  "vertical_rule": "layer N receives the frozen aggregate state of layer N-1",
+  "gate_definition": "G1/G2/G3 × 11 gates = 33 gates per network"
+}
