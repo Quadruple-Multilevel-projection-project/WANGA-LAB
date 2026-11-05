@@ -498,16 +498,31 @@
         "fractal-composition",
         "evidence-provenance"
       ]
+    },
+    {
+      "id": "milot-higayon-gate-xiv",
+      "title": "Milot Higayon — Gate XIV",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "source_ids": [
+        "SRC-RAMBAM-MILOT-HIGAYON-GATE-XIV"
+      ],
+      "relation_ids": [
+        "logic",
+        "semantics",
+        "formal-language"
+      ]
     }
   ],
   "relation_policy": "Every edge generated from an article relations field is EDITORIAL_RELATION_CANDIDATE unless an explicit formal rule with cited premises and tests establishes a stronger relation.",
   "validation": {
-    "article_count": 28,
-    "source_count": 17,
+    "article_count": 29,
+    "source_count": 18,
     "missing_relations": [],
     "dangling_source_refs": [],
     "source_ids_unique": true,
     "article_ids_unique": true,
-    "taxonomy_node_count": 28
+    "taxonomy_node_count": 29
   }
 }
