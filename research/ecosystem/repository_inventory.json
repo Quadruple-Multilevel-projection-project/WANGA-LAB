@@ -314,14 +314,31 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2026-10-22T06:42:38Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
+      "readme_blob_sha": "6ef8b6a54813922bf64bad64c8e7301f8dc620c2",
+      "files_scanned": [
+        "README.md",
+        "governance/PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0.md"
+      ],
       "scan_note": null,
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "0a0d806ab156adf55e9401a15e73085c911825a9",
+      "latest_commit_url": "https://github.com/AmbassadorOv/extensions/commit/0a0d806ab156adf55e9401a15e73085c911825a9",
+      "readme_url": "https://github.com/AmbassadorOv/extensions/blob/next/README.md",
+      "scan_summary": "Firebase Extensions source repository; README describes extension APIs, resources and access granted. No WANGA logic source identified.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "duplicate_document_observation": {
+        "path": "governance/PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0.md",
+        "blob_sha": "07f1bea91260a22f2a1398de8a8adba2ce1b3eb5",
+        "duplicate_with": "AmbassadorOv/googleapis",
+        "status": "IDENTICAL_FILE_BLOB_DISTINCT_REPOSITORIES"
+      },
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
     },
     {
       "full_name": "AmbassadorOv/fluffy-parakeet",
@@ -337,14 +354,24 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-08-05T19:18:18Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
+      "readme_blob_sha": "70944f7da15632788024530d0c7faf9d91d74381",
+      "files_scanned": [
+        "README.md"
+      ],
       "scan_note": null,
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_PRESENT_MINIMAL",
+      "latest_commit_sha": "d8d0cad7395794da08bd834b38386021a8d762f7",
+      "latest_commit_url": "https://github.com/AmbassadorOv/fluffy-parakeet/commit/d8d0cad7395794da08bd834b38386021a8d762f7",
+      "readme_url": "https://github.com/AmbassadorOv/fluffy-parakeet/blob/WPinstitutions/-WPG%7B%3C%3Cbranches%3E%7B%3C%F0%9F%AA%BE%3E%7D(%3CORG%3E)%3E%3E%7D%5D%5D%5D/README.md",
+      "scan_summary": "README contains only the title AI231.meta.io; no substantive documentation or source-grounded logic was exposed.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
     },
     {
       "full_name": "AmbassadorOv/generative-ai-docs",
@@ -360,14 +387,24 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-03-25T16:09:33Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
+      "readme_blob_sha": "1bf3babd967e73a1cff092805c4ff151fba95baf",
+      "files_scanned": [
+        "README.md"
+      ],
       "scan_note": null,
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "61a3666ac3b44e6a5ea15a6f6b4cbedd1a162e6d",
+      "latest_commit_url": "https://github.com/AmbassadorOv/generative-ai-docs/commit/61a3666ac3b44e6a5ea15a6f6b4cbedd1a162e6d",
+      "readme_url": "https://github.com/AmbassadorOv/generative-ai-docs/blob/main/README.md",
+      "scan_summary": "Google Gemini API and Gemma developer documentation, including site content, demos and examples; external API documentation only.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
     },
     {
       "full_name": "AmbassadorOv/googleapis",
@@ -383,14 +420,31 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2026-10-22T06:41:52Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
+      "readme_blob_sha": "6ba73116d009c622bf3057f81a563b2070daea51",
+      "files_scanned": [
+        "README.md",
+        "governance/PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0.md"
+      ],
       "scan_note": null,
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "bda86fbaa605e02ee544ec0d2230779755274265",
+      "latest_commit_url": "https://github.com/AmbassadorOv/googleapis/commit/bda86fbaa605e02ee544ec0d2230779755274265",
+      "readme_url": "https://github.com/AmbassadorOv/googleapis/blob/master/README.md",
+      "scan_summary": "Public Google API interface definitions for REST and gRPC with Bazel build guidance; no WANGA logic source identified.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "duplicate_document_observation": {
+        "path": "governance/PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0.md",
+        "blob_sha": "07f1bea91260a22f2a1398de8a8adba2ce1b3eb5",
+        "duplicate_with": "AmbassadorOv/extensions",
+        "status": "IDENTICAL_FILE_BLOB_DISTINCT_REPOSITORIES"
+      },
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
     },
     {
       "full_name": "AmbassadorOv/https-AmbassadorOv.io",
@@ -406,14 +460,24 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_LATEST_COMMIT_README_MISSING",
+      "latest_known_update": "2025-09-12T10:59:17Z",
       "latest_known_push": null,
       "readme_blob_sha": null,
-      "files_scanned": [],
+      "files_scanned": [
+        ".github/ISSUE_TEMPLATE/custom.md (latest commit diff)"
+      ],
       "scan_note": null,
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_MISSING_404",
+      "latest_commit_sha": "5e8bfc8624291ec945e1ad59f2e0fa601fd1d2a3",
+      "latest_commit_url": "https://github.com/AmbassadorOv/https-AmbassadorOv.io/commit/5e8bfc8624291ec945e1ad59f2e0fa601fd1d2a3",
+      "readme_url": null,
+      "scan_summary": "README.md returned HTTP 404. The inspected latest commit adds an issue-template file; no substantive project documentation was found in this bounded pass.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "NOT_ASSESSED_README_MISSING"
     },
     {
       "full_name": "AmbassadorOv/mediapipe",
@@ -429,14 +493,24 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-09-12T18:32:25Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
+      "readme_blob_sha": "e4f5dd182813dc073e0845be06d23d2c58bbeafb",
+      "files_scanned": [
+        "README.md"
+      ],
       "scan_note": null,
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "2a95a9603387b631d47bc4dfcbc4a675a39c26b3",
+      "latest_commit_url": "https://github.com/AmbassadorOv/mediapipe/commit/2a95a9603387b631d47bc4dfcbc4a675a39c26b3",
+      "readme_url": "https://github.com/AmbassadorOv/mediapipe/blob/master/README.md",
+      "scan_summary": "MediaPipe documentation points to on-device machine-learning solutions and developer resources; no WANGA-specific logic or model evidence identified.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
     },
     {
       "full_name": "AmbassadorOv/mermaid",
@@ -452,14 +526,24 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2024-11-28T03:40:56Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
+      "readme_blob_sha": "456747132cbc6ed1dde4f8d5f0712deb71b47be8",
+      "files_scanned": [
+        "README.md"
+      ],
       "scan_note": null,
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "df636c6d0a127a5ce3270672499dd7e230ce33fc",
+      "latest_commit_url": "https://github.com/AmbassadorOv/mermaid/commit/df636c6d0a127a5ce3270672499dd7e230ce33fc",
+      "readme_url": "https://github.com/AmbassadorOv/mermaid/blob/develop/README.md",
+      "scan_summary": "Mermaid generates diagrams from Markdown-like text. This is a possible presentation renderer, not a source of semantic relations.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
     },
     {
       "full_name": "AmbassadorOv/mujoco",
@@ -475,14 +559,24 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-05-12T17:53:39Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
+      "readme_blob_sha": "62d57c19af93682355c27e668422bf8aa87c430b",
+      "files_scanned": [
+        "README.md"
+      ],
       "scan_note": null,
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "8a7c42c747bfcf9160e3125048219566b41ff8cf",
+      "latest_commit_url": "https://github.com/AmbassadorOv/mujoco/commit/8a7c42c747bfcf9160e3125048219566b41ff8cf",
+      "readme_url": "https://github.com/AmbassadorOv/mujoco/blob/main/README.md",
+      "scan_summary": "MuJoCo is a physics engine for multi-joint dynamics and simulation; possible spatial simulation infrastructure, not WANGA semantic evidence.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
     },
     {
       "full_name": "AmbassadorOv/multi-agent-orchestator",
@@ -606,14 +700,24 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2024-10-03T21:15:34Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
+      "readme_blob_sha": "ad8d88b13f731c1d946a4fc5bd3fc3a153393775",
+      "files_scanned": [
+        "README.md"
+      ],
       "scan_note": null,
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "63527649963def8c759b0f91f2eb69a40934e468",
+      "latest_commit_url": "https://github.com/AmbassadorOv/openai_tiktoken/commit/63527649963def8c759b0f91f2eb69a40934e468",
+      "readme_url": "https://github.com/AmbassadorOv/openai_tiktoken/blob/main/README.md",
+      "scan_summary": "tiktoken is a BPE tokenizer for OpenAI models; tokenization infrastructure only, not a logic or semantic model.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
     },
     {
       "full_name": "AmbassadorOv/platform-samples",
@@ -629,14 +733,24 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2020-03-20T14:20:20Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
+      "readme_blob_sha": "a2bb146a181b60c3df0d077c55b197287074ec53",
+      "files_scanned": [
+        "README.md"
+      ],
       "scan_note": null,
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "4a10583e53d384f3846e7534608e40b0a42409b1",
+      "latest_commit_url": "https://github.com/AmbassadorOv/platform-samples/commit/4a10583e53d384f3846e7534608e40b0a42409b1",
+      "readme_url": "https://github.com/AmbassadorOv/platform-samples/blob/master/README.md",
+      "scan_summary": "GitHub Platform API, GraphQL and webhook sample projects; no WANGA logic source identified.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
     },
     {
       "full_name": "AmbassadorOv/python-genai",
@@ -1741,31 +1855,18 @@
   ],
   "scan_cursor": {
     "priority_order": [
-      "AmbassadorOv/extensions",
-      "AmbassadorOv/fluffy-parakeet",
-      "AmbassadorOv/generative-ai-docs",
-      "AmbassadorOv/googleapis",
-      "AmbassadorOv/https-AmbassadorOv.io",
-      "AmbassadorOv/mediapipe",
-      "AmbassadorOv/mermaid",
-      "AmbassadorOv/mujoco",
-      "AmbassadorOv/multi-agent-orchestator",
-      "AmbassadorOv/Nanomathematics"
+      "AmbassadorOv/python-genai",
+      "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "AmbassadorOv/test-notebook-links",
+      "AmbassadorOv/TTTT-0.0.0.0.1",
+      "AmbassadorOv/TTTTproject-un.govt",
+      "AmbassadorOv/unetbootin",
+      "AmbassadorOv/vqbshtfsprojects.org",
+      "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "AmbassadorOv/vscode-docs",
+      "AmbassadorOv/World-Party-Federation-Branches-managers"
     ],
     "last_completed_batch": [
-      "AmbassadorOv/-artificial-y",
-      "AmbassadorOv/AG-triple-X-",
-      "AmbassadorOv/AmbassadorOv",
-      "AmbassadorOv/awesome-chatgpt-prompts",
-      "AmbassadorOv/branches-",
-      "AmbassadorOv/chatgpt-scientific-publications-extension",
-      "AmbassadorOv/cookbook",
-      "AmbassadorOv/desktop",
-      "AmbassadorOv/docs",
-      "AmbassadorOv/eslint"
-    ],
-    "last_completed_index": 30,
-    "next_batch": [
       "AmbassadorOv/extensions",
       "AmbassadorOv/fluffy-parakeet",
       "AmbassadorOv/generative-ai-docs",
@@ -1774,15 +1875,29 @@
       "AmbassadorOv/mediapipe",
       "AmbassadorOv/mermaid",
       "AmbassadorOv/mujoco",
-      "AmbassadorOv/multi-agent-orchestator",
-      "AmbassadorOv/Nanomathematics"
+      "AmbassadorOv/openai_tiktoken",
+      "AmbassadorOv/platform-samples"
     ],
-    "remaining_public_count": 27,
+    "last_completed_index": 40,
+    "next_batch": [
+      "AmbassadorOv/python-genai",
+      "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "AmbassadorOv/test-notebook-links",
+      "AmbassadorOv/TTTT-0.0.0.0.1",
+      "AmbassadorOv/TTTTproject-un.govt",
+      "AmbassadorOv/unetbootin",
+      "AmbassadorOv/vqbshtfsprojects.org",
+      "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "AmbassadorOv/vscode-docs",
+      "AmbassadorOv/World-Party-Federation-Branches-managers"
+    ],
+    "remaining_public_count": 17,
     "private_repositories_deferred": true,
-    "scanned_public_count": 31,
+    "scanned_public_count": 41,
     "core_repository_scanned": true,
-    "next_action": "Scan the next ten public repositories in priority_order; check for new commits and preserve private repository redaction.",
-    "last_completed_at": "2026-11-05T07:03:05+02:00"
+    "next_action": "Scan the next ten unique remaining public repositories; keep private repositories redacted and skip already-scanned repositories.",
+    "last_completed_at": "2026-11-05T06:16:15.938Z",
+    "cursor_repair_note": "The prior priority_order repeated two repositories already marked SCANNED. The next batch was recomputed from public_repositories.scan_status to prevent duplicate scans."
   },
   "completed_batches": [
     {
@@ -1816,6 +1931,30 @@
         "AmbassadorOv/eslint"
       ],
       "status": "SCANNED_README_AND_LATEST_COMMIT_BOUNDED"
+    },
+    {
+      "batch_id": "2026-11-05-public-batch-02",
+      "scanned_at": "2026-11-05T06:16:15.938Z",
+      "repositories": [
+        "AmbassadorOv/extensions",
+        "AmbassadorOv/fluffy-parakeet",
+        "AmbassadorOv/generative-ai-docs",
+        "AmbassadorOv/googleapis",
+        "AmbassadorOv/https-AmbassadorOv.io",
+        "AmbassadorOv/mediapipe",
+        "AmbassadorOv/mermaid",
+        "AmbassadorOv/mujoco",
+        "AmbassadorOv/openai_tiktoken",
+        "AmbassadorOv/platform-samples"
+      ],
+      "public_repositories_scanned_cumulative": 41,
+      "public_repository_total": 58,
+      "remaining_public_count": 17,
+      "readme_present_count": 9,
+      "readme_missing_count": 1,
+      "duplicate_non_readme_document_blob_count": 2,
+      "new_wanga_logic_units": 0,
+      "status": "COMPLETED_BOUNDED_READ"
     }
   ]
 }
