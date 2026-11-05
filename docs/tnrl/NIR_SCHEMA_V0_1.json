@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/tnrl-nir-v0-1/docs/tnrl/NIR_SCHEMA_V0_1.json",
+  "title": "TNRL Neural Intermediate Representation v0.1",
+  "description": "A proposal format only. Passing this schema does not authorize execution; semantic validation and policy checks are required.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "proposal_id", "operation", "target", "goal", "constraints", "evidence_refs"],
+  "properties": {
+    "schema_version": { "const": "tnrl-nir-v0.1" },
+    "proposal_id": { "type": "string", "minLength": 1 },
+    "operation": {
+      "type": "string",
+      "enum": ["READ", "ASSERT", "TRANSFORM", "VALIDATE", "PROPOSE_STATE_TRANSITION", "HALT"]
+    },
+    "target": { "type": "string", "minLength": 1 },
+    "goal": { "type": "string", "minLength": 1 },
+    "constraints": {
+      "type": "array",
+      "items": { "type": "string" },
+      "uniqueItems": true
+    },
+    "preconditions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "postconditions": {
+      "type": "array",
+      "items": { "type": "string" },
+      "default": []
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "requested_transition": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "properties": {
+        "from_state": { "type": "string", "minLength": 1 },
+        "to_state": { "type": "string", "minLength": 1 },
+        "transition_rule_id": { "type": "string", "minLength": 1 }
+      },
+      "required": ["from_state", "to_state", "transition_rule_id"]
+    },
+    "execution_authorized": { "const": false }
+  },
+  "allOf": [
+    {
+      "if": { "properties": { "operation": { "const": "PROPOSE_STATE_TRANSITION" } }, "required": ["operation"] },
+      "then": { "required": ["requested_transition"] }
+    }
+  ]
+}
