@@ -12,10 +12,10 @@
   "homepage_card_verified": true,
   "existing_model_builder_preserved": true,
   "existing_corpus_atlas_preserved": true,
-  "verification_method": "Fresh Wix Headless read-back on 2026-11-04: files.list returned 29 published files. logic-wiki.html has 28 class=entry elements (27 article tags) and displays 28 GitHub catalog articles, 17 source records, 111 relation links and 2/3 active composition contracts. logic-wiki-fractal-research.html has 13 article/card elements. logic-wiki-research-status.html remains on snapshot 2026-10-12 with 18 articles, 11 source records and NOT_READY_INTERNAL_CANDIDATE_ONLY. This is partial read-back, not a full site sync.",
+  "verification_method": "Last page-level Wix Headless read-back on 2026-11-04: logic-wiki.html displayed 28 articles, 17 source records and 111 relation links. The current review-branch catalog contains 29 articles, 18 source records and 114 relation links. The 1/1/3 delta is recorded without guessing item identities. The research-status page remains stale at 18/11. No Wix deployment occurred.",
   "automation_boundary": "The connected Wix integration is available for read-back. GitHub Actions has no Wix credentials. No publish was performed in this cycle because the status-page correction and catalog/taxonomy update are still on an unmerged review branch.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
-  "note": "Fresh read-back confirms the live main and fractal-research pages match the current catalog counts. The research-status page remains stale at 18/11. The taxonomy correction and current readiness report are still on open draft PR #136; no Wix files were changed.",
+  "note": "The last page-level read-back on 2026-11-04 showed 28 articles, 17 source records and 111 relation links. The current review-branch catalog is 29/18/114. The count delta is 1/1/3; item-level identity has not been resolved. No Wix deployment occurred, so the manifest does not claim full synchronization.",
   "extended_topic_page_count": 10,
   "main_page_card_count": 28,
   "extended_page_resources": [
@@ -150,10 +150,29 @@
       "missing_taxonomy_article": "ark-swarm-logic-trader"
     },
     "branch_candidate_snapshot": {
-      "taxonomy_node_count": 28,
+      "article_count": 29,
+      "source_record_count": 18,
+      "relation_count": 114,
+      "taxonomy_node_count": 29,
       "taxonomy_status": "CANDIDATE_MAP_NOT_ENTAILMENT_GRAPH"
     },
     "deployment_action": "NOT_PERFORMED_PENDING_PR_APPROVAL",
     "readback_date": "2026-11-04"
-  }
+  },
+  "current_catalog_counts": {
+    "articles": 29,
+    "source_records": 18,
+    "relation_links": 114
+  },
+  "last_readback_counts": {
+    "articles": 28,
+    "source_records": 17,
+    "relation_links": 111
+  },
+  "catalog_readback_delta": {
+    "articles": 1,
+    "source_records": 1,
+    "relation_links": 3
+  },
+  "catalog_readback_delta_status": "UNRESOLVED_ITEM_LEVEL_GAP_NO_WIX_WRITE"
 }

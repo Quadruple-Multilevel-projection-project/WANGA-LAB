@@ -31,10 +31,23 @@ class LogicWikiTests(unittest.TestCase):
  def test_wix_sync_manifest_records_stable_extended_resources(self):
   catalog=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
   manifest=json.loads((ROOT/'logic_wiki/data/wix_sync_manifest.json').read_text(encoding='utf-8'))
-  self.assertEqual(manifest['synced_article_count'],len(catalog['articles']))
-  self.assertEqual(manifest['source_record_count'],len(catalog['sources']))
-  self.assertEqual(manifest['relation_link_count'],sum(len(a.get('relations',[])) for a in catalog['articles']))
-  self.assertEqual(manifest['main_page_card_count'],len(catalog['articles']))
+  catalog_counts={
+   'articles':len(catalog['articles']),
+   'source_records':len(catalog['sources']),
+   'relation_links':sum(len(a.get('relations',[])) for a in catalog['articles'])
+  }
+  readback_counts=manifest['last_readback_counts']
+  self.assertEqual(manifest['synced_article_count'],readback_counts['articles'])
+  self.assertEqual(manifest['source_record_count'],readback_counts['source_records'])
+  self.assertEqual(manifest['relation_link_count'],readback_counts['relation_links'])
+  self.assertEqual(manifest['main_page_card_count'],readback_counts['articles'])
+  self.assertEqual(manifest['research_catalog_article_count'],readback_counts['articles'])
+  self.assertEqual(manifest['current_catalog_counts'],catalog_counts)
+  self.assertEqual(manifest['catalog_readback_delta'],{
+   key:catalog_counts[key]-readback_counts[key] for key in catalog_counts
+  })
+  self.assertEqual(manifest['catalog_readback_delta_status'],'UNRESOLVED_ITEM_LEVEL_GAP_NO_WIX_WRITE')
+  self.assertTrue(all(value>=0 for value in manifest['catalog_readback_delta'].values()))
   self.assertEqual(manifest['extended_topic_page_count'],10)
   ids=[x['id'] for x in manifest['extended_page_resources']]
   self.assertEqual(len(ids),10)
