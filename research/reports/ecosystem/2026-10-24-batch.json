@@ -1,0 +1,84 @@
+{
+  "report_id": "WANGA-ECOSYSTEM-BATCH-2026-10-24",
+  "generated_at_utc": "2026-10-24T04:30:14.776Z",
+  "status": "COMPLETED_WITH_ACCESS_GAPS",
+  "inventory": {
+    "visible": 62,
+    "public": 58,
+    "private_omitted": 4,
+    "affiliations": {
+      "owner": 37,
+      "collaborator": 13,
+      "organization_member": 25,
+      "unique_union": 62
+    }
+  },
+  "current_batch": {
+    "repositories": [
+      "AmbassadorOv/-artificial-y",
+      "AmbassadorOv/AG-triple-X-",
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/O-Ms",
+      "AmbassadorOv/Qualia",
+      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "AmbassadorOv/TTTTproject-un.govt",
+      "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "AmbassadorOv/awesome-chatgpt-prompts",
+      "AmbassadorOv/branches-"
+    ],
+    "readmes_read": 9,
+    "readme_404": [
+      "AmbassadorOv/-artificial-y"
+    ]
+  },
+  "two_batch_totals": {
+    "distinct_public_repositories_scanned": 20,
+    "readmes_read": 18,
+    "readme_fetch_gaps": 2,
+    "remaining_public_repositories": 38
+  },
+  "duplicate_readme_clusters": [
+    {
+      "git_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/MNM",
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos"
+      ],
+      "scope": "README blob identity only; not repository identity, code equivalence or semantic relationship."
+    },
+    {
+      "git_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
+      "repositories": [
+        "AmbassadorOv/AG-triple-X-",
+        "AmbassadorOv/TTTTproject-un.govt",
+        "AmbassadorOv/World-Party-Federation-Branches-managers"
+      ],
+      "scope": "README blob identity only; not repository identity, code equivalence or semantic relationship."
+    }
+  ],
+  "private_content_policy": "Private names and content omitted from public registry; no private repository was written.",
+  "updated_at_status": "NOT_EXPOSED_BY_CONNECTOR",
+  "next_cursor": {
+    "priority_order_index": 20,
+    "next_batch": [
+      "AmbassadorOv/desktop",
+      "AmbassadorOv/extensions",
+      "AmbassadorOv/docs",
+      "AmbassadorOv/generative-ai-docs",
+      "AmbassadorOv/python-genai",
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/https-AmbassadorOv.io",
+      "AmbassadorOv/vqbshtfsprojects.org",
+      "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "AmbassadorOv/test-notebook-links"
+    ],
+    "after_last_scanned": "AmbassadorOv/branches-"
+  },
+  "next_actions": [
+    "Continue with the next 10 public repositories.",
+    "Read targeted manifests/workflows only when a README or source cue warrants it.",
+    "Keep README blob identity separate from repository identity and semantic relationships."
+  ]
+}

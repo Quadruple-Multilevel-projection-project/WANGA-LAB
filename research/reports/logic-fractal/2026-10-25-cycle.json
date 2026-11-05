@@ -1,0 +1,397 @@
+{
+  "report_id": "WANGA-UNIFIED-WORK-LOOP-2026-10-25",
+  "generated_at_utc": "2026-10-25T05:50:17Z",
+  "run_status": "PARTIAL_COMPLETED_WITH_BLOCKERS",
+  "SOURCES_SCANNED": {
+    "github_visible_repositories": 62,
+    "public_repositories": 58,
+    "private_repositories_omitted_from_public_registry": 4,
+    "public_repositories_scanned_current_batch": 10,
+    "public_repositories_scanned_cumulative": 30,
+    "readmes_read_cumulative": 26,
+    "readme_fetch_gaps_cumulative": 4,
+    "library_search_queries": 3,
+    "library_ranked_results_returned": 10,
+    "local_html_candidate_hashed_locally": 1,
+    "conversation_exports_identified": 0,
+    "logic_catalog": {
+      "path": "logic_wiki/data/articles.json",
+      "blob_sha1": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed",
+      "articles": 28,
+      "sources": 17,
+      "source_classes": 11,
+      "relation_edges": 111,
+      "articles_with_resolved_sources": 28
+    },
+    "composition_contracts": {
+      "path": "logic_fractal/data/composition_rules.json",
+      "blob_sha1": "3d8bc142785d7d401b705736fe0f384d33d996f3",
+      "total_rules": 3,
+      "active_specified_rules": 2
+    },
+    "taxonomy": {
+      "path": "logic_wiki/data/fractal_taxonomy.json",
+      "blob_sha1": "355a9253cc5920d11b0b804e1561f38b51a4f2c3",
+      "nodes": 27,
+      "relation_ids": 102,
+      "status": "CANDIDATE_MAP_NOT_ENTAILMENT_GRAPH"
+    }
+  },
+  "ACCESS_GAPS": [
+    "No conversation export was found in targeted Library searches; no claim of global ChatGPT history coverage is made.",
+    "One local Library HTML source remains PRIVATE_LIBRARY_READ / NOT_APPROVED_FOR_PUBLICATION; its content and hash are withheld from the public repository pending review.",
+    "README fetch gap: AmbassadorOv/https-AmbassadorOv.io; the GitHub API reports AmbassadorOv/vqbshtfsprojects.org is empty.",
+    "Repository updated_at timestamps are not exposed by the connector.",
+    "Wix live-page topic-by-topic read-back remains partial; no Wix write was performed.",
+    "No independent core-contradiction inventory is registered. The current main-branch metric has an unsupported zero; PR #132 proposes fail-closed handling and awaits CI/review."
+  ],
+  "NEW_OR_DUPLICATE_SOURCES": [
+    "Eight public README files were read in the current 10-repository batch; two entries were not readable as README.md (one repository is explicitly empty).",
+    "No new duplicate README blob clusters were found in the current batch; previously registered clusters remain README-byte identity only.",
+    "Three source-text logic candidates were registered from AmbassadorOv/multi-agent-orchestator/README.md for review only; none were added to the formal Logic Wiki catalog.",
+    "A local HTML candidate was hashed locally and withheld from public registry details; no raw private content was published."
+  ],
+  "CLAIMS_ADDED": 0,
+  "LOGIC_UNITS": {
+    "existing_catalog_units_with_sources": 28,
+    "new_formal_catalog_units_added": 0,
+    "cross_repo_candidate_units_registered": 3,
+    "semantic_entailments_asserted": 0
+  },
+  "COMPOSITION_COUNT": {
+    "active_specified_rules": 2,
+    "total_rules": 3,
+    "structural_candidate_substructures_from_latest_agent_cycle": 523,
+    "new_source_validated_compositions": 0
+  },
+  "CONTRADICTIONS": {
+    "limbo_structural_drift": "RESOLVED_FOR_THE_COMMITTED_MAP: live PR #122 branch read-back shows source_matrix_version=1.3.0, matching reality_matrix.json v1.3.0; the committed map has 14 nodes and 19 edges, and the committed-map replay regression passed in CI run 30. This resolves the stale derived-file mismatch only; it does not verify the full system or complete tuning replay.",
+    "limbo_runner_output": "Generated map, tuning candidate and logic bundle are now committed on PR #122 branch after run 25. The committed map hash is 46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5. TUNE-9c166900cc4ad5dd remains CANDIDATE_REPLAY_REQUIRED / NOT_RUN; VITRUVIUS-QUEUE-CONTRACT-RECURRENCE remains DRAFT_UNVERIFIED.",
+    "readiness_report_disagreement": "PR #132 CI passed. Its generated readiness report now records critical_core_contradictions=null, contradiction_inventory_available=false, and checks.critical_core_contradictions=false. The fix is not merged to main, so main still has the old unsupported zero.",
+    "core_contradiction_inventory": "NOT_MEASURED_NO_INDEPENDENT_INVENTORY; do not claim zero unresolved core contradictions.",
+    "repository_readme_duplicates": "Duplicate groups indicate README blob identity only, not repository identity, code equivalence or semantic relation."
+  },
+  "BENCHMARKS": {
+    "logic_wiki_catalog_validation": {
+      "status": "PASS",
+      "articles": 28,
+      "sources": 17,
+      "source_classes": 11,
+      "relation_edges": 111,
+      "dangling_source_refs": 0,
+      "dangling_relation_refs": 0,
+      "duplicate_article_ids": 0,
+      "duplicate_source_ids": 0
+    },
+    "synthetic_propositional_benchmark": {
+      "status": "PASS",
+      "case_count": 5,
+      "passed": 5,
+      "failed": 0,
+      "semantic_status": "NOT_YET_VERIFIED",
+      "scope": "SYNTHETIC_PROPOSITIONAL_FIXTURES_ONLY"
+    },
+    "synthetic_typed_formal_benchmark": {
+      "status": "PASS",
+      "case_count": 7,
+      "passed": 7,
+      "failed": 0,
+      "semantic_status": "NOT_YET_VERIFIED",
+      "scope": "SYNTHETIC_FORMAL_FIXTURES_ONLY"
+    },
+    "source_grounded_benchmark": {
+      "status": "BLOCKED_EMPTY_WAITING_REVIEWED_CASES",
+      "case_count": 0,
+      "reviewed_executable_cases": 0,
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    "readiness_semantic_test_cases": 0,
+    "benchmark_suites": 0,
+    "holdout_split": false,
+    "independent_review_cycles": 0
+  },
+  "CI": {
+    "logic_fractal": {
+      "run_id": 40166948323,
+      "run_number": 144,
+      "status": "SUCCESS",
+      "repository_integrity_run_id": 40166948358,
+      "repository_integrity_status": "SUCCESS",
+      "codeql_run_id": 40166948360,
+      "codeql_status": "SUCCESS",
+      "artifact_id": 12588283898,
+      "artifact_name": "logic-wiki-research-report",
+      "artifact_size_bytes": 76036,
+      "artifact_sha256": "3579956372906777f8979e3bbdc32dc48e12eb8d7cafba785f56e29177b6dfbe",
+      "artifact_expires": "2027-01-23T05:50:04Z"
+    },
+    "limbo_prior_run": {
+      "run_id": 40061760678,
+      "run_number": 22,
+      "status": "SUCCESS",
+      "software_tests": "20 passed in 0.09s",
+      "generated_map": {
+        "nodes": 14,
+        "edges": 19,
+        "content_hash": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+        "persisted_to_branch": false
+      }
+    },
+    "readiness_fix_pr": {
+      "pr_number": 132,
+      "head_sha": "1f426405ad53339c4a0df83177af275dcfaa826a",
+      "status": "SUCCESS_DRAFT_NOT_MERGED",
+      "logic_fractal_run_id": 40167072783,
+      "logic_fractal_run_number": 145,
+      "repository_integrity_run_id": 40167072703,
+      "repository_integrity_status": "SUCCESS",
+      "codeql_run_id": 40167072700,
+      "codeql_status": "SUCCESS",
+      "artifact_id": 12588538783,
+      "artifact_size_bytes": 76087,
+      "artifact_sha256": "c1dc4c81c161ae9e35f3caf9d662b9ee739631fddeb6beedde0ef502003f053c",
+      "verified_report_fields": {
+        "critical_core_contradictions": null,
+        "contradiction_inventory_available": false,
+        "check": false,
+        "readiness_gate_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY"
+      }
+    },
+    "limbo_current_artifact_upload": {
+      "run_id": 40167109973,
+      "run_number": 23,
+      "status": "SUCCESS",
+      "artifact_id": 12588468770,
+      "artifact_name": "limbo-cartography-generated-outputs",
+      "artifact_size_bytes": 7550,
+      "artifact_zip_sha256": "5207715a3017af48487f702d98b2386966874ad08e780e8671e25817829f1a70",
+      "files": [
+        "iterative_crash_map.json",
+        "tuning_candidates/TUNE-9c166900cc4ad5dd.json",
+        "logic_bundles/VITRUVIUS-QUEUE-CONTRACT-RECURRENCE.json",
+        "run_logs/latest_execution.json"
+      ],
+      "expires": "2026-11-24T05:52:53Z"
+    },
+    "limbo_persist_attempt": {
+      "run_id": 40167326277,
+      "run_number": 24,
+      "status": "FAILURE",
+      "failure": "Non-fast-forward push from detached PR merge checkout; corrected by fetching the remote PR branch tip before restoring and pushing generated outputs."
+    },
+    "ecosystem_report_pr": {
+      "run_id": 40167405653,
+      "run_number": 65,
+      "status": "SUCCESS",
+      "repository_integrity_run_id": 40167405682,
+      "repository_integrity_run_number": 810,
+      "repository_integrity_status": "SUCCESS",
+      "codeql_run_id": 40167405665,
+      "codeql_run_number": 1292,
+      "codeql_status": "SUCCESS"
+    },
+    "limbo_persist_fix": {
+      "run_id": 40167377093,
+      "run_number": 25,
+      "status": "SUCCESS",
+      "repository_integrity_run_id": 40167377079,
+      "repository_integrity_status": "SUCCESS",
+      "persisted_branch_head_after_run": "333a6fa1e9ca03f56f2c71b006c4daf62a173dc5"
+    },
+    "limbo_committed_map_regression": {
+      "failed_run_id": 40167446548,
+      "failed_run_number": 28,
+      "failure": "NameError in new test helper variable; no map mismatch was reported.",
+      "fix_commit": "3d529bd5cee2c3b1ff2b3d6e180bc0ca4b3bff56",
+      "passing_run_id": 40167526599,
+      "passing_run_number": 30,
+      "status": "SUCCESS",
+      "repository_integrity_run_id": 40167526556,
+      "repository_integrity_status": "SUCCESS",
+      "codeql_run_id": 40167526592,
+      "codeql_status": "SUCCESS"
+    },
+    "current_limbo_branch": {
+      "branch": "deploy/limbo-cartography-core-v1",
+      "head_sha": "f70e09e61b9850f446a1f54450e732287b3f248e",
+      "map_blob_sha": "3617504c68262f71366a244563fc06b1be270da2",
+      "map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+      "source_matrix_version": "1.3.0",
+      "nodes": 14,
+      "edges": 19,
+      "tuning_candidate_status": "CANDIDATE_REPLAY_REQUIRED",
+      "tuning_replay_status": "NOT_RUN",
+      "logic_bundle_status": "DRAFT_UNVERIFIED"
+    }
+  },
+  "MODEL_HASH": {
+    "typed_first_model": {
+      "value": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+      "status": "SYNTHETIC_TYPED_CANDIDATE_HASH_FROM_CI",
+      "file_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+      "artifact_size_bytes": 9843
+    },
+    "logic_wiki_candidate": {
+      "value": "fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf",
+      "status": "CANDIDATE_NOT_RELEASED",
+      "candidate_composition_count": 523
+    },
+    "catalog_content_hash": "3088e428358108293d5397ba7a15ab6c898ac791a2a83153c3a22ea0fe43018f"
+  },
+  "READINESS_GATE": {
+    "gate_id": "FIRST_MODEL_ALPHA_V1",
+    "policy_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "decision": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "observed": {
+      "source_records": 17,
+      "source_classes": 11,
+      "logic_units_with_provenance": 28,
+      "composition_rules_with_contracts": 2,
+      "counterexample_cases": 0,
+      "test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "dangling_source_refs": 0,
+      "dangling_relation_refs": 0,
+      "duplicate_article_ids": 0,
+      "duplicate_source_ids": 0,
+      "critical_core_contradictions": "NOT_MEASURED_NO_INDEPENDENT_INVENTORY",
+      "deterministic_build": "TESTED_ON_SYNTHETIC_FIXTURES_IN_CI_2026-10-25",
+      "holdout_split": false,
+      "mirror_review": false
+    },
+    "thresholds": {
+      "min_source_records": 20,
+      "min_source_classes": 3,
+      "min_logic_units_with_provenance": 50,
+      "min_composition_rules_with_contracts": 20,
+      "min_counterexample_cases": 30,
+      "min_test_cases": 100,
+      "min_benchmark_suites": 3,
+      "min_independent_review_cycles": 2,
+      "unresolved_dangling_source_refs": 0,
+      "unresolved_duplicate_stable_ids": 0,
+      "critical_core_contradictions": 0,
+      "deterministic_build_required": true,
+      "holdout_split_required": true,
+      "mirror_review_required": true
+    },
+    "missing": [
+      "source_records",
+      "logic_units_with_provenance",
+      "composition_rules_with_contracts",
+      "counterexample_cases",
+      "test_cases",
+      "benchmark_suites",
+      "independent_review_cycles",
+      "critical_core_contradictions_inventory",
+      "holdout_split_required",
+      "mirror_review_required"
+    ]
+  },
+  "BUILT": "Logic Fractal candidate rebuilt in GitHub Actions run 40166948323 from synthetic fixtures; typed model hash a16a83... and status CANDIDATE_NOT_RELEASED. Separate catalog graph candidate hash fa22ea... has 523 structural substructures, not semantic validation. Limbo map rebuilt in run 22 but not persisted; run 23 now adds artifact upload and is in progress.",
+  "TESTED": "Logic Fractal Wiki Research run 144, Repository Integrity 799 and CodeQL 1281 passed. PR #132's Logic Fractal run 145, Repository Integrity 800 and CodeQL 1282 passed. Limbo run 25 persisted the generated outputs; run 30 passed the committed-map rebuild regression, all Limbo software tests and validators, with Repository Integrity 816 passed. CodeQL 1298 also passed.",
+  "VERIFIED": "Catalog structural validation, synthetic builder execution, software test outcomes, artifact hashes, PR #132's fail-closed unknown-metric behavior, and the committed Limbo map's match to a deterministic rebuild are supported by CI evidence. The map now matches matrix v1.3.0. Tuning replay remains NOT_RUN; the logic bundle remains DRAFT_UNVERIFIED. No semantic truth, source-grounded entailment, independent contradiction inventory, trained neural model or AGI claim is verified.",
+  "BLOCKED": [
+    "FIRST_MODEL_ALPHA gate remains blocked by source/provenance unit deficits, composition contract count, zero source-grounded counterexamples, zero semantic cases/suites, zero independent reviews, missing holdout and missing MIRROR review.",
+    "Wix remains unchanged; manifest is PUBLISHED_READ_BACK_PARTIAL and catalog/topic read-back is incomplete.",
+    "No actual ChatGPT export was ingested.",
+    "PR #132's fail-closed fix passed CI but remains an open Draft PR; main is unchanged until reviewed and merged.",
+    "Limbo tuning candidate TUNE-9c166900cc4ad5dd has replay_status=NOT_RUN; no tuning outcome is established. The logic bundle remains DRAFT_UNVERIFIED."
+  ],
+  "NEXT": [
+    "Check completion of CodeQL run 1298 on PR #122.",
+    "Keep the tuning candidate bounded and unexecuted until a documented replay plan, input scope and expected outcome are reviewed; then record the result as a new history event without overwriting incidents.",
+    "Review PR #122 with the committed-map replay passing; keep Draft until human review and any remaining CI requirements are satisfied.",
+    "Review PR #132's passing fail-closed readiness fix; do not auto-merge.",
+    "Continue repository sweep from priority index 30.",
+    "Build reviewed source-grounded benchmarks, holdout and independent MIRROR review.",
+    "Keep private Library content unpublished and Wix unchanged until approval."
+  ],
+  "agent_roles": [
+    {
+      "role": "Repository Inventory",
+      "status": "COMPLETED",
+      "evidence": "Live connector shows 62 repositories: 58 public, 4 private; 10 current-batch public repositories scanned; 30 public repositories scanned cumulatively.",
+      "next": "Continue from priority index 30."
+    },
+    {
+      "role": "README/Docs Collector",
+      "status": "COMPLETED_WITH_GAPS",
+      "evidence": "8 current-batch README reads; two README fetch gaps; one repository is explicitly empty.",
+      "next": "Read targeted docs only when direct relevance is established."
+    },
+    {
+      "role": "Conversation Export Collector",
+      "status": "COMPLETED_WITH_NO_EXPORTS",
+      "evidence": "Three targeted Library searches returned 10 ranked files and no conversation export; search is not exhaustive.",
+      "next": "Continue only from exposed Library results or a user-provided export."
+    },
+    {
+      "role": "Logic Extractor/Normalizer",
+      "status": "COMPLETED_REVIEW_ONLY",
+      "evidence": "Three source-text candidate logic units registered from a public README; no formal catalog unit or semantic entailment added.",
+      "next": "Review literal spans and normalization; preserve source scope."
+    },
+    {
+      "role": "Fractal Composer",
+      "status": "COMPLETED_SYNTHETIC_BUILD",
+      "evidence": "CI run 144 rebuilt the typed two-scale synthetic candidate with stable hash.",
+      "next": "Do not compose external candidates into the model before source review."
+    },
+    {
+      "role": "Mirror/Adversarial Reviewer",
+      "status": "REVIEW_REQUIRED",
+      "evidence": "No independent review cycles; core contradiction inventory absent; reciprocal links remain review candidates.",
+      "next": "Create a reviewed contradiction inventory and independent mirror review."
+    },
+    {
+      "role": "Benchmark Evaluator",
+      "status": "COMPLETED_SOFTWARE_ONLY",
+      "evidence": "5 synthetic propositional cases and 7 synthetic typed formal cases pass; source-grounded case count is zero.",
+      "next": "Register reviewed source-grounded cases and train/validation/holdout splits."
+    },
+    {
+      "role": "Wiki Curator",
+      "status": "BLOCKED_PENDING_APPROVED_CHANGE",
+      "evidence": "Catalog validation passes, but no new formal catalog items were approved.",
+      "next": "Keep candidate units in registry pending review."
+    },
+    {
+      "role": "Publisher/Wix",
+      "status": "NOT_RUN",
+      "evidence": "No approved catalog change merged; manifest still partial.",
+      "next": "Use connected Wix workflow only after approval, then perform public read-back."
+    },
+    {
+      "role": "Limbo Cartography",
+      "status": "MAP_PERSISTED_REPLAY_TESTED_TUNING_REPLAY_PENDING",
+      "evidence": "PR #122 branch now has map derived from matrix v1.3.0, 14 nodes/19 edges; run 30 passed the committed-map rebuild regression and full software validators. Tuning candidate remains NOT_RUN.",
+      "next": "Review CodeQL and PR; only then plan a bounded tuning replay with new history event."
+    },
+    {
+      "role": "Report Publisher",
+      "status": "IN_PROGRESS",
+      "evidence": "Reports and inventory update are being submitted on PR #131 branch.",
+      "next": "Review CI; no auto-merge."
+    }
+  ],
+  "WIX_SYNC": {
+    "manifest_blob_sha1": "d4dcaa4c439d66b380ffa7be5d3169de78104395",
+    "status": "PUBLISHED_READ_BACK_PARTIAL",
+    "last_sync_date": "2026-10-12",
+    "legacy_synced_article_count": 18,
+    "main_page_card_count": 27,
+    "research_catalog_article_count": 27,
+    "supplemental_research_concept_count": 9,
+    "source_record_count": 16,
+    "relation_link_count": 102,
+    "current_github_catalog": {
+      "articles": 28,
+      "sources": 17,
+      "relation_edges": 111
+    },
+    "decision": "NO_UPDATE_THIS_CYCLE",
+    "reason": "No catalog change was approved or merged; full topic-by-topic public page read-back is incomplete."
+  }
+}

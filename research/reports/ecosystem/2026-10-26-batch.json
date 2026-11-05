@@ -1,0 +1,174 @@
+{
+  "report_id": "WANGA-ECOSYSTEM-BATCH-2026-10-26",
+  "generated_at_utc": "2026-10-26T05:19:32Z",
+  "status": "COMPLETED_WITH_ACCESS_GAPS",
+  "inventory": {
+    "visible": 62,
+    "public": 58,
+    "private_omitted": 4,
+    "unknown_visibility": 0,
+    "affiliations": {
+      "owner": 37,
+      "collaborator": 13,
+      "organization_member": 25,
+      "unique_union": 62
+    },
+    "current_batch": {
+      "count": 10,
+      "repositories": [
+        "AmbassadorOv/googleapis",
+        "AmbassadorOv/platform-samples",
+        "AmbassadorOv/mermaid",
+        "AmbassadorOv/vscode-azure-blockchain-ethereum",
+        "AmbassadorOv/eslint",
+        "AmbassadorOv/openai_tiktoken",
+        "AmbassadorOv/mujoco",
+        "AmbassadorOv/cookbook",
+        "AmbassadorOv/vscode-docs",
+        "AmbassadorOv/mediapipe"
+      ],
+      "readmes_read": 10,
+      "readme_fetch_gaps": [],
+      "blob_hashes": [
+        {
+          "repository": "AmbassadorOv/googleapis",
+          "branch": "master",
+          "path": "README.md",
+          "git_blob_sha1": "6ba73116d009c622bf3057f81a563b2070daea51",
+          "source_uri": "https://github.com/AmbassadorOv/googleapis/blob/master/README.md"
+        },
+        {
+          "repository": "AmbassadorOv/platform-samples",
+          "branch": "master",
+          "path": "README.md",
+          "git_blob_sha1": "a2bb146a181b60c3df0d077c55b197287074ec53",
+          "source_uri": "https://github.com/AmbassadorOv/platform-samples/blob/master/README.md"
+        },
+        {
+          "repository": "AmbassadorOv/mermaid",
+          "branch": "develop",
+          "path": "README.md",
+          "git_blob_sha1": "456747132cbc6ed1dde4f8d5f0712deb71b47be8",
+          "source_uri": "https://github.com/AmbassadorOv/mermaid/blob/develop/README.md"
+        },
+        {
+          "repository": "AmbassadorOv/vscode-azure-blockchain-ethereum",
+          "branch": "master",
+          "path": "README.md",
+          "git_blob_sha1": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+          "source_uri": "https://github.com/AmbassadorOv/vscode-azure-blockchain-ethereum/blob/master/README.md"
+        },
+        {
+          "repository": "AmbassadorOv/eslint",
+          "branch": "main",
+          "path": "README.md",
+          "git_blob_sha1": "326c6121e810f4d1edfbc781eff4d5b7f46d1c36",
+          "source_uri": "https://github.com/AmbassadorOv/eslint/blob/main/README.md"
+        },
+        {
+          "repository": "AmbassadorOv/openai_tiktoken",
+          "branch": "main",
+          "path": "README.md",
+          "git_blob_sha1": "ad8d88b13f731c1d946a4fc5bd3fc3a153393775",
+          "source_uri": "https://github.com/AmbassadorOv/openai_tiktoken/blob/main/README.md"
+        },
+        {
+          "repository": "AmbassadorOv/mujoco",
+          "branch": "main",
+          "path": "README.md",
+          "git_blob_sha1": "62d57c19af93682355c27e668422bf8aa87c430b",
+          "source_uri": "https://github.com/AmbassadorOv/mujoco/blob/main/README.md"
+        },
+        {
+          "repository": "AmbassadorOv/cookbook",
+          "branch": "main",
+          "path": "README.md",
+          "git_blob_sha1": "646c146ea44ee0175fccf62427bcc03dd88ed1b6",
+          "source_uri": "https://github.com/AmbassadorOv/cookbook/blob/main/README.md"
+        },
+        {
+          "repository": "AmbassadorOv/vscode-docs",
+          "branch": "main",
+          "path": "README.md",
+          "git_blob_sha1": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
+          "source_uri": "https://github.com/AmbassadorOv/vscode-docs/blob/main/README.md"
+        },
+        {
+          "repository": "AmbassadorOv/mediapipe",
+          "branch": "master",
+          "path": "README.md",
+          "git_blob_sha1": "e4f5dd182813dc073e0845be06d23d2c58bbeafb",
+          "source_uri": "https://github.com/AmbassadorOv/mediapipe/blob/master/README.md"
+        }
+      ]
+    },
+    "cumulative": {
+      "distinct_public_repositories_scanned": 40,
+      "readmes_read": 36,
+      "readme_fetch_gaps": 4,
+      "remaining_public_repositories": 18
+    }
+  },
+  "new_or_duplicate_sources": {
+    "readme_sources_added": 10,
+    "readme_fetch_gaps": [],
+    "new_duplicate_readme_clusters": [],
+    "candidate_logic_units_registered": 0,
+    "formal_logic_units_added": 0,
+    "semantic_entailments_asserted": 0,
+    "note": "All ten README findings remain README_SURFACE_CUES_ONLY; overlaps are discovery candidates, not registered logical relations."
+  },
+  "local_library_scan": {
+    "targeted_queries": 3,
+    "ranked_results_returned": 10,
+    "conversation_export_found": false,
+    "scope": "PRIVATE_LIBRARY_READ",
+    "conclusion": "No export artifact was returned by the current targeted Library search. This is not proof of global absence; no transcript was ingested or published."
+  },
+  "next_cursor": {
+    "priority_order_index": 40,
+    "next_batch": [
+      "AmbassadorOv/fluffy-parakeet",
+      "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "AmbassadorOv/unetbootin",
+      "Quadruple-Multilevel-projection-project/-",
+      "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "Quadruple-Multilevel-projection-project/globalSpeed",
+      "Quadruple-Multilevel-projection-project/Qualia",
+      "Quadruple-Multilevel-projection-project/branches-",
+      "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "Quadruple-Multilevel-projection-project/-from-Corsican-"
+    ],
+    "after_last_scanned": "AmbassadorOv/mediapipe",
+    "remaining_public_repositories": 18
+  },
+  "private_content_policy": "Private repository names/content and raw conversation text are excluded from public registries and Wix.",
+  "access_gaps": [
+    "Repository updated_at timestamps are not exposed by the connected GitHub tool.",
+    "No ChatGPT export was found in the current targeted Library search; global conversation history was not scanned.",
+    "Four README fetch gaps from prior batches remain unresolved; 404 is not treated as proof that no documentation exists.",
+    "Wix topic-by-topic read-back remains partial."
+  ],
+  "ci": {
+    "previous_report_branch_head": "7bca2d695b2c82890405f270efa4749ef565a796",
+    "prior_ecosystem_agent_sweep": {
+      "run_id": 40167620534,
+      "status": "SUCCESS"
+    },
+    "prior_repository_integrity": {
+      "run_id": 40167620454,
+      "status": "SUCCESS"
+    },
+    "prior_codeql": {
+      "run_id": 40167620476,
+      "status": "SUCCESS"
+    },
+    "current_report_commit_status": "NOT_YET_RUN_FOR_THIS_COMMIT"
+  },
+  "next_actions": [
+    "Continue the next ten public repositories from the stored cursor.",
+    "Review candidate overlaps only when an exact source span and concrete integration question exist.",
+    "Keep Wix unchanged until an approved catalog change exists and public deployment read-back can be completed.",
+    "Continue to exclude private content and raw transcripts."
+  ]
+}
