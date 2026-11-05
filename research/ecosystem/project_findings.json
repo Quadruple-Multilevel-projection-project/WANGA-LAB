@@ -1,19 +1,19 @@
 {
   "schema_version": "wanga-project-findings/1.0",
-  "scan_date": "2026-11-04",
+  "scan_date": "2026-11-05",
   "source_scope": {
     "core_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
-    "core_ref": "main@61e5fba00c082711af13d017eba1c05f9e0d2d6a",
+    "core_ref": "main@79207e1456e3eb6d9d121e88adf4dd7040b512a5",
     "collaborator_batch": 10,
     "public_repositories_scanned": 10,
     "private_repositories_redacted": 5,
     "conversation_export_records": 0,
-    "snapshot_date": "2026-11-04",
-    "repository_inventory": "63 unique repositories visible through connector: 58 public, 5 private redacted",
+    "snapshot_date": "2026-11-05",
+    "repository_inventory": "63 unique repositories visible through live connector: 58 public, 5 private redacted",
     "batch_repositories_scanned": 10,
-    "public_repositories_scanned_cumulative": 21,
-    "conversation_scope": "Only current-run Library search and repository inbox; no ChatGPT conversation export found",
-    "main_ref": "aa9b087d74589a8ab0a3b301ae8a3ebed6771f44"
+    "public_repositories_scanned_cumulative": 31,
+    "conversation_scope": "Current-run Files Library search and first 100-item metadata page; no ChatGPT export artifact found. This is not a global ChatGPT conversation scan.",
+    "main_ref": "79207e1456e3eb6d9d121e88adf4dd7040b512a5"
   },
   "findings": [
     {
@@ -440,6 +440,111 @@
         "Current workflow behavior conflicts with the user's no-direct-main-writes rule."
       ],
       "next_action": "Open a separate reviewed PR to replace direct push with PR creation, upload only the new file, and ensure NOT_CONFIGURED records are not treated as observations."
+    },
+    {
+      "id": "WANGA-GATE14-SOURCE-001",
+      "source_uri": "https://he.wikisource.org/w/index.php?title=מילות_הגיון/שער_יד&oldid=783578",
+      "repository_full_name": "PUBLIC_WEB_SOURCE",
+      "branch": "revision:783578",
+      "file_path": "מילות הגיון/שער יד",
+      "blob_sha": null,
+      "commit_sha": null,
+      "exact_locator": "Gate XIV, web extraction lines 104-117; stable page revision oldid=783578",
+      "excerpt_or_summary": "The source text distinguishes three uses of דיבור (human rational faculty, internal intelligible content, external linguistic expression), describes logic as guiding internal and external discourse away from error, and calls logic an instrument for knowledge rather than one of the sciences. Page metadata identifies Maimonides, translator Samuel Ibn Tibbon, Warsaw 1928 second revised edition; page is marked unproofread.",
+      "epistemic_status": "SOURCE_TEXT_LOCATED_AND_READ; SUMMARY_CANDIDATE",
+      "permission_scope": "PUBLIC_WIKISOURCE_CC_BY_SA_4_0",
+      "overlap_candidates": [
+        "logic",
+        "semantics",
+        "formal-language",
+        "evidence-provenance"
+      ],
+      "contradictions": [
+        "This is Milot Higayon Gate XIV, not Moreh Nevukhim chapter 14."
+      ],
+      "next_action": "Human collation against the Arabic original and review of the Hebrew transcription; retain source-summary status."
+    },
+    {
+      "id": "WANGA-EXT-FLY-001",
+      "source_uri": "https://github.com/AmbassadorOv/-artificial-y/commit/0b6041813f71cc05932d941ab3e38682d0a57544",
+      "repository_full_name": "AmbassadorOv/-artificial-y",
+      "branch": "main",
+      "file_path": null,
+      "blob_sha": null,
+      "commit_sha": "0b6041813f71cc05932d941ab3e38682d0a57544",
+      "exact_locator": "Latest commit diff; per-file path metadata was not exposed by the connector",
+      "excerpt_or_summary": "The latest commit is titled as an implementation of a Fly Brain deterministic edge kernel for swarm agents. Its diff includes configuration and pseudo-code claims about logic-before-weights, 231 gates, 230 space groups, and a deterministic graph. These are recorded as repository claims, not verified behavior.",
+      "epistemic_status": "EXTERNAL_PROPOSAL_NOT_VERIFIED",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "agent orchestration",
+        "logic-before-weights",
+        "drift control"
+      ],
+      "contradictions": [
+        "Implementation wording exceeds evidence in the inspected diff; determinism and runtime behavior were not tested; exact file paths were not exposed."
+      ],
+      "next_action": "Resolve exact changed paths and inspect implementation/tests before proposing any WANGA integration."
+    },
+    {
+      "id": "WANGA-EXT-PROFILE-001",
+      "source_uri": "https://github.com/AmbassadorOv/AmbassadorOv/blob/main/README.md",
+      "repository_full_name": "AmbassadorOv/AmbassadorOv",
+      "branch": "main",
+      "file_path": "README.md",
+      "blob_sha": "d2664df6ce794e353a4d1b04682627c3b13f0bb9",
+      "commit_sha": null,
+      "exact_locator": "README.md at main; blob SHA recorded",
+      "excerpt_or_summary": "Public profile framing emphasizes philosophy of architectures, logic research, and AI drift forensics; this is profile context, not implementation evidence.",
+      "epistemic_status": "PUBLIC_PROFILE_STATEMENT",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "WANGA-LAB README",
+        "Logic Wiki",
+        "AI drift forensics"
+      ],
+      "contradictions": [],
+      "next_action": "Use only as public framing context after consistency review against canonical WANGA-LAB documents."
+    },
+    {
+      "id": "WANGA-REPO-DUP-002",
+      "source_uri": "https://github.com/AmbassadorOv/AG-triple-X-/blob/master/README.md",
+      "repository_full_name": "AmbassadorOv/AG-triple-X-",
+      "branch": "master",
+      "file_path": "README.md",
+      "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "commit_sha": null,
+      "exact_locator": "README.md blob; same blob SHA observed in Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "excerpt_or_summary": "The README blob hash is identical across two distinct repository identities. This is a content duplicate observation, not evidence that the repositories are the same project.",
+      "epistemic_status": "DUPLICATE_CONTENT_OBSERVED",
+      "permission_scope": "PUBLIC_REPOSITORIES",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo"
+      ],
+      "contradictions": [],
+      "next_action": "Keep repository identities separate; deduplicate content by blob hash only."
+    },
+    {
+      "id": "WANGA-CATALOG-PR-2026-11-05",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/automation/wanga-cycle-2026-11-04/logic_wiki/data/articles.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "automation/wanga-cycle-2026-11-04",
+      "file_path": "logic_wiki/data/articles.json",
+      "blob_sha": "b9a96117d948656ad7f0c44979726dd17a673bfb",
+      "commit_sha": "9ff22fd90f9fd37e36bf242f22728a3d77daf365",
+      "exact_locator": "PR #136 branch candidate",
+      "excerpt_or_summary": "Review-branch catalog candidate: 29 articles, 18 source records, 12 source classes and 114 editorial relation links; 29 taxonomy nodes with no missing relation or dangling source references. Main remains at 28/17/111 until PR review and merge.",
+      "epistemic_status": "SOURCE_LINKED_CANDIDATE_ON_OPEN_DRAFT_PR",
+      "permission_scope": "PUBLIC_REPOSITORY_BRANCH",
+      "overlap_candidates": [
+        "logic_wiki/data/fractal_taxonomy.json",
+        "logic_wiki/data/research_metrics.json",
+        "Wix sync manifest"
+      ],
+      "contradictions": [
+        "Not yet merged; Wix has not been updated for this new article."
+      ],
+      "next_action": "Run PR CI and obtain human review; synchronize Wix only after approval and merge."
     }
   ],
   "logic_candidates": [
