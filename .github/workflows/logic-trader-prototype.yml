@@ -1,0 +1,27 @@
+name: Logic Trader Prototype Tests
+on:
+  pull_request:
+    paths:
+      - "logic-trader/**"
+      - "docs/LOGIC_TRADER_AND_MARKETPLACE_V1.md"
+      - ".github/workflows/logic-trader-prototype.yml"
+  push:
+    branches: [main]
+    paths:
+      - "logic-trader/**"
+      - "docs/LOGIC_TRADER_AND_MARKETPLACE_V1.md"
+      - ".github/workflows/logic-trader-prototype.yml"
+permissions:
+  contents: read
+jobs:
+  paper-trader-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run paper-trader unit tests
+        run: python -m unittest discover -s logic-trader/tests -v
+      - name: Run deterministic demo
+        run: python logic-trader/run_demo.py

@@ -1,0 +1,24 @@
+{
+  "manifest_version": "1.0.0",
+  "agent_id": "LTA-01",
+  "name": "Logic Trader Agent",
+  "lifecycle_state": "PROTOTYPED",
+  "execution_mode": "PAPER_ONLY",
+  "network_access": "DISABLED",
+  "exchange_adapter": null,
+  "wallet_adapter": null,
+  "real_order_submission": false,
+  "nft_minting": false,
+  "commerce_checkout": false,
+  "roles": {
+    "mouse_cortex_predictor": { "status": "SIMULATED_RULE_ADAPTER", "responsibility": "moving-average trend estimate" },
+    "drosophila_fast_executor": { "status": "SIMULATED_RULE_ADAPTER", "responsibility": "translate approved signal to in-memory paper fill" },
+    "c_elegans_noise_filter": { "status": "SPECIFIED_NOT_IMPLEMENTED", "responsibility": "quality gate and noise filtering" },
+    "zebrafish_escape_guard": { "status": "PROTOTYPED_RULE", "responsibility": "halt on abrupt price move or risk threshold" }
+  },
+  "distributed_mesh": { "status": "SPECIFIED_NOT_INSTALLED", "transport": null, "gossipsub": false, "crdt": false },
+  "shared_reward_pool": { "status": "PLANNED_NOT_INSTALLED", "reward_is_financial_advice": false },
+  "protected_fields": ["execution_mode", "network_access", "real_order_submission", "nft_minting", "commerce_checkout", "risk_policy"],
+  "human_approval_required_for": ["live_data_provider", "exchange_or_broker", "wallet_or_chain", "product_prices", "license_terms", "publication", "production_deployment"],
+  "evidence_policy": { "facts": "source-backed only", "claims_without_evidence": "mark as hypothesis", "verified_requires_external_evidence": true }
+}
