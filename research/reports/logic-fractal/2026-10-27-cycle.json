@@ -1,0 +1,255 @@
+{
+  "schema_version": "wanga-logic-fractal-cycle-report/1.0",
+  "report_id": "WANGA-LOGIC-FRACTAL-CYCLE-2026-10-27",
+  "generated_at_utc": "2026-10-27T05:15:40Z",
+  "snapshot_date": "2026-10-27",
+  "source_collection": {
+    "github_readmes": 8,
+    "github_readme_access_gaps": 2,
+    "library_search_calls": 3,
+    "library_read_requests": 8,
+    "distinct_library_file_names": 8,
+    "private_library_material_published": 0,
+    "conversation_export_found": false,
+    "conversation_exports_ingested": 0
+  },
+  "catalog": {
+    "articles": 28,
+    "source_records": 17,
+    "source_classes": 11,
+    "articles_with_source_refs": 28,
+    "unique_source_refs": 17,
+    "relation_links": 111,
+    "dangling_source_refs": 0,
+    "dangling_relation_refs": 0,
+    "duplicate_article_ids": 0,
+    "taxonomy_nodes": 27,
+    "catalog_git_blob_sha1": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed"
+  },
+  "claims_added": 0,
+  "logic_units_added": 0,
+  "composition_count": {
+    "active_contracts": 2,
+    "total_rules": 3,
+    "source_validated_compositions_added": 0,
+    "candidate_compositions": 523,
+    "taxonomy_levels": 4,
+    "mirror_reciprocal_edge_candidates": 52
+  },
+  "counterexamples": {
+    "source_grounded": 0
+  },
+  "benchmarks": {
+    "semantic_cases": 0,
+    "semantic_suites": 0,
+    "required_suites": [
+      {
+        "id": "BENCH-POSITIVE",
+        "minimum_cases": 30
+      },
+      {
+        "id": "BENCH-NEGATIVE",
+        "minimum_cases": 30
+      },
+      {
+        "id": "BENCH-BOUNDARY",
+        "minimum_cases": 40
+      }
+    ],
+    "software_tests": {
+      "test_file": "logic_fractal/tests/test_fragment_composer.py",
+      "tests": 8,
+      "passed": 8,
+      "failed": 0,
+      "catalog_relation_test_input": "Projection of current main article IDs and relation arrays; not full article prose",
+      "status": "LOCAL_TARGETED_UNIT_TESTS_PASS"
+    },
+    "holdout": "NOT_FROZEN",
+    "independent_reviews": 0,
+    "mirror_review": "NOT_COMPLETED",
+    "workflow_synthetic_suites": {
+      "propositional": {
+        "cases": 5,
+        "passed": 5
+      },
+      "typed_formal": {
+        "cases": 7,
+        "passed": 7
+      },
+      "source_grounded": {
+        "cases": 0,
+        "status": "BLOCKED_INSUFFICIENT_REVIEWED_CASES"
+      }
+    }
+  },
+  "builder": {
+    "status": "BUILT_AND_TESTED_SYNTHETIC_ONLY",
+    "source_commit": "41c632d0b31585139e1bf894f2643cdb4c7846d1",
+    "builder_blob_sha1": "f3416947a435b1bde0ddd3dc691503d130c88ef4",
+    "composer_blob_sha1": "e0823383f8b768f1cb324ea07883c4d9798aa136",
+    "fixture_blob_sha1": "c7496775dfd18b473ec92993401daa6679a32212",
+    "test_blob_sha1": "42606f86d50dd7079c4c0a9df78869f56d6c5f16",
+    "local_python_version": "3.13.5",
+    "runner": "Local Python execution environment",
+    "runs": 2,
+    "deterministic_artifact_equal": true,
+    "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "scale_1_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+    "artifact_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+    "artifact_bytes": 9843,
+    "semantic_status": "NOT_YET_VERIFIED",
+    "release_status": "CANDIDATE_NOT_RELEASED",
+    "fixture_scope": "SYNTHETIC_TEST_FIXTURES_NOT_REAL_CONVERSATION_OR_EXTERNAL_FACTS"
+  },
+  "readiness_gate": {
+    "gate_id": "FIRST_MODEL_ALPHA_V1",
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "policy_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "actual": {
+      "source_records": 17,
+      "source_classes": 11,
+      "logic_units_with_provenance": 28,
+      "active_composition_contracts": 2,
+      "source_grounded_counterexamples": 0,
+      "semantic_test_cases": 0,
+      "semantic_benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "dangling_source_refs": 0,
+      "duplicate_stable_ids": 0,
+      "critical_core_contradictions": "NOT_MEASURED_CONTRADICTION_INVENTORY_UNAVAILABLE",
+      "deterministic_build": "TESTED_ON_SYNTHETIC_FIXTURES",
+      "holdout": "NOT_FROZEN",
+      "mirror_review": "NOT_COMPLETED"
+    }
+  },
+  "wix": {
+    "status": "PUBLISHED_READ_BACK_PARTIAL",
+    "main_page_count": 28,
+    "fractal_page_count": 27,
+    "fractal_page_sources": 16,
+    "github_catalog_articles": 28,
+    "github_catalog_sources": 17,
+    "embedded_sweep_date": "2026-10-12",
+    "write_performed": false
+  },
+  "limbo": {
+    "pr": 122,
+    "head_sha": "f70e09e61b9850f446a1f54450e732287b3f248e",
+    "map_nodes": 14,
+    "map_edges": 19,
+    "source_backed_observations": 10,
+    "new_inputs": "NO_INPUTS",
+    "tuning_replay": "NOT_RUN",
+    "logic_bundle_status": "DRAFT_UNVERIFIED",
+    "current_ci": "ACTION_REQUIRED"
+  },
+  "epistemic_status": {
+    "built": "Two-level candidate generated.",
+    "tested": "Two identical local builds and 8 targeted unit tests passed.",
+    "verified": "No semantic proposition or source truth verified.",
+    "released": false
+  },
+  "blockers": [
+    "No conversation export surfaced in targeted Files search.",
+    "Private Library sources not promoted to public catalog.",
+    "Zero source-grounded counterexamples, semantic cases, benchmark suites and independent reviews.",
+    "Core contradictions not measured because no reviewed inventory exists.",
+    "Holdout not frozen; MIRROR review incomplete.",
+    "Wix page-level drift; no write performed.",
+    "PR122 current-head CI ACTION_REQUIRED.",
+    "Core contradiction count discrepancy: one generated report says 0 while the agent gatekeeper has no inventory; treat as NOT_MEASURED.",
+    "Workflow synthetic suites pass, but source-grounded benchmark remains 0 cases."
+  ],
+  "source_extraction": {
+    "internal_wanga_readmes": 6,
+    "source_records_added": 6,
+    "candidate_logic_units_added": 16,
+    "formal_logic_units_added": 0,
+    "synthetic_counterexample_candidates": 1,
+    "semantic_entailments_asserted": 0
+  },
+  "workflow_agent_cycle": {
+    "run_id": 40455159578,
+    "status": "SUCCESS",
+    "artifact_id": 12711879074,
+    "artifact_sha256": "7dae75cdf64e89a6a7fb7aa615a9e20e392c2ca5a591e093f79bd8abcb103194",
+    "agents": 12,
+    "source_records": 17,
+    "source_classes": 11,
+    "article_nodes": 28,
+    "editorial_edges": 111,
+    "taxonomy_levels": 4,
+    "candidate_substructures": 523,
+    "candidate_compositions": 523,
+    "active_contracts": 2,
+    "mirror_review": {
+      "status": "REVIEW_REQUIRED",
+      "reciprocal_edge_candidates": 52,
+      "independent_review_count": 0
+    },
+    "benchmarks": {
+      "propositional_synthetic": {
+        "cases": 5,
+        "passed": 5
+      },
+      "typed_formal_synthetic": {
+        "cases": 7,
+        "passed": 7
+      },
+      "source_grounded": {
+        "cases": 0,
+        "status": "BLOCKED_INSUFFICIENT_REVIEWED_CASES"
+      }
+    },
+    "ark_swarm_logic_trader": {
+      "agents": 10,
+      "passed": 10,
+      "candidate_id": "LT-c1918183cff25c53",
+      "package_hash": "e462a18447565beea93eca29eebaea68a66d8ea10134debc44e43536bc06b984",
+      "logic_package_model_hash": "c1918183cff25c536ce28d1771877bd0f92ee8246b113ee8409639f9b95e64d0",
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    "formalization_queue": {
+      "queue_item_id": "FORM-085788abb132f6bb",
+      "status": "READY_FOR_FORMALIZATION",
+      "solver_execution_status": "NOT_RUN_NO_FORMAL_AST"
+    },
+    "candidate_map_hash": "fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf",
+    "readiness_gate": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "catalog_validation": "PASS",
+    "contradiction_metric_discrepancy": {
+      "readiness_report_observed": 0,
+      "agent_gatekeeper_observed": null,
+      "contradiction_inventory_available": false,
+      "decision": "NOT_MEASURED"
+    }
+  },
+  "candidate_logic_units_added": 16,
+  "synthetic_counterexample_candidates": 1,
+  "ci": {
+    "initial_report_commit": "115b1c903138fb54cee2225a9bb0cc65d1128097",
+    "runs": [
+      {
+        "name": "CodeQL Advanced",
+        "run_id": 40455159634,
+        "status": "SUCCESS"
+      },
+      {
+        "name": "Logic Fractal Wiki Research",
+        "run_id": 40455159578,
+        "status": "SUCCESS"
+      },
+      {
+        "name": "WANGA Ecosystem Agent Sweep",
+        "run_id": 40455159669,
+        "status": "SUCCESS_WITH_SCOPE_BLOCKER"
+      },
+      {
+        "name": "Repository Integrity",
+        "run_id": 40455159587,
+        "status": "SUCCESS"
+      }
+    ],
+    "report_followup_commit": "PENDING"
+  }
+}
