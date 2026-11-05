@@ -1,0 +1,59 @@
+{
+  "registry_name": "WANGA-LAB / PCE Contract Registry",
+  "registry_version": "1.0.0",
+  "status": "SOURCE_INDEX_CREATED_CANONICAL_PCE_V1_3_ARTIFACT_NOT_LOCATED",
+  "authoritative_baseline": {
+    "title": "WANGA MASTER CONTRACT v1.0",
+    "path": "governance/WANGA_MASTER_CONTRACT_v1.0.md",
+    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/governance/WANGA_MASTER_CONTRACT_v1.0.md",
+    "status": "SOURCE_READ"
+  },
+  "contracts_and_notices": [
+    {
+      "id": "WANGA_MASTER_CONTRACT_v1.0",
+      "path": "governance/WANGA_MASTER_CONTRACT_v1.0.md",
+      "status": "SOURCE_READ"
+    },
+    {
+      "id": "PCE_SYSTEM_FINAL_NOTICE_v1.0",
+      "path": "governance/PCE_SYSTEM_FINAL_NOTICE_v1.0.md",
+      "status": "SOURCE_READ",
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/governance/PCE_SYSTEM_FINAL_NOTICE_v1.0.md"
+    },
+    {
+      "id": "PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0",
+      "path": "governance/PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0.md",
+      "status": "SOURCE_READ",
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/governance/PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0.md"
+    }
+  ],
+  "required_seal_evidence": {
+    "tag": "PCE-CONTRACT-v1.3-SEALED",
+    "verifier_command": "python core/verify_contract.py",
+    "required_verifier_output": "PASS",
+    "remote_push_required": true,
+    "status": "NOT_VERIFIED_BY_THIS_REGISTRY_WRITE"
+  },
+  "canonical_artifact": {
+    "expected_filename": "contract_v1.3.json",
+    "status": "NOT_LOCATED",
+    "policy": "Do not reconstruct; import only from the exact authorized source."
+  },
+  "evidence_links": [
+    "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io/actions/runs/39736408353",
+    "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/governance/PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0.md",
+    "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/governance/PCE_SYSTEM_FINAL_NOTICE_v1.0.md"
+  ],
+  "invariants": [
+    "SOURCE -> LINEAGE -> EXTRACTION -> RELATIONS -> LOGIC -> VERIFICATION -> CONFIGURATION -> WEIGHTS",
+    "WEIGHTS = NOT_CREATED until source-grounded logic and verification gates pass",
+    "Missing required evidence blocks dependent transitions",
+    "A file upload or commit is not proof of contract sealing or runtime execution",
+    "Preserve provenance, exact wording, version history, and unresolved items"
+  ],
+  "portal": {
+    "url": "https://pce-contract-registry-5dlcky.v2.appdeploy.ai/",
+    "status": "DEPLOYED_READY",
+    "purpose": "Dedicated source-linked contract portal"
+  }
+}
