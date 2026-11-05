@@ -1,0 +1,85 @@
+{
+  "orchestration_id": "MILAOT_HAHIGAYON_BOUNDED_WORKFLOW_V1",
+  "purpose": "Execute and audit source-preserving structural integration of Gate 14 into Gates 1-13 without interpretation or scope drift.",
+  "authority": {
+    "global_policy": "docs/MASTER_PROJECT_INSTRUCTIONS_V1.md",
+    "source_index": "milaot-hahigayon/sentences/INDEX.md",
+    "gate_13_registry": "docs/LOGIC/MILOT_HIGAYON_GATE_13_SENTENCE_REGISTRY.md",
+    "gate_14_registry": "milaot-hahigayon/sentences/שער-יד.md",
+    "single_global_orchestrator": true,
+    "local_agents_may_not_override_contract": true
+  },
+  "components": [
+    {
+      "id": "github_source_reader",
+      "kind": "connector",
+      "responsibility": "Read source files, indexes, registries, and revision metadata from the selected repository branch.",
+      "permissions": ["read"],
+      "must_not": ["rewrite source", "infer missing files", "claim source verification without source comparison"]
+    },
+    {
+      "id": "structural_integrator",
+      "kind": "python_module",
+      "entrypoint": "tools/milaot_hahigayon/structural_integrator.py",
+      "responsibility": "Index source units and join only explicitly declared, evidence-backed structural links.",
+      "permissions": ["read_source", "write_generated_artifact"],
+      "must_not": ["generate interpretation", "invent links", "edit source registries"]
+    },
+    {
+      "id": "execution_auditor",
+      "kind": "python_module",
+      "entrypoint": "tools/milaot_hahigayon/execution_auditor.py",
+      "responsibility": "Independently verify source preservation, scope, statuses, link evidence, and forbidden output fields.",
+      "permissions": ["read_generated_artifact", "emit_audit_report"],
+      "must_not": ["repair findings silently", "upgrade status without evidence"]
+    }
+  ],
+  "execution_order": [
+    "READ_REPOSITORY_STATE",
+    "CHECK_SOURCE_COVERAGE",
+    "INDEX_GATE_14_SOURCE_UNITS",
+    "LOAD_EXPLICIT_LINKS",
+    "BUILD_STRUCTURAL_INTEGRATION",
+    "RUN_INDEPENDENT_AUDIT",
+    "RECORD_RESULT_AND_BLOCKERS"
+  ],
+  "gates": {
+    "coverage_gate": {
+      "required_preceding_gates": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13],
+      "missing_source_action": "BLOCK",
+      "no_implicit_fallback": true
+    },
+    "link_gate": {
+      "link_requires": ["source_unit_id", "target_unit_id", "relationship_type", "evidence_reference"],
+      "unsubstantiated_link_status": "UNRESOLVED"
+    },
+    "verification_gate": {
+      "sequence": ["EXECUTE", "COLLECT_EVIDENCE", "TEST", "VERIFY", "PROMOTE"],
+      "promotion_requires_audit_pass": true
+    }
+  },
+  "drift_guard": {
+    "stop_if": [
+      "interpretation is generated",
+      "explanatory commentary is inserted into the artifact",
+      "source wording is changed",
+      "an external theory is introduced",
+      "a missing link is guessed",
+      "completion is claimed while coverage is blocked",
+      "the task scope changes without explicit user instruction"
+    ],
+    "on_violation": "HALT_AND_REPORT_EVIDENCE",
+    "no_silent_repair": true
+  },
+  "outputs": [
+    "artifacts/gate14_structural_integration.json",
+    "artifacts/gate14_execution_audit.json"
+  ],
+  "status_semantics": {
+    "INDEXED": "Source unit found and indexed.",
+    "LINKED": "An explicit structural link with evidence reference exists.",
+    "UNRESOLVED": "No sufficient link evidence is available.",
+    "BLOCKED": "Required source coverage is absent.",
+    "VERIFIED": "Independent evidence checks passed for the specific claim; never inferred from extraction."
+  }
+}
