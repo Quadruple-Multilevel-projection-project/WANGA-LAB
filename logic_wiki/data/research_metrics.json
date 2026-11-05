@@ -1,9 +1,7 @@
 {
-  "additional_source_records": 1,
-  "additional_source_classes": [
-    "PRIMARY_TEXT_TRANSLATION"
-  ],
-  "additional_logic_units_with_provenance": 1,
+  "additional_source_records": 0,
+  "additional_source_classes": [],
+  "additional_logic_units_with_provenance": 0,
   "composition_rules_with_contracts": 2,
   "counterexample_cases": 0,
   "test_cases": 0,
@@ -13,7 +11,7 @@
   "deterministic_build": true,
   "holdout_split": false,
   "mirror_review": false,
-  "note": "2 active composition rules are defined with explicit contracts in logic_fractal/data/composition_rules.json. This is a source/specification count, not a benchmark score. Benchmark cases remain 0 until a reviewed ground-truth test suite is registered and executed.",
+  "note": "Source records and logic units are counted from the canonical articles.json catalog. The Gate XIV source and article are already present there and must not be added a second time through additive scalar metrics. The two active composition rules are specified with explicit contracts; semantic benchmark cases remain 0 until reviewed ground-truth suites are registered and executed.",
   "deterministic_build_evidence": {
     "status": "TESTED_ON_SYNTHETIC_FIXTURES",
     "source": "scripts/build_first_fractal_model.py",
