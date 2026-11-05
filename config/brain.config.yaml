@@ -1,0 +1,23 @@
+external_routing:
+  mode: fail_closed
+  sanitization_proxy: engine.sanitization_proxy.SanitizationProxy
+  connector: engine.kimi_connector.KimiConnector
+  provider_base_url: https://api.moonshot.ai/v1
+  provider_model: kimi-k3
+  required_permission: LLM_EXTERNAL_API
+  spheres:
+    - Sphere_PHYSICAL
+    - Sphere_PLACE
+    - Sphere_THOUGHT
+    - Sphere_ADVICE
+    - Sphere_WILL
+    - Sphere_INTELLECT
+  external_agent:
+    role: External_Sub_Agent
+    allowed_plugins:
+      - LLM_EXTERNAL_API
+      - GUARDIAN_VALIDATOR
+    denied_plugins:
+      - NEO4J_QUERY
+      - PYTHON_EXEC
+  verification_status: IMPLEMENTATION_CANDIDATE_NOT_DEPLOYMENT_VERIFIED

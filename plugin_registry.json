@@ -1,0 +1,24 @@
+{
+  "roles": {
+    "External_Sub_Agent": {
+      "creator_roles": ["Data_Triangulator"],
+      "allowed_plugins": ["LLM_EXTERNAL_API", "GUARDIAN_VALIDATOR"],
+      "denied_plugins": ["NEO4J_QUERY", "PYTHON_EXEC"],
+      "default_permissions": []
+    }
+  },
+  "plugins": {
+    "LLM_EXTERNAL_API": {
+      "provider": "moonshot",
+      "endpoint": "https://api.moonshot.ai/v1",
+      "model": "kimi-k3",
+      "requires_permission": "LLM_EXTERNAL_API",
+      "entrypoint": "engine.kimi_connector.KimiConnector",
+      "mandatory_boundary": "engine.sanitization_proxy.SanitizationProxy"
+    },
+    "GUARDIAN_VALIDATOR": {
+      "purpose": "validate external response against caller-defined schema"
+    }
+  },
+  "status": "IMPLEMENTATION_CANDIDATE_NOT_DEPLOYMENT_VERIFIED"
+}
