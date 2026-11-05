@@ -1,7 +1,7 @@
 {
   "schema_version": "wanga-repository-inventory/1.0",
-  "snapshot_date": "2026-11-04",
-  "source": "Live GitHub connector inventory snapshot; repository metadata and bounded README/tree scans; private repositories redacted.",
+  "snapshot_date": "2026-11-05",
+  "source": "Live GitHub connector inventory snapshot; bounded README/latest-commit scans; private repository names and contents redacted.",
   "affiliation_counts": {
     "owner": 38,
     "collaborator": 13,
@@ -27,8 +27,8 @@
     "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
     "default_branch": "main",
     "visibility": "public",
-    "updated_at": "2026-11-03T01:49:28Z",
-    "head_sha": "61e5fba00c082711af13d017eba1c05f9e0d2d6a",
+    "updated_at": "2026-11-05T03:08:40Z",
+    "head_sha": "79207e1456e3eb6d9d121e88adf4dd7040b512a5",
     "scan_status": "SCANNED_PRIMARY_PROJECT"
   },
   "public_repositories": [
@@ -46,14 +46,16 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_COMMIT_DIFF_README_MISSING",
+      "latest_known_update": "2026-10-29T20:49:52Z",
       "latest_known_push": null,
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null,
+      "scan_note": "README.md not found; latest commit diff inspected; connector did not expose per-file paths. Commit title and diff contain a Fly Brain/deterministic-edge-kernel proposal and configuration claims; no tests or runtime verification performed.",
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_MISSING_PATH_NOT_RESOLVED",
+      "latest_commit_sha": "0b6041813f71cc05932d941ab3e38682d0a57544",
+      "latest_commit_url": "https://github.com/AmbassadorOv/-artificial-y/commit/0b6041813f71cc05932d941ab3e38682d0a57544"
     },
     {
       "full_name": "AmbassadorOv/AG-triple-X-",
@@ -69,14 +71,18 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2026-09-23T02:06:11Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "readme_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned; blob hash matches README.md in Quadruple-Multilevel-projection-project/stunning-octo-garbanzo. Distinct repositories retained.",
+      "duplicate_status": "DUPLICATE_BLOB_WITH_Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
     },
     {
       "full_name": "AmbassadorOv/AmbassadorOv",
@@ -92,14 +98,18 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2026-10-22T06:42:08Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "readme_blob_sha": "d2664df6ce794e353a4d1b04682627c3b13f0bb9",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "Public profile README scanned; profile statement only, not implementation evidence.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
     },
     {
       "full_name": "AmbassadorOv/awesome-chatgpt-prompts",
@@ -115,14 +125,18 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-12-02T03:18:11Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "readme_blob_sha": "25c6254b882a96645aeacb866e735a14040913dc",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned; no WANGA-specific source promoted in this bounded pass.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
     },
     {
       "full_name": "AmbassadorOv/branches-",
@@ -138,14 +152,18 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-07-09T11:10:23Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "readme_blob_sha": "26ee6fb7d42d9c86e1dee2a4082f9276a52815a2",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned on the exact default branch returned by repository metadata; no WANGA-specific source promoted.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
     },
     {
       "full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
@@ -161,14 +179,18 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2024-05-10T18:30:44Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "readme_blob_sha": "2866fa41c2232edaf4bfa82e299e22d54ed267ec",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned; publication-extension description only, no source-grounded WANGA logic extracted.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
     },
     {
       "full_name": "AmbassadorOv/cookbook",
@@ -184,14 +206,18 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-05-16T10:22:12Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "readme_blob_sha": "646c146ea44ee0175fccf62427bcc03dd88ed1b6",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned; cookbook repository, no WANGA-specific source promoted.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
     },
     {
       "full_name": "AmbassadorOv/desktop",
@@ -207,14 +233,18 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2026-10-22T20:21:02Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "readme_blob_sha": "c7702d385076e80f365a23d17dc868b9ecb6a5ad",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned on development branch; desktop project, no WANGA-specific source promoted.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
     },
     {
       "full_name": "AmbassadorOv/docs",
@@ -230,14 +260,18 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2024-11-13T15:44:32Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "readme_blob_sha": "69090a601896b5189a5b3ee42105ed42638016be",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned; documentation repository, no WANGA-specific source promoted.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
     },
     {
       "full_name": "AmbassadorOv/eslint",
@@ -253,14 +287,18 @@
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2024-12-09T19:04:53Z",
       "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "readme_blob_sha": "326c6121e810f4d1edfbc781eff4d5b7f46d1c36",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned; linting project, no WANGA-specific source promoted.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
     },
     {
       "full_name": "AmbassadorOv/extensions",
@@ -1703,31 +1741,18 @@
   ],
   "scan_cursor": {
     "priority_order": [
-      "AmbassadorOv/-artificial-y",
-      "AmbassadorOv/AG-triple-X-",
-      "AmbassadorOv/AmbassadorOv",
-      "AmbassadorOv/awesome-chatgpt-prompts",
-      "AmbassadorOv/branches-",
-      "AmbassadorOv/chatgpt-scientific-publications-extension",
-      "AmbassadorOv/cookbook",
-      "AmbassadorOv/desktop",
-      "AmbassadorOv/docs",
-      "AmbassadorOv/eslint"
+      "AmbassadorOv/extensions",
+      "AmbassadorOv/fluffy-parakeet",
+      "AmbassadorOv/generative-ai-docs",
+      "AmbassadorOv/googleapis",
+      "AmbassadorOv/https-AmbassadorOv.io",
+      "AmbassadorOv/mediapipe",
+      "AmbassadorOv/mermaid",
+      "AmbassadorOv/mujoco",
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/Nanomathematics"
     ],
     "last_completed_batch": [
-      "AmbassadorOv/multi-agent-orchestator",
-      "AmbassadorOv/Qualia",
-      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
-      "AmbassadorOv/Nanomathematics",
-      "AmbassadorOv/O-Ms",
-      "Quadruple-Multilevel-projection-project/Qualia",
-      "tribal-archery/MAM-parsed",
-      "tribal-archery/Qdprojects",
-      "tribal-archery/copilot-cli",
-      "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo"
-    ],
-    "last_completed_index": 20,
-    "next_batch": [
       "AmbassadorOv/-artificial-y",
       "AmbassadorOv/AG-triple-X-",
       "AmbassadorOv/AmbassadorOv",
@@ -1739,12 +1764,25 @@
       "AmbassadorOv/docs",
       "AmbassadorOv/eslint"
     ],
-    "remaining_public_count": 37,
+    "last_completed_index": 30,
+    "next_batch": [
+      "AmbassadorOv/extensions",
+      "AmbassadorOv/fluffy-parakeet",
+      "AmbassadorOv/generative-ai-docs",
+      "AmbassadorOv/googleapis",
+      "AmbassadorOv/https-AmbassadorOv.io",
+      "AmbassadorOv/mediapipe",
+      "AmbassadorOv/mermaid",
+      "AmbassadorOv/mujoco",
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/Nanomathematics"
+    ],
+    "remaining_public_count": 27,
     "private_repositories_deferred": true,
-    "scanned_public_count": 21,
+    "scanned_public_count": 31,
     "core_repository_scanned": true,
-    "next_action": "Scan the next ten public repositories in priority_order. Keep private repository names/content redacted in the public registry.",
-    "last_completed_at": "2026-11-04T07:21:43+02:00"
+    "next_action": "Scan the next ten public repositories in priority_order; check for new commits and preserve private repository redaction.",
+    "last_completed_at": "2026-11-05T07:03:05+02:00"
   },
   "completed_batches": [
     {
@@ -1762,6 +1800,22 @@
         "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo"
       ],
       "status": "SCANNED_README_AND_BOUNDED_TREE"
+    },
+    {
+      "date": "2026-11-05",
+      "repositories": [
+        "AmbassadorOv/-artificial-y",
+        "AmbassadorOv/AG-triple-X-",
+        "AmbassadorOv/AmbassadorOv",
+        "AmbassadorOv/awesome-chatgpt-prompts",
+        "AmbassadorOv/branches-",
+        "AmbassadorOv/chatgpt-scientific-publications-extension",
+        "AmbassadorOv/cookbook",
+        "AmbassadorOv/desktop",
+        "AmbassadorOv/docs",
+        "AmbassadorOv/eslint"
+      ],
+      "status": "SCANNED_README_AND_LATEST_COMMIT_BOUNDED"
     }
   ]
 }
