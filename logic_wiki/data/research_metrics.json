@@ -7,11 +7,11 @@
   "test_cases": 0,
   "benchmark_suites": 0,
   "independent_review_cycles": 0,
-  "critical_core_contradictions": 0,
+  "critical_core_contradictions": null,
   "deterministic_build": true,
   "holdout_split": false,
   "mirror_review": false,
-  "note": "Source records and logic units are counted from the canonical articles.json catalog. The Gate XIV source and article are already present there and must not be added a second time through additive scalar metrics. The two active composition rules are specified with explicit contracts; semantic benchmark cases remain 0 until reviewed ground-truth suites are registered and executed.",
+  "note": "Source records and logic units are counted from the canonical articles.json catalog. The Gate XIV source and article are already present there and must not be added a second time through additive scalar metrics. The two active composition rules are specified with explicit contracts; semantic benchmark cases remain 0 until reviewed ground-truth suites are registered and executed. Contradiction count is UNKNOWN until a reviewed contradiction inventory exists; an absent inventory must not be interpreted as zero.",
   "deterministic_build_evidence": {
     "status": "TESTED_ON_SYNTHETIC_FIXTURES",
     "source": "scripts/build_first_fractal_model.py",
@@ -152,5 +152,6 @@
   },
   "source_grounded_candidate_compositions": 1,
   "source_grounded_candidate_status": "CANDIDATE_PENDING_PULL_REQUEST_CI",
-  "source_grounded_candidate_hash": "PENDING_PULL_REQUEST_CI_OUTPUT"
+  "source_grounded_candidate_hash": "PENDING_PULL_REQUEST_CI_OUTPUT",
+  "contradiction_inventory_available": false
 }

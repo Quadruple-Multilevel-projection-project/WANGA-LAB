@@ -29,6 +29,10 @@ class LogicWikiTests(unittest.TestCase):
   self.assertEqual(report['article_count'],len(catalog['articles']))
   self.assertEqual(report['observed']['source_records'],len(catalog['sources']))
   self.assertEqual(report['observed']['logic_units_with_provenance'],sum(1 for a in catalog['articles'] if a.get('sources')))
+  self.assertIsNone(report['observed']['critical_core_contradictions'])
+  self.assertFalse(report['observed']['contradiction_inventory_available'])
+  self.assertFalse(report['checks']['critical_core_contradictions'])
+  self.assertIn('critical_core_contradictions',report['missing_requirements'])
   self.assertNotEqual(report['readiness_gate_status'],'CANDIDATE_RELEASE_READY_FOR_HUMAN_REVIEW')
  def test_wix_sync_manifest_records_stable_extended_resources(self):
   catalog=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
