@@ -54,6 +54,17 @@ class LogicWikiTests(unittest.TestCase):
    self.assertTrue(set(node.get('relation_ids',[])).issubset(node_ids),node['id'])
   self.assertEqual(taxonomy['validation']['article_count'],len(catalog['articles']))
   self.assertEqual(taxonomy['validation']['source_count'],len(catalog['sources']))
+ def test_milot_higayon_gate_xiv_is_source_linked_and_bounded(self):
+  data=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
+  source=next(x for x in data['sources'] if x['id']=='SRC-RAMBAM-MILOT-HIGAYON-GATE-XIV')
+  article=next(x for x in data['articles'] if x['id']=='milot-higayon-gate-xiv')
+  self.assertEqual(article['sources'],[source['id']])
+  self.assertEqual(article['status'],'SOURCE_SUPPORTED_SUMMARY')
+  self.assertEqual(source['type'],'PRIMARY_TEXT_TRANSLATION')
+  self.assertIn('783578',source['uri'])
+  self.assertIn('unproofread',article['scope_note'].lower())
+  self.assertIn('not a claim about Moreh Nevukhim chapter 14',article['scope_note'])
+
  def tearDown(self):
   p=ROOT/'logic_wiki/generated-test'
   if p.exists():
