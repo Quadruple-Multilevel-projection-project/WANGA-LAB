@@ -1,0 +1,51 @@
+name: Pre-Field Integrity Audit
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile Python sources
+        run: python -m compileall -q core graph crypto validation scripts
+
+      - name: Run repository integrity tests
+        run: |
+          if [ -d tests ]; then
+            python -m unittest discover -s tests -v
+          else
+            echo "No tests directory yet; compilation gate passed."
+          fi
+
+      - name: Validate JSON schemas and registries
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+
+          paths = [
+              Path("vitruvius/VITRUVIUS_INDEX_SCHEMA_V1.json"),
+              Path("ARCHITECTURE_REGISTRY.json"),
+          ]
+          for path in paths:
+              if path.exists():
+                  json.loads(path.read_text(encoding="utf-8"))
+                  print(f"VALID JSON: {path}")
+          PY
+
+      - name: Emit evidence boundary
+        run: |
+          echo "AUDIT_STATUS=STRUCTURAL_ONLY"
+          echo "No model output is treated as verified evidence by this workflow."
