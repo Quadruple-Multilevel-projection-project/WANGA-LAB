@@ -170,7 +170,7 @@
   "CI": {
     "logic_fractal": {
       "run_id": 42170997878,
-      "run_number": 222,
+      "run_number": 226,
       "conclusion": "success",
       "head_sha": "81fc1210710b06edd5872e05ffb2f3ae0b0a7334",
       "job_id": 127738523980,
@@ -179,7 +179,8 @@
       "duration_seconds": 17,
       "artifact_id": 13480664214,
       "artifact_size_bytes": 102675,
-      "artifact_zip_sha256": "913b1a6877bbad9507474860aa4a023d8b0cac1ae576b1f581653198c2700ac2"
+      "artifact_zip_sha256": "913b1a6877bbad9507474860aa4a023d8b0cac1ae576b1f581653198c2700ac2",
+      "run_number_verified_from": "GET /actions/runs/42170997878"
     },
     "repository_integrity": {
       "run_id": 42170997104,
