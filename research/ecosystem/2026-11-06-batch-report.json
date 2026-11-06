@@ -203,12 +203,13 @@
     "number": 139,
     "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/139",
     "state": "OPEN_DRAFT",
-    "head_sha": "3527ce44cad0efb2b2f2c847b7b686221722fc9d",
-    "changed_files": 8
+    "changed_files": 8,
+    "initial_head_sha": "3527ce44cad0efb2b2f2c847b7b686221722fc9d"
   },
   "current_cycle_ci": {
     "github_workflow_runs": "NONE_RETURNED",
     "combined_status": "NO_STATUS_CHECKS_RETURNED",
-    "local_registry_integrity": "PASS"
+    "local_registry_integrity": "PASS",
+    "check_scope": "PR #139 documentation/evidence branch; no workflow runs returned on the initial head; final head check performed after this metadata update."
   }
 }
