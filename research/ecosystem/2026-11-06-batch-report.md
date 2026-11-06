@@ -47,3 +47,9 @@
 - `tribal-archery/mermaid`
 - `tribal-archery/unetbootin`
 - `tribal-archery/vscode-azure-blockchain-ethereum`
+
+## Publication and validation
+
+- Draft PR [#139](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/139) created; 8 files changed; no merge.
+- No PR-triggered workflow run or commit status was returned for the current PR head. This is recorded as **CI_NOT_RETURNED**, not as a pass.
+- Local registry integrity checks passed: 58 unique public repository records, cursor 51/58 with 7 remaining, unique finding/candidate/mirror IDs, all candidate source references resolve, and private repository names remain redacted.
