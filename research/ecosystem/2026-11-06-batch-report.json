@@ -163,14 +163,18 @@
     "Seven public repositories remain."
   ],
   "ci": {
-    "latest_ecosystem_workflow_run": 42169282391,
-    "run_number": 164,
+    "latest_ecosystem_workflow_run": 42170997129,
+    "run_number": 170,
     "conclusion": "success",
     "scope": "CURRENT_REPOSITORY_ONLY",
-    "cross_repo_token_configured": false,
-    "artifact_id": 13480421876,
+    "cross_repo_read_token_configured": false,
+    "artifact_id": 13481086149,
     "artifact_size_bytes": 3222,
-    "note": "This runner artifact is not the ten-repository live-connector scan."
+    "started_at": "2026-11-06T05:52:41Z",
+    "completed_at": "2026-11-06T05:53:03Z",
+    "duration_seconds": 22,
+    "runner_name": "NOT_EXPOSED_BY_GITHUB_CONNECTOR",
+    "note": "The GitHub Actions runner completed its own WANGA-LAB-only scan; the 10-repository batch in this report was collected separately through the connected live GitHub connector."
   },
   "next_batch": [
     "Quadruple-Multilevel-projection-project/-",
@@ -181,5 +185,11 @@
     "tribal-archery/unetbootin",
     "tribal-archery/vscode-azure-blockchain-ethereum"
   ],
-  "next": "Scan the seven remaining public repositories; keep private repositories redacted and do not write to external repositories."
+  "next": "Scan the seven remaining public repositories; keep private repositories redacted and do not write to external repositories.",
+  "review_branch_head_at_scan": "81fc1210710b06edd5872e05ffb2f3ae0b0a7334",
+  "review_branch_compare_to_main": {
+    "ahead_by": 46,
+    "behind_by": 4,
+    "status": "DIVERGED"
+  }
 }

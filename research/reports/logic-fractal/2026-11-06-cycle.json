@@ -5,7 +5,7 @@
   "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
   "main_commit": "250e195bd7d162b4b1fee77f2d55e97332c3b99c",
   "review_branch": "automation/wanga-cycle-2026-11-04",
-  "review_branch_head_before_reports": "b6c260dab75d44b499ec3bc09563688eac6495c0",
+  "review_branch_head_before_reports": "81fc1210710b06edd5872e05ffb2f3ae0b0a7334",
   "SOURCES_SCANNED": {
     "wanga_main": [
       {
@@ -86,6 +86,14 @@
       "relevant_library_files_read": 5,
       "raw_or_summarized_private_content_published": false,
       "status": "PRIVATE_REVIEW_ONLY"
+    },
+    "latest_workflow_artifact": {
+      "run_id": 42170997878,
+      "artifact_id": 13480664214,
+      "artifact_size_bytes": 102675,
+      "artifact_zip_sha256": "913b1a6877bbad9507474860aa4a023d8b0cac1ae576b1f581653198c2700ac2",
+      "date": "2026-11-06",
+      "contents": "readiness-report.json, agent_cycle_report.json, typed-first-model-candidate.json, benchmark reports and generated Logic Wiki"
     }
   },
   "ACCESS_GAPS": [
@@ -135,11 +143,13 @@
     "adjudicated_core_contradictions": 0,
     "contradiction_inventory": "NOT_AVAILABLE_NOT_MEASURED",
     "mirror_counter_reading_candidates": 1,
-    "mirror_adjudication": "NOT_ADJUDICATED"
+    "mirror_adjudication": "NOT_ADJUDICATED",
+    "mirror_reciprocal_edge_review_candidates": 52,
+    "mirror_review_status": "REVIEW_REQUIRED_NOT_ADJUDICATED"
   },
   "BENCHMARKS": {
-    "logic_fractal_software_tests": "PASS_ON_PR136_PRE_UPDATE_HEAD",
-    "first_candidate_builder": "PASS_SYNTHETIC_ONLY",
+    "logic_fractal_software_tests": "PASS_ON_UPDATED_HEAD_81FC",
+    "first_candidate_builder": "PASS_SYNTHETIC_ONLY_ON_UPDATED_HEAD_81FC",
     "typed_formal_cases": {
       "total": 7,
       "passed": 7,
@@ -154,45 +164,64 @@
     "benchmark_suites": 0,
     "independent_reviews": 0,
     "holdout_split": false,
-    "mirror_review": false
+    "mirror_review": false,
+    "mirror_reciprocal_edge_candidates": 52
   },
   "CI": {
     "logic_fractal": {
-      "run_id": 41979314844,
-      "run_number": 220,
+      "run_id": 42170997878,
+      "run_number": 222,
       "conclusion": "success",
-      "head_sha": "c041af58c20b7df43bd8f1b4876536f55d562ca3",
-      "job_id": 127085475211,
-      "steps": 32,
-      "artifact_id": 13392319747,
-      "artifact_size_bytes": 95224
+      "head_sha": "81fc1210710b06edd5872e05ffb2f3ae0b0a7334",
+      "job_id": 127738523980,
+      "started_at": "2026-11-06T05:52:42Z",
+      "completed_at": "2026-11-06T05:52:59Z",
+      "duration_seconds": 17,
+      "artifact_id": 13480664214,
+      "artifact_size_bytes": 102675,
+      "artifact_zip_sha256": "913b1a6877bbad9507474860aa4a023d8b0cac1ae576b1f581653198c2700ac2"
     },
     "repository_integrity": {
-      "run_id": 41979314583,
+      "run_id": 42170997104,
       "conclusion": "success",
-      "head_sha": "c041af58c20b7df43bd8f1b4876536f55d562ca3"
-    },
-    "codeql": {
-      "run_id": 41979314752,
-      "conclusion": "success",
-      "head_sha": "c041af58c20b7df43bd8f1b4876536f55d562ca3"
+      "head_sha": "81fc1210710b06edd5872e05ffb2f3ae0b0a7334",
+      "started_at": "2026-11-06T05:52:41Z",
+      "completed_at": "2026-11-06T05:53:12Z",
+      "duration_seconds": 31
     },
     "ecosystem_sweep": {
-      "run_id": 42169282391,
-      "run_number": 164,
+      "run_id": 42170997129,
+      "run_number": 170,
       "conclusion": "success",
+      "head_sha": "81fc1210710b06edd5872e05ffb2f3ae0b0a7334",
       "scope": "CURRENT_REPOSITORY_ONLY",
       "cross_repo_read_token_configured": false,
-      "artifact_id": 13480421876,
-      "artifact_size_bytes": 3222
+      "artifact_id": 13481086149,
+      "artifact_size_bytes": 3222,
+      "started_at": "2026-11-06T05:52:41Z",
+      "completed_at": "2026-11-06T05:53:03Z",
+      "duration_seconds": 22
     },
-    "updated_branch_ci": "PENDING"
+    "codeql": {
+      "run_id": 42170997169,
+      "conclusion": "success",
+      "head_sha": "81fc1210710b06edd5872e05ffb2f3ae0b0a7334",
+      "started_at": "2026-11-06T05:52:41Z",
+      "completed_at": "2026-11-06T05:53:40Z",
+      "duration_seconds": 59
+    },
+    "runner_name": "NOT_EXPOSED_BY_GITHUB_CONNECTOR",
+    "updated_head_ci": "ALL_FOUR_WORKFLOWS_PASS_ON_81FC",
+    "final_report_commit_ci": "PENDING_AT_REPORT_COMMIT"
   },
   "MODEL_HASH": {
     "candidate_id": "FL-COMPOSE-ab1b08a4197fd719",
-    "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "typed_first_model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "fractal_catalog_candidate_hash": "eacedb78cb74300b4f0344fce4f5a9c5706686aecc810072e5c0b65c161c6423",
     "candidate_json_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
-    "artifact_zip_sha256": "71a41115f07cc6936d918001a71858f854e8cb09abdf8aa011832e2d1354e28f",
+    "artifact_zip_sha256": "913b1a6877bbad9507474860aa4a023d8b0cac1ae576b1f581653198c2700ac2",
+    "artifact_id": 13480664214,
+    "artifact_size_bytes": 102675,
     "scope": "SYNTHETIC_TEST_FIXTURES_ONLY",
     "status": "CANDIDATE_NOT_RELEASED"
   },
@@ -246,8 +275,8 @@
     }
   },
   "BUILT_TESTED_VERIFIED": {
-    "built": "Two-scale typed candidate built from three synthetic typed fragments; model hash archived in the 2026-11-05 workflow artifact.",
-    "tested": "PR #136 pre-update head c041af58 passed Logic Fractal Wiki Research, Repository Integrity and CodeQL; 7/7 synthetic typed-formal cases passed.",
+    "built": "The current GitHub Actions run built the two-scale typed candidate from three synthetic typed fragments; model hash and full report artifact archived.",
+    "tested": "On updated PR #136 head 81fc121, Logic Fractal Wiki Research, Repository Integrity, CodeQL and Ecosystem Agent Sweep all completed successfully. The builder step and 7/7 synthetic typed-formal cases passed.",
     "verified": "No source-grounded semantic correctness, holdout validation, contradiction inventory or independent review; candidate remains NOT_YET_VERIFIED."
   },
   "LIMBO": {
@@ -336,8 +365,8 @@
     },
     {
       "role": "Mirror Reviewer",
-      "status": "IN_PROGRESS",
-      "output": "One C1/C2 commit-boundary counter-reading recorded; not adjudicated."
+      "status": "REVIEW_REQUIRED",
+      "output": "52 reciprocal-edge candidates remain for independent review; one additional external C1/C2 counter-reading is recorded but not adjudicated."
     },
     {
       "role": "Benchmark Evaluator",
@@ -366,7 +395,7 @@
     "Critical contradiction inventory unavailable.",
     "PR #122 is four commits behind current main and latest-head checks are action_required.",
     "Wix update is pending PR approval; deployment remains dated 2026-10-12.",
-    "Local container has no GitHub network access; builder evidence comes from the successful GitHub Actions run on the prior PR136 head."
+    "The final report commit will trigger another CI cycle; the four successful checks recorded here are for pre-report head 81fc121."
   ],
   "NEXT": [
     "Refresh PR #136 and PR #122 from current main through review branches; do not merge automatically.",
@@ -375,5 +404,10 @@
     "Complete independent MIRROR reviews and contradiction inventory.",
     "Scan the seven remaining public repositories.",
     "After PR approval/merge, update Wix and perform deployment read-back."
-  ]
+  ],
+  "review_branch_compare": {
+    "ahead_by": 46,
+    "behind_by": 4,
+    "status": "DIVERGED"
+  }
 }

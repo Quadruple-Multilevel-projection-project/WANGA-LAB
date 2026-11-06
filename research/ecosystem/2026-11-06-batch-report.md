@@ -4,7 +4,7 @@
 - Snapshot: 63 unique repositories visible; 58 public; 5 private redacted.
 - Batch: 10 public repositories scanned; 8 README files present, 1 missing, 1 empty repository.
 - Additional documents: 4 architecture files in `AmbassadorOv/TTTT-0.0.0.0.1`.
-- Cumulative public scan: **51 / 58**; **7 remain**.
+- Cumulative public scan: **51 / 58**; **7 remain**. PR #136 head `81fc121` is 46 commits ahead and 4 behind current main.
 - No external repository was modified.
 
 ## Repositories scanned
