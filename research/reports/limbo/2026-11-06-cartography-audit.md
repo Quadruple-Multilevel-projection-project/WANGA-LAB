@@ -28,3 +28,7 @@ The existing tuning candidate `TUNE-9c166900cc4ad5dd` remains `CANDIDATE_REPLAY_
 **TESTED:** scaffold/software checks on PR #138 (21 passed).
 **PRESERVED:** 10 historical records, 2 history events, 14 nodes and 19 edges.
 **NOT VERIFIED:** current crash coverage, current-system state, causal attribution, tuning replay or semantic correctness.
+
+## Current cycle publication
+
+The audit is included in draft PR [#139](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/139). No merge or map mutation occurred. No PR-triggered workflow run was returned for the current evidence-only branch; prior PR #138 software-test results remain separately identified above.
