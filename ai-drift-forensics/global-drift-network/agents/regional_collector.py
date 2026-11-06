@@ -66,7 +66,16 @@ def main() -> None:
 
     OUT.mkdir(parents=True, exist_ok=True)
     path = OUT / f"{datetime.now(timezone.utc).strftime('%Y%m%dT%H%M%SZ')}-{node_id}.json"
-    path.write_text(json.dumps({"schema_version":"0.1.0","observations":records}, indent=2) + "\n")
+    path.write_text(json.dumps({"schema_version": "0.1.0", "observations": records}, indent=2) + "\n")
+
+    # GitHub Actions exposes this file path to the artifact-upload step. Only this
+    # run's newly written file is uploaded; the historical directory is never bundled.
+    github_output = os.getenv("GITHUB_OUTPUT")
+    if github_output:
+        with open(github_output, "a", encoding="utf-8") as output:
+            output.write(f"artifact_path={path}\n")
+            output.write(f"record_count={len(records)}\n")
+
     print(json.dumps({"node": node_id, "records": len(records), "path": str(path)}))
 
 
