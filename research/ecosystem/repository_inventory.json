@@ -1,7 +1,7 @@
 {
   "schema_version": "wanga-repository-inventory/1.0",
-  "snapshot_date": "2026-11-05",
-  "source": "Live GitHub connector inventory snapshot; bounded README/latest-commit scans; private repository names and contents redacted.",
+  "snapshot_date": "2026-11-06",
+  "source": "Live connected GitHub API snapshot; public repository details only in this public registry; private repository identities and contents remain redacted.",
   "affiliation_counts": {
     "owner": 38,
     "collaborator": 13,
@@ -759,21 +759,40 @@
       "permissions": {
         "admin": true,
         "maintain": true,
-        "pull": true,
         "push": true,
-        "triage": true
+        "triage": true,
+        "pull": true
       },
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "scan_status": "SCANNED_README_METADATA_ONLY",
+      "latest_known_update": "2026-10-29T19:19:21Z",
+      "latest_known_push": "2026-10-29T19:16:58Z",
+      "readme_blob_sha": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "Google Gen AI Python SDK for Gemini Developer API and Vertex AI; external API adapter surface only. No WANGA logic source identified and no API calls were made.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_README",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED",
+      "latest_commit_sha": null,
+      "latest_commit_url": null,
+      "readme_status": "README_PRESENT",
+      "scan_summary": "Google Gen AI Python SDK for Gemini Developer API and Vertex AI; external API adapter surface only. No WANGA logic source identified and no API calls were made.",
+      "readme_url": "https://github.com/AmbassadorOv/python-genai/blob/main/README.md",
+      "language": "en",
+      "last_scanned_date": "2026-11-06",
+      "last_scanned_at": "2026-11-06T05:38:50Z",
+      "write_performed": false,
+      "overlap_candidates": [
+        "external-model-adapter-option"
+      ]
     },
     {
       "full_name": "AmbassadorOv/Qualia",
@@ -844,21 +863,38 @@
       "permissions": {
         "admin": true,
         "maintain": true,
-        "pull": true,
         "push": true,
-        "triage": true
+        "triage": true,
+        "pull": true
       },
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "scan_status": "SCANNED_README_METADATA_ONLY",
+      "latest_known_update": "2026-10-19T19:00:52Z",
+      "latest_known_push": "2026-10-22T06:46:24Z",
+      "readme_blob_sha": "3dd3c4fdfda2e43c50ba4e706ee16344d9f21488",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "3dd3c4fdfda2e43c50ba4e706ee16344d9f21488",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "README presents a Unity-Theorem/quantum-linguistics repository template and architecture outline; no runnable implementation or WANGA semantic evidence was established in this bounded read.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_README",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED",
+      "latest_commit_sha": null,
+      "latest_commit_url": null,
+      "readme_status": "README_PRESENT",
+      "scan_summary": "README presents a Unity-Theorem/quantum-linguistics repository template and architecture outline; no runnable implementation or WANGA semantic evidence was established in this bounded read.",
+      "readme_url": "https://github.com/AmbassadorOv/stunning-octo-garbanzo-d6cfaf53/blob/master/README.md",
+      "language": "en",
+      "last_scanned_date": "2026-11-06",
+      "last_scanned_at": "2026-11-06T05:38:50Z",
+      "write_performed": false,
+      "overlap_candidates": []
     },
     {
       "full_name": "AmbassadorOv/test-notebook-links",
@@ -867,21 +903,38 @@
       "permissions": {
         "admin": true,
         "maintain": true,
-        "pull": true,
         "push": true,
-        "triage": true
+        "triage": true,
+        "pull": true
       },
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "scan_status": "SCANNED_README_METADATA_ONLY",
+      "latest_known_update": "2026-01-07T10:43:52Z",
+      "latest_known_push": "2026-10-22T06:47:10Z",
+      "readme_blob_sha": "cad8e71d3b07510fbcf15d7051db725b9a579cae",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "cad8e71d3b07510fbcf15d7051db725b9a579cae",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "README contains test Colab and localhost links only; no substantive WANGA logic source.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_README",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED",
+      "latest_commit_sha": null,
+      "latest_commit_url": null,
+      "readme_status": "README_PRESENT",
+      "scan_summary": "README contains test Colab and localhost links only; no substantive WANGA logic source.",
+      "readme_url": "https://github.com/AmbassadorOv/test-notebook-links/blob/master/README.md",
+      "language": "en",
+      "last_scanned_date": "2026-11-06",
+      "last_scanned_at": "2026-11-06T05:38:50Z",
+      "write_performed": false,
+      "overlap_candidates": []
     },
     {
       "full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
@@ -890,21 +943,61 @@
       "permissions": {
         "admin": true,
         "maintain": true,
-        "pull": true,
         "push": true,
-        "triage": true
+        "triage": true,
+        "pull": true
       },
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-22T06:42:17Z",
+      "latest_known_push": "2026-10-22T06:42:14Z",
+      "readme_blob_sha": "ac7a2d203877442ddba493889239e61aed56ec78",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "ac7a2d203877442ddba493889239e61aed56ec78",
+          "hash_type": "git_blob_sha1"
+        },
+        {
+          "path": "architecture/ALGORITHMIC_INTERIOR_REGISTRY.md",
+          "blob_sha": "fa4dcee62706b4aea37afdfd013d2a3e2b2f8a2e",
+          "hash_type": "git_blob_sha1"
+        },
+        {
+          "path": "architecture/ARTIFICIAL_PHILOSOPHER_ORCHESTRATION.md",
+          "blob_sha": "28ae6093db718fc14efdc9306b61d9803c40ee45",
+          "hash_type": "git_blob_sha1"
+        },
+        {
+          "path": "architecture/GOLEM_TRVM_C1_C2.md",
+          "blob_sha": "bc81260a20118ad63172f3062e549aa63e739e3c",
+          "hash_type": "git_blob_sha1"
+        },
+        {
+          "path": "architecture/NEURAL_SUBSTRATE_UPDATE.md",
+          "blob_sha": "99557b9c038df1f1480784dcd87eabf1e5164498",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "Think Tank Teams / Artificial Philosopher orchestration concept. Four architecture documents specify registry, orchestration, C1/C2 attribution-temporal gates, and proposal-only neural substrate; source-backed structural candidates only, not verified implementation.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_README",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED",
+      "latest_commit_sha": null,
+      "latest_commit_url": null,
+      "readme_status": "README_PRESENT",
+      "scan_summary": "Think Tank Teams / Artificial Philosopher orchestration concept. Four architecture documents specify registry, orchestration, C1/C2 attribution-temporal gates, and proposal-only neural substrate; source-backed structural candidates only, not verified implementation.",
+      "readme_url": "https://github.com/AmbassadorOv/TTTT-0.0.0.0.1/blob/main/README.md",
+      "language": "en",
+      "last_scanned_date": "2026-11-06",
+      "last_scanned_at": "2026-11-06T05:38:50Z",
+      "write_performed": false,
+      "overlap_candidates": [
+        "WANGA proposal-commit boundary",
+        "NTM evidence/provenance gates"
+      ]
     },
     {
       "full_name": "AmbassadorOv/TTTTproject-un.govt",
@@ -913,21 +1006,38 @@
       "permissions": {
         "admin": true,
         "maintain": true,
-        "pull": true,
         "push": true,
-        "triage": true
+        "triage": true,
+        "pull": true
       },
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "scan_status": "SCANNED_README_METADATA_ONLY",
+      "latest_known_update": "2026-10-22T06:42:15Z",
+      "latest_known_push": "2026-10-22T06:42:11Z",
+      "readme_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "README contains only the World-Party-Federation-Branches-managers title; exact blob duplicate of that separate repository's README.",
+      "duplicate_status": "DUPLICATE_README_BLOB_WITH_AmbassadorOv/World-Party-Federation-Branches-managers",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED",
+      "latest_commit_sha": null,
+      "latest_commit_url": null,
+      "readme_status": "README_PRESENT",
+      "scan_summary": "README contains only the World-Party-Federation-Branches-managers title; exact blob duplicate of that separate repository's README.",
+      "readme_url": "https://github.com/AmbassadorOv/TTTTproject-un.govt/blob/master/README.md",
+      "language": "en",
+      "last_scanned_date": "2026-11-06",
+      "last_scanned_at": "2026-11-06T05:38:50Z",
+      "write_performed": false,
+      "overlap_candidates": []
     },
     {
       "full_name": "AmbassadorOv/unetbootin",
@@ -936,21 +1046,32 @@
       "permissions": {
         "admin": true,
         "maintain": true,
-        "pull": true,
         "push": true,
-        "triage": true
+        "triage": true,
+        "pull": true
       },
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
+      "scan_status": "SCANNED_METADATA_README_MISSING",
+      "latest_known_update": "2025-12-09T20:05:57Z",
+      "latest_known_push": "2026-10-22T06:47:03Z",
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "scan_note": "Repository metadata is accessible; README.md returned GitHub API 404. No content-based project finding can be made.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_README",
+      "source_gap_status": "README_MISSING_404",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED",
+      "latest_commit_sha": null,
+      "latest_commit_url": null,
+      "readme_status": "README_MISSING_OR_EMPTY",
+      "scan_summary": "Repository metadata is accessible; README.md returned GitHub API 404. No content-based project finding can be made.",
+      "readme_url": null,
+      "language": "en",
+      "last_scanned_date": "2026-11-06",
+      "last_scanned_at": "2026-11-06T05:38:50Z",
+      "write_performed": false,
+      "overlap_candidates": []
     },
     {
       "full_name": "AmbassadorOv/vqbshtfsprojects.org",
@@ -959,21 +1080,32 @@
       "permissions": {
         "admin": true,
         "maintain": true,
-        "pull": true,
         "push": true,
-        "triage": true
+        "triage": true,
+        "pull": true
       },
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
+      "scan_status": "SCANNED_METADATA_EMPTY_REPOSITORY",
+      "latest_known_update": "2025-09-12T13:26:57Z",
+      "latest_known_push": "2025-09-12T13:26:57Z",
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "scan_note": "GitHub API reports an empty public repository; no README or source files were available.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_README",
+      "source_gap_status": "EMPTY_REPOSITORY",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED",
+      "latest_commit_sha": null,
+      "latest_commit_url": null,
+      "readme_status": "README_MISSING_OR_EMPTY",
+      "scan_summary": "GitHub API reports an empty public repository; no README or source files were available.",
+      "readme_url": null,
+      "language": "en",
+      "last_scanned_date": "2026-11-06",
+      "last_scanned_at": "2026-11-06T05:38:50Z",
+      "write_performed": false,
+      "overlap_candidates": []
     },
     {
       "full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
@@ -982,21 +1114,40 @@
       "permissions": {
         "admin": true,
         "maintain": true,
-        "pull": true,
         "push": true,
-        "triage": true
+        "triage": true,
+        "pull": true
       },
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "scan_status": "SCANNED_README_METADATA_ONLY",
+      "latest_known_update": "2024-12-04T06:09:54Z",
+      "latest_known_push": "2026-10-22T06:44:09Z",
+      "readme_blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "README describes the Azure Blockchain Development Kit for Ethereum development; no WANGA logic or fractal source identified.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_README",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED",
+      "latest_commit_sha": null,
+      "latest_commit_url": null,
+      "readme_status": "README_PRESENT",
+      "scan_summary": "README describes the Azure Blockchain Development Kit for Ethereum development; no WANGA logic or fractal source identified.",
+      "readme_url": "https://github.com/AmbassadorOv/vscode-azure-blockchain-ethereum/blob/master/README.md",
+      "language": "en",
+      "last_scanned_date": "2026-11-06",
+      "last_scanned_at": "2026-11-06T05:38:50Z",
+      "write_performed": false,
+      "overlap_candidates": [
+        "external-development-tooling-only"
+      ]
     },
     {
       "full_name": "AmbassadorOv/vscode-docs",
@@ -1005,21 +1156,40 @@
       "permissions": {
         "admin": true,
         "maintain": true,
-        "pull": true,
         "push": true,
-        "triage": true
+        "triage": true,
+        "pull": true
       },
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "scan_status": "SCANNED_README_METADATA_ONLY",
+      "latest_known_update": "2025-06-11T03:07:10Z",
+      "latest_known_push": "2026-10-22T06:45:36Z",
+      "readme_blob_sha": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "Visual Studio Code documentation repository; no WANGA logic source identified.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_README",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED",
+      "latest_commit_sha": null,
+      "latest_commit_url": null,
+      "readme_status": "README_PRESENT",
+      "scan_summary": "Visual Studio Code documentation repository; no WANGA logic source identified.",
+      "readme_url": "https://github.com/AmbassadorOv/vscode-docs/blob/main/README.md",
+      "language": "en",
+      "last_scanned_date": "2026-11-06",
+      "last_scanned_at": "2026-11-06T05:38:50Z",
+      "write_performed": false,
+      "overlap_candidates": [
+        "documentation-tooling-only"
+      ]
     },
     {
       "full_name": "AmbassadorOv/World-Party-Federation-Branches-managers",
@@ -1028,21 +1198,38 @@
       "permissions": {
         "admin": true,
         "maintain": true,
-        "pull": true,
         "push": true,
-        "triage": true
+        "triage": true,
+        "pull": true
       },
       "affiliations": [
         "owner"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "scan_status": "SCANNED_README_METADATA_ONLY",
+      "latest_known_update": "2026-10-22T06:42:03Z",
+      "latest_known_push": "2026-10-22T06:41:59Z",
+      "readme_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "README contains only the repository title; exact blob duplicate of AmbassadorOv/TTTTproject-un.govt. Repositories remain distinct.",
+      "duplicate_status": "DUPLICATE_README_BLOB_WITH_AmbassadorOv/TTTTproject-un.govt",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED",
+      "latest_commit_sha": null,
+      "latest_commit_url": null,
+      "readme_status": "README_PRESENT",
+      "scan_summary": "README contains only the repository title; exact blob duplicate of AmbassadorOv/TTTTproject-un.govt. Repositories remain distinct.",
+      "readme_url": "https://github.com/AmbassadorOv/World-Party-Federation-Branches-managers/blob/master/README.md",
+      "language": "en",
+      "last_scanned_date": "2026-11-06",
+      "last_scanned_at": "2026-11-06T05:38:50Z",
+      "write_performed": false,
+      "overlap_candidates": []
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/-",
@@ -1855,31 +2042,15 @@
   ],
   "scan_cursor": {
     "priority_order": [
-      "AmbassadorOv/python-genai",
-      "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
-      "AmbassadorOv/test-notebook-links",
-      "AmbassadorOv/TTTT-0.0.0.0.1",
-      "AmbassadorOv/TTTTproject-un.govt",
-      "AmbassadorOv/unetbootin",
-      "AmbassadorOv/vqbshtfsprojects.org",
-      "AmbassadorOv/vscode-azure-blockchain-ethereum",
-      "AmbassadorOv/vscode-docs",
-      "AmbassadorOv/World-Party-Federation-Branches-managers"
+      "Quadruple-Multilevel-projection-project/-",
+      "Quadruple-Multilevel-projection-project/-from-Corsican-",
+      "Quadruple-Multilevel-projection-project/branches-",
+      "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "tribal-archery/mermaid",
+      "tribal-archery/unetbootin",
+      "tribal-archery/vscode-azure-blockchain-ethereum"
     ],
     "last_completed_batch": [
-      "AmbassadorOv/extensions",
-      "AmbassadorOv/fluffy-parakeet",
-      "AmbassadorOv/generative-ai-docs",
-      "AmbassadorOv/googleapis",
-      "AmbassadorOv/https-AmbassadorOv.io",
-      "AmbassadorOv/mediapipe",
-      "AmbassadorOv/mermaid",
-      "AmbassadorOv/mujoco",
-      "AmbassadorOv/openai_tiktoken",
-      "AmbassadorOv/platform-samples"
-    ],
-    "last_completed_index": 40,
-    "next_batch": [
       "AmbassadorOv/python-genai",
       "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
       "AmbassadorOv/test-notebook-links",
@@ -1891,12 +2062,22 @@
       "AmbassadorOv/vscode-docs",
       "AmbassadorOv/World-Party-Federation-Branches-managers"
     ],
-    "remaining_public_count": 17,
+    "last_completed_index": 50,
+    "next_batch": [
+      "Quadruple-Multilevel-projection-project/-",
+      "Quadruple-Multilevel-projection-project/-from-Corsican-",
+      "Quadruple-Multilevel-projection-project/branches-",
+      "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "tribal-archery/mermaid",
+      "tribal-archery/unetbootin",
+      "tribal-archery/vscode-azure-blockchain-ethereum"
+    ],
+    "remaining_public_count": 7,
     "private_repositories_deferred": true,
-    "scanned_public_count": 41,
+    "scanned_public_count": 51,
     "core_repository_scanned": true,
-    "next_action": "Scan the next ten unique remaining public repositories; keep private repositories redacted and skip already-scanned repositories.",
-    "last_completed_at": "2026-11-05T06:16:15.938Z",
+    "next_action": "Scan the remaining 7 unique public repositories; keep five private repositories redacted.",
+    "last_completed_at": "2026-11-06T05:38:50Z",
     "cursor_repair_note": "The prior priority_order repeated two repositories already marked SCANNED. The next batch was recomputed from public_repositories.scan_status to prevent duplicate scans."
   },
   "completed_batches": [
@@ -1955,6 +2136,30 @@
       "duplicate_non_readme_document_blob_count": 2,
       "new_wanga_logic_units": 0,
       "status": "COMPLETED_BOUNDED_READ"
+    },
+    {
+      "batch_id": "2026-11-06-public-batch-01",
+      "scanned_at": "2026-11-06T05:38:50Z",
+      "repositories": [
+        "AmbassadorOv/python-genai",
+        "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+        "AmbassadorOv/test-notebook-links",
+        "AmbassadorOv/TTTT-0.0.0.0.1",
+        "AmbassadorOv/TTTTproject-un.govt",
+        "AmbassadorOv/unetbootin",
+        "AmbassadorOv/vqbshtfsprojects.org",
+        "AmbassadorOv/vscode-azure-blockchain-ethereum",
+        "AmbassadorOv/vscode-docs",
+        "AmbassadorOv/World-Party-Federation-Branches-managers"
+      ],
+      "status": "SCANNED_BOUNDED_PUBLIC_BATCH",
+      "readme_present_count": 8,
+      "readme_missing_count": 1,
+      "empty_repository_count": 1,
+      "additional_documents_read": 4,
+      "new_wanga_logic_units": 0,
+      "cross_repository_structural_candidates": 4
     }
-  ]
+  ],
+  "public_repositories_scanned_this_batch": 10
 }
