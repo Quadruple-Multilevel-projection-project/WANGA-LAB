@@ -13,9 +13,9 @@
   "existing_model_builder_preserved": true,
   "existing_corpus_atlas_preserved": true,
   "verification_method": "2026-11-05 Wix Headless read-back: list returned 29 deployed files. logic-wiki.html displayed 28 articles, 17 source records and 111 relation links with a 2026-10-12 sync banner. logic-wiki-research-status.html remained dated 2026-10-12 and displayed 18 articles and 11 source records. PR #136 catalog candidate remains unmerged; no Wix write occurred.",
-  "automation_boundary": "The connected Wix integration is available for read-back. GitHub Actions has no Wix credentials. No publish was performed in this cycle because the status-page correction and catalog/taxonomy update are still on an unmerged review branch.",
+  "automation_boundary": "Connected Wix read-back is available. No Wix write was performed because the current catalog/report changes remain on unmerged review PR #136; GitHub Actions has no Wix credentials.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
-  "note": "Read-back confirms the main Logic Wiki page matches current GitHub main counts, but the supplemental research-status page is stale. No deployment was performed while the catalog/taxonomy candidate remains on an unmerged review branch.",
+  "note": "The 2026-11-06 read-back confirms the published site and 11 logic-wiki files. The homepage and research-status page still carry 2026-10-12 data. No deployment or content mutation occurred.",
   "extended_topic_page_count": 10,
   "main_page_card_count": 28,
   "extended_page_resources": [
@@ -113,7 +113,7 @@
   "main_page_catalog_article_count": 28,
   "research_catalog_article_count": 28,
   "supplemental_research_concept_count": 9,
-  "last_readback_date": "2026-11-05",
+  "last_readback_date": "2026-11-06",
   "readback_status": "PARTIAL_STALE",
   "live_readback": {
     "site_name": "Logic Engine Research Lab",
@@ -122,21 +122,21 @@
     "deployed_file_count": 29,
     "pages": {
       "logic-wiki.html": {
-        "entry_elements": 28,
+        "read_back": true,
+        "title": "ויקיפדיית הלוגיקה | WANGA-LAB",
+        "content_length": 49455,
+        "sync_banner_date": "2026-10-12",
         "displayed_article_count": 28,
         "displayed_source_record_count": 17,
-        "relation_link_count": 111,
-        "active_composition_contracts": "2/3",
-        "sync_banner_date": "2026-10-12"
-      },
-      "logic-wiki-fractal-research.html": {
-        "card_elements": 13
+        "relation_link_count": 111
       },
       "logic-wiki-research-status.html": {
+        "read_back": true,
+        "title": "סטטוס מחקר פרקטלים לוגיים | WANGA-LAB",
+        "content_length": 8198,
         "snapshot_date": "2026-10-12",
         "displayed_article_count": 18,
         "displayed_source_record_count": 11,
-        "readiness_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
         "stale": true
       }
     },
@@ -155,7 +155,10 @@
       "taxonomy_status": "CANDIDATE_MAP_NOT_ENTAILMENT_GRAPH"
     },
     "deployment_action": "NOT_PERFORMED_PENDING_PR_APPROVAL",
-    "readback_date": "2026-11-05"
+    "readback_date": "2026-11-06",
+    "logic_wiki_file_count": 11,
+    "readback_method": "Wix Headless files.list/read; 11 matching logic-wiki files listed; homepage and research-status page read.",
+    "deployment_attempted": false
   },
   "current_catalog_counts": {
     "articles": 29,
