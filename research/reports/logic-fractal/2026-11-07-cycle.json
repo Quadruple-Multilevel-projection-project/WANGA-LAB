@@ -98,16 +98,18 @@
   },
   "builder": {
     "script": "scripts/build_first_fractal_model.py",
-    "latest_successful_run_date": "2026-11-06",
-    "latest_successful_run_id": 41978292218,
+    "latest_successful_run_date": "2026-11-07",
+    "latest_successful_run_id": 42347937078,
     "latest_model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
-    "latest_artifact_id": 13392507807,
-    "latest_artifact_size_bytes": 92173,
-    "latest_artifact_sha256": "71a41115f07cc6936d918001a71858f854e8cb09abdf8aa011832e2d1354e28f",
+    "latest_artifact_id": 13563773829,
+    "latest_artifact_size_bytes": 85300,
+    "latest_artifact_sha256": "f9ff54b3e29be293a9b09f36a5ceb303c0b5be448b44ebe56571e7e316a6e42a",
     "fixture_status": "SYNTHETIC_FIXTURES_ONLY",
-    "rerun_this_cycle": false,
+    "rerun_this_cycle": true,
     "semantic_status": "NOT_YET_VERIFIED",
-    "release_status": "CANDIDATE_NOT_RELEASED"
+    "release_status": "CANDIDATE_NOT_RELEASED",
+    "runner": "GitHub Actions ubuntu-latest; Python 3.11.18",
+    "execution_log": "Run 42347937078 / job 128329641595: python scripts/build_first_fractal_model.py returned CANDIDATE_NOT_RELEASED; scale_1_hash da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0; scale_2_hash a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904."
   },
   "wix": {
     "site_name": "Logic Engine Research Lab",
@@ -147,34 +149,46 @@
   "taxonomy_pr": {
     "number": 135,
     "state": "OPEN",
-    "mergeable": false,
+    "mergeable": true,
     "missing_main_taxonomy_node": "ark-swarm-logic-trader",
-    "duplicate_fix_not_created": true
+    "duplicate_fix_not_created": true,
+    "behind_by_main": 16,
+    "status": "STALE_BRANCH_REQUIRES_REFRESH_BEFORE_MERGE"
   },
   "ci": {
     "report_pr": 139,
     "current_head_sha": "2afa0d2ece4fb6810e21c8ce9a20796fde969af1",
     "runs": [
       {
-        "id": 42169282391,
-        "name": "WANGA Ecosystem Agent Sweep",
+        "id": 42347937078,
+        "name": "Logic Fractal Wiki Research",
         "conclusion": "success",
-        "artifact_size_bytes": 3222
+        "artifact_id": 13563773829,
+        "artifact_size_bytes": 85300
       },
       {
-        "id": 42169282468,
+        "id": 42347937081,
+        "name": "WANGA Ecosystem Agent Sweep",
+        "conclusion": "success",
+        "artifact_id": 13564740932,
+        "artifact_size_bytes": 3224
+      },
+      {
+        "id": 42347937077,
         "name": "Repository Integrity",
         "conclusion": "success"
       },
       {
-        "id": 42169282315,
+        "id": 42347937115,
         "name": "CodeQL Advanced",
         "conclusion": "success"
       }
     ],
-    "logic_fractal_last_run_id": 41978292218,
-    "logic_fractal_last_run_date": "2026-11-06",
-    "current_main_combined_status": "NO_STATUS_CHECKS_RETURNED"
+    "logic_fractal_last_run_id": 42347937078,
+    "logic_fractal_last_run_date": "2026-11-07",
+    "current_main_combined_status": "NO_STATUS_CHECKS_RETURNED",
+    "pr139_head_sha": "cdd2cc1eb42f60212bd25caff2c196e0bc118859",
+    "pr139_behind_by_main": 4
   },
   "limbo": {
     "pr_number": 122,
@@ -209,15 +223,16 @@
   },
   "statuses": {
     "built": "Repository catalog, typed composer, readiness gate and Limbo branch artifacts exist.",
-    "tested": "PR #139 Repository Integrity, Ecosystem Agent Sweep and CodeQL passed; latest typed builder run from 2026-11-06 passed on synthetic fixtures.",
-    "verified": "No semantic truth, model readiness, full crash-map coverage or current-system state is verified."
+    "tested": "PR #139 head cdd2cc1: Logic Fractal Wiki Research (including the typed builder), Ecosystem Agent Sweep, Repository Integrity and CodeQL passed on ubuntu-latest. Follow-up commit requires fresh CI.",
+    "verified": "No semantic truth, model readiness, independent review, full crash-map coverage, or current-system state is verified."
   },
   "next": [
-    "Review the 10 missing Wix article IDs; publish only approved source-backed pages and perform exact read-back.",
-    "Resolve PR #135 mergeability and add the missing taxonomy node through its existing review path.",
+    "Run fresh CI on the updated PR #139 head and refresh its 4-commit lag against main before review or merge.",
+    "PR #135 is open and mergeable at the API level but 16 commits behind main; refresh before considering its taxonomy correction.",
+    "Review Wix article mismatches before any deployment write.",
     "Register source-grounded counterexamples, semantic benchmark cases, suites, holdout and two independent reviews.",
     "Create a core contradiction inventory before reporting any zero count.",
-    "Run the existing typed builder on a GitHub Actions runner and archive the current result.",
-    "Replay the Limbo tuning candidate only after a fresh run/test input; preserve the prior incident history."
+    "Keep the typed candidate unreleased until the full FIRST_MODEL_ALPHA gate passes.",
+    "Replay Limbo tuning only after a fresh crash input or replayable test is available."
   ]
 }
