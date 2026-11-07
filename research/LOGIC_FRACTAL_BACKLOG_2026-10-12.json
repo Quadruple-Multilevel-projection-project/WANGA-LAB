@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_date": "2026-10-12",
+  "updated_date": "2026-11-07",
   "status": "ACTIVE_RESEARCH_BACKLOG",
   "source_of_truth": "This backlog describes the current WANGA-LAB Logic Fractal/Logic Wiki workstream; status changes require explicit evidence.",
   "items": [
@@ -74,12 +74,12 @@
       "id": "FL-007",
       "priority": "P1",
       "title": "Logic Wikipedia and backlinks",
-      "status": "BUILT_TESTED_INITIAL_CATALOG",
+      "status": "CATALOG_28_SOURCE_LINKED_WIX_READBACK_MISMATCH",
       "evidence": [
-        "18 article entries in logic_wiki/data/articles.json",
-        "Wix read-back confirmed main wiki links to eight extended pages"
+        "Current main catalog has 28 articles and 17 source records",
+        "Wix read-back found 10 catalog IDs missing from the main page"
       ],
-      "next": "Expand coverage from sources, ensure aliases/backlinks and report unresolved conflicts."
+      "next": "Review the 10 missing IDs and publish only approved source-backed entries."
     },
     {
       "id": "FL-008",
@@ -96,12 +96,12 @@
       "id": "FL-009",
       "priority": "P1",
       "title": "Wix additive publication and read-back",
-      "status": "PUBLISHED_WITH_READBACK_NOT_FULLY_AUTOSYNCED",
+      "status": "READBACK_MISMATCH_REVIEW_REQUIRED",
       "evidence": [
-        "Wix upload returned HTTP 200",
-        "read-back found all eight article pages and their wiki links"
+        "Connected Wix read-back on 2026-11-07 confirmed the live page does not match the current catalog",
+        "No write was performed in this cycle"
       ],
-      "next": "Keep direct deployment through authorized Wix integration with version/deployment manifest; CI does not itself publish Wix."
+      "next": "Resolve the mismatch, then perform an authorized additive update and exact read-back."
     },
     {
       "id": "FL-010",
@@ -123,6 +123,63 @@
         "No random/shuffled baseline or held-out semantic benchmark"
       ],
       "next": "Compare interface/graph invariants against shuffled and random baselines."
+    },
+    {
+      "id": "FL-012",
+      "priority": "P0",
+      "title": "Reconcile current GitHub catalog with live Wix deployment",
+      "status": "BLOCKED_READBACK_MISMATCH_REVIEW_REQUIRED",
+      "evidence": [
+        "GitHub catalog contains 28 article IDs",
+        "Live Wix main page is missing 10 current catalog IDs",
+        "No Wix write was performed"
+      ],
+      "next": "Review missing entries for source scope and public permission; publish only approved entries and verify exact ID read-back."
+    },
+    {
+      "id": "FL-013",
+      "priority": "P0",
+      "title": "Create a source-backed core contradiction inventory",
+      "status": "NOT_STARTED_NO_INVENTORY",
+      "evidence": [
+        "logic_fractal/data/core_contradictions.json is absent",
+        "The current research metric 0 is not a measured contradiction count"
+      ],
+      "next": "Register contradiction candidates with source spans, counter-readings, scope and adjudication; do not initialize an empty inventory as proof of zero."
+    },
+    {
+      "id": "FL-014",
+      "priority": "P0",
+      "title": "Execute typed first-model builder and archive output hash",
+      "status": "BLOCKED_RUNNER_DISPATCH_UNAVAILABLE",
+      "evidence": [
+        "Builder script exists and uses synthetic fixtures",
+        "No workflow-dispatch action is exposed by the connected GitHub tool set",
+        "Local git clone failed because GitHub DNS resolution was unavailable"
+      ],
+      "next": "Run the existing workflow on an available GitHub Actions runner and archive the actual output hash, runner and artifact size."
+    },
+    {
+      "id": "FL-015",
+      "priority": "P1",
+      "title": "Map NTM collaborator architecture to WANGA interfaces",
+      "status": "IN_PROGRESS_SOURCE_DISCOVERED",
+      "evidence": [
+        "NTM V1 architecture and prototype readiness docs located in tribal-archery/-logicl-neural-order",
+        "The 1,000-entry catalog is planned; parallel dispatch and persistent audit remain future milestones"
+      ],
+      "next": "Compare task/result envelopes, evidence/provenance, verification gate and drift schemas before any integration proposal."
+    },
+    {
+      "id": "FL-016",
+      "priority": "P1",
+      "title": "Finish remaining public repository metadata gaps",
+      "status": "IN_PROGRESS_55_OF_58_PUBLIC_SCANNED",
+      "evidence": [
+        "55 public repositories have bounded scan records",
+        "Three remain: two README-missing and one content-skipped sensitive-name repository"
+      ],
+      "next": "Resolve the two README-missing source gaps through safe metadata/tree inspection; keep credential-named content uninspected."
     }
   ],
   "readiness_gate": {
@@ -162,11 +219,46 @@
     },
     "release_decision": "BLOCKED_FIRST_MODEL_ALPHA_NOT_RELEASED",
     "blockers": [
-      "No reviewed conversation-source fragments ingested in this cycle",
-      "0 benchmark cases / 0 benchmark suites in readiness metrics",
-      "holdout split not ready",
-      "MIRROR review not ready",
-      "0 independent review cycles"
-    ]
+      "17 source records versus 20 required",
+      "28 source-resolved logic units versus 50 required",
+      "2 active composition rules versus 20 required",
+      "0 source-grounded counterexamples versus 30 required",
+      "0 semantic benchmark cases versus 100 required",
+      "0 registered benchmark suites versus 3 required",
+      "0 independent reviews versus 2 required",
+      "Core contradiction inventory absent; count not measured",
+      "Holdout split and independent MIRROR review absent",
+      "Typed builder not executed in this cycle"
+    ],
+    "latest_measured_snapshot_2026_11_07": {
+      "metrics": {
+        "source_records": 17,
+        "source_classes": 11,
+        "logic_units_with_provenance": 28,
+        "active_composition_rules": 2,
+        "counterexamples": 0,
+        "semantic_test_cases": 0,
+        "benchmark_suites": 0,
+        "independent_reviews": 0,
+        "dangling_source_refs": 0,
+        "dangling_relation_refs": 0,
+        "duplicate_stable_ids": 0,
+        "critical_core_contradictions": "NOT_MEASURED_NO_INVENTORY",
+        "deterministic_build": "NOT_RERUN_THIS_CYCLE",
+        "holdout_split": false,
+        "mirror_review": false
+      },
+      "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+      "note": "Current main catalog and contracts were recomputed. The core contradiction inventory is absent, so 0 must not be treated as a measured absence."
+    }
+  },
+  "latest_cycle": {
+    "date": "2026-11-07",
+    "logic_report": "research/reports/logic-fractal/2026-11-07-cycle.json",
+    "ecosystem_report": "research/ecosystem/2026-11-07-batch-report.json",
+    "limbo_report": "research/reports/limbo/2026-11-07-cartography-audit.json",
+    "readiness_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "wix_status": "READ_BACK_MISMATCH_REVIEW_REQUIRED",
+    "limbo_pr": 122
   }
 }
