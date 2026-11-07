@@ -2034,33 +2034,23 @@
     }
   ],
   "scan_cursor": {
-    "priority_order": [
-      "Quadruple-Multilevel-projection-project/-",
-      "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
-      "tribal-archery/unetbootin"
-    ],
+    "priority_order": [],
     "last_completed_batch": [
       "Quadruple-Multilevel-projection-project/-",
-      "Quadruple-Multilevel-projection-project/-from-Corsican-",
-      "Quadruple-Multilevel-projection-project/branches-",
-      "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
-      "tribal-archery/mermaid",
-      "tribal-archery/unetbootin",
-      "tribal-archery/vscode-azure-blockchain-ethereum"
-    ],
-    "last_completed_index": 57,
-    "next_batch": [
-      "Quadruple-Multilevel-projection-project/-",
       "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
       "tribal-archery/unetbootin"
     ],
-    "remaining_public_count": 3,
+    "last_completed_index": 58,
+    "next_batch": [],
+    "remaining_public_count": 0,
     "private_repositories_deferred": true,
-    "scanned_public_count": 55,
+    "scanned_public_count": 58,
+    "content_scanned_count": 57,
+    "content_skipped_count": 1,
     "core_repository_scanned": true,
-    "next_action": "Scan the seven remaining public repositories in this refreshed order; keep private repositories redacted.",
-    "last_completed_at": "2026-11-07",
-    "cursor_repair_note": "55 public repositories now have bounded scan records including the core project; 3 remain as explicit source gaps or content-skipped items."
+    "next_action": "Public snapshot fully accounted at metadata level; keep the credential-named repository content-skipped and private repositories redacted.",
+    "last_completed_at": "2026-11-07T07:01:38.783Z",
+    "cursor_repair_note": "All 58 public repositories now have explicit scan disposition: 57 bounded content scans and one metadata-only content skip."
   },
   "completed_batches": [
     {
@@ -2164,6 +2154,23 @@
       "content_skipped_sensitive_count": 1,
       "new_wanga_logic_units": 0,
       "status": "COMPLETED_BOUNDED_READ_WITH_SOURCE_GAPS"
+    },
+    {
+      "batch_id": "2026-11-07-public-followup-batch-05",
+      "scanned_at": "2026-11-07T07:01:38.783Z",
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/-",
+        "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+        "tribal-archery/unetbootin"
+      ],
+      "public_repositories_scanned_cumulative": 58,
+      "public_repository_total": 58,
+      "remaining_public_count": 0,
+      "content_scanned_count": 57,
+      "content_skipped_count": 1,
+      "new_source_candidates": 1,
+      "new_logic_wiki_units": 0,
+      "status": "COMPLETED_BOUNDED_READ_WITH_ONE_CONTENT_SKIP"
     }
   ],
   "scan_summary": {
