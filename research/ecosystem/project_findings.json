@@ -1746,26 +1746,44 @@
   "current_cycle_pr": {
     "number": 139,
     "branch": "automation/wanga-unified-work-loop-2026-11-06",
-    "head_sha": "2afa0d2ece4fb6810e21c8ce9a20796fde969af1",
+    "head_sha": "76a3e991ea21f447723f96ae82c0ee915c54c90e",
     "base": "main",
     "base_sha": "250e195bd7d162b4b1fee77f2d55e97332c3b99c",
-    "ahead_by": 22,
+    "ahead_by": 34,
     "behind_by": 4,
     "mergeable": true,
     "state": "OPEN_DRAFT"
   },
   "current_cycle_ci": {
-    "status": "SUCCESS",
+    "status": "IN_PROGRESS",
     "runs": [
+      {
+        "id": 42347904723,
+        "name": "CodeQL Advanced",
+        "status": "queued"
+      },
+      {
+        "id": 42347904724,
+        "name": "WANGA Ecosystem Agent Sweep",
+        "status": "pending"
+      },
+      {
+        "id": 42347904732,
+        "name": "Logic Fractal Wiki Research",
+        "status": "in_progress"
+      },
+      {
+        "id": 42347904762,
+        "name": "Repository Integrity",
+        "status": "in_progress"
+      }
+    ],
+    "previous_head_successful_runs": [
       {
         "id": 42169282391,
         "name": "WANGA Ecosystem Agent Sweep",
         "conclusion": "success",
-        "artifact": {
-          "name": "wanga-ecosystem-sweep-164",
-          "size_bytes": 3222,
-          "created_at": "2026-11-06T05:35:24Z"
-        }
+        "artifact_size_bytes": 3222
       },
       {
         "id": 42169282468,
@@ -1778,6 +1796,6 @@
         "conclusion": "success"
       }
     ],
-    "note": "Runner name was not exposed in the connector response. No merge was performed."
+    "note": "New checks were triggered for head 76a3e991; do not treat prior-head success as current-head verification."
   }
 }
