@@ -1,0 +1,20 @@
+{
+  "schema_version": "wanga-ecosystem-scan-cursor/1.0",
+  "snapshot_date": "2026-11-07",
+  "completed_batch": "2026-11-07-public-batch-04",
+  "cumulative_public_scanned": 55,
+  "total_public": 58,
+  "remaining_public": 3,
+  "next_batch": [
+    "Quadruple-Multilevel-projection-project/-",
+    "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+    "tribal-archery/unetbootin"
+  ],
+  "private_repositories": {
+    "total": 5,
+    "names_redacted": true,
+    "content_persisted": false,
+    "readme_fetch_count_redacted": 1
+  },
+  "next_action": "Review two README-missing repositories through safe metadata/tree inspection; do not open credential-named repository content."
+}
