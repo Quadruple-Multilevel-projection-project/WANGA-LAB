@@ -1,7 +1,7 @@
 {
   "schema_version": "wanga-repository-inventory/1.0",
-  "snapshot_date": "2026-11-06",
-  "source": "Live GitHub connector affiliation snapshot; bounded public-repository README/latest-commit scan; private repository names and contents remain redacted.",
+  "snapshot_date": "2026-11-07",
+  "source": "Live GitHub affiliation snapshot; current main ref e40a240859a31ae96d5dd28adbdc4e4fc7655874; bounded repository and README scan.",
   "affiliation_counts": {
     "owner": 38,
     "collaborator": 13,
@@ -22,15 +22,19 @@
     "count": 5,
     "names_redacted": true,
     "content_scanned": false,
-    "reason": "Public WANGA-LAB registry must not disclose private repository metadata or contents."
+    "reason": "Private names and contents remain excluded from public inventory; one private README was fetched for analysis but not persisted.",
+    "content_persisted": false,
+    "readme_fetch_count_redacted": 1,
+    "unscanned_count": 4
   },
   "core_repository": {
     "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
     "default_branch": "main",
     "visibility": "public",
-    "updated_at": "2026-11-05T03:08:40Z",
-    "head_sha": "79207e1456e3eb6d9d121e88adf4dd7040b512a5",
-    "scan_status": "SCANNED_PRIMARY_PROJECT"
+    "updated_at": "2026-11-07T05:06:06Z",
+    "head_sha": "e40a240859a31ae96d5dd28adbdc4e4fc7655874",
+    "scan_status": "SCANNED_PRIMARY_PROJECT",
+    "latest_known_push": "2026-11-07T06:12:38Z"
   },
   "public_repositories": [
     {
@@ -1198,14 +1202,14 @@
         "collaborator",
         "organization_member"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
+      "scan_status": "SCANNED_METADATA_ONLY_README_MISSING",
+      "latest_known_update": "2026-10-05T08:21:15Z",
+      "latest_known_push": "2026-10-22T06:49:17Z",
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null,
+      "scan_note": "README.md lookup returned 404; no inference about repository purpose from the missing file.",
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_NOT_FOUND"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/-from-Corsican-",
@@ -1222,14 +1226,16 @@
         "collaborator",
         "organization_member"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-09-20T09:30:42Z",
+      "latest_known_push": "2026-02-09T15:14:12Z",
+      "readme_blob_sha": "70944f7da15632788024530d0c7faf9d91d74381",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README contains only the title AI231.meta.io; this is a title-only alias candidate, not evidence that the repositories are identical.",
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
@@ -1400,14 +1406,16 @@
       "affiliations": [
         "organization_member"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2025-07-09T22:10:04Z",
+      "latest_known_push": "2026-10-22T06:50:20Z",
+      "readme_blob_sha": "3c2d05890db488362257aa6bf373620050d7477d",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README is a link list for Quilia project resources and placeholders; no implementation or source-grounded logic was established.",
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/globalSpeed",
@@ -1489,14 +1497,14 @@
         "collaborator",
         "organization_member"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
+      "scan_status": "SKIPPED_CONTENT_SENSITIVE_NAME",
+      "latest_known_update": "2026-10-05T08:21:43Z",
+      "latest_known_push": "2026-10-22T06:50:54Z",
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null,
+      "scan_note": "Metadata only. Repository content was intentionally not opened because the name suggests credential material; no keys or file contents were accessed or persisted.",
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "CONTENT_NOT_SCANNED_SAFETY_BOUNDARY"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/MNM",
@@ -1905,14 +1913,16 @@
       "affiliations": [
         "organization_member"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2025-02-02T08:51:53Z",
+      "latest_known_push": "2026-10-22T06:52:04Z",
+      "readme_blob_sha": "280725af7ea2fec9941f5711283c65a94523d60c",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README identifies the Mermaid diagramming project; upstream tooling only, no WANGA logic source identified.",
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN"
     },
     {
       "full_name": "tribal-archery/Qdprojects",
@@ -1959,14 +1969,14 @@
       "affiliations": [
         "organization_member"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
+      "scan_status": "SCANNED_METADATA_ONLY_README_MISSING",
+      "latest_known_update": "2021-02-21T13:56:37Z",
+      "latest_known_push": "2026-10-22T06:51:33Z",
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": null,
+      "scan_note": "README.md lookup returned 404; no inference about repository purpose from the missing file.",
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_NOT_FOUND"
     },
     {
       "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
@@ -1982,40 +1992,25 @@
       "affiliations": [
         "organization_member"
       ],
-      "scan_status": "ENUMERATED_NOT_YET_SCANNED",
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": null,
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2020-04-20T04:05:20Z",
+      "latest_known_push": "2026-10-22T06:51:24Z",
+      "readme_blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README identifies an Azure Blockchain VS Code extension; no WANGA logic source identified.",
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "NOT_ASSESSED"
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN"
     }
   ],
   "scan_cursor": {
     "priority_order": [
       "Quadruple-Multilevel-projection-project/-",
-      "Quadruple-Multilevel-projection-project/-from-Corsican-",
-      "Quadruple-Multilevel-projection-project/branches-",
       "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
-      "tribal-archery/mermaid",
-      "tribal-archery/unetbootin",
-      "tribal-archery/vscode-azure-blockchain-ethereum"
+      "tribal-archery/unetbootin"
     ],
     "last_completed_batch": [
-      "AmbassadorOv/python-genai",
-      "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
-      "AmbassadorOv/test-notebook-links",
-      "AmbassadorOv/TTTT-0.0.0.0.1",
-      "AmbassadorOv/TTTTproject-un.govt",
-      "AmbassadorOv/unetbootin",
-      "AmbassadorOv/vqbshtfsprojects.org",
-      "AmbassadorOv/vscode-azure-blockchain-ethereum",
-      "AmbassadorOv/vscode-docs",
-      "AmbassadorOv/World-Party-Federation-Branches-managers"
-    ],
-    "last_completed_index": 50,
-    "next_batch": [
       "Quadruple-Multilevel-projection-project/-",
       "Quadruple-Multilevel-projection-project/-from-Corsican-",
       "Quadruple-Multilevel-projection-project/branches-",
@@ -2024,13 +2019,19 @@
       "tribal-archery/unetbootin",
       "tribal-archery/vscode-azure-blockchain-ethereum"
     ],
-    "remaining_public_count": 7,
+    "last_completed_index": 57,
+    "next_batch": [
+      "Quadruple-Multilevel-projection-project/-",
+      "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "tribal-archery/unetbootin"
+    ],
+    "remaining_public_count": 3,
     "private_repositories_deferred": true,
-    "scanned_public_count": 51,
+    "scanned_public_count": 55,
     "core_repository_scanned": true,
     "next_action": "Scan the seven remaining public repositories in this refreshed order; keep private repositories redacted.",
-    "last_completed_at": "2026-11-06",
-    "cursor_repair_note": "Cumulative count is computed from all existing SCANNED_* statuses plus the current batch; only ENUMERATED_NOT_YET_SCANNED entries remain."
+    "last_completed_at": "2026-11-07",
+    "cursor_repair_note": "55 public repositories now have bounded scan records including the core project; 3 remain as explicit source gaps or content-skipped items."
   },
   "completed_batches": [
     {
@@ -2113,6 +2114,27 @@
       "exact_duplicate_readme_blob_count": 2,
       "new_wanga_logic_units": 0,
       "status": "COMPLETED_BOUNDED_READ"
+    },
+    {
+      "batch_id": "2026-11-07-public-batch-04",
+      "scanned_at": "2026-11-07",
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/-",
+        "Quadruple-Multilevel-projection-project/-from-Corsican-",
+        "Quadruple-Multilevel-projection-project/branches-",
+        "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+        "tribal-archery/mermaid",
+        "tribal-archery/unetbootin",
+        "tribal-archery/vscode-azure-blockchain-ethereum"
+      ],
+      "public_repositories_scanned_cumulative": 55,
+      "public_repository_total": 58,
+      "remaining_public_count": 3,
+      "readme_present_count": 4,
+      "readme_missing_count": 2,
+      "content_skipped_sensitive_count": 1,
+      "new_wanga_logic_units": 0,
+      "status": "COMPLETED_BOUNDED_READ_WITH_SOURCE_GAPS"
     }
   ]
 }
