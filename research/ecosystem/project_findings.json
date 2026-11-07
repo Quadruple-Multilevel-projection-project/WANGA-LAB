@@ -1,19 +1,19 @@
 {
   "schema_version": "wanga-project-findings/1.0",
-  "scan_date": "2026-11-05",
+  "scan_date": "2026-11-07",
   "source_scope": {
     "core_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
-    "core_ref": "main@79207e1456e3eb6d9d121e88adf4dd7040b512a5",
+    "core_ref": "main@e40a240859a31ae96d5dd28adbdc4e4fc7655874",
     "collaborator_batch": 10,
     "public_repositories_scanned": 10,
     "private_repositories_redacted": 5,
     "conversation_export_records": 0,
-    "snapshot_date": "2026-11-05",
+    "snapshot_date": "2026-11-07",
     "repository_inventory": "63 unique repositories visible through live connector: 58 public, 5 private redacted",
-    "batch_repositories_scanned": 10,
-    "public_repositories_scanned_cumulative": 41,
-    "conversation_scope": "Targeted Files search across current conversation and Library for ChatGPT export ZIP, conversations.json and ingest manifest terms found no structurally valid ChatGPT export. Private Library material was not ingested or published. This is not a global ChatGPT conversation scan.",
-    "main_ref": "79207e1456e3eb6d9d121e88adf4dd7040b512a5"
+    "batch_repositories_scanned": 7,
+    "public_repositories_scanned_cumulative": 55,
+    "conversation_scope": "Scoped Files search across current conversation and Library surfaced Library artifacts only; no structurally valid ChatGPT export artifact was found in the returned results. This is not a global ChatGPT conversation scan.",
+    "main_ref": "e40a240859a31ae96d5dd28adbdc4e4fc7655874"
   },
   "findings": [
     {
@@ -934,6 +934,112 @@
       ],
       "next_action": "Do not create a duplicate catalog source. Compare both transcription manifestations against the 1928 scan, then assign stable source-span IDs and formalize only reviewed passages.",
       "scan_time": "2026-11-06"
+    },
+    {
+      "id": "WANGA-REPO-SCAN-2026-11-07-01",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-from-Corsican-/blob/WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/-from-Corsican-",
+      "branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "file_path": "README.md",
+      "blob_sha": "70944f7da15632788024530d0c7faf9d91d74381",
+      "excerpt_or_summary": "README contains only the title AI231.meta.io; this is a title-only alias candidate, not evidence that the repositories are identical.",
+      "epistemic_status": "README_TITLE_ONLY_SOURCE_LOCATED",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/AI231.meta.io"
+      ],
+      "contradictions": [],
+      "next_action": "Keep repository identity separate; inspect deeper only if a project-specific source appears."
+    },
+    {
+      "id": "WANGA-REPO-SCAN-2026-11-07-02",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/branches-/blob/WPinstitutions/README.md",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/branches-",
+      "branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "file_path": "README.md",
+      "blob_sha": "3c2d05890db488362257aa6bf373620050d7477d",
+      "excerpt_or_summary": "README is a link list for Quilia project resources and placeholders; no implementation or source-grounded logic was established.",
+      "epistemic_status": "README_LINK_COLLECTION_NOT_IMPLEMENTATION",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "Qualia/Quilia project references"
+      ],
+      "contradictions": [],
+      "next_action": "No WANGA integration; retain as a link-collection source only."
+    },
+    {
+      "id": "WANGA-REPO-SCAN-2026-11-07-03",
+      "source_uri": "https://github.com/tribal-archery/mermaid/blob/develop/README.md",
+      "repository_full_name": "tribal-archery/mermaid",
+      "branch": "develop",
+      "file_path": "README.md",
+      "blob_sha": "280725af7ea2fec9941f5711283c65a94523d60c",
+      "excerpt_or_summary": "README identifies the Mermaid diagramming project; upstream tooling only, no WANGA logic source identified.",
+      "epistemic_status": "UPSTREAM_TOOLING_README",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "WANGA diagram/report rendering"
+      ],
+      "contradictions": [],
+      "next_action": "No external write; use only as a possible tooling reference if a concrete need arises."
+    },
+    {
+      "id": "WANGA-REPO-SCAN-2026-11-07-04",
+      "source_uri": "https://github.com/tribal-archery/vscode-azure-blockchain-ethereum/blob/master/README.md",
+      "repository_full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
+      "branch": "master",
+      "file_path": "README.md",
+      "blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "excerpt_or_summary": "README identifies an Azure Blockchain VS Code extension; no WANGA logic source identified.",
+      "epistemic_status": "UPSTREAM_TOOLING_README",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "Infrastructure tooling only"
+      ],
+      "contradictions": [],
+      "next_action": "No external write; no WANGA logic integration established."
+    },
+    {
+      "id": "WANGA-REPO-SCAN-2026-11-07-05",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/-",
+      "branch": "feat-yellow-quantic-simulation",
+      "file_path": "README.md",
+      "blob_sha": null,
+      "excerpt_or_summary": "README.md lookup returned 404; no inference about repository purpose from the missing file.",
+      "epistemic_status": "SOURCE_GAP_README_NOT_FOUND",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "next_action": "Leave queued for a bounded tree/commit metadata check; do not infer purpose from the repository name."
+    },
+    {
+      "id": "WANGA-REPO-SCAN-2026-11-07-06",
+      "source_uri": "https://github.com/tribal-archery/unetbootin",
+      "repository_full_name": "tribal-archery/unetbootin",
+      "branch": "master",
+      "file_path": "README.md",
+      "blob_sha": null,
+      "excerpt_or_summary": "README.md lookup returned 404; no inference about repository purpose from the missing file.",
+      "epistemic_status": "SOURCE_GAP_README_NOT_FOUND",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "next_action": "Leave queued for a bounded tree/commit metadata check; do not infer purpose from the repository name."
+    },
+    {
+      "id": "WANGA-REPO-SCAN-2026-11-07-07",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "branch": "main",
+      "file_path": null,
+      "blob_sha": null,
+      "excerpt_or_summary": "Metadata only. Repository content was intentionally not opened because the name suggests credential material; no keys or file contents were accessed or persisted.",
+      "epistemic_status": "METADATA_ONLY_CONTENT_SKIPPED",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "next_action": "Keep content uninspected unless a safe, non-secret metadata-only scope is established."
     }
   ],
   "logic_candidates": [
@@ -1290,6 +1396,12 @@
         "https://github.com/AmbassadorOv/googleapis/blob/master/governance/PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0.md"
       ],
       "next_action": "Preserve both repository identities; do not infer shared project identity or promote the document into WANGA logic."
+    },
+    {
+      "from": "Quadruple-Multilevel-projection-project/-from-Corsican-",
+      "to": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "relation": "TITLE_ONLY_ALIAS_CANDIDATE",
+      "status": "NOT_CONFIRMED_REPOSITORY_IDENTITY"
     }
   ],
   "agent_roles": [
@@ -1380,7 +1492,9 @@
     "Seven public repositories remain in the ecosystem sweep.",
     "Wikisource Gate I, VI and XIV pages are marked not proofread; no comparison against the 1928 scan was performed.",
     "Wix supplemental status and fractal-research pages remain stale; no deployment was authorized or performed.",
-    "Regional workflow main branch still contains a direct git push path; its corrective PR branch is seven commits behind main."
+    "Regional workflow main branch still contains a direct git push path; its corrective PR branch is seven commits behind main.",
+    "Three public repositories remain in the cursor: two README-missing repositories and one repository whose content was skipped because its name suggests credential material.",
+    "One private repository README was fetched during the bounded run; no private name or content was persisted."
   ],
   "latest_ci": {
     "pr_number": 136,
@@ -1537,39 +1651,49 @@
           "next": "Wait for approved catalog/report changes; then deploy and read back the exact pages."
         }
       ]
+    },
+    {
+      "date": "2026-11-07",
+      "batch_id": "2026-11-07-public-batch-04",
+      "repositories_scanned": [
+        "Quadruple-Multilevel-projection-project/-",
+        "Quadruple-Multilevel-projection-project/-from-Corsican-",
+        "Quadruple-Multilevel-projection-project/branches-",
+        "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+        "tribal-archery/mermaid",
+        "tribal-archery/unetbootin",
+        "tribal-archery/vscode-azure-blockchain-ethereum"
+      ],
+      "result": "4 README sources inspected; 2 README paths missing; 1 content path skipped; no new WANGA logic units.",
+      "status": "COMPLETED_BOUNDED_READ_WITH_SOURCE_GAPS"
     }
   ],
   "sourceScope": {
     "core_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
-    "core_ref": "main@250e195bd7d162b4b1fee77f2d55e97332c3b99c",
-    "snapshot_date": "2026-11-06",
+    "core_ref": "main@e40a240859a31ae96d5dd28adbdc4e4fc7655874",
+    "snapshot_date": "2026-11-07",
     "collaborator_batch": 10,
     "public_repositories_scanned": 10,
     "private_repositories_redacted": 5,
     "conversation_export_records": 0,
     "repository_inventory": "63 unique repositories visible through live connector: 58 public, 5 private redacted",
-    "batch_repositories_scanned": 10,
-    "public_repositories_scanned_cumulative": 51,
+    "batch_repositories_scanned": 7,
+    "public_repositories_scanned_cumulative": 55,
     "public_repositories_remaining": 7,
-    "conversation_scope": "Zero conversation files were surfaced in the current conversation surface; no valid ChatGPT export was found in the targeted Library search/listing. This is not a global ChatGPT conversation scan.",
+    "conversation_scope": "Scoped Files search across current conversation and Library surfaced Library artifacts only; no structurally valid ChatGPT export artifact was found in the returned results. This is not a global ChatGPT conversation scan.",
     "cross_repo_read_token": "NOT_EXPOSED_BY_CONNECTOR_IN_THIS_RUN",
-    "wix_publish_performed": false
+    "wix_publish_performed": false,
+    "main_ref": "e40a240859a31ae96d5dd28adbdc4e4fc7655874"
   },
-  "updated_at": "2026-11-06",
+  "updated_at": "2026-11-07",
   "current_cycle_pr": {
     "number": 139,
-    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/139",
-    "state": "OPEN_DRAFT",
+    "branch": "automation/wanga-unified-work-loop-2026-11-06",
+    "head_sha": "524cce6bc36e986c41aaea96b6121a66e54df7b3",
+    "base": "main",
     "base_sha": "250e195bd7d162b4b1fee77f2d55e97332c3b99c",
-    "changed_files": 8,
-    "additions": 4253,
-    "merge_performed": false,
-    "initial_head_sha": "3527ce44cad0efb2b2f2c847b7b686221722fc9d"
+    "mergeable": true,
+    "behind_by": 4
   },
-  "current_cycle_ci": {
-    "github_pr_workflow_runs": "NONE_RETURNED",
-    "combined_status": "NO_STATUS_CHECKS_RETURNED",
-    "local_registry_integrity": "PASS",
-    "check_scope": "PR #139 documentation/evidence branch; no workflow runs returned on the initial head; final head check performed after this metadata update."
-  }
+  "current_cycle_ci": "PENDING_AFTER_2026-11-07_REPORT_COMMITS"
 }
