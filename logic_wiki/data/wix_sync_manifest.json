@@ -1,7 +1,7 @@
 {
   "schema_version": "logic-wiki-wix-sync/1.0",
   "last_sync_date": "2026-10-12",
-  "status": "PUBLISHED_READ_BACK_PARTIAL",
+  "status": "READ_BACK_MISMATCH_REVIEW_REQUIRED",
   "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
   "wiki_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
   "source_catalog": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/articles.json",
@@ -15,7 +15,7 @@
   "verification_method": "Wix upload API returned HTTP 200. Public fetch confirmed the new research page title, navigation from homepage and Logic Wiki, and links to the GitHub catalog/taxonomy. Extracted public page text was partial, so exact topic-by-topic read-back remains incomplete.",
   "automation_boundary": "Connected Wix upload/read-back was used. GitHub Actions does not have Wix credentials; scheduled research must use the connected Wix integration and record a read-back result.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
-  "note": "18 legacy catalog entries remain on the core Logic Wiki. The GitHub research catalog contains 27 entries, including 9 new concepts described on the supplemental fractal-research page. Publication is not semantic verification.",
+  "note": "18 legacy catalog entries remain on the core Logic Wiki. The GitHub research catalog contains 27 entries, including 9 new concepts described on the supplemental fractal-research page. Publication is not semantic verification. Current 2026-11-07 read-back found a catalog mismatch; last_sync_date remains historical and was not advanced because no Wix write occurred.",
   "extended_topic_page_count": 10,
   "main_page_card_count": 27,
   "extended_page_resources": [
@@ -112,5 +112,43 @@
   ],
   "main_page_catalog_article_count": 18,
   "research_catalog_article_count": 27,
-  "supplemental_research_concept_count": 9
+  "supplemental_research_concept_count": 9,
+  "last_readback_date": "2026-11-07",
+  "last_readback": {
+    "status": "MISMATCH_REVIEW_REQUIRED",
+    "site_name": "Logic Engine Research Lab",
+    "site_file_count": 29,
+    "main_page_entry_class_occurrences": 28,
+    "main_page_article_tags_with_ids": 27,
+    "current_github_catalog_article_count": 28,
+    "missing_catalog_article_ids": [
+      "logical-particle",
+      "fractal-invariant",
+      "recursive-composition",
+      "conversation-evidence-unit",
+      "counterexample-case",
+      "autonomous-research-agent",
+      "multi-scale-fractal-map",
+      "longitudinal-research-cycle",
+      "logical-diamond",
+      "ark-swarm-logic-trader"
+    ],
+    "extra_main_page_resource_ids": [
+      "wiki-page-research-status",
+      "wiki-page-fractal-model",
+      "wiki-page-fractal-logic",
+      "wiki-page-typed-fragment",
+      "wiki-page-mln-field",
+      "wiki-page-231-gates",
+      "wiki-page-logic-before-weight",
+      "wiki-page-evidence-status",
+      "wiki-page-ntm"
+    ],
+    "supplemental_research_card_count": 13,
+    "research_status_page_present": true,
+    "write_performed_this_cycle": false,
+    "reason": "The current GitHub catalog contains 28 article IDs, while the live main page does not contain 10 of them. New entries were not published because they require review before public Wix sync."
+  },
+  "publication_gate": "BLOCKED_UNTIL_MISSING_ARTICLE_REVIEW_AND_APPROVED_WIX_READBACK",
+  "last_verified_by": "Connected Wix headless read-back"
 }
