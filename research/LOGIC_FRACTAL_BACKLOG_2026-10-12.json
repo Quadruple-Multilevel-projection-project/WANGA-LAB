@@ -180,6 +180,18 @@
         "Three remain: two README-missing and one content-skipped sensitive-name repository"
       ],
       "next": "Resolve the two README-missing source gaps through safe metadata/tree inspection; keep credential-named content uninspected."
+    },
+    {
+      "id": "FL-017",
+      "priority": "P1",
+      "title": "Resolve article-to-taxonomy coverage gap through existing PR #135",
+      "status": "BLOCKED_EXISTING_PR_NOT_MERGEABLE",
+      "evidence": [
+        "Current main has 28 articles and 27 taxonomy nodes",
+        "ark-swarm-logic-trader is the single article ID absent from the taxonomy",
+        "PR #135 is open and currently reports mergeable=false"
+      ],
+      "next": "Review the existing PR #135 conflict/mergeability state; do not create a duplicate taxonomy correction."
     }
   ],
   "readiness_gate": {
@@ -259,6 +271,8 @@
     "limbo_report": "research/reports/limbo/2026-11-07-cartography-audit.json",
     "readiness_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
     "wix_status": "READ_BACK_MISMATCH_REVIEW_REQUIRED",
-    "limbo_pr": 122
+    "limbo_pr": 122,
+    "workloop_pr": 139,
+    "taxonomy_pr": 135
   }
 }
