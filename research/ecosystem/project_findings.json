@@ -1040,6 +1040,63 @@
       "overlap_candidates": [],
       "contradictions": [],
       "next_action": "Keep content uninspected unless a safe, non-secret metadata-only scope is established."
+    },
+    {
+      "id": "WANGA-WIX-READBACK-2026-11-07",
+      "source_uri": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "file_path": "logic_wiki/data/wix_sync_manifest.json",
+      "blob_sha": "d4dcaa4c439d66b380ffa7be5d3169de78104395",
+      "excerpt_or_summary": "Live Wix read-back found 29 site files, 28 .entry class occurrences, 27 article tags with IDs, 13 supplemental research cards, and 10 current GitHub catalog article IDs absent from the main page. No Wix write was performed.",
+      "epistemic_status": "LIVE_DEPLOYMENT_READBACK_MISMATCH",
+      "permission_scope": "PUBLIC_WIX_SITE_READ_ONLY_THIS_CYCLE",
+      "overlap_candidates": [
+        "logic_wiki/data/articles.json",
+        "logic_wiki/data/wix_sync_manifest.json"
+      ],
+      "contradictions": [
+        "Current GitHub catalog has 28 article IDs; live main page has only 27 article IDs and 10 expected IDs are missing."
+      ],
+      "next_action": "Review the 10 missing catalog entries; publish only approved source-backed entries and verify exact IDs after deployment."
+    },
+    {
+      "id": "LIMBO-PR122-CURRENT-STATE-2026-11-07",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/122",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "deploy/limbo-cartography-core-v1",
+      "file_path": "limbo-cartography-core/cartography/iterative_crash_map.json",
+      "blob_sha": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+      "excerpt_or_summary": "Current branch is 63 commits ahead and 0 behind main. The cumulative map has 10 incident records, 2 history events, 14 nodes and 19 edges. The latest execution is EXECUTION_RECORD_ONLY; the tuning candidate remains CANDIDATE_REPLAY_REQUIRED and the logic bundle is DRAFT_UNVERIFIED.",
+      "epistemic_status": "REPOSITORY_STATE_OBSERVED_NOT_SYSTEM_VERIFICATION",
+      "permission_scope": "PUBLIC_PULL_REQUEST_BRANCH",
+      "overlap_candidates": [
+        ".github/workflows/daily-limbo-cartography-agent.yml",
+        "limbo-cartography-core/cartography/reality_matrix.json"
+      ],
+      "contradictions": [
+        "All 10 incident source_evidence entries lack source_sha256; the map does not establish complete raw-log provenance."
+      ],
+      "next_action": "Keep the map cumulative; obtain a real workflow/test result, replay the bounded tuning candidate, and record the outcome before claiming current-state verification."
+    },
+    {
+      "id": "WANGA-TAXONOMY-COVERAGE-GAP-2026-11-07",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/fractal_taxonomy.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "file_path": "logic_wiki/data/fractal_taxonomy.json",
+      "blob_sha": "355a9253cc5920d11b0b804e1561f38b51a4f2c3",
+      "excerpt_or_summary": "Main has 28 catalog articles but 27 taxonomy nodes; article ID ark-swarm-logic-trader is not represented in the taxonomy. PR #135 remains open and is currently not mergeable.",
+      "epistemic_status": "STRUCTURAL_COVERAGE_GAP_OBSERVED",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "logic_wiki/data/articles.json",
+        "PR #135 taxonomy correction"
+      ],
+      "contradictions": [
+        "Taxonomy coverage is one article short of the current catalog."
+      ],
+      "next_action": "Review PR #135 and resolve its mergeability; do not create a duplicate taxonomy correction."
     }
   ],
   "logic_candidates": [
@@ -1689,11 +1746,38 @@
   "current_cycle_pr": {
     "number": 139,
     "branch": "automation/wanga-unified-work-loop-2026-11-06",
-    "head_sha": "524cce6bc36e986c41aaea96b6121a66e54df7b3",
+    "head_sha": "2afa0d2ece4fb6810e21c8ce9a20796fde969af1",
     "base": "main",
     "base_sha": "250e195bd7d162b4b1fee77f2d55e97332c3b99c",
+    "ahead_by": 22,
+    "behind_by": 4,
     "mergeable": true,
-    "behind_by": 4
+    "state": "OPEN_DRAFT"
   },
-  "current_cycle_ci": "PENDING_AFTER_2026-11-07_REPORT_COMMITS"
+  "current_cycle_ci": {
+    "status": "SUCCESS",
+    "runs": [
+      {
+        "id": 42169282391,
+        "name": "WANGA Ecosystem Agent Sweep",
+        "conclusion": "success",
+        "artifact": {
+          "name": "wanga-ecosystem-sweep-164",
+          "size_bytes": 3222,
+          "created_at": "2026-11-06T05:35:24Z"
+        }
+      },
+      {
+        "id": 42169282468,
+        "name": "Repository Integrity",
+        "conclusion": "success"
+      },
+      {
+        "id": 42169282315,
+        "name": "CodeQL Advanced",
+        "conclusion": "success"
+      }
+    ],
+    "note": "Runner name was not exposed in the connector response. No merge was performed."
+  }
 }
