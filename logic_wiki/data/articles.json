@@ -526,6 +526,23 @@
         "model-readiness",
         "logical-diamond"
       ]
+    },
+    {
+      "id": "milot-higayon-gate-xiv",
+      "title": "Milot Higayon — Gate XIV",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "definition": "Gate XIV distinguishes three uses of דיבור: the human rational faculty, intelligible content grasped internally, and linguistic expression of that content. It describes logic as guiding internal reasoning and external expression away from error, keeping expression aligned with inner content; it also classifies logic as an instrument for knowledge rather than one of the sciences.",
+      "scope_note": "Summary of the Hebrew translation by Samuel Ibn Tibbon in the 1928 Warsaw edition. This records what the text says; it is not a universal cognitive theory or a modern AI architecture. The Wikisource page is marked unproofread and has not been collated against the Arabic original. This is מילות הגיון, שער יד, not a claim about Moreh Nevukhim chapter 14.",
+      "sources": [
+        "SRC-RAMBAM-MILOT-HIGAYON-GATE-XIV"
+      ],
+      "relations": [
+        "logic",
+        "semantics",
+        "formal-language"
+      ]
     }
   ],
   "sources": [
@@ -664,6 +681,14 @@
       "type": "PROJECT_IMPLEMENTATION",
       "status": "IMPLEMENTED_PROTOTYPE_NOT_SEMANTICALLY_VERIFIED",
       "note": "Bounded deterministic candidate ranker and local swarm coordinator; no P2P transport, external LLM or model release."
+    },
+    {
+      "id": "SRC-RAMBAM-MILOT-HIGAYON-GATE-XIV",
+      "title": "Maimonides, Milot Higayon — Gate XIV (Hebrew translation, Warsaw 1928)",
+      "uri": "https://he.wikisource.org/w/index.php?title=מילות_הגיון/שער_יד&oldid=783578",
+      "type": "PRIMARY_TEXT_TRANSLATION",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "Wikisource identifies Maimonides as author and Samuel Ibn Tibbon as translator; second revised/corrected Warsaw 1928 edition. Gate XIV revision oldid=783578; the page is marked unproofread. The Hebrew text was read at lines 104–117 but not collated against the Arabic original or manuscript witnesses. License shown by Wikisource: CC BY-SA 4.0."
     }
   ]
 }

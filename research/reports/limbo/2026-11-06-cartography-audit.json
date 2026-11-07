@@ -1,0 +1,78 @@
+{
+  "schema_version": "wanga-limbo-cartography-audit/1.1",
+  "date": "2026-11-06",
+  "generated_at_utc": "2026-11-06T05:38:50Z",
+  "status": "IN_PROGRESS_NO_NEW_CRASH_INPUTS",
+  "source_pr": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/122",
+  "branch": "deploy/limbo-cartography-core-v1",
+  "head_sha": "fcdbe51c76c81f0d5335ec029ec084b9958e41bc",
+  "compare_to_current_main": {
+    "main_sha": "250e195bd7d162b4b1fee77f2d55e97332c3b99c",
+    "ahead_by": 61,
+    "behind_by": 4,
+    "status": "DIVERGED"
+  },
+  "artifacts": {
+    "reality_matrix": {
+      "path": "limbo-cartography-core/cartography/reality_matrix.json",
+      "blob_sha": "86593dd31e5c20bf47c81d09d527967cf0a22476",
+      "cartography_version": "1.3.0",
+      "last_updated": "2026-10-19",
+      "daily_seismic_records": 10,
+      "history_events": 2,
+      "system_state": "RECURRENCE_PATTERN_OBSERVED_CURRENT_SYSTEM_STATE_UNASSESSED"
+    },
+    "iterative_map": {
+      "path": "limbo-cartography-core/cartography/iterative_crash_map.json",
+      "blob_sha": "3617504c68262f71366a244563fc06b1be270da2",
+      "map_version": "1.0.0",
+      "nodes": 14,
+      "edges": 19,
+      "map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+      "source_matrix_version": "1.3.0"
+    },
+    "tuning_candidate": {
+      "path": "limbo-cartography-core/cartography/tuning_candidates/TUNE-9c166900cc4ad5dd.json",
+      "blob_sha": "3c18338fba440158a2feb6ecc84c08258118f282",
+      "candidate_id": "TUNE-9c166900cc4ad5dd",
+      "parent_incident": "CRASH-GHA-39312967972",
+      "prior_retest": "PASS_IN_RECORDED_CONTEXT",
+      "current_replay_status": "NOT_RUN"
+    },
+    "latest_execution": {
+      "path": "limbo-cartography-core/cartography/run_logs/latest_execution.json",
+      "blob_sha": "69a6cdfc2cd02acf6097960d43b8f8e316d214ae",
+      "timestamp_utc": "2026-11-05T06:05:53Z",
+      "status": "EXECUTION_RECORD_ONLY",
+      "epistemic_attempt": false,
+      "keystone_verified": false,
+      "drift_detected": null
+    }
+  },
+  "new_inputs": {
+    "limbo_crash_inputs": 0,
+    "regional_observation_files_added_on_main": 32,
+    "sampled_regional_files": 2,
+    "sampled_records_per_file": 6,
+    "sampled_status": "NOT_CONFIGURED",
+    "classification": "NOT_LIMBO_CRASH_EVIDENCE"
+  },
+  "tests": {
+    "prior_retest_pass": true,
+    "current_replay_executed": false,
+    "latest_head_ci": "ACTION_REQUIRED_NO_JOBS_RETURNED"
+  },
+  "blocked": [
+    "PR #122 is four commits behind current main.",
+    "Latest-head PR #122 workflow runs are action_required; no jobs were returned.",
+    "The tuning candidate replay has not been executed.",
+    "No new source-backed crash inputs were available."
+  ],
+  "next": [
+    "Refresh the Limbo branch from current main through a review branch.",
+    "Preserve all 10 incident records and two history events.",
+    "Run software tests on the refreshed head.",
+    "Replay TUNE-9c166900cc4ad5dd and append the exact run, input, result and new crash records.",
+    "Keep regional NOT_CONFIGURED observations separate from Limbo crash inputs."
+  ]
+}
