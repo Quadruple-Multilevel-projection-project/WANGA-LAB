@@ -1,0 +1,2188 @@
+{
+  "schema_version": "wanga-repository-inventory/1.0",
+  "snapshot_date": "2026-11-07",
+  "source": "Live GitHub affiliation snapshot; current main ref e40a240859a31ae96d5dd28adbdc4e4fc7655874; bounded repository and README scan.; follow-up batch 05 completed at 2026-11-07T07:00:23.634Z; private repository names/content remain redacted.",
+  "affiliation_counts": {
+    "owner": 38,
+    "collaborator": 13,
+    "organization_member": 25,
+    "unique_repositories": 63
+  },
+  "unique_repository_count": 63,
+  "visibility_counts": {
+    "public": 58,
+    "private": 5
+  },
+  "permission_summary": {
+    "pull_enabled": 63,
+    "push_enabled": 63,
+    "source": "connector permission metadata"
+  },
+  "private_repository_policy": {
+    "count": 5,
+    "names_redacted": true,
+    "content_scanned": false,
+    "reason": "Private names and contents remain excluded from public inventory; one private README was fetched for analysis but not persisted.",
+    "content_persisted": false,
+    "readme_fetch_count_redacted": 1,
+    "unscanned_count": 4
+  },
+  "core_repository": {
+    "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "default_branch": "main",
+    "visibility": "public",
+    "updated_at": "2026-11-07T05:06:06Z",
+    "head_sha": "e40a240859a31ae96d5dd28adbdc4e4fc7655874",
+    "scan_status": "SCANNED_PRIMARY_PROJECT",
+    "latest_known_push": "2026-11-07T06:12:38Z"
+  },
+  "public_repositories": [
+    {
+      "full_name": "AmbassadorOv/-artificial-y",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_COMMIT_DIFF_README_MISSING",
+      "latest_known_update": "2026-10-29T20:49:52Z",
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": "README.md not found; latest commit diff inspected; connector did not expose per-file paths. Commit title and diff contain a Fly Brain/deterministic-edge-kernel proposal and configuration claims; no tests or runtime verification performed.",
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_MISSING_PATH_NOT_RESOLVED",
+      "latest_commit_sha": "0b6041813f71cc05932d941ab3e38682d0a57544",
+      "latest_commit_url": "https://github.com/AmbassadorOv/-artificial-y/commit/0b6041813f71cc05932d941ab3e38682d0a57544"
+    },
+    {
+      "full_name": "AmbassadorOv/AG-triple-X-",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2026-09-23T02:06:11Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned; blob hash matches README.md in Quadruple-Multilevel-projection-project/stunning-octo-garbanzo. Distinct repositories retained.",
+      "duplicate_status": "DUPLICATE_BLOB_WITH_Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
+    },
+    {
+      "full_name": "AmbassadorOv/AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2026-10-22T06:42:08Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "d2664df6ce794e353a4d1b04682627c3b13f0bb9",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "Public profile README scanned; profile statement only, not implementation evidence.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
+    },
+    {
+      "full_name": "AmbassadorOv/awesome-chatgpt-prompts",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-12-02T03:18:11Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "25c6254b882a96645aeacb866e735a14040913dc",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned; no WANGA-specific source promoted in this bounded pass.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
+    },
+    {
+      "full_name": "AmbassadorOv/branches-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-07-09T11:10:23Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "26ee6fb7d42d9c86e1dee2a4082f9276a52815a2",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned on the exact default branch returned by repository metadata; no WANGA-specific source promoted.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
+    },
+    {
+      "full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2024-05-10T18:30:44Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "2866fa41c2232edaf4bfa82e299e22d54ed267ec",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned; publication-extension description only, no source-grounded WANGA logic extracted.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
+    },
+    {
+      "full_name": "AmbassadorOv/cookbook",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-05-16T10:22:12Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "646c146ea44ee0175fccf62427bcc03dd88ed1b6",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned; cookbook repository, no WANGA-specific source promoted.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
+    },
+    {
+      "full_name": "AmbassadorOv/desktop",
+      "default_branch": "development",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2026-10-22T20:21:02Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "c7702d385076e80f365a23d17dc868b9ecb6a5ad",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned on development branch; desktop project, no WANGA-specific source promoted.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
+    },
+    {
+      "full_name": "AmbassadorOv/docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2024-11-13T15:44:32Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "69090a601896b5189a5b3ee42105ed42638016be",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned; documentation repository, no WANGA-specific source promoted.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
+    },
+    {
+      "full_name": "AmbassadorOv/eslint",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2024-12-09T19:04:53Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "326c6121e810f4d1edfbc781eff4d5b7f46d1c36",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README.md scanned; linting project, no WANGA-specific source promoted.",
+      "duplicate_status": "NOT_ASSESSED_BEYOND_BATCH",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN",
+      "latest_commit_sha": null,
+      "latest_commit_url": null
+    },
+    {
+      "full_name": "AmbassadorOv/extensions",
+      "default_branch": "next",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2026-10-22T06:42:38Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "6ef8b6a54813922bf64bad64c8e7301f8dc620c2",
+      "files_scanned": [
+        "README.md",
+        "governance/PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0.md"
+      ],
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "0a0d806ab156adf55e9401a15e73085c911825a9",
+      "latest_commit_url": "https://github.com/AmbassadorOv/extensions/commit/0a0d806ab156adf55e9401a15e73085c911825a9",
+      "readme_url": "https://github.com/AmbassadorOv/extensions/blob/next/README.md",
+      "scan_summary": "Firebase Extensions source repository; README describes extension APIs, resources and access granted. No WANGA logic source identified.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "duplicate_document_observation": {
+        "path": "governance/PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0.md",
+        "blob_sha": "07f1bea91260a22f2a1398de8a8adba2ce1b3eb5",
+        "duplicate_with": "AmbassadorOv/googleapis",
+        "status": "IDENTICAL_FILE_BLOB_DISTINCT_REPOSITORIES"
+      },
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
+    },
+    {
+      "full_name": "AmbassadorOv/fluffy-parakeet",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-08-05T19:18:18Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "70944f7da15632788024530d0c7faf9d91d74381",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_PRESENT_MINIMAL",
+      "latest_commit_sha": "d8d0cad7395794da08bd834b38386021a8d762f7",
+      "latest_commit_url": "https://github.com/AmbassadorOv/fluffy-parakeet/commit/d8d0cad7395794da08bd834b38386021a8d762f7",
+      "readme_url": "https://github.com/AmbassadorOv/fluffy-parakeet/blob/WPinstitutions/-WPG%7B%3C%3Cbranches%3E%7B%3C%F0%9F%AA%BE%3E%7D(%3CORG%3E)%3E%3E%7D%5D%5D%5D/README.md",
+      "scan_summary": "README contains only the title AI231.meta.io; no substantive documentation or source-grounded logic was exposed.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
+    },
+    {
+      "full_name": "AmbassadorOv/generative-ai-docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-03-25T16:09:33Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "1bf3babd967e73a1cff092805c4ff151fba95baf",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "61a3666ac3b44e6a5ea15a6f6b4cbedd1a162e6d",
+      "latest_commit_url": "https://github.com/AmbassadorOv/generative-ai-docs/commit/61a3666ac3b44e6a5ea15a6f6b4cbedd1a162e6d",
+      "readme_url": "https://github.com/AmbassadorOv/generative-ai-docs/blob/main/README.md",
+      "scan_summary": "Google Gemini API and Gemma developer documentation, including site content, demos and examples; external API documentation only.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
+    },
+    {
+      "full_name": "AmbassadorOv/googleapis",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2026-10-22T06:41:52Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "6ba73116d009c622bf3057f81a563b2070daea51",
+      "files_scanned": [
+        "README.md",
+        "governance/PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0.md"
+      ],
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "bda86fbaa605e02ee544ec0d2230779755274265",
+      "latest_commit_url": "https://github.com/AmbassadorOv/googleapis/commit/bda86fbaa605e02ee544ec0d2230779755274265",
+      "readme_url": "https://github.com/AmbassadorOv/googleapis/blob/master/README.md",
+      "scan_summary": "Public Google API interface definitions for REST and gRPC with Bazel build guidance; no WANGA logic source identified.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "duplicate_document_observation": {
+        "path": "governance/PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0.md",
+        "blob_sha": "07f1bea91260a22f2a1398de8a8adba2ce1b3eb5",
+        "duplicate_with": "AmbassadorOv/extensions",
+        "status": "IDENTICAL_FILE_BLOB_DISTINCT_REPOSITORIES"
+      },
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
+    },
+    {
+      "full_name": "AmbassadorOv/https-AmbassadorOv.io",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_LATEST_COMMIT_README_MISSING",
+      "latest_known_update": "2025-09-12T10:59:17Z",
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [
+        ".github/ISSUE_TEMPLATE/custom.md (latest commit diff)"
+      ],
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_MISSING_404",
+      "latest_commit_sha": "5e8bfc8624291ec945e1ad59f2e0fa601fd1d2a3",
+      "latest_commit_url": "https://github.com/AmbassadorOv/https-AmbassadorOv.io/commit/5e8bfc8624291ec945e1ad59f2e0fa601fd1d2a3",
+      "readme_url": null,
+      "scan_summary": "README.md returned HTTP 404. The inspected latest commit adds an issue-template file; no substantive project documentation was found in this bounded pass.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "NOT_ASSESSED_README_MISSING"
+    },
+    {
+      "full_name": "AmbassadorOv/mediapipe",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-09-12T18:32:25Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "e4f5dd182813dc073e0845be06d23d2c58bbeafb",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "2a95a9603387b631d47bc4dfcbc4a675a39c26b3",
+      "latest_commit_url": "https://github.com/AmbassadorOv/mediapipe/commit/2a95a9603387b631d47bc4dfcbc4a675a39c26b3",
+      "readme_url": "https://github.com/AmbassadorOv/mediapipe/blob/master/README.md",
+      "scan_summary": "MediaPipe documentation points to on-device machine-learning solutions and developer resources; no WANGA-specific logic or model evidence identified.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
+    },
+    {
+      "full_name": "AmbassadorOv/mermaid",
+      "default_branch": "develop",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2024-11-28T03:40:56Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "456747132cbc6ed1dde4f8d5f0712deb71b47be8",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "df636c6d0a127a5ce3270672499dd7e230ce33fc",
+      "latest_commit_url": "https://github.com/AmbassadorOv/mermaid/commit/df636c6d0a127a5ce3270672499dd7e230ce33fc",
+      "readme_url": "https://github.com/AmbassadorOv/mermaid/blob/develop/README.md",
+      "scan_summary": "Mermaid generates diagrams from Markdown-like text. This is a possible presentation renderer, not a source of semantic relations.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
+    },
+    {
+      "full_name": "AmbassadorOv/mujoco",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2025-05-12T17:53:39Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "62d57c19af93682355c27e668422bf8aa87c430b",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "8a7c42c747bfcf9160e3125048219566b41ff8cf",
+      "latest_commit_url": "https://github.com/AmbassadorOv/mujoco/commit/8a7c42c747bfcf9160e3125048219566b41ff8cf",
+      "readme_url": "https://github.com/AmbassadorOv/mujoco/blob/main/README.md",
+      "scan_summary": "MuJoCo is a physics engine for multi-joint dynamics and simulation; possible spatial simulation infrastructure, not WANGA semantic evidence.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
+    },
+    {
+      "full_name": "AmbassadorOv/multi-agent-orchestator",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-29T20:10:32Z",
+      "latest_known_push": "2026-10-29T20:10:26Z",
+      "readme_blob_sha": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+          "hash_type": "git_blob_sha1"
+        },
+        {
+          "path": "research/logic_book/iteration-protocol.md",
+          "blob_sha": "d28b577f2ef96b1a66eb929146cb622fb31e1261",
+          "hash_type": "git_blob_sha1"
+        },
+        {
+          "path": "research/logic_book/iteration-state.json",
+          "blob_sha": "7eb1e912a17ab942a8ca8148e1cc325a3f8d6bdc",
+          "hash_type": "git_blob_sha1"
+        },
+        {
+          "path": "research/logic_book/schema.json",
+          "blob_sha": "a6de070e3c31ee84ee81f0b96c8d872ccd94af88",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "Three-agent orchestrator README plus a provenance-first Logic Book iteration protocol, checkpoint and record schema.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BATCH",
+      "source_gap_status": "CANDIDATE_PROTOCOL_SOURCE",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "scan_time": "2026-11-04T07:21:43+02:00"
+    },
+    {
+      "full_name": "AmbassadorOv/Nanomathematics",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2025-06-19T11:40:33Z",
+      "latest_known_push": "2026-10-22T06:53:06Z",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "README is byte-identical to three other repository READMEs in this batch/previous batch; no independent logic source found.",
+      "duplicate_status": "DUPLICATE_README_BLOB_GROUP:e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_gap_status": "NO_WANGA_LOGIC_SOURCE_IN_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "scan_time": "2026-11-04T07:21:43+02:00"
+    },
+    {
+      "full_name": "AmbassadorOv/O-Ms",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2025-04-03T19:48:38Z",
+      "latest_known_push": "2026-10-22T06:44:59Z",
+      "readme_blob_sha": "5477f49658507c3de65a774eb54976d22a3e0c52",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "5477f49658507c3de65a774eb54976d22a3e0c52",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "README contains only the repository title; no WANGA-relevant source found in the bounded scan.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BATCH",
+      "source_gap_status": "NO_WANGA_LOGIC_SOURCE_IN_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "scan_time": "2026-11-04T07:21:43+02:00"
+    },
+    {
+      "full_name": "AmbassadorOv/openai_tiktoken",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2024-10-03T21:15:34Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "ad8d88b13f731c1d946a4fc5bd3fc3a153393775",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "63527649963def8c759b0f91f2eb69a40934e468",
+      "latest_commit_url": "https://github.com/AmbassadorOv/openai_tiktoken/commit/63527649963def8c759b0f91f2eb69a40934e468",
+      "readme_url": "https://github.com/AmbassadorOv/openai_tiktoken/blob/main/README.md",
+      "scan_summary": "tiktoken is a BPE tokenizer for OpenAI models; tokenization infrastructure only, not a logic or semantic model.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
+    },
+    {
+      "full_name": "AmbassadorOv/platform-samples",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT",
+      "latest_known_update": "2020-03-20T14:20:20Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "a2bb146a181b60c3df0d077c55b197287074ec53",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": null,
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_PRESENT",
+      "latest_commit_sha": "4a10583e53d384f3846e7534608e40b0a42409b1",
+      "latest_commit_url": "https://github.com/AmbassadorOv/platform-samples/commit/4a10583e53d384f3846e7534608e40b0a42409b1",
+      "readme_url": "https://github.com/AmbassadorOv/platform-samples/blob/master/README.md",
+      "scan_summary": "GitHub Platform API, GraphQL and webhook sample projects; no WANGA logic source identified.",
+      "last_scanned_date": "2026-11-05",
+      "last_scanned_at": "2026-11-05T06:16:15.938Z",
+      "write_performed": false,
+      "readme_duplicate_status": "UNIQUE_IN_CURRENT_PUBLIC_SNAPSHOT"
+    },
+    {
+      "full_name": "AmbassadorOv/python-genai",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT_BOUNDED",
+      "latest_known_update": "2026-10-29T19:16:58Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+          "bytes": 35795,
+          "source_uri": "https://github.com/AmbassadorOv/python-genai/blob/main/README.md"
+        }
+      ],
+      "scan_note": "Google Gen AI Python SDK for Gemini Developer API and Vertex AI; runtime integration context only, no WANGA logic source identified.",
+      "duplicate_status": "NO_EXACT_README_DUPLICATE_OBSERVED_IN_THIS_BATCH",
+      "source_gap_status": "README_ONLY_BOUNDED_SCAN",
+      "latest_commit": {
+        "sha": "77253f4c48036d3e04e281c1f2d02e3be756c960",
+        "date": "2026-10-29T19:16:58Z",
+        "message": "Merge pull request #1: Add PCE contract breach notice",
+        "url": "https://github.com/AmbassadorOv/python-genai/commit/77253f4c48036d3e04e281c1f2d02e3be756c960"
+      },
+      "last_scanned_date": "2026-11-06"
+    },
+    {
+      "full_name": "AmbassadorOv/Qualia",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2025-05-22T17:32:50Z",
+      "latest_known_push": "2026-10-22T06:44:44Z",
+      "readme_blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "README is a minimal project pointer; no WANGA logic content in the bounded scan.",
+      "duplicate_status": "DUPLICATE_README_WITH:Quadruple-Multilevel-projection-project/Qualia",
+      "source_gap_status": "NO_WANGA_LOGIC_SOURCE_IN_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "scan_time": "2026-11-04T07:21:43+02:00"
+    },
+    {
+      "full_name": "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-18T07:21:22Z",
+      "latest_known_push": "2026-10-22T06:48:01Z",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "README contains only the Nanomathematics title; no source-backed logic content found.",
+      "duplicate_status": "DUPLICATE_README_BLOB_GROUP:e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_gap_status": "NO_WANGA_LOGIC_SOURCE_IN_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "scan_time": "2026-11-04T07:21:43+02:00"
+    },
+    {
+      "full_name": "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT_BOUNDED",
+      "latest_known_update": "2026-10-19T19:00:46Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "3dd3c4fdfda2e43c50ba4e706ee16344d9f21488",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "3dd3c4fdfda2e43c50ba4e706ee16344d9f21488",
+          "bytes": 2949,
+          "source_uri": "https://github.com/AmbassadorOv/stunning-octo-garbanzo-d6cfaf53/blob/master/README.md"
+        }
+      ],
+      "scan_note": "Computational-science proposal/template README; no implementation or source-backed WANGA logic established by this bounded read.",
+      "duplicate_status": "NO_EXACT_README_DUPLICATE_OBSERVED_IN_THIS_BATCH",
+      "source_gap_status": "README_ONLY_BOUNDED_SCAN",
+      "latest_commit": {
+        "sha": "e8c06c250d18296bb0f160129d48305bdfd54f29",
+        "date": "2026-10-19T19:00:46Z",
+        "message": "Document compiler connectivity review and sandbox issues",
+        "url": "https://github.com/AmbassadorOv/stunning-octo-garbanzo-d6cfaf53/commit/e8c06c250d18296bb0f160129d48305bdfd54f29"
+      },
+      "last_scanned_date": "2026-11-06"
+    },
+    {
+      "full_name": "AmbassadorOv/test-notebook-links",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT_BOUNDED",
+      "latest_known_update": "2019-02-19T17:11:20Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "cad8e71d3b07510fbcf15d7051db725b9a579cae",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "cad8e71d3b07510fbcf15d7051db725b9a579cae",
+          "bytes": 284,
+          "source_uri": "https://github.com/AmbassadorOv/test-notebook-links/blob/master/README.md"
+        }
+      ],
+      "scan_note": "Notebook and Colab link test README only; no WANGA logic or model implementation identified.",
+      "duplicate_status": "NO_EXACT_README_DUPLICATE_OBSERVED_IN_THIS_BATCH",
+      "source_gap_status": "README_ONLY_BOUNDED_SCAN",
+      "latest_commit": {
+        "sha": "a7c6cf2bda1fb7e341141cacf0415052857ee78c",
+        "date": "2019-02-19T17:11:20Z",
+        "message": "Add no-kernel notebook",
+        "url": "https://github.com/AmbassadorOv/test-notebook-links/commit/a7c6cf2bda1fb7e341141cacf0415052857ee78c"
+      },
+      "last_scanned_date": "2026-11-06"
+    },
+    {
+      "full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT_BOUNDED",
+      "latest_known_update": "2026-10-22T06:42:13Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "ac7a2d203877442ddba493889239e61aed56ec78",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "ac7a2d203877442ddba493889239e61aed56ec78",
+          "bytes": 2978,
+          "source_uri": "https://github.com/AmbassadorOv/TTTT-0.0.0.0.1/blob/main/README.md"
+        }
+      ],
+      "scan_note": "Architecture-declared meta-orchestrator for research teams; LOGOS/CONNECTIONS/FRACTALS/ABSTRACTION/MODELS/VERIFICATION/SYNCHRONIZATION is a proposal, not implementation evidence.",
+      "duplicate_status": "NO_EXACT_README_DUPLICATE_OBSERVED_IN_THIS_BATCH",
+      "source_gap_status": "README_ONLY_BOUNDED_SCAN",
+      "latest_commit": {
+        "sha": "2c355168bb639ff1be22a918bc2838c54cea4ead",
+        "date": "2026-10-22T06:42:13Z",
+        "message": "Distribute PCE contract breach notice",
+        "url": "https://github.com/AmbassadorOv/TTTT-0.0.0.0.1/commit/2c355168bb639ff1be22a918bc2838c54cea4ead"
+      },
+      "last_scanned_date": "2026-11-06"
+    },
+    {
+      "full_name": "AmbassadorOv/TTTTproject-un.govt",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT_BOUNDED",
+      "latest_known_update": "2026-10-22T06:42:10Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+          "bytes": 42,
+          "source_uri": "https://github.com/AmbassadorOv/TTTTproject-un.govt/blob/master/README.md"
+        }
+      ],
+      "scan_note": "Title-only README; exact same README blob as World-Party-Federation-Branches-managers. Repository identity remains distinct.",
+      "duplicate_status": "EXACT_README_BLOB_DUPLICATE_WITH:AmbassadorOv/World-Party-Federation-Branches-managers",
+      "source_gap_status": "README_ONLY_BOUNDED_SCAN",
+      "latest_commit": {
+        "sha": "7499b46eb8af0ad2604ec63dd07f383507df55ca",
+        "date": "2026-10-22T06:42:10Z",
+        "message": "Distribute PCE contract breach notice",
+        "url": "https://github.com/AmbassadorOv/TTTTproject-un.govt/commit/7499b46eb8af0ad2604ec63dd07f383507df55ca"
+      },
+      "last_scanned_date": "2026-11-06"
+    },
+    {
+      "full_name": "AmbassadorOv/unetbootin",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_COMMIT_NO_README",
+      "latest_known_update": "2021-02-04T09:30:06Z",
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "status": "NOT_FOUND_OR_EMPTY",
+          "source_uri": "https://github.com/AmbassadorOv/unetbootin"
+        }
+      ],
+      "scan_note": "Repository is accessible; README.md lookup returned 404. Bounded README scan incomplete; no inference about repository purpose from this missing file.",
+      "duplicate_status": "NO_EXACT_README_DUPLICATE_OBSERVED_IN_THIS_BATCH",
+      "source_gap_status": "README_NOT_FOUND; REPOSITORY_CONTENT_NOT_SCANNED",
+      "latest_commit": {
+        "sha": "e2eb0fe57aad24d02a0e535745bd4f33a30edb75",
+        "date": "2021-02-04T09:30:06Z",
+        "message": "fix macos big sur issue",
+        "url": "https://github.com/AmbassadorOv/unetbootin/commit/e2eb0fe57aad24d02a0e535745bd4f33a30edb75"
+      },
+      "last_scanned_date": "2026-11-06"
+    },
+    {
+      "full_name": "AmbassadorOv/vqbshtfsprojects.org",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "EMPTY_REPOSITORY_NO_COMMIT_OR_README",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "readme_blob_sha": null,
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "status": "NOT_FOUND_OR_EMPTY",
+          "source_uri": "https://github.com/AmbassadorOv/vqbshtfsprojects.org"
+        }
+      ],
+      "scan_note": "GitHub returned 409: empty repository; no README or commit exists to inspect.",
+      "duplicate_status": "NO_EXACT_README_DUPLICATE_OBSERVED_IN_THIS_BATCH",
+      "source_gap_status": "EMPTY_REPOSITORY_NO_README_OR_COMMIT",
+      "latest_commit": {
+        "sha": null,
+        "date": null,
+        "message": null,
+        "url": null
+      },
+      "last_scanned_date": "2026-11-06"
+    },
+    {
+      "full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT_BOUNDED",
+      "latest_known_update": "2020-02-28T18:01:30Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+          "bytes": 6636,
+          "source_uri": "https://github.com/AmbassadorOv/vscode-azure-blockchain-ethereum/blob/master/README.md"
+        }
+      ],
+      "scan_note": "Azure Blockchain Development Kit VS Code extension documentation; third-party development tooling, no WANGA logic source identified.",
+      "duplicate_status": "NO_EXACT_README_DUPLICATE_OBSERVED_IN_THIS_BATCH",
+      "source_gap_status": "README_ONLY_BOUNDED_SCAN",
+      "latest_commit": {
+        "sha": "f07052ae06bbefb6b080c34afc315dc319366408",
+        "date": "2020-02-28T18:01:30Z",
+        "message": "Merge pull request #30 from microsoft/caleteet-v110: Updates for release v1.1.0",
+        "url": "https://github.com/AmbassadorOv/vscode-azure-blockchain-ethereum/commit/f07052ae06bbefb6b080c34afc315dc319366408"
+      },
+      "last_scanned_date": "2026-11-06"
+    },
+    {
+      "full_name": "AmbassadorOv/vscode-docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT_BOUNDED",
+      "latest_known_update": "2025-06-10T12:08:51Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
+          "bytes": 4853,
+          "source_uri": "https://github.com/AmbassadorOv/vscode-docs/blob/main/README.md"
+        }
+      ],
+      "scan_note": "Visual Studio Code documentation repository; no WANGA logic source identified.",
+      "duplicate_status": "NO_EXACT_README_DUPLICATE_OBSERVED_IN_THIS_BATCH",
+      "source_gap_status": "README_ONLY_BOUNDED_SCAN",
+      "latest_commit": {
+        "sha": "9e1375069dec24399735d672e447d7ecc81a4de7",
+        "date": "2025-06-10T12:08:51Z",
+        "message": "Update copilot-customization.md (#8458)",
+        "url": "https://github.com/AmbassadorOv/vscode-docs/commit/9e1375069dec24399735d672e447d7ecc81a4de7"
+      },
+      "last_scanned_date": "2026-11-06"
+    },
+    {
+      "full_name": "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "owner"
+      ],
+      "scan_status": "SCANNED_README_AND_LATEST_COMMIT_BOUNDED",
+      "latest_known_update": "2026-10-22T06:41:58Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+          "bytes": 42,
+          "source_uri": "https://github.com/AmbassadorOv/World-Party-Federation-Branches-managers/blob/master/README.md"
+        }
+      ],
+      "scan_note": "Title-only README; exact same README blob as TTTTproject-un.govt. Repository identity and history remain distinct.",
+      "duplicate_status": "EXACT_README_BLOB_DUPLICATE_WITH:AmbassadorOv/TTTTproject-un.govt",
+      "source_gap_status": "README_ONLY_BOUNDED_SCAN",
+      "latest_commit": {
+        "sha": "f21eabfa0bc4c41512b7a4cbe6072996570fd4c5",
+        "date": "2026-10-22T06:41:58Z",
+        "message": "Distribute PCE contract breach notice",
+        "url": "https://github.com/AmbassadorOv/World-Party-Federation-Branches-managers/commit/f21eabfa0bc4c41512b7a4cbe6072996570fd4c5"
+      },
+      "last_scanned_date": "2026-11-06"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/-",
+      "default_branch": "feat-yellow-quantic-simulation",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_HANDOFF_NOTICE_README_MISSING",
+      "latest_known_update": "2026-10-05T08:21:15Z",
+      "latest_known_push": "2026-10-22T06:49:17Z",
+      "readme_blob_sha": null,
+      "files_scanned": [
+        {
+          "path": "AI-AGENT-HANDOFF-NOTICE.md",
+          "sha": "2e2698d337a60a93059d85d4302ea01cc3837b7b",
+          "status": "READ",
+          "exact_locator": "lines 3-15, 21-29, 45"
+        },
+        {
+          "path": "README.md",
+          "sha": null,
+          "status": "NOT_FOUND"
+        }
+      ],
+      "scan_note": "The public handoff notice declares sequential L1-L3, evidence/provenance and deterministic-output gates; it overlaps with WANGA-LAB AI-AGENT-NOTICE.md but has a different blob SHA. Source lineage and independence are not established. No changes were made in this repository.",
+      "duplicate_status": "RELATED_POLICY_OVERLAP_NOT_IDENTICAL_TO_WANGA_NOTICE",
+      "source_gap_status": "README_MD_NOT_FOUND; HANDOFF_NOTICE_READ",
+      "latest_commit_sha": "08b106df7ab15c2fd3aef807cda6eef56f38fc60",
+      "latest_commit_url": "https://github.com/Quadruple-Multilevel-projection-project/-/commit/08b106df7ab15c2fd3aef807cda6eef56f38fc60"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/-from-Corsican-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-09-20T09:30:42Z",
+      "latest_known_push": "2026-02-09T15:14:12Z",
+      "readme_blob_sha": "70944f7da15632788024530d0c7faf9d91d74381",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README contains only the title AI231.meta.io; this is a title-only alias candidate, not evidence that the repositories are identical.",
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:08Z",
+      "latest_known_push": "2026-10-22T06:48:08Z",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+          "status": "READ"
+        },
+        {
+          "path": "AI-AGENT-HANDOFF-NOTICE.md",
+          "sha": null,
+          "status": "PATH_PRESENT_CONTENT_NOT_FETCHED"
+        }
+      ],
+      "scan_note": "README is a 17-character Nanomathematics placeholder; no substantive logic implementation found in the bounded scan.",
+      "duplicate_status": "DUPLICATE_README_BLOB_WITH_OTHER_DISTINCT_REPOSITORY",
+      "source_gap_status": "README_PLACEHOLDER_ONLY"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:28Z",
+      "latest_known_push": "2026-10-22T06:50:12Z",
+      "readme_blob_sha": "1530209671f6f76eb1808cf17d9584437e1e867b",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "1530209671f6f76eb1808cf17d9584437e1e867b",
+          "status": "READ"
+        },
+        {
+          "path": ".github/workflows/call-swarms.yml",
+          "sha": "6c2e3aed21a726f24136e8ec3ed5f0a48b96328a",
+          "status": "READ"
+        },
+        {
+          "path": "environments/swarms-aws-agent-api/dev/us-east-1/Readme.md",
+          "sha": "4f57e601716766974a9f82b31432cc89c787162a",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "AWS/SSM swarm deployment workflow; not executed and no infrastructure changes made.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "NO_OBVIOUS_GAP_IN_BOUNDED_SCAN"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-22T07:25:07Z",
+      "latest_known_push": "2026-10-22T07:25:03Z",
+      "readme_blob_sha": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6",
+          "status": "READ"
+        },
+        {
+          "path": "datasets/embeddings/cloud_master_logic.json",
+          "sha": "04ce79e8620c34446b6e772aaae307188b481a28",
+          "status": "READ"
+        },
+        {
+          "path": "datasets/embeddings/neural_graph.json",
+          "sha": "219f9a8a393c33ebd0fe07c473aa9adfc534ee5c",
+          "status": "READ"
+        },
+        {
+          "path": "datasets/embeddings/epistemic_layer/reconciled_v705_logic.json",
+          "sha": "c96f422bdbd4d3d48f1ba787a7ed994e0090d939",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "Archive asserts 231 gates, 441 logic base, 32 pathways and accuracy_peak 2.502; definitions and provenance are insufficient for validation.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "NO_OBVIOUS_GAP_IN_BOUNDED_SCAN"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:58Z",
+      "latest_known_push": "2026-10-22T06:50:46Z",
+      "readme_blob_sha": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
+          "status": "READ"
+        },
+        {
+          "path": "AI-AGENT-HANDOFF-NOTICE.md",
+          "sha": null,
+          "status": "PATH_PRESENT_CONTENT_NOT_FETCHED"
+        }
+      ],
+      "scan_note": "README is a short repository placeholder; no substantive oversight implementation confirmed.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "README_PLACEHOLDER_ONLY"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/branches-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2025-07-09T22:10:04Z",
+      "latest_known_push": "2026-10-22T06:50:20Z",
+      "readme_blob_sha": "3c2d05890db488362257aa6bf373620050d7477d",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README is a link list for Quilia project resources and placeholders; no implementation or source-grounded logic was established.",
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/globalSpeed",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:23Z",
+      "latest_known_push": "2026-10-22T06:49:41Z",
+      "readme_blob_sha": "a6976e6480700db0264d5dd7a20267a04f9209f0",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "a6976e6480700db0264d5dd7a20267a04f9209f0",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "Browser-extension project; no direct WANGA logic/fractal overlap found in bounded scan.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "NO_OBVIOUS_GAP_IN_BOUNDED_SCAN"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:45Z",
+      "latest_known_push": "2026-10-22T06:51:01Z",
+      "readme_blob_sha": null,
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": null,
+          "status": "NOT_FOUND"
+        },
+        {
+          "path": "AI-AGENT-HANDOFF-NOTICE.md",
+          "sha": null,
+          "status": "PATH_PRESENT_CONTENT_NOT_FETCHED"
+        }
+      ],
+      "scan_note": "README not found; source gap retained.",
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_NOT_FOUND; HANDOFF_NOTICE_PATH_PRESENT_NOT_READ"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "METADATA_ONLY_CONTENT_SKIPPED_SENSITIVE_NAME",
+      "latest_known_update": "2026-10-05T08:21:43Z",
+      "latest_known_push": "2026-10-22T06:50:54Z",
+      "readme_blob_sha": null,
+      "files_scanned": [],
+      "scan_note": "Repository metadata recorded only. No files, keys, secrets, or content were opened.",
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "CONTENT_SKIPPED_CREDENTIAL_NAMED_REPOSITORY",
+      "latest_commit_sha": "fbf09a8667f1843bfacc26f25ad4d335afc05365",
+      "latest_commit_url": "https://github.com/Quadruple-Multilevel-projection-project/GOOGLE_API_KEY/commit/fbf09a8667f1843bfacc26f25ad4d335afc05365"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/MNM",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:11Z",
+      "latest_known_push": "2026-10-22T06:48:15Z",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+          "status": "READ"
+        },
+        {
+          "path": ".github/workflows/blank.yml",
+          "sha": null,
+          "status": "PATH_PRESENT_CONTENT_NOT_FETCHED"
+        }
+      ],
+      "scan_note": "README blob SHA duplicates the other repository's README; repositories remain distinct.",
+      "duplicate_status": "DUPLICATE_README_BLOB_WITH_OTHER_DISTINCT_REPOSITORY",
+      "source_gap_status": "README_PLACEHOLDER_ONLY"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/Qualia",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:25Z",
+      "latest_known_push": "2026-10-22T06:49:56Z",
+      "readme_blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+          "hash_type": "git_blob_sha1"
+        },
+        {
+          "path": "AI-AGENT-HANDOFF-NOTICE.md",
+          "blob_sha": "2e2698d337a60a93059d85d4302ea01cc3837b7b",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "Handoff notice specifies L1-L3, provenance and deterministic-output gates; candidate integration contract only.",
+      "duplicate_status": "DUPLICATE_README_WITH:AmbassadorOv/Qualia",
+      "source_gap_status": "CANDIDATE_EVIDENCE_HANDOFF_CONTRACT",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "scan_time": "2026-11-04T07:21:43+02:00"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/skills",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-08T13:22:32Z",
+      "latest_known_push": "2026-10-22T06:51:09Z",
+      "readme_blob_sha": "2246383e993f161fd909122d01769059adfb9eab",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "2246383e993f161fd909122d01769059adfb9eab",
+          "status": "READ"
+        },
+        {
+          "path": "research/EMERGING_AGENT_LOGIC_MARKET_EVIDENCE.md",
+          "sha": "097d569c5a285bc24352831d3af76a1872b10abe",
+          "status": "READ"
+        },
+        {
+          "path": "src/agents.ts",
+          "sha": "a8b14aaa398012cf340760304903ad35edf0ed15",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "Potential agent capability registry overlap; no direct code imported.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "NO_OBVIOUS_GAP_IN_BOUNDED_SCAN"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:35Z",
+      "latest_known_push": "2026-10-22T06:50:28Z",
+      "readme_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "README is a project-title stub; no WANGA logic source found in bounded scan.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BATCH",
+      "source_gap_status": "NO_WANGA_LOGIC_SOURCE_IN_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "scan_time": "2026-11-04T07:21:43+02:00"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-05T08:21:19Z",
+      "latest_known_push": "2026-10-22T06:49:33Z",
+      "readme_blob_sha": "5bce36b9ed2ffd0c0ebfec2a5e806e974c12ca05",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "5bce36b9ed2ffd0c0ebfec2a5e806e974c12ca05",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "README contains a standalone quantum-inspired decision example; no direct integration or semantic transfer made.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "NO_OBVIOUS_GAP_IN_BOUNDED_SCAN"
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "collaborator",
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_PRIMARY_PROJECT",
+      "latest_known_update": "2026-11-03T01:49:28Z",
+      "latest_known_push": null,
+      "readme_blob_sha": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "d0c94a4e1c92e9af8c15dde9daf26019e8a23d32",
+          "status": "READ"
+        },
+        {
+          "path": "logic_wiki/data/articles.json",
+          "sha": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed",
+          "status": "READ"
+        },
+        {
+          "path": "logic_wiki/data/fractal_taxonomy.json",
+          "sha": "355a9253cc5920d11b0b804e1561f38b51a4f2c3",
+          "status": "READ"
+        },
+        {
+          "path": "logic_wiki/data/readiness_gate.json",
+          "sha": "3e782e63ab7ac50e6e7152e938a6d8af169800e4",
+          "status": "READ"
+        },
+        {
+          "path": "logic_wiki/data/research_metrics.json",
+          "sha": "2b3b05dbc9d154ca916d00dfeb63a9522c37a266",
+          "status": "READ"
+        },
+        {
+          "path": "logic_wiki/data/wix_sync_manifest.json",
+          "sha": "d4dcaa4c439d66b380ffa7be5d3169de78104395",
+          "status": "READ"
+        },
+        {
+          "path": "logic_fractal/data/composition_rules.json",
+          "sha": "3d8bc142785d7d401b705736fe0f384d33d996f3",
+          "status": "READ"
+        },
+        {
+          "path": "logic_fractal/data/recursive_composition_contracts_v1.json",
+          "sha": "762f89ae972dbc58e92201e9c032b9da7b0e9f89",
+          "status": "READ"
+        },
+        {
+          "path": "logic_fractal/data/semantic_benchmark_plan_v1.json",
+          "sha": "c06d0629965ef2ee392d7dd7df28ee20b9a88154",
+          "status": "READ"
+        },
+        {
+          "path": "logic_fractal/fragment_composer.py",
+          "sha": "e0823383f8b768f1cb324ea07883c4d9798aa136",
+          "status": "READ"
+        },
+        {
+          "path": "scripts/build_first_fractal_model.py",
+          "sha": "f3416947a435b1bde0ddd3dc691503d130c88ef4",
+          "status": "READ"
+        },
+        {
+          "path": ".github/workflows/logic-fractal-wiki.yml",
+          "sha": "ddd6be4cc795bacf2aa5a276fe116ff0a7b1c2c8",
+          "status": "READ"
+        },
+        {
+          "path": "logic_wiki/tests/test_logic_wiki.py",
+          "sha": "ddd7d814923add9d5b58abd76f82de7d362c0973",
+          "status": "READ"
+        },
+        {
+          "path": "research/inbox/conversations/README.md",
+          "sha": "af1e6bd765c10b5c42c9d4ea9988643d38424507",
+          "status": "READ"
+        }
+      ],
+      "scan_note": null,
+      "source_gap_status": "TAXONOMY_MISSING_ONE_CURRENT_CATALOG_NODE_ON_MAIN; REPAIR_IN_REVIEW_BRANCH",
+      "duplicate_status": "NO_DUPLICATE_STABLE_IDS_IN_CURRENT_CATALOG"
+    },
+    {
+      "full_name": "tribal-archery/-logicl-neural-order",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-08T13:22:35Z",
+      "latest_known_push": "2026-10-22T06:52:20Z",
+      "readme_blob_sha": "0ffc15fb869fd479081714d71464b1a77563b92e",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": "0ffc15fb869fd479081714d71464b1a77563b92e",
+          "status": "READ"
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/PROTOTYPE_READINESS_V1.md",
+          "sha": "d3dce812dff67247c5f9c21ee00f9e1e49bfdfdc",
+          "status": "READ"
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/ORCHESTRATION_ARCHITECTURE_V1.md",
+          "sha": "a868c366cbaf856b62992ccd77d1ce128a35273c",
+          "status": "READ"
+        },
+        {
+          "path": "GLOBAL_ALGORITHMIC_NEURAL_GOVERNANCE/AI_ASSURANCE_AND_DRIFT_FORENSICS.md",
+          "sha": "6e616f8508cfff7592887263c90f42b194ecf4e8",
+          "status": "READ"
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/thought_modes.py",
+          "sha": "c0733eafc05c6042fa96caaa78f2e5a1f0290a48",
+          "status": "READ"
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/orchestrator.py",
+          "sha": "b087449d057f5367f2f7508441d8286551306e4e",
+          "status": "READ"
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/tests/test_orchestrator.py",
+          "sha": "e64ceb000557976726a8eafb3140872c2ff53424",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "NTM prototype has 28 strategy modes and a V1 verification gate; current master tests were not run in this cycle.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BOUNDED_SCAN",
+      "source_gap_status": "NO_OBVIOUS_GAP_IN_BOUNDED_SCAN"
+    },
+    {
+      "full_name": "tribal-archery/copilot-cli",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2025-12-13T22:23:45Z",
+      "latest_known_push": "2026-10-22T06:52:12Z",
+      "readme_blob_sha": "1cff9f51b830cee89bfc656ddc6ab140141226cf",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "1cff9f51b830cee89bfc656ddc6ab140141226cf",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "Public Copilot CLI repository/fork; upstream tool documentation only, no direct WANGA source; read-only comparison.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BATCH",
+      "source_gap_status": "UPSTREAM_TOOL_MIRROR_ONLY",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "scan_time": "2026-11-04T07:21:43+02:00"
+    },
+    {
+      "full_name": "tribal-archery/MAM-parsed",
+      "default_branch": "main",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2026-10-02T01:05:37Z",
+      "latest_known_push": "2026-10-22T06:52:28Z",
+      "readme_blob_sha": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c",
+          "hash_type": "git_blob_sha1"
+        },
+        {
+          "path": "ARCHITECTURE/MASORAH_REPOSITORY_TOPOLOGY.md",
+          "blob_sha": "bdbae64e00cbd13f7d5588a1afe7103c29d60149",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "Parsed MAM corpus README plus proposed book→chapter→verse→token/evidence/derivation/verification topology; architecture defined, data not modified.",
+      "duplicate_status": "NO_DUPLICATE_DETECTED_IN_BATCH",
+      "source_gap_status": "CANDIDATE_CORPUS_TOPOLOGY_SOURCE",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "scan_time": "2026-11-04T07:21:43+02:00"
+    },
+    {
+      "full_name": "tribal-archery/mermaid",
+      "default_branch": "develop",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2025-02-02T08:51:53Z",
+      "latest_known_push": "2026-10-22T06:52:04Z",
+      "readme_blob_sha": "280725af7ea2fec9941f5711283c65a94523d60c",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README identifies the Mermaid diagramming project; upstream tooling only, no WANGA logic source identified.",
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN"
+    },
+    {
+      "full_name": "tribal-archery/Qdprojects",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2025-01-06T00:57:14Z",
+      "latest_known_push": "2026-10-22T06:51:49Z",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+          "hash_type": "git_blob_sha1"
+        }
+      ],
+      "scan_note": "README is identical to the Nanomathematics placeholder README; no independent source found.",
+      "duplicate_status": "DUPLICATE_README_BLOB_GROUP:e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_gap_status": "NO_WANGA_LOGIC_SOURCE_IN_BOUNDED_SCAN",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "scan_time": "2026-11-04T07:21:43+02:00"
+    },
+    {
+      "full_name": "tribal-archery/unetbootin",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_LOWERCASE_README_UNRELATED",
+      "latest_known_update": "2021-02-21T13:56:37Z",
+      "latest_known_push": "2026-10-22T06:51:33Z",
+      "readme_blob_sha": "fde193ae6f530b95854fa4d6a17cf7b73a109e80",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": null,
+          "status": "NOT_FOUND"
+        },
+        {
+          "path": "readme.md",
+          "sha": "fde193ae6f530b95854fa4d6a17cf7b73a109e80",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "README identifies an unrelated UNetbootin Linux/BSD USB installer project; no direct WANGA logic/fractal relationship found in this bounded scan.",
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "UPPERCASE_README_NOT_FOUND; LOWERCASE_README_PRESENT",
+      "latest_commit_sha": "e2eb0fe57aad24d02a0e535745bd4f33a30edb75",
+      "latest_commit_url": "https://github.com/tribal-archery/unetbootin/commit/e2eb0fe57aad24d02a0e535745bd4f33a30edb75"
+    },
+    {
+      "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
+      "default_branch": "master",
+      "visibility": "public",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "affiliations": [
+        "organization_member"
+      ],
+      "scan_status": "SCANNED_README_AND_BOUNDED_TREE",
+      "latest_known_update": "2020-04-20T04:05:20Z",
+      "latest_known_push": "2026-10-22T06:51:24Z",
+      "readme_blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "files_scanned": [
+        "README.md"
+      ],
+      "scan_note": "README identifies an Azure Blockchain VS Code extension; no WANGA logic source identified.",
+      "duplicate_status": "NOT_ASSESSED",
+      "source_gap_status": "README_PRESENT_BOUNDED_SCAN"
+    }
+  ],
+  "scan_cursor": {
+    "priority_order": [],
+    "last_completed_batch": [
+      "Quadruple-Multilevel-projection-project/-",
+      "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "tribal-archery/unetbootin"
+    ],
+    "last_completed_index": 58,
+    "next_batch": [],
+    "remaining_public_count": 0,
+    "private_repositories_deferred": true,
+    "scanned_public_count": 58,
+    "content_scanned_count": 57,
+    "content_skipped_count": 1,
+    "core_repository_scanned": true,
+    "next_action": "Public snapshot fully accounted at metadata level; keep the credential-named repository content-skipped and private repositories redacted.",
+    "last_completed_at": "2026-11-07T07:01:38.783Z",
+    "cursor_repair_note": "All 58 public repositories now have explicit scan disposition: 57 bounded content scans and one metadata-only content skip."
+  },
+  "completed_batches": [
+    {
+      "date": "2026-11-04",
+      "repositories": [
+        "AmbassadorOv/multi-agent-orchestator",
+        "AmbassadorOv/Qualia",
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/O-Ms",
+        "Quadruple-Multilevel-projection-project/Qualia",
+        "tribal-archery/MAM-parsed",
+        "tribal-archery/Qdprojects",
+        "tribal-archery/copilot-cli",
+        "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo"
+      ],
+      "status": "SCANNED_README_AND_BOUNDED_TREE"
+    },
+    {
+      "date": "2026-11-05",
+      "repositories": [
+        "AmbassadorOv/-artificial-y",
+        "AmbassadorOv/AG-triple-X-",
+        "AmbassadorOv/AmbassadorOv",
+        "AmbassadorOv/awesome-chatgpt-prompts",
+        "AmbassadorOv/branches-",
+        "AmbassadorOv/chatgpt-scientific-publications-extension",
+        "AmbassadorOv/cookbook",
+        "AmbassadorOv/desktop",
+        "AmbassadorOv/docs",
+        "AmbassadorOv/eslint"
+      ],
+      "status": "SCANNED_README_AND_LATEST_COMMIT_BOUNDED"
+    },
+    {
+      "batch_id": "2026-11-05-public-batch-02",
+      "scanned_at": "2026-11-05T06:16:15.938Z",
+      "repositories": [
+        "AmbassadorOv/extensions",
+        "AmbassadorOv/fluffy-parakeet",
+        "AmbassadorOv/generative-ai-docs",
+        "AmbassadorOv/googleapis",
+        "AmbassadorOv/https-AmbassadorOv.io",
+        "AmbassadorOv/mediapipe",
+        "AmbassadorOv/mermaid",
+        "AmbassadorOv/mujoco",
+        "AmbassadorOv/openai_tiktoken",
+        "AmbassadorOv/platform-samples"
+      ],
+      "public_repositories_scanned_cumulative": 41,
+      "public_repository_total": 58,
+      "remaining_public_count": 17,
+      "readme_present_count": 9,
+      "readme_missing_count": 1,
+      "duplicate_non_readme_document_blob_count": 2,
+      "new_wanga_logic_units": 0,
+      "status": "COMPLETED_BOUNDED_READ"
+    },
+    {
+      "batch_id": "2026-11-06-public-batch-03",
+      "scanned_at": "2026-11-06",
+      "repositories": [
+        "AmbassadorOv/python-genai",
+        "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+        "AmbassadorOv/test-notebook-links",
+        "AmbassadorOv/TTTT-0.0.0.0.1",
+        "AmbassadorOv/TTTTproject-un.govt",
+        "AmbassadorOv/unetbootin",
+        "AmbassadorOv/vqbshtfsprojects.org",
+        "AmbassadorOv/vscode-azure-blockchain-ethereum",
+        "AmbassadorOv/vscode-docs",
+        "AmbassadorOv/World-Party-Federation-Branches-managers"
+      ],
+      "public_repositories_scanned_cumulative": 51,
+      "public_repository_total": 58,
+      "remaining_public_count": 7,
+      "readme_present_count": 8,
+      "readme_missing_count": 1,
+      "empty_repository_count": 1,
+      "exact_duplicate_readme_blob_count": 2,
+      "new_wanga_logic_units": 0,
+      "status": "COMPLETED_BOUNDED_READ"
+    },
+    {
+      "batch_id": "2026-11-07-public-batch-04",
+      "scanned_at": "2026-11-07",
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/-",
+        "Quadruple-Multilevel-projection-project/-from-Corsican-",
+        "Quadruple-Multilevel-projection-project/branches-",
+        "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+        "tribal-archery/mermaid",
+        "tribal-archery/unetbootin",
+        "tribal-archery/vscode-azure-blockchain-ethereum"
+      ],
+      "public_repositories_scanned_cumulative": 55,
+      "public_repository_total": 58,
+      "remaining_public_count": 3,
+      "readme_present_count": 4,
+      "readme_missing_count": 2,
+      "content_skipped_sensitive_count": 1,
+      "new_wanga_logic_units": 0,
+      "status": "COMPLETED_BOUNDED_READ_WITH_SOURCE_GAPS"
+    },
+    {
+      "batch_id": "2026-11-07-public-followup-batch-05",
+      "scanned_at": "2026-11-07T07:01:38.783Z",
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/-",
+        "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+        "tribal-archery/unetbootin"
+      ],
+      "public_repositories_scanned_cumulative": 58,
+      "public_repository_total": 58,
+      "remaining_public_count": 0,
+      "content_scanned_count": 57,
+      "content_skipped_count": 1,
+      "new_source_candidates": 1,
+      "new_logic_wiki_units": 0,
+      "status": "COMPLETED_BOUNDED_READ_WITH_ONE_CONTENT_SKIP"
+    }
+  ],
+  "scan_summary": {
+    "public_repositories_total": 58,
+    "public_metadata_accounted": 58,
+    "public_content_scanned": 57,
+    "public_content_skipped": 1,
+    "remaining_public": 0,
+    "private_repositories_total": 5,
+    "private_names_redacted": true,
+    "private_content_persisted": false,
+    "followup_batch": "2026-11-07-public-followup-batch-05",
+    "followup_scan_time_utc": "2026-11-07T07:00:23.634Z"
+  }
+}

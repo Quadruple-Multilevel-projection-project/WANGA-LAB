@@ -1,0 +1,169 @@
+{
+  "schema_version": "wanga-logic-fractal-cycle/1.0",
+  "date": "2026-11-06",
+  "main_ref": "250e195bd7d162b4b1fee77f2d55e97332c3b99c",
+  "current_main_counts": {
+    "articles": 28,
+    "source_records": 17,
+    "source_classes": 11,
+    "articles_with_sources": 28,
+    "editorial_relation_links": 111,
+    "taxonomy_nodes": 27,
+    "missing_taxonomy_article": "ark-swarm-logic-trader",
+    "active_composition_contracts": 2,
+    "source_grounded_counterexamples": 0,
+    "semantic_test_cases": 0,
+    "benchmark_suites": 0,
+    "independent_reviews": 0,
+    "critical_core_contradictions": "UNKNOWN_NOT_MEASURED",
+    "deterministic_build": "TESTED_ON_SYNTHETIC_FIXTURES",
+    "holdout_split": false,
+    "mirror_review": false,
+    "conversation_exports": 0
+  },
+  "readiness_gate": {
+    "id": "FIRST_MODEL_ALPHA_V1",
+    "status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "thresholds": {
+      "sources": 20,
+      "source_classes": 3,
+      "logic_units_with_provenance": 50,
+      "composition_rules": 20,
+      "counterexamples": 30,
+      "semantic_test_cases": 100,
+      "benchmark_suites": 3,
+      "independent_reviews": 2
+    },
+    "current_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "important_metric_note": "Current main research_metrics reports critical_core_contradictions=0 without a reviewed contradiction inventory. Treat this as UNKNOWN, not as a verified zero. PR136 review branch contains the correction, but is 4 commits behind main."
+  },
+  "review_branch_pr136": {
+    "branch": "automation/wanga-cycle-2026-11-04",
+    "ahead_by": 35,
+    "behind_by": 4,
+    "articles": 29,
+    "source_records": 18,
+    "source_classes": 12,
+    "logic_units_with_provenance": 29,
+    "relation_links": 114,
+    "taxonomy_nodes": 29,
+    "active_composition_contracts": 2
+  },
+  "typed_builder": {
+    "workflow_run_id": 41978292218,
+    "script": "scripts/build_first_fractal_model.py",
+    "executed": true,
+    "fixture_status": "SYNTHETIC_TEST_FIXTURES_NOT_REAL_CONVERSATION_OR_EXTERNAL_FACTS",
+    "base_fragments": 3,
+    "composition_levels": 2,
+    "scale_1_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+    "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "status": "CANDIDATE_NOT_RELEASED",
+    "semantic_status": "NOT_YET_VERIFIED",
+    "release_gate": "BLOCKED_PENDING_REAL_SOURCE_FRAGMENTS_NEGATIVE_BOUNDARY_TESTS_AND_INDEPENDENT_REVIEW"
+  },
+  "ci": {
+    "workflow_run_id": 41978292218,
+    "all_workflows": [
+      "Repository Integrity",
+      "WANGA Ecosystem Agent Sweep",
+      "Logic Fractal Wiki Research",
+      "CodeQL Advanced"
+    ],
+    "all_conclusions": "success",
+    "artifact_id": 13392507807,
+    "artifact_size_bytes": 92173,
+    "artifact_sha256": "71a41115f07cc6936d918001a71858f854e8cb09abdf8aa011832e2d1354e28f",
+    "synthetic_formal_cases_passed": 7,
+    "source_grounded_cases": 0,
+    "source_grounded_benchmark_status": "BLOCKED_INSUFFICIENT_REVIEWED_CASES"
+  },
+  "composition": {
+    "active_contracts": 2,
+    "new_contracts": 0,
+    "structural_candidate_compositions": 535,
+    "semantically_verified_compositions": 0
+  },
+  "source_candidates": [
+    {
+      "id": "MHTH1928-G1-SUBJECT-PREDICATE-001",
+      "locator": "Gate I oldid=783546 lines 103-107",
+      "status": "SOURCE_EXTRACTED_CANDIDATE_UNPROOFREAD"
+    },
+    {
+      "id": "MHTH1928-G1-PROPOSITION-QUALITY-001",
+      "locator": "Gate I oldid=783546 lines 105-107",
+      "status": "SOURCE_EXTRACTED_CANDIDATE_UNPROOFREAD"
+    },
+    {
+      "id": "MHTH1928-G6-SYLLOGISM-MIDDLE-TERM-001",
+      "locator": "Gate VI oldid=783552 lines 103-109",
+      "status": "SOURCE_EXTRACTED_CANDIDATE_UNPROOFREAD"
+    },
+    {
+      "id": "MHTH1928-G14-DIBBUR-THREE-SENSES-001",
+      "locator": "Gate XIV oldid=783578 lines 103-105",
+      "status": "SOURCE_EXTRACTED_CANDIDATE_UNPROOFREAD"
+    },
+    {
+      "id": "MHTH1928-G14-LOGIC-AS-INSTRUMENT-001",
+      "locator": "Gate XIV oldid=783578 line 110",
+      "status": "SOURCE_EXTRACTED_CANDIDATE_UNPROOFREAD"
+    }
+  ],
+  "catalog_changes": {
+    "claims_added": 0,
+    "source_records_added": 0,
+    "logic_units_added": 0,
+    "weights_assigned": 0,
+    "semantic_entailment_edges_added": 0
+  },
+  "wix": {
+    "readback_date": "2026-11-06",
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "deployed_files": 29,
+    "main_page": {
+      "articles": 28,
+      "sources": 17,
+      "relations": 111,
+      "banner_date": "2026-10-12"
+    },
+    "research_status_page": {
+      "articles": 18,
+      "sources": 11,
+      "snapshot_date": "2026-10-12",
+      "stale": true
+    },
+    "fractal_research_page": {
+      "cards": 13,
+      "displayed_catalog_articles": 27,
+      "displayed_sources": 16,
+      "stale": true
+    },
+    "write_performed": false
+  },
+  "statuses": {
+    "builder": "BUILT_SYNTHETIC_CANDIDATE",
+    "software_ci": "TESTED_PASS",
+    "semantic_verification": "NOT_VERIFIED",
+    "first_model": "NOT_READY_INTERNAL_CANDIDATE_ONLY"
+  },
+  "next": [
+    "Review the five source candidates against checked scans and add stable span IDs.",
+    "Do not count synthetic fixtures or editorial links as semantic benchmarks or entailment.",
+    "Reconcile PR136 with current main and correct the unmeasured contradiction count before readiness evaluation.",
+    "Keep Wix supplemental pages unchanged until approved report/catalog changes are ready."
+  ],
+  "current_cycle_pr": {
+    "number": 139,
+    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/139",
+    "state": "OPEN_DRAFT",
+    "initial_head_sha": "3527ce44cad0efb2b2f2c847b7b686221722fc9d"
+  },
+  "current_cycle_ci": {
+    "github_workflow_runs": "NONE_RETURNED",
+    "combined_status": "NO_STATUS_CHECKS_RETURNED",
+    "local_registry_integrity": "PASS",
+    "check_scope": "PR #139 documentation/evidence branch; no workflow runs returned on the initial head; final head check performed after this metadata update."
+  }
+}
