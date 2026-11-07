@@ -1,0 +1,72 @@
+{
+  "schema_version": "wanga-logic-fractal-backlog/1.0",
+  "date": "2026-11-03",
+  "status": "ACTIVE_CUMULATIVE_BACKLOG",
+  "carried_forward_from": "research/LOGIC_FRACTAL_BACKLOG_2026-10-12.json",
+  "preservation_rule": "The prior backlog is not overwritten; this file adds new items and status updates only.",
+  "items": [
+    {
+      "id": "FL-012",
+      "topic": "Register external NTM thought-mode source",
+      "status": "CANDIDATE_SOURCE_REVIEW",
+      "evidence": "tribal-archery/-logicl-neural-order/NEURAL_ORCHESTRATION/thought_modes.py",
+      "next": "Create a source record and reversible literal spans only after review."
+    },
+    {
+      "id": "FL-013",
+      "topic": "NTM VerificationGate empty-evidence boundary",
+      "status": "MIRROR_REVIEW_REQUIRED",
+      "evidence": "orchestrator.py lines 131-145",
+      "next": "Add negative/boundary tests; decide whether supported status requires evidence refs even when task requirements are empty."
+    },
+    {
+      "id": "FL-014",
+      "topic": "AI231 metric definitions and lineage",
+      "status": "SOURCE_GAP",
+      "evidence": "cloud_master_logic.json and neural_graph.json",
+      "next": "Define metric units, normalization, provenance and reproducible derivation before any FOL/SOL formalization."
+    },
+    {
+      "id": "FL-015",
+      "topic": "MLN archived package and regression tests",
+      "status": "LIBRARY_ARCHIVE_REVIEW_ONLY",
+      "evidence": "WANGA MLN Continuous Field Core V1 Library README",
+      "next": "Inspect actual package and execute tests; do not infer that the README's 21-test claim is verified."
+    },
+    {
+      "id": "FL-016",
+      "topic": "Limbo PR #122 stale branch and replay",
+      "status": "BLOCKED_STALE_HEAD_ACTION_REQUIRED",
+      "evidence": "PR #122 compare: 59 ahead / 136 behind; TUNE-9c166900cc4ad5dd replay NOT_RUN",
+      "next": "Refresh through a review branch, obtain CI, replay candidate and append outcomes."
+    },
+    {
+      "id": "FL-017",
+      "topic": "Wix research-status page synchronization",
+      "status": "PENDING_PR_APPROVAL",
+      "evidence": "Live status page 18/11 vs main catalog 28/17",
+      "next": "After merge, publish updated page through Wix connector and read back every affected page."
+    },
+    {
+      "id": "FL-018",
+      "topic": "Populate semantic benchmark suites",
+      "status": "NOT_POPULATED",
+      "evidence": "semantic_benchmark_plan_v1.json",
+      "next": "Register 30 positive, 30 negative and 40 boundary cases with exact source spans, reviewer status and frozen holdout."
+    },
+    {
+      "id": "FL-019",
+      "topic": "Primary Rambam Gate XIV text and sentence IDs",
+      "status": "ACCESS_GAP",
+      "evidence": "Library contains a secondary summary but not the original primary text",
+      "next": "Obtain primary text and exact locators; do not count the summary as canonical evidence."
+    },
+    {
+      "id": "FL-020",
+      "topic": "Cross-repository batch continuation",
+      "status": "IN_PROGRESS",
+      "evidence": "repository_inventory.json cursor",
+      "next": "Scan the next 10 prioritized public repositories; keep private repository details redacted."
+    }
+  ]
+}

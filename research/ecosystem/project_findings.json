@@ -1,0 +1,497 @@
+{
+  "schema_version": "wanga-project-findings/1.0",
+  "scan_date": "2026-11-03",
+  "source_scope": {
+    "core_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "core_ref": "main@61e5fba00c082711af13d017eba1c05f9e0d2d6a",
+    "collaborator_batch": 10,
+    "public_repositories_scanned": 10,
+    "private_repositories_redacted": 5,
+    "conversation_export_records": 0
+  },
+  "findings": [
+    {
+      "id": "WANGA-CATALOG-001",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/articles.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "file_path": "logic_wiki/data/articles.json",
+      "blob_sha": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed",
+      "excerpt_or_summary": "28 articles; 17 source records across 11 source types; 111 editorial relation links; all article source references resolve; no duplicate article IDs.",
+      "epistemic_status": "REPOSITORY_STATE_OBSERVED",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "fractal_taxonomy.json",
+        "readiness-report.json"
+      ],
+      "contradictions": [],
+      "next_action": "Keep relation edges editorial candidates; do not promote to entailment."
+    },
+    {
+      "id": "WANGA-TAXONOMY-GAP-001",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/fractal_taxonomy.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "file_path": "logic_wiki/data/fractal_taxonomy.json",
+      "blob_sha": "355a9253cc5920d11b0b804e1561f38b51a4f2c3",
+      "excerpt_or_summary": "Main has 27 taxonomy nodes for 28 articles; ark-swarm-logic-trader is absent, leaving 3 relation targets unresolved in the taxonomy. The embedded validation snapshot still says 27 articles and 16 sources.",
+      "epistemic_status": "STRUCTURAL_INCONSISTENCY_OBSERVED",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "logic_wiki/data/articles.json"
+      ],
+      "contradictions": [
+        "Taxonomy coverage and validation counts lag the current catalog."
+      ],
+      "next_action": "Add the missing node using the article's existing fields and test full catalog/taxonomy alignment in this branch."
+    },
+    {
+      "id": "WANGA-READINESS-001",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/readiness_gate.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "file_path": "logic_wiki/data/readiness_gate.json",
+      "blob_sha": "3e782e63ab7ac50e6e7152e938a6d8af169800e4",
+      "excerpt_or_summary": "FIRST_MODEL_ALPHA_V1 requires 20 sources/3 classes, 50 logic units with provenance, 20 composition rules with contracts, 30 counterexamples, 100 semantic cases/3 suites, 2 independent reviews, deterministic build, holdout and MIRROR review. Thresholds are explicitly provisional.",
+      "epistemic_status": "PROJECT_POLICY_CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "logic_wiki/data/research_metrics.json",
+        "logic_fractal/data/semantic_benchmark_plan_v1.json"
+      ],
+      "contradictions": [],
+      "next_action": "Keep gate blocked until empirical semantic datasets and reviews exist."
+    },
+    {
+      "id": "WANGA-COMPOSER-001",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_fractal/fragment_composer.py",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "file_path": "logic_fractal/fragment_composer.py",
+      "blob_sha": "e0823383f8b768f1cb324ea07883c4d9798aa136",
+      "excerpt_or_summary": "Composer validates stable IDs, claim source spans, provenance, parent IDs and exact type-compatible interfaces. It explicitly labels type-compatible interfaces as not semantically proven.",
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "logic_fractal/data/composition_rules.json",
+        "logic_fractal/data/recursive_composition_contracts_v1.json"
+      ],
+      "contradictions": [],
+      "next_action": "Use only after real source spans and explicit contracts are registered."
+    },
+    {
+      "id": "WANGA-BUILDER-001",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/scripts/build_first_fractal_model.py",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "file_path": "scripts/build_first_fractal_model.py",
+      "blob_sha": "f3416947a435b1bde0ddd3dc691503d130c88ef4",
+      "excerpt_or_summary": "Deterministic two-scale candidate is built from three synthetic typed fragments; release gate explicitly blocks release and semantic status remains NOT_YET_VERIFIED.",
+      "epistemic_status": "BUILT_TESTED_SYNTHETIC_ONLY",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "logic_fractal/data/typed_fragments_fixture.json"
+      ],
+      "contradictions": [],
+      "next_action": "Retain synthetic builder output as a software fixture, not a source-validated model."
+    },
+    {
+      "id": "WANGA-WORKFLOW-001",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/.github/workflows/logic-fractal-wiki.yml",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "file_path": ".github/workflows/logic-fractal-wiki.yml",
+      "blob_sha": "ddd6be4cc795bacf2aa5a276fe116ff0a7b1c2c8",
+      "excerpt_or_summary": "The 2026-11-02 Logic Fractal workflow passed its build/test steps and artifact upload, then failed in create-pull-request because add-paths included the absent path research/reports/agent-evaluation/**.",
+      "epistemic_status": "CI_FAILURE_OBSERVED",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "research/reports/logic-fractal/typed-first-model-candidate.json"
+      ],
+      "contradictions": [],
+      "next_action": "Remove only the nonexistent add-paths entry; preserve the artifact upload list."
+    },
+    {
+      "id": "NTM-MODES-001",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/thought_modes.py",
+      "repository_full_name": "tribal-archery/-logicl-neural-order",
+      "branch": "master",
+      "file_path": "NEURAL_ORCHESTRATION/thought_modes.py",
+      "blob_sha": "c0733eafc05c6042fa96caaa78f2e5a1f0290a48",
+      "exact_locator": "lines 1-64; THOUGHT_MODES declaration",
+      "excerpt_or_summary": "The file declares 28 thought-mode strategies in five families and explicitly says these are orchestration strategies, not literal internal LLM mechanisms.",
+      "epistemic_status": "SOURCE_SUPPORTED_CODE_DECLARATION",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "WANGA NTM architecture",
+        "logic_wiki/data/articles.json"
+      ],
+      "contradictions": [],
+      "next_action": "Register as a candidate external source after human review; do not count it as a WANGA logic unit yet."
+    },
+    {
+      "id": "NTM-VERIFY-001",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/orchestrator.py",
+      "repository_full_name": "tribal-archery/-logicl-neural-order",
+      "branch": "master",
+      "file_path": "NEURAL_ORCHESTRATION/orchestrator.py",
+      "blob_sha": "b087449d057f5367f2f7508441d8286551306e4e",
+      "exact_locator": "lines 131-145; VerificationGate.verify()",
+      "excerpt_or_summary": "evidence_ok is true when evidence_requirements is empty; accepted can then become true without evidence_refs, and the returned status becomes supported. This is a source-grounded boundary case, not an adjudicated defect.",
+      "epistemic_status": "MIRROR_COUNTER_READING_CANDIDATE",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "WANGA evidence/provenance gate"
+      ],
+      "contradictions": [
+        "Potential mismatch between supported label and absence of explicit evidence requirements."
+      ],
+      "next_action": "Add a negative/boundary test and independent review before any integration."
+    },
+    {
+      "id": "AI231-ARCHIVE-001",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io/blob/main/datasets/embeddings/cloud_master_logic.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "branch": "main",
+      "file_path": "datasets/embeddings/cloud_master_logic.json",
+      "blob_sha": "04ce79e8620c34446b6e772aaae307188b481a28",
+      "exact_locator": "JSON pointers /neural_graph/gates_count, /neural_graph/logic_base_index, /neural_graph/active_pathways, /neural_graph/accuracy_peak",
+      "excerpt_or_summary": "Archive asserts 231 gates, logic_base_index 441, 32 pathways and accuracy_peak 2.502; integrity_seal also states accuracy +250.2%. No metric definition or reproducible validation was found in this bounded scan.",
+      "epistemic_status": "UNVERIFIED_PROJECT_ARCHIVE_ASSERTIONS",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "WANGA 231-gate research",
+        "logic_wiki/data/articles.json"
+      ],
+      "contradictions": [
+        "Accuracy-like value above 1 requires a distinct metric definition and cannot be read as conventional accuracy."
+      ],
+      "next_action": "Require metric units, derivation, source lineage and reproducible tests before formalization."
+    },
+    {
+      "id": "AI231-GRAPH-001",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io/blob/main/datasets/embeddings/neural_graph.json",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "branch": "main",
+      "file_path": "datasets/embeddings/neural_graph.json",
+      "blob_sha": "219f9a8a393c33ebd0fe07c473aa9adfc534ee5c",
+      "exact_locator": "top-level fields identity, logic_base, gates, pathways, integrity_seal",
+      "excerpt_or_summary": "Second archive representation repeats logic_base 441, gates 231 and pathways 32; no derivation from the first file or independent evidence was established.",
+      "epistemic_status": "DUPLICATE_OR_RELATED_ARCHIVE_ASSERTION_NOT_VALIDATED",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "cloud_master_logic.json"
+      ],
+      "contradictions": [],
+      "next_action": "Compare versions and source lineage before treating the two files as independent sources."
+    },
+    {
+      "id": "AGENT-INFRA-001",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/ai-agent-terraform/blob/main/.github/workflows/call-swarms.yml",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "branch": "main",
+      "file_path": ".github/workflows/call-swarms.yml",
+      "blob_sha": "6c2e3aed21a726f24136e8ec3ed5f0a48b96328a",
+      "excerpt_or_summary": "Workflow provides an AWS/SSM swarm deployment path. It was read only; no workflow execution, cloud provisioning or external action was performed.",
+      "epistemic_status": "INFRASTRUCTURE_SOURCE_ONLY",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "WANGA agent executor boundary"
+      ],
+      "contradictions": [],
+      "next_action": "Treat as optional deployment adapter only after permissions, costs and postconditions are reviewed."
+    },
+    {
+      "id": "SKILLS-REGISTRY-001",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/skills/blob/main/src/agents.ts",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/skills",
+      "branch": "main",
+      "file_path": "src/agents.ts",
+      "blob_sha": "a8b14aaa398012cf340760304903ad35edf0ed15",
+      "excerpt_or_summary": "Agent capability/registry implementation is a possible taxonomy overlap; no WANGA source or logic relation was asserted.",
+      "epistemic_status": "CANDIDATE_INTEGRATION_SOURCE",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "overlap_candidates": [
+        "WANGA agent registry"
+      ],
+      "contradictions": [],
+      "next_action": "Inspect schema and tests in a later bounded repository batch."
+    },
+    {
+      "id": "README-DUPLICATE-001",
+      "source_uri": null,
+      "repository_full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order; Quadruple-Multilevel-projection-project/MNM",
+      "branch": "master",
+      "file_path": "README.md",
+      "blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "excerpt_or_summary": "The two distinct repositories expose the same short Nanomathematics README blob hash. This is duplicate content, not proof that the repositories are the same project.",
+      "epistemic_status": "DUPLICATE_CONTENT_HASH_OBSERVED",
+      "permission_scope": "PUBLIC_REPOSITORIES",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "next_action": "Keep repository identities separate; inspect deeper files only if relevance warrants.",
+      "source_uris": [
+        "https://github.com/Quadruple-Multilevel-projection-project/-logicl-neural-order/blob/master/README.md",
+        "https://github.com/Quadruple-Multilevel-projection-project/MNM/blob/master/README.md"
+      ]
+    },
+    {
+      "id": "LIBRARY-MLN-001",
+      "source_uri": null,
+      "repository_full_name": null,
+      "branch": null,
+      "file_path": "Library item: WANGA MLN Continuous Field Core V1 README.md",
+      "blob_sha": null,
+      "exact_locator": "Library search/read result; full README",
+      "excerpt_or_summary": "Archive describes a bounded M/L/N numeric/operator prototype, says 21 regression tests, explicitly states semantics not verified and not AGI, and keeps MLN separate from LNL. Test claim was not rerun in this cycle.",
+      "epistemic_status": "PRIVATE_LIBRARY_ARCHIVE_SUMMARY_ONLY",
+      "permission_scope": "PRIVATE_LIBRARY_NOT_FOR_PUBLICATION",
+      "overlap_candidates": [
+        "WANGA MLN field",
+        "LNL compiler",
+        "NTM state adapter"
+      ],
+      "contradictions": [],
+      "next_action": "Materialize and inspect the actual package/tests before claiming the 21 tests pass."
+    },
+    {
+      "id": "LIBRARY-ANTIDRIFT-001",
+      "source_uri": null,
+      "repository_full_name": null,
+      "branch": null,
+      "file_path": "Library item: ANTI_DRIFT_PENDULUM_ACCEL_ASCII.txt",
+      "blob_sha": null,
+      "exact_locator": "sections 1-14; activation status",
+      "excerpt_or_summary": "Controller is REVIEW ONLY / NOT ACTIVATED; toy 1-D sandbox results only; commit requires sandbox, topology, stability, rollback and double confirmation. Not applied to Limbo.",
+      "epistemic_status": "REVIEW_ONLY_NOT_ACTIVATED",
+      "permission_scope": "PRIVATE_LIBRARY_NOT_FOR_PUBLICATION",
+      "overlap_candidates": [
+        "Limbo tuning candidate"
+      ],
+      "contradictions": [],
+      "next_action": "Do not activate; compare only as a hypothesis after a real replay target exists."
+    },
+    {
+      "id": "LIBRARY-CANONICAL-001",
+      "source_uri": null,
+      "repository_full_name": null,
+      "branch": null,
+      "file_path": "Library item: Canonical Sources (Introduction & Gate 14)",
+      "blob_sha": null,
+      "exact_locator": "full document; section Canonical Sources",
+      "excerpt_or_summary": "Internal summary asserts Gate XIV definitions and 175 terms but does not contain the original primary text or stable sentence IDs; treat as a secondary summary only.",
+      "epistemic_status": "SECONDARY_SUMMARY_ONLY_PRIMARY_SOURCE_GAP",
+      "permission_scope": "PRIVATE_LIBRARY_NOT_FOR_PUBLICATION",
+      "overlap_candidates": [
+        "Rambam Milot HaHiggayon corpus"
+      ],
+      "contradictions": [
+        "Primary source text and sentence-level locators were not found in the bounded Library search."
+      ],
+      "next_action": "Do not count as a canonical source until the original text and exact spans are available."
+    },
+    {
+      "id": "LIBRARY-GRAPH-001",
+      "source_uri": null,
+      "repository_full_name": null,
+      "branch": null,
+      "file_path": "Library item: wanga_neural_graph.html",
+      "blob_sha": null,
+      "exact_locator": "nodes[] and edges[] in embedded script",
+      "excerpt_or_summary": "Simulation HTML defines explicit node and edge arrays and includes a direct disclaimer that its links are simulation/architecture links, not proof of Git ancestry. Node/edge counts were not recomputed in this cycle.",
+      "epistemic_status": "SIMULATION_ONLY_EXPLICIT_LINKS",
+      "permission_scope": "PRIVATE_LIBRARY_NOT_FOR_PUBLICATION",
+      "overlap_candidates": [
+        "WANGA architecture registry"
+      ],
+      "contradictions": [],
+      "next_action": "Keep as visual simulation input; do not infer repository ancestry or semantic entailment."
+    }
+  ],
+  "logic_candidates": [
+    {
+      "candidate_id": "NTM-MODES-001",
+      "type": "DECLARED_MODE_SET",
+      "source_finding": "NTM-MODES-001",
+      "literal_excerpt": "Neural Thinking Machine: 28 cognitive thought modes.",
+      "candidate_structure": "28 enumerated ThoughtMode records grouped into five ModeFamily values; each record has mode_id, name, family, primary_capability, verification_level.",
+      "relations": [
+        "mode_belongs_to_family",
+        "mode_declares_capability",
+        "mode_declares_verification_level"
+      ],
+      "epistemic_status": "SOURCE_SUPPORTED_CODE_DECLARATION",
+      "scope": "This file's declared strategy registry only.",
+      "non_applicability": "Does not prove 28 models, actual internal LLM mechanisms, or empirical effectiveness.",
+      "formalization_status": "NOT_YET_FORMALIZED",
+      "weight_status": "NO_WEIGHTS_ASSIGNED"
+    },
+    {
+      "candidate_id": "NTM-VERIFY-001",
+      "type": "CONDITIONAL_EVIDENCE_GATE",
+      "source_finding": "NTM-VERIFY-001",
+      "literal_excerpt": "evidence_ok = not task.evidence_requirements or all(result.evidence_refs for result in results)",
+      "candidate_structure": "If evidence_requirements is empty, evidence_ok evaluates true; otherwise every result must expose evidence_refs.",
+      "relations": [
+        "conditional_gate",
+        "evidence_requirement_presence",
+        "acceptance_condition"
+      ],
+      "epistemic_status": "IMPLEMENTATION_OBSERVATION_MIRROR_REVIEW_REQUIRED",
+      "scope": "VerificationGate.verify() in the current master source.",
+      "non_applicability": "Not a claim about the behavior of other NTM implementations or WANGA.",
+      "formalization_status": "COUNTER_READING_CANDIDATE",
+      "weight_status": "NO_WEIGHTS_ASSIGNED"
+    },
+    {
+      "candidate_id": "AI231-ARCHIVE-001",
+      "type": "UNVERIFIED_PARAMETER_BUNDLE",
+      "source_finding": "AI231-ARCHIVE-001",
+      "literal_excerpt": "gates_count=231; logic_base_index=441; active_pathways=32; accuracy_peak=2.502",
+      "candidate_structure": "A parameter bundle with four declared fields and no established derivation relation among them.",
+      "relations": [
+        "declares_parameter_only"
+      ],
+      "epistemic_status": "UNVERIFIED_PROJECT_ARCHIVE_ASSERTIONS",
+      "scope": "The two inspected JSON files only.",
+      "non_applicability": "No claim of accuracy, deployment, semantic validity or WANGA compatibility.",
+      "formalization_status": "SOURCE_CLAIMS_NOT_FORMALIZED",
+      "weight_status": "NO_WEIGHTS_ASSIGNED"
+    }
+  ],
+  "mirror_reviews": [
+    {
+      "id": "MIRROR-NTM-001",
+      "status": "COUNTER_READING_CANDIDATE",
+      "claim": "NTM verification status 'supported' may be emitted when evidence_requirements is empty.",
+      "evidence": "orchestrator.py lines 133-135",
+      "counter_reading": "The code only requires evidence refs when the task explicitly supplies evidence_requirements; the empty requirement set makes evidence_ok true.",
+      "adjudication": "NOT_ADJUDICATED",
+      "next": "Add a boundary test and independent review."
+    },
+    {
+      "id": "MIRROR-AI231-001",
+      "status": "METRIC_DEFINITION_GAP",
+      "claim": "accuracy_peak 2.502 and Accuracy +250.2% are reported in archive JSON.",
+      "evidence": "cloud_master_logic.json /neural_graph/accuracy_peak and integrity_seal",
+      "counter_reading": "Without metric definition, normalization and benchmark, this cannot be interpreted as conventional accuracy.",
+      "adjudication": "NOT_ADJUDICATED",
+      "next": "Require metric schema and reproducible benchmark."
+    }
+  ],
+  "cross_repository_relationships": [
+    {
+      "source": "tribal-archery/-logicl-neural-order",
+      "target": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "relationship": "NTM architecture and evidence-loop overlap candidate",
+      "status": "POTENTIAL_OVERLAP_NOT_EQUIVALENCE"
+    },
+    {
+      "source": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "target": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "relationship": "231-gate and neural-graph archive overlap candidate",
+      "status": "UNVERIFIED_ARCHIVE_OVERLAP"
+    },
+    {
+      "source": "Quadruple-Multilevel-projection-project/skills",
+      "target": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "relationship": "agent capability registry overlap candidate",
+      "status": "POTENTIAL_SCHEMA_OVERLAP"
+    },
+    {
+      "source": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "target": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "relationship": "optional swarm executor infrastructure",
+      "status": "SEPARATE_INFRASTRUCTURE"
+    }
+  ],
+  "agent_roles": [
+    {
+      "role": "Repository Inventory",
+      "status": "COMPLETED",
+      "input": "Live owner/collaborator/organization-member enumeration",
+      "output": "63 unique repositories; 58 public; 5 private redacted; 10 public collaborators scanned",
+      "evidence": "repository_inventory.json",
+      "next": "Continue from cursor."
+    },
+    {
+      "role": "Project README/Docs Collector",
+      "status": "COMPLETED",
+      "input": "10-repository bounded batch plus WANGA-LAB core",
+      "output": "README/tree scan and targeted NTM, AI231, Terraform, skills files",
+      "evidence": "repository_inventory.json and this findings file",
+      "next": "Inspect next 10 repositories."
+    },
+    {
+      "role": "Conversation Export Collector",
+      "status": "BLOCKED",
+      "input": "Accessible conversation and Library surfaces",
+      "output": "No real ChatGPT export or conversation intake records found; Library search returned only archived documents",
+      "evidence": "research/inbox/conversations/README.md; Files search",
+      "next": "Wait for a user-provided export; preserve PRIVATE_REVIEW_ONLY boundary."
+    },
+    {
+      "role": "Logic/Fractal Extractor",
+      "status": "IN_PROGRESS",
+      "input": "WANGA catalog plus NTM and AI231 code/data",
+      "output": "3 candidate structures; 0 new catalog logic units",
+      "evidence": "logic_candidates[]",
+      "next": "Normalize exact spans and source registry entries after review."
+    },
+    {
+      "role": "Cross-Repo Relationship Mapper",
+      "status": "COMPLETED",
+      "input": "10-repository batch",
+      "output": "4 overlap candidates; no external repository writes",
+      "evidence": "cross_repository_relationships[]",
+      "next": "Review after subsequent batches."
+    },
+    {
+      "role": "Mirror/Contradiction Reviewer",
+      "status": "COMPLETED",
+      "input": "NTM verification gate and AI231 metrics",
+      "output": "2 counter-reading candidates, not adjudicated",
+      "evidence": "mirror_reviews[]",
+      "next": "Independent review and boundary tests."
+    },
+    {
+      "role": "Provenance Checker",
+      "status": "COMPLETED",
+      "input": "WANGA catalog/taxonomy and external file blob hashes",
+      "output": "28/17/111 catalog counts; taxonomy gap detected; source locators retained",
+      "evidence": "catalog and taxonomy findings",
+      "next": "Rebuild after taxonomy repair."
+    },
+    {
+      "role": "Test/CI Evaluator",
+      "status": "IN_PROGRESS",
+      "input": "Latest Logic Fractal workflow and PR #122 CI",
+      "output": "Logic tests/build passed on previous head; proposal step failed; PR #122 current runs action_required with no jobs",
+      "evidence": "workflow run 41453314468; PR #122",
+      "next": "Check new PR CI; keep Limbo draft blocked."
+    },
+    {
+      "role": "Wiki Curator",
+      "status": "IN_PROGRESS",
+      "input": "Catalog, taxonomy and Wix read-back",
+      "output": "Taxonomy node repair and read-back manifest update proposed in branch",
+      "evidence": "branch automation/wanga-workloop-2026-11-03",
+      "next": "After merge, sync stale research-status page."
+    },
+    {
+      "role": "Report Publisher",
+      "status": "IN_PROGRESS",
+      "input": "Cycle findings and reports",
+      "output": "Branch/PR workflow only; no main write and no Wix publish",
+      "evidence": "branch automation/wanga-workloop-2026-11-03",
+      "next": "Await CI and review."
+    }
+  ],
+  "access_gaps": [
+    "No real ChatGPT conversation export is present in the accessible repository inbox.",
+    "Private repository names and contents are redacted from the public registry; only aggregate metadata is retained.",
+    "GitHub Actions cross-repository read token is not configured; live connector reads succeeded for this batch.",
+    "No source-backed semantic benchmark cases or independent review cycles are registered.",
+    "Original Rambam primary text with sentence-level locators was not found in the bounded Library search."
+  ]
+}
