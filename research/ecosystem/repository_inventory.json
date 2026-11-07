@@ -1,7 +1,7 @@
 {
   "schema_version": "wanga-repository-inventory/1.0",
   "snapshot_date": "2026-11-07",
-  "source": "Live GitHub affiliation snapshot; current main ref e40a240859a31ae96d5dd28adbdc4e4fc7655874; bounded repository and README scan.",
+  "source": "Live GitHub affiliation snapshot; current main ref e40a240859a31ae96d5dd28adbdc4e4fc7655874; bounded repository and README scan.; follow-up batch 05 completed at 2026-11-07T07:00:23.634Z; private repository names/content remain redacted.",
   "affiliation_counts": {
     "owner": 38,
     "collaborator": 13,
@@ -1202,14 +1202,28 @@
         "collaborator",
         "organization_member"
       ],
-      "scan_status": "SCANNED_METADATA_ONLY_README_MISSING",
+      "scan_status": "SCANNED_HANDOFF_NOTICE_README_MISSING",
       "latest_known_update": "2026-10-05T08:21:15Z",
       "latest_known_push": "2026-10-22T06:49:17Z",
       "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": "README.md lookup returned 404; no inference about repository purpose from the missing file.",
-      "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "README_NOT_FOUND"
+      "files_scanned": [
+        {
+          "path": "AI-AGENT-HANDOFF-NOTICE.md",
+          "sha": "2e2698d337a60a93059d85d4302ea01cc3837b7b",
+          "status": "READ",
+          "exact_locator": "lines 3-15, 21-29, 45"
+        },
+        {
+          "path": "README.md",
+          "sha": null,
+          "status": "NOT_FOUND"
+        }
+      ],
+      "scan_note": "The public handoff notice declares sequential L1-L3, evidence/provenance and deterministic-output gates; it overlaps with WANGA-LAB AI-AGENT-NOTICE.md but has a different blob SHA. Source lineage and independence are not established. No changes were made in this repository.",
+      "duplicate_status": "RELATED_POLICY_OVERLAP_NOT_IDENTICAL_TO_WANGA_NOTICE",
+      "source_gap_status": "README_MD_NOT_FOUND; HANDOFF_NOTICE_READ",
+      "latest_commit_sha": "08b106df7ab15c2fd3aef807cda6eef56f38fc60",
+      "latest_commit_url": "https://github.com/Quadruple-Multilevel-projection-project/-/commit/08b106df7ab15c2fd3aef807cda6eef56f38fc60"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/-from-Corsican-",
@@ -1497,14 +1511,16 @@
         "collaborator",
         "organization_member"
       ],
-      "scan_status": "SKIPPED_CONTENT_SENSITIVE_NAME",
+      "scan_status": "METADATA_ONLY_CONTENT_SKIPPED_SENSITIVE_NAME",
       "latest_known_update": "2026-10-05T08:21:43Z",
       "latest_known_push": "2026-10-22T06:50:54Z",
       "readme_blob_sha": null,
       "files_scanned": [],
-      "scan_note": "Metadata only. Repository content was intentionally not opened because the name suggests credential material; no keys or file contents were accessed or persisted.",
+      "scan_note": "Repository metadata recorded only. No files, keys, secrets, or content were opened.",
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "CONTENT_NOT_SCANNED_SAFETY_BOUNDARY"
+      "source_gap_status": "CONTENT_SKIPPED_CREDENTIAL_NAMED_REPOSITORY",
+      "latest_commit_sha": "fbf09a8667f1843bfacc26f25ad4d335afc05365",
+      "latest_commit_url": "https://github.com/Quadruple-Multilevel-projection-project/GOOGLE_API_KEY/commit/fbf09a8667f1843bfacc26f25ad4d335afc05365"
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/MNM",
@@ -1969,14 +1985,27 @@
       "affiliations": [
         "organization_member"
       ],
-      "scan_status": "SCANNED_METADATA_ONLY_README_MISSING",
+      "scan_status": "SCANNED_LOWERCASE_README_UNRELATED",
       "latest_known_update": "2021-02-21T13:56:37Z",
       "latest_known_push": "2026-10-22T06:51:33Z",
-      "readme_blob_sha": null,
-      "files_scanned": [],
-      "scan_note": "README.md lookup returned 404; no inference about repository purpose from the missing file.",
+      "readme_blob_sha": "fde193ae6f530b95854fa4d6a17cf7b73a109e80",
+      "files_scanned": [
+        {
+          "path": "README.md",
+          "sha": null,
+          "status": "NOT_FOUND"
+        },
+        {
+          "path": "readme.md",
+          "sha": "fde193ae6f530b95854fa4d6a17cf7b73a109e80",
+          "status": "READ"
+        }
+      ],
+      "scan_note": "README identifies an unrelated UNetbootin Linux/BSD USB installer project; no direct WANGA logic/fractal relationship found in this bounded scan.",
       "duplicate_status": "NOT_ASSESSED",
-      "source_gap_status": "README_NOT_FOUND"
+      "source_gap_status": "UPPERCASE_README_NOT_FOUND; LOWERCASE_README_PRESENT",
+      "latest_commit_sha": "e2eb0fe57aad24d02a0e535745bd4f33a30edb75",
+      "latest_commit_url": "https://github.com/tribal-archery/unetbootin/commit/e2eb0fe57aad24d02a0e535745bd4f33a30edb75"
     },
     {
       "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
@@ -2136,5 +2165,17 @@
       "new_wanga_logic_units": 0,
       "status": "COMPLETED_BOUNDED_READ_WITH_SOURCE_GAPS"
     }
-  ]
+  ],
+  "scan_summary": {
+    "public_repositories_total": 58,
+    "public_metadata_accounted": 58,
+    "public_content_scanned": 57,
+    "public_content_skipped": 1,
+    "remaining_public": 0,
+    "private_repositories_total": 5,
+    "private_names_redacted": true,
+    "private_content_persisted": false,
+    "followup_batch": "2026-11-07-public-followup-batch-05",
+    "followup_scan_time_utc": "2026-11-07T07:00:23.634Z"
+  }
 }
