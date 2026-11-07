@@ -60,3 +60,11 @@
 3. Review Wix missing-page IDs before any deployment write.
 4. Add source-grounded counterexamples, semantic suites, holdout and independent reviews.
 5. Replay Limbo tuning only after fresh crash input or a replayable test exists.
+
+
+## Latest CI rerun — 2026-11-07
+
+- Logic Fractal Wiki Research run `42349432298` / job `128334205708` passed; the builder executed again and returned the same synthetic-only model hash `a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904`.
+- Ecosystem Sweep `42349432266`, Repository Integrity `42349432299`, and CodeQL `42349432251` passed on tested head `0c6be28`.
+- Final cursor-only commit is `9b33a3800e47f07b2c01a36400f433c26b8deb6c`; no full Actions run was created for that data-only commit. A separate JSON consistency check passed 10/10.
+- PR #139 remains draft and 4 commits behind main; no merge was performed.

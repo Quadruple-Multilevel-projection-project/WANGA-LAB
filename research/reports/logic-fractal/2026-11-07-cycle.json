@@ -99,17 +99,19 @@
   "builder": {
     "script": "scripts/build_first_fractal_model.py",
     "latest_successful_run_date": "2026-11-07",
-    "latest_successful_run_id": 42347937078,
+    "latest_successful_run_id": 42349432298,
     "latest_model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
-    "latest_artifact_id": 13563773829,
-    "latest_artifact_size_bytes": 85300,
-    "latest_artifact_sha256": "f9ff54b3e29be293a9b09f36a5ceb303c0b5be448b44ebe56571e7e316a6e42a",
+    "latest_artifact_id": 13564364551,
+    "latest_artifact_size_bytes": 85798,
+    "latest_artifact_sha256": "41ee7cc9c822ebef96542e15a3e19e209d369411fa7a2dbf4f7b8b3dc374aa48",
     "fixture_status": "SYNTHETIC_FIXTURES_ONLY",
     "rerun_this_cycle": true,
     "semantic_status": "NOT_YET_VERIFIED",
     "release_status": "CANDIDATE_NOT_RELEASED",
     "runner": "GitHub Actions ubuntu-latest; Python 3.11.18",
-    "execution_log": "Run 42347937078 / job 128329641595: python scripts/build_first_fractal_model.py returned CANDIDATE_NOT_RELEASED; scale_1_hash da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0; scale_2_hash a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904."
+    "execution_log": "Latest rerun 42349432298 / job 128334205708 executed python scripts/build_first_fractal_model.py and returned CANDIDATE_NOT_RELEASED; scale_1_hash da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0; scale_2_hash a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904.",
+    "previous_successful_run_id": 42347937078,
+    "latest_successful_job_id": 128334205708
   },
   "wix": {
     "site_name": "Logic Engine Research Lab",
@@ -160,35 +162,46 @@
     "current_head_sha": "2afa0d2ece4fb6810e21c8ce9a20796fde969af1",
     "runs": [
       {
-        "id": 42347937078,
+        "id": 42349432298,
         "name": "Logic Fractal Wiki Research",
         "conclusion": "success",
-        "artifact_id": 13563773829,
-        "artifact_size_bytes": 85300
+        "artifact_id": 13564364551,
+        "artifact_size_bytes": 85798,
+        "artifact_sha256": "41ee7cc9c822ebef96542e15a3e19e209d369411fa7a2dbf4f7b8b3dc374aa48"
       },
       {
-        "id": 42347937081,
+        "id": 42349432266,
         "name": "WANGA Ecosystem Agent Sweep",
         "conclusion": "success",
-        "artifact_id": 13564740932,
-        "artifact_size_bytes": 3224
+        "artifact_id": 13564782452,
+        "artifact_size_bytes": 3224,
+        "artifact_sha256": "ac458bfcae43f37bfc5261d37d8215c973d07a70a88d420332e7a1a38ecc63f9"
       },
       {
-        "id": 42347937077,
+        "id": 42349432299,
         "name": "Repository Integrity",
         "conclusion": "success"
       },
       {
-        "id": 42347937115,
+        "id": 42349432251,
         "name": "CodeQL Advanced",
         "conclusion": "success"
       }
     ],
-    "logic_fractal_last_run_id": 42347937078,
+    "logic_fractal_last_run_id": 42349432298,
     "logic_fractal_last_run_date": "2026-11-07",
     "current_main_combined_status": "NO_STATUS_CHECKS_RETURNED",
     "pr139_head_sha": "cdd2cc1eb42f60212bd25caff2c196e0bc118859",
-    "pr139_behind_by_main": 4
+    "pr139_behind_by_main": 4,
+    "tested_head_sha": "0c6be28dec8f6a6f6d75639e7d3c3bd4999121cf",
+    "final_branch_head_sha": "9b33a3800e47f07b2c01a36400f433c26b8deb6c",
+    "final_branch_head_full_ci": "NOT_RUN_AFTER_DATA_ONLY_CURSOR_UPDATE",
+    "manual_json_integrity_check": {
+      "status": "PASS",
+      "passed": 10,
+      "total": 10,
+      "scope": "changed inventory/findings/cursor/report JSON artifacts"
+    }
   },
   "limbo": {
     "pr_number": 122,
@@ -223,11 +236,11 @@
   },
   "statuses": {
     "built": "Repository catalog, typed composer, readiness gate and Limbo branch artifacts exist.",
-    "tested": "PR #139 head cdd2cc1: Logic Fractal Wiki Research (including the typed builder), Ecosystem Agent Sweep, Repository Integrity and CodeQL passed on ubuntu-latest. Follow-up commit requires fresh CI.",
+    "tested": "On PR #139 tested head 0c6be28: Logic Fractal Wiki Research (builder rerun), Ecosystem Agent Sweep, Repository Integrity and CodeQL all passed. Final data-only cursor commit 9b33 has no new full Actions run; changed JSON artifacts passed a separate 10/10 consistency check.",
     "verified": "No semantic truth, model readiness, independent review, full crash-map coverage, or current-system state is verified."
   },
   "next": [
-    "Run fresh CI on the updated PR #139 head and refresh its 4-commit lag against main before review or merge.",
+    "Refresh PR #139 against current main (4 commits behind) before review or merge; full Actions checks must cover the final head.",
     "PR #135 is open and mergeable at the API level but 16 commits behind main; refresh before considering its taxonomy correction.",
     "Review Wix article mismatches before any deployment write.",
     "Register source-grounded counterexamples, semantic benchmark cases, suites, holdout and two independent reviews.",
