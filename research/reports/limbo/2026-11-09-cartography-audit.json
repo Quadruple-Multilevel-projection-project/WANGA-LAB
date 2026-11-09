@@ -1,0 +1,49 @@
+{
+  "schema_version": "wanga-limbo-cartography-audit/1.0",
+  "date": "2026-11-09",
+  "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+  "pr_number": 122,
+  "pr_state": "OPEN_DRAFT",
+  "branch": "deploy/limbo-cartography-core-v1",
+  "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+  "ahead_by": 63,
+  "behind_by": 9,
+  "latest_head_workflow_run": {
+    "id": 42345983702,
+    "status": "action_required",
+    "jobs": 0,
+    "artifacts": 0
+  },
+  "previous_head_successful_run": {
+    "id": 42345964301,
+    "conclusion": "success",
+    "software_tests": 21,
+    "scope": "software/unit validation only"
+  },
+  "crash_map": {
+    "incident_records": 10,
+    "history_events": 2,
+    "nodes": 14,
+    "edges": 19,
+    "last_observed_crash_date": "2026-10-19",
+    "per_incident_source_sha256_present": 0
+  },
+  "latest_execution": {
+    "date": "2026-11-07",
+    "status": "EXECUTION_RECORD_ONLY",
+    "inputs_found": 0,
+    "epistemic_attempt": false
+  },
+  "state": "NO_INPUTS",
+  "interpretation": "NO_INPUTS is not successful forensic coverage. No new crash point or causal relation was established.",
+  "tuning_candidate_status": "CANDIDATE_REPLAY_REQUIRED",
+  "logic_bundle_status": "DRAFT_UNVERIFIED",
+  "new_crash_points_added": 0,
+  "map_mutated_this_cycle": false,
+  "next": [
+    "Obtain a source-backed crash input.",
+    "Add per-incident hashes and exact locators.",
+    "Replay the existing tuning candidate against recorded incidents.",
+    "Resolve action_required and rerun CI on the current PR head."
+  ]
+}

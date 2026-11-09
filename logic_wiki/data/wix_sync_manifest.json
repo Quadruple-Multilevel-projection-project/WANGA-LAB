@@ -113,7 +113,7 @@
   "main_page_catalog_article_count": 18,
   "research_catalog_article_count": 27,
   "supplemental_research_concept_count": 9,
-  "last_readback_date": "2026-11-07",
+  "last_readback_date": "2026-11-09",
   "last_readback": {
     "status": "MISMATCH_REVIEW_REQUIRED",
     "site_name": "Logic Engine Research Lab",
@@ -150,5 +150,41 @@
     "reason": "The current GitHub catalog contains 28 article IDs, while the live main page does not contain 10 of them. New entries were not published because they require review before public Wix sync."
   },
   "publication_gate": "BLOCKED_UNTIL_MISSING_ARTICLE_REVIEW_AND_APPROVED_WIX_READBACK",
-  "last_verified_by": "Connected Wix headless read-back"
+  "last_verified_by": "Connected Wix headless read-back",
+  "latest_readback": {
+    "site_name": "Logic Engine Research Lab",
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "revision": "53d1e4194d65460f2c99e15dacf7391176098beb",
+    "live_file_count": 29,
+    "main_page_path": "logic-wiki.html",
+    "main_page_bytes": 53922,
+    "main_page_article_tags_with_ids": 27,
+    "github_catalog_article_count": 28,
+    "matching_catalog_article_ids": 18,
+    "missing_catalog_article_ids": [
+      "logical-particle",
+      "fractal-invariant",
+      "recursive-composition",
+      "conversation-evidence-unit",
+      "counterexample-case",
+      "autonomous-research-agent",
+      "multi-scale-fractal-map",
+      "longitudinal-research-cycle",
+      "logical-diamond",
+      "ark-swarm-logic-trader"
+    ],
+    "extra_live_resource_ids": [
+      "wiki-page-research-status",
+      "wiki-page-fractal-model",
+      "wiki-page-fractal-logic",
+      "wiki-page-typed-fragment",
+      "wiki-page-mln-field",
+      "wiki-page-231-gates",
+      "wiki-page-logic-before-weight",
+      "wiki-page-evidence-status",
+      "wiki-page-ntm"
+    ],
+    "write_performed": false,
+    "status": "READBACK_MISMATCH_REVIEW_REQUIRED"
+  }
 }

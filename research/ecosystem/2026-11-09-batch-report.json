@@ -1,0 +1,210 @@
+{
+  "schema_version": "wanga-ecosystem-batch-report/1.0",
+  "date": "2026-11-09",
+  "main_ref": "156a70b8106215617f437a05b3289be05ca43d60",
+  "repository_snapshot": {
+    "unique_repositories": 63,
+    "public": 58,
+    "private": 5,
+    "affiliations": {
+      "owner": 38,
+      "collaborator": 13,
+      "organization_member": 25
+    },
+    "public_metadata_accounted": 58,
+    "public_content_scanned": 57,
+    "public_content_skipped": 1,
+    "private_readme_probe_successes": 4,
+    "private_readme_probe_failures": 1,
+    "private_content_persisted": false
+  },
+  "batch": {
+    "id": "2026-11-09-revalidation-batch-06",
+    "status": "COMPLETED_REVALIDATION_NO_NEW_REPOSITORIES",
+    "repositories": [
+      "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "Quadruple-Multilevel-projection-project/MNM",
+      "Quadruple-Multilevel-projection-project/Qualia",
+      "Quadruple-Multilevel-projection-project/globalSpeed",
+      "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department"
+    ],
+    "new_repository_records": 0,
+    "new_public_source_findings": 2,
+    "duplicate_source_groups": 1
+  },
+  "new_public_findings": [
+    {
+      "id": "AI231-CONTRACT-GOVERNANCE-POINTER-2026-11-09",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "branch": "main",
+      "file_path": "governance/CONTRACT_GOVERNANCE.md",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io/blob/main/governance/CONTRACT_GOVERNANCE.md",
+      "git_blob_sha1": "730544efb7448e9c9cadf199e2b7a28214ac23fb",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "epistemic_status": "SOURCE_POINTER_ONLY_NOT_VERIFIED",
+      "excerpt_or_summary": "Governance file points to WANGA-LAB contract governance and requires an explicit contract tag, verifier run, push output and remote-target confirmation before sealing. It does not prove a specific contract exists or passed.",
+      "overlap_candidates": [
+        "WANGA-LAB contract registry"
+      ],
+      "contradictions": [],
+      "next_action": "Resolve the exact contract tag and verifier output before claiming implementation."
+    },
+    {
+      "id": "NEURAL-ORDER-ARCH-2026-11-09",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "branch": "master",
+      "file_path": "De architecture",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-logicl-neural-order/blob/master/De%20architecture",
+      "git_blob_sha1": "23ea7502146f50424c0bd202178c4b07eb83f5e8",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "epistemic_status": "UNVERIFIED_PROTOTYPE_CODE",
+      "excerpt_or_summary": "Static inspection shows a PyTorch prototype with 231 nodes, D=32, K=8, 120 epochs and CPU execution; parameters are randomly initialized and an optimizer loop is defined. No dataset, execution log or semantic benchmark was found in this bounded read.",
+      "overlap_candidates": [
+        "WANGA NTM/MLN private v0.2 archive"
+      ],
+      "contradictions": [],
+      "next_action": "Do not classify as trained NTM/MLN; require a reproducible run and source-backed dataset before integration."
+    },
+    {
+      "id": "WANGA-CORE-CONTRADICTION-INVENTORY-GAP-2026-11-09",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "file_path": "logic_wiki/data/research_metrics.json",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/research_metrics.json",
+      "git_blob_sha1": "2b3b05dbc9d154ca916d00dfeb63a9522c37a266",
+      "missing_path": "logic_fractal/data/core_contradictions.json",
+      "permission_scope": "PUBLIC_REPOSITORY",
+      "epistemic_status": "DATA_INTEGRITY_GAP_NOT_SEMANTIC_CONTRADICTION",
+      "excerpt_or_summary": "The metrics snapshot previously reported critical_core_contradictions=0 while the inventory is absent. Missing inventory is UNKNOWN_NOT_MEASURED, not zero. This PR corrects the builder and metric boundary.",
+      "overlap_candidates": [
+        "scripts/run_logic_agents.py",
+        "scripts/build_logic_wiki.py"
+      ],
+      "contradictions": [
+        "The metric zero is unsupported; the semantic contradiction count remains unknown."
+      ],
+      "next_action": "Create a source-backed inventory before reporting a numeric contradiction count."
+    }
+  ],
+  "duplicate_source_groups": [
+    {
+      "path": "AI-AGENT-HANDOFF-NOTICE.md",
+      "git_blob_sha1": "2e2698d337a60a93059d85d4302ea01cc3837b7b",
+      "repository_count": 9,
+      "status": "DUPLICATE_CONTENT_NOT_INDEPENDENT_SOURCE"
+    }
+  ],
+  "private_library_sources": [
+    {
+      "source_id": "LIB-NTM-MLN-OVERLAY-V02",
+      "locator": "Library/WANGA_LAB_NTM_MLN_V0_2_Overlay.zip",
+      "sha256": "346c8895150df8b5c74cdcd70f9746c4515daaa96ef9d6f7da10658dd77059d6",
+      "bytes": 133672,
+      "language": "Python/JSON/YAML",
+      "version": "v0.2",
+      "permission_scope": "PRIVATE_LIBRARY",
+      "content_persisted_to_public_repo": false,
+      "epistemic_status": "LOCAL_TESTED_NOT_SEMANTICALLY_VERIFIED",
+      "test_result": "compileall PASS; NTM 15/15 and MLN 21/21 unit tests PASS locally on Python 3.13.5"
+    },
+    {
+      "source_id": "LIB-NTM-MLN-PACKAGE-V02",
+      "locator": "Library/WANGA_NTM_MLN_V0_2_Package.zip",
+      "sha256": "f1414765170c61b3749c3cd624527964b9a2fa0a255cc677f5df5089e4fb5880",
+      "bytes": 129575,
+      "language": "Python/JSON",
+      "version": "v0.2",
+      "permission_scope": "PRIVATE_LIBRARY",
+      "content_persisted_to_public_repo": false,
+      "epistemic_status": "PACKAGING_VARIANT_NOT_INDEPENDENT_IMPLEMENTATION",
+      "note": "Core engine and test files match the overlay variant; package includes duplicate reports and cached bytecode."
+    },
+    {
+      "source_id": "LIB-TESSERACT-FOUR-SHELLS",
+      "locator": "Library/wanga_tesseract_four_shells.html",
+      "sha256": "fca92e1f79e4753d0e28ee9ac79f79f568e17dbe4d2b1ca62cd7085a7d07eaa6",
+      "bytes": 13859,
+      "language": "HTML/JavaScript",
+      "permission_scope": "PRIVATE_LIBRARY",
+      "content_persisted_to_public_repo": false,
+      "epistemic_status": "VISUAL_PROTOTYPE_ONLY"
+    },
+    {
+      "source_id": "LIB-LETTER-GATES-SPATIAL",
+      "locator": "Library/letter-gates-spatial-simulation.html",
+      "sha256": "df7e4b596b307eca074e254ddcab88d79e229ea32c2f872514a67146a2512561",
+      "bytes": 32095,
+      "language": "HTML/JavaScript",
+      "permission_scope": "PRIVATE_LIBRARY",
+      "content_persisted_to_public_repo": false,
+      "epistemic_status": "SPECIFICATION_ONLY",
+      "note": "Separates 231 letter gates from 230 space groups and states that three nested cubes are not a true 4D tesseract without a defined 16-vertex/32-edge projection."
+    },
+    {
+      "source_id": "LIB-ANTI-DRIFT-PENDULUM",
+      "locator": "Library/ANTI_DRIFT_PENDULUM_ACCEL_ASCII.txt",
+      "sha256": "b8634157c50650e0f202f611b39e43293339c9ea26d31ff254b90efad593d719",
+      "bytes": 13711,
+      "language": "ASCII/Math",
+      "permission_scope": "PRIVATE_LIBRARY",
+      "content_persisted_to_public_repo": false,
+      "epistemic_status": "REVIEW_ONLY_NOT_ACTIVATED"
+    },
+    {
+      "source_id": "LIB-NEURAL-GRAPH-SIMULATION",
+      "locator": "Library/wanga_neural_graph.html",
+      "sha256": "35fb0207aaddfa19c048a98ab9d2cac1b37467639b5efe5dd635e84f2ad56bed",
+      "bytes": 10645,
+      "language": "HTML/JavaScript",
+      "permission_scope": "PRIVATE_LIBRARY",
+      "content_persisted_to_public_repo": false,
+      "epistemic_status": "SIMULATION_ONLY"
+    },
+    {
+      "source_id": "LIB-ARK01-321-GATE-ROOT",
+      "locator": "Library/ARK01_321_GATE_ROOT_NETWORK.txt",
+      "sha256": "7438f1c147d3bc252eae458c8bd734f24334813111b381e86378fe3ce8074b18",
+      "bytes": 4919,
+      "language": "ASCII/JSON-like",
+      "permission_scope": "PRIVATE_LIBRARY",
+      "content_persisted_to_public_repo": false,
+      "epistemic_status": "SPECIFICATION_ONLY_NOT_IMPLEMENTED"
+    },
+    {
+      "source_id": "LIB-CANONICAL-SOURCES-GATE14",
+      "locator": "Library/Canonical Sources (Introduction & Gate 14)",
+      "sha256": "47f5a74195b18cfd2e51b17bcba3bf374f6e4d16e555b59191e6f54608101309",
+      "bytes": 23694,
+      "language": "JSON/research synthesis",
+      "permission_scope": "PRIVATE_LIBRARY",
+      "content_persisted_to_public_repo": false,
+      "epistemic_status": "SECONDARY_SYNTHESIS_NOT_PRIMARY_SOURCE"
+    }
+  ],
+  "private_library_test_results": {
+    "python_version": "3.13.5",
+    "compileall": "PASS",
+    "ntm_unit_tests": "15/15 PASS",
+    "mln_unit_tests": "21/21 PASS",
+    "semantic_benchmarks": 0,
+    "trained_model_evidence": false,
+    "raw_content_copied_to_public_repo": false
+  },
+  "conversation_intake": {
+    "conversation_attachments": 0,
+    "valid_export_found": false,
+    "exports_ingested": 0,
+    "global_chat_history_scanned": false
+  },
+  "access_gaps": [
+    "Five private repositories remain content-redacted.",
+    "Library listing returned 100 items with more available; pagination is incomplete.",
+    "No valid ChatGPT export was exposed.",
+    "GitHub Actions cross-repository token is not configured; scheduled ecosystem sweep remains current-repository-only."
+  ]
+}

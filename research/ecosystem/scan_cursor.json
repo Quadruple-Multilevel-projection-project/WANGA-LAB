@@ -12,8 +12,19 @@
     "content_persisted": false,
     "readme_fetch_count_redacted": 1
   },
-  "next_action": "Public repository snapshot fully accounted at metadata level. Keep the credential-named repository content-skipped; private repositories remain redacted and unscanned.",
+  "next_action": "Revalidate changed public repositories; handle private content only in private storage; continue Library pagination. No valid conversation export was found.",
   "content_scanned": 57,
   "content_skipped": 1,
-  "last_scan_time_utc": "2026-11-07T07:00:23.634Z"
+  "last_scan_time_utc": "2026-11-07T07:00:23.634Z",
+  "last_completed_batch": "2026-11-09-revalidation-batch-06",
+  "last_completed_at_utc": "2026-11-09T06:12:56Z",
+  "public_repositories_total": 58,
+  "public_metadata_accounted": 58,
+  "public_content_scanned": 57,
+  "public_content_skipped": 1,
+  "private_repositories_deferred": 5,
+  "private_names_redacted": true,
+  "private_readme_probe_success_count_redacted": 4,
+  "private_readme_probe_failure_count_redacted": 1,
+  "private_content_persisted": false
 }
