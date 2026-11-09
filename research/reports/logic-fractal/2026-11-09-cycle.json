@@ -1,0 +1,161 @@
+{
+  "schema_version": "wanga-logic-fractal-cycle/1.0",
+  "date": "2026-11-09",
+  "main_ref": "156a70b8106215617f437a05b3289be05ca43d60",
+  "SOURCES_SCANNED": {
+    "repositories": 10,
+    "library_artifacts": 8,
+    "public_source_findings": 3,
+    "private_library_metadata": 8,
+    "conversation_exports": 0
+  },
+  "ACCESS_GAPS": [
+    "No valid ChatGPT export.",
+    "No core contradiction inventory.",
+    "No semantic benchmark cases or independent reviews.",
+    "Library listing partial: 100 items and more available.",
+    "Wix readback mismatch unresolved."
+  ],
+  "NEW_SOURCES": [
+    "AI231.meta.io/governance/CONTRACT_GOVERNANCE.md",
+    "-logicl-neural-order/De architecture"
+  ],
+  "DUPLICATE_SOURCES": [
+    "AI-AGENT-HANDOFF-NOTICE.md has identical blob SHA across nine public repositories."
+  ],
+  "CLAIMS_ADDED": 0,
+  "LOGIC_UNITS": {
+    "current": 28,
+    "new": 0
+  },
+  "CANDIDATE_STRUCTURES": [
+    "LC-NTM-MLN-V02-BOUNDARY-2026-11-09",
+    "LC-ANTI-DRIFT-CAPTURE-ROLLBACK-2026-11-09",
+    "LC-TESSERACT-FOUR-SHELL-VISUAL-2026-11-09",
+    "LC-231-321-GATE-NAMESPACE-BOUNDARY-2026-11-09",
+    "LC-ARK01-321-ROOT-RELATION-SPEC-2026-11-09"
+  ],
+  "COMPOSITION_COUNT": {
+    "active": 2,
+    "configured": 3,
+    "new": 0,
+    "recursive_contracts": 4,
+    "statuses": {
+      "ACTIVE": 2,
+      "DRAFT": 1,
+      "REQUIRED_NOT_SATISFIED": 1
+    }
+  },
+  "CONTRADICTIONS": {
+    "semantic_source_grounded": 0,
+    "core_count": "UNKNOWN_NOT_MEASURED_NO_INVENTORY",
+    "data_integrity_gaps": 1
+  },
+  "BENCHMARKS": {
+    "source_grounded_counterexamples": 0,
+    "semantic_cases": 0,
+    "suites": 0,
+    "independent_reviews": 0,
+    "local_software_tests": "36/36 PASS; not semantic benchmarks"
+  },
+  "CI": {
+    "previous_head_logic": 42349912746,
+    "previous_head_integrity": 42349912671,
+    "previous_head_codeql": 42349912561,
+    "current_head": "PENDING_AFTER_REPORT_COMMIT"
+  },
+  "MODEL_HASH": {
+    "last_successful_synthetic": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "artifact_sha256": "41ee7cc9c822ebef96542e15a3e19e209d369411fa7a2dbf4f7b8b3dc374aa48",
+    "last_run": 42349432298,
+    "fixture_status": "SYNTHETIC_FIXTURES_ONLY",
+    "current_rerun": "PENDING_CI"
+  },
+  "READINESS_GATE": {
+    "id": "FIRST_MODEL_ALPHA_V1",
+    "status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "current": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "thresholds": {
+      "sources": 20,
+      "source_classes": 3,
+      "logic_units_with_provenance": 50,
+      "composition_rules": 20,
+      "counterexamples": 30,
+      "semantic_test_cases": 100,
+      "benchmark_suites": 3,
+      "independent_reviews": 2
+    },
+    "observed": {
+      "wiki_articles": 28,
+      "source_records": 17,
+      "source_classes": 11,
+      "logic_units_with_provenance": 28,
+      "editorial_relation_links": 111,
+      "taxonomy_nodes": 27,
+      "taxonomy_missing_article_ids": [
+        "ark-swarm-logic-trader"
+      ],
+      "active_composition_rules": 2,
+      "configured_composition_rules": 3,
+      "recursive_composition_contracts": 4,
+      "recursive_contract_statuses": {
+        "ACTIVE": 2,
+        "DRAFT": 1,
+        "REQUIRED_NOT_SATISFIED": 1
+      },
+      "source_grounded_counterexamples": 0,
+      "semantic_test_cases": 0,
+      "registered_benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "dangling_source_refs": 0,
+      "dangling_relation_refs": 0,
+      "duplicate_article_ids": 0,
+      "duplicate_source_ids": 0,
+      "core_contradictions": "UNKNOWN_NOT_MEASURED_NO_INVENTORY",
+      "holdout_split": false,
+      "mirror_review": false
+    }
+  },
+  "BUILT": "Synthetic typed candidate builder exists; private NTM/MLN archive compile and unit tests pass locally. No source-validated release.",
+  "TESTED": "36 local software unit tests pass; previous PR-head CI passed; current PR-head CI pending.",
+  "VERIFIED": "No semantic ground-truth model, trained neural model, source-backed contradiction count or independent semantic review is verified.",
+  "BLOCKED": [
+    "First Model Alpha gate not met.",
+    "No holdout split or MIRROR review.",
+    "Core contradiction inventory absent; zero is not measured.",
+    "PR #139 was 13 commits behind main before this update.",
+    "No valid conversation export."
+  ],
+  "WIX_READBACK": {
+    "revision": "53d1e4194d65460f2c99e15dacf7391176098beb",
+    "files": 29,
+    "article_tags": 27,
+    "catalog_articles": 28,
+    "matching_ids": 18,
+    "missing_ids": [
+      "logical-particle",
+      "fractal-invariant",
+      "recursive-composition",
+      "conversation-evidence-unit",
+      "counterexample-case",
+      "autonomous-research-agent",
+      "multi-scale-fractal-map",
+      "longitudinal-research-cycle",
+      "logical-diamond",
+      "ark-swarm-logic-trader"
+    ],
+    "extra_resource_ids": [
+      "wiki-page-research-status",
+      "wiki-page-fractal-model",
+      "wiki-page-fractal-logic",
+      "wiki-page-typed-fragment",
+      "wiki-page-mln-field",
+      "wiki-page-231-gates",
+      "wiki-page-logic-before-weight",
+      "wiki-page-evidence-status",
+      "wiki-page-ntm"
+    ],
+    "write_performed": false,
+    "status": "READBACK_MISMATCH_REVIEW_REQUIRED"
+  }
+}

@@ -52,6 +52,21 @@ def validate(root):
     source_classes = sorted(set(s.get("type", "UNKNOWN") for s in sources))
     metrics_path = root / "logic_wiki/data/research_metrics.json"
     metrics = load_json(metrics_path) if metrics_path.exists() else {}
+    contradiction_path = root / "logic_fractal/data/core_contradictions.json"
+    contradiction_inventory = load_json(contradiction_path) if contradiction_path.exists() else None
+    contradiction_inventory_measured = bool(
+        isinstance(contradiction_inventory, dict)
+        and contradiction_inventory.get("measurement_status") == "MEASURED"
+        and contradiction_inventory.get("coverage_status") == "COMPLETE"
+    )
+    critical_core_contradictions = None
+    if contradiction_inventory_measured:
+        critical_core_contradictions = sum(
+            1 for item in contradiction_inventory.get("items", [])
+            if item.get("status") in {"OPEN", "UNRESOLVED", "CONTRADICTION"}
+        )
+    else:
+        warnings.append("Core contradiction inventory is absent or not marked MEASURED with COMPLETE coverage; zero is not measured.")
     observed = {
         "source_records": len(sources) + int(metrics.get("additional_source_records", 0)),
         "source_classes": len(set(source_classes) | set(metrics.get("additional_source_classes", []))),
@@ -63,7 +78,8 @@ def validate(root):
         "independent_review_cycles": int(metrics.get("independent_review_cycles", 0)),
         "unresolved_dangling_source_refs": sum(1 for e in errors if "dangling source" in e),
         "unresolved_duplicate_stable_ids": sum(1 for e in errors if "Duplicate or empty" in e),
-        "critical_core_contradictions": int(metrics.get("critical_core_contradictions", 0)),
+        "critical_core_contradictions": critical_core_contradictions,
+        "core_contradiction_inventory_measured": contradiction_inventory_measured,
         "deterministic_build": bool(metrics.get("deterministic_build", False)),
         "holdout_split": bool(metrics.get("holdout_split", False)),
         "mirror_review": bool(metrics.get("mirror_review", False)),
@@ -80,7 +96,8 @@ def validate(root):
         "independent_review_cycles": observed["independent_review_cycles"] >= required["min_independent_review_cycles"],
         "unresolved_dangling_source_refs": observed["unresolved_dangling_source_refs"] <= required["unresolved_dangling_source_refs"],
         "unresolved_duplicate_stable_ids": observed["unresolved_duplicate_stable_ids"] <= required["unresolved_duplicate_stable_ids"],
-        "critical_core_contradictions": observed["critical_core_contradictions"] <= required["critical_core_contradictions"],
+        "critical_core_contradictions": observed["critical_core_contradictions"] is not None and observed["critical_core_contradictions"] <= required["critical_core_contradictions"],
+        "core_contradiction_inventory_measured": observed["core_contradiction_inventory_measured"],
         "deterministic_build_required": (not required["deterministic_build_required"]) or observed["deterministic_build"],
         "holdout_split_required": (not required["holdout_split_required"]) or observed["holdout_split"],
         "mirror_review_required": (not required["mirror_review_required"]) or observed["mirror_review"],
@@ -93,7 +110,7 @@ def validate(root):
         "readiness_gate": gate["gate_id"], "readiness_gate_status": "CANDIDATE_RELEASE_READY_FOR_HUMAN_REVIEW" if all(checks.values()) and not errors else "NOT_READY_INTERNAL_CANDIDATE_ONLY",
         "readiness_thresholds_status": gate["status"], "observed": observed, "checks": checks,
         "missing_requirements": [k for k, passed in checks.items() if not passed],
-        "important_limit": "Passing catalog validation does not establish semantic truth or intelligence. Readiness thresholds are provisional project policy.",
+        "important_limit": "Passing catalog validation does not establish semantic truth or intelligence. A missing or incomplete core contradiction inventory is UNKNOWN_NOT_MEASURED, not zero. Readiness thresholds are provisional project policy.",
     }
     return catalog, gate, report
 
