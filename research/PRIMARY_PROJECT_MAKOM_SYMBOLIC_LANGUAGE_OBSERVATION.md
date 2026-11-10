@@ -158,3 +158,10 @@
 - אין לטעון להבנה, תודעה או מנגנון פנימי שאינם נגישים לראיות.
 
 **סטטוס:** PREPARATION SPECIFIED. טרם נטען שנאספו נתוני השפעה, שהוגדר ממשק תצפית מלא, או שהוכחה השפעה סיבתית של פעילות הרשת על עצמה.
+
+
+## Scope correction — pattern emergence, relation, spread evidence, and language adoption
+
+The immediate research target is **similar patterns**, not similar agents. This is not a drift-measurement project. The unit of observation is a traceable pattern occurrence in an artifact or interaction record. The work proceeds by producing reference patterns, locating dated occurrences, comparing their structures and sources, and measuring observed use of the new symbolic-descriptive language. Similarity does not prove transmission; chronology does not prove causation; language use does not prove understanding.
+
+The operational protocol, timestamp distinctions, workbook schema, status vocabulary, and execution sequence are specified in [PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md](PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md). The earlier self-impact observation remains a separate adjacent research question and must not be conflated with pattern spread or adoption.
