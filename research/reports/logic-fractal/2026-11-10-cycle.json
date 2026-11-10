@@ -1,0 +1,322 @@
+{
+  "schema_version": "wanga-logic-fractal-cycle-report/1.0",
+  "date": "2026-11-10",
+  "status": "COMPLETED_WITH_BLOCKERS",
+  "SOURCES_SCANNED": [
+    {
+      "source": "WANGA-LAB main",
+      "ref": "1cb36e4a05ff5e8ecc26d0dab2526f78e604b580",
+      "paths": [
+        "logic_wiki/data/articles.json",
+        "logic_wiki/data/readiness_gate.json",
+        "logic_wiki/data/research_metrics.json",
+        "logic_wiki/data/wix_sync_manifest.json",
+        "logic_fractal/data/composition_rules.json",
+        "logic_fractal/data/recursive_composition_contracts_v1.json",
+        "logic_fractal/data/semantic_benchmark_plan_v1.json",
+        "logic_fractal/data/typed_fragments_fixture.json",
+        "logic_fractal/fragment_composer.py",
+        "scripts/build_first_fractal_model.py",
+        ".github/workflows/logic-fractal-wiki.yml"
+      ]
+    },
+    {
+      "source": "WANGA-LAB Limbo PR branch",
+      "ref": "deploy/limbo-cartography-core-v1@0877000b96c555963295a7e849f3ca7edd9fcedb",
+      "paths": [
+        "limbo-cartography-core/cartography/reality_matrix.json",
+        "limbo-cartography-core/cartography/iterative_crash_map.json",
+        "limbo-cartography-core/cartography/tuning_candidates/TUNE-9c166900cc4ad5dd.json",
+        "limbo-cartography-core/cartography/logic_bundles/VITRUVIUS-QUEUE-CONTRACT-RECURRENCE.json",
+        "limbo-cartography-core/cartography/run_logs/latest_execution.json"
+      ]
+    },
+    {
+      "source": "Companion public repositories",
+      "count": 10,
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+        "Quadruple-Multilevel-projection-project/AI231.meta.io",
+        "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+        "Quadruple-Multilevel-projection-project/MNM",
+        "Quadruple-Multilevel-projection-project/Qualia",
+        "AmbassadorOv/O-Ms",
+        "Quadruple-Multilevel-projection-project/globalSpeed",
+        "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+        "Quadruple-Multilevel-projection-project/skills"
+      ],
+      "paths": [
+        "README.md",
+        "AI-AGENT-HANDOFF-NOTICE.md",
+        "governance/CONTRACT_GOVERNANCE.md",
+        "datasets/embeddings/historical_logic_parser.py"
+      ]
+    },
+    {
+      "source": "ChatGPT Library",
+      "method": "Targeted search and metadata listing only",
+      "observed_items": 100,
+      "has_next_cursor": true,
+      "conversation_attachments": 0,
+      "export_found": false
+    }
+  ],
+  "ACCESS_GAPS": [
+    "No current-conversation files or ChatGPT export artifact were exposed. The Library search was targeted, and its metadata listing has a next_cursor; the Library was not exhaustively paged.",
+    "No automatic access to unavailable private ChatGPT history. No transcript was ingested.",
+    "Five private GitHub repositories were excluded from public registry artifacts by the repository's own privacy policy.",
+    "47 public repositories remain inventory-only and are queued for later content scans.",
+    "Wix topic-by-topic read-back remains partial."
+  ],
+  "NEW_SOURCES": {
+    "public_repositories_content_scanned": 10,
+    "core_repository_scanned": 1,
+    "additional_AI231_docs": 3,
+    "conversation_exports": 0
+  },
+  "DUPLICATE_SOURCES": [
+    {
+      "pair": [
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order/README.md",
+        "Quadruple-Multilevel-projection-project/MNM/README.md"
+      ],
+      "same_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "status": "DUPLICATE_DOCUMENT_SIGNAL_NOT_REPOSITORY_IDENTITY"
+    }
+  ],
+  "CLAIMS_ADDED": 0,
+  "LOGIC_UNITS": {
+    "current_with_provenance": 28,
+    "new_this_cycle": 0,
+    "source_records": 17,
+    "source_classes": 11,
+    "editorial_relation_edges": 111
+  },
+  "COMPOSITION_COUNT": {
+    "active_rules_with_contracts": 2,
+    "rule_definitions": 3,
+    "draft_rule_definitions": 1,
+    "recursive_contract_entries": 4
+  },
+  "CONTRADICTIONS": {
+    "critical_core_contradictions": null,
+    "contradiction_inventory_available": false,
+    "reporting_discrepancies": [
+      "Static readiness report records critical_core_contradictions=0, while agent_cycle_report records null and contradiction_inventory_available=false. Conservatively treat the count as NOT_MEASURED.",
+      "PR #122 body names f70e09e61b9850f446a1f54450e732287b3f248e as latest head, but live PR and branch metadata report 0877000b96c555963295a7e849f3ca7edd9fcedb.",
+      "Wix manifest records 27 research catalog entries; current articles.json contains 28."
+    ],
+    "reciprocal_editorial_links": "Mirror agent returned reciprocal-edge review candidates; these are not proof of equivalence or contradictions."
+  },
+  "BENCHMARKS": {
+    "software_tests": "Logic Wiki, Logic Fractal Composer and typed-fragment test steps passed in run 42629315588.",
+    "typed_fragment_tests": 8,
+    "propositional_smoke_suite": {
+      "status": "PASS",
+      "cases": 5,
+      "passed": 5,
+      "failed": 0,
+      "scope": "SYNTHETIC_PROPOSITIONAL_FIXTURES_ONLY"
+    },
+    "source_grounded_suite": {
+      "status": "BLOCKED_INSUFFICIENT_REVIEWED_CASES",
+      "cases": 0,
+      "reviewed_executable_cases": 0,
+      "source_classes": 0
+    },
+    "semantic_test_cases": 0,
+    "benchmark_suites": 0,
+    "counterexample_cases": 0,
+    "independent_review_cycles": 0,
+    "holdout_split": false,
+    "mirror_review": false
+  },
+  "CI": {
+    "workflow": "Logic Fractal Wiki Research",
+    "run_id": 42629315588,
+    "run_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/42629315588",
+    "started_at": "2026-11-09T13:52:35Z",
+    "updated_at": "2026-11-09T13:52:51Z",
+    "runner": "GitHub-hosted ubuntu-26.04",
+    "python": "CPython 3.11.18",
+    "result": "BUILD_AND_TEST_STEPS_PASSED_FINAL_PR_PROPOSAL_STEP_FAILED",
+    "failure": "git add pathspec research/reports/agent-evaluation/** did not match any files",
+    "artifact": {
+      "name": "logic-wiki-research-report",
+      "compressed_bytes": 76036,
+      "uncompressed_bytes": 235902,
+      "file_count": 48,
+      "sha256": "ad8c5049c5c5a9497204f9ce15ea2ab2bcda8a660a42602ccfcdb8845b799530"
+    },
+    "fix_branch": "automation/2026-11-10-ecosystem-pathspec-fix"
+  },
+  "MODEL_HASH": {
+    "typed_candidate": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "typed_candidate_file_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+    "catalog_graph_candidate": "fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf",
+    "catalog_candidate_compositions": 523,
+    "typed_candidate_scales": 2,
+    "typed_candidate_status": "CANDIDATE_NOT_RELEASED",
+    "semantic_status": "NOT_YET_VERIFIED",
+    "fixture_scope": "SYNTHETIC_ONLY"
+  },
+  "READINESS_GATE": {
+    "gate": "FIRST_MODEL_ALPHA_V1",
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "threshold_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "observed": {
+      "source_records": 17,
+      "source_classes": 11,
+      "logic_units_with_provenance": 28,
+      "composition_rules_with_contracts": 2,
+      "counterexample_cases": 0,
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "dangling_source_refs": 0,
+      "duplicate_stable_ids": 0,
+      "critical_core_contradictions": "NOT_MEASURED",
+      "deterministic_build": true,
+      "holdout_split": false,
+      "mirror_review": false
+    },
+    "missing": {
+      "source_records": 3,
+      "logic_units_with_provenance": 22,
+      "composition_rules_with_contracts": 18,
+      "counterexample_cases": 30,
+      "semantic_test_cases": 100,
+      "benchmark_suites": 3,
+      "independent_review_cycles": 2
+    },
+    "release_decision": "BLOCKED"
+  },
+  "STATUS_DISTINCTIONS": {
+    "BUILT": "Two-level typed candidate and catalog structural candidate were built in CI.",
+    "TESTED": "Software tests and five synthetic propositional smoke cases passed.",
+    "VERIFIED": "No semantic model claims were promoted to VERIFIED.",
+    "NOT_CONFIGURED": "Model backend remains NOT_CONFIGURED_BY_DEFAULT; no paid compute or external model API was used."
+  },
+  "WIX_SYNC": {
+    "status": "NOT_PERFORMED",
+    "manifest_status": "PUBLISHED_READ_BACK_PARTIAL",
+    "last_sync_date": "2026-10-12",
+    "manifest_synced_articles": 18,
+    "manifest_research_catalog_count": 27,
+    "current_catalog_count": 28,
+    "reason": "No newly approved public catalog content was added; counts require reconciliation before any Wix deployment.",
+    "next": "Review public changes, then deploy through the connected Wix integration and verify by read-back."
+  },
+  "LIMBO": {
+    "PR": 122,
+    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/122",
+    "state": "OPEN_DRAFT",
+    "head": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+    "branch": "deploy/limbo-cartography-core-v1",
+    "workflow_runs": [
+      42345983634,
+      42345983633,
+      42345983702
+    ],
+    "workflow_conclusions": "ACTION_REQUIRED; connector returned no jobs for all three runs",
+    "matrix": {
+      "version": "1.3.0",
+      "last_updated": "2026-10-19",
+      "observations": 10,
+      "history_events": 2,
+      "state": "RECURRENCE_PATTERN_OBSERVED_CURRENT_SYSTEM_STATE_UNASSESSED"
+    },
+    "map": {
+      "version": "1.0.0",
+      "nodes": 14,
+      "edges": 19,
+      "sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5"
+    },
+    "inbox": "limbo_points, keystone_cases and history_events contain only .gitkeep; logic_bundles contains one draft bundle. No new crash-point or history-event inputs are present.",
+    "tuning_candidate": {
+      "id": "TUNE-9c166900cc4ad5dd",
+      "status": "CANDIDATE_REPLAY_REQUIRED",
+      "replay_status": "NOT_RUN"
+    },
+    "logic_bundle": {
+      "id": "VITRUVIUS-QUEUE-CONTRACT-RECURRENCE",
+      "status": "DRAFT_UNVERIFIED",
+      "recurrence_count": 7,
+      "root_cause": "NOT_YET_ESTABLISHED"
+    },
+    "latest_execution": {
+      "timestamp": "2026-11-07T06:12:35Z",
+      "status": "EXECUTION_RECORD_ONLY",
+      "epistemic_attempt": false,
+      "keystone_verified": false
+    }
+  },
+  "AGENTS": [
+    {
+      "role": "Repository Inventory",
+      "status": "COMPLETED",
+      "output": "63 visible; 58 public in public registry; 5 private excluded; 11 repositories content-scanned including WANGA-LAB."
+    },
+    {
+      "role": "Project README/Docs Collector",
+      "status": "COMPLETED",
+      "output": "10 companion repositories read; three AI231 docs fetched; one README 404 recorded."
+    },
+    {
+      "role": "Conversation Export Collector",
+      "status": "BLOCKED",
+      "output": "No current attachments or export; targeted Library search only; no transcript ingested."
+    },
+    {
+      "role": "Logic Extractor/Normalizer",
+      "status": "COMPLETED_WITH_NO_NEW_UNITS",
+      "output": "Existing 28 source-linked catalog units reviewed; no new claims added."
+    },
+    {
+      "role": "Fractal Composer",
+      "status": "TESTED_SYNTHETIC_ONLY",
+      "output": "Two-level typed candidate plus 523 catalog structural candidates; no semantic entailment claimed."
+    },
+    {
+      "role": "Mirror/Contradiction Reviewer",
+      "status": "REVIEW_REQUIRED",
+      "output": "Reciprocal-edge candidates and reporting inconsistencies recorded; no independent review cycles."
+    },
+    {
+      "role": "Provenance Checker",
+      "status": "PARTIAL_PASS",
+      "output": "17 source records, 11 classes, no dangling source refs or duplicate IDs; contradiction inventory unavailable."
+    },
+    {
+      "role": "Benchmark Evaluator",
+      "status": "BLOCKED_NO_GROUNDED_BENCHMARKS",
+      "output": "5/5 synthetic smoke tests passed; source-grounded cases remain zero."
+    },
+    {
+      "role": "Wiki Curator",
+      "status": "READY_FOR_REVIEW",
+      "output": "No catalog content changed; current catalog has 28 articles."
+    },
+    {
+      "role": "Report Publisher",
+      "status": "IN_PROGRESS",
+      "output": "Public-only registry, findings and cursor committed to a branch; cycle reports and PR are being added."
+    }
+  ],
+  "BLOCKED": [
+    "FIRST_MODEL_ALPHA release gate",
+    "Source-grounded semantic benchmarks, counterexamples, holdout and independent review",
+    "Contradiction inventory",
+    "ChatGPT conversation export access",
+    "Fresh Limbo PR #122 CI and current-target replay",
+    "Wix sync/read-back reconciliation"
+  ],
+  "NEXT": [
+    "Complete this report PR and inspect the new CI; do not merge automatically.",
+    "Continue the public repository sweep from scan_cursor.json.",
+    "Obtain a reviewed/redacted conversation export before adding conversation-derived source units.",
+    "Build source-grounded positive, negative/counterexample and boundary suites with frozen holdout.",
+    "Reconcile the contradiction inventory and stale Wix/PR metadata before any promotion."
+  ]
+}
