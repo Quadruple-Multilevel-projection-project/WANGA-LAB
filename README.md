@@ -21,6 +21,10 @@ The second direction does **not** claim to predict or control future outcomes. T
 
 
 
+## Current primary focus: pattern emergence and language adoption
+
+The primary observation target is **similar patterns**, not similar agents and not semantic drift. The work identifies reference patterns, timestamps traceable occurrences, compares structural relations and source links, and measures documented use of the new symbolic-descriptive language. Similarity alone is not proof of propagation. See [the operational protocol](research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md).
+
 ## Current primary focus: observing network self-impact
 
 The immediate priority is to prepare a source-grounded observation protocol for how network activity may affect the network itself. This is not a drift-measurement task. Copilot and the historical 28 working units are retained for later; do not spend the current workstream or token budget on them. The protocol separates observable activity, subsequent observed changes, raw capture, and causal explanation. Temporal sequence alone is not evidence of causation. See [the primary project specification](research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md).
