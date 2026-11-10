@@ -1,0 +1,134 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Impression Matrix Unit",
+  "type": "object",
+  "required": [
+    "unit_id",
+    "term_id",
+    "term_source_ref",
+    "source_gate",
+    "matrix_gate",
+    "five_matters",
+    "status"
+  ],
+  "properties": {
+    "unit_id": {
+      "type": "string",
+      "pattern": "^T[0-9]{3}-G[0-9]{2}$"
+    },
+    "term_id": {
+      "type": "string",
+      "pattern": "^[0-9]{3}$"
+    },
+    "term_source_ref": {
+      "type": "string"
+    },
+    "term_label": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_gate": {
+      "type": "string"
+    },
+    "matrix_gate": {
+      "type": "string"
+    },
+    "five_matters": {
+      "const": "FIVE_MATTERS_UNSPECIFIED"
+    },
+    "I1_raw": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "I2_raw": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "I3_raw": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "I4_raw": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "first_order": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "second_order": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_uri": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "locator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "method": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_sha256": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "replay_hash": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "verification_state": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "status": {
+      "enum": [
+        "null",
+        "LOCK",
+        "ABSTAIN"
+      ]
+    },
+    "anomaly_refs": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  },
+  "additionalProperties": false
+}
