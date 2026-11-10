@@ -149,7 +149,53 @@
       "file_count": 48,
       "sha256": "ad8c5049c5c5a9497204f9ce15ea2ab2bcda8a660a42602ccfcdb8845b799530"
     },
-    "fix_branch": "automation/2026-11-10-ecosystem-pathspec-fix"
+    "fix_branch": "automation/2026-11-10-ecosystem-pathspec-fix",
+    "pull_request_140": {
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/140",
+      "head_sha": "64acb3789f709329f5baa2042ca0ada009b755d6",
+      "state": "OPEN_MERGEABLE_UNMERGED",
+      "runs": [
+        {
+          "name": "Repository Integrity",
+          "run_id": 42760761331,
+          "run_number": 944,
+          "status": "COMPLETED_SUCCESS"
+        },
+        {
+          "name": "CodeQL Advanced",
+          "run_id": 42760761282,
+          "run_number": 1428,
+          "status": "COMPLETED_SUCCESS",
+          "jobs": [
+            "Analyze (python)",
+            "Analyze (actions)"
+          ]
+        },
+        {
+          "name": "Logic Fractal Wiki Research",
+          "run_id": 42760761340,
+          "run_number": 245,
+          "status": "COMPLETED_SUCCESS",
+          "artifact_bytes": 84371,
+          "artifact_sha256": "c1acfab1917af90449f017bc77b9c32f3d892500f02e4e88eefffadb4c262753",
+          "artifact_files": 50,
+          "uncompressed_bytes": 255400,
+          "proposal_step": "SKIPPED_ON_PULL_REQUEST"
+        },
+        {
+          "name": "WANGA Ecosystem Agent Sweep",
+          "run_id": 42760761084,
+          "run_number": 193,
+          "status": "COMPLETED_WITH_SCOPE_BLOCKER",
+          "artifact_bytes": 3224,
+          "artifact_sha256": "6c4dddd975b0b14032ddf152ac8a94145f41bbb0fe390d373f2bed8bbd0ef49b",
+          "repositories_returned": 1,
+          "scope": "CURRENT_REPOSITORY_ONLY",
+          "blocker": "CROSS_REPO_READ_TOKEN_NOT_CONFIGURED"
+        }
+      ],
+      "specific_pathspec_fix_status": "NOT_YET_EXERCISED_BY_SCHEDULED_PR_PROPOSAL_STEP"
+    }
   },
   "MODEL_HASH": {
     "typed_candidate": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
@@ -300,8 +346,8 @@
     },
     {
       "role": "Report Publisher",
-      "status": "IN_PROGRESS",
-      "output": "Public-only registry, findings and cursor committed to a branch; cycle reports and PR are being added."
+      "status": "COMPLETED_PR_OPENED",
+      "output": "Public-only registry, findings, cursor and dated reports committed on a branch; PR #140 opened, mergeable and unmerged; CI results recorded."
     }
   ],
   "BLOCKED": [
@@ -310,13 +356,15 @@
     "Contradiction inventory",
     "ChatGPT conversation export access",
     "Fresh Limbo PR #122 CI and current-target replay",
-    "Wix sync/read-back reconciliation"
+    "Wix sync/read-back reconciliation",
+    "Specific scheduled PR-proposal pathspec fix not yet exercised because the PR-triggered Logic Fractal run skipped that step."
   ],
   "NEXT": [
     "Complete this report PR and inspect the new CI; do not merge automatically.",
     "Continue the public repository sweep from scan_cursor.json.",
     "Obtain a reviewed/redacted conversation export before adding conversation-derived source units.",
     "Build source-grounded positive, negative/counterexample and boundary suites with frozen holdout.",
-    "Reconcile the contradiction inventory and stale Wix/PR metadata before any promotion."
+    "Reconcile the contradiction inventory and stale Wix/PR metadata before any promotion.",
+    "After review/merge approval, run the scheduled or manual Logic Fractal workflow path that executes the PR-proposal step; do not merge automatically."
   ]
 }
