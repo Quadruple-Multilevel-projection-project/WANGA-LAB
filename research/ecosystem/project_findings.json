@@ -371,6 +371,23 @@
       "contradictions": [],
       "permission_scope": "PUBLIC_READ",
       "next_action": "Inspect root tree before concluding that documentation is absent."
+    },
+    {
+      "finding_id": "WANGA-ECOSYSTEM-WORKFLOW-SCOPE-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "automation/2026-11-10-ecosystem-pathspec-fix",
+      "commit": "64acb3789f709329f5baa2042ca0ada009b755d6",
+      "path": "research/reports/ecosystem/2026-11-10-batch-02.md",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/42760761084",
+      "summary": "The repository's own ecosystem workflow returned only WANGA-LAB and reported CROSS_REPO_READ_TOKEN not configured. The connected GitHub integration separately exposed 63 repositories and was used for the bounded 10-companion-repository scan in this cycle.",
+      "epistemic_status": "ACCESS_SCOPE_LIMITED_WORKFLOW_REPORT",
+      "overlap_candidates": [
+        "research/ecosystem/repository_inventory.json",
+        "research/ecosystem/scan_cursor.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_ACTION_ARTIFACT",
+      "next_action": "Keep workflow scope explicit; configure an approved least-privilege cross-repo read token only if account-wide Actions scanning is required."
     }
   ],
   "cross_repo_relationships": [
