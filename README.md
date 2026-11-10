@@ -19,6 +19,12 @@ The second direction does **not** claim to predict or control future outcomes. T
 
 **Architecture navigation:** [Protected Core → Independent Evidence Infrastructure](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/PROTECTED_CORE_AND_EVIDENCE_INFRASTRUCTURE.md) · [Rational Logic — Protected IP Boundary](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/RATIONAL_LOGIC_IP_BOUNDARY.md) · [Repository Ecosystem](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/REPOSITORY_ECOSYSTEM.md)
 
+## Primary research project: Makom — symbolic-language observation
+
+The main research project on the observation and description of how deep networks present and circulate the meaning of “place” is documented here: [PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md](research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md).
+
+This is **not a drift-measurement project and not a mathematical-model claim**. It uses a letter-based symbolic-descriptive language of terms and relations to record the phenomenon. Letters, lines, points, or visual complexity do not by themselves make that language mathematics. The project defines boundaries from observed evidence, preserves unknowns as unknown, and makes no claim that a model understands the meaning. The reported 28 Copilot working units must be recovered from original prompts and responses before they are treated as verified observations.
+
 ## WANGA and Rational Logic
 
 WANGA is treated in this research as a distinct computing architecture, not simply as a wrapper around a language model.
