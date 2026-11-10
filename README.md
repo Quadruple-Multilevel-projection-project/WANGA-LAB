@@ -19,6 +19,11 @@ The second direction does **not** claim to predict or control future outcomes. T
 
 **Architecture navigation:** [Protected Core → Independent Evidence Infrastructure](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/PROTECTED_CORE_AND_EVIDENCE_INFRASTRUCTURE.md) · [Rational Logic — Protected IP Boundary](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/research/RATIONAL_LOGIC_IP_BOUNDARY.md) · [Repository Ecosystem](https://github.com/AmbassadorOv/AmbassadorOv/blob/main/REPOSITORY_ECOSYSTEM.md)
 
+
+
+## Current primary focus: observing network self-impact
+
+The immediate priority is to prepare a source-grounded observation protocol for how network activity may affect the network itself. This is not a drift-measurement task. Copilot and the historical 28 working units are retained for later; do not spend the current workstream or token budget on them. The protocol separates observable activity, subsequent observed changes, raw capture, and causal explanation. Temporal sequence alone is not evidence of causation. See [the primary project specification](research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md).
 ## Primary research project: Makom — symbolic-language observation
 
 The main research project on the observation and description of how deep networks present and circulate the meaning of “place” is documented here: [PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md](research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md).
