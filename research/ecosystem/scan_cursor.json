@@ -1,0 +1,37 @@
+{
+  "schema_version": "wanga-ecosystem-scan-cursor/1.0",
+  "updated_at": "2026-11-10T07:03:14+02:00",
+  "inventory_snapshot": "2026-11-10-batch-02",
+  "total_visible_repositories": 63,
+  "public_repositories_in_public_inventory": 58,
+  "private_repositories_excluded": 5,
+  "scanned_public_repositories": [
+    "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+    "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+    "Quadruple-Multilevel-projection-project/AI231.meta.io",
+    "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+    "Quadruple-Multilevel-projection-project/MNM",
+    "Quadruple-Multilevel-projection-project/Qualia",
+    "AmbassadorOv/O-Ms",
+    "Quadruple-Multilevel-projection-project/globalSpeed",
+    "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+    "Quadruple-Multilevel-projection-project/skills"
+  ],
+  "scanned_public_count": 11,
+  "remaining_public_count": 47,
+  "batch_size": 10,
+  "next_batch_candidates": [
+    "tribal-archery/-logicl-neural-order",
+    "tribal-archery/MAM-parsed",
+    "tribal-archery/Qdprojects",
+    "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+    "AmbassadorOv/multi-agent-orchestator",
+    "AmbassadorOv/Nanomathematics",
+    "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+    "AmbassadorOv/TTTT-0.0.0.0.1",
+    "AmbassadorOv/TTTTproject-un.govt",
+    "AmbassadorOv/awesome-chatgpt-prompts"
+  ],
+  "cursor_policy": "Continue with the next listed public repositories; recheck live inventory and changed repositories at each cycle. Do not put private repository names into public artifacts."
+}
