@@ -28,6 +28,10 @@ class LogicWikiTests(unittest.TestCase):
   catalog=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
   self.assertEqual(report['article_count'],len(catalog['articles']))
   self.assertNotEqual(report['readiness_gate_status'],'CANDIDATE_RELEASE_READY_FOR_HUMAN_REVIEW')
+  self.assertIsNone(report['observed']['critical_core_contradictions'])
+  self.assertFalse(report['observed']['contradiction_inventory_available'])
+  self.assertFalse(report['checks']['critical_core_contradictions'])
+  self.assertIn('critical_core_contradictions',report['missing_requirements'])
  def test_wix_sync_manifest_records_stable_extended_resources(self):
   manifest=json.loads((ROOT/'logic_wiki/data/wix_sync_manifest.json').read_text(encoding='utf-8'))
   self.assertEqual(manifest['synced_article_count'],18)
