@@ -1,7 +1,7 @@
 {
   "schema_version": "wanga-ecosystem-scan-cursor/1.0",
-  "updated_at": "2026-11-10T07:03:14+02:00",
-  "inventory_snapshot": "2026-11-10-batch-02",
+  "updated_at": "2026-11-11T09:03:05+02:00",
+  "inventory_snapshot": "2026-11-11-batch-03",
   "total_visible_repositories": 63,
   "public_repositories_in_public_inventory": 58,
   "private_repositories_excluded": 5,
@@ -16,12 +16,7 @@
     "AmbassadorOv/O-Ms",
     "Quadruple-Multilevel-projection-project/globalSpeed",
     "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
-    "Quadruple-Multilevel-projection-project/skills"
-  ],
-  "scanned_public_count": 11,
-  "remaining_public_count": 47,
-  "batch_size": 10,
-  "next_batch_candidates": [
+    "Quadruple-Multilevel-projection-project/skills",
     "tribal-archery/-logicl-neural-order",
     "tribal-archery/MAM-parsed",
     "tribal-archery/Qdprojects",
@@ -33,5 +28,36 @@
     "AmbassadorOv/TTTTproject-un.govt",
     "AmbassadorOv/awesome-chatgpt-prompts"
   ],
-  "cursor_policy": "Continue with the next listed public repositories; recheck live inventory and changed repositories at each cycle. Do not put private repository names into public artifacts."
+  "scanned_public_count": 21,
+  "remaining_public_count": 37,
+  "batch_size": 10,
+  "next_batch_candidates": [
+    "AmbassadorOv/World-Party-Federation-Branches-managers",
+    "AmbassadorOv/googleapis",
+    "AmbassadorOv/desktop",
+    "AmbassadorOv/platform-samples",
+    "AmbassadorOv/extensions",
+    "AmbassadorOv/AmbassadorOv",
+    "AmbassadorOv/docs",
+    "AmbassadorOv/mermaid",
+    "AmbassadorOv/vscode-azure-blockchain-ethereum",
+    "AmbassadorOv/eslint"
+  ],
+  "cursor_policy": "Continue with the next listed public repositories; recheck live inventory and changed repositories at each cycle. Do not put private repository names into public artifacts.",
+  "last_completed_batch": {
+    "batch_id": "2026-11-11-batch-03",
+    "repositories": [
+      "tribal-archery/-logicl-neural-order",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/Qdprojects",
+      "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "AmbassadorOv/TTTT-0.0.0.0.1",
+      "AmbassadorOv/TTTTproject-un.govt",
+      "AmbassadorOv/awesome-chatgpt-prompts"
+    ],
+    "scan_time": "2026-11-11T09:03:05+02:00"
+  }
 }
