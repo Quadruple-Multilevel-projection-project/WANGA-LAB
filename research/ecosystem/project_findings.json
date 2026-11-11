@@ -1,6 +1,6 @@
 {
   "schema_version": "wanga-ecosystem-project-findings/1.0",
-  "generated_at": "2026-11-10T07:03:14+02:00",
+  "generated_at": "2026-11-11T09:03:05+02:00",
   "permission_scope": "PUBLIC_REPOSITORY_CONTENT_ONLY",
   "findings": [
     {
@@ -388,6 +388,170 @@
       "contradictions": [],
       "permission_scope": "PUBLIC_ACTION_ARTIFACT",
       "next_action": "Keep workflow scope explicit; configure an approved least-privilege cross-repo read token only if account-wide Actions scanning is required."
+    },
+    {
+      "finding_id": "NTM-ARCHITECTURE-V1-2026-11-11",
+      "repository_full_name": "tribal-archery/-logicl-neural-order",
+      "branch": "master",
+      "path": "NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+      "blob_sha": "68c171349aedc8f9c24d3a795de7bcde9eb07539",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+      "summary": "Specifies a provider-neutral orchestration topology, shared task/context/state/evidence/provenance/verification/drift/decision/audit contracts, capability-based task allocation, and concurrent execution for independent subtasks. This is an architecture specification; the document says AGI satisfaction remains an empirical question.",
+      "epistemic_status": "ARCHITECTURE_SPECIFIED_NOT_RUNTIME_VERIFIED",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB",
+        "AmbassadorOv/TTTT-0.0.0.0.1"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare task/result envelope, evidence status, decision gate and drift taxonomy against WANGA-LAB NTM/LNL contracts before proposing any integration."
+    },
+    {
+      "finding_id": "NTM-PROTOTYPE-READINESS-V1-2026-11-11",
+      "repository_full_name": "tribal-archery/-logicl-neural-order",
+      "branch": "master",
+      "path": "NEURAL_ORCHESTRATION/PROTOTYPE_READINESS_V1.md",
+      "blob_sha": "d3dce812dff67247c5f9c21ee00f9e1e49bfdfdc",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/PROTOTYPE_READINESS_V1.md",
+      "summary": "Defines a measurable end-to-end prototype: deterministic routing, evidence status, generator/verifier separation, provenance hashes, contradiction preservation, drift record and self-audit. Explicitly states that the document is a readiness gate, not proof all components are implemented.",
+      "epistemic_status": "READINESS_CONTRACT_SPECIFIED",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB",
+        "logic_wiki/data/readiness_gate.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Crosswalk each DoD item to an executable WANGA-LAB test or mark it missing; do not count the specification itself as a test."
+    },
+    {
+      "finding_id": "TTTT-TEAM-MAP-2026-11-11",
+      "repository_full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "branch": "main",
+      "path": "teams/TEAM_MAP.md",
+      "blob_sha": "461e53ab775e6933081664a89ce405fc8b40e610",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/AmbassadorOv/TTTT-0.0.0.0.1/blob/main/teams/TEAM_MAP.md",
+      "summary": "Defines eight team roles, including Nanomathematics as fractal extraction, Logical-Neural Order as logic/translation/derivation, Multi-Agent Orchestration as execution coordination, and TTTT Core as shared contracts. States: Known Relationship → Source/Evidence → Verification Status; no lineage inference by similarity.",
+      "epistemic_status": "TEAM_ARCHITECTURE_SPECIFIED",
+      "overlap_candidates": [
+        "tribal-archery/-logicl-neural-order",
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/multi-agent-orchestator"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Use as a candidate cross-repository map; verify each listed repo/path independently and preserve unresolved references."
+    },
+    {
+      "finding_id": "MAM-PARSED-CORPUS-2026-11-11",
+      "repository_full_name": "tribal-archery/MAM-parsed",
+      "branch": "main",
+      "path": "README.md",
+      "blob_sha": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/tribal-archery/MAM-parsed/blob/main/README.md",
+      "summary": "Describes parsed Miqra According to the Masorah data in plain and plus JSON formats for 24 books, sourced from the MAM Google Sheet. Plus format changes selected annotations and removes XML/pseudo-verses; README explicitly warns the JSON schema is not stable.",
+      "epistemic_status": "SOURCE_CORPUS_REFERENCE_SCHEMA_UNSTABLE",
+      "overlap_candidates": [
+        "WANGA-LAB research corpus",
+        "Sefer Yetzirah / Hebrew text research"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Do not ingest as canonical text without version pinning and source-to-JSON mapping; first inspect exact book-level schema and licensing/provenance."
+    },
+    {
+      "finding_id": "MULTIAGENT-ORCHESTRATOR-REFERENCE-2026-11-11",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch": "main",
+      "path": "README.md",
+      "blob_sha": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md",
+      "summary": "README documents three agent roles (classification, retrieval, reasoning), HotPotQA/GSM8K references, optional local JSON/LanceDB retrieval and Guardrails setup. Clone instruction names sachi097/multi-agent-orchestator; this is an upstream/fork lineage candidate, not verified WANGA implementation.",
+      "epistemic_status": "EXTERNAL_REFERENCE_NOT_VALIDATED",
+      "overlap_candidates": [
+        "AmbassadorOv/TTTT-0.0.0.0.1",
+        "WANGA-LAB agent roles"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Record upstream lineage and compare agent handoff/evaluation contracts; do not copy code or run API-backed tests in this sweep."
+    },
+    {
+      "finding_id": "IDENTICAL-README-BLOB-CLUSTER-2026-11-11",
+      "repository_full_name": "AmbassadorOv/Nanomathematics; AmbassadorOv/ROBOTICS_TRIPARTITA_Logos; tribal-archery/Qdprojects",
+      "branch": "master / master / master",
+      "path": "README.md",
+      "blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/AmbassadorOv/Nanomathematics/blob/master/README.md",
+      "summary": "Three distinct repository objects return the same Git blob SHA for a one-line README '# Nanomathematics'. This proves identical README blob content only; it does not prove repository identity, code equivalence, or shared history.",
+      "epistemic_status": "DUPLICATE_README_BLOB_SOURCE_GAP",
+      "overlap_candidates": [
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+        "tribal-archery/Qdprojects"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect trees and commit ancestry in a later bounded pass before classifying as mirrors or duplicate projects."
+    },
+    {
+      "finding_id": "TTTT-CROSS-REFERENCE-GAPS-2026-11-11",
+      "repository_full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "branch": "main",
+      "path": "README.md",
+      "blob_sha": "ac7a2d203877442ddba493889239e61aed56ec78",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/AmbassadorOv/TTTT-0.0.0.0.1/blob/main/README.md",
+      "summary": "README references AmbassadorOv/TTTTproject-un.gov and AmbassadorOv/branches; current visible inventory instead contains AmbassadorOv/TTTTproject-un.govt and AmbassadorOv/branches-. Exact target references were not found in the live inventory snapshot.",
+      "epistemic_status": "DOCUMENTATION_REFERENCE_GAP",
+      "overlap_candidates": [
+        "AmbassadorOv/TTTTproject-un.govt",
+        "AmbassadorOv/branches-"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Resolve intended repository targets by exact name and commit evidence; do not silently redirect links."
+    },
+    {
+      "finding_id": "CYBER-DEPARTMENT-README-REVIEW-2026-11-11",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "branch": "master",
+      "path": "README.md",
+      "blob_sha": "5bce36b9ed2ffd0c0ebfec2a5e806e974c12ca05",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department/blob/master/README.md",
+      "summary": "README is a sample text-generation module combining philosophical, governance and technical sections, including legacy quantum-inspired wording. No tests or source-backed claims are established by the README.",
+      "epistemic_status": "EXAMPLE_TEXT_NOT_VALIDATED",
+      "overlap_candidates": [
+        "WANGA-LAB research archive",
+        "AmbassadorOv/TTTT-0.0.0.0.1"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Treat as historical/example material pending content review; do not reuse as approved public Logic Wiki copy."
+    },
+    {
+      "finding_id": "TTTTPROJECT-IDENTITY-MISMATCH-2026-11-11",
+      "repository_full_name": "AmbassadorOv/TTTTproject-un.govt",
+      "branch": "master",
+      "path": "README.md",
+      "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/AmbassadorOv/TTTTproject-un.govt/blob/master/README.md",
+      "summary": "README heading identifies World-Party-Federation-Branches-managers rather than TTTT/International Research. Repository name and README title are inconsistent in the current public snapshot.",
+      "epistemic_status": "REPOSITORY_DOCUMENTATION_IDENTITY_GAP",
+      "overlap_candidates": [
+        "AmbassadorOv/World-Party-Federation-Branches-managers",
+        "AmbassadorOv/TTTT-0.0.0.0.1"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect tree and commit history in a later pass; do not infer repository purpose from its name alone."
     }
   ],
   "cross_repo_relationships": [
@@ -425,5 +589,22 @@
     "Only 10 companion repositories plus WANGA-LAB core were content-scanned in this batch.",
     "Latest update timestamps were fetched only for this batch; other public repository timestamps remain null until scanned.",
     "A README/code-search result is source evidence for its text, not proof that the described behavior is implemented or correct."
-  ]
+  ],
+  "last_batch": {
+    "batch_id": "2026-11-11-batch-03",
+    "repositories": [
+      "tribal-archery/-logicl-neural-order",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/Qdprojects",
+      "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "AmbassadorOv/TTTT-0.0.0.0.1",
+      "AmbassadorOv/TTTTproject-un.govt",
+      "AmbassadorOv/awesome-chatgpt-prompts"
+    ],
+    "findings_added": 9,
+    "scan_time": "2026-11-11T09:03:05+02:00"
+  }
 }
