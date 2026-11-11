@@ -1,7 +1,7 @@
 {
   "schema_version": "wanga-ecosystem-repository-inventory/1.0",
-  "snapshot_at": "2026-11-10T07:03:14+02:00",
-  "source": "Connected GitHub repository inventory plus raw repository metadata for this batch",
+  "snapshot_at": "2026-11-11T09:03:05+02:00",
+  "source": "Live connected GitHub inventory plus default-branch repository metadata, README blobs and selected documentation paths",
   "access_snapshot": {
     "unique_repositories_visible": 63,
     "public_repositories_in_public_registry": 58,
@@ -16,23 +16,23 @@
     "note": "Private repository names, paths, excerpts and contents are intentionally omitted from this public registry."
   },
   "batch": {
-    "batch_id": "2026-11-10-batch-02",
+    "batch_id": "2026-11-11-batch-03",
     "scanned_repositories": [
-      "Quadruple-Multilevel-projection-project/WANGA-LAB",
-      "Quadruple-Multilevel-projection-project/-logicl-neural-order",
-      "Quadruple-Multilevel-projection-project/ai-agent-terraform",
-      "Quadruple-Multilevel-projection-project/AI231.meta.io",
-      "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
-      "Quadruple-Multilevel-projection-project/MNM",
-      "Quadruple-Multilevel-projection-project/Qualia",
-      "AmbassadorOv/O-Ms",
-      "Quadruple-Multilevel-projection-project/globalSpeed",
-      "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
-      "Quadruple-Multilevel-projection-project/skills"
+      "tribal-archery/-logicl-neural-order",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/Qdprojects",
+      "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "AmbassadorOv/TTTT-0.0.0.0.1",
+      "AmbassadorOv/TTTTproject-un.govt",
+      "AmbassadorOv/awesome-chatgpt-prompts"
     ],
     "core_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
-    "scan_method": "repository metadata + README on companion repositories + targeted code search and WANGA-LAB project/CI file reads",
-    "target_batch_size": 10
+    "scan_method": "live repository metadata + README blob retrieval + targeted NTM architecture/readiness docs + TTTT team-map inspection",
+    "target_batch_size": 10,
+    "scan_time": "2026-11-11T09:03:05+02:00"
   },
   "repositories": [
     {
@@ -93,13 +93,20 @@
       },
       "archived": false,
       "code_search_indexed": null,
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/Nanomathematics"
+      "latest_known_update": "2025-06-19T11:40:33Z",
+      "latest_known_push": "2026-10-22T06:53:06Z",
+      "update_status": "FETCHED_THIS_BATCH",
+      "scan_status": "README_AND_METADATA_SCANNED",
+      "readme_status": "READ",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/AmbassadorOv/Nanomathematics",
+      "readme_path": "README.md",
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-11T09:03:05+02:00",
+      "relevant_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README is the same one-line '# Nanomathematics' blob as Qdprojects and ROBOTICS_TRIPARTITA_Logos; repository identity or content equivalence is not established."
     },
     {
       "full_name": "AmbassadorOv/desktop",
@@ -203,13 +210,21 @@
       },
       "archived": false,
       "code_search_indexed": null,
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/TTTT-0.0.0.0.1"
+      "latest_known_update": "2026-10-22T06:42:17Z",
+      "latest_known_push": "2026-10-22T06:42:14Z",
+      "update_status": "FETCHED_THIS_BATCH",
+      "scan_status": "README_AND_TEAM_MAP_SCANNED",
+      "readme_status": "READ",
+      "readme_blob_sha": "ac7a2d203877442ddba493889239e61aed56ec78",
+      "source_uri": "https://github.com/AmbassadorOv/TTTT-0.0.0.0.1",
+      "readme_path": "README.md",
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-11T09:03:05+02:00",
+      "relevant_paths": [
+        "README.md",
+        "teams/TEAM_MAP.md"
+      ],
+      "scan_summary": "Architectural meta-orchestrator and team map. Defines Nanomathematics, Branches & Lineage, Logical-Neural Order, Cyber Department, Multi-Agent Orchestration and TTTT roles; requires source/evidence/verification status and rejects lineage by similarity alone."
     },
     {
       "full_name": "AmbassadorOv/TTTTproject-un.govt",
@@ -225,13 +240,20 @@
       },
       "archived": false,
       "code_search_indexed": null,
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/TTTTproject-un.govt"
+      "latest_known_update": "2026-10-22T06:42:15Z",
+      "latest_known_push": "2026-10-22T06:42:11Z",
+      "update_status": "FETCHED_THIS_BATCH",
+      "scan_status": "README_AND_METADATA_SCANNED",
+      "readme_status": "READ",
+      "readme_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "source_uri": "https://github.com/AmbassadorOv/TTTTproject-un.govt",
+      "readme_path": "README.md",
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-11T09:03:05+02:00",
+      "relevant_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README heading is 'World-Party-Federation-Branches-managers', which does not identify this repository as TTTT/International Research; documentation identity mismatch requires review."
     },
     {
       "full_name": "AmbassadorOv/docs",
@@ -665,13 +687,20 @@
       },
       "archived": false,
       "code_search_indexed": null,
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/awesome-chatgpt-prompts"
+      "latest_known_update": "2025-12-08T18:04:27Z",
+      "latest_known_push": "2026-10-22T06:46:48Z",
+      "update_status": "FETCHED_THIS_BATCH",
+      "scan_status": "README_SCANNED",
+      "readme_status": "READ",
+      "readme_blob_sha": "25c6254b882a96645aeacb866e735a14040913dc",
+      "source_uri": "https://github.com/AmbassadorOv/awesome-chatgpt-prompts",
+      "readme_path": "README.md",
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-11T09:03:05+02:00",
+      "relevant_paths": [
+        "README.md"
+      ],
+      "scan_summary": "Public prompt collection; README points to prompts.chat and upstream prompt corpus. Not admitted as WANGA source or model evidence."
     },
     {
       "full_name": "AmbassadorOv/multi-agent-orchestator",
@@ -687,13 +716,20 @@
       },
       "archived": false,
       "code_search_indexed": null,
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator"
+      "latest_known_update": "2026-10-29T20:10:32Z",
+      "latest_known_push": "2026-10-29T20:10:26Z",
+      "update_status": "FETCHED_THIS_BATCH",
+      "scan_status": "README_SCANNED",
+      "readme_status": "READ",
+      "readme_blob_sha": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator",
+      "readme_path": "README.md",
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-11T09:03:05+02:00",
+      "relevant_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README describes text-classification, data-retrieval and reasoning agents, HotPotQA/GSM8K datasets and a LanceDB local retrieval option. Clone instruction points to sachi097/multi-agent-orchestator, so treat as upstream/fork reference; no tests run."
     },
     {
       "full_name": "AmbassadorOv/unetbootin",
@@ -797,13 +833,20 @@
       },
       "archived": false,
       "code_search_indexed": null,
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/ROBOTICS_TRIPARTITA_Logos"
+      "latest_known_update": "2026-10-18T07:21:22Z",
+      "latest_known_push": "2026-10-22T06:48:01Z",
+      "update_status": "FETCHED_THIS_BATCH",
+      "scan_status": "README_AND_METADATA_SCANNED",
+      "readme_status": "READ",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "readme_path": "README.md",
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-11T09:03:05+02:00",
+      "relevant_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README is the same one-line '# Nanomathematics' blob as Qdprojects and Nanomathematics; repository identity or content equivalence is not established."
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
@@ -885,13 +928,20 @@
       },
       "archived": false,
       "code_search_indexed": null,
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department"
+      "latest_known_update": "2026-10-05T08:21:19Z",
+      "latest_known_push": "2026-10-22T06:49:33Z",
+      "update_status": "FETCHED_THIS_BATCH",
+      "scan_status": "README_SCANNED",
+      "readme_status": "READ",
+      "readme_blob_sha": "5bce36b9ed2ffd0c0ebfec2a5e806e974c12ca05",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "readme_path": "README.md",
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-11T09:03:05+02:00",
+      "relevant_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README contains a sample Python article-construction module joining philosophical and technical sections; it includes legacy quantum-inspired/governance terminology and is not evidence of a tested system."
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/globalSpeed",
@@ -1215,13 +1265,20 @@
       },
       "archived": false,
       "code_search_indexed": null,
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/tribal-archery/Qdprojects"
+      "latest_known_update": "2025-01-06T00:57:14Z",
+      "latest_known_push": "2026-10-22T06:51:49Z",
+      "update_status": "FETCHED_THIS_BATCH",
+      "scan_status": "README_AND_METADATA_SCANNED",
+      "readme_status": "READ",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/tribal-archery/Qdprojects",
+      "readme_path": "README.md",
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-11T09:03:05+02:00",
+      "relevant_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README consists only of the heading '# Nanomathematics'; insufficient project description or source coverage."
     },
     {
       "full_name": "tribal-archery/mermaid",
@@ -1281,13 +1338,24 @@
       },
       "archived": false,
       "code_search_indexed": null,
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order"
+      "latest_known_update": "2026-10-08T13:22:35Z",
+      "latest_known_push": "2026-10-22T06:52:20Z",
+      "update_status": "FETCHED_THIS_BATCH",
+      "scan_status": "README_AND_TARGETED_DOCS_SCANNED",
+      "readme_status": "READ",
+      "readme_blob_sha": "0ffc15fb869fd479081714d71464b1a77563b92e",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order",
+      "readme_path": "README.md",
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-11T09:03:05+02:00",
+      "relevant_paths": [
+        "README.md",
+        "NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+        "NEURAL_ORCHESTRATION/PROTOTYPE_READINESS_V1.md",
+        "NEURAL_ORCHESTRATION/AGENT_CATALOG_V1.json",
+        "NEURAL_ORCHESTRATION/orchestrator.py"
+      ],
+      "scan_summary": "Provider-neutral NTM architecture, 28 documented reasoning/orchestration modes, task/result envelopes, machine registry, verification, audit and provenance. Architecture and prototype-readiness documents inspected; documented implementation claims are not independently tested in this sweep."
     },
     {
       "full_name": "tribal-archery/MAM-parsed",
@@ -1303,13 +1371,41 @@
       },
       "archived": false,
       "code_search_indexed": null,
-      "latest_known_update": null,
-      "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/tribal-archery/MAM-parsed"
+      "latest_known_update": "2026-10-02T01:05:37Z",
+      "latest_known_push": "2026-10-22T06:52:28Z",
+      "update_status": "FETCHED_THIS_BATCH",
+      "scan_status": "README_SCANNED",
+      "readme_status": "READ",
+      "readme_blob_sha": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c",
+      "source_uri": "https://github.com/tribal-archery/MAM-parsed",
+      "readme_path": "README.md",
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-11T09:03:05+02:00",
+      "relevant_paths": [
+        "README.md"
+      ],
+      "scan_summary": "Miqra According to the Masorah data in plain/plus parsed JSON formats for 24 books; source identified as MAM Google Sheet; README explicitly says JSON format is not stable."
+    }
+  ],
+  "batch_history": [
+    {
+      "batch_id": "2026-11-10-batch-02",
+      "scanned_repositories": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB",
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+        "Quadruple-Multilevel-projection-project/AI231.meta.io",
+        "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+        "Quadruple-Multilevel-projection-project/MNM",
+        "Quadruple-Multilevel-projection-project/Qualia",
+        "AmbassadorOv/O-Ms",
+        "Quadruple-Multilevel-projection-project/globalSpeed",
+        "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+        "Quadruple-Multilevel-projection-project/skills"
+      ],
+      "core_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "scan_method": "repository metadata + README on companion repositories + targeted code search and WANGA-LAB project/CI file reads",
+      "target_batch_size": 10
     }
   ]
 }
