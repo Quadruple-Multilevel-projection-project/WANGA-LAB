@@ -18,6 +18,11 @@ class LogicWikiTests(unittest.TestCase):
   gate=json.loads((ROOT/'logic_wiki/data/readiness_gate.json').read_text(encoding='utf-8'))
   self.assertEqual(gate['status'],'CONFIGURED_NOT_EMPIRICALLY_VALIDATED')
   self.assertGreater(gate['thresholds']['min_test_cases'],0)
+ def test_logic_unit_registry_is_explicit_and_empty_until_literal_spans_are_admitted(self):
+  registry=json.loads((ROOT/'logic_fractal/data/logic_units.json').read_text(encoding='utf-8'))
+  self.assertEqual(registry['schema_version'],'wanga-logic-units/1.0')
+  self.assertEqual(registry['units'],[])
+
  def test_generator_builds_pages_and_reports_gate(self):
   out=ROOT/'logic_wiki/generated-test'
   p=subprocess.run([sys.executable,str(ROOT/'scripts/build_logic_wiki.py'),'--root',str(ROOT),'--out',str(out)],capture_output=True,text=True)
@@ -27,6 +32,10 @@ class LogicWikiTests(unittest.TestCase):
   report=json.loads((out/'readiness-report.json').read_text(encoding='utf-8'))
   catalog=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
   self.assertEqual(report['article_count'],len(catalog['articles']))
+  self.assertEqual(report['observed']['source_linked_articles'],len(catalog['articles']))
+  self.assertEqual(report['observed']['logic_units_with_provenance'],0)
+  self.assertIsNone(report['observed']['critical_core_contradictions'])
+  self.assertFalse(report['checks']['critical_core_contradictions'])
   self.assertNotEqual(report['readiness_gate_status'],'CANDIDATE_RELEASE_READY_FOR_HUMAN_REVIEW')
  def test_wix_sync_manifest_records_stable_extended_resources(self):
   manifest=json.loads((ROOT/'logic_wiki/data/wix_sync_manifest.json').read_text(encoding='utf-8'))
