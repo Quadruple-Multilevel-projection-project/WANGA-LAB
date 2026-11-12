@@ -7,11 +7,11 @@
   "test_cases": 0,
   "benchmark_suites": 0,
   "independent_review_cycles": 0,
-  "critical_core_contradictions": 0,
+  "critical_core_contradictions": null,
   "deterministic_build": true,
   "holdout_split": false,
   "mirror_review": false,
-  "note": "2 active composition rules are defined with explicit contracts in logic_fractal/data/composition_rules.json. This is a source/specification count, not a benchmark score. Benchmark cases remain 0 until a reviewed ground-truth test suite is registered and executed.",
+  "note": "2 active composition rules are defined with explicit contracts in logic_fractal/data/composition_rules.json. This is a source/specification count, not a benchmark score. Benchmark cases remain 0 until a reviewed ground-truth test suite is registered and executed. The static critical_core_contradictions value is not used as a measurement; an explicit core_contradictions.json inventory is required. Source-linked Wiki articles are not counted as literal logic units.",
   "deterministic_build_evidence": {
     "status": "TESTED_ON_SYNTHETIC_FIXTURES",
     "source": "scripts/build_first_fractal_model.py",
