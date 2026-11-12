@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0",
+  "contract_start_time": "2026-11-12T15:20:00+02:00",
+  "actions": [
+    {
+      "timestamp": "2026-11-12T15:20:00+02:00",
+      "contract_start_time": "2026-11-12T15:20:00+02:00",
+      "action_id": "WFLVB-BRANCH-20261112-001",
+      "sha256": "PENDING"
+    },
+    {
+      "timestamp": "2026-11-12T15:20:00+02:00",
+      "contract_start_time": "2026-11-12T15:20:00+02:00",
+      "action_id": "WFLVB-IMPLEMENT-20261112-001",
+      "sha256": "c879382203726b9e677120fe6642cb4c26254454d22c3db4c7f6d4f8836073a6"
+    }
+  ]
+}
