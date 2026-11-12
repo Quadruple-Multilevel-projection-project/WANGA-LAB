@@ -1,6 +1,6 @@
 {
   "schema_version": "wanga-ecosystem-repository-inventory/1.0",
-  "snapshot_at": "2026-11-11T09:03:05+02:00",
+  "snapshot_at": "2026-11-12T07:44:54+02:00",
   "source": "Live connected GitHub inventory plus default-branch repository metadata, README blobs and selected documentation paths",
   "access_snapshot": {
     "unique_repositories_visible": 63,
@@ -16,23 +16,23 @@
     "note": "Private repository names, paths, excerpts and contents are intentionally omitted from this public registry."
   },
   "batch": {
-    "batch_id": "2026-11-11-batch-03",
+    "batch_id": "2026-11-12-batch-04",
     "scanned_repositories": [
-      "tribal-archery/-logicl-neural-order",
-      "tribal-archery/MAM-parsed",
-      "tribal-archery/Qdprojects",
-      "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
-      "AmbassadorOv/multi-agent-orchestator",
-      "AmbassadorOv/Nanomathematics",
-      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
-      "AmbassadorOv/TTTT-0.0.0.0.1",
-      "AmbassadorOv/TTTTproject-un.govt",
-      "AmbassadorOv/awesome-chatgpt-prompts"
+      "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "AmbassadorOv/googleapis",
+      "AmbassadorOv/desktop",
+      "AmbassadorOv/platform-samples",
+      "AmbassadorOv/extensions",
+      "AmbassadorOv/AmbassadorOv",
+      "AmbassadorOv/docs",
+      "AmbassadorOv/mermaid",
+      "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "AmbassadorOv/eslint"
     ],
     "core_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
-    "scan_method": "live repository metadata + README blob retrieval + targeted NTM architecture/readiness docs + TTTT team-map inspection",
+    "scan_method": "Live affiliation snapshot + default-branch README blob retrieval for the next bounded public batch; no companion-repository tests or external writes.",
     "target_batch_size": 10,
-    "scan_time": "2026-11-11T09:03:05+02:00"
+    "scan_time": "2026-11-12T07:44:54+02:00"
   },
   "repositories": [
     {
@@ -51,11 +51,16 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/World-Party-Federation-Branches-managers"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "source_uri": "https://github.com/AmbassadorOv/World-Party-Federation-Branches-managers/blob/master/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README contains only the heading 'World-Party-Federation-Branches-managers'. Its Git blob is identical to AmbassadorOv/TTTTproject-un.govt/README.md; this is a duplicate-document signal, not repository identity."
     },
     {
       "full_name": "AmbassadorOv/googleapis",
@@ -73,11 +78,16 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/googleapis"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "6ba73116d009c622bf3057f81a563b2070daea51",
+      "source_uri": "https://github.com/AmbassadorOv/googleapis/blob/master/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README describes public API interface definitions, primarily Protocol Buffers/proto3 and generated API surfaces. Potential typed-interface reference only; not WANGA logic or a validated runtime dependency."
     },
     {
       "full_name": "AmbassadorOv/Nanomathematics",
@@ -124,11 +134,16 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/desktop"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "c7702d385076e80f365a23d17dc868b9ecb6a5ad",
+      "source_uri": "https://github.com/AmbassadorOv/desktop/blob/development/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README describes GitHub Desktop, an Electron/TypeScript/React desktop client. General developer tooling; no direct WANGA logic, NTM, MLN, or provenance implementation identified."
     },
     {
       "full_name": "AmbassadorOv/platform-samples",
@@ -146,11 +161,16 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/platform-samples"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "a2bb146a181b60c3df0d077c55b197287074ec53",
+      "source_uri": "https://github.com/AmbassadorOv/platform-samples/blob/master/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README describes GitHub Platform API, GraphQL, webhook, and integration samples. Possible CI/integration reference, but no WANGA-specific implementation or tests were inspected."
     },
     {
       "full_name": "AmbassadorOv/extensions",
@@ -168,11 +188,16 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/extensions"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "6ef8b6a54813922bf64bad64c8e7301f8dc620c2",
+      "source_uri": "https://github.com/AmbassadorOv/extensions/blob/next/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README describes Firebase Extensions and their deployment/integration model. External infrastructure reference only; not evidence of WANGA runtime integration."
     },
     {
       "full_name": "AmbassadorOv/AmbassadorOv",
@@ -190,11 +215,16 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/AmbassadorOv"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "d2664df6ce794e353a4d1b04682627c3b13f0bb9",
+      "source_uri": "https://github.com/AmbassadorOv/AmbassadorOv/blob/main/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "scan_summary": "Profile README presents the public research identity and links the WANGA-LAB archive. This is a public research-index relationship, not an implementation dependency or proof of project status."
     },
     {
       "full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
@@ -271,11 +301,16 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/docs"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "69090a601896b5189a5b3ee42105ed42638016be",
+      "source_uri": "https://github.com/AmbassadorOv/docs/blob/main/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README identifies a GitHub documentation source tree. Useful as external documentation material only; no WANGA-specific logic or source corpus was identified."
     },
     {
       "full_name": "AmbassadorOv/mermaid",
@@ -293,11 +328,16 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/mermaid"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "456747132cbc6ed1dde4f8d5f0712deb71b47be8",
+      "source_uri": "https://github.com/AmbassadorOv/mermaid/blob/develop/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README describes Mermaid text-based diagrams and chart rendering. Potential visualization tooling for maps; diagram output is not logical evidence or semantic validation."
     },
     {
       "full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
@@ -315,11 +355,16 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/vscode-azure-blockchain-ethereum"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "source_uri": "https://github.com/AmbassadorOv/vscode-azure-blockchain-ethereum/blob/master/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README describes an Azure Blockchain Development Kit for Ethereum and an older VS Code/Node/Python toolchain. Legacy tooling reference; no current WANGA runtime link established."
     },
     {
       "full_name": "AmbassadorOv/eslint",
@@ -337,11 +382,16 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/eslint"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "326c6121e810f4d1edfbc781eff4d5b7f46d1c36",
+      "source_uri": "https://github.com/AmbassadorOv/eslint/blob/main/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "scan_summary": "README describes ESLint AST-based static analysis and rule plugins. Possible software-quality tooling; it cannot establish semantic correctness or source truth."
     },
     {
       "full_name": "AmbassadorOv/openai_tiktoken",
@@ -1406,6 +1456,25 @@
       "core_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
       "scan_method": "repository metadata + README on companion repositories + targeted code search and WANGA-LAB project/CI file reads",
       "target_batch_size": 10
+    },
+    {
+      "batch_id": "2026-11-11-batch-03",
+      "scanned_repositories": [
+        "tribal-archery/-logicl-neural-order",
+        "tribal-archery/MAM-parsed",
+        "tribal-archery/Qdprojects",
+        "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+        "AmbassadorOv/multi-agent-orchestator",
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+        "AmbassadorOv/TTTT-0.0.0.0.1",
+        "AmbassadorOv/TTTTproject-un.govt",
+        "AmbassadorOv/awesome-chatgpt-prompts"
+      ],
+      "core_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "scan_method": "live repository metadata + README blob retrieval + targeted NTM architecture/readiness docs + TTTT team-map inspection",
+      "target_batch_size": 10,
+      "scan_time": "2026-11-11T09:03:05+02:00"
     }
   ]
 }
