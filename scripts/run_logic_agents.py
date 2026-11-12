@@ -49,7 +49,36 @@ def main():
     duplicate_source_ids = len(source_ids) - len(source_id_set)
     duplicate_article_ids = len(article_ids) - len(article_id_set)
     source_classes = sorted({str(x.get("type", "UNCLASSIFIED")) for x in sources})
-    units_with_provenance = sum(1 for article in articles if article.get("sources") and all(ref in source_id_set for ref in article.get("sources", [])))
+    source_linked_articles = sum(1 for article in articles if article.get("sources"))
+    logic_unit_registry = read(ROOT / "logic_fractal/data/logic_units.json", {"units": []})
+    logic_units = logic_unit_registry.get("units", [])
+    source_by_id = {item.get("id"): item for item in sources}
+    logic_unit_errors, unit_ids, span_ids = [], [], []
+    valid_logic_units = 0
+    required_unit_fields = ("unit_id", "source_span_id", "source_id", "source_version", "source_uri",
+                            "exact_locator", "literal_excerpt", "language", "permission_scope")
+    for unit in logic_units:
+        if not isinstance(unit, dict):
+            logic_unit_errors.append("Logic unit record must be an object.")
+            continue
+        missing = [field for field in required_unit_fields
+                   if not isinstance(unit.get(field), str) or not unit.get(field).strip()]
+        if missing:
+            logic_unit_errors.append("Logic unit %r missing provenance fields: %s." %
+                                     (unit.get("unit_id"), ", ".join(missing)))
+            continue
+        uid, span_id = unit["unit_id"], unit["source_span_id"]
+        if uid in unit_ids or span_id in span_ids:
+            logic_unit_errors.append("Duplicate logic unit or source span ID: %s / %s." % (uid, span_id))
+            continue
+        unit_ids.append(uid)
+        span_ids.append(span_id)
+        source_record = source_by_id.get(unit["source_id"])
+        if source_record is None or unit["source_uri"] != source_record.get("uri"):
+            logic_unit_errors.append("Logic unit %s has an unresolved source ID/URI." % uid)
+            continue
+        valid_logic_units += 1
+    units_with_provenance = valid_logic_units
     active_contracts = [r for r in contracts if str(r.get("status", "")).startswith("ACTIVE") and r.get("inputs") and r.get("output") and r.get("invariants")]
 
     counterexample_data = read(ROOT / "logic_fractal/data/counterexamples.json", {"cases": []})
@@ -76,7 +105,8 @@ def main():
     thresholds = gate.get("thresholds", {})
     metrics = {
         "source_records": len(sources), "source_classes": len(source_classes),
-        "logic_units_with_provenance": units_with_provenance, "composition_rules_with_contracts": len(active_contracts),
+        "source_linked_articles": source_linked_articles, "logic_units_with_provenance": units_with_provenance,
+        "logic_unit_registry_errors": len(logic_unit_errors), "composition_rules_with_contracts": len(active_contracts),
         "counterexample_cases": len(counterexample_data.get("cases", [])),
         "semantic_test_cases": len(semantic_benchmark.get("cases", [])),
         "benchmark_suites": len(benchmark_suites.get("suites", [])),
@@ -105,6 +135,8 @@ def main():
         actual = metrics[name]
         if actual < required:
             deficits.append({"gate": name, "actual": actual, "required": required, "missing": required - actual})
+    if logic_unit_errors:
+        deficits.append({"gate": "logic_unit_registry_validation", "actual": len(logic_unit_errors), "required": 0})
     for name in ("unresolved_dangling_source_refs", "unresolved_dangling_relation_refs", "unresolved_duplicate_stable_ids"):
         if metrics[name] != 0:
             deficits.append({"gate": name, "actual": metrics[name], "required": 0})
@@ -128,7 +160,9 @@ def main():
     agents = [
         {"agent": "conversation-collector", "status": "COMPLETED_WITH_NO_EXPORTS" if not imported and not intake_errors else ("COMPLETED" if not intake_errors else "REVIEW"), "record_count": len(imported), "errors": intake_errors, "boundary": "Only repository-visible exports are scanned; private chat history is not fetched automatically."},
         {"agent": "source-registrar", "status": "PASS" if not dangling_sources and not duplicate_source_ids else "FAIL", "source_records": len(sources), "source_classes": len(source_classes), "dangling_source_refs": dangling_sources, "duplicate_source_ids": duplicate_source_ids},
-        {"agent": "logic-extractor", "status": "REGISTERED_SOURCE_SPANS_ONLY", "conversation_exports": len(imported), "semantic_status": "NOT_YET_VERIFIED"},
+        {"agent": "logic-extractor", "status": "NO_LOGIC_UNITS_REGISTERED" if not logic_units else ("COMPLETED" if not logic_unit_errors else "REVIEW"),
+         "unit_records": len(logic_units), "valid_units_with_provenance": units_with_provenance,
+         "errors": logic_unit_errors, "conversation_exports": len(imported), "semantic_status": "NOT_YET_VERIFIED"},
         {"agent": "logic-normalizer", "status": "COMPLETED" if not dangling_relations else "REVIEW", "article_nodes": len(model_a["graph"]["nodes"]), "declared_editorial_edges": len(model_a["graph"]["edges"]), "dangling_relations": dangling_relations, "semantic_status": "EDITORIAL_STRUCTURAL_MAP_ONLY"},
         {"agent": "fractal-pattern-miner", "status": "CANDIDATE_MAP_BUILT", "taxonomy_levels": 4, "catalog_hash": sha(catalog), "candidate_substructures": model_a.get("candidate_composition_count", 0), "semantic_status": "STRUCTURAL_CANDIDATES"},
         {"agent": "fractal-composer", "status": "COMPLETED", "candidate_compositions": model_a.get("candidate_composition_count", 0), "active_contract_count": len(active_contracts), "status_contract": "CANDIDATE_COMPOSITION_NOT_SEMANTICALLY_VERIFIED"},
@@ -139,14 +173,16 @@ def main():
         {"agent": "wix-sync-auditor", "status": "READ_BACK_VERIFIED" if wix_manifest.get("status") == "READ_BACK_VERIFIED" else ("PARTIAL_READ_BACK_REQUIRES_FURTHER_CHECK" if wix_manifest.get("status") == "PUBLISHED_READ_BACK_PARTIAL" else "BLOCKED_OR_STALE_MANIFEST"), "last_sync_date": wix_manifest.get("last_sync_date"), "synced_articles": wix_manifest.get("synced_article_count", 0), "live_write_performed_by_this_cycle": False, "note": "GitHub runner has no Wix credentials; connected Wix sync must be performed separately and read back."},
         {"agent": "report-publisher", "status": "REPORT_GENERATED", "wix_write_performed": False, "note": "This run records status and artifacts; it does not perform a Wix deployment."}
     ]
-    operational_pass = not intake_errors and not dangling_sources and not dangling_relations and not duplicate_source_ids and not duplicate_article_ids and deterministic_rebuild
+    operational_pass = not intake_errors and not logic_unit_errors and not dangling_sources and not dangling_relations and not duplicate_source_ids and not duplicate_article_ids and deterministic_rebuild
     readiness = "NOT_READY_INTERNAL_CANDIDATE_ONLY" if deficits else "CANDIDATE_RELEASE_READY_FOR_HUMAN_REVIEW"
     report = {
         "date": datetime.date.today().isoformat(), "run_status": "PASS" if operational_pass else "REVIEW",
         "research_scope": "repository-visible catalog and explicitly supplied conversation exports",
         "access_boundary": "No automatic access to unavailable private ChatGPT history. Add an explicit export through the private intake utility, review/redact, then commit only approved derivatives.",
         "catalog_hash": sha(catalog), "agent_count": len(agents), "agents": agents,
-        "source_coverage": {"source_records": len(sources), "source_classes": len(source_classes), "classes": source_classes, "article_count": len(articles), "article_units_with_resolved_sources": units_with_provenance},
+        "source_coverage": {"source_records": len(sources), "source_classes": len(source_classes), "classes": source_classes,
+                            "article_count": len(articles), "source_linked_articles": source_linked_articles,
+                            "logic_units_with_provenance": units_with_provenance},
         "conversation_records_ingested": imported,
         "model_candidate": {"hash": sha(model_a), "status": "CANDIDATE_NOT_RELEASED", "deterministic_rebuild": deterministic_rebuild, "candidate_composition_count": model_a.get("candidate_composition_count", 0)},
         "first_model_gate": readiness, "readiness_metrics": metrics, "readiness_deficits": deficits,
@@ -155,7 +191,8 @@ def main():
             "Scheduled jobs cannot fetch private ChatGPT history; they scan only explicit repository-visible export records.",
             "Semantic benchmark cases, named benchmark suites, a holdout manifest and independent review logs are not yet registered.",
             "A core-contradiction inventory is required before zero unresolved critical contradictions can be claimed.",
-            "The L0-L3 fractal taxonomy is a research contract; recursive composition semantics remain partly specified and not empirically validated."
+            "The L0-L3 fractal taxonomy is a research contract; recursive composition semantics remain partly specified and not empirically validated.",
+            "Source-linked Wiki articles are not literal logic units; no source-span logic-unit records are registered yet."
         ]
     }
     out = ROOT / "logic_wiki/generated/agent_cycle_report.json"
