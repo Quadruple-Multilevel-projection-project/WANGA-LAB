@@ -1,6 +1,6 @@
 {
   "schema_version": "wanga-ecosystem-project-findings/1.0",
-  "generated_at": "2026-11-11T09:03:05+02:00",
+  "generated_at": "2026-11-12T07:44:54+02:00",
   "permission_scope": "PUBLIC_REPOSITORY_CONTENT_ONLY",
   "findings": [
     {
@@ -552,6 +552,172 @@
       "contradictions": [],
       "permission_scope": "PUBLIC_READ",
       "next_action": "Inspect tree and commit history in a later pass; do not infer repository purpose from its name alone."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-WORLD-PARTY-MANAGERS",
+      "repository_full_name": "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "source_uri": "https://github.com/AmbassadorOv/World-Party-Federation-Branches-managers/blob/master/README.md",
+      "summary": "README contains only the heading 'World-Party-Federation-Branches-managers'. Its Git blob is identical to AmbassadorOv/TTTTproject-un.govt/README.md; this is a duplicate-document signal, not repository identity.",
+      "epistemic_status": "DUPLICATE_BLOB_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "overlap_candidates": [
+        "AmbassadorOv/TTTTproject-un.govt"
+      ],
+      "contradictions": [
+        "README Git blob matches AmbassadorOv/TTTTproject-un.govt/README.md exactly; this does not establish repository identity."
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare repository trees and commit ancestry before treating the two repositories as duplicates."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-GOOGLEAPIS",
+      "repository_full_name": "AmbassadorOv/googleapis",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "6ba73116d009c622bf3057f81a563b2070daea51",
+      "source_uri": "https://github.com/AmbassadorOv/googleapis/blob/master/README.md",
+      "summary": "README describes public API interface definitions, primarily Protocol Buffers/proto3 and generated API surfaces. Potential typed-interface reference only; not WANGA logic or a validated runtime dependency.",
+      "epistemic_status": "API_SCHEMA_TOOLING_REFERENCE_NOT_ADOPTED",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Use only as an external API schema reference if a concrete connector contract requires it."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-DESKTOP",
+      "repository_full_name": "AmbassadorOv/desktop",
+      "branch": "development",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "c7702d385076e80f365a23d17dc868b9ecb6a5ad",
+      "source_uri": "https://github.com/AmbassadorOv/desktop/blob/development/README.md",
+      "summary": "README describes GitHub Desktop, an Electron/TypeScript/React desktop client. General developer tooling; no direct WANGA logic, NTM, MLN, or provenance implementation identified.",
+      "epistemic_status": "PUBLIC_REPOSITORY_README_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No change to this repository. Retain only as a public descriptive reference unless a specific WANGA integration need is demonstrated."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-PLATFORM-SAMPLES",
+      "repository_full_name": "AmbassadorOv/platform-samples",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "a2bb146a181b60c3df0d077c55b197287074ec53",
+      "source_uri": "https://github.com/AmbassadorOv/platform-samples/blob/master/README.md",
+      "summary": "README describes GitHub Platform API, GraphQL, webhook, and integration samples. Possible CI/integration reference, but no WANGA-specific implementation or tests were inspected.",
+      "epistemic_status": "INTEGRATION_TOOLING_REFERENCE_NOT_ADOPTED",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect only if a specific GitHub API/webhook workflow is required; no external write or adoption in this cycle."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-FIREBASE-EXTENSIONS",
+      "repository_full_name": "AmbassadorOv/extensions",
+      "branch": "next",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "6ef8b6a54813922bf64bad64c8e7301f8dc620c2",
+      "source_uri": "https://github.com/AmbassadorOv/extensions/blob/next/README.md",
+      "summary": "README describes Firebase Extensions and their deployment/integration model. External infrastructure reference only; not evidence of WANGA runtime integration.",
+      "epistemic_status": "PUBLIC_REPOSITORY_README_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No change to this repository. Retain only as a public descriptive reference unless a specific WANGA integration need is demonstrated."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-AMBASSADOROV-PROFILE",
+      "repository_full_name": "AmbassadorOv/AmbassadorOv",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "d2664df6ce794e353a4d1b04682627c3b13f0bb9",
+      "source_uri": "https://github.com/AmbassadorOv/AmbassadorOv/blob/main/README.md",
+      "summary": "Profile README presents the public research identity and links the WANGA-LAB archive. This is a public research-index relationship, not an implementation dependency or proof of project status.",
+      "epistemic_status": "PUBLIC_RESEARCH_INDEX_DESCRIPTION",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Preserve the profile-to-WANGA public index link as a documentation relationship only; do not infer implementation state from profile wording."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-GITHUB-DOCS",
+      "repository_full_name": "AmbassadorOv/docs",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "69090a601896b5189a5b3ee42105ed42638016be",
+      "source_uri": "https://github.com/AmbassadorOv/docs/blob/main/README.md",
+      "summary": "README identifies a GitHub documentation source tree. Useful as external documentation material only; no WANGA-specific logic or source corpus was identified.",
+      "epistemic_status": "PUBLIC_REPOSITORY_README_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No change to this repository. Retain only as a public descriptive reference unless a specific WANGA integration need is demonstrated."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-MERMAID",
+      "repository_full_name": "AmbassadorOv/mermaid",
+      "branch": "develop",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "456747132cbc6ed1dde4f8d5f0712deb71b47be8",
+      "source_uri": "https://github.com/AmbassadorOv/mermaid/blob/develop/README.md",
+      "summary": "README describes Mermaid text-based diagrams and chart rendering. Potential visualization tooling for maps; diagram output is not logical evidence or semantic validation.",
+      "epistemic_status": "VISUALIZATION_TOOLING_REFERENCE_NOT_ADOPTED",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Mermaid may render reviewed maps, but diagram edges remain presentation and do not become semantic entailments."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-VSCODE-AZURE-BLOCKCHAIN",
+      "repository_full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "source_uri": "https://github.com/AmbassadorOv/vscode-azure-blockchain-ethereum/blob/master/README.md",
+      "summary": "README describes an Azure Blockchain Development Kit for Ethereum and an older VS Code/Node/Python toolchain. Legacy tooling reference; no current WANGA runtime link established.",
+      "epistemic_status": "LEGACY_TOOLING_REFERENCE",
+      "overlap_candidates": [],
+      "contradictions": [
+        "README describes an older toolchain; current WANGA runtime compatibility is not established."
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Do not use as a current runtime baseline without a separate compatibility review."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-ESLINT",
+      "repository_full_name": "AmbassadorOv/eslint",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "326c6121e810f4d1edfbc781eff4d5b7f46d1c36",
+      "source_uri": "https://github.com/AmbassadorOv/eslint/blob/main/README.md",
+      "summary": "README describes ESLint AST-based static analysis and rule plugins. Possible software-quality tooling; it cannot establish semantic correctness or source truth.",
+      "epistemic_status": "STATIC_ANALYSIS_TOOLING_REFERENCE_NOT_ADOPTED",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Consider only for source-code linting; do not treat static lint results as semantic verification."
     }
   ],
   "cross_repo_relationships": [
@@ -581,6 +747,24 @@
         "Quadruple-Multilevel-projection-project/WANGA-LAB"
       ],
       "summary": "Terraform repository could be a runtime/deployment source, but its README warns main is outdated; inspect active branches before any integration."
+    },
+    {
+      "id": "REL-WORLD-PARTY-README-DUPLICATE-2026-11-12",
+      "status": "DUPLICATE_BLOB_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "source_repos": [
+        "AmbassadorOv/World-Party-Federation-Branches-managers",
+        "AmbassadorOv/TTTTproject-un.govt"
+      ],
+      "summary": "Both README.md files resolve to Git blob SHA 8b36e3fec98319bade352adce9b99abe55705188. This proves identical README content only; repository trees, history and project identity were not compared."
+    },
+    {
+      "id": "REL-AMBASSADOROV-PUBLIC-RESEARCH-INDEX-2026-11-12",
+      "status": "PUBLIC_RESEARCH_INDEX_LINK_NOT_IMPLEMENTATION_DEPENDENCY",
+      "source_repos": [
+        "AmbassadorOv/AmbassadorOv",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "summary": "The AmbassadorOv profile README links the WANGA-LAB archive. This is a public documentation/index relationship, not proof of implementation dependency, ownership state or model readiness."
     }
   ],
   "scan_limitations": [
@@ -588,23 +772,25 @@
     "Five private repositories are excluded by policy; no private paths or excerpts are written.",
     "Only 10 companion repositories plus WANGA-LAB core were content-scanned in this batch.",
     "Latest update timestamps were fetched only for this batch; other public repository timestamps remain null until scanned.",
-    "A README/code-search result is source evidence for its text, not proof that the described behavior is implemented or correct."
+    "A README/code-search result is source evidence for its text, not proof that the described behavior is implemented or correct.",
+    "For the 2026-11-12 batch, the live repository listing exposed default branch, visibility and permissions but not updated_at/pushed_at timestamps; those fields are stored as null rather than inferred.",
+    "No companion-repository test suites were executed; README descriptions are not implementation verification."
   ],
   "last_batch": {
-    "batch_id": "2026-11-11-batch-03",
+    "batch_id": "2026-11-12-batch-04",
     "repositories": [
-      "tribal-archery/-logicl-neural-order",
-      "tribal-archery/MAM-parsed",
-      "tribal-archery/Qdprojects",
-      "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
-      "AmbassadorOv/multi-agent-orchestator",
-      "AmbassadorOv/Nanomathematics",
-      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
-      "AmbassadorOv/TTTT-0.0.0.0.1",
-      "AmbassadorOv/TTTTproject-un.govt",
-      "AmbassadorOv/awesome-chatgpt-prompts"
+      "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "AmbassadorOv/googleapis",
+      "AmbassadorOv/desktop",
+      "AmbassadorOv/platform-samples",
+      "AmbassadorOv/extensions",
+      "AmbassadorOv/AmbassadorOv",
+      "AmbassadorOv/docs",
+      "AmbassadorOv/mermaid",
+      "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "AmbassadorOv/eslint"
     ],
-    "findings_added": 9,
-    "scan_time": "2026-11-11T09:03:05+02:00"
+    "findings_added": 10,
+    "scan_time": "2026-11-12T07:44:54+02:00"
   }
 }
