@@ -150,5 +150,71 @@
     "public_ingestion": 0,
     "explicit_chatgpt_export_found": false,
     "coverage": "TARGETED_NOT_EXHAUSTIVE"
+  },
+  "agent_cycle_snapshot": {
+    "conversation_collector": {
+      "status": "COMPLETED_WITH_NO_EXPORTS",
+      "records": 0
+    },
+    "source_registrar": {
+      "status": "PASS",
+      "source_records": 19,
+      "source_classes": 11,
+      "dangling_refs": 0,
+      "duplicate_source_ids": 0
+    },
+    "logic_normalizer": {
+      "status": "COMPLETED",
+      "article_nodes": 30,
+      "editorial_edges": 118,
+      "semantic_status": "EDITORIAL_STRUCTURAL_MAP_ONLY"
+    },
+    "fractal_pattern_miner": {
+      "status": "CANDIDATE_MAP_BUILT",
+      "taxonomy_levels": 4,
+      "candidate_substructures": 557,
+      "semantic_status": "STRUCTURAL_CANDIDATES"
+    },
+    "fractal_composer": {
+      "status": "COMPLETED",
+      "candidate_compositions": 557,
+      "active_contracts": 3,
+      "semantic_status": "CANDIDATE_COMPOSITION_NOT_SEMANTICALLY_VERIFIED"
+    },
+    "typed_fractal_composer": {
+      "status": "CANDIDATE_COMPOSITIONS_BUILT",
+      "candidate_count": 5,
+      "candidate_hash": "8a5ad2ca37fabc42f28fa5114c1e58de8b2c6cb7ae12bbd30826e9a9863b0a07"
+    },
+    "mirror_reviewer": {
+      "status": "REVIEW_REQUIRED",
+      "reciprocal_edge_candidates": 52,
+      "independent_review_count": 0,
+      "note": "Reciprocal links are review candidates, not counterexamples or proof of equivalence."
+    },
+    "benchmark_evaluator": {
+      "status": "BLOCKED_NO_GROUNDED_BENCHMARKS",
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0
+    },
+    "wiki_curator": {
+      "status": "READY_FOR_REVIEW",
+      "articles": 30,
+      "sources": 19,
+      "relation_semantics": "EDITORIAL_RELATIONS_NOT_ENTAILMENT"
+    },
+    "wix_sync_auditor": {
+      "status": "PARTIAL_READ_BACK_REQUIRES_FURTHER_CHECK",
+      "last_sync_date": "2026-10-12",
+      "synced_articles": 18,
+      "live_write_performed": false
+    }
+  },
+  "mirror": {
+    "status": "REVIEW_REQUIRED",
+    "reciprocal_edge_candidates": 52,
+    "independent_review_count": 0,
+    "counterexamples_added": 0,
+    "interpretation": "The reciprocal-edge candidates are not source-grounded counterexamples and are not semantic entailments."
   }
 }
