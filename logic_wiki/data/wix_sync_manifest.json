@@ -112,5 +112,24 @@
   ],
   "main_page_catalog_article_count": 18,
   "research_catalog_article_count": 27,
-  "supplemental_research_concept_count": 9
+  "supplemental_research_concept_count": 9,
+  "latest_audit": {
+    "date": "2026-11-13",
+    "source_catalog_path": "logic_wiki/data/articles.json",
+    "observed_source_catalog_article_count": 30,
+    "manifest_research_catalog_article_count": 27,
+    "manifest_main_page_card_count": 27,
+    "difference_from_manifest": 3,
+    "status": "RECONCILIATION_REQUIRED",
+    "deployment_performed": false,
+    "read_back_performed": false,
+    "note": "The connected Wix site context resolves the published Logic Engine Research Lab site at the expected headless domain. The GitHub catalog contains 30 articles while the manifest records 27 research entries/cards. The catalog is still in an open, unmerged PR; no Wix deployment or post-deployment read-back was performed.",
+    "site_context_status": "RESOLVED",
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "site_name": "Logic Engine Research Lab",
+    "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/"
+  },
+  "sync_required": true,
+  "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+  "site_name": "Logic Engine Research Lab"
 }

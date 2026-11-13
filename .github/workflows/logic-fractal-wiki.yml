@@ -21,6 +21,8 @@ on:
       - 'research/FORMAL_REASONING_ADAPTER_V1.md'
       - 'ark_swarm/**'
       - 'scripts/run_logic_agents.py'
+      - 'scripts/build_source_grounded_fragments.py'
+      - 'scripts/build_source_grounded_fragments.py'
       - 'scripts/evaluate_logic_agent_bundle.py'
       - 'scripts/run_ark_swarm.py'
       - 'tests/test_multi_agent_logic_evaluation.py'
@@ -123,6 +125,10 @@ jobs:
         run: python -m unittest discover -s logic_fractal/tests -v
       - name: Run typed multi-scale fragment tests
         run: python -m unittest discover -s logic_fractal/tests -p 'test_fragment_composer.py' -v
+      - name: Test source-grounded typed composition candidates
+        run: python -m unittest discover -s logic_fractal/tests -p 'test_source_grounded_composition.py' -v
+      - name: Build source-grounded typed composition candidates
+        run: python scripts/build_source_grounded_fragments.py
       - name: Build first typed fractal model candidate
         run: python scripts/build_first_fractal_model.py
       - name: Test integrated logic-agent roles
@@ -162,7 +168,6 @@ jobs:
           path: |
             logic_wiki/generated/
             research/reports/logic-fractal/
-            research/reports/agent-evaluation/
             research/reports/ark-swarm/
             research/reports/formal-reasoning/
       - name: Propose generated wiki/report updates (no auto-merge)
@@ -181,6 +186,5 @@ jobs:
           add-paths: |
             logic_wiki/generated/**
             research/reports/logic-fractal/**
-            research/reports/agent-evaluation/**
             research/reports/ark-swarm/**
             research/reports/formal-reasoning/**

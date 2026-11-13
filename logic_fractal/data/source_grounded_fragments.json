@@ -1,0 +1,502 @@
+{
+  "schema_version": "wanga-source-grounded-fragments/1.0",
+  "scope": "Literal spans from two public WANGA-LAB research protocols. Interfaces are candidate schema declarations; composition checks types and provenance only.",
+  "interface_semantics": "CANDIDATE_SCHEMA_ONLY",
+  "non_applicability": [
+    "No model behavior or hidden internal state is inferred.",
+    "No copying, transmission, influence, understanding or drift claim is inferred.",
+    "No mathematical theorem or semantic entailment is inferred.",
+    "No counterexample or semantic benchmark case is created by this file."
+  ],
+  "fragments": [
+    {
+      "fragment_id": "FL-WANGA-PATTERN-OCCURRENCE",
+      "version": "0.1",
+      "status": "SPECIFIED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C-PATTERN-OCCURRENCE",
+          "text": "The unit of observation is a **pattern occurrence** in a traceable artifact (prompt, response, document, code, diagram description, or other permitted record). An occurrence is not an agent. A system/model/source is metadata describing where the occurrence was observed.",
+          "status": "SPECIFIED",
+          "source_span_ids": [
+            "SPAN-WANGA-PATTERN-002"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "source_artifact",
+          "type": "SourceArtifact",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "pattern_occurrence",
+          "type": "PatternOccurrence"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "SOURCE_SPAN_EXTRACTION"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-WANGA-PATTERN-OBSERVATION",
+          "locator": "research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md#L18-L18",
+          "git_blob_sha": "48aba8827618a4888d6663939e0c61c8cde70b8d",
+          "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "fragment_id": "FL-WANGA-PATTERN-INFERENCE-BOUNDARY",
+      "version": "0.1",
+      "status": "SPECIFIED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C-PATTERN-INFERENCE-BOUNDARY",
+          "text": "Similarity does not prove copying; chronology does not prove influence; language use does not prove understanding.",
+          "status": "SPECIFIED",
+          "source_span_ids": [
+            "SPAN-WANGA-PATTERN-001"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "pattern_occurrence",
+          "type": "PatternOccurrence",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "inference_boundary",
+          "type": "InferenceBoundary"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "SOURCE_SPAN_EXTRACTION"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-WANGA-PATTERN-OBSERVATION",
+          "locator": "research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md#L14-L14",
+          "git_blob_sha": "48aba8827618a4888d6663939e0c61c8cde70b8d",
+          "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "fragment_id": "FL-WANGA-PATTERN-LANGUAGE-USE",
+      "version": "0.1",
+      "status": "SPECIFIED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C-PATTERN-LANGUAGE-USE",
+          "text": "Separate PROMPTED_USE from UNPROMPTED_OBSERVED_USE. Unprompted use requires evidence that the relevant vocabulary or definition was not present in the immediately available prompt/context; do not infer this when context is incomplete.",
+          "status": "SPECIFIED",
+          "source_span_ids": [
+            "SPAN-WANGA-PATTERN-004"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "pattern_occurrence",
+          "type": "PatternOccurrence",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "language_use_classification",
+          "type": "LanguageUseClassification"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "SOURCE_SPAN_EXTRACTION"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-WANGA-PATTERN-OBSERVATION",
+          "locator": "research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md#L54-L54",
+          "git_blob_sha": "48aba8827618a4888d6663939e0c61c8cde70b8d",
+          "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "fragment_id": "FL-WANGA-PATTERN-SEARCH-COVERAGE",
+      "version": "0.1",
+      "status": "SPECIFIED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C-PATTERN-SEARCH-COVERAGE",
+          "text": "5. Record search coverage and blind spots. Absence from searched sources is not proof of nonexistence.",
+          "status": "SPECIFIED",
+          "source_span_ids": [
+            "SPAN-WANGA-PATTERN-003"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "search_coverage",
+          "type": "SearchCoverage",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "coverage_boundary",
+          "type": "CoverageBoundary"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "SOURCE_SPAN_EXTRACTION"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-WANGA-PATTERN-OBSERVATION",
+          "locator": "research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md#L36-L36",
+          "git_blob_sha": "48aba8827618a4888d6663939e0c61c8cde70b8d",
+          "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "fragment_id": "FL-WANGA-MAKOM-OBSERVATION-SCOPE",
+      "version": "0.1",
+      "status": "SPECIFIED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C-MAKOM-OBSERVATION-SCOPE",
+          "text": "הפרויקט בוחן כיצד רשתות עמוקות מציגות, מפיצות, מרחיבות ומארגנות משמעות כאשר הן נשאלות מהו „מקום”. מטרתנו אינה למדוד דריפט, לאבחן דריפט או להוכיח שהמודל מבין. אנו משתמשים בהבחנות שנחשפות בתהליך כדי להגדיר באופן תצפיתי מה אינו „מקום” בהקשר הנבדק, ומה נשאר מחוץ לתחום ההגדרה.",
+          "status": "SPECIFIED",
+          "source_span_ids": [
+            "SPAN-WANGA-MAKOM-001"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "research_question",
+          "type": "ResearchQuestion",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "observation_scope",
+          "type": "ObservationScope"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "SOURCE_SPAN_EXTRACTION"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+          "locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L9-L9",
+          "git_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+          "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "fragment_id": "FL-WANGA-MAKOM-LANGUAGE-BOUNDARY",
+      "version": "0.1",
+      "status": "SPECIFIED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C-MAKOM-LANGUAGE-BOUNDARY",
+          "text": "שפת הפרויקט היא **שפה סימבולית-תיאורית, מבוססת אותיות, מונחים, סימנים ויחסים**. היא אינה מוגדרת כמתמטיקה, אינה מחייבת משוואות, ואינה הופכת למתמטיקה רק משום שהיא משתמשת באותיות, בקווים, בנקודות, בסימני חיבור או בסידור מורכב.",
+          "status": "SPECIFIED",
+          "source_span_ids": [
+            "SPAN-WANGA-MAKOM-002"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "observation_scope",
+          "type": "ObservationScope",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "language_classification_boundary",
+          "type": "LanguageClassificationBoundary"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "SOURCE_SPAN_EXTRACTION"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+          "locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L24-L24",
+          "git_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+          "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "fragment_id": "FL-WANGA-MAKOM-MATH-ATTRIBUTION",
+      "version": "0.1",
+      "status": "SPECIFIED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C-MAKOM-MATH-ATTRIBUTION",
+          "text": "המשתמש ציין שאינו מבקש לטעון למומחיות מתמטית; לכן אין להמיר את המערכת למתמטיקה או לייחס לה בסיס מתמטי בלי ראיות והכרעה מפורשת. מורכבות, דיוק ויכולת הבחנה אינם כשלעצמם הוכחה למתמטיקה.",
+          "status": "SPECIFIED",
+          "source_span_ids": [
+            "SPAN-WANGA-MAKOM-003"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "symbolic_descriptive_record",
+          "type": "SymbolicDescriptiveRecord",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "mathematics_attribution_boundary",
+          "type": "MathematicsAttributionBoundary"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "SOURCE_SPAN_EXTRACTION"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+          "locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L34-L34",
+          "git_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+          "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "fragment_id": "FL-WANGA-MAKOM-ARCHIVE-STATUS",
+      "version": "0.1",
+      "status": "SPECIFIED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C-MAKOM-ARCHIVE-STATUS",
+          "text": "- 28 היחידות הן ארכיון עבודה מדווח, לא מערך נתונים מאומת;\n- אין להסיק מהן תוצאה כמותית;",
+          "status": "SPECIFIED",
+          "source_span_ids": [
+            "SPAN-WANGA-MAKOM-004"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "historical_work_unit",
+          "type": "HistoricalWorkUnit",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "dataset_status_boundary",
+          "type": "DatasetStatusBoundary"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "SOURCE_SPAN_EXTRACTION"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+          "locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L51-L52",
+          "git_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+          "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "fragment_id": "FL-WANGA-MAKOM-EVIDENCE-LAYERS",
+      "version": "0.1",
+      "status": "SPECIFIED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C-MAKOM-EVIDENCE-LAYERS",
+          "text": "- תופעה נצפית ≠ תיעוד התופעה ≠ הסבר מנגנוני.",
+          "status": "SPECIFIED",
+          "source_span_ids": [
+            "SPAN-WANGA-MAKOM-005"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "observation_scope",
+          "type": "ObservationScope",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "evidence_layer_boundary",
+          "type": "EvidenceLayerBoundary"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "SOURCE_SPAN_EXTRACTION"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+          "locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L78-L78",
+          "git_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+          "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "fragment_id": "FL-WANGA-MAKOM-INTERPRETATION-BOUNDARY",
+      "version": "0.1",
+      "status": "SPECIFIED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C-MAKOM-INTERPRETATION-BOUNDARY",
+          "text": "- היעדר הגדרה ≠ שלילה מוכחת.\n- פרשנות החוקר ≠ פלט המודל.",
+          "status": "SPECIFIED",
+          "source_span_ids": [
+            "SPAN-WANGA-MAKOM-006"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "observation_scope",
+          "type": "ObservationScope",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "interpretation_boundary",
+          "type": "InterpretationBoundary"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "SOURCE_SPAN_EXTRACTION"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+          "locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L82-L83",
+          "git_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+          "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf"
+        }
+      ],
+      "tests": []
+    },
+    {
+      "fragment_id": "FL-WANGA-MAKOM-SOURCE-SEPARATION",
+      "version": "0.1",
+      "status": "SPECIFIED",
+      "scale": 0,
+      "claims": [
+        {
+          "claim_id": "C-MAKOM-SOURCE-SEPARATION",
+          "text": "המקור הפילוסופי-לוגי כולל בין היתר את מורה נבוכים, חלק א׳ פרק ח׳, ואת מילות ההיגיון. מקורות אלה מספקים חומר להשוואה ולבירור מונחים, אך אינם מחליפים את תיעוד האינטראקציות עם Copilot או עם רשתות אחרות.",
+          "status": "SPECIFIED",
+          "source_span_ids": [
+            "SPAN-WANGA-MAKOM-007"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "name": "reference_source",
+          "type": "ReferenceSource",
+          "required": true
+        }
+      ],
+      "outputs": [
+        {
+          "name": "comparative_source_role",
+          "type": "ComparativeSourceRole"
+        }
+      ],
+      "composition": {
+        "parent_ids": [],
+        "rule_id": "SOURCE_SPAN_EXTRACTION"
+      },
+      "provenance": [
+        {
+          "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+          "locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L56-L56",
+          "git_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+          "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf"
+        }
+      ],
+      "tests": []
+    }
+  ],
+  "composition_plan": [
+    {
+      "first": "FL-WANGA-PATTERN-OCCURRENCE",
+      "second": "FL-WANGA-PATTERN-INFERENCE-BOUNDARY",
+      "rule_id": "COMPOSE-INTERFACE-SEQUENTIAL-V1"
+    },
+    {
+      "first": "FL-WANGA-PATTERN-OCCURRENCE",
+      "second": "FL-WANGA-PATTERN-LANGUAGE-USE",
+      "rule_id": "COMPOSE-INTERFACE-SEQUENTIAL-V1"
+    },
+    {
+      "first": "FL-WANGA-MAKOM-OBSERVATION-SCOPE",
+      "second": "FL-WANGA-MAKOM-LANGUAGE-BOUNDARY",
+      "rule_id": "COMPOSE-INTERFACE-SEQUENTIAL-V1"
+    },
+    {
+      "first": "FL-WANGA-MAKOM-OBSERVATION-SCOPE",
+      "second": "FL-WANGA-MAKOM-EVIDENCE-LAYERS",
+      "rule_id": "COMPOSE-INTERFACE-SEQUENTIAL-V1"
+    },
+    {
+      "first": "FL-WANGA-MAKOM-OBSERVATION-SCOPE",
+      "second": "FL-WANGA-MAKOM-INTERPRETATION-BOUNDARY",
+      "rule_id": "COMPOSE-INTERFACE-SEQUENTIAL-V1"
+    }
+  ]
+}
