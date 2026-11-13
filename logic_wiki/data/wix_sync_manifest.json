@@ -123,7 +123,13 @@
     "status": "RECONCILIATION_REQUIRED",
     "deployment_performed": false,
     "read_back_performed": false,
-    "note": "Two source-linked research-protocol entries were staged in the open WANGA-LAB PR, taking the GitHub catalog to 30 articles. The published Wix manifest still records 27 research entries and 27 main-page cards. No deployment was performed because the catalog change is unmerged and the page mapping/count discrepancy must be reconciled first."
+    "note": "The connected Wix site context resolves the published Logic Engine Research Lab site at the expected headless domain. The GitHub catalog contains 30 articles while the manifest records 27 research entries/cards. The catalog is still in an open, unmerged PR; no Wix deployment or post-deployment read-back was performed.",
+    "site_context_status": "RESOLVED",
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "site_name": "Logic Engine Research Lab",
+    "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/"
   },
-  "sync_required": true
+  "sync_required": true,
+  "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+  "site_name": "Logic Engine Research Lab"
 }
