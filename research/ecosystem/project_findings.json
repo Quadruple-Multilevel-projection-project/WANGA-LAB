@@ -1,6 +1,6 @@
 {
   "schema_version": "wanga-ecosystem-project-findings/1.0",
-  "generated_at": "2026-11-12T07:44:54+02:00",
+  "generated_at": "2026-11-13T07:52:06+02:00",
   "permission_scope": "PUBLIC_REPOSITORY_CONTENT_ONLY",
   "findings": [
     {
@@ -718,6 +718,254 @@
       "contradictions": [],
       "permission_scope": "PUBLIC_READ",
       "next_action": "Consider only for source-code linting; do not treat static lint results as semantic verification."
+    },
+    {
+      "finding_id": "ECOSYS-OPENAI-TIKTOKEN-2026-11-13",
+      "repository_full_name": "AmbassadorOv/openai_tiktoken",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "ad8d88b13f731c1d946a4fc5bd3fc3a153393775",
+      "source_uri": "https://github.com/AmbassadorOv/openai_tiktoken/blob/main/README.md",
+      "summary": "README states BPE tokenization is reversible and lossless for text. This may inform text preprocessing, but it does not preserve conversation topology or semantic provenance by itself.",
+      "epistemic_status": "DOCUMENTATION_CLAIM_NOT_INDEPENDENTLY_TESTED",
+      "overlap_candidates": [
+        "WANGA-LAB conversation intake",
+        "WANGA source-span registry"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "If adopted, test byte-for-byte round trips and keep original text, IDs, timestamps and parent links as separate fields."
+    },
+    {
+      "finding_id": "ECOSYS-ARTIFICIAL-Y-2026-11-13",
+      "repository_full_name": "AmbassadorOv/-artificial-y",
+      "branch": "main",
+      "commit": null,
+      "path": "AI231_MASTER_DISTILLATE.json",
+      "blob_sha": "76ab7a001db2d783aa1555fa2a1894995b2f5e12",
+      "source_uri": "https://github.com/AmbassadorOv/-artificial-y/blob/main/AI231_MASTER_DISTILLATE.json",
+      "summary": "README.md was not found. The inspected JSON declares logic_before_weight=true, source names, 231 gates, 230 space groups, a physical substrate and a 10,000-agent swarm. THE_FLY_PROTOCOL.md describes a deterministic local graph/action guard; the validator code uses threshold and logic_type checks. These are design/configuration claims; runtime, hardware and swarm deployment were not verified.",
+      "epistemic_status": "DECLARATIVE_ARCHITECTURE_CLAIMS_NOT_VALIDATED",
+      "overlap_candidates": [
+        "WANGA-LAB logic-before-weights",
+        "WANGA-LAB NTM",
+        "AI231.meta.io"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect the actual 231-gate source matrix and executable orchestration path; do not count the boolean flag as an implemented logic-before-weights pipeline.",
+      "inspected_sources": [
+        {
+          "path": "AI231_MASTER_DISTILLATE.json",
+          "blob_sha": "76ab7a001db2d783aa1555fa2a1894995b2f5e12"
+        },
+        {
+          "path": "jules/THE_FLY_PROTOCOL.md",
+          "blob_sha": "458df0888d157bcf4d5bcb629d91fc1c711b485b"
+        },
+        {
+          "path": "swarm/01_AGENT_ARCHETYPES.json",
+          "blob_sha": "b7897b3b32ecfe8b093abfd3acef31ee87c66361"
+        },
+        {
+          "path": "swarm/03_ENLIGHTENED_VALIDATOR.py",
+          "blob_sha": "fc760093e84e27a07b7bb29d1de0335da3f7fe6c"
+        },
+        {
+          "path": "tests/test_main.py",
+          "blob_sha": "a4b11b552d9f5fde397e6d41c565d3942aa45f24"
+        }
+      ],
+      "readme_status": "NOT_FOUND",
+      "tests_status": "NOT_RUN"
+    },
+    {
+      "finding_id": "ECOSYS-QUALIA-2026-11-13",
+      "repository_full_name": "AmbassadorOv/Qualia",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "source_uri": "https://github.com/AmbassadorOv/Qualia/blob/main/README.md",
+      "summary": "README contains only the repository heading and a Blogspot URL; no technical structure was established.",
+      "epistemic_status": "MINIMAL_README_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect the linked source and repository tree only if a concrete WANGA relationship becomes relevant."
+    },
+    {
+      "finding_id": "ECOSYS-GENERATIVE-AI-DOCS-2026-11-13",
+      "repository_full_name": "AmbassadorOv/generative-ai-docs",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "1bf3babd967e73a1cff092805c4ff151fba95baf",
+      "source_uri": "https://github.com/AmbassadorOv/generative-ai-docs/blob/main/README.md",
+      "summary": "README identifies Google Gemini/Gemma developer documentation with notebooks, demos and examples. This is an external documentation corpus, not a WANGA implementation.",
+      "epistemic_status": "EXTERNAL_DOCUMENTATION_REFERENCE",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Use only as documentation when a specific interoperability task requires it; no API use in this batch."
+    },
+    {
+      "finding_id": "ECOSYS-MUJOCO-2026-11-13",
+      "repository_full_name": "AmbassadorOv/mujoco",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "62d57c19af93682355c27e668422bf8aa87c430b",
+      "source_uri": "https://github.com/AmbassadorOv/mujoco/blob/main/README.md",
+      "summary": "README describes a physics engine for articulated structures, robotics and simulation with C and Python interfaces. Potential spatial-simulation reference only.",
+      "epistemic_status": "EXTERNAL_SIMULATION_REFERENCE_NOT_ADOPTED",
+      "overlap_candidates": [
+        "WANGA-LAB spatial simulation"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare only against an explicitly scoped spatial-simulation requirement; do not treat the README as evidence of WANGA integration."
+    },
+    {
+      "finding_id": "ECOSYS-COOKBOOK-2026-11-13",
+      "repository_full_name": "AmbassadorOv/cookbook",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "646c146ea44ee0175fccf62427bcc03dd88ed1b6",
+      "source_uri": "https://github.com/AmbassadorOv/cookbook/blob/main/README.md",
+      "summary": "README describes the Gemini API Cookbook with quick starts and examples. No external API calls or credential use were performed.",
+      "epistemic_status": "EXTERNAL_API_EXAMPLES_NOT_EXECUTED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No action unless a specific provider integration is selected and explicitly authorized."
+    },
+    {
+      "finding_id": "ECOSYS-VSCODE-DOCS-2026-11-13",
+      "repository_full_name": "AmbassadorOv/vscode-docs",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
+      "source_uri": "https://github.com/AmbassadorOv/vscode-docs/blob/main/README.md",
+      "summary": "README identifies a source repository for Visual Studio Code documentation. No WANGA implementation dependency was found in the README.",
+      "epistemic_status": "DOCUMENTATION_INFRASTRUCTURE_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No integration action; retain as a public documentation repository in the inventory."
+    },
+    {
+      "finding_id": "ECOSYS-MEDIAPIPE-2026-11-13",
+      "repository_full_name": "AmbassadorOv/mediapipe",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "e4f5dd182813dc073e0845be06d23d2c58bbeafb",
+      "source_uri": "https://github.com/AmbassadorOv/mediapipe/blob/master/README.md",
+      "summary": "README redirects to current MediaPipe documentation and describes on-device ML across mobile, web, desktop, edge and IoT. No WANGA integration was established.",
+      "epistemic_status": "EXTERNAL_ON_DEVICE_ML_REFERENCE",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No action until an explicit edge-runtime requirement exists."
+    },
+    {
+      "finding_id": "ECOSYS-PYTHON-GENAI-2026-11-13",
+      "repository_full_name": "AmbassadorOv/python-genai",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+      "source_uri": "https://github.com/AmbassadorOv/python-genai/blob/main/README.md",
+      "summary": "README describes the Google Gen AI Python SDK for Gemini Developer API and Vertex AI, including API-key/environment-variable configuration. No client was created and no external API was called.",
+      "epistemic_status": "EXTERNAL_MODEL_BACKEND_REFERENCE_NOT_CONFIGURED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Keep model backend NOT_CONFIGURED unless a provider and endpoint are explicitly selected."
+    },
+    {
+      "finding_id": "ECOSYS-BRANCHES-2026-11-13",
+      "repository_full_name": "AmbassadorOv/branches-",
+      "branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "26ee6fb7d42d9c86e1dee2a4082f9276a52815a2",
+      "source_uri": "https://github.com/AmbassadorOv/branches-/blob/WPinstitutions/-WPG%7B%3C%3Cbranches%3E%7B%3C%F0%9F%AA%BE%3E%7D%28%3CORG%3E%29%3E%3E%7D%5D%5D%5D/README.md",
+      "summary": "README contains an HTML example for an interactive Quilia/ethical-AGI hub with voting, forms and visualizations. It is a static example in a README, not proof of a deployed or functioning system.",
+      "epistemic_status": "STATIC_DESIGN_EXAMPLE_NOT_DEPLOYMENT_EVIDENCE",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect source files only if the site is selected for a separate deployment task."
+    },
+    {
+      "finding_id": "WANGA-PATTERN-OBSERVATION-PROTOCOL-2026-11-13",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "commit": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "path": "research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md",
+      "blob_sha": "48aba8827618a4888d6663939e0c61c8cde70b8d",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md",
+      "summary": "The protocol defines the pattern occurrence as the observation unit, separates prompted from unprompted language use, distinguishes similarity from transmission evidence, and requires search-coverage limits. It explicitly states that corpus-wide counts and adoption rates are not yet established.",
+      "epistemic_status": "PROJECT_PROTOCOL_SPECIFIED_NOT_DATA_COLLECTION",
+      "overlap_candidates": [
+        "WANGA MAKOM observation",
+        "WANGA Logic Wiki evidence-provenance"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Recover authorized dated artifacts, define reference patterns and keep first-seen, creation, publication and capture timestamps distinct."
+    },
+    {
+      "finding_id": "WANGA-MAKOM-SYMBOLIC-OBSERVATION-2026-11-13",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "commit": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "path": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md",
+      "blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md",
+      "summary": "The project specification treats the target as symbolic-descriptive observation of 'place', not drift measurement; it separates symbolic language from mathematics and observation from documentation and mechanism explanation. The reported 28 historical work units are explicitly not a verified dataset.",
+      "epistemic_status": "SPECIFIED_EVIDENCE_COLLECTION_IN_PROGRESS",
+      "overlap_candidates": [
+        "WANGA pattern occurrence observation",
+        "WANGA source-span registry"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Recover the original prompts/responses and context; do not infer quantitative findings from the reported 28-unit archive."
+    },
+    {
+      "finding_id": "LIMBO-REGIONAL-PROBE-STATUS-2026-11-13",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "commit": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261113T024639Z-REG-EA.json",
+      "blob_sha": "7e19888b74042eb23a60322697ba9e8af7d8dbb6",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261113T024639Z-REG-EA.json",
+      "summary": "Three sampled regional observation files each contain six probe records with status NOT_CONFIGURED and an empty model field. They contain input snapshot hashes but no model output, error trace or crash state. They are not Limbo crash points.",
+      "epistemic_status": "REGIONAL_PROBES_NOT_CONFIGURED_NO_CRASH_EVIDENCE",
+      "overlap_candidates": [
+        "Limbo Cartography Core",
+        "Global Drift Network"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Configure the probe target and capture output/error/state evidence before classifying any event as a crash.",
+      "related_sources": [
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261113T024639Z-REG-EU.json",
+          "blob_sha": "21eb2dfa9daa877f580981d06b396ffb69029493"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261113T024640Z-REG-IL-ME.json",
+          "blob_sha": "18c02e605492c46bae2c18f0e52d3b2b49e6e29e"
+        }
+      ],
+      "sampled_record_count": 18
     }
   ],
   "cross_repo_relationships": [
@@ -765,6 +1013,24 @@
         "Quadruple-Multilevel-projection-project/WANGA-LAB"
       ],
       "summary": "The AmbassadorOv profile README links the WANGA-LAB archive. This is a public documentation/index relationship, not proof of implementation dependency, ownership state or model readiness."
+    },
+    {
+      "id": "REL-ARTIFICIAL-Y-WANGA-LOGIC-BEFORE-WEIGHT-2026-11-13",
+      "status": "DECLARATIVE_OVERLAP_NOT_IMPLEMENTATION_DEPENDENCY",
+      "source_repos": [
+        "AmbassadorOv/-artificial-y",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "summary": "AI231_MASTER_DISTILLATE.json declares logic_before_weight=true and names WANGA-OS. The inspected files do not establish an executable source→logic→verification→weights pipeline or deployed 10,000-agent runtime; this remains a design-overlap candidate."
+    },
+    {
+      "id": "REL-TIKTOKEN-WANGA-INTAKE-2026-11-13",
+      "status": "TEXT_PREPROCESSING_REFERENCE_NOT_SEMANTIC_PROVENANCE",
+      "source_repos": [
+        "AmbassadorOv/openai_tiktoken",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "summary": "The tiktoken README states BPE tokenization is reversible and lossless. This may inform text preprocessing, but it does not preserve conversation parent links, source permissions or semantic relations and is not adopted as the intake provenance layer."
     }
   ],
   "scan_limitations": [
@@ -774,23 +1040,28 @@
     "Latest update timestamps were fetched only for this batch; other public repository timestamps remain null until scanned.",
     "A README/code-search result is source evidence for its text, not proof that the described behavior is implemented or correct.",
     "For the 2026-11-12 batch, the live repository listing exposed default branch, visibility and permissions but not updated_at/pushed_at timestamps; those fields are stored as null rather than inferred.",
-    "No companion-repository test suites were executed; README descriptions are not implementation verification."
+    "No companion-repository test suites were executed; README descriptions are not implementation verification.",
+    "For the 2026-11-13 batch, repository metadata did not expose latest update/push timestamps; values remain null rather than inferred.",
+    "The -artificial-y README.md path returned NOT_FOUND; targeted code search and five selected files were used instead.",
+    "No companion repository test suites were executed; README and code contents are source evidence, not implementation verification.",
+    "No external model API calls or credentials were used.",
+    "Wix catalog updates remain staged in an open PR; no deployment/read-back was performed."
   ],
   "last_batch": {
-    "batch_id": "2026-11-12-batch-04",
+    "batch_id": "2026-11-13-batch-05",
     "repositories": [
-      "AmbassadorOv/World-Party-Federation-Branches-managers",
-      "AmbassadorOv/googleapis",
-      "AmbassadorOv/desktop",
-      "AmbassadorOv/platform-samples",
-      "AmbassadorOv/extensions",
-      "AmbassadorOv/AmbassadorOv",
-      "AmbassadorOv/docs",
-      "AmbassadorOv/mermaid",
-      "AmbassadorOv/vscode-azure-blockchain-ethereum",
-      "AmbassadorOv/eslint"
+      "AmbassadorOv/openai_tiktoken",
+      "AmbassadorOv/-artificial-y",
+      "AmbassadorOv/Qualia",
+      "AmbassadorOv/generative-ai-docs",
+      "AmbassadorOv/mujoco",
+      "AmbassadorOv/cookbook",
+      "AmbassadorOv/vscode-docs",
+      "AmbassadorOv/mediapipe",
+      "AmbassadorOv/python-genai",
+      "AmbassadorOv/branches-"
     ],
-    "findings_added": 10,
-    "scan_time": "2026-11-12T07:44:54+02:00"
+    "findings_added": 13,
+    "scan_time": "2026-11-13T07:52:06+02:00"
   }
 }

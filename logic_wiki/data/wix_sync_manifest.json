@@ -114,16 +114,16 @@
   "research_catalog_article_count": 27,
   "supplemental_research_concept_count": 9,
   "latest_audit": {
-    "date": "2026-11-12",
+    "date": "2026-11-13",
     "source_catalog_path": "logic_wiki/data/articles.json",
-    "observed_source_catalog_article_count": 28,
+    "observed_source_catalog_article_count": 30,
     "manifest_research_catalog_article_count": 27,
     "manifest_main_page_card_count": 27,
-    "difference_from_manifest": 1,
+    "difference_from_manifest": 3,
     "status": "RECONCILIATION_REQUIRED",
     "deployment_performed": false,
     "read_back_performed": false,
-    "note": "The GitHub catalog contains 28 articles while the manifest records 27. No Wix deployment was performed; determine whether one catalog entry is intentionally excluded or the manifest is stale before sync."
+    "note": "Two source-linked research-protocol entries were staged in the open WANGA-LAB PR, taking the GitHub catalog to 30 articles. The published Wix manifest still records 27 research entries and 27 main-page cards. No deployment was performed because the catalog change is unmerged and the page mapping/count discrepancy must be reconciled first."
   },
   "sync_required": true
 }

@@ -1,4 +1,453 @@
 {
   "schema_version": "wanga-logic-units/1.0",
-  "units": []
+  "units": [
+    {
+      "unit_id": "LU-WANGA-PATTERN-001",
+      "source_span_id": "SPAN-WANGA-PATTERN-001",
+      "source_id": "SRC-WANGA-PATTERN-OBSERVATION",
+      "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md",
+      "source_blob_sha": "48aba8827618a4888d6663939e0c61c8cde70b8d",
+      "exact_locator": "research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md#L14-L14",
+      "literal_excerpt": "Similarity does not prove copying; chronology does not prove influence; language use does not prove understanding.",
+      "language": "en",
+      "permission_scope": "PUBLIC_READ",
+      "claim": "The source explicitly denies that similarity, chronology or language use alone prove copying, influence or understanding.",
+      "interpretation": "Three non-entailment boundaries constrain causal and cognitive interpretation; they do not prove the negation of those possibilities.",
+      "primitives": [
+        "similarity",
+        "copying",
+        "chronology",
+        "influence",
+        "language_use",
+        "understanding"
+      ],
+      "relations": [
+        "does_not_prove(similarity,copying)",
+        "does_not_prove(chronology,influence)",
+        "does_not_prove(language_use,understanding)"
+      ],
+      "relation_status": "SOURCE_EXPLICIT_NON_ENTAILMENT",
+      "operators": [
+        "non_entailment_constraint"
+      ],
+      "constraints": [
+        "Do not infer transmission, influence or understanding from the listed observations alone."
+      ],
+      "boundaries": [
+        "The source does not assert that copying, influence or understanding are impossible."
+      ],
+      "composition_rules": [],
+      "counterexamples": [],
+      "normalization_status": "CANDIDATE",
+      "formalization_status": "NOT_FORMALIZED",
+      "sol_review_status": "NOT_RUN",
+      "epistemic_status": "SOURCE_LITERAL_PROJECT_PROTOCOL"
+    },
+    {
+      "unit_id": "LU-WANGA-PATTERN-002",
+      "source_span_id": "SPAN-WANGA-PATTERN-002",
+      "source_id": "SRC-WANGA-PATTERN-OBSERVATION",
+      "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md",
+      "source_blob_sha": "48aba8827618a4888d6663939e0c61c8cde70b8d",
+      "exact_locator": "research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md#L18-L18",
+      "literal_excerpt": "The unit of observation is a **pattern occurrence** in a traceable artifact (prompt, response, document, code, diagram description, or other permitted record). An occurrence is not an agent. A system/model/source is metadata describing where the occurrence was observed.",
+      "language": "en",
+      "permission_scope": "PUBLIC_READ",
+      "claim": "The observation unit is a traceable pattern occurrence; the system/model/source is metadata about its location.",
+      "interpretation": "The source distinguishes the object being counted from the system that produced or contains it.",
+      "primitives": [
+        "pattern_occurrence",
+        "traceable_artifact",
+        "agent",
+        "system_metadata"
+      ],
+      "relations": [
+        "pattern_occurrence -> traceable_artifact",
+        "system_model_source -> occurrence_metadata"
+      ],
+      "relation_status": "SOURCE_EXPLICIT_CLASSIFICATION",
+      "operators": [
+        "unit_of_observation",
+        "metadata_assignment"
+      ],
+      "constraints": [
+        "Do not substitute agent counts for occurrence counts."
+      ],
+      "boundaries": [
+        "The excerpt does not specify a complete occurrence schema by itself."
+      ],
+      "composition_rules": [],
+      "counterexamples": [],
+      "normalization_status": "CANDIDATE",
+      "formalization_status": "NOT_FORMALIZED",
+      "sol_review_status": "NOT_RUN",
+      "epistemic_status": "SOURCE_LITERAL_PROJECT_PROTOCOL"
+    },
+    {
+      "unit_id": "LU-WANGA-PATTERN-003",
+      "source_span_id": "SPAN-WANGA-PATTERN-003",
+      "source_id": "SRC-WANGA-PATTERN-OBSERVATION",
+      "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md",
+      "source_blob_sha": "48aba8827618a4888d6663939e0c61c8cde70b8d",
+      "exact_locator": "research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md#L36-L36",
+      "literal_excerpt": "5. Record search coverage and blind spots. Absence from searched sources is not proof of nonexistence.",
+      "language": "en",
+      "permission_scope": "PUBLIC_READ",
+      "claim": "Search coverage and blind spots must be recorded; absence from searched sources does not prove nonexistence.",
+      "interpretation": "This is an explicit boundary on negative findings and corpus-coverage claims.",
+      "primitives": [
+        "search_coverage",
+        "blind_spot",
+        "absence",
+        "nonexistence"
+      ],
+      "relations": [
+        "absence_from_searched_sources -/-> nonexistence"
+      ],
+      "relation_status": "SOURCE_EXPLICIT_NON_ENTAILMENT",
+      "operators": [
+        "negative_evidence_boundary"
+      ],
+      "constraints": [
+        "A negative search result must retain its corpus and query scope."
+      ],
+      "boundaries": [
+        "The excerpt does not imply that an unsearched source contains the pattern."
+      ],
+      "composition_rules": [],
+      "counterexamples": [],
+      "normalization_status": "CANDIDATE",
+      "formalization_status": "NOT_FORMALIZED",
+      "sol_review_status": "NOT_RUN",
+      "epistemic_status": "SOURCE_LITERAL_PROJECT_PROTOCOL"
+    },
+    {
+      "unit_id": "LU-WANGA-PATTERN-004",
+      "source_span_id": "SPAN-WANGA-PATTERN-004",
+      "source_id": "SRC-WANGA-PATTERN-OBSERVATION",
+      "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md",
+      "source_blob_sha": "48aba8827618a4888d6663939e0c61c8cde70b8d",
+      "exact_locator": "research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md#L54-L54",
+      "literal_excerpt": "Separate PROMPTED_USE from UNPROMPTED_OBSERVED_USE. Unprompted use requires evidence that the relevant vocabulary or definition was not present in the immediately available prompt/context; do not infer this when context is incomplete.",
+      "language": "en",
+      "permission_scope": "PUBLIC_READ",
+      "claim": "Prompted use and unprompted observed use are distinct categories; unprompted classification requires complete enough context evidence.",
+      "interpretation": "The source defines a classification gate, not a claim that unprompted use has occurred.",
+      "primitives": [
+        "prompted_use",
+        "unprompted_observed_use",
+        "prompt_context",
+        "context_completeness"
+      ],
+      "relations": [
+        "PROMPTED_USE != UNPROMPTED_OBSERVED_USE",
+        "unprompted_observed_use requires absent_definition_in_available_context"
+      ],
+      "relation_status": "SOURCE_EXPLICIT_DISTINCTION",
+      "operators": [
+        "classification",
+        "context_gate"
+      ],
+      "constraints": [
+        "Do not label use unprompted when the immediately available context is incomplete."
+      ],
+      "boundaries": [
+        "The source does not establish internal cognition from unprompted vocabulary use."
+      ],
+      "composition_rules": [],
+      "counterexamples": [],
+      "normalization_status": "CANDIDATE",
+      "formalization_status": "NOT_FORMALIZED",
+      "sol_review_status": "NOT_RUN",
+      "epistemic_status": "SOURCE_LITERAL_PROJECT_PROTOCOL"
+    },
+    {
+      "unit_id": "LU-WANGA-MAKOM-001",
+      "source_span_id": "SPAN-WANGA-MAKOM-001",
+      "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+      "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md",
+      "source_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+      "exact_locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L9-L9",
+      "literal_excerpt": "הפרויקט בוחן כיצד רשתות עמוקות מציגות, מפיצות, מרחיבות ומארגנות משמעות כאשר הן נשאלות מהו „מקום”. מטרתנו אינה למדוד דריפט, לאבחן דריפט או להוכיח שהמודל מבין. אנו משתמשים בהבחנות שנחשפות בתהליך כדי להגדיר באופן תצפיתי מה אינו „מקום” בהקשר הנבדק, ומה נשאר מחוץ לתחום ההגדרה.",
+      "language": "he",
+      "permission_scope": "PUBLIC_READ",
+      "claim": "המקור מגדיר את מושא התצפית כדרך שבה פלטי רשתות מציגים ומארגנים משמעות של 'מקום', ומוציא מתחום המחקר מדידת דריפט והוכחת הבנה.",
+      "interpretation": "זהו גבול היקף למחקר; הוא אינו ממצא על מצב פנימי של מודל.",
+      "primitives": [
+        "place",
+        "deep_network_output",
+        "meaning",
+        "scope"
+      ],
+      "relations": [
+        "research_scope excludes drift_measurement",
+        "research_scope excludes understanding_proof"
+      ],
+      "relation_status": "SOURCE_EXPLICIT_SCOPE_BOUNDARY",
+      "operators": [
+        "scope_exclusion",
+        "observational_definition"
+      ],
+      "constraints": [
+        "אין להסיק הבנה או דריפט מתוך עצם הצגת המשמעות."
+      ],
+      "boundaries": [
+        "המקור אינו שולל אפשרות של הבנה; הוא שולל טענה מוכחת במסגרת הפרוטוקול."
+      ],
+      "composition_rules": [],
+      "counterexamples": [],
+      "normalization_status": "CANDIDATE",
+      "formalization_status": "NOT_FORMALIZED",
+      "sol_review_status": "NOT_RUN",
+      "epistemic_status": "SOURCE_LITERAL_PROJECT_PROTOCOL"
+    },
+    {
+      "unit_id": "LU-WANGA-MAKOM-002",
+      "source_span_id": "SPAN-WANGA-MAKOM-002",
+      "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+      "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md",
+      "source_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+      "exact_locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L24-L24",
+      "literal_excerpt": "שפת הפרויקט היא **שפה סימבולית-תיאורית, מבוססת אותיות, מונחים, סימנים ויחסים**. היא אינה מוגדרת כמתמטיקה, אינה מחייבת משוואות, ואינה הופכת למתמטיקה רק משום שהיא משתמשת באותיות, בקווים, בנקודות, בסימני חיבור או בסידור מורכב.",
+      "language": "he",
+      "permission_scope": "PUBLIC_READ",
+      "claim": "המקור מגדיר את שפת הפרויקט כסימבולית-תיאורית ומציב גבול נגד סיווגה כמתמטיקה על סמך מראה בלבד.",
+      "interpretation": "ההבחנה היא הצהרת מסגרת של הפרויקט; היא אינה הכרעה כללית על כל שפה סימבולית.",
+      "primitives": [
+        "symbolic_descriptive_language",
+        "letters",
+        "terms",
+        "signs",
+        "relations",
+        "mathematics"
+      ],
+      "relations": [
+        "symbolic_descriptive_language != mathematics_by_visual_appearance"
+      ],
+      "relation_status": "SOURCE_EXPLICIT_CLASSIFICATION_BOUNDARY",
+      "operators": [
+        "classification_boundary"
+      ],
+      "constraints": [
+        "אין להסיק בסיס מתמטי מאותיות, קווים, נקודות או מורכבות חזותית בלבד."
+      ],
+      "boundaries": [
+        "המקור אינו שולל אפשרות להוכיח בהמשך תכונה מתמטית באמצעות הגדרה והוכחה."
+      ],
+      "composition_rules": [],
+      "counterexamples": [],
+      "normalization_status": "CANDIDATE",
+      "formalization_status": "NOT_FORMALIZED",
+      "sol_review_status": "NOT_RUN",
+      "epistemic_status": "SOURCE_LITERAL_PROJECT_PROTOCOL"
+    },
+    {
+      "unit_id": "LU-WANGA-MAKOM-003",
+      "source_span_id": "SPAN-WANGA-MAKOM-003",
+      "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+      "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md",
+      "source_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+      "exact_locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L34-L34",
+      "literal_excerpt": "המשתמש ציין שאינו מבקש לטעון למומחיות מתמטית; לכן אין להמיר את המערכת למתמטיקה או לייחס לה בסיס מתמטי בלי ראיות והכרעה מפורשת. מורכבות, דיוק ויכולת הבחנה אינם כשלעצמם הוכחה למתמטיקה.",
+      "language": "he",
+      "permission_scope": "PUBLIC_READ",
+      "claim": "ייחוס בסיס מתמטי דורש ראיות והכרעה מפורשת; מורכבות, דיוק והבחנה אינם מספיקים לבדם.",
+      "interpretation": "זהו כלל ייחוס/סיווג, לא הוכחה שהמערכת אינה מתמטית.",
+      "primitives": [
+        "mathematical_attribution",
+        "evidence",
+        "complexity",
+        "precision",
+        "distinction"
+      ],
+      "relations": [
+        "complexity -/-> mathematical_basis",
+        "precision -/-> mathematical_basis",
+        "distinction -/-> mathematical_basis"
+      ],
+      "relation_status": "SOURCE_EXPLICIT_ATTRIBUTION_CONSTRAINT",
+      "operators": [
+        "evidence_gate"
+      ],
+      "constraints": [
+        "אין לייחס בסיס מתמטי ללא ראיות והכרעה מפורשת."
+      ],
+      "boundaries": [
+        "המקור אינו קובע שכל מבנה מורכב הוא לא-מתמטי."
+      ],
+      "composition_rules": [],
+      "counterexamples": [],
+      "normalization_status": "CANDIDATE",
+      "formalization_status": "NOT_FORMALIZED",
+      "sol_review_status": "NOT_RUN",
+      "epistemic_status": "SOURCE_LITERAL_PROJECT_PROTOCOL"
+    },
+    {
+      "unit_id": "LU-WANGA-MAKOM-004",
+      "source_span_id": "SPAN-WANGA-MAKOM-004",
+      "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+      "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md",
+      "source_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+      "exact_locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L51-L52",
+      "literal_excerpt": "- 28 היחידות הן ארכיון עבודה מדווח, לא מערך נתונים מאומת;\n- אין להסיק מהן תוצאה כמותית;",
+      "language": "he",
+      "permission_scope": "PUBLIC_READ",
+      "claim": "28 היחידות מתוארות כארכיון עבודה מדווח ולא כמערך נתונים מאומת; אין להסיק מהן תוצאה כמותית.",
+      "interpretation": "המקור מחייב שחזור של הרשומות המקוריות לפני ניתוח כמותי.",
+      "primitives": [
+        "historical_work_units",
+        "archive",
+        "dataset",
+        "quantitative_result"
+      ],
+      "relations": [
+        "reported_work_archive != verified_dataset",
+        "reported_work_units -/-> quantitative_result"
+      ],
+      "relation_status": "SOURCE_EXPLICIT_DATASET_BOUNDARY",
+      "operators": [
+        "dataset_eligibility_gate"
+      ],
+      "constraints": [
+        "אין להעלות את 28 היחידות למעמד מדידה מאומתת ללא שחזור המקור."
+      ],
+      "boundaries": [
+        "המקור אינו קובע שהיחידות אינן קיימות; הוא קובע שמעמדן טרם אומת."
+      ],
+      "composition_rules": [],
+      "counterexamples": [],
+      "normalization_status": "CANDIDATE",
+      "formalization_status": "NOT_FORMALIZED",
+      "sol_review_status": "NOT_RUN",
+      "epistemic_status": "SOURCE_LITERAL_PROJECT_PROTOCOL"
+    },
+    {
+      "unit_id": "LU-WANGA-MAKOM-005",
+      "source_span_id": "SPAN-WANGA-MAKOM-005",
+      "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+      "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md",
+      "source_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+      "exact_locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L78-L78",
+      "literal_excerpt": "- תופעה נצפית ≠ תיעוד התופעה ≠ הסבר מנגנוני.",
+      "language": "he",
+      "permission_scope": "PUBLIC_READ",
+      "claim": "התופעה הנצפית, תיעוד התופעה והסבר מנגנוני הם שלוש קטגוריות נפרדות.",
+      "interpretation": "המקור אוסר למזג תצפית, רישום והסבר למעמד ראייתי אחד.",
+      "primitives": [
+        "observed_phenomenon",
+        "documentation",
+        "mechanism_explanation"
+      ],
+      "relations": [
+        "observed_phenomenon != documentation",
+        "documentation != mechanism_explanation"
+      ],
+      "relation_status": "SOURCE_EXPLICIT_LAYER_DISTINCTION",
+      "operators": [
+        "typed_distinction"
+      ],
+      "constraints": [
+        "כל שכבה צריכה לשמור מקור ומעמד אפיסטמי משלה."
+      ],
+      "boundaries": [
+        "המקור אינו מפרט כאן את כל שדות הסכמה הדרושים לכל שכבה."
+      ],
+      "composition_rules": [],
+      "counterexamples": [],
+      "normalization_status": "CANDIDATE",
+      "formalization_status": "NOT_FORMALIZED",
+      "sol_review_status": "NOT_RUN",
+      "epistemic_status": "SOURCE_LITERAL_PROJECT_PROTOCOL"
+    },
+    {
+      "unit_id": "LU-WANGA-MAKOM-006",
+      "source_span_id": "SPAN-WANGA-MAKOM-006",
+      "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+      "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md",
+      "source_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+      "exact_locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L82-L83",
+      "literal_excerpt": "- היעדר הגדרה ≠ שלילה מוכחת.\n- פרשנות החוקר ≠ פלט המודל.",
+      "language": "he",
+      "permission_scope": "PUBLIC_READ",
+      "claim": "היעדר הגדרה אינו שלילה מוכחת; פרשנות החוקר אינה פלט המודל.",
+      "interpretation": "אלה שני גבולות נפרדים: גבול לוגי על היעדר, וגבול provenance בין מקור לפרשנות.",
+      "primitives": [
+        "definition",
+        "negation",
+        "researcher_interpretation",
+        "model_output"
+      ],
+      "relations": [
+        "absence_of_definition -/-> proven_negation",
+        "researcher_interpretation != model_output"
+      ],
+      "relation_status": "SOURCE_EXPLICIT_NON_ENTAILMENT_AND_PROVENANCE",
+      "operators": [
+        "non_entailment",
+        "source_interpretation_separation"
+      ],
+      "constraints": [
+        "אין להפוך שדה חסר לשלילה; אין לצטט פרשנות כטקסט מודל."
+      ],
+      "boundaries": [
+        "המקור אינו קובע שכל פרשנות שגויה; הוא קובע שאינה פלט המקור."
+      ],
+      "composition_rules": [],
+      "counterexamples": [],
+      "normalization_status": "CANDIDATE",
+      "formalization_status": "NOT_FORMALIZED",
+      "sol_review_status": "NOT_RUN",
+      "epistemic_status": "SOURCE_LITERAL_PROJECT_PROTOCOL"
+    },
+    {
+      "unit_id": "LU-WANGA-MAKOM-007",
+      "source_span_id": "SPAN-WANGA-MAKOM-007",
+      "source_id": "SRC-WANGA-MAKOM-OBSERVATION",
+      "source_version": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md",
+      "source_blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+      "exact_locator": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md#L56-L56",
+      "literal_excerpt": "המקור הפילוסופי-לוגי כולל בין היתר את מורה נבוכים, חלק א׳ פרק ח׳, ואת מילות ההיגיון. מקורות אלה מספקים חומר להשוואה ולבירור מונחים, אך אינם מחליפים את תיעוד האינטראקציות עם Copilot או עם רשתות אחרות.",
+      "language": "he",
+      "permission_scope": "PUBLIC_READ",
+      "claim": "המקור מבחין בין חומר עיוני להשוואה לבין תיעוד אינטראקציות הנדרש כראיה לתצפיות.",
+      "interpretation": "מקור פילוסופי יכול לתמוך בבירור מונחים אך אינו תחליף לתמליל אינטראקציה.",
+      "primitives": [
+        "philosophical_source",
+        "term_comparison",
+        "interaction_record",
+        "Copilot"
+      ],
+      "relations": [
+        "reference_source -> comparative_material",
+        "reference_source -/-> interaction_record"
+      ],
+      "relation_status": "SOURCE_EXPLICIT_SOURCE_ROLE_DISTINCTION",
+      "operators": [
+        "source_role_assignment"
+      ],
+      "constraints": [
+        "אין להחליף תיעוד אינטראקציה במקור עיוני משווה."
+      ],
+      "boundaries": [
+        "המקור אינו מפרט כאן את התוכן המלא של המקורות הפילוסופיים המוזכרים."
+      ],
+      "composition_rules": [],
+      "counterexamples": [],
+      "normalization_status": "CANDIDATE",
+      "formalization_status": "NOT_FORMALIZED",
+      "sol_review_status": "NOT_RUN",
+      "epistemic_status": "SOURCE_LITERAL_PROJECT_PROTOCOL"
+    }
+  ]
 }

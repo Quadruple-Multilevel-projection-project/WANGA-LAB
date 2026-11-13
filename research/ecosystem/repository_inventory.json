@@ -1,6 +1,6 @@
 {
   "schema_version": "wanga-ecosystem-repository-inventory/1.0",
-  "snapshot_at": "2026-11-12T07:44:54+02:00",
+  "snapshot_at": "2026-11-13T07:52:06+02:00",
   "source": "Live connected GitHub inventory plus default-branch repository metadata, README blobs and selected documentation paths",
   "access_snapshot": {
     "unique_repositories_visible": 63,
@@ -16,23 +16,23 @@
     "note": "Private repository names, paths, excerpts and contents are intentionally omitted from this public registry."
   },
   "batch": {
-    "batch_id": "2026-11-12-batch-04",
+    "batch_id": "2026-11-13-batch-05",
     "scanned_repositories": [
-      "AmbassadorOv/World-Party-Federation-Branches-managers",
-      "AmbassadorOv/googleapis",
-      "AmbassadorOv/desktop",
-      "AmbassadorOv/platform-samples",
-      "AmbassadorOv/extensions",
-      "AmbassadorOv/AmbassadorOv",
-      "AmbassadorOv/docs",
-      "AmbassadorOv/mermaid",
-      "AmbassadorOv/vscode-azure-blockchain-ethereum",
-      "AmbassadorOv/eslint"
+      "AmbassadorOv/openai_tiktoken",
+      "AmbassadorOv/-artificial-y",
+      "AmbassadorOv/Qualia",
+      "AmbassadorOv/generative-ai-docs",
+      "AmbassadorOv/mujoco",
+      "AmbassadorOv/cookbook",
+      "AmbassadorOv/vscode-docs",
+      "AmbassadorOv/mediapipe",
+      "AmbassadorOv/python-genai",
+      "AmbassadorOv/branches-"
     ],
     "core_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
-    "scan_method": "Live affiliation snapshot + default-branch README blob retrieval for the next bounded public batch; no companion-repository tests or external writes.",
+    "scan_method": "Live affiliation snapshot plus default-branch README retrieval; targeted code search and selected-file review where README was absent. No companion-repository tests, external API calls or external writes.",
     "target_batch_size": 10,
-    "scan_time": "2026-11-12T07:44:54+02:00"
+    "scan_time": "2026-11-13T07:52:06+02:00"
   },
   "repositories": [
     {
@@ -409,11 +409,18 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/openai_tiktoken"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "ad8d88b13f731c1d946a4fc5bd3fc3a153393775",
+      "source_uri": "https://github.com/AmbassadorOv/openai_tiktoken/blob/main/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "last_scanned_at": "2026-11-13T07:52:06+02:00",
+      "permission_scope": "PUBLIC_READ",
+      "scan_summary": "README describes a BPE tokenizer and states that tokenization is reversible and lossless. Potential text-ingestion reference only; tokenizer reversibility does not preserve conversation parent links, provenance metadata or semantic relations."
     },
     {
       "full_name": "AmbassadorOv/-artificial-y",
@@ -431,11 +438,23 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "TARGETED_CODE_SEARCH_AND_FILE_REVIEW",
+      "readme_status": "NOT_FOUND",
       "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/-artificial-y"
+      "source_uri": "https://github.com/AmbassadorOv/-artificial-y/tree/main",
+      "readme_path": null,
+      "inspected_paths": [
+        "README.md (NOT_FOUND)",
+        "AI231_MASTER_DISTILLATE.json",
+        "jules/THE_FLY_PROTOCOL.md",
+        "swarm/01_AGENT_ARCHETYPES.json",
+        "swarm/03_ENLIGHTENED_VALIDATOR.py",
+        "tests/test_main.py"
+      ],
+      "last_scanned_at": "2026-11-13T07:52:06+02:00",
+      "permission_scope": "PUBLIC_READ",
+      "scan_summary": "README.md was not found. Targeted search and five files were inspected: AI231_MASTER_DISTILLATE.json, THE_FLY_PROTOCOL.md, AGENT_ARCHETYPES.json, ENLIGHTENED_VALIDATOR.py and tests/test_main.py. The JSON declares logic_before_weight=true, 231 gates, 230 space groups and 10,000 agents; these are declarative project claims, not verified runtime or hardware facts."
     },
     {
       "full_name": "AmbassadorOv/Qualia",
@@ -453,11 +472,18 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/Qualia"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "source_uri": "https://github.com/AmbassadorOv/Qualia/blob/main/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "last_scanned_at": "2026-11-13T07:52:06+02:00",
+      "permission_scope": "PUBLIC_READ",
+      "scan_summary": "README contains a title and a Blogspot link only; no technical architecture or implementation claim was established."
     },
     {
       "full_name": "AmbassadorOv/O-Ms",
@@ -497,11 +523,18 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/generative-ai-docs"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "1bf3babd967e73a1cff092805c4ff151fba95baf",
+      "source_uri": "https://github.com/AmbassadorOv/generative-ai-docs/blob/main/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "last_scanned_at": "2026-11-13T07:52:06+02:00",
+      "permission_scope": "PUBLIC_READ",
+      "scan_summary": "README identifies Google Gemini API/Gemma developer documentation and describes notebooks, demos and examples. Documentation repository; no WANGA integration established."
     },
     {
       "full_name": "AmbassadorOv/mujoco",
@@ -519,11 +552,18 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/mujoco"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "62d57c19af93682355c27e668422bf8aa87c430b",
+      "source_uri": "https://github.com/AmbassadorOv/mujoco/blob/main/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "last_scanned_at": "2026-11-13T07:52:06+02:00",
+      "permission_scope": "PUBLIC_READ",
+      "scan_summary": "README describes MuJoCo as a general-purpose physics engine for articulated structures, robotics, biomechanics and simulation, with C API and Python bindings. Potential spatial-simulation reference only; no WANGA integration or tests run."
     },
     {
       "full_name": "AmbassadorOv/cookbook",
@@ -541,11 +581,18 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/cookbook"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "646c146ea44ee0175fccf62427bcc03dd88ed1b6",
+      "source_uri": "https://github.com/AmbassadorOv/cookbook/blob/main/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "last_scanned_at": "2026-11-13T07:52:06+02:00",
+      "permission_scope": "PUBLIC_READ",
+      "scan_summary": "README identifies the Gemini API Cookbook with quick starts and examples. External API examples were not executed; no credentials or API calls used."
     },
     {
       "full_name": "AmbassadorOv/vscode-docs",
@@ -563,11 +610,18 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/vscode-docs"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
+      "source_uri": "https://github.com/AmbassadorOv/vscode-docs/blob/main/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "last_scanned_at": "2026-11-13T07:52:06+02:00",
+      "permission_scope": "PUBLIC_READ",
+      "scan_summary": "README describes the Visual Studio Code documentation source repository and its publishing destination. Documentation infrastructure only; no WANGA dependency established."
     },
     {
       "full_name": "AmbassadorOv/mediapipe",
@@ -585,11 +639,18 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/mediapipe"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "e4f5dd182813dc073e0845be06d23d2c58bbeafb",
+      "source_uri": "https://github.com/AmbassadorOv/mediapipe/blob/master/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "last_scanned_at": "2026-11-13T07:52:06+02:00",
+      "permission_scope": "PUBLIC_READ",
+      "scan_summary": "README redirects to current MediaPipe developer documentation and describes on-device ML across mobile, web, desktop, edge and IoT. No WANGA integration established."
     },
     {
       "full_name": "AmbassadorOv/python-genai",
@@ -607,11 +668,18 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/python-genai"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+      "source_uri": "https://github.com/AmbassadorOv/python-genai/blob/main/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "last_scanned_at": "2026-11-13T07:52:06+02:00",
+      "permission_scope": "PUBLIC_READ",
+      "scan_summary": "README describes Google's Gen AI Python SDK for Gemini Developer API and Vertex AI, including API-key/environment-variable setup. No SDK client was created and no external API was called."
     },
     {
       "full_name": "AmbassadorOv/branches-",
@@ -629,11 +697,18 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/branches-"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "26ee6fb7d42d9c86e1dee2a4082f9276a52815a2",
+      "source_uri": "https://github.com/AmbassadorOv/branches-/blob/WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "last_scanned_at": "2026-11-13T07:52:06+02:00",
+      "permission_scope": "PUBLIC_READ",
+      "scan_summary": "README contains an HTML design example for an interactive 'Quilia Project' hub with voting/forms/visualizations. Static example text is not evidence of a deployed or functioning site, AGI or governance system."
     },
     {
       "full_name": "AmbassadorOv/fluffy-parakeet",
@@ -1475,6 +1550,25 @@
       "scan_method": "live repository metadata + README blob retrieval + targeted NTM architecture/readiness docs + TTTT team-map inspection",
       "target_batch_size": 10,
       "scan_time": "2026-11-11T09:03:05+02:00"
+    },
+    {
+      "batch_id": "2026-11-13-batch-05",
+      "scanned_repositories": [
+        "AmbassadorOv/openai_tiktoken",
+        "AmbassadorOv/-artificial-y",
+        "AmbassadorOv/Qualia",
+        "AmbassadorOv/generative-ai-docs",
+        "AmbassadorOv/mujoco",
+        "AmbassadorOv/cookbook",
+        "AmbassadorOv/vscode-docs",
+        "AmbassadorOv/mediapipe",
+        "AmbassadorOv/python-genai",
+        "AmbassadorOv/branches-"
+      ],
+      "core_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "scan_method": "Live affiliation snapshot plus default-branch README retrieval; targeted code search and selected-file review where README was absent. No companion-repository tests, external API calls or external writes.",
+      "target_batch_size": 10,
+      "scan_time": "2026-11-13T07:52:06+02:00"
     }
   ]
 }

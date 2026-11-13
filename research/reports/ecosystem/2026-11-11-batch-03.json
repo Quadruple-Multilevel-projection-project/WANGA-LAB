@@ -408,7 +408,7 @@
       "role": "Logic Extractor/Normalizer",
       "status": "COMPLETED_WITH_NO_ADMISSION",
       "input": "New public README and architecture documents",
-      "output": "Eight source-linked project findings recorded; zero new Logic Wiki claims or formal logic units admitted.",
+      "output": "Nine source-linked project findings recorded; zero new Logic Wiki claims or formal logic units admitted.",
       "evidence": "project_findings.json",
       "next_action": "Map explicit predicates/relations only after source-span and scope review."
     },
@@ -424,7 +424,7 @@
       "role": "Mirror/Contradiction Reviewer",
       "status": "PARTIAL_REVIEW",
       "input": "Cross-repo names, README hashes and readiness reports",
-      "output": "Duplicate README blob candidate and TTTT documentation reference gaps recorded; critical contradiction count remains NOT_MEASURED.",
+      "output": "Duplicate README blob candidate, TTTT reference gaps and the Cyber Department example-content review recorded; critical contradiction count remains NOT_MEASURED.",
       "evidence": "Eight project findings and prior contradiction-inventory gap",
       "next_action": "Inspect repository trees/ancestry and build an explicit contradiction inventory."
     },
@@ -478,5 +478,7 @@
     "Resolve TTTT exact repository references; do not silently redirect.",
     "Keep Logic Fractal Alpha blocked until all readiness checks have evidence.",
     "Obtain current Limbo workflow jobs and perform replay only on the current target with source-backed input."
-  ]
+  ],
+  "project_findings_added_count": 9,
+  "project_findings_reconciliation_note": "The Markdown list now includes CYBER-DEPARTMENT-README-REVIEW-2026-11-11, which was already present in project_findings.json but omitted from the original eight-item narrative."
 }

@@ -5,6 +5,9 @@ import argparse, datetime, html, json, re, sys
 from pathlib import Path
 
 ROOT_DEFAULT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT_DEFAULT))
+from logic_fractal.readiness import is_readiness_eligible
+
 ALLOWED_KINDS = {
   "ESTABLISHED_REFERENCE", "WANGA_ENGINEERING_CONCEPT", "WANGA_ARCHITECTURE_CONTRACT",
   "WANGA_RESEARCH_PROPOSAL", "WANGA_IMPLEMENTED_PROTOTYPE", "WANGA_RESEARCH_PROTOTYPE",
@@ -62,6 +65,7 @@ def validate(root):
     source_by_id = {s.get("id"): s for s in sources}
     unit_ids, span_ids, unit_errors = [], [], []
     valid_logic_units = 0
+    excluded_test_fixture_units = 0
     required_unit_fields = ("unit_id", "source_span_id", "source_id", "source_version", "source_uri",
                             "exact_locator", "literal_excerpt", "language", "permission_scope")
     for unit in logic_units:
@@ -91,6 +95,9 @@ def validate(root):
             unit_errors.append("Logic unit %s source URI does not match registered source %s." %
                                (uid, unit["source_id"]))
             continue
+        if not is_readiness_eligible(unit, source_record):
+            excluded_test_fixture_units += 1
+            continue
         valid_logic_units += 1
     errors.extend(unit_errors)
 
@@ -106,6 +113,12 @@ def validate(root):
         critical_core_contradictions = None
         warnings.append("Core contradiction inventory is absent; critical contradictions are NOT_MEASURED.")
 
+    composition_contract_path = root / "logic_fractal/data/composition_rules.json"
+    composition_contracts = load_json(composition_contract_path).get("rules", []) if composition_contract_path.exists() else []
+    active_composition_contracts = [r for r in composition_contracts if str(r.get("status", "")).startswith("ACTIVE") and r.get("inputs") and r.get("output") and r.get("invariants")]
+    if not composition_contract_path.exists():
+        warnings.append("Composition contract registry is absent; active composition rules are not measured.")
+
     observed = {
         "source_records": len(sources) + int(metrics.get("additional_source_records", 0)),
         "source_classes": len(set(source_classes) | set(metrics.get("additional_source_classes", []))),
@@ -113,7 +126,8 @@ def validate(root):
         "logic_units_with_provenance": valid_logic_units,
         "logic_unit_registry_count": len(logic_units),
         "logic_unit_registry_errors": len(unit_errors),
-        "composition_rules_with_contracts": int(metrics.get("composition_rules_with_contracts", 0)),
+        "test_fixture_logic_units_excluded": excluded_test_fixture_units,
+        "composition_rules_with_contracts": len(active_composition_contracts),
         "counterexample_cases": int(metrics.get("counterexample_cases", 0)),
         "test_cases": int(metrics.get("test_cases", 0)),
         "benchmark_suites": int(metrics.get("benchmark_suites", 0)),

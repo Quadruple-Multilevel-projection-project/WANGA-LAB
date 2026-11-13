@@ -6,6 +6,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(ROOT))
 from logic_fractal.composer import build_candidate_model, load_contracts
+from logic_fractal.readiness import is_readiness_eligible
 
 def read(path, default=None):
     if not path.exists():
@@ -55,6 +56,7 @@ def main():
     source_by_id = {item.get("id"): item for item in sources}
     logic_unit_errors, unit_ids, span_ids = [], [], []
     valid_logic_units = 0
+    excluded_test_fixture_units = 0
     required_unit_fields = ("unit_id", "source_span_id", "source_id", "source_version", "source_uri",
                             "exact_locator", "literal_excerpt", "language", "permission_scope")
     for unit in logic_units:
@@ -77,8 +79,13 @@ def main():
         if source_record is None or unit["source_uri"] != source_record.get("uri"):
             logic_unit_errors.append("Logic unit %s has an unresolved source ID/URI." % uid)
             continue
+        if not is_readiness_eligible(unit, source_record):
+            excluded_test_fixture_units += 1
+            continue
         valid_logic_units += 1
     units_with_provenance = valid_logic_units
+    typed_candidate_artifact = read(ROOT / "research/reports/logic-fractal/source-grounded-fractal-candidates.json", {"candidates": []})
+    typed_candidates = typed_candidate_artifact.get("candidates", [])
     active_contracts = [r for r in contracts if str(r.get("status", "")).startswith("ACTIVE") and r.get("inputs") and r.get("output") and r.get("invariants")]
 
     counterexample_data = read(ROOT / "logic_fractal/data/counterexamples.json", {"cases": []})
@@ -106,7 +113,8 @@ def main():
     metrics = {
         "source_records": len(sources), "source_classes": len(source_classes),
         "source_linked_articles": source_linked_articles, "logic_units_with_provenance": units_with_provenance,
-        "logic_unit_registry_errors": len(logic_unit_errors), "composition_rules_with_contracts": len(active_contracts),
+        "logic_unit_registry_errors": len(logic_unit_errors), "test_fixture_logic_units_excluded": excluded_test_fixture_units,
+        "composition_rules_with_contracts": len(active_contracts), "typed_composition_candidates": len(typed_candidates),
         "counterexample_cases": len(counterexample_data.get("cases", [])),
         "semantic_test_cases": len(semantic_benchmark.get("cases", [])),
         "benchmark_suites": len(benchmark_suites.get("suites", [])),
@@ -166,6 +174,7 @@ def main():
         {"agent": "logic-normalizer", "status": "COMPLETED" if not dangling_relations else "REVIEW", "article_nodes": len(model_a["graph"]["nodes"]), "declared_editorial_edges": len(model_a["graph"]["edges"]), "dangling_relations": dangling_relations, "semantic_status": "EDITORIAL_STRUCTURAL_MAP_ONLY"},
         {"agent": "fractal-pattern-miner", "status": "CANDIDATE_MAP_BUILT", "taxonomy_levels": 4, "catalog_hash": sha(catalog), "candidate_substructures": model_a.get("candidate_composition_count", 0), "semantic_status": "STRUCTURAL_CANDIDATES"},
         {"agent": "fractal-composer", "status": "COMPLETED", "candidate_compositions": model_a.get("candidate_composition_count", 0), "active_contract_count": len(active_contracts), "status_contract": "CANDIDATE_COMPOSITION_NOT_SEMANTICALLY_VERIFIED"},
+        {"agent": "typed-fractal-composer", "status": "CANDIDATE_COMPOSITIONS_BUILT" if typed_candidates else "BLOCKED_NO_TYPED_CANDIDATE_ARTIFACT", "candidate_count": len(typed_candidates), "candidate_hash": typed_candidate_artifact.get("model_hash"), "semantic_status": "NOT_YET_VERIFIED", "note": "Exact typed-interface compatibility and provenance only; no semantic entailment is claimed."},
         {"agent": "mirror-reviewer", "status": "REVIEW_REQUIRED" if not reviews else "REVIEW_LOG_PRESENT", "reciprocal_edge_candidates": reciprocal, "independent_review_count": len(reviews), "note": "Reciprocal links are review candidates, not proof of logical equivalence."},
         {"agent": "benchmark-evaluator", "status": "BLOCKED_NO_GROUNDED_BENCHMARKS" if not semantic_benchmark.get("cases") else "BENCHMARK_CASES_REGISTERED", "semantic_test_cases": len(semantic_benchmark.get("cases", [])), "benchmark_suites": len(benchmark_suites.get("suites", [])), "note": "Unit tests validate software contracts; they do not count as semantic ground-truth cases."},
         {"agent": "readiness-gatekeeper", "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY" if deficits else "READY_FOR_HUMAN_REVIEW", "metrics": metrics, "deficits": deficits, "threshold_policy": gate.get("status", "NOT_RECORDED")},
@@ -184,7 +193,7 @@ def main():
                             "article_count": len(articles), "source_linked_articles": source_linked_articles,
                             "logic_units_with_provenance": units_with_provenance},
         "conversation_records_ingested": imported,
-        "model_candidate": {"hash": sha(model_a), "status": "CANDIDATE_NOT_RELEASED", "deterministic_rebuild": deterministic_rebuild, "candidate_composition_count": model_a.get("candidate_composition_count", 0)},
+        "model_candidate": {"hash": sha(model_a), "status": "CANDIDATE_NOT_RELEASED", "deterministic_rebuild": deterministic_rebuild, "candidate_composition_count": model_a.get("candidate_composition_count", 0), "typed_composition_candidate_count": len(typed_candidates), "typed_composition_hash": typed_candidate_artifact.get("model_hash")},
         "first_model_gate": readiness, "readiness_metrics": metrics, "readiness_deficits": deficits,
         "wix_sync": {"manifest_status": wix_manifest.get("status", "NOT_RECORDED"), "last_sync_date": wix_manifest.get("last_sync_date"), "current_cycle_write_performed": False, "note": "Wix is updated only through the connected authorized tool followed by read-back."},
         "open_gaps": [
