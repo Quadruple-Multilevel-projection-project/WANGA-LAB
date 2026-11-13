@@ -1,0 +1,111 @@
+{
+  "schema_version": "wanga-logic-fractal-cycle/1.0",
+  "cycle_id": "2026-11-13-batch-06",
+  "date": "2026-11-13",
+  "scan_time": "2026-11-13T08:19:42+02:00",
+  "sources_scanned": {
+    "repositories": 10,
+    "conversation_exports": 0,
+    "new_source_records": 0,
+    "total_source_records": 19,
+    "source_classes": 11
+  },
+  "logic_units": {
+    "new": 0,
+    "total_with_provenance": 11,
+    "registry_errors": 0,
+    "fol": "NOT_RUN",
+    "sol": "NOT_RUN"
+  },
+  "composition": {
+    "active_contracts": 3,
+    "typed_base_fragments": 11,
+    "candidates": 5,
+    "aggregate_hash": "8a5ad2ca37fabc42f28fa5114c1e58de8b2c6cb7ae12bbd30826e9a9863b0a07",
+    "catalog_graph_candidates": 557,
+    "catalog_graph_hash": "732b60b500701f132ff08108f88ba8223fd7dcba9a2dfb4b7e24321724c7d42f",
+    "semantic_entailments": 0,
+    "semantic_status": "NOT_YET_VERIFIED"
+  },
+  "readiness": {
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "threshold_policy": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "metrics": {
+      "source_records": 19,
+      "source_classes": 11,
+      "logic_units_with_provenance": 11,
+      "logic_unit_registry_errors": 0,
+      "composition_rules_with_contracts": 3,
+      "typed_composition_candidates": 5,
+      "counterexample_cases": 0,
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "unresolved_dangling_source_refs": 0,
+      "unresolved_dangling_relation_refs": 0,
+      "unresolved_duplicate_stable_ids": 0,
+      "critical_core_contradictions": "NOT_MEASURED_NO_INVENTORY",
+      "deterministic_build": true,
+      "holdout_split_available": false,
+      "mirror_review_available": false
+    }
+  },
+  "model": {
+    "synthetic_first_candidate_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "status": "REBUILT_AND_TESTED_SYNTHETIC_FIXTURES_ONLY_NOT_RELEASED",
+    "backend": "NOT_CONFIGURED"
+  },
+  "contradictions": {
+    "inventory": "ABSENT",
+    "critical_count": "NOT_MEASURED"
+  },
+  "report_consistency": {
+    "issue": "Static open_gaps message said no source-span records existed although 11 were registered.",
+    "change": "Added dynamic source_span_gap_message and a unit test.",
+    "expected_message": "11 admitted source-span logic units are registered; 39 more are required to reach 50."
+  },
+  "ci_parent_head": {
+    "sha": "b788bc78e37c93ba190042400d318c3ecef38d46",
+    "status": "PASS",
+    "logic_fractal_run": 43377495886,
+    "repository_integrity_run": 43377495877,
+    "ecosystem_run": 43377495897,
+    "codeql_run": 43377495950,
+    "new_commit_ci": "PENDING"
+  },
+  "limbo": {
+    "pr": 122,
+    "ahead": 63,
+    "behind": 30,
+    "incidents": 10,
+    "history_events": 2,
+    "nodes": 14,
+    "edges": 19,
+    "new_inputs": "NO_INPUTS",
+    "tuning_replay": "NOT_RUN"
+  },
+  "wix": {
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "catalog_articles": 30,
+    "manifest_articles": 27,
+    "difference": 3,
+    "deployment": false,
+    "read_back": false,
+    "status": "BLOCKED"
+  },
+  "access_gaps": [
+    "No explicit ChatGPT export was available.",
+    "GitHub Actions cross-repository token is not assumed; direct connector was used for this bounded batch.",
+    "Companion repository update timestamps were not exposed.",
+    "No reviewed semantic benchmark cases or independent reviews exist."
+  ],
+  "built": "10 repository scan records, 9 project findings, 3 cross-repo relationships, dynamic report-gap fix and unit test.",
+  "tested": "Parent-head CI passed all four workflows; new commit CI pending.",
+  "verified": "No semantic model verification and no Wix deployment/read-back.",
+  "next": [
+    "Inspect seven remaining public repositories.",
+    "Run FOL/SOL review on reviewed units.",
+    "Create reviewed semantic cases, counterexamples and holdout.",
+    "Reconcile PR divergence before merge or Wix publication."
+  ]
+}

@@ -1,6 +1,6 @@
 {
   "schema_version": "wanga-ecosystem-repository-inventory/1.0",
-  "snapshot_at": "2026-11-13T07:52:06+02:00",
+  "snapshot_at": "2026-11-13T08:19:42+02:00",
   "source": "Live connected GitHub inventory plus default-branch repository metadata, README blobs and selected documentation paths",
   "access_snapshot": {
     "unique_repositories_visible": 63,
@@ -16,23 +16,23 @@
     "note": "Private repository names, paths, excerpts and contents are intentionally omitted from this public registry."
   },
   "batch": {
-    "batch_id": "2026-11-13-batch-05",
+    "batch_id": "2026-11-13-batch-06",
     "scanned_repositories": [
-      "AmbassadorOv/openai_tiktoken",
-      "AmbassadorOv/-artificial-y",
-      "AmbassadorOv/Qualia",
-      "AmbassadorOv/generative-ai-docs",
-      "AmbassadorOv/mujoco",
-      "AmbassadorOv/cookbook",
-      "AmbassadorOv/vscode-docs",
-      "AmbassadorOv/mediapipe",
-      "AmbassadorOv/python-genai",
-      "AmbassadorOv/branches-"
+      "AmbassadorOv/AG-triple-X-",
+      "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "AmbassadorOv/fluffy-parakeet",
+      "AmbassadorOv/https-AmbassadorOv.io",
+      "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "AmbassadorOv/test-notebook-links",
+      "AmbassadorOv/unetbootin",
+      "AmbassadorOv/vqbshtfsprojects.org",
+      "Quadruple-Multilevel-projection-project/-",
+      "Quadruple-Multilevel-projection-project/-from-Corsican-"
     ],
     "core_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
-    "scan_method": "Live affiliation snapshot plus default-branch README retrieval; targeted code search and selected-file review where README was absent. No companion-repository tests, external API calls or external writes.",
+    "scan_method": "Live affiliation snapshot, repository metadata and default-branch README retrieval; two bounded code-search queries; missing README and empty-repository results preserved distinctly. No companion-repository tests, external model API calls or external writes.",
     "target_batch_size": 10,
-    "scan_time": "2026-11-13T07:52:06+02:00"
+    "scan_time": "2026-11-13T08:19:42+02:00"
   },
   "repositories": [
     {
@@ -730,11 +730,21 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/fluffy-parakeet"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "70944f7da15632788024530d0c7faf9d91d74381",
+      "source_uri": "https://github.com/AmbassadorOv/fluffy-parakeet/blob/WPinstitutions/-WPG%7B%3C%3Cbranches%3E%7B%3C%F0%9F%AA%BE%3E%7D(%3CORG%3E)%3E%3E%7D%5D%5D%5D/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "relevant_paths": [
+        "README.md"
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-13T08:19:42+02:00",
+      "scan_summary": "README contains only the heading 'AI231.meta.io'. Its blob is identical to Quadruple-Multilevel-projection-project/-from-Corsican-/README.md; this is a duplicate-document signal only."
     },
     {
       "full_name": "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
@@ -752,11 +762,21 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/stunning-octo-garbanzo-d6cfaf53"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "3dd3c4fdfda2e43c50ba4e706ee16344d9f21488",
+      "source_uri": "https://github.com/AmbassadorOv/stunning-octo-garbanzo-d6cfaf53/blob/master/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "relevant_paths": [
+        "README.md"
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-13T08:19:42+02:00",
+      "scan_summary": "README has a project-title mismatch and presents a proposed interdisciplinary computational-science repository template and file tree. The README alone does not establish that the proposed code, datasets or tests exist."
     },
     {
       "full_name": "AmbassadorOv/https-AmbassadorOv.io",
@@ -774,11 +794,21 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_NOT_FOUND",
+      "readme_status": "NOT_FOUND",
       "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/https-AmbassadorOv.io"
+      "source_uri": "https://github.com/AmbassadorOv/https-AmbassadorOv.io",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "relevant_paths": [
+        "README.md"
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-13T08:19:42+02:00",
+      "scan_summary": "README.md was not found at the default branch root. Repository metadata is accessible; no conclusion about the remaining repository tree or project purpose is made."
     },
     {
       "full_name": "AmbassadorOv/vqbshtfsprojects.org",
@@ -796,11 +826,21 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "EMPTY_REPOSITORY",
+      "readme_status": "EMPTY_REPOSITORY",
       "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/vqbshtfsprojects.org"
+      "source_uri": "https://github.com/AmbassadorOv/vqbshtfsprojects.org",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "relevant_paths": [
+        "README.md"
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-13T08:19:42+02:00",
+      "scan_summary": "GitHub returned an explicit 'This repository is empty' response for the README contents request. No source content was available to inspect."
     },
     {
       "full_name": "AmbassadorOv/awesome-chatgpt-prompts",
@@ -876,11 +916,21 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_NOT_FOUND",
+      "readme_status": "NOT_FOUND",
       "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/unetbootin"
+      "source_uri": "https://github.com/AmbassadorOv/unetbootin",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "relevant_paths": [
+        "README.md"
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-13T08:19:42+02:00",
+      "scan_summary": "README.md was not found at the default branch root. Repository metadata is accessible; the repository was not classified as empty and no inference about its remaining tree is made."
     },
     {
       "full_name": "AmbassadorOv/test-notebook-links",
@@ -898,11 +948,21 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/test-notebook-links"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "cad8e71d3b07510fbcf15d7051db725b9a579cae",
+      "source_uri": "https://github.com/AmbassadorOv/test-notebook-links/blob/master/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "relevant_paths": [
+        "README.md"
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-13T08:19:42+02:00",
+      "scan_summary": "README is a small link-checking note for Google, localhost and Colab notebook URLs. No direct WANGA logic, provenance or model implementation was identified."
     },
     {
       "full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
@@ -920,11 +980,21 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/chatgpt-scientific-publications-extension"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "2866fa41c2232edaf4bfa82e299e22d54ed267ec",
+      "source_uri": "https://github.com/AmbassadorOv/chatgpt-scientific-publications-extension/blob/main/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "relevant_paths": [
+        "README.md"
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-13T08:19:42+02:00",
+      "scan_summary": "README describes SciGPT as a bot for scientists and researchers and links to the SingularityLabs upstream project. This is a literature-assistance reference only; no WANGA integration, license review, runtime test or API call was performed."
     },
     {
       "full_name": "AmbassadorOv/AG-triple-X-",
@@ -942,11 +1012,21 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/AmbassadorOv/AG-triple-X-"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "source_uri": "https://github.com/AmbassadorOv/AG-triple-X-/blob/master/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "relevant_paths": [
+        "README.md"
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-13T08:19:42+02:00",
+      "scan_summary": "README contains only the heading 'World-Party-Federation-Branches-managers'. Its blob is identical to AmbassadorOv/World-Party-Federation-Branches-managers/README.md; this is a duplicate-document signal, not repository identity."
     },
     {
       "full_name": "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
@@ -1037,11 +1117,21 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_NOT_FOUND",
+      "readme_status": "NOT_FOUND",
       "readme_blob_sha": null,
-      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-"
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "relevant_paths": [
+        "README.md"
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-13T08:19:42+02:00",
+      "scan_summary": "README.md was not found at the default branch root. The repository is visible and its default branch is feat-yellow-quantic-simulation; no project meaning is inferred from the branch name."
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
@@ -1224,11 +1314,21 @@
       "code_search_indexed": null,
       "latest_known_update": null,
       "latest_known_push": null,
-      "update_status": "NOT_FETCHED_THIS_BATCH",
-      "scan_status": "INVENTORY_ONLY",
-      "readme_status": "NOT_SCANNED",
-      "readme_blob_sha": null,
-      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-from-Corsican-"
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "scan_status": "README_SCANNED",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "70944f7da15632788024530d0c7faf9d91d74381",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-from-Corsican-/blob/WPinstitutions/-WPG%7B%3C%3Cbranches%3E%7B%3C%F0%9F%AA%BE%3E%7D(%3CORG%3E)%3E%3E%7D%5D%5D%5D/README.md",
+      "readme_path": "README.md",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "relevant_paths": [
+        "README.md"
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "last_scanned_at": "2026-11-13T08:19:42+02:00",
+      "scan_summary": "README contains only the heading 'AI231.meta.io'. Its blob SHA matches AmbassadorOv/fluffy-parakeet/README.md; repository identity and code equivalence are not established."
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
@@ -1577,6 +1677,25 @@
       "scan_method": "Live affiliation snapshot plus default-branch README retrieval; targeted code search and selected-file review where README was absent. No companion-repository tests, external API calls or external writes.",
       "target_batch_size": 10,
       "scan_time": "2026-11-13T07:52:06+02:00"
+    },
+    {
+      "batch_id": "2026-11-13-batch-06",
+      "scanned_repositories": [
+        "AmbassadorOv/AG-triple-X-",
+        "AmbassadorOv/chatgpt-scientific-publications-extension",
+        "AmbassadorOv/fluffy-parakeet",
+        "AmbassadorOv/https-AmbassadorOv.io",
+        "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+        "AmbassadorOv/test-notebook-links",
+        "AmbassadorOv/unetbootin",
+        "AmbassadorOv/vqbshtfsprojects.org",
+        "Quadruple-Multilevel-projection-project/-",
+        "Quadruple-Multilevel-projection-project/-from-Corsican-"
+      ],
+      "core_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "scan_method": "Live affiliation snapshot, repository metadata and default-branch README retrieval; two bounded code-search queries; missing README and empty-repository results preserved distinctly. No companion-repository tests, external model API calls or external writes.",
+      "target_batch_size": 10,
+      "scan_time": "2026-11-13T08:19:42+02:00"
     }
   ]
 }

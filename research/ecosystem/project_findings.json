@@ -1,6 +1,6 @@
 {
   "schema_version": "wanga-ecosystem-project-findings/1.0",
-  "generated_at": "2026-11-13T07:52:06+02:00",
+  "generated_at": "2026-11-13T08:19:42+02:00",
   "permission_scope": "PUBLIC_REPOSITORY_CONTENT_ONLY",
   "findings": [
     {
@@ -983,6 +983,155 @@
       "contradictions": [],
       "permission_scope": "PUBLIC_READ",
       "next_action": "Compare repository trees and commit ancestry before classifying any repository-level duplication."
+    },
+    {
+      "finding_id": "ECOSYS-SCIGPT-REFERENCE-2026-11-13",
+      "repository_full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "2866fa41c2232edaf4bfa82e299e22d54ed267ec",
+      "source_uri": "https://github.com/AmbassadorOv/chatgpt-scientific-publications-extension/blob/main/README.md",
+      "summary": "README describes SciGPT as a bot for scientists and researchers and points to SingularityLabs as the upstream project. This is a possible literature-assistance comparator, not evidence of a WANGA integration or a validated retrieval pipeline.",
+      "epistemic_status": "README_DESCRIPTION_ONLY_REFERENCE_NOT_INTEGRATED",
+      "overlap_candidates": [
+        "WANGA-LAB source collection",
+        "WANGA-LAB research-agent workflow"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Keep as reference-only; inspect source tree and license only if a concrete integration proposal is raised."
+    },
+    {
+      "finding_id": "ECOSYS-AG-TRIPLE-README-DUPLICATE-2026-11-13",
+      "repository_full_name": "AmbassadorOv/AG-triple-X-",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "source_uri": "https://github.com/AmbassadorOv/AG-triple-X-/blob/master/README.md",
+      "summary": "README blob SHA matches AmbassadorOv/World-Party-Federation-Branches-managers/README.md exactly. The README text is only a heading and does not establish repository identity, code equivalence or shared history.",
+      "epistemic_status": "DUPLICATE_DOCUMENT_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "overlap_candidates": [
+        "AmbassadorOv/World-Party-Federation-Branches-managers"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare repository trees and commit ancestry before making any repository-level identity claim."
+    },
+    {
+      "finding_id": "ECOSYS-FLUFFY-CORSICAN-README-DUPLICATE-2026-11-13",
+      "repository_full_name": "AmbassadorOv/fluffy-parakeet",
+      "branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "70944f7da15632788024530d0c7faf9d91d74381",
+      "source_uri": "https://github.com/AmbassadorOv/fluffy-parakeet/blob/WPinstitutions/-WPG%7B%3C%3Cbranches%3E%7B%3C%F0%9F%AA%BE%3E%7D(%3CORG%3E)%3E%3E%7D%5D%5D%5D/README.md",
+      "summary": "The README blob SHA matches Quadruple-Multilevel-projection-project/-from-Corsican-/README.md exactly. Both README files contain only the heading 'AI231.meta.io'; repository identity and code equivalence are not established.",
+      "epistemic_status": "DUPLICATE_DOCUMENT_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/-from-Corsican-"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare repository trees and commit ancestry before making any repository-level identity claim."
+    },
+    {
+      "finding_id": "ECOSYS-STUNNING-OCTO-TEMPLATE-2026-11-13",
+      "repository_full_name": "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "3dd3c4fdfda2e43c50ba4e706ee16344d9f21488",
+      "source_uri": "https://github.com/AmbassadorOv/stunning-octo-garbanzo-d6cfaf53/blob/master/README.md",
+      "summary": "README contains a title mismatch and a proposed interdisciplinary computational-science project structure. The described modules, data and tests are template content in the README; their existence or execution was not verified.",
+      "epistemic_status": "TEMPLATE_PROPOSAL_ONLY",
+      "overlap_candidates": [
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+        "WANGA-LAB research archive"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Do not ingest the template as implemented logic; inspect concrete files only if a direct project relationship is established."
+    },
+    {
+      "finding_id": "ECOSYS-VQB-SHTFS-EMPTY-2026-11-13",
+      "repository_full_name": "AmbassadorOv/vqbshtfsprojects.org",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": null,
+      "source_uri": "https://github.com/AmbassadorOv/vqbshtfsprojects.org",
+      "summary": "GitHub returned an explicit empty-repository response for the README contents request. There was no source content to extract in this pass.",
+      "epistemic_status": "EMPTY_REPOSITORY_CONFIRMED_BY_GITHUB_RESPONSE",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Recheck in a later inventory snapshot; do not infer nonexistence of an external project from this empty repository."
+    },
+    {
+      "finding_id": "ECOSYS-HTTPS-AMBA-README-GAP-2026-11-13",
+      "repository_full_name": "AmbassadorOv/https-AmbassadorOv.io",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": null,
+      "source_uri": "https://github.com/AmbassadorOv/https-AmbassadorOv.io",
+      "summary": "README.md was not found at the default branch root. Repository metadata is visible, but the root README lookup does not establish the contents or purpose of the rest of the repository.",
+      "epistemic_status": "ACCESSIBLE_REPOSITORY_README_GAP",
+      "overlap_candidates": [
+        "AmbassadorOv/AmbassadorOv"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect the default-branch tree only if needed for a specific WANGA integration question."
+    },
+    {
+      "finding_id": "ECOSYS-UNETBOOTIN-README-GAP-2026-11-13",
+      "repository_full_name": "AmbassadorOv/unetbootin",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": null,
+      "source_uri": "https://github.com/AmbassadorOv/unetbootin",
+      "summary": "README.md was not found at the default branch root. The repository is not classified as empty; the remaining tree was not reviewed in this bounded pass.",
+      "epistemic_status": "ACCESSIBLE_REPOSITORY_README_GAP",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Leave unclassified until a concrete relevant file can be fetched."
+    },
+    {
+      "finding_id": "ECOSYS-ORG-DASH-README-GAP-2026-11-13",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/-",
+      "branch": "feat-yellow-quantic-simulation",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": null,
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-",
+      "summary": "README.md was not found at the default branch root. The repository is visible, but no purpose or implementation claim is inferred from its unusual repository name or branch label.",
+      "epistemic_status": "ACCESSIBLE_REPOSITORY_README_GAP",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Keep as inventory-only until a specific relevant path is identified."
+    },
+    {
+      "finding_id": "ECOSYS-NOTEBOOK-LINKS-2026-11-13",
+      "repository_full_name": "AmbassadorOv/test-notebook-links",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "cad8e71d3b07510fbcf15d7051db725b9a579cae",
+      "source_uri": "https://github.com/AmbassadorOv/test-notebook-links/blob/master/README.md",
+      "summary": "README is a link-checking note for Google, localhost and Colab notebook URLs. It is not a source of WANGA logic, provenance rules or model implementation.",
+      "epistemic_status": "LOW_RELEVANCE_DEVELOPER_TEST_NOTE",
+      "overlap_candidates": [
+        "GitHub notebook and artifact workflows"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No integration action; retain the repository in the public inventory."
     }
   ],
   "cross_repo_relationships": [
@@ -1057,6 +1206,33 @@
         "Quadruple-Multilevel-projection-project/Qualia"
       ],
       "summary": "Both README.md files resolve to Git blob SHA 72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2. This proves identical README content only; compare trees and commit ancestry before inferring project identity."
+    },
+    {
+      "id": "REL-AG-TRIPLE-WORLD-PARTY-README-DUPLICATE-2026-11-13",
+      "status": "DUPLICATE_BLOB_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "source_repos": [
+        "AmbassadorOv/AG-triple-X-",
+        "AmbassadorOv/World-Party-Federation-Branches-managers"
+      ],
+      "summary": "Both README.md files resolve to Git blob SHA 8b36e3fec98319bade352adce9b99abe55705188. This establishes identical README content only; repository trees and commit ancestry were not compared."
+    },
+    {
+      "id": "REL-FLUFFY-CORSICAN-README-DUPLICATE-2026-11-13",
+      "status": "DUPLICATE_BLOB_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "source_repos": [
+        "AmbassadorOv/fluffy-parakeet",
+        "Quadruple-Multilevel-projection-project/-from-Corsican-"
+      ],
+      "summary": "Both README.md files resolve to Git blob SHA 70944f7da15632788024530d0c7faf9d91d74381 and contain only the heading 'AI231.meta.io'. This is a duplicate-document signal, not repository identity."
+    },
+    {
+      "id": "REL-SCIGPT-WANGA-RESEARCH-REFERENCE-2026-11-13",
+      "status": "REFERENCE_ONLY_NOT_INTEGRATED",
+      "source_repos": [
+        "AmbassadorOv/chatgpt-scientific-publications-extension",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "summary": "The SciGPT README describes a scientific-literature assistant. This is a possible workflow comparator only; no WANGA source integration, dependency, API call or implementation relationship was established."
     }
   ],
   "scan_limitations": [
@@ -1071,23 +1247,29 @@
     "The -artificial-y README.md path returned NOT_FOUND; targeted code search and five selected files were used instead.",
     "No companion repository test suites were executed; README and code contents are source evidence, not implementation verification.",
     "No external model API calls or credentials were used.",
-    "Wix catalog updates remain staged in an open PR; no deployment/read-back was performed."
+    "Wix catalog updates remain staged in an open PR; no deployment/read-back was performed.",
+    "For batch 06, repository metadata did not expose latest update/push timestamps; values remain null rather than inferred.",
+    "For batch 06, README.md was not found in three accessible repositories; one separate repository returned an explicit empty-repository response. These states are not conflated.",
+    "Two bounded code-search queries returned no indexed matches in the batch repositories; NOT_FOUND_IN_SEARCH is not evidence of nonexistence.",
+    "No companion-repository test suites were executed; README content is source evidence, not implementation verification.",
+    "No external model API calls, credentials or external repository writes were used."
   ],
   "last_batch": {
-    "batch_id": "2026-11-13-batch-05",
+    "batch_id": "2026-11-13-batch-06",
     "repositories": [
-      "AmbassadorOv/openai_tiktoken",
-      "AmbassadorOv/-artificial-y",
-      "AmbassadorOv/Qualia",
-      "AmbassadorOv/generative-ai-docs",
-      "AmbassadorOv/mujoco",
-      "AmbassadorOv/cookbook",
-      "AmbassadorOv/vscode-docs",
-      "AmbassadorOv/mediapipe",
-      "AmbassadorOv/python-genai",
-      "AmbassadorOv/branches-"
+      "AmbassadorOv/AG-triple-X-",
+      "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "AmbassadorOv/fluffy-parakeet",
+      "AmbassadorOv/https-AmbassadorOv.io",
+      "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "AmbassadorOv/test-notebook-links",
+      "AmbassadorOv/unetbootin",
+      "AmbassadorOv/vqbshtfsprojects.org",
+      "Quadruple-Multilevel-projection-project/-",
+      "Quadruple-Multilevel-projection-project/-from-Corsican-"
     ],
-    "findings_added": 14,
-    "scan_time": "2026-11-13T07:52:06+02:00"
+    "findings_added": 9,
+    "relationships_added": 3,
+    "scan_time": "2026-11-13T08:19:42+02:00"
   }
 }

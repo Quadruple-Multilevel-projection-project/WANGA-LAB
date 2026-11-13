@@ -16,6 +16,15 @@ def read(path, default=None):
 def sha(value):
     return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")).hexdigest()
 
+def source_span_gap_message(actual, required):
+    """Describe the observed source-span count without stale zero-unit claims."""
+    missing = max(0, required - actual)
+    if actual == 0:
+        return "No admitted source-span logic units are registered; %s are required." % required
+    if missing:
+        return "%s admitted source-span logic units are registered; %s more are required to reach %s." % (actual, missing, required)
+    return "%s admitted source-span logic units are registered; configured threshold %s is met." % (actual, required)
+
 def main():
     catalog = read(ROOT / "logic_wiki/data/articles.json")
     gate = read(ROOT / "logic_wiki/data/readiness_gate.json")
@@ -201,7 +210,7 @@ def main():
             "Semantic benchmark cases, named benchmark suites, a holdout manifest and independent review logs are not yet registered.",
             "A core-contradiction inventory is required before zero unresolved critical contradictions can be claimed.",
             "The L0-L3 fractal taxonomy is a research contract; recursive composition semantics remain partly specified and not empirically validated.",
-            "Source-linked Wiki articles are not literal logic units; no source-span logic-unit records are registered yet."
+            source_span_gap_message(units_with_provenance, thresholds.get("min_logic_units_with_provenance", 50))
         ]
     }
     out = ROOT / "logic_wiki/generated/agent_cycle_report.json"
