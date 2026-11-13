@@ -195,8 +195,9 @@
     "active_rules_with_contracts": 3,
     "new_contracts_added": 1,
     "typed_candidate_compositions_planned": 5,
-    "typed_candidate_build_status": "PENDING_CI",
-    "semantic_entailments_claimed": 0
+    "typed_candidate_build_status": "PASS",
+    "semantic_entailments_claimed": 0,
+    "typed_composition_hash": "8a5ad2ca37fabc42f28fa5114c1e58de8b2c6cb7ae12bbd30826e9a9863b0a07"
   },
   "contradictions": {
     "critical_core_contradictions": "NOT_MEASURED",
@@ -218,16 +219,58 @@
     "companion_repo_tests": "NOT_RUN"
   },
   "ci": {
-    "status": "PENDING_PR_UPDATE",
-    "expected_workflows": [
-      "Logic Fractal Wiki Research",
-      "Repository Integrity",
-      "CodeQL Advanced",
-      "WANGA Ecosystem Agent Sweep"
-    ]
+    "status": "PASS",
+    "commit_sha": "53d1ff2e0a5cadb4be7923acfd86f0f74a6b9a92",
+    "runs": [
+      {
+        "name": "Logic Fractal Wiki Research",
+        "run_id": 43377069731,
+        "conclusion": "success"
+      },
+      {
+        "name": "Repository Integrity",
+        "run_id": 43377069720,
+        "conclusion": "success"
+      },
+      {
+        "name": "WANGA Ecosystem Agent Sweep",
+        "run_id": 43377069654,
+        "conclusion": "success"
+      },
+      {
+        "name": "CodeQL Advanced",
+        "run_id": 43377069665,
+        "conclusion": "success",
+        "analyses": [
+          "actions",
+          "python"
+        ]
+      }
+    ],
+    "source_grounded_composer_test": "PASS",
+    "source_grounded_composer_build": "PASS",
+    "first_typed_candidate_build": "PASS",
+    "run_logic_agents": "PASS",
+    "repository_integrity": "PASS",
+    "ecosystem_sweep": "PASS",
+    "codeql": "PASS",
+    "proposal_update_step": "SKIPPED_NO_AUTO_MERGE",
+    "artifact": {
+      "run_id": 43377069731,
+      "artifact_id": 14014422831,
+      "artifact_name": "logic-wiki-research-report",
+      "size_in_bytes": 101118,
+      "digest": "sha256:555d47af29cd7e94634beb908351f30389f00d90f77c3faaea4d734e62ab12d9",
+      "created_at": "2026-11-13T06:12:32Z",
+      "expires_at": "2027-02-11T06:12:19Z",
+      "runner_label": "ubuntu-latest",
+      "python_version": "3.11.18",
+      "runner_image": "NOT_EXPOSED_BY_CONNECTOR",
+      "duration": "NOT_EXPOSED_BY_CONNECTOR"
+    }
   },
   "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
-  "model_status": "EXISTING_SYNTHETIC_CANDIDATE_NOT_REBUILT_IN_THIS_REPORT_GENERATION",
+  "model_status": "EXISTING_SYNTHETIC_CANDIDATE_REBUILT_AND_TESTED_IN_CI; NOT_RELEASED",
   "readiness_gate": {
     "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
     "threshold_policy": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
@@ -315,9 +358,9 @@
     },
     {
       "role": "Typed Fractal Composer",
-      "status": "PENDING_CI",
+      "status": "COMPLETED_BUILT_AND_TESTED",
       "input": "11 admitted source-span units and 11 typed base fragments",
-      "output": "Five type-compatible composition candidates planned under an explicit structural contract.",
+      "output": "Five source-grounded typed composition candidates built; all structural invariants and deterministic rebuild checks passed. Semantic status remains NOT_YET_VERIFIED.",
       "evidence": "source_grounded_fragments.json and COMPOSE-INTERFACE-SEQUENTIAL-V1",
       "next_action": "Run builder and structural tests in PR CI."
     },
@@ -347,9 +390,9 @@
     },
     {
       "role": "Publisher",
-      "status": "IN_PROGRESS_CI_PENDING",
+      "status": "CI_PASS_AWAITING_REVIEW_AND_MERGE",
       "input": "Batch 05 registry and reports",
-      "output": "Changes staged on PR #140; no main write or Wix deployment.",
+      "output": "Four PR workflows passed and a 101,118-byte report artifact was uploaded; no Wix deployment or main write.",
       "evidence": "PR #140 branch",
       "next_action": "Inspect CI and PR review; sync Wix only after merge and reconciliation."
     }
@@ -369,5 +412,39 @@
     "Reconcile Limbo branch divergence before replay.",
     "Publish approved Wix changes only after merge and full read-back."
   ],
-  "project_findings_added": 14
+  "project_findings_added": 14,
+  "catalog_graph_candidate_hash": "732b60b500701f132ff08108f88ba8223fd7dcba9a2dfb4b7e24321724c7d42f",
+  "catalog_graph_candidate_count": 557,
+  "typed_composition_hash": "8a5ad2ca37fabc42f28fa5114c1e58de8b2c6cb7ae12bbd30826e9a9863b0a07",
+  "typed_composition_candidate_hashes": [
+    {
+      "id": "FL-COMPOSE-ebd27067b452214d",
+      "hash": "e862cff5d319a494439c2606dfc3501155a310e87e2db51b802a3a416137da12"
+    },
+    {
+      "id": "FL-COMPOSE-ef94aaefc9e24d90",
+      "hash": "5ffbe1474c522a50cc68de2e3414c5cbe487570edc64def21e16a8c791cf913d"
+    },
+    {
+      "id": "FL-COMPOSE-535b4d8e78bc198f",
+      "hash": "a312af07cddf427a1d0cb85182cacae91af0dc012398e65a4d0d33d6aa69f740"
+    },
+    {
+      "id": "FL-COMPOSE-cacea2311f1d76e7",
+      "hash": "e3b2a708b0e12fc17355beb284bac30c44f5a50eadfb67ce9225a5b057632cda"
+    },
+    {
+      "id": "FL-COMPOSE-b547843f1674cf5d",
+      "hash": "f4baba6bcb21f3923952b318db0d7f3e82fef24b560b2eaa5efb7a9f860e4bdd"
+    }
+  ],
+  "pr": {
+    "number": 140,
+    "state": "OPEN",
+    "mergeable": true,
+    "head_sha": "53d1ff2e0a5cadb4be7923acfd86f0f74a6b9a92",
+    "ahead_of_main": 31,
+    "behind_main": 18,
+    "merged": false
+  }
 }

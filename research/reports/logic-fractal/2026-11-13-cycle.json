@@ -53,9 +53,59 @@
   "first_model_readiness": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
   "thresholds": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
   "built": "11 literal source-span units, 2 protocol articles, 1 typed composition contract and 11 typed base fragments staged on PR branch.",
-  "tested": "PENDING_CI; no local execution claimed.",
-  "verified": "No semantic model verification; no item promoted to VERIFIED.",
-  "ci": "PENDING_PR_UPDATE",
+  "tested": "PASS: GitHub Actions Logic Fractal Wiki Research run 43377069731 built five source-grounded typed candidates; structural invariants and deterministic rebuild passed. Repository Integrity 43377069720, Ecosystem Agent Sweep 43377069654 and CodeQL Advanced 43377069665 also passed.",
+  "verified": "No semantic model verification. Candidate hashes and structural test outcomes are recorded; semantic ground truth, holdout, independent review and contradiction inventory remain absent.",
+  "ci": {
+    "status": "PASS",
+    "commit_sha": "53d1ff2e0a5cadb4be7923acfd86f0f74a6b9a92",
+    "runs": [
+      {
+        "name": "Logic Fractal Wiki Research",
+        "run_id": 43377069731,
+        "conclusion": "success"
+      },
+      {
+        "name": "Repository Integrity",
+        "run_id": 43377069720,
+        "conclusion": "success"
+      },
+      {
+        "name": "WANGA Ecosystem Agent Sweep",
+        "run_id": 43377069654,
+        "conclusion": "success"
+      },
+      {
+        "name": "CodeQL Advanced",
+        "run_id": 43377069665,
+        "conclusion": "success",
+        "analyses": [
+          "actions",
+          "python"
+        ]
+      }
+    ],
+    "source_grounded_composer_test": "PASS",
+    "source_grounded_composer_build": "PASS",
+    "first_typed_candidate_build": "PASS",
+    "run_logic_agents": "PASS",
+    "repository_integrity": "PASS",
+    "ecosystem_sweep": "PASS",
+    "codeql": "PASS",
+    "proposal_update_step": "SKIPPED_NO_AUTO_MERGE",
+    "artifact": {
+      "run_id": 43377069731,
+      "artifact_id": 14014422831,
+      "artifact_name": "logic-wiki-research-report",
+      "size_in_bytes": 101118,
+      "digest": "sha256:555d47af29cd7e94634beb908351f30389f00d90f77c3faaea4d734e62ab12d9",
+      "created_at": "2026-11-13T06:12:32Z",
+      "expires_at": "2027-02-11T06:12:19Z",
+      "runner_label": "ubuntu-latest",
+      "python_version": "3.11.18",
+      "runner_image": "NOT_EXPOSED_BY_CONNECTOR",
+      "duration": "NOT_EXPOSED_BY_CONNECTOR"
+    }
+  },
   "blocked": [
     "FOL/SOL formalization not run.",
     "Semantic ground truth, counterexamples, holdout and independent reviews absent.",
@@ -65,5 +115,52 @@
     "Inspect CI and source-grounded candidate artifact.",
     "Review formalization candidates and run closure/variable/source/boundary checks.",
     "Build source-grounded counterexamples and semantic suites with holdout."
-  ]
+  ],
+  "typed_composition_candidate_count": 5,
+  "typed_composition_hash": "8a5ad2ca37fabc42f28fa5114c1e58de8b2c6cb7ae12bbd30826e9a9863b0a07",
+  "typed_composition_candidate_hashes": [
+    {
+      "id": "FL-COMPOSE-ebd27067b452214d",
+      "hash": "e862cff5d319a494439c2606dfc3501155a310e87e2db51b802a3a416137da12"
+    },
+    {
+      "id": "FL-COMPOSE-ef94aaefc9e24d90",
+      "hash": "5ffbe1474c522a50cc68de2e3414c5cbe487570edc64def21e16a8c791cf913d"
+    },
+    {
+      "id": "FL-COMPOSE-535b4d8e78bc198f",
+      "hash": "a312af07cddf427a1d0cb85182cacae91af0dc012398e65a4d0d33d6aa69f740"
+    },
+    {
+      "id": "FL-COMPOSE-cacea2311f1d76e7",
+      "hash": "e3b2a708b0e12fc17355beb284bac30c44f5a50eadfb67ce9225a5b057632cda"
+    },
+    {
+      "id": "FL-COMPOSE-b547843f1674cf5d",
+      "hash": "f4baba6bcb21f3923952b318db0d7f3e82fef24b560b2eaa5efb7a9f860e4bdd"
+    }
+  ],
+  "catalog_graph_candidate_count": 557,
+  "catalog_graph_candidate_hash": "732b60b500701f132ff08108f88ba8223fd7dcba9a2dfb4b7e24321724c7d42f",
+  "first_typed_model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+  "first_typed_model_status": "REBUILT_AND_TESTED_SYNTHETIC_FIXTURES_ONLY; NOT_RELEASED",
+  "readiness": {
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "source_records": 19,
+    "source_classes": 11,
+    "logic_units_with_provenance": 11,
+    "composition_rules_with_contracts": 3,
+    "counterexamples": 0,
+    "semantic_test_cases": 0,
+    "benchmark_suites": 0,
+    "independent_review_cycles": 0,
+    "dangling_source_refs": 0,
+    "dangling_relation_refs": 0,
+    "duplicate_stable_ids": 0,
+    "critical_core_contradictions": "NOT_MEASURED_NO_INVENTORY",
+    "holdout": false,
+    "mirror_review": false,
+    "deterministic_build": true,
+    "threshold_policy": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED"
+  }
 }
