@@ -706,7 +706,9 @@
       "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md",
       "type": "PROJECT_RESEARCH",
       "status": "PROJECT_PROTOCOL_SPECIFIED_NOT_DATA_COLLECTION",
-      "note": "WANGA-LAB protocol defining pattern-occurrence observation, timestamp distinctions, comparison labels and limits. The document does not establish corpus-wide occurrence counts, transmission or adoption rates."
+      "note": "WANGA-LAB protocol defining pattern-occurrence observation, timestamp distinctions, comparison labels and limits. The document does not establish corpus-wide occurrence counts, transmission or adoption rates.",
+      "blob_sha": "48aba8827618a4888d6663939e0c61c8cde70b8d",
+      "hash_type": "git_blob_sha"
     },
     {
       "id": "SRC-WANGA-MAKOM-OBSERVATION",
@@ -714,7 +716,9 @@
       "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md",
       "type": "PROJECT_RESEARCH",
       "status": "SPECIFIED_EVIDENCE_COLLECTION_IN_PROGRESS",
-      "note": "WANGA-LAB research specification for observing the presentation of 'place' in deep-network outputs. It explicitly separates symbolic-descriptive language, mathematics, observation, documentation and explanation."
+      "note": "WANGA-LAB research specification for observing the presentation of 'place' in deep-network outputs. It explicitly separates symbolic-descriptive language, mathematics, observation, documentation and explanation.",
+      "blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+      "hash_type": "git_blob_sha"
     }
   ]
 }

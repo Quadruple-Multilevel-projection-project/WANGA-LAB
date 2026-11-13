@@ -111,7 +111,7 @@ def main():
     artifact = build_candidates(ROOT)
     out = ROOT / "research/reports/logic-fractal/source-grounded-fractal-candidates.json"
     out.parent.mkdir(parents=True, exist_ok=True)
-    out.write_text(json.dumps(artifact, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    out.write_text(json.dumps(artifact, ensure_ascii=False, indent=2) + chr(10), encoding="utf-8")
     print(json.dumps({"status": artifact["status"], "candidate_count": artifact["composition_candidate_count"], "model_hash": artifact["model_hash"], "deterministic_rebuild": artifact["deterministic_rebuild"]}, ensure_ascii=False))
 
 

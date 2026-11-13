@@ -165,9 +165,19 @@
     "The -artificial-y README.md path was not found; targeted search and selected files were inspected."
   ],
   "new_duplicate_sources": {
-    "new_duplicate_readme_blobs": 0,
+    "new_duplicate_readme_blobs": 1,
     "previous_duplicate_clusters_preserved": true,
-    "note": "No new identical README blob was established within this batch. Existing duplicate-README findings remain unresolved at repository-identity level."
+    "new_duplicate_groups": [
+      {
+        "blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+        "repositories": [
+          "AmbassadorOv/Qualia",
+          "Quadruple-Multilevel-projection-project/Qualia"
+        ],
+        "status": "DUPLICATE_DOCUMENT_SIGNAL_NOT_REPOSITORY_IDENTITY"
+      }
+    ],
+    "note": "One new identical README blob was found in the Qualia pair; no repository-identity conclusion is drawn."
   },
   "claims_added": 0,
   "wiki_articles_added": 2,
@@ -267,7 +277,7 @@
       "role": "Repository Inventory",
       "status": "COMPLETED",
       "input": "Live affiliation snapshot and public inventory",
-      "output": "10 additional public repositories scanned; 41/58 public repositories scanned.",
+      "output": "10 additional public repositories scanned; 41/58 public repositories scanned. One new duplicate README blob signal was registered.",
       "evidence": "research/ecosystem/repository_inventory.json",
       "next_action": "Continue from updated cursor."
     },
@@ -275,7 +285,7 @@
       "role": "README/Docs Collector",
       "status": "COMPLETED",
       "input": "10 repositories from cursor",
-      "output": "Nine README files plus five targeted -artificial-y files inspected.",
+      "output": "Nine README files plus five targeted -artificial-y files inspected; the Qualia README blob matches the collaborator Qualia repository.",
       "evidence": "README Git blob SHAs and selected-file blob SHAs",
       "next_action": "Inspect only relevant project docs in the next batch."
     },
@@ -358,5 +368,6 @@
     "Obtain original MAKOM interaction records before any quantitative claim.",
     "Reconcile Limbo branch divergence before replay.",
     "Publish approved Wix changes only after merge and full read-back."
-  ]
+  ],
+  "project_findings_added": 14
 }

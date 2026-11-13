@@ -483,7 +483,11 @@
       ],
       "last_scanned_at": "2026-11-13T07:52:06+02:00",
       "permission_scope": "PUBLIC_READ",
-      "scan_summary": "README contains a title and a Blogspot link only; no technical architecture or implementation claim was established."
+      "scan_summary": "README contains a title and a Blogspot link only; its Git blob SHA 72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2 is identical to Quadruple-Multilevel-projection-project/Qualia/README.md. This is identical README content, not repository identity.",
+      "duplicate_blob_group": [
+        "AmbassadorOv/Qualia",
+        "Quadruple-Multilevel-projection-project/Qualia"
+      ]
     },
     {
       "full_name": "AmbassadorOv/O-Ms",
@@ -1132,7 +1136,11 @@
       "scan_status": "README_AND_TARGETED_SEARCH_SCANNED",
       "readme_status": "READ",
       "readme_blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
-      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/Qualia"
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/Qualia",
+      "duplicate_blob_group": [
+        "AmbassadorOv/Qualia",
+        "Quadruple-Multilevel-projection-project/Qualia"
+      ]
     },
     {
       "full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",

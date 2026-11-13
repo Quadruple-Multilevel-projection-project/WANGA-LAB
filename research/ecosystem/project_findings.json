@@ -966,6 +966,23 @@
         }
       ],
       "sampled_record_count": 18
+    },
+    {
+      "finding_id": "ECOSYS-QUALIA-DUPLICATE-README-2026-11-13",
+      "repository_full_name": "AmbassadorOv/Qualia",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "source_uri": "https://github.com/AmbassadorOv/Qualia/blob/main/README.md",
+      "summary": "README.md has the same Git blob SHA as Quadruple-Multilevel-projection-project/Qualia/README.md. This establishes identical README content only; repository identity, ownership history and code equivalence were not compared.",
+      "epistemic_status": "DUPLICATE_DOCUMENT_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/Qualia"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare repository trees and commit ancestry before classifying any repository-level duplication."
     }
   ],
   "cross_repo_relationships": [
@@ -1031,6 +1048,15 @@
         "Quadruple-Multilevel-projection-project/WANGA-LAB"
       ],
       "summary": "The tiktoken README states BPE tokenization is reversible and lossless. This may inform text preprocessing, but it does not preserve conversation parent links, source permissions or semantic relations and is not adopted as the intake provenance layer."
+    },
+    {
+      "id": "REL-QUALIA-README-DUPLICATE-2026-11-13",
+      "status": "DUPLICATE_BLOB_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "source_repos": [
+        "AmbassadorOv/Qualia",
+        "Quadruple-Multilevel-projection-project/Qualia"
+      ],
+      "summary": "Both README.md files resolve to Git blob SHA 72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2. This proves identical README content only; compare trees and commit ancestry before inferring project identity."
     }
   ],
   "scan_limitations": [
@@ -1061,7 +1087,7 @@
       "AmbassadorOv/python-genai",
       "AmbassadorOv/branches-"
     ],
-    "findings_added": 13,
+    "findings_added": 14,
     "scan_time": "2026-11-13T07:52:06+02:00"
   }
 }
