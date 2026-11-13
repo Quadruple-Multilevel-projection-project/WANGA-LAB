@@ -100,12 +100,55 @@
     "No reviewed semantic benchmark cases or independent reviews exist."
   ],
   "built": "10 repository scan records, 9 project findings, 3 cross-repo relationships, dynamic report-gap fix and unit test.",
-  "tested": "Parent-head CI passed all four workflows; new commit CI pending.",
+  "tested": "Batch commit CI passed all four workflows; report-consistency regression verified from generated artifact.",
   "verified": "No semantic model verification and no Wix deployment/read-back.",
   "next": [
     "Inspect seven remaining public repositories.",
     "Run FOL/SOL review on reviewed units.",
     "Create reviewed semantic cases, counterexamples and holdout.",
     "Reconcile PR divergence before merge or Wix publication."
-  ]
+  ],
+  "ci_new_commit": {
+    "commit_sha": "e538ca612992663ae5d92b6b41d2b38070e4589f",
+    "status": "PASS",
+    "runs": [
+      {
+        "name": "Repository Integrity",
+        "run_id": 43378892785,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Logic Fractal Wiki Research",
+        "run_id": 43378892799,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "WANGA Ecosystem Agent Sweep",
+        "run_id": 43378892812,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "CodeQL Advanced",
+        "run_id": 43378892827,
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "logic_fractal_artifact": {
+      "id": 14015058768,
+      "size_bytes": 106231,
+      "digest": "sha256:9e70a08d1464d289c22c2b9b3f3e05327d3e400483d045e7f63e2056c2d3b80d"
+    },
+    "report_consistency_regression": "PASS"
+  },
+  "private_library_scan": {
+    "reviewed_files": 5,
+    "permission_scope": "PRIVATE_REVIEW_ONLY",
+    "public_ingestion": 0,
+    "explicit_chatgpt_export_found": false,
+    "coverage": "TARGETED_NOT_EXHAUSTIVE"
+  }
 }

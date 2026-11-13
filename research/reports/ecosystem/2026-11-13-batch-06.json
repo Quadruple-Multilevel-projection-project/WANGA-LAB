@@ -261,7 +261,58 @@
     "runner": "NOT_EXPOSED_BY_CURRENT_JOB_RESPONSE",
     "duration": "NOT_EXPOSED_BY_CONNECTOR"
   },
-  "ci_new_batch_commit": "PENDING",
+  "ci_new_batch_commit": {
+    "commit_sha": "e538ca612992663ae5d92b6b41d2b38070e4589f",
+    "status": "PASS",
+    "workflows": [
+      {
+        "name": "Repository Integrity",
+        "run_id": 43378892785,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "Logic Fractal Wiki Research",
+        "run_id": 43378892799,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "WANGA Ecosystem Agent Sweep",
+        "run_id": 43378892812,
+        "status": "completed",
+        "conclusion": "success"
+      },
+      {
+        "name": "CodeQL Advanced",
+        "run_id": 43378892827,
+        "status": "completed",
+        "conclusion": "success"
+      }
+    ],
+    "logic_fractal_steps": {
+      "Run Logic Fractal Composer tests": "PASS",
+      "Test source-grounded typed composition candidates": "PASS",
+      "Build source-grounded typed composition candidates": "PASS",
+      "Build first typed fractal model candidate": "PASS",
+      "Test integrated logic-agent roles": "PASS",
+      "Run bounded research-agent cycle": "PASS"
+    },
+    "report_consistency_regression": {
+      "status": "PASS",
+      "artifact_id": 14015058768,
+      "artifact_size_bytes": 106231,
+      "artifact_digest": "sha256:9e70a08d1464d289c22c2b9b3f3e05327d3e400483d045e7f63e2056c2d3b80d",
+      "observed_open_gap": "11 admitted source-span logic units are registered; 39 more are required to reach 50."
+    },
+    "ecosystem_artifact": {
+      "artifact_id": 14016120818,
+      "size_bytes": 3225,
+      "digest": "sha256:bfca489a3f26e4150477d60cd79fd754ec7161f16300406fa5b1b4ff175c17b2"
+    },
+    "runner": "NOT_EXPOSED_BY_CONNECTOR",
+    "duration": "NOT_EXPOSED_BY_CONNECTOR"
+  },
   "limbo": {
     "pr": 122,
     "state": "OPEN_DRAFT",
@@ -371,12 +422,12 @@
     }
   ],
   "blocked": [
-    "New batch commit CI has not run yet.",
     "PR #140 is 32 commits ahead and 18 behind main; reconcile before merge.",
     "PR #122 is 63 commits ahead and 30 behind main; current-head workflows are action_required with zero jobs.",
     "Limbo current-target tuning replay remains NOT_RUN and new inboxes are NO_INPUTS.",
     "Wix publication remains blocked until PR/catalog approval and 30-versus-27 mapping reconciliation.",
-    "No explicit ChatGPT conversation export is available in this run."
+    "No explicit ChatGPT conversation export is available in this run.",
+    "Private Library material remains PRIVATE_REVIEW_ONLY; no source IDs, hashes, excerpts or derived logic units were published pending privacy review."
   ],
   "next": [
     "Inspect the next seven public repositories from the updated cursor.",
@@ -386,5 +437,18 @@
     "Reconcile PR #140 and PR #122 against current main without merging automatically.",
     "Acquire new Limbo crash evidence and replay the tuning candidate against a defined current target.",
     "Only after catalog approval and mapping reconciliation, publish via the connected Wix site and read back every affected page."
+  ],
+  "private_library_scan": {
+    "status": "TARGETED_SEARCH_COMPLETED_NOT_EXHAUSTIVE",
+    "reviewed_files": 5,
+    "permission_scope": "PRIVATE_REVIEW_ONLY",
+    "public_repo_ingestion": 0,
+    "raw_text_or_excerpts_published": 0,
+    "exact_source_ids_or_hashes_published": 0,
+    "explicit_chatgpt_export_found": false,
+    "note": "Targeted Library search/read surfaced relevant private project material, but no explicit conversations.json or ChatGPT export ZIP was located. Private materials were not copied to the public repository; broad Library pagination was not exhausted."
+  },
+  "access_gaps": [
+    "Targeted Library search was not exhaustive; no explicit ChatGPT export archive was found and no private Library content was ingested."
   ]
 }
