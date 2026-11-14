@@ -11,7 +11,7 @@
     "conversation_exports_found": 0
   },
   "access_gaps": [
-    "No full ChatGPT export surfaced; no global conversation history scan.",
+    "No explicit ChatGPT export artifact surfaced in targeted Library searches; no global conversation history scan.",
     "48 public repositories remain in the bounded sweep.",
     "Five nonpublic repository names/content excluded from public artifacts.",
     "GitHub Actions cross-repository token not evidenced.",
@@ -56,9 +56,9 @@
     "backend": "NOT_CONFIGURED"
   },
   "ci": {
-    "last_logic_fractal_run_id": 43562980192,
+    "last_logic_fractal_run_id": 43564186807,
     "last_logic_fractal_run_date": "2026-11-14",
-    "builder_and_prior_tests": "PASS_ON_PR_HEAD",
+    "builder_and_prior_tests": "PASS_ON_VALIDATED_HEAD",
     "final_pr_proposal_step": "FAIL_NONEXISTENT_PATHSPEC",
     "fix_branch": "automation/wanga-unified-cycle-2026-11-14",
     "new_pr_ci": "PASS",
@@ -67,27 +67,25 @@
     "regression": "Manifest count was correctly updated to 28; test was stale and hard-coded 18.",
     "test_fix": "Committed dynamic catalog-derived count assertions in logic_wiki/tests/test_logic_wiki.py",
     "pr_number": 144,
-    "current_head_sha": "d660c9a85b888344b237855f94991b0142225475",
-    "current_head_status": "OPEN_UNMERGED",
     "workflow_runs": [
       {
         "name": "Logic Fractal Wiki Research",
-        "run_id": 43562980192,
+        "run_id": 43564186807,
         "conclusion": "success"
       },
       {
         "name": "WANGA Ecosystem Agent Sweep",
-        "run_id": 43562980232,
+        "run_id": 43564186824,
         "conclusion": "success"
       },
       {
         "name": "Repository Integrity",
-        "run_id": 43562980205,
+        "run_id": 43564186832,
         "conclusion": "success"
       },
       {
         "name": "CodeQL Advanced",
-        "run_id": 43562980213,
+        "run_id": 43564186867,
         "conclusion": "success"
       }
     ],
@@ -103,15 +101,24 @@
     },
     "artifact": {
       "name": "logic-wiki-research-report",
-      "size_bytes": 82343,
-      "sha256": "3badf07bcf293720c6eec7f2d8ee66c04f08619a1bd9dfac26afcd730dab1aa3",
-      "created_at": "2026-11-14T05:44:47Z",
-      "expires_at": "2027-02-12T05:44:33Z"
+      "size_bytes": 83167,
+      "sha256": "904be1958b24f3edfbb2a9268b8ab6b31de2f09b5c8af3e9071c999a969b4117",
+      "created_at": "2026-11-14T06:00:35Z",
+      "expires_at": "2027-02-12T06:00:20Z"
     },
     "scheduled_manual_pr_proposal_step_exercised": false,
     "prior_scheduled_run": 42629315588,
     "prior_scheduled_run_date": "2026-11-09",
-    "prior_scheduled_proposal_failure": "FAIL_NONEXISTENT_PATHSPEC"
+    "prior_scheduled_proposal_failure": "FAIL_NONEXISTENT_PATHSPEC",
+    "validated_head_sha": "cdc5983f770fc322383e2e4f54cf6ace9ccacb28",
+    "validated_pr_state": "OPEN_UNMERGED",
+    "prior_head_run_id": 43562980192,
+    "prior_head_run_status": "PASS",
+    "earlier_regression_run_id": 43562891099,
+    "earlier_regression_run_status": "FAIL_TEST_WIX_MANIFEST_HARDCODED_18",
+    "historical_scheduled_run": 42629315588,
+    "historical_scheduled_run_date": "2026-11-09",
+    "historical_scheduled_proposal_failure": "FAIL_NONEXISTENT_PATHSPEC"
   },
   "readiness": {
     "gate": "FIRST_MODEL_ALPHA_V1",
@@ -183,7 +190,48 @@
     "files_total": 29,
     "homepage_entry_cards": 28,
     "readback": "PUBLISHED_READ_BACK_PARTIAL",
-    "site_panel_refreshed": true
+    "site_panel_refreshed": true,
+    "site_status": "PUBLISHED",
+    "site_file_count": 29,
+    "live_readback": {
+      "method": "Connected Wix Headless files.list/read",
+      "date": "2026-11-14",
+      "pages_read": 3,
+      "full_site_audit": false,
+      "pages": [
+        {
+          "path": "logic-wiki.html",
+          "bytes": 53739,
+          "entry_class_count": 28,
+          "article_element_count": 27,
+          "interpretation": "28 entry cards are present; 27 use semantic article tags."
+        },
+        {
+          "path": "logic-wiki-research-status.html",
+          "bytes": 12315,
+          "contains_not_ready_marker": true,
+          "observed": {
+            "source_records": 17,
+            "source_classes": 11,
+            "logic_units_with_provenance": 28,
+            "composition_rules": 2,
+            "counterexamples": 0,
+            "semantic_cases": 0,
+            "independent_reviews": 0
+          }
+        },
+        {
+          "path": "logic-wiki-fractal-research.html",
+          "bytes": 12297,
+          "contains_catalog_counts": {
+            "articles": 28,
+            "source_records": 17,
+            "source_classes": 11
+          }
+        }
+      ],
+      "remaining_files_not_read": 26
+    }
   },
   "agents": [
     {
