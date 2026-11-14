@@ -1,5 +1,6 @@
 name: Logic Kernel V1
 on:
+  workflow_dispatch:
   pull_request:
     paths:
       - "logic_engine_v1/**"
@@ -17,14 +18,22 @@ on:
       - "research/data/LETTER_GATE_MAP_231_V1.json"
       - "research/data/LETTER_TRIPLE_MAP_1540_V1.json"
       - ".github/workflows/logic-kernel-v1.yml"
+permissions:
+  contents: read
+concurrency:
+  group: logic-kernel-v1-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 15
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+      - name: Compile kernel
+        run: python -m compileall -q logic_engine_v1
       - name: Validate corpus invariants
         run: python logic_engine_v1/logic_kernel.py validate-corpus --repo-root .
       - name: Run unit tests

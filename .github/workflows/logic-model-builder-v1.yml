@@ -1,5 +1,6 @@
 name: Logic-Native Model Builder V1
 on:
+  workflow_dispatch:
   pull_request:
     paths:
       - "logic_model_builder_v1/**"
@@ -19,9 +20,15 @@ on:
       - "research/data/LETTER_GATE_MAP_231_V1.json"
       - "research/data/LETTER_TRIPLE_MAP_1540_V1.json"
       - ".github/workflows/logic-model-builder-v1.yml"
+permissions:
+  contents: read
+concurrency:
+  group: logic-model-builder-v1-${{ github.ref }}
+  cancel-in-progress: true
 jobs:
   test:
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5
