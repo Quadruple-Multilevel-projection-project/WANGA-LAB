@@ -1,0 +1,399 @@
+{
+  "schema_version": "wanga-ecosystem-repository-inventory/1.0",
+  "snapshot_date": "2026-11-14",
+  "discovery_source": "Connected GitHub repository-list and repository-content APIs",
+  "affiliation_counts": {
+    "owner": 38,
+    "collaborator": 13,
+    "organization_member": 25
+  },
+  "unique_accessible_repository_count": 63,
+  "visibility_counts": {
+    "public": 58,
+    "nonpublic_or_private": 5
+  },
+  "private_names_redacted": true,
+  "scan_batch": {
+    "batch_id": "2026-11-14-batch-01",
+    "batch_limit": 10,
+    "scanned_count": 10,
+    "scanned_repositories": [
+      "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "Quadruple-Multilevel-projection-project/MNM",
+      "Quadruple-Multilevel-projection-project/Qualia",
+      "AmbassadorOv/O-Ms",
+      "Quadruple-Multilevel-projection-project/globalSpeed",
+      "Quadruple-Multilevel-projection-project/glowing-octo-waddle"
+    ],
+    "status": "COMPLETED_BOUNDED_BATCH",
+    "next_batch": [
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "Quadruple-Multilevel-projection-project/skills",
+      "tribal-archery/-logicl-neural-order",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/Qdprojects",
+      "AmbassadorOv/python-genai",
+      "AmbassadorOv/openai_tiktoken",
+      "AmbassadorOv/platform-samples"
+    ],
+    "remaining_public_count": 48,
+    "cursor": "priority-order-after-batch-01"
+  },
+  "repositories": [
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+      },
+      "updated_at": "2026-11-12T17:16:30Z",
+      "pushed_at": "2026-11-14T03:34:33Z",
+      "head_commit_sha": "85aa1ce0ac17d56bd285aeadde0d114514655d19",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha": "b6469cf60488e1e5b38946534a9148882647368d",
+          "status": "READ"
+        },
+        {
+          "path": "logic_wiki/data/articles.json",
+          "git_blob_sha": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed",
+          "status": "READ"
+        }
+      ],
+      "summary": "Canonical WANGA evidence/provenance, logic mining and drift-forensics repository. Current catalog: 28 articles, 17 source records, 11 source types, 111 editorial relation links. Last verified typed model remains synthetic and unreleased.",
+      "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE",
+      "next_action": "Continue WANGA work on branch and PR; do not write directly to main."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+      },
+      "updated_at": "2026-10-05T08:21:28Z",
+      "pushed_at": "2026-10-22T06:50:12Z",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha": "1530209671f6f76eb1808cf17d9584437e1e867b",
+          "status": "READ"
+        }
+      ],
+      "summary": "Terraform infrastructure project for deploying AI-chat and agent APIs across environments and regions. README explicitly warns that main is out of date; branches must be inspected before any implementation proposal.",
+      "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE",
+      "next_action": "Inspect the newest relevant branch in a later bounded batch; no external writes."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+      },
+      "updated_at": "2026-10-22T07:25:07Z",
+      "pushed_at": "2026-11-13T13:02:58Z",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6",
+          "status": "READ"
+        },
+        {
+          "path": "docs/agent-network-charter.md",
+          "git_blob_sha": "9a79a23971e25cbe5814ffdf0250752bd67e3290",
+          "status": "READ"
+        }
+      ],
+      "summary": "README is only a project link. The charter is a public recruitment/research proposal: 2,000 roles is a target, not an active-agent count; 231 gates and 15,625 topology are stated requirements, not completed hardware.",
+      "epistemic_status": "PROPOSAL_NOT_IMPLEMENTATION_VERIFIED",
+      "next_action": "Map overlaps with WANGA NTM only after inspecting actual code and execution evidence."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+      },
+      "updated_at": "2026-10-05T08:21:58Z",
+      "pushed_at": "2026-10-22T06:50:46Z",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
+          "status": "READ"
+        }
+      ],
+      "summary": "README contains only a title; no substantive architecture or verification evidence was established in this bounded pass.",
+      "epistemic_status": "SOURCE_LOCATED_LOW_SIGNAL",
+      "next_action": "Inspect tree and branches in a later batch if relevant."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+      },
+      "updated_at": "2026-10-05T08:21:08Z",
+      "pushed_at": "2026-10-22T06:48:08Z",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+          "status": "READ"
+        },
+        {
+          "path": "De architecture",
+          "git_blob_sha": "23ea7502146f50424c0bd202178c4b07eb83f5e8",
+          "status": "READ"
+        }
+      ],
+      "summary": "Experimental PyTorch code declares 231 nodes, 32-dimensional state, 8 channels, 120 epochs and 42 gates; complex-valued weights are randomly initialized. No test or semantic verification evidence was located in this pass. This is an integration tension with WANGA logic-before-weights, not a proven core contradiction.",
+      "epistemic_status": "IMPLEMENTATION_TEXT_UNVERIFIED",
+      "next_action": "Request a source/constraint mapping and tests before considering integration; do not modify this repository."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/MNM",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+      },
+      "updated_at": "2026-10-05T08:21:11Z",
+      "pushed_at": "2026-10-22T06:48:15Z",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+          "status": "READ"
+        }
+      ],
+      "summary": "README is a minimal Nanomathematics heading; no substantive project or logic documentation was established in this batch.",
+      "epistemic_status": "SOURCE_LOCATED_LOW_SIGNAL",
+      "next_action": "Defer deeper scan until the repository is prioritized."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/Qualia",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+      },
+      "updated_at": "2026-11-11T23:48:07Z",
+      "pushed_at": "2026-11-11T23:48:03Z",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha": "740c8ff6d88049f5eedf97d21772e12e2ef6fa96",
+          "status": "READ"
+        },
+        {
+          "path": "docs/logical-islands-economy.md",
+          "git_blob_sha": "59a0af8786d56003ef29184bed4d005126331981",
+          "status": "READ"
+        }
+      ],
+      "summary": "Research initiative proposes logic-shaped synthetic cognition and protected logical infrastructure. The economic document is a strategic proposal; enforceability depends on legal entities, IP ownership, contracts and jurisdictional review.",
+      "epistemic_status": "PROPOSAL_NOT_OPERATIONAL_VERIFICATION",
+      "next_action": "Keep as a governance/architecture overlap candidate; no code changes."
+    },
+    {
+      "full_name": "AmbassadorOv/O-Ms",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+      },
+      "updated_at": "2025-04-03T19:48:38Z",
+      "pushed_at": "2026-10-22T06:44:59Z",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha": "5477f49658507c3de65a774eb54976d22a3e0c52",
+          "status": "READ"
+        }
+      ],
+      "summary": "README contains only a repository heading; no relevant architecture evidence was established.",
+      "epistemic_status": "SOURCE_LOCATED_LOW_SIGNAL",
+      "next_action": "Defer deeper scan."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/globalSpeed",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+      },
+      "updated_at": "2026-10-05T08:21:23Z",
+      "pushed_at": "2026-10-22T06:49:41Z",
+      "files": [
+        {
+          "path": "README.md",
+          "git_blob_sha": "a6976e6480700db0264d5dd7a20267a04f9209f0",
+          "status": "READ"
+        }
+      ],
+      "summary": "Browser extension for media playback speed and page/audio controls. No direct WANGA logic or forensics relationship established.",
+      "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE_UNRELATED",
+      "next_action": "No action; preserve as unrelated repository."
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "permissions": {
+        "admin": true,
+        "maintain": true,
+        "push": true,
+        "triage": true,
+        "pull": true
+      },
+      "updated_at": "2026-10-05T08:21:45Z",
+      "pushed_at": "2026-10-22T06:51:01Z",
+      "files": [
+        {
+          "path": "README.md",
+          "status": "NOT_FOUND"
+        }
+      ],
+      "summary": "README.md returned 404; no repository content summary is inferred from the name.",
+      "epistemic_status": "ACCESS_GAP",
+      "next_action": "Inspect root tree in a later batch if prioritized."
+    }
+  ],
+  "unscanned_public_repositories": [
+    "AmbassadorOv/-artificial-y",
+    "AmbassadorOv/AG-triple-X-",
+    "AmbassadorOv/AmbassadorOv",
+    "AmbassadorOv/awesome-chatgpt-prompts",
+    "AmbassadorOv/branches-",
+    "AmbassadorOv/chatgpt-scientific-publications-extension",
+    "AmbassadorOv/cookbook",
+    "AmbassadorOv/desktop",
+    "AmbassadorOv/docs",
+    "AmbassadorOv/eslint",
+    "AmbassadorOv/extensions",
+    "AmbassadorOv/fluffy-parakeet",
+    "AmbassadorOv/generative-ai-docs",
+    "AmbassadorOv/googleapis",
+    "AmbassadorOv/https-AmbassadorOv.io",
+    "AmbassadorOv/mediapipe",
+    "AmbassadorOv/mermaid",
+    "AmbassadorOv/mujoco",
+    "AmbassadorOv/multi-agent-orchestator",
+    "AmbassadorOv/Nanomathematics",
+    "AmbassadorOv/openai_tiktoken",
+    "AmbassadorOv/platform-samples",
+    "AmbassadorOv/python-genai",
+    "AmbassadorOv/Qualia",
+    "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+    "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+    "AmbassadorOv/test-notebook-links",
+    "AmbassadorOv/TTTT-0.0.0.0.1",
+    "AmbassadorOv/TTTTproject-un.govt",
+    "AmbassadorOv/unetbootin",
+    "AmbassadorOv/vqbshtfsprojects.org",
+    "AmbassadorOv/vscode-azure-blockchain-ethereum",
+    "AmbassadorOv/vscode-docs",
+    "AmbassadorOv/World-Party-Federation-Branches-managers",
+    "Quadruple-Multilevel-projection-project/-",
+    "Quadruple-Multilevel-projection-project/-from-Corsican-",
+    "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+    "Quadruple-Multilevel-projection-project/skills",
+    "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+    "Quadruple-Multilevel-projection-project/branches-",
+    "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+    "tribal-archery/-logicl-neural-order",
+    "tribal-archery/copilot-cli",
+    "tribal-archery/MAM-parsed",
+    "tribal-archery/mermaid",
+    "tribal-archery/Qdprojects",
+    "tribal-archery/unetbootin",
+    "tribal-archery/vscode-azure-blockchain-ethereum"
+  ],
+  "access_gaps": [
+    {
+      "id": "NONPUBLIC_REPOSITORIES",
+      "status": "REDACTED",
+      "count": 5,
+      "detail": "Names and content are excluded from this public registry."
+    },
+    {
+      "id": "GITHUB_ACTIONS_CROSS_REPO_TOKEN",
+      "status": "BLOCKED",
+      "detail": "The scheduled GitHub workflow does not demonstrate account-wide cross-repository access without CROSS_REPO_READ_TOKEN; this connected session directly enumerated and read public repositories."
+    },
+    {
+      "id": "FULL_REPOSITORY_CONTENT",
+      "status": "IN_PROGRESS",
+      "detail": "This is a bounded metadata/README/selected-doc scan, not a full code, branch, workflow or test audit of all 58 public repositories."
+    },
+    {
+      "id": "CHATGPT_CONVERSATION_EXPORT",
+      "status": "ACCESS_GAP",
+      "detail": "No complete conversations.json or export ZIP was surfaced in the current conversation/Library search."
+    }
+  ],
+  "policy": {
+    "main_direct_writes": false,
+    "auto_merge": false,
+    "other_repo_writes": false,
+    "private_content_publication": false
+  }
+}
