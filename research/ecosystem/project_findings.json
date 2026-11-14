@@ -207,6 +207,23 @@
       "contradictions": [],
       "permission_scope": "AUTHORIZED_WIX_SITE_WRITE",
       "next_action": "Manifest update is staged in WANGA branch/PR; verify after merge only if a later approved sync occurs."
+    },
+    {
+      "id": "F-WIX-SYNC-TEST-STALE-COUNT",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "automation/wanga-unified-cycle-2026-11-14",
+      "file_path": "logic_wiki/tests/test_logic_wiki.py",
+      "git_blob_sha": "742c1fd0b04c842d2fe2aabc9f5f9e2e5785f375",
+      "evidence_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/43562891099",
+      "summary": "The first PR CI run failed because the Wix manifest was correctly updated from 18 to 28 synced articles while the test still hard-coded 18. The test now derives article/source/type/relation counts from articles.json and compares the manifest dynamically.",
+      "epistemic_status": "TEST_FAILURE_CONFIRMED_FIX_COMMITTED_PENDING_RERUN",
+      "overlap_candidates": [
+        "logic_wiki/data/wix_sync_manifest.json",
+        "logic_wiki/data/articles.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_WRITE_ON_BRANCH",
+      "next_action": "Wait for the new PR CI run; do not merge until it passes."
     }
   ],
   "system_boundaries": {
