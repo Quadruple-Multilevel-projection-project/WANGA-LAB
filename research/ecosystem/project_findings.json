@@ -72,7 +72,7 @@
       "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
       "ref": "deploy/limbo-cartography-core-v1",
       "file_path": "limbo-cartography-core/cartography/iterative_crash_map.json",
-      "git_blob_sha": "46646b9d2e6b2f62c4b3d9b20fb0e95c6f7dcb16",
+      "git_blob_sha": "3617504c68262f71366a244563fc06b1be270da2",
       "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/deploy/limbo-cartography-core-v1/limbo-cartography-core/cartography/iterative_crash_map.json",
       "summary": "PR #122 is open/draft; branch is 63 commits ahead and 34 behind current main. Map v1.0.0 has 14 nodes, 19 edges, 10 recorded incidents, 2 history events, 1 tuning candidate; 9 incidents lack a passing retest, one has a passing retest, and one unresolved recurrence cluster has 7 occurrences.",
       "epistemic_status": "SOURCE_BACKED_OPERATIONAL_MAP_NOT_COMPLETE",
@@ -82,14 +82,20 @@
       ],
       "contradictions": [],
       "permission_scope": "PUBLIC_BRANCH_READ; repository permission ADMIN",
-      "next_action": "Refresh branch against main only through PR workflow; retain incident history and replay the pending tuning candidate."
+      "next_action": "Refresh branch against main only through PR workflow; retain incident history and replay the pending tuning candidate.",
+      "additional_files": [
+        {
+          "path": "limbo-cartography-core/cartography/reality_matrix.json",
+          "git_blob_sha": "86593dd31e5c20bf47c81d09d527967cf0a22476"
+        }
+      ]
     },
     {
       "id": "F-LIMBO-NO-INPUTS-2026-11-14",
       "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
       "ref": "deploy/limbo-cartography-core-v1",
       "file_path": "limbo-cartography-core/cartography/run_logs/latest_execution.json",
-      "git_blob_sha": "4e4c7e6f5e6b0e9f3a9f2a2a7c5f2e5b6a0e2f10",
+      "git_blob_sha": "72b24f49fa34205a93fe1ed3623412ad66df7e83",
       "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/deploy/limbo-cartography-core-v1/limbo-cartography-core/cartography/run_logs/latest_execution.json",
       "summary": "Latest execution record is dated 2026-11-07 and marked EXECUTION_RECORD_ONLY; epistemic attempt and Keystone verification are false. Current inbox listing returned no new files: NO_INPUTS_THIS_CYCLE, not successful forensic coverage.",
       "epistemic_status": "NO_NEW_INPUTS_THIS_CYCLE",
