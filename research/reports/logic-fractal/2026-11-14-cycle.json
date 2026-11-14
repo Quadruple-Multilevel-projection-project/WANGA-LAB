@@ -61,7 +61,11 @@
     "builder_and_prior_tests": "PASS",
     "final_pr_proposal_step": "FAIL_NONEXISTENT_PATHSPEC",
     "fix_branch": "automation/wanga-unified-cycle-2026-11-14",
-    "new_pr_ci": "PENDING"
+    "new_pr_ci": "PENDING_RERUN",
+    "first_pr_run_id": 43562891099,
+    "first_pr_run_status": "FAIL_TEST_WIX_MANIFEST_HARDCODED_18",
+    "regression": "Manifest count was correctly updated to 28; test was stale and hard-coded 18.",
+    "test_fix": "Committed dynamic catalog-derived count assertions in logic_wiki/tests/test_logic_wiki.py"
   },
   "readiness": {
     "gate": "FIRST_MODEL_ALPHA_V1",
