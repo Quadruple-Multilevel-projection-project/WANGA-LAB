@@ -30,7 +30,14 @@ class LogicWikiTests(unittest.TestCase):
   self.assertNotEqual(report['readiness_gate_status'],'CANDIDATE_RELEASE_READY_FOR_HUMAN_REVIEW')
  def test_wix_sync_manifest_records_stable_extended_resources(self):
   manifest=json.loads((ROOT/'logic_wiki/data/wix_sync_manifest.json').read_text(encoding='utf-8'))
-  self.assertEqual(manifest['synced_article_count'],18)
+  catalog=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
+  self.assertEqual(manifest['synced_article_count'],len(catalog['articles']))
+  self.assertEqual(manifest['source_record_count'],len(catalog['sources']))
+  self.assertEqual(manifest['source_class_count'],len({x['type'] for x in catalog['sources']}))
+  self.assertEqual(manifest['relation_link_count'],sum(len(x.get('relations',[])) for x in catalog['articles']))
+  self.assertEqual(manifest['main_page_card_count'],len(catalog['articles']))
+  self.assertEqual(manifest['main_page_catalog_article_count'],len(catalog['articles']))
+  self.assertEqual(manifest['research_catalog_article_count'],len(catalog['articles']))
   self.assertEqual(manifest['extended_topic_page_count'],10)
   ids=[x['id'] for x in manifest['extended_page_resources']]
   self.assertEqual(len(ids),10)
