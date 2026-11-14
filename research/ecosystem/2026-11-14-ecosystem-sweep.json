@@ -1,0 +1,39 @@
+{
+  "schema_version": "wanga-ecosystem-sweep-report/1.0",
+  "date": "2026-11-14",
+  "status": "COMPLETED_BOUNDED_BATCH",
+  "unique_repositories": 63,
+  "public": 58,
+  "private_redacted": 5,
+  "scanned": 10,
+  "remaining_public": 48,
+  "scanned_repositories": [
+    "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+    "Quadruple-Multilevel-projection-project/AI231.meta.io",
+    "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+    "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+    "Quadruple-Multilevel-projection-project/MNM",
+    "Quadruple-Multilevel-projection-project/Qualia",
+    "AmbassadorOv/O-Ms",
+    "Quadruple-Multilevel-projection-project/globalSpeed",
+    "Quadruple-Multilevel-projection-project/glowing-octo-waddle"
+  ],
+  "next_batch": [
+    "AmbassadorOv/Nanomathematics",
+    "AmbassadorOv/multi-agent-orchestator",
+    "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+    "Quadruple-Multilevel-projection-project/skills",
+    "tribal-archery/-logicl-neural-order",
+    "tribal-archery/MAM-parsed",
+    "tribal-archery/Qdprojects",
+    "AmbassadorOv/python-genai",
+    "AmbassadorOv/openai_tiktoken",
+    "AmbassadorOv/platform-samples"
+  ],
+  "private_content_published": false,
+  "other_repositories_modified": false,
+  "limbo_status": "PR122_STALE_ACTION_REQUIRED_NO_INPUTS_THIS_CYCLE",
+  "logic_fractal_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+  "wix_status": "PUBLISHED_READ_BACK_PARTIAL"
+}

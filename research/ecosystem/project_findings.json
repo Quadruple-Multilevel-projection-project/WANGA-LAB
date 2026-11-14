@@ -1,0 +1,242 @@
+{
+  "schema_version": "wanga-ecosystem-project-findings/1.0",
+  "snapshot_date": "2026-11-14",
+  "epistemic_rule": "A source proves only what is written in that source; structural links and candidate compositions are not semantic entailments.",
+  "findings": [
+    {
+      "id": "F-WANGA-CATALOG-2026-11-14",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "main",
+      "file_path": "logic_wiki/data/articles.json",
+      "git_blob_sha": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/articles.json",
+      "summary": "28 articles, 17 source records, 11 distinct source types and 111 editorial relation links.",
+      "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "Continue source-grounded extraction; do not treat editorial links as entailment."
+    },
+    {
+      "id": "F-FIRST-MODEL-READINESS-2026-11-09",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "main",
+      "file_path": "research/reports/logic-fractal/typed-first-model-candidate.json",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/42629315588",
+      "artifact_file": "research/reports/logic-fractal/typed-first-model-candidate.json",
+      "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+      "summary": "Two-level candidate built from three synthetic typed fragments. Source lineage preserved, deterministic replay true, semantic equivalence not established; release gate blocked pending real source fragments, negative/boundary benchmarks and independent review.",
+      "epistemic_status": "TESTED_SYNTHETIC_CANDIDATE_NOT_VERIFIED",
+      "overlap_candidates": [
+        "logic_fractal/fragment_composer.py",
+        "logic_fractal/data/typed_fragments_fixture.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_ARTIFACT",
+      "next_action": "Keep unreleased; rebuild on next approved CI run and add source-grounded test cases."
+    },
+    {
+      "id": "F-READINESS-COUNTS-2026-11-09",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "main",
+      "file_path": "logic_wiki/generated/readiness-report.json",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/42629315588",
+      "summary": "Observed: 17 source records/11 source classes, 28 provenance-linked logic units, 2 composition rules with contracts, 0 counterexamples, 0 semantic test cases, 0 benchmark suites, 0 independent reviews, no dangling refs, no duplicate stable IDs, deterministic synthetic build true, holdout false, MIRROR review false. Core contradiction inventory is not independently measured.",
+      "epistemic_status": "CI_REPORTED_METRICS",
+      "overlap_candidates": [],
+      "contradictions": [
+        "Critical contradictions are marked NOT_MEASURED_NO_INVENTORY in the agent-cycle report; zero registered is not evidence of absence."
+      ],
+      "permission_scope": "PUBLIC_ARTIFACT",
+      "next_action": "Recompute in the new PR CI and preserve the same epistemic distinction."
+    },
+    {
+      "id": "F-LOGIC-FRACTAL-CI-PATHSPEC",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "main",
+      "file_path": ".github/workflows/logic-fractal-wiki.yml",
+      "git_blob_sha": "ddd6be4cc795bacf2aa5a276fe116ff0a7b1c2c8",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/.github/workflows/logic-fractal-wiki.yml",
+      "evidence_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/42629315588",
+      "summary": "On 2026-11-09, wiki build, composer tests, typed-fragment tests, first synthetic model build and formal/benchmark intake checks passed. Final create-pull-request step failed because git add received nonexistent path research/reports/agent-evaluation/**.",
+      "epistemic_status": "IMPLEMENTATION_BUG_CONFIRMED",
+      "overlap_candidates": [
+        "repository-integrity CI"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_WRITE_ADMIN",
+      "next_action": "Path removed on automation branch; open PR and verify CI."
+    },
+    {
+      "id": "F-LIMBO-PR122",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "deploy/limbo-cartography-core-v1",
+      "file_path": "limbo-cartography-core/cartography/iterative_crash_map.json",
+      "git_blob_sha": "3617504c68262f71366a244563fc06b1be270da2",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/deploy/limbo-cartography-core-v1/limbo-cartography-core/cartography/iterative_crash_map.json",
+      "summary": "PR #122 is open/draft; branch is 63 commits ahead and 34 behind current main. Map v1.0.0 has 14 nodes, 19 edges, 10 recorded incidents, 2 history events, 1 tuning candidate; 9 incidents lack a passing retest, one has a passing retest, and one unresolved recurrence cluster has 7 occurrences.",
+      "epistemic_status": "SOURCE_BACKED_OPERATIONAL_MAP_NOT_COMPLETE",
+      "overlap_candidates": [
+        "limbo-cartography-core/cartography/reality_matrix.json",
+        "limbo-cartography-core/cartography/tuning_candidates/TUNE-9c166900cc4ad5dd.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_BRANCH_READ; repository permission ADMIN",
+      "next_action": "Refresh branch against main only through PR workflow; retain incident history and replay the pending tuning candidate.",
+      "additional_files": [
+        {
+          "path": "limbo-cartography-core/cartography/reality_matrix.json",
+          "git_blob_sha": "86593dd31e5c20bf47c81d09d527967cf0a22476"
+        }
+      ]
+    },
+    {
+      "id": "F-LIMBO-NO-INPUTS-2026-11-14",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "deploy/limbo-cartography-core-v1",
+      "file_path": "limbo-cartography-core/cartography/run_logs/latest_execution.json",
+      "git_blob_sha": "72b24f49fa34205a93fe1ed3623412ad66df7e83",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/deploy/limbo-cartography-core-v1/limbo-cartography-core/cartography/run_logs/latest_execution.json",
+      "summary": "Latest execution record is dated 2026-11-07 and marked EXECUTION_RECORD_ONLY; epistemic attempt and Keystone verification are false. Current inbox listing returned no new files: NO_INPUTS_THIS_CYCLE, not successful forensic coverage.",
+      "epistemic_status": "NO_NEW_INPUTS_THIS_CYCLE",
+      "overlap_candidates": [
+        "iterative_crash_map.json",
+        "reality_matrix.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_BRANCH_READ",
+      "next_action": "Do not add synthetic crash points; wait for source-backed crash evidence and run replay after PR/CI access is restored."
+    },
+    {
+      "id": "F-LIMBO-WORKFLOW-LOCATION",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "main and deploy/limbo-cartography-core-v1",
+      "file_path": "limbo-cartography-core/.github/workflows/daily-cartography-agent.yml",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/deploy/limbo-cartography-core-v1/limbo-cartography-core/.github/workflows/daily-cartography-agent.yml",
+      "summary": "The package workflow is nested below limbo-cartography-core/.github/workflows; GitHub Actions discovers workflows only under repository-root .github/workflows. The root workflow directory has no daily-limbo-cartography-agent.yml.",
+      "epistemic_status": "IMPLEMENTATION_BLOCKER_CONFIRMED",
+      "overlap_candidates": [
+        ".github/workflows/daily-autonomous-operations.yml"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "next_action": "Move/copy the bounded workflow to root .github/workflows through a separate reviewed PR after PR #122 is reconciled."
+    },
+    {
+      "id": "F-CROSS-REPO-LOGICL-ARCH",
+      "repository": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "ref": "master",
+      "file_path": "De architecture",
+      "git_blob_sha": "23ea7502146f50424c0bd202178c4b07eb83f5e8",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-logicl-neural-order/blob/master/De%20architecture",
+      "summary": "Experimental PyTorch implementation declares 231 nodes, 32 dimensions, 8 channels, 120 epochs, 42 gate combinations and random complex-valued weight initialization. No tests were observed. This creates a source-first integration tension, not a proven semantic contradiction.",
+      "epistemic_status": "IMPLEMENTATION_TEXT_UNVERIFIED",
+      "overlap_candidates": [
+        "WANGA NTM",
+        "MLN numeric/operator proxy",
+        "logic_fractal typed-fragment contracts"
+      ],
+      "contradictions": [
+        "Potential ordering tension with logic-before-weights; applicability and runtime status are unknown."
+      ],
+      "permission_scope": "PUBLIC_READ; no external write performed",
+      "next_action": "Require source/constraint mapping, test evidence and scope review before any integration."
+    },
+    {
+      "id": "F-AI231-CHARTER",
+      "repository": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "ref": "main",
+      "file_path": "docs/agent-network-charter.md",
+      "git_blob_sha": "9a79a23971e25cbe5814ffdf0250752bd67e3290",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io/blob/main/docs/agent-network-charter.md",
+      "summary": "Public recruitment/research proposal targets 2,000 agent roles and specifies 231 logical gates and a 15,625-point topology. The document explicitly says 2,000 is a target, not a count of recruited or active agents.",
+      "epistemic_status": "PROPOSAL_NOT_DEPLOYMENT_EVIDENCE",
+      "overlap_candidates": [
+        "NTM orchestration",
+        "WANGA bounded agent roles"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; no external write performed",
+      "next_action": "Keep target counts separate from instantiated agents and request implementation/test evidence."
+    },
+    {
+      "id": "F-QUALIA-ECONOMY",
+      "repository": "Quadruple-Multilevel-projection-project/Qualia",
+      "ref": "main",
+      "file_path": "docs/logical-islands-economy.md",
+      "git_blob_sha": "59a0af8786d56003ef29184bed4d005126331981",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/Qualia/blob/main/docs/logical-islands-economy.md",
+      "summary": "Strategic governance/economic proposal distinguishes protected foundational infrastructure from commercial outputs and states that legal enforceability requires entities, IP analysis, contracts and jurisdiction-specific review.",
+      "epistemic_status": "STRATEGIC_PROPOSAL",
+      "overlap_candidates": [
+        "WANGA productization boundary",
+        "AI231/QUALIA protected infrastructure"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; no external write performed",
+      "next_action": "No code integration; treat as governance context only."
+    },
+    {
+      "id": "F-LIBRARY-PRIVATE-SCAN",
+      "repository": "PRIVATE_LIBRARY",
+      "ref": "current connected Files results",
+      "file_path": "REDACTED_PRIVATE_LOCATORS",
+      "source_uri": "PRIVATE_LIBRARY_REDACTED",
+      "summary": "Six Library items were inspected, including partial PDF page ranges and NTM/MLN verification material. No raw private content or file identifiers were copied to this public registry; no complete ChatGPT conversation export was found.",
+      "epistemic_status": "PRIVATE_SOURCE_LOCATED_NOT_PROMOTED",
+      "overlap_candidates": [
+        "NTM",
+        "MLN",
+        "LNL"
+      ],
+      "contradictions": [],
+      "permission_scope": "PRIVATE_LIBRARY_READ_ONLY",
+      "next_action": "Keep private; only add reviewed/redacted source-derived records after explicit approval."
+    },
+    {
+      "id": "F-WIX-SYNC-2026-11-14",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "Wix connected deployment",
+      "file_path": "logic-wiki-research-status.html; logic-wiki.html; logic-wiki-fractal-research.html",
+      "source_uri": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/",
+      "summary": "Three existing pages were patched and read back. Homepage has 28 entry cards; status page carries 17/20 sources, 11/3 source types, 28/50 provenance-linked logic units, 2/20 contracts, zero semantic cases and the synthetic candidate hash. The other 26 site files were not re-audited.",
+      "epistemic_status": "PUBLISHED_READ_BACK_PARTIAL",
+      "overlap_candidates": [
+        "logic_wiki/data/wix_sync_manifest.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "AUTHORIZED_WIX_SITE_WRITE",
+      "next_action": "Manifest update is staged in WANGA branch/PR; verify after merge only if a later approved sync occurs."
+    },
+    {
+      "id": "F-WIX-SYNC-TEST-STALE-COUNT",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "automation/wanga-unified-cycle-2026-11-14",
+      "file_path": "logic_wiki/tests/test_logic_wiki.py",
+      "git_blob_sha": "742c1fd0b04c842d2fe2aabc9f5f9e2e5785f375",
+      "evidence_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/43562891099",
+      "summary": "The first PR CI run failed because the Wix manifest was correctly updated from 18 to 28 synced articles while the test still hard-coded 18. The test now derives article/source/type/relation counts from articles.json and compares the manifest dynamically.",
+      "epistemic_status": "TEST_FAILURE_CONFIRMED_FIX_COMMITTED_PENDING_RERUN",
+      "overlap_candidates": [
+        "logic_wiki/data/wix_sync_manifest.json",
+        "logic_wiki/data/articles.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_REPOSITORY_WRITE_ON_BRANCH",
+      "next_action": "Wait for the new PR CI run; do not merge until it passes."
+    }
+  ],
+  "system_boundaries": {
+    "ntm": "Analysis/evidence/replay layer",
+    "mln": "Continuous numeric/operator research proxy",
+    "lnl": "Explicit source/rule/goal/constraint language",
+    "model_backend": "NOT_CONFIGURED",
+    "trained_neural_model_claim": false,
+    "agi_claim": false
+  },
+  "publication_policy": {
+    "raw_private_content_published": false,
+    "private_repository_names_published": false,
+    "other_repositories_modified": false
+  }
+}
