@@ -262,7 +262,42 @@
       ],
       "permission_scope": "PUBLIC_REPOSITORY_READ",
       "next_action": "Keep the records out of semantic benchmarks; configure endpoints only under explicit authorization and add an explicit execution-state field in a separately reviewed change.",
-      "scan_date": "2026-11-15"
+      "scan_date": "2026-11-15",
+      "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe",
+      "additional_files": [
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010113Z-REG-IL-ME.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010113Z-REG-SA.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010114Z-REG-AFRICA.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010114Z-REG-EA.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010114Z-REG-LATAM.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010114Z-REG-OCEANIA.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010115Z-REG-EU.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010115Z-REG-US.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe"
+        }
+      ]
     },
     {
       "id": "F-NTM-TRIBAL-README-2026-11-15",
