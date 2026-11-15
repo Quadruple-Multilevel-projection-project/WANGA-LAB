@@ -2,8 +2,12 @@ name: Regional Drift Agents
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/15 * * * *"
+    inputs:
+      allow_external_calls:
+        description: "Explicitly authorize calls to configured regional model endpoints for this run"
+        required: true
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -15,8 +19,8 @@ jobs:
     env:
       DRIFT_NODE: REG-US
       DRIFT_LANGUAGE: en
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_US }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_US }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_US || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_US || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -32,8 +36,8 @@ jobs:
     env:
       DRIFT_NODE: REG-EU
       DRIFT_LANGUAGE: en
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_EU }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_EU }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_EU || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_EU || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -49,8 +53,8 @@ jobs:
     env:
       DRIFT_NODE: REG-IL-ME
       DRIFT_LANGUAGE: he
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_IL_ME }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_IL_ME }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_IL_ME || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_IL_ME || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -66,8 +70,8 @@ jobs:
     env:
       DRIFT_NODE: REG-SA
       DRIFT_LANGUAGE: en
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_SA }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_SA }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_SA || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_SA || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -83,8 +87,8 @@ jobs:
     env:
       DRIFT_NODE: REG-EA
       DRIFT_LANGUAGE: en
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_EA }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_EA }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_EA || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_EA || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -100,8 +104,8 @@ jobs:
     env:
       DRIFT_NODE: REG-LATAM
       DRIFT_LANGUAGE: es
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_LATAM }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_LATAM }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_LATAM || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_LATAM || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -117,8 +121,8 @@ jobs:
     env:
       DRIFT_NODE: REG-OCEANIA
       DRIFT_LANGUAGE: en
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_OCEANIA }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_OCEANIA }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_OCEANIA || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_OCEANIA || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -134,8 +138,8 @@ jobs:
     env:
       DRIFT_NODE: REG-AFRICA
       DRIFT_LANGUAGE: en
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_AFRICA }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_AFRICA }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_AFRICA || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_AFRICA || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
