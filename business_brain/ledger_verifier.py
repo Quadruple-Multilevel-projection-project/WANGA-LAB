@@ -1,6 +1,7 @@
 """Verify an AI231 Logic Contribution Ledger hash chain (stdlib only)."""
 from __future__ import annotations
 import hashlib
+import hmac
 import json
 from typing import Iterable, Mapping, Any
 
@@ -32,7 +33,7 @@ def verify_chain(events: Iterable[Mapping[str, Any]]) -> str | None:
         if not isinstance(supplied, str) or len(supplied) != 64:
             raise LedgerVerificationError(f"event {index}: invalid event_sha256")
         actual = canonical_event_digest(event)
-        if not hashlib.compare_digest(supplied, actual):
+        if not hmac.compare_digest(supplied, actual):
             raise LedgerVerificationError(f"event {index}: event_sha256 mismatch")
         previous_digest = actual
         count += 1
