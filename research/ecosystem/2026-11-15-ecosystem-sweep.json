@@ -49,5 +49,19 @@
   ],
   "private_content_published": false,
   "other_repositories_modified": false,
-  "logic_wiki_source_records_added": 0
+  "logic_wiki_source_records_added": 0,
+  "pr146": {
+    "number": 146,
+    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/146",
+    "head": "30881f5319cd083b0fcc59530a44ce927e6e6006",
+    "state": "OPEN",
+    "ahead_by": 2,
+    "behind_by": 0,
+    "mergeable": true,
+    "repository_integrity": "SUCCESS",
+    "codeql": "SUCCESS",
+    "manual_dispatch_only": true,
+    "external_calls_default": false
+  },
+  "regional_workflow_policy": "PR #146 replaces direct main push with review PR and removes the 15-minute schedule; it is not merged, so main remains unchanged until review."
 }
