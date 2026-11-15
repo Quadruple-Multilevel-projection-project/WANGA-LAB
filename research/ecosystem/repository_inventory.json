@@ -59,8 +59,8 @@
         "triage": true,
         "pull": true
       },
-      "updated_at": "2026-11-15T01:01:50Z",
-      "pushed_at": "2026-11-15T01:01:50Z",
+      "updated_at": "2026-11-12T17:16:30Z",
+      "pushed_at": "2026-11-15T05:55:43Z",
       "head_commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe",
       "files": [
         {
@@ -87,6 +87,46 @@
           "path": "ai-drift-forensics/global-drift-network/data/regional-observations/",
           "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe",
           "status": "READ_8_FILES_48_NOT_CONFIGURED_RECORDS"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010113Z-REG-IL-ME.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe",
+          "status": "READ"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010113Z-REG-SA.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe",
+          "status": "READ"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010114Z-REG-AFRICA.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe",
+          "status": "READ"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010114Z-REG-EA.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe",
+          "status": "READ"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010114Z-REG-LATAM.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe",
+          "status": "READ"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010114Z-REG-OCEANIA.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe",
+          "status": "READ"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010115Z-REG-EU.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe",
+          "status": "READ"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261115T010115Z-REG-US.json",
+          "commit_sha": "2412734756acd4cb22233fd1cfc4c116f69fdabe",
+          "status": "READ"
         }
       ],
       "summary": "Canonical WANGA evidence/provenance, logic mining and drift-forensics repository. Current Logic Wiki catalog: 28 articles, 17 source records, 11 source types, 111 editorial relation links. Latest main commit adds 8 regional probe files (48 records) with NOT_CONFIGURED status and no model outputs; the regional publisher currently has a direct-main-write policy violation addressed by PR #146.",
