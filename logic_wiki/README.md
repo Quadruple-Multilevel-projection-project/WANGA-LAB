@@ -18,3 +18,7 @@ An original, source-linked research encyclopedia for logical primitives, relatio
 The weekly workflow validates records and opens/updates a PR with generated wiki pages and a readiness report. It never auto-merges.
 
 The first-model gate is intentionally not met by the seed glossary alone.
+
+## New research article
+
+- [Shadow language of thought — impression capture boundary](articles/shadow-language-impression-boundary.md) — distinguishes intellect, logical thought-content, impressions, and the proposed machine-side shadow language. Research proposal; not yet formalized or verified.

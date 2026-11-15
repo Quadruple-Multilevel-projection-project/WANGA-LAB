@@ -1,0 +1,28 @@
+name: Build impression matrix 2450
+on:
+  push:
+    branches: [agent/logic/four-impression-2450-capture]
+    paths:
+      - 'experiments/impression-capture/**'
+      - 'scripts/generate_2450.py'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Verify initial matrix
+        run: python core/verify_contract.py experiments/impression-capture/data/matrix_2450.csv
+      - name: Generate 2,450 Excel-compatible unit CSVs
+        run: python scripts/generate_2450.py --input experiments/impression-capture/data/matrix_2450.csv --out build/units
+      - uses: actions/upload-artifact@v4
+        with:
+          name: impression-units-2450
+          path: build/impression-units-2450.zip
+          if-no-files-found: error
+          retention-days: 90

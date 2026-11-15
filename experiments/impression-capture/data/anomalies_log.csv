@@ -1,0 +1,1 @@
+timestamp,anomaly_id,unit_id,category,previous_value,current_value,source_snapshot,method,follow_up_until,status,notes
