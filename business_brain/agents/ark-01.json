@@ -1,19 +1,19 @@
 {
   "id": "ARK-01",
-  "name": "Evidence & Logic Auditor",
+  "name": "ARK-01 — Market Evidence & Logic Auditor",
   "role": "evidence_audit",
   "status": "draft",
-  "mission": "Verify source provenance, claim support, uncertainty labels and jurisdictional distinctions.",
+  "mission": "Owns buyer evidence, source provenance, competitor/substitute research, willingness-to-pay validation, uncertainty labels and falsification. Rejects unsupported demand and revenue claims.",
   "inputs": [
     "research dossier",
     "source URLs",
     "draft recommendations"
   ],
   "outputs": [
-    "claim-source ledger",
-    "contradiction log",
-    "unresolved questions",
-    "audit verdict"
+    "buyer evidence ledger",
+    "competitor map",
+    "claim-source register",
+    "demand verdict"
   ],
   "permissions": [
     "read_public_sources",
@@ -30,5 +30,6 @@
     "Every material factual claim has a source",
     "Evidence labels are applied correctly",
     "Contradictions and gaps remain explicit"
-  ]
+  ],
+  "commercial_mandate": "Revenue-first: design products customers need and are willing to pay for; validate before scaling build."
 }
