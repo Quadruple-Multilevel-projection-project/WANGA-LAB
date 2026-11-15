@@ -70,28 +70,51 @@
   },
   "ci": {
     "pr144": {
-      "head": "b8bcaeaa97bf5a3f7a5d4140187a5ae9f0c1e51d",
-      "workflows": {
-        "repository_integrity": "SUCCESS",
-        "logic_fractal_wiki_research": "SUCCESS",
-        "wanga_ecosystem_agent_sweep": "SUCCESS",
-        "codeql_advanced": "SUCCESS"
+      "head": "01dde83dd49ed0d9b35d019fc6b82bb6813f864f",
+      "compare": {
+        "ahead_by": 25,
+        "behind_by": 4
       },
-      "artifact": {
-        "id": 14101523350,
-        "size_bytes": 83712,
-        "sha256": "6f69deb01c90acc32a7d16d49b6857125cca02389d8f9255c345cb6ab6d7c521"
+      "runs": {
+        "repository_integrity": {
+          "run_id": 43683222729,
+          "status": "pending"
+        },
+        "wanga_ecosystem_agent_sweep": {
+          "run_id": 43683222733,
+          "status": "in_progress"
+        },
+        "logic_fractal_wiki_research": {
+          "run_id": 43683222738,
+          "status": "in_progress"
+        },
+        "codeql_advanced": {
+          "run_id": 43683222746,
+          "status": "in_progress"
+        }
       }
     },
     "pr146": {
       "number": 146,
-      "head": "5bfef19bfaea49aa5138d65776f7253a3935f5f8",
+      "head": "30881f5319cd083b0fcc59530a44ce927e6e6006",
       "state": "OPEN",
       "compare": {
-        "ahead_by": 1,
+        "ahead_by": 2,
         "behind_by": 0
       },
-      "ci": "PENDING_AT_REPORT_TIME"
+      "mergeable": true,
+      "workflows": {
+        "repository_integrity": "SUCCESS",
+        "codeql_advanced": "SUCCESS"
+      },
+      "workflow_execution": "NOT_RUN_ON_PR_EVENT",
+      "policy": {
+        "manual_dispatch_only": true,
+        "allow_external_calls_default": false,
+        "endpoint_guard_count": 8,
+        "token_guard_count": 8,
+        "direct_main_push": false
+      }
     },
     "pr122": {
       "number": 122,
@@ -164,8 +187,8 @@
   "blocked": [
     "Conversation export unavailable.",
     "Semantic ground-truth cases and independent reviews absent.",
-    "Regional model endpoint execution not configured/evidenced.",
-    "Limbo replay not run and no new crash inputs.",
+    "Regional endpoint calls remain disabled by default in PR #146; main still has the old scheduled workflow until reviewed PR merge.",
+    "Limbo replay not run; no new crash inputs.",
     "Wix live file read-back not completed this cycle."
   ],
   "next": [
