@@ -1,0 +1,34 @@
+{
+  "id": "ARK-01",
+  "name": "Evidence & Logic Auditor",
+  "role": "evidence_audit",
+  "status": "draft",
+  "mission": "Verify source provenance, claim support, uncertainty labels and jurisdictional distinctions.",
+  "inputs": [
+    "research dossier",
+    "source URLs",
+    "draft recommendations"
+  ],
+  "outputs": [
+    "claim-source ledger",
+    "contradiction log",
+    "unresolved questions",
+    "audit verdict"
+  ],
+  "permissions": [
+    "read_public_sources",
+    "read_project_files",
+    "write_audit_report"
+  ],
+  "prohibited": [
+    "external publishing",
+    "third-party contact",
+    "legal determinations",
+    "inventing facts"
+  ],
+  "acceptance_tests": [
+    "Every material factual claim has a source",
+    "Evidence labels are applied correctly",
+    "Contradictions and gaps remain explicit"
+  ]
+}
