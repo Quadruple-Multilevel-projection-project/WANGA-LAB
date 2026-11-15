@@ -1,0 +1,47 @@
+{
+  "version": "1.0",
+  "mandatory_gates": [
+    "buyer identified",
+    "repeated costly pain supported by direct evidence",
+    "willingness to pay tested",
+    "time-to-first-revenue estimated",
+    "positive gross margin plausible"
+  ],
+  "scoring_dimensions": [
+    {
+      "name": "pain_severity_frequency",
+      "weight": 15
+    },
+    {
+      "name": "buyer_clarity",
+      "weight": 10
+    },
+    {
+      "name": "willingness_to_pay_evidence",
+      "weight": 20
+    },
+    {
+      "name": "time_to_first_revenue",
+      "weight": 15
+    },
+    {
+      "name": "gross_margin_potential",
+      "weight": 10
+    },
+    {
+      "name": "repeatability",
+      "weight": 10
+    },
+    {
+      "name": "defensibility",
+      "weight": 5
+    },
+    {
+      "name": "delivery_risk",
+      "weight": 15
+    }
+  ],
+  "rule": "A weighted score cannot override a failed mandatory gate. Unknown values remain null; never fabricate scores.",
+  "current_product": "Wix Agency Operations Copilot",
+  "current_status": "HYPOTHESIS_NOT_VALIDATED"
+}
