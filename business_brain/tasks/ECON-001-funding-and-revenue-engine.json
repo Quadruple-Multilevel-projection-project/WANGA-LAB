@@ -1,0 +1,45 @@
+{
+  "task_id": "ECON-001",
+  "title": "Reconcile USD 8–9m project funding need and build the revenue-generating economic function",
+  "status": "source_recovery_and_commercial_design",
+  "priority": "critical",
+  "owner": "231-ECONOMIC-AGENT",
+  "supervisor": "231-EXECUTIVE-ORCHESTRATOR",
+  "supporting_agents": [
+    "ARK-01",
+    "WANGA-STRATEGY"
+  ],
+  "user_stated_context": {
+    "reported_amount_usd_min": 8000000,
+    "reported_amount_usd_max": 9000000,
+    "meaning": "user says this is approximately the project expenses/request submitted to Israel Innovation Authority",
+    "verification": "not yet found in retrieved submission or budget spreadsheet"
+  },
+  "workstreams": [
+    "locate exact submitted application, cost workbook and attachments",
+    "reconcile total costs vs grant request vs matching finance vs in-kind contributions",
+    "model cash needs and funding gaps by quarter and work package",
+    "design first sellable product and paid pilot with verified buyer pain",
+    "design commercial revenue operations and metrics",
+    "define Logic Coin utility and valuation framework"
+  ],
+  "non_negotiable_rules": [
+    "No treating a grant request as awarded money",
+    "No treating valuation estimates as cash",
+    "No fiat valuation for Logic Coin without observable market/utility/reserve evidence",
+    "No large product build without willingness-to-pay validation"
+  ],
+  "outputs": [
+    "source-grounded funding reconciliation",
+    "12-24 month phased cash-flow model",
+    "first-revenue offer shortlist and unit economics",
+    "commercial pipeline plan",
+    "Logic Coin economic design and valuation dashboard"
+  ],
+  "evidence_labels": [
+    "Verified",
+    "Assessment",
+    "Hypothesis",
+    "Unresolved"
+  ]
+}
