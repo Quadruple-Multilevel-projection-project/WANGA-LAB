@@ -76,7 +76,7 @@ The scheduler does not establish an immediate event-triggered chain. Automation 
 ## Audit disposition
 
 - VERIFIED: prompt/schedule/enablement updates were confirmed by post-update dashboard read.
-- VERIFIED: governance handoff artifact was committed to the specified branch (commit SHA recorded after creation).
+- VERIFIED: governance handoff artifact was committed to the specified branch. Initial create_file commit returned by GitHub: f5c97e21412e8fc30c0769a76b6aaa7d755621d3. The final read-back confirmed the file blob SHA shown by GitHub.
 - NOT YET VERIFIED: actual execution of the next Automation 3/2 scheduled runs.
 - NOT YET VERIFIED: deployment of agents, revenue generation, customer demand, Logic Currency issuance, production Wix changes or successful end-to-end agent runtime operation.
 - No external communications, spending, production changes, credential changes, token issuance, contract signing or irreversible operations were performed.
