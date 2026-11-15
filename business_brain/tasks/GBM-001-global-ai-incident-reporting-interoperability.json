@@ -1,0 +1,47 @@
+{
+  "task_id": "GBM-001",
+  "title": "Global AI Incident Reporting Interoperability & Independent Research Pilot",
+  "status": "assigned_for_research",
+  "priority": "high",
+  "owner": "231-EXECUTIVE-ORCHESTRATOR",
+  "agents": [
+    "ARK-01",
+    "WANGA-STRATEGY",
+    "231-EXECUTIVE-ORCHESTRATOR"
+  ],
+  "objective": "Map the OECD common reporting framework and AI Incidents Monitor, identify a useful non-duplicative role for an independent research institute, and design a 90-day pilot.",
+  "scope": [
+    "OECD common reporting framework and its 29 criteria",
+    "OECD AI Incidents Monitor methodology and limitations",
+    "Stakeholder and data-flow map",
+    "Interoperability and evidence-quality gaps",
+    "Independent institute pilot design"
+  ],
+  "out_of_scope": [
+    "Building a competing incident database before gap analysis",
+    "Collecting personal or confidential data",
+    "Legal or regulatory determinations",
+    "Contacting or representing OECD, governments, companies or victims"
+  ],
+  "deliverables": [
+    "source register with dates",
+    "framework/monitor comparison",
+    "stakeholder map",
+    "gap and opportunity assessment",
+    "90-day pilot roadmap with owners, risks and measurable acceptance criteria"
+  ],
+  "acceptance_tests": [
+    "At least three authoritative primary sources",
+    "Distinguish OECD framework, OECD monitor and proposed institute activity",
+    "Every material factual claim source-linked",
+    "Recommendations labeled Assessment, not Verified facts",
+    "No claims of partnership, endorsement or institutional authority"
+  ],
+  "sources": [
+    "https://www.oecd.org/en/publications/towards-a-common-reporting-framework-for-ai-incidents_f326d4ac-en.html",
+    "https://oecd.ai/en/site/incidents",
+    "https://oecd.ai/en/incidents-methodology"
+  ],
+  "evidence_status": "Assessment",
+  "created_at": "2026-11-15T11:35:00+02:00"
+}
