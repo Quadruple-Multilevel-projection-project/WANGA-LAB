@@ -35,7 +35,7 @@
 
 Main commit [2412734756acd4cb22233fd1cfc4c116f69fdabe](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/commit/2412734756acd4cb22233fd1cfc4c116f69fdabe) adds eight regional JSON files containing 48 probe records. All records show `NOT_CONFIGURED`, an empty model field and no output hash or HTTP status. They are not model outputs and do not count as semantic benchmarks.
 
-The current publisher used a direct `git push` from a scheduled workflow. This violates the repository's branch→PR→CI rule. PR [#146](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/146) replaces that step with a review PR. It is open and CI is pending; no merge was performed.
+The current main-branch publisher used a direct `git push` from a scheduled workflow. This violates the repository's branch→PR→CI rule. PR [#146](https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/146) replaces that step with a review PR. It is open, based directly on current main, and Repository Integrity plus CodeQL passed. It removes the schedule, requires an explicit opt-in for external calls and does not write to main. No merge was performed.
 
 ## Logic Fractal readiness
 
