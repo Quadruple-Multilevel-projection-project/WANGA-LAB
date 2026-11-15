@@ -38,7 +38,7 @@ class LedgerVerifierTests(unittest.TestCase):
     def test_rejects_modified_event(self):
         first = make_event("LCE-TEST-00000001", None)
         first["quantity"] = 100
-        with self.assertRaisesRegex(LedgerVerificationError, "digest mismatch"):
+        with self.assertRaisesRegex(LedgerVerificationError, "event_sha256 mismatch"):
             verify_chain([first])
 
     def test_rejects_empty_ledger(self):
