@@ -1,6 +1,6 @@
 {
   "schema_version": "wanga-ecosystem-project-findings/1.0",
-  "snapshot_date": "2026-11-14",
+  "snapshot_date": "2026-11-15",
   "epistemic_rule": "A source proves only what is written in that source; structural links and candidate compositions are not semantic entailments.",
   "findings": [
     {
@@ -224,6 +224,212 @@
       "contradictions": [],
       "permission_scope": "PUBLIC_REPOSITORY_WRITE_ON_BRANCH",
       "next_action": "Wait for the new PR CI run; do not merge until it passes."
+    },
+    {
+      "id": "F-REGIONAL-DIRECT-MAIN-WRITE-2026-11-15",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "main@2412734756acd4cb22233fd1cfc4c116f69fdabe",
+      "file_path": ".github/workflows/regional-drift-agents.yml",
+      "git_blob_sha": "621b4390c3d04d0e742d221fa99c048f8155708f",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/.github/workflows/regional-drift-agents.yml",
+      "summary": "The publish-observations job committed collected regional JSON files and ran git push directly from a scheduled/workflow_dispatch workflow. This bypasses the required branch→PR→CI review path. PR #146 changes the publisher to create-pull-request; CI is pending.",
+      "epistemic_status": "IMPLEMENTATION_POLICY_VIOLATION_CONFIRMED",
+      "overlap_candidates": [
+        "PR #146",
+        "repository publication policy"
+      ],
+      "contradictions": [
+        "Workflow behavior conflicts with the project rule prohibiting direct main writes."
+      ],
+      "permission_scope": "PUBLIC_REPOSITORY_READ; PR branch write",
+      "next_action": "Require PR #146 CI and review before merging; do not merge automatically.",
+      "scan_date": "2026-11-15"
+    },
+    {
+      "id": "F-REGIONAL-NOT-CONFIGURED-2026-11-15",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "main@2412734756acd4cb22233fd1cfc4c116f69fdabe",
+      "file_path": "ai-drift-forensics/global-drift-network/data/regional-observations/",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/commit/2412734756acd4cb22233fd1cfc4c116f69fdabe",
+      "summary": "The commit adds eight regional observation files with six probes each (48 records). All records show status NOT_CONFIGURED, empty model field, and no output hash or HTTP status. The collector calls an endpoint only when DRIFT_ENDPOINT is non-empty; therefore no model response is evidenced by these records.",
+      "epistemic_status": "COLLECTOR_RECORDS_NO_MODEL_OUTPUT",
+      "overlap_candidates": [
+        "regional_collector.py",
+        "regional-drift-agents.yml"
+      ],
+      "contradictions": [
+        "synthetic=false does not establish that a model executed; status and output fields remain authoritative for this run."
+      ],
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "next_action": "Keep the records out of semantic benchmarks; configure endpoints only under explicit authorization and add an explicit execution-state field in a separately reviewed change.",
+      "scan_date": "2026-11-15"
+    },
+    {
+      "id": "F-NTM-TRIBAL-README-2026-11-15",
+      "repository": "tribal-archery/-logicl-neural-order",
+      "ref": "master",
+      "file_path": "README.md",
+      "git_blob_sha": "0ffc15fb869fd479081714d71464b1a77563b92e",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/README.md",
+      "summary": "README describes a provider-neutral NTM coordination layer with 28 reasoning modes, deterministic allocation, capability routing, verification, audit and provenance. It explicitly says M100+ is a scaling target rather than 100 live connections. These claims have not been verified against code/tests in this batch.",
+      "epistemic_status": "README_ARCHITECTURE_CLAIM_NOT_RUNTIME_VERIFIED",
+      "overlap_candidates": [
+        "WANGA NTM architecture",
+        "NEURAL_ORCHESTRATION"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "Inspect implementation and tests before mapping as an equivalent subsystem.",
+      "scan_date": "2026-11-15"
+    },
+    {
+      "id": "F-MULTI-AGENT-ORCHESTRATOR-2026-11-15",
+      "repository": "AmbassadorOv/multi-agent-orchestator",
+      "ref": "main",
+      "file_path": "README.md",
+      "git_blob_sha": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md",
+      "summary": "README documents a three-agent classifier/retriever/reasoner orchestration and example evaluation traces. It is a possible orchestration comparison, not a WANGA implementation or source-grounded logic benchmark.",
+      "epistemic_status": "README_DESCRIPTION_NOT_RUNTIME_VERIFIED",
+      "overlap_candidates": [
+        "WANGA research-agent roles",
+        "NTM semantic routing"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "Inspect code, tests, upstream origin and license before proposing integration.",
+      "scan_date": "2026-11-15"
+    },
+    {
+      "id": "F-MAM-PARSED-2026-11-15",
+      "repository": "tribal-archery/MAM-parsed",
+      "ref": "main",
+      "file_path": "README.md",
+      "git_blob_sha": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c",
+      "source_uri": "https://github.com/tribal-archery/MAM-parsed/blob/main/README.md",
+      "summary": "README describes parsed Miqra/Masorah JSON, parse-tree representation and a Google Sheet source; format is explicitly unstable and the plus format diverges from the source sheet.",
+      "epistemic_status": "DATASET_DESCRIPTION_NOT_LICENSE_OR_CONTENT_VERIFIED",
+      "overlap_candidates": [
+        "WANGA multilingual/canonical-source ingestion"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "Review license, provenance, versioning and transformation rules before ingestion.",
+      "scan_date": "2026-11-15"
+    },
+    {
+      "id": "F-SKILLS-CLI-2026-11-15",
+      "repository": "Quadruple-Multilevel-projection-project/skills",
+      "ref": "main",
+      "file_path": "README.md",
+      "git_blob_sha": "2246383e993f161fd909122d01769059adfb9eab",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/skills/blob/main/README.md",
+      "summary": "README describes a CLI for installing and invoking skills across coding agents; no WANGA-specific package was found.",
+      "epistemic_status": "TOOLING_DESCRIPTION_NOT_INTEGRATED",
+      "overlap_candidates": [
+        "bounded agent role packaging"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "Assess source and license before any optional tooling reuse.",
+      "scan_date": "2026-11-15"
+    },
+    {
+      "id": "F-GENAI-SDK-2026-11-15",
+      "repository": "AmbassadorOv/python-genai",
+      "ref": "main",
+      "file_path": "README.md",
+      "git_blob_sha": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+      "source_uri": "https://github.com/AmbassadorOv/python-genai/blob/main/README.md",
+      "summary": "README documents the Google Gen AI SDK for Gemini and Vertex AI. No endpoint, credential or WANGA provider adapter was selected or tested.",
+      "epistemic_status": "SDK_DOCUMENTATION_NOT_INTEGRATED",
+      "overlap_candidates": [
+        "provider-neutral NTM adapter boundary"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "Keep provider setup separate; require explicit endpoint authorization and tests.",
+      "scan_date": "2026-11-15"
+    },
+    {
+      "id": "F-TIKTOKEN-2026-11-15",
+      "repository": "AmbassadorOv/openai_tiktoken",
+      "ref": "main",
+      "file_path": "README.md",
+      "git_blob_sha": "ad8d88b13f731c1d946a4fc5bd3fc3a153393775",
+      "source_uri": "https://github.com/AmbassadorOv/openai_tiktoken/blob/main/README.md",
+      "summary": "README describes reversible BPE tokenization and tokenization APIs; this is a text preprocessing concern, not semantic logic evidence.",
+      "epistemic_status": "TOOLING_DOCUMENTATION_NOT_LOGIC_EVIDENCE",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "No integration action.",
+      "scan_date": "2026-11-15"
+    },
+    {
+      "id": "F-NANOMATHEMATICS-README-2026-11-15",
+      "repository": "AmbassadorOv/Nanomathematics",
+      "ref": "master",
+      "file_path": "README.md",
+      "git_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/AmbassadorOv/Nanomathematics/blob/master/README.md",
+      "summary": "README is a single Nanomathematics heading; no substantive evidence.",
+      "epistemic_status": "SOURCE_LOCATED_LOW_SIGNAL",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "Defer deeper scan.",
+      "scan_date": "2026-11-15"
+    },
+    {
+      "id": "F-ROBOTICS-TRIPARTITA-README-2026-11-15",
+      "repository": "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "ref": "master",
+      "file_path": "README.md",
+      "git_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/AmbassadorOv/ROBOTICS_TRIPARTITA_Logos/blob/master/README.md",
+      "summary": "README has the same blob SHA and content as Nanomathematics; this is a duplicate content observation, not repository identity.",
+      "epistemic_status": "DUPLICATE_README_BLOB_LOW_SIGNAL",
+      "overlap_candidates": [
+        "AmbassadorOv/Nanomathematics"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "Keep repository distinct; inspect tree only if prioritized.",
+      "scan_date": "2026-11-15"
+    },
+    {
+      "id": "F-QDPROJECTS-README-2026-11-15",
+      "repository": "tribal-archery/Qdprojects",
+      "ref": "master",
+      "file_path": "README.md",
+      "git_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/tribal-archery/Qdprojects/blob/master/README.md",
+      "summary": "README has the same blob SHA and content as Nanomathematics; this is a duplicate content observation, not repository identity.",
+      "epistemic_status": "DUPLICATE_README_BLOB_LOW_SIGNAL",
+      "overlap_candidates": [
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "Keep repository distinct; inspect tree only if prioritized.",
+      "scan_date": "2026-11-15"
+    },
+    {
+      "id": "F-PLATFORM-SAMPLES-2026-11-15",
+      "repository": "AmbassadorOv/platform-samples",
+      "ref": "master",
+      "file_path": "README.md",
+      "git_blob_sha": "a2bb146a181b60c3df0d077c55b197287074ec53",
+      "source_uri": "https://github.com/AmbassadorOv/platform-samples/blob/master/README.md",
+      "summary": "README describes general GitHub Platform examples (API, GraphQL, hooks and scripts); no WANGA logic relationship established.",
+      "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE_UNRELATED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "No integration action.",
+      "scan_date": "2026-11-15"
     }
   ],
   "system_boundaries": {
