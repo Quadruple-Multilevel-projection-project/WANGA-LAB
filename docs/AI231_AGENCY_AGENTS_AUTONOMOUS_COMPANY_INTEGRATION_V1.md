@@ -13,7 +13,7 @@ Use [msitarzewski/agency-agents](https://github.com/msitarzewski/agency-agents) 
 
 The upstream README describes a growing catalog of specialist agents, installation/conversion paths for multiple coding-agent environments, and an MIT license badge. The repository is pinned for this integration review at commit `8ae6164602c95ca78828b148b9052460ee426885`. Recheck the license file and every file's provenance before copying or redistributing content.
 
-The user supplied the figures **232 agents / 16 divisions / 168,000+ stars**. These are treated as user-supplied claims, not verified inventory facts. The actual agent and division counts must be generated from the pinned tree and recorded with a reproducible inventory command before adoption.
+The user supplied the figures **232 agents / 16 divisions / 168,000+ stars**. At the pinned source commit, the upstream `divisions.json` directly lists **18 divisions**, so the supplied division count of 16 does not match that source file. The exact agent count and current star count have not yet been independently measured. The agent count must be generated from the pinned tree and recorded with the reproducible inventory command before adoption.
 
 ## 2. What the upstream project provides — and what it does not
 
