@@ -12,6 +12,7 @@ This registry turns the documented workstreams in `WORK_MANAGER.md` into traceab
 | AG-STANDARDS | Standards Agent | Interoperability/verification matrix | ACTIVE |
 | AG-PUBLICATION | Publication Agent | Public publication package | BLOCKED_PENDING_STATUS |
 | AG-ARCHIVE | Archive Agent | Preservation/version/audit records | ACTIVE |
+| AG-AGENCY-CATALOG | Agency Agents Integration Agent | Pinned upstream inventory, license/provenance audit, AI231 blueprint conversion plan | PLANNED_NOT_ACTIVATED |
 
 ## Execution rule
 
@@ -22,3 +23,7 @@ No agent may publish an unsupported claim about legal status, regulatory authori
 ## Current execution boundary
 
 The repository contains substantial pre-existing research assets. Agents must index and connect those assets before moving or replacing them. Preservation and traceability take priority over structural cleanup.
+
+The Agency Agents integration is specified in `docs/AI231_AGENCY_AGENTS_AUTONOMOUS_COMPANY_INTEGRATION_V1.md`. The upstream catalog agent is PLANNED_NOT_ACTIVATED until its pinned source inventory, license audit, blueprint conversion, sandbox and acceptance evidence are complete.
+
+Action record: Timestamp 2026-11-16T15:28:00+02:00; Contract_Start_Time 2026-11-16T15:27:30+02:00; Action_ID ACT-20261116-AI231-AGENCY-REGISTRY-003; SHA-256 6dfbcce90dcf7fb9d8f63719091382b8d82fadbec7c61fe657e6e8b8c908b6f0.
