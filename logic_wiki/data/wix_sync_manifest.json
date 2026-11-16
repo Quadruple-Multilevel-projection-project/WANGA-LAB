@@ -5,19 +5,19 @@
   "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
   "wiki_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
   "source_catalog": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/articles.json",
-  "synced_article_count": 18,
-  "source_record_count": 16,
-  "relation_link_count": 102,
+  "synced_article_count": 28,
+  "source_record_count": 17,
+  "relation_link_count": 111,
   "homepage_navigation_verified": true,
   "homepage_card_verified": true,
   "existing_model_builder_preserved": true,
   "existing_corpus_atlas_preserved": true,
-  "verification_method": "Wix upload API returned HTTP 200. Public fetch confirmed the new research page title, navigation from homepage and Logic Wiki, and links to the GitHub catalog/taxonomy. Extracted public page text was partial, so exact topic-by-topic read-back remains incomplete.",
-  "automation_boundary": "Connected Wix upload/read-back was used. GitHub Actions does not have Wix credentials; scheduled research must use the connected Wix integration and record a read-back result.",
+  "verification_method": "Wix Headless read-back: files.list returned 29 published files; logic-wiki.html contains 28 entry elements and displays 28 articles, 17 source records and 111 relation links; logic-wiki-fractal-research.html contains 13 cards; logic-wiki-research-status.html still reports the 2026-10-12 snapshot of 18 articles and 11 source records. This is partial read-back, not a full site sync.",
+  "automation_boundary": "The connected Wix integration is available for read-back. GitHub Actions has no Wix credentials. No publish was performed in this cycle because the status-page correction and catalog/taxonomy update are still on an unmerged review branch.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
-  "note": "18 legacy catalog entries remain on the core Logic Wiki. The GitHub research catalog contains 27 entries, including 9 new concepts described on the supplemental fractal-research page. Publication is not semantic verification.",
+  "note": "The live main Logic Wiki page matches the current 28/17/111 catalog counts, but the research-status page remains stale at 18/11. The main-branch taxonomy also omitted ark-swarm-logic-trader; the review branch adds that node and a regression test. Publication is not semantic verification.",
   "extended_topic_page_count": 10,
-  "main_page_card_count": 27,
+  "main_page_card_count": 28,
   "extended_page_resources": [
     {
       "id": "wiki-page-research-status",
@@ -110,7 +110,47 @@
   "additional_pages": [
     "logic-wiki-fractal-research.html"
   ],
-  "main_page_catalog_article_count": 18,
-  "research_catalog_article_count": 27,
-  "supplemental_research_concept_count": 9
+  "main_page_catalog_article_count": 28,
+  "research_catalog_article_count": 28,
+  "supplemental_research_concept_count": 9,
+  "last_readback_date": "2026-11-03",
+  "readback_status": "PARTIAL_STALE",
+  "live_readback": {
+    "site_name": "Logic Engine Research Lab",
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "published": true,
+    "deployed_file_count": 29,
+    "pages": {
+      "logic-wiki.html": {
+        "entry_elements": 28,
+        "displayed_article_count": 28,
+        "displayed_source_record_count": 17,
+        "relation_link_count": 111,
+        "active_composition_contracts": "2/3",
+        "sync_banner_date": "2026-10-12"
+      },
+      "logic-wiki-fractal-research.html": {
+        "card_elements": 13
+      },
+      "logic-wiki-research-status.html": {
+        "snapshot_date": "2026-10-12",
+        "displayed_article_count": 18,
+        "displayed_source_record_count": 11,
+        "readiness_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+        "stale": true
+      }
+    },
+    "github_main_snapshot": {
+      "article_count": 28,
+      "source_record_count": 17,
+      "relation_count": 111,
+      "taxonomy_node_count": 27,
+      "missing_taxonomy_article": "ark-swarm-logic-trader"
+    },
+    "branch_candidate_snapshot": {
+      "taxonomy_node_count": 28,
+      "taxonomy_status": "CANDIDATE_MAP_NOT_ENTAILMENT_GRAPH"
+    },
+    "deployment_action": "NOT_PERFORMED_PENDING_PR_APPROVAL"
+  }
 }

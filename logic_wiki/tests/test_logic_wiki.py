@@ -29,14 +29,31 @@ class LogicWikiTests(unittest.TestCase):
   self.assertEqual(report['article_count'],len(catalog['articles']))
   self.assertNotEqual(report['readiness_gate_status'],'CANDIDATE_RELEASE_READY_FOR_HUMAN_REVIEW')
  def test_wix_sync_manifest_records_stable_extended_resources(self):
+  catalog=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
   manifest=json.loads((ROOT/'logic_wiki/data/wix_sync_manifest.json').read_text(encoding='utf-8'))
-  self.assertEqual(manifest['synced_article_count'],18)
+  self.assertEqual(manifest['synced_article_count'],len(catalog['articles']))
+  self.assertEqual(manifest['source_record_count'],len(catalog['sources']))
+  self.assertEqual(manifest['relation_link_count'],sum(len(a.get('relations',[])) for a in catalog['articles']))
+  self.assertEqual(manifest['main_page_card_count'],len(catalog['articles']))
   self.assertEqual(manifest['extended_topic_page_count'],10)
   ids=[x['id'] for x in manifest['extended_page_resources']]
   self.assertEqual(len(ids),10)
   self.assertEqual(len(ids),len(set(ids)))
   self.assertTrue(all(x.get('source_refs') for x in manifest['extended_page_resources']))
   self.assertTrue(manifest['all_extended_resources_have_source_or_explicit_local_boundary'])
+
+ def test_taxonomy_covers_catalog_and_declared_relations(self):
+  catalog=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
+  taxonomy=json.loads((ROOT/'logic_wiki/data/fractal_taxonomy.json').read_text(encoding='utf-8'))
+  article_ids={x['id'] for x in catalog['articles']}
+  node_ids={x['id'] for x in taxonomy['nodes']}
+  source_ids={x['id'] for x in catalog['sources']}
+  self.assertEqual(article_ids,node_ids)
+  for node in taxonomy['nodes']:
+   self.assertTrue(set(node.get('source_ids',[])).issubset(source_ids),node['id'])
+   self.assertTrue(set(node.get('relation_ids',[])).issubset(node_ids),node['id'])
+  self.assertEqual(taxonomy['validation']['article_count'],len(catalog['articles']))
+  self.assertEqual(taxonomy['validation']['source_count'],len(catalog['sources']))
  def tearDown(self):
   p=ROOT/'logic_wiki/generated-test'
   if p.exists():
