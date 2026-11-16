@@ -89,24 +89,7 @@
       "head_sha": "2fb950e8f0bdf9a677d7255390a3db4506420057",
       "workflow_runs": [
         {
-          "id": 43812282641,
-          "name": "CodeQL Advanced",
-          "status": "in_progress",
-          "jobs": [
-            "Analyze (python)",
-            "Analyze (actions)"
-          ]
-        },
-        {
-          "id": 43812282604,
-          "name": "WANGA Ecosystem Agent Sweep",
-          "status": "in_progress",
-          "jobs": [
-            "public-repository-scout"
-          ]
-        },
-        {
-          "id": 43812282548,
+          "id": 43812344838,
           "name": "Repository Integrity",
           "status": "in_progress",
           "jobs": [
@@ -114,14 +97,30 @@
           ]
         },
         {
-          "id": 43812282654,
+          "id": 43812344767,
+          "name": "CodeQL Advanced",
+          "status": "queued",
+          "jobs": []
+        },
+        {
+          "id": 43812344732,
+          "name": "WANGA Ecosystem Agent Sweep",
+          "status": "in_progress",
+          "jobs": [
+            "public-repository-scout"
+          ]
+        },
+        {
+          "id": 43812344778,
           "name": "Logic Fractal Wiki Research",
           "status": "in_progress",
           "jobs": [
             "validate-build-report"
           ]
         }
-      ]
+      ],
+      "observed_head_sha_before_report_update": "ec327a8a669daa7d45e688a56de51029702af656",
+      "note": "The report update itself creates a new branch commit; CI will also be triggered for that final branch head."
     }
   },
   "MODEL_HASH": {
@@ -227,7 +226,7 @@
     "state": "OPEN_DRAFT",
     "merged": false,
     "mergeable": true,
-    "head_sha": "2fb950e8f0bdf9a677d7255390a3db4506420057"
+    "initial_head_sha": "2fb950e8f0bdf9a677d7255390a3db4506420057"
   },
   "ecosystem_sweep": {
     "unique_repositories_visible": 63,
