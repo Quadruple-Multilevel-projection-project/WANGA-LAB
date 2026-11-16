@@ -1,0 +1,1275 @@
+{
+  "schema_version": "wanga-ecosystem-project-findings/1.0",
+  "generated_at": "2026-11-13T08:19:42+02:00",
+  "permission_scope": "PUBLIC_REPOSITORY_CONTENT_ONLY",
+  "findings": [
+    {
+      "finding_id": "WANGA-LOGIC-WIKI-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "commit": "1cb36e4a05ff5e8ecc26d0dab2526f78e604b580",
+      "path": "logic_wiki/data/articles.json",
+      "blob_sha": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/articles.json",
+      "summary": "28 catalog articles resolve to 17 source IDs; the 2026-11-09 CI report records 111 declared editorial relation edges. These are catalog structures, not semantic entailments.",
+      "epistemic_status": "STRUCTURAL_CANDIDATE",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/AI231.meta.io",
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/MNM"
+      ],
+      "contradictions": [
+        "The generated agent report marks critical_core_contradictions as null and says the contradiction inventory is unavailable, while the static readiness report records 0. Treat the count as NOT_MEASURED until an inventory exists."
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Preserve article/source mappings; do not promote editorial edges to entailment."
+    },
+    {
+      "finding_id": "WANGA-READINESS-GATE-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "commit": "1cb36e4a05ff5e8ecc26d0dab2526f78e604b580",
+      "path": "logic_wiki/data/readiness_gate.json",
+      "blob_sha": "3e782e63ab7ac50e6e7152e938a6d8af169800e4",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/readiness_gate.json",
+      "summary": "FIRST_MODEL_ALPHA_V1 thresholds are explicitly CONFIGURED_NOT_EMPIRICALLY_VALIDATED.",
+      "epistemic_status": "PROJECT_POLICY_SPECIFIED",
+      "overlap_candidates": [
+        "logic_fractal/data/semantic_benchmark_plan_v1.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Keep release blocked until all configured checks pass with evidence."
+    },
+    {
+      "finding_id": "WANGA-COMPOSITION-CONTRACTS-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "commit": "1cb36e4a05ff5e8ecc26d0dab2526f78e604b580",
+      "path": "logic_fractal/data/composition_rules.json",
+      "blob_sha": "3d8bc142785d7d401b705736fe0f384d33d996f3",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_fractal/data/composition_rules.json",
+      "summary": "Three rule definitions exist; two are ACTIVE_SPECIFIED and one recursive rule remains DRAFT_NOT_EXECUTED. The readiness metric correctly counts two active rules with contracts.",
+      "epistemic_status": "SPECIFIED_WITH_TESTED_STRUCTURE",
+      "overlap_candidates": [
+        "logic_fractal/data/recursive_composition_contracts_v1.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Do not count the draft recursive rule as active until acceptance-state and benchmark tests exist."
+    },
+    {
+      "finding_id": "WANGA-SYNTHETIC-TYPED-FIXTURE-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "commit": "1cb36e4a05ff5e8ecc26d0dab2526f78e604b580",
+      "path": "logic_fractal/data/typed_fragments_fixture.json",
+      "blob_sha": "c7496775dfd18b473ec92993401daa6679a32212",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_fractal/data/typed_fragments_fixture.json",
+      "summary": "Three synthetic fragments use fixture placeholder hashes and explicitly declare SYNTHETIC_TEST_FIXTURES_NOT_REAL_CONVERSATION_OR_EXTERNAL_FACTS.",
+      "epistemic_status": "SYNTHETIC_TEST_FIXTURE",
+      "overlap_candidates": [
+        "scripts/build_first_fractal_model.py"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Keep this fixture for software tests; create separately reviewed source-backed fragments before semantic evaluation."
+    },
+    {
+      "finding_id": "WANGA-FIRST-TYPED-CANDIDATE-2026-11-09",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "commit": "09c78e79f475cc4341aa069a4f5e9b158b6eb85c",
+      "path": "research/reports/logic-fractal/typed-first-model-candidate.json",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/42629315588",
+      "summary": "The 2026-11-09 GitHub Actions build completed the two-level candidate builder. Scale-2 model hash a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904; candidate file SHA-256 f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4. Candidate uses only three synthetic fragments.",
+      "epistemic_status": "BUILT_TESTED_SYNTHETIC_ONLY_NOT_RELEASED",
+      "overlap_candidates": [
+        "logic_fractal/fragment_composer.py",
+        "logic_fractal/tests/test_fragment_composer.py"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_ACTION_ARTIFACT",
+      "next_action": "Retain as internal candidate; do not release until real-source fragments, negative/boundary cases, holdout and independent review exist."
+    },
+    {
+      "finding_id": "WANGA-SEMANTIC-BENCHMARK-2026-11-09",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "commit": "09c78e79f475cc4341aa069a4f5e9b158b6eb85c",
+      "path": "research/reports/formal-reasoning/source-grounded-benchmark-latest.json",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/42629315588",
+      "summary": "Source-grounded benchmark report has 0 cases, 0 reviewed executable cases and 0 source classes; status BLOCKED_INSUFFICIENT_REVIEWED_CASES. Separate propositional smoke suite passed 5/5 synthetic cases and is not semantic ground truth.",
+      "epistemic_status": "BENCHMARK_BLOCKED_NO_GROUNDED_CASES",
+      "overlap_candidates": [
+        "logic_fractal/data/semantic_benchmark_plan_v1.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_ACTION_ARTIFACT",
+      "next_action": "Populate reviewed positive, negative/counterexample and boundary suites; freeze holdout before tuning."
+    },
+    {
+      "finding_id": "WANGA-WIX-MANIFEST-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "commit": "1cb36e4a05ff5e8ecc26d0dab2526f78e604b580",
+      "path": "logic_wiki/data/wix_sync_manifest.json",
+      "blob_sha": "d4dcaa4c439d66b380ffa7be5d3169de78104395",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/wix_sync_manifest.json",
+      "summary": "Manifest says last sync 2026-10-12 and PUBLISHED_READ_BACK_PARTIAL; it records 27 research catalog entries while the current catalog has 28.",
+      "epistemic_status": "SYNC_MANIFEST_STALE_REQUIRES_REVIEW",
+      "overlap_candidates": [
+        "logic_wiki/data/articles.json"
+      ],
+      "contradictions": [
+        "Manifest article count is one below the current catalog count; exact topic-by-topic Wix read-back remains incomplete."
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Do not publish automatically. Reconcile catalog count, approve public content, then use Wix deployment and read-back."
+    },
+    {
+      "finding_id": "LIMBO-REALITY-MATRIX-2026-11-07",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "deploy/limbo-cartography-core-v1",
+      "commit": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+      "path": "limbo-cartography-core/cartography/reality_matrix.json",
+      "blob_sha": "86593dd31e5c20bf47c81d09d527967cf0a22476",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/deploy/limbo-cartography-core-v1/limbo-cartography-core/cartography/reality_matrix.json",
+      "summary": "Version 1.3.0, last updated 2026-10-19; 10 distinct recorded CI failure observations and 2 history events. State remains RECURRENCE_PATTERN_OBSERVED_CURRENT_SYSTEM_STATE_UNASSESSED.",
+      "epistemic_status": "SOURCE_BACKED_OBSERVATIONS_CURRENT_STATE_UNASSESSED",
+      "overlap_candidates": [
+        "limbo-cartography-core/cartography/iterative_crash_map.json"
+      ],
+      "contradictions": [
+        "PR body says latest branch head f70e09e..., but live PR/ref metadata reports 0877000b... (2026-11-07). PR body is stale."
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Preserve all 10 records; inspect new evidence before appending; refresh PR description only after reviewer approval."
+    },
+    {
+      "finding_id": "LIMBO-ITERATIVE-MAP-2026-11-07",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "deploy/limbo-cartography-core-v1",
+      "commit": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+      "path": "limbo-cartography-core/cartography/iterative_crash_map.json",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/deploy/limbo-cartography-core-v1/limbo-cartography-core/cartography/iterative_crash_map.json",
+      "summary": "Deterministic map records 14 nodes and 19 edges with map SHA-256 46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5; recorded links are not causal proof.",
+      "epistemic_status": "BUILT_FROM_REGISTERED_RECORDS_NOT_CAUSAL_PROOF",
+      "overlap_candidates": [
+        "limbo-cartography-core/cartography/reality_matrix.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Retain append-only history; rerun on fresh CI after approval."
+    },
+    {
+      "finding_id": "LIMBO-TUNING-CANDIDATE-2026-11-07",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "deploy/limbo-cartography-core-v1",
+      "commit": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+      "path": "limbo-cartography-core/cartography/tuning_candidates/TUNE-9c166900cc4ad5dd.json",
+      "blob_sha": "3c18338fba440158a2feb6ecc84c08258118f282",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/deploy/limbo-cartography-core-v1/limbo-cartography-core/cartography/tuning_candidates/TUNE-9c166900cc4ad5dd.json",
+      "summary": "Candidate remains CANDIDATE_REPLAY_REQUIRED / NOT_RUN. Its linked prior retest result is PASS, but replay against the current target system remains required.",
+      "epistemic_status": "CANDIDATE_REPLAY_REQUIRED",
+      "overlap_candidates": [
+        "limbo-cartography-core/engine/seismic_detector.py"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Do not mark verified; require a fresh replay against the current target."
+    },
+    {
+      "finding_id": "LIMBO-LOGIC-BUNDLE-2026-11-07",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "deploy/limbo-cartography-core-v1",
+      "commit": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+      "path": "limbo-cartography-core/cartography/logic_bundles/VITRUVIUS-QUEUE-CONTRACT-RECURRENCE.json",
+      "blob_sha": "2133344b33cbf5640e03421f4b4977d080182e7a",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/deploy/limbo-cartography-core-v1/limbo-cartography-core/cartography/logic_bundles/VITRUVIUS-QUEUE-CONTRACT-RECURRENCE.json",
+      "summary": "Seven recurring queue-contract failures are recorded; root cause remains NOT_YET_ESTABLISHED and the bundle is DRAFT_UNVERIFIED.",
+      "epistemic_status": "DRAFT_UNVERIFIED",
+      "overlap_candidates": [
+        "tests/test_research_agent_work_queue.py"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect actual queue generator and serialized output; preserve recurrence history; require implementation and retest."
+    },
+    {
+      "finding_id": "AI231-HANDOFF-2026-10-22",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "branch": "main",
+      "commit": "9f10f1919596084f7983804a9682a18b1e7960a3",
+      "path": "AI-AGENT-HANDOFF-NOTICE.md",
+      "blob_sha": "2e2698d337a60a93059d85d4302ea01cc3837b7b",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io/blob/main/AI-AGENT-HANDOFF-NOTICE.md",
+      "summary": "Source text specifies sequential L1 FOL structure, L2 derivation, L3 relation/rule validation, evidence/provenance filtering and deterministic output filtering; it explicitly forbids SOURCE→FACT and mapping→identity promotions.",
+      "epistemic_status": "SOURCE_TEXT_PROJECT_CONTRACT_NOT_INDEPENDENTLY_VALIDATED",
+      "overlap_candidates": [
+        "WANGA-LAB AI-AGENT-NOTICE.md",
+        "logic_wiki/data/readiness_gate.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare exact gate semantics against WANGA-LAB before any shared contract is proposed."
+    },
+    {
+      "finding_id": "AI231-CONTRACT-GOVERNANCE-2026-10-22",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "branch": "main",
+      "commit": "9f10f1919596084f7983804a9682a18b1e7960a3",
+      "path": "governance/CONTRACT_GOVERNANCE.md",
+      "blob_sha": "730544efb7448e9c9cadf199e2b7a28214ac23fb",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io/blob/main/governance/CONTRACT_GOVERNANCE.md",
+      "summary": "It states the canonical contract_v1.3.json was not located and must not be reconstructed; it also states weights remain NOT_CREATED until source-grounded logic and verification gates pass.",
+      "epistemic_status": "SOURCE_TEXT_SOURCE_GAP_RECORDED",
+      "overlap_candidates": [
+        "WANGA-LAB governance/contracts/registry.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Fetch the exact authorized contract source or keep the dependency blocked."
+    },
+    {
+      "finding_id": "AI231-HISTORICAL-PARSER-2026-10-22",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "branch": "main",
+      "commit": "9f10f1919596084f7983804a9682a18b1e7960a3",
+      "path": "datasets/embeddings/historical_logic_parser.py",
+      "blob_sha": "cd49133c4469ace4f4461449f3985580fdf826c9",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io/blob/main/datasets/embeddings/historical_logic_parser.py",
+      "summary": "The parser cycles five classical reasoning labels across indices 1..231. This is an implementation pattern, not a source-grounded mapping of 231 distinct logical gates.",
+      "epistemic_status": "IMPLEMENTATION_FOUND_SEMANTIC_MAPPING_UNVERIFIED",
+      "overlap_candidates": [
+        "WANGA-LAB logic_fractal/data/typed_fragments_fixture.json",
+        "MNM",
+        "-logicl-neural-order"
+      ],
+      "contradictions": [
+        "The implementation docstring describes extraction, but code cycles a fixed five-item list; do not treat this as 231 unique extracted definitions."
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Require exact source spans and a non-cyclic mapping test before considering integration."
+    },
+    {
+      "finding_id": "AGENT-TERRAFORM-README-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "branch": "main",
+      "path": "README.md",
+      "blob_sha": "1530209671f6f76eb1808cf17d9584437e1e867b",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/ai-agent-terraform/blob/main/README.md",
+      "summary": "README describes Terraform deployment for agent/chat infrastructure and explicitly warns that main is out of date.",
+      "epistemic_status": "SOURCE_TEXT_INFRASTRUCTURE_CANDIDATE",
+      "overlap_candidates": [
+        "WANGA-LAB compute_profile.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect current branches before relying on this repository."
+    },
+    {
+      "finding_id": "DUPLICATE-README-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order; Quadruple-Multilevel-projection-project/MNM",
+      "branch": "master",
+      "path": "README.md",
+      "blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-logicl-neural-order/blob/master/README.md",
+      "summary": "Both repositories return the same README blob SHA and title Nanomathematics. This is a documentation duplicate signal, not evidence that the repositories are identical.",
+      "epistemic_status": "DUPLICATE_SOURCE_CANDIDATE",
+      "overlap_candidates": [
+        "AmbassadorOv/Nanomathematics"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare repository trees and commit lineage in a later batch."
+    },
+    {
+      "finding_id": "SKILLS-README-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/skills",
+      "branch": "main",
+      "path": "README.md",
+      "blob_sha": "2246383e993f161fd909122d01769059adfb9eab",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/skills/blob/main/README.md",
+      "summary": "README describes a CLI for installing and using agent skills; no direct WANGA integration is evidenced by the README.",
+      "epistemic_status": "TOOLING_CANDIDATE_NO_INTEGRATION_EVIDENCE",
+      "overlap_candidates": [
+        "WANGA-LAB agent_registry.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Evaluate only if a concrete skill-packaging use case emerges."
+    },
+    {
+      "finding_id": "GLOBAL-SPEED-README-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/globalSpeed",
+      "branch": "master",
+      "path": "README.md",
+      "blob_sha": "a6976e6480700db0264d5dd7a20267a04f9209f0",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/globalSpeed/blob/master/README.md",
+      "summary": "Repository is a browser media playback-speed extension; no direct WANGA logic or provenance overlap found.",
+      "epistemic_status": "NO_DIRECT_OVERLAP_FOUND_IN_README",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No action; do not modify unrelated repository."
+    },
+    {
+      "finding_id": "ARK-KERNEL-README-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "branch": "main",
+      "path": "README.md",
+      "blob_sha": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT/blob/main/README.md",
+      "summary": "README contains only the project title; insufficient material to establish architecture or integration.",
+      "epistemic_status": "ACCESSIBLE_BUT_INSUFFICIENT_DOCUMENTATION",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/AI231.meta.io"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect repository tree and targeted source files in a later batch."
+    },
+    {
+      "finding_id": "QUALIA-README-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/Qualia",
+      "branch": "main",
+      "path": "README.md",
+      "blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/Qualia/blob/main/README.md",
+      "summary": "README links to an external blog and contains no substantive implementation details.",
+      "epistemic_status": "ACCESSIBLE_BUT_INSUFFICIENT_DOCUMENTATION",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect targeted files if future search identifies relevant architecture."
+    },
+    {
+      "finding_id": "O-MS-README-2026-11-10",
+      "repository_full_name": "AmbassadorOv/O-Ms",
+      "branch": "main",
+      "path": "README.md",
+      "blob_sha": "5477f49658507c3de65a774eb54976d22a3e0c52",
+      "source_uri": "https://github.com/AmbassadorOv/O-Ms/blob/main/README.md",
+      "summary": "README contains only a project title; insufficient documentation for integration.",
+      "epistemic_status": "ACCESSIBLE_BUT_INSUFFICIENT_DOCUMENTATION",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect later only if code search reveals relevant logic or agent material."
+    },
+    {
+      "finding_id": "GLOWING-OCTO-WADDLE-README-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "branch": "main",
+      "path": "README.md",
+      "blob_sha": null,
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/glowing-octo-waddle/blob/main/README.md",
+      "summary": "README.md returned 404; repository metadata is visible, but no README source was available at that path.",
+      "epistemic_status": "ACCESS_GAP",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect root tree before concluding that documentation is absent."
+    },
+    {
+      "finding_id": "WANGA-ECOSYSTEM-WORKFLOW-SCOPE-2026-11-10",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "automation/2026-11-10-ecosystem-pathspec-fix",
+      "commit": "64acb3789f709329f5baa2042ca0ada009b755d6",
+      "path": "research/reports/ecosystem/2026-11-10-batch-02.md",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/42760761084",
+      "summary": "The repository's own ecosystem workflow returned only WANGA-LAB and reported CROSS_REPO_READ_TOKEN not configured. The connected GitHub integration separately exposed 63 repositories and was used for the bounded 10-companion-repository scan in this cycle.",
+      "epistemic_status": "ACCESS_SCOPE_LIMITED_WORKFLOW_REPORT",
+      "overlap_candidates": [
+        "research/ecosystem/repository_inventory.json",
+        "research/ecosystem/scan_cursor.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_ACTION_ARTIFACT",
+      "next_action": "Keep workflow scope explicit; configure an approved least-privilege cross-repo read token only if account-wide Actions scanning is required."
+    },
+    {
+      "finding_id": "NTM-ARCHITECTURE-V1-2026-11-11",
+      "repository_full_name": "tribal-archery/-logicl-neural-order",
+      "branch": "master",
+      "path": "NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+      "blob_sha": "68c171349aedc8f9c24d3a795de7bcde9eb07539",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+      "summary": "Specifies a provider-neutral orchestration topology, shared task/context/state/evidence/provenance/verification/drift/decision/audit contracts, capability-based task allocation, and concurrent execution for independent subtasks. This is an architecture specification; the document says AGI satisfaction remains an empirical question.",
+      "epistemic_status": "ARCHITECTURE_SPECIFIED_NOT_RUNTIME_VERIFIED",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB",
+        "AmbassadorOv/TTTT-0.0.0.0.1"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare task/result envelope, evidence status, decision gate and drift taxonomy against WANGA-LAB NTM/LNL contracts before proposing any integration."
+    },
+    {
+      "finding_id": "NTM-PROTOTYPE-READINESS-V1-2026-11-11",
+      "repository_full_name": "tribal-archery/-logicl-neural-order",
+      "branch": "master",
+      "path": "NEURAL_ORCHESTRATION/PROTOTYPE_READINESS_V1.md",
+      "blob_sha": "d3dce812dff67247c5f9c21ee00f9e1e49bfdfdc",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/PROTOTYPE_READINESS_V1.md",
+      "summary": "Defines a measurable end-to-end prototype: deterministic routing, evidence status, generator/verifier separation, provenance hashes, contradiction preservation, drift record and self-audit. Explicitly states that the document is a readiness gate, not proof all components are implemented.",
+      "epistemic_status": "READINESS_CONTRACT_SPECIFIED",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB",
+        "logic_wiki/data/readiness_gate.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Crosswalk each DoD item to an executable WANGA-LAB test or mark it missing; do not count the specification itself as a test."
+    },
+    {
+      "finding_id": "TTTT-TEAM-MAP-2026-11-11",
+      "repository_full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "branch": "main",
+      "path": "teams/TEAM_MAP.md",
+      "blob_sha": "461e53ab775e6933081664a89ce405fc8b40e610",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/AmbassadorOv/TTTT-0.0.0.0.1/blob/main/teams/TEAM_MAP.md",
+      "summary": "Defines eight team roles, including Nanomathematics as fractal extraction, Logical-Neural Order as logic/translation/derivation, Multi-Agent Orchestration as execution coordination, and TTTT Core as shared contracts. States: Known Relationship → Source/Evidence → Verification Status; no lineage inference by similarity.",
+      "epistemic_status": "TEAM_ARCHITECTURE_SPECIFIED",
+      "overlap_candidates": [
+        "tribal-archery/-logicl-neural-order",
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/multi-agent-orchestator"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Use as a candidate cross-repository map; verify each listed repo/path independently and preserve unresolved references."
+    },
+    {
+      "finding_id": "MAM-PARSED-CORPUS-2026-11-11",
+      "repository_full_name": "tribal-archery/MAM-parsed",
+      "branch": "main",
+      "path": "README.md",
+      "blob_sha": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/tribal-archery/MAM-parsed/blob/main/README.md",
+      "summary": "Describes parsed Miqra According to the Masorah data in plain and plus JSON formats for 24 books, sourced from the MAM Google Sheet. Plus format changes selected annotations and removes XML/pseudo-verses; README explicitly warns the JSON schema is not stable.",
+      "epistemic_status": "SOURCE_CORPUS_REFERENCE_SCHEMA_UNSTABLE",
+      "overlap_candidates": [
+        "WANGA-LAB research corpus",
+        "Sefer Yetzirah / Hebrew text research"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Do not ingest as canonical text without version pinning and source-to-JSON mapping; first inspect exact book-level schema and licensing/provenance."
+    },
+    {
+      "finding_id": "MULTIAGENT-ORCHESTRATOR-REFERENCE-2026-11-11",
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch": "main",
+      "path": "README.md",
+      "blob_sha": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md",
+      "summary": "README documents three agent roles (classification, retrieval, reasoning), HotPotQA/GSM8K references, optional local JSON/LanceDB retrieval and Guardrails setup. Clone instruction names sachi097/multi-agent-orchestator; this is an upstream/fork lineage candidate, not verified WANGA implementation.",
+      "epistemic_status": "EXTERNAL_REFERENCE_NOT_VALIDATED",
+      "overlap_candidates": [
+        "AmbassadorOv/TTTT-0.0.0.0.1",
+        "WANGA-LAB agent roles"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Record upstream lineage and compare agent handoff/evaluation contracts; do not copy code or run API-backed tests in this sweep."
+    },
+    {
+      "finding_id": "IDENTICAL-README-BLOB-CLUSTER-2026-11-11",
+      "repository_full_name": "AmbassadorOv/Nanomathematics; AmbassadorOv/ROBOTICS_TRIPARTITA_Logos; tribal-archery/Qdprojects",
+      "branch": "master / master / master",
+      "path": "README.md",
+      "blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/AmbassadorOv/Nanomathematics/blob/master/README.md",
+      "summary": "Three distinct repository objects return the same Git blob SHA for a one-line README '# Nanomathematics'. This proves identical README blob content only; it does not prove repository identity, code equivalence, or shared history.",
+      "epistemic_status": "DUPLICATE_README_BLOB_SOURCE_GAP",
+      "overlap_candidates": [
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+        "tribal-archery/Qdprojects"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect trees and commit ancestry in a later bounded pass before classifying as mirrors or duplicate projects."
+    },
+    {
+      "finding_id": "TTTT-CROSS-REFERENCE-GAPS-2026-11-11",
+      "repository_full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "branch": "main",
+      "path": "README.md",
+      "blob_sha": "ac7a2d203877442ddba493889239e61aed56ec78",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/AmbassadorOv/TTTT-0.0.0.0.1/blob/main/README.md",
+      "summary": "README references AmbassadorOv/TTTTproject-un.gov and AmbassadorOv/branches; current visible inventory instead contains AmbassadorOv/TTTTproject-un.govt and AmbassadorOv/branches-. Exact target references were not found in the live inventory snapshot.",
+      "epistemic_status": "DOCUMENTATION_REFERENCE_GAP",
+      "overlap_candidates": [
+        "AmbassadorOv/TTTTproject-un.govt",
+        "AmbassadorOv/branches-"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Resolve intended repository targets by exact name and commit evidence; do not silently redirect links."
+    },
+    {
+      "finding_id": "CYBER-DEPARTMENT-README-REVIEW-2026-11-11",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "branch": "master",
+      "path": "README.md",
+      "blob_sha": "5bce36b9ed2ffd0c0ebfec2a5e806e974c12ca05",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department/blob/master/README.md",
+      "summary": "README is a sample text-generation module combining philosophical, governance and technical sections, including legacy quantum-inspired wording. No tests or source-backed claims are established by the README.",
+      "epistemic_status": "EXAMPLE_TEXT_NOT_VALIDATED",
+      "overlap_candidates": [
+        "WANGA-LAB research archive",
+        "AmbassadorOv/TTTT-0.0.0.0.1"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Treat as historical/example material pending content review; do not reuse as approved public Logic Wiki copy."
+    },
+    {
+      "finding_id": "TTTTPROJECT-IDENTITY-MISMATCH-2026-11-11",
+      "repository_full_name": "AmbassadorOv/TTTTproject-un.govt",
+      "branch": "master",
+      "path": "README.md",
+      "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "hash_type": "git_blob_sha",
+      "source_uri": "https://github.com/AmbassadorOv/TTTTproject-un.govt/blob/master/README.md",
+      "summary": "README heading identifies World-Party-Federation-Branches-managers rather than TTTT/International Research. Repository name and README title are inconsistent in the current public snapshot.",
+      "epistemic_status": "REPOSITORY_DOCUMENTATION_IDENTITY_GAP",
+      "overlap_candidates": [
+        "AmbassadorOv/World-Party-Federation-Branches-managers",
+        "AmbassadorOv/TTTT-0.0.0.0.1"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect tree and commit history in a later pass; do not infer repository purpose from its name alone."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-WORLD-PARTY-MANAGERS",
+      "repository_full_name": "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "source_uri": "https://github.com/AmbassadorOv/World-Party-Federation-Branches-managers/blob/master/README.md",
+      "summary": "README contains only the heading 'World-Party-Federation-Branches-managers'. Its Git blob is identical to AmbassadorOv/TTTTproject-un.govt/README.md; this is a duplicate-document signal, not repository identity.",
+      "epistemic_status": "DUPLICATE_BLOB_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "overlap_candidates": [
+        "AmbassadorOv/TTTTproject-un.govt"
+      ],
+      "contradictions": [
+        "README Git blob matches AmbassadorOv/TTTTproject-un.govt/README.md exactly; this does not establish repository identity."
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare repository trees and commit ancestry before treating the two repositories as duplicates."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-GOOGLEAPIS",
+      "repository_full_name": "AmbassadorOv/googleapis",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "6ba73116d009c622bf3057f81a563b2070daea51",
+      "source_uri": "https://github.com/AmbassadorOv/googleapis/blob/master/README.md",
+      "summary": "README describes public API interface definitions, primarily Protocol Buffers/proto3 and generated API surfaces. Potential typed-interface reference only; not WANGA logic or a validated runtime dependency.",
+      "epistemic_status": "API_SCHEMA_TOOLING_REFERENCE_NOT_ADOPTED",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Use only as an external API schema reference if a concrete connector contract requires it."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-DESKTOP",
+      "repository_full_name": "AmbassadorOv/desktop",
+      "branch": "development",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "c7702d385076e80f365a23d17dc868b9ecb6a5ad",
+      "source_uri": "https://github.com/AmbassadorOv/desktop/blob/development/README.md",
+      "summary": "README describes GitHub Desktop, an Electron/TypeScript/React desktop client. General developer tooling; no direct WANGA logic, NTM, MLN, or provenance implementation identified.",
+      "epistemic_status": "PUBLIC_REPOSITORY_README_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No change to this repository. Retain only as a public descriptive reference unless a specific WANGA integration need is demonstrated."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-PLATFORM-SAMPLES",
+      "repository_full_name": "AmbassadorOv/platform-samples",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "a2bb146a181b60c3df0d077c55b197287074ec53",
+      "source_uri": "https://github.com/AmbassadorOv/platform-samples/blob/master/README.md",
+      "summary": "README describes GitHub Platform API, GraphQL, webhook, and integration samples. Possible CI/integration reference, but no WANGA-specific implementation or tests were inspected.",
+      "epistemic_status": "INTEGRATION_TOOLING_REFERENCE_NOT_ADOPTED",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect only if a specific GitHub API/webhook workflow is required; no external write or adoption in this cycle."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-FIREBASE-EXTENSIONS",
+      "repository_full_name": "AmbassadorOv/extensions",
+      "branch": "next",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "6ef8b6a54813922bf64bad64c8e7301f8dc620c2",
+      "source_uri": "https://github.com/AmbassadorOv/extensions/blob/next/README.md",
+      "summary": "README describes Firebase Extensions and their deployment/integration model. External infrastructure reference only; not evidence of WANGA runtime integration.",
+      "epistemic_status": "PUBLIC_REPOSITORY_README_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No change to this repository. Retain only as a public descriptive reference unless a specific WANGA integration need is demonstrated."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-AMBASSADOROV-PROFILE",
+      "repository_full_name": "AmbassadorOv/AmbassadorOv",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "d2664df6ce794e353a4d1b04682627c3b13f0bb9",
+      "source_uri": "https://github.com/AmbassadorOv/AmbassadorOv/blob/main/README.md",
+      "summary": "Profile README presents the public research identity and links the WANGA-LAB archive. This is a public research-index relationship, not an implementation dependency or proof of project status.",
+      "epistemic_status": "PUBLIC_RESEARCH_INDEX_DESCRIPTION",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Preserve the profile-to-WANGA public index link as a documentation relationship only; do not infer implementation state from profile wording."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-GITHUB-DOCS",
+      "repository_full_name": "AmbassadorOv/docs",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "69090a601896b5189a5b3ee42105ed42638016be",
+      "source_uri": "https://github.com/AmbassadorOv/docs/blob/main/README.md",
+      "summary": "README identifies a GitHub documentation source tree. Useful as external documentation material only; no WANGA-specific logic or source corpus was identified.",
+      "epistemic_status": "PUBLIC_REPOSITORY_README_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No change to this repository. Retain only as a public descriptive reference unless a specific WANGA integration need is demonstrated."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-MERMAID",
+      "repository_full_name": "AmbassadorOv/mermaid",
+      "branch": "develop",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "456747132cbc6ed1dde4f8d5f0712deb71b47be8",
+      "source_uri": "https://github.com/AmbassadorOv/mermaid/blob/develop/README.md",
+      "summary": "README describes Mermaid text-based diagrams and chart rendering. Potential visualization tooling for maps; diagram output is not logical evidence or semantic validation.",
+      "epistemic_status": "VISUALIZATION_TOOLING_REFERENCE_NOT_ADOPTED",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Mermaid may render reviewed maps, but diagram edges remain presentation and do not become semantic entailments."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-VSCODE-AZURE-BLOCKCHAIN",
+      "repository_full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "source_uri": "https://github.com/AmbassadorOv/vscode-azure-blockchain-ethereum/blob/master/README.md",
+      "summary": "README describes an Azure Blockchain Development Kit for Ethereum and an older VS Code/Node/Python toolchain. Legacy tooling reference; no current WANGA runtime link established.",
+      "epistemic_status": "LEGACY_TOOLING_REFERENCE",
+      "overlap_candidates": [],
+      "contradictions": [
+        "README describes an older toolchain; current WANGA runtime compatibility is not established."
+      ],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Do not use as a current runtime baseline without a separate compatibility review."
+    },
+    {
+      "finding_id": "ECOSYS-2026-11-12-ESLINT",
+      "repository_full_name": "AmbassadorOv/eslint",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "326c6121e810f4d1edfbc781eff4d5b7f46d1c36",
+      "source_uri": "https://github.com/AmbassadorOv/eslint/blob/main/README.md",
+      "summary": "README describes ESLint AST-based static analysis and rule plugins. Possible software-quality tooling; it cannot establish semantic correctness or source truth.",
+      "epistemic_status": "STATIC_ANALYSIS_TOOLING_REFERENCE_NOT_ADOPTED",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Consider only for source-code linting; do not treat static lint results as semantic verification."
+    },
+    {
+      "finding_id": "ECOSYS-OPENAI-TIKTOKEN-2026-11-13",
+      "repository_full_name": "AmbassadorOv/openai_tiktoken",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "ad8d88b13f731c1d946a4fc5bd3fc3a153393775",
+      "source_uri": "https://github.com/AmbassadorOv/openai_tiktoken/blob/main/README.md",
+      "summary": "README states BPE tokenization is reversible and lossless for text. This may inform text preprocessing, but it does not preserve conversation topology or semantic provenance by itself.",
+      "epistemic_status": "DOCUMENTATION_CLAIM_NOT_INDEPENDENTLY_TESTED",
+      "overlap_candidates": [
+        "WANGA-LAB conversation intake",
+        "WANGA source-span registry"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "If adopted, test byte-for-byte round trips and keep original text, IDs, timestamps and parent links as separate fields."
+    },
+    {
+      "finding_id": "ECOSYS-ARTIFICIAL-Y-2026-11-13",
+      "repository_full_name": "AmbassadorOv/-artificial-y",
+      "branch": "main",
+      "commit": null,
+      "path": "AI231_MASTER_DISTILLATE.json",
+      "blob_sha": "76ab7a001db2d783aa1555fa2a1894995b2f5e12",
+      "source_uri": "https://github.com/AmbassadorOv/-artificial-y/blob/main/AI231_MASTER_DISTILLATE.json",
+      "summary": "README.md was not found. The inspected JSON declares logic_before_weight=true, source names, 231 gates, 230 space groups, a physical substrate and a 10,000-agent swarm. THE_FLY_PROTOCOL.md describes a deterministic local graph/action guard; the validator code uses threshold and logic_type checks. These are design/configuration claims; runtime, hardware and swarm deployment were not verified.",
+      "epistemic_status": "DECLARATIVE_ARCHITECTURE_CLAIMS_NOT_VALIDATED",
+      "overlap_candidates": [
+        "WANGA-LAB logic-before-weights",
+        "WANGA-LAB NTM",
+        "AI231.meta.io"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect the actual 231-gate source matrix and executable orchestration path; do not count the boolean flag as an implemented logic-before-weights pipeline.",
+      "inspected_sources": [
+        {
+          "path": "AI231_MASTER_DISTILLATE.json",
+          "blob_sha": "76ab7a001db2d783aa1555fa2a1894995b2f5e12"
+        },
+        {
+          "path": "jules/THE_FLY_PROTOCOL.md",
+          "blob_sha": "458df0888d157bcf4d5bcb629d91fc1c711b485b"
+        },
+        {
+          "path": "swarm/01_AGENT_ARCHETYPES.json",
+          "blob_sha": "b7897b3b32ecfe8b093abfd3acef31ee87c66361"
+        },
+        {
+          "path": "swarm/03_ENLIGHTENED_VALIDATOR.py",
+          "blob_sha": "fc760093e84e27a07b7bb29d1de0335da3f7fe6c"
+        },
+        {
+          "path": "tests/test_main.py",
+          "blob_sha": "a4b11b552d9f5fde397e6d41c565d3942aa45f24"
+        }
+      ],
+      "readme_status": "NOT_FOUND",
+      "tests_status": "NOT_RUN"
+    },
+    {
+      "finding_id": "ECOSYS-QUALIA-2026-11-13",
+      "repository_full_name": "AmbassadorOv/Qualia",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "source_uri": "https://github.com/AmbassadorOv/Qualia/blob/main/README.md",
+      "summary": "README contains only the repository heading and a Blogspot URL; no technical structure was established.",
+      "epistemic_status": "MINIMAL_README_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect the linked source and repository tree only if a concrete WANGA relationship becomes relevant."
+    },
+    {
+      "finding_id": "ECOSYS-GENERATIVE-AI-DOCS-2026-11-13",
+      "repository_full_name": "AmbassadorOv/generative-ai-docs",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "1bf3babd967e73a1cff092805c4ff151fba95baf",
+      "source_uri": "https://github.com/AmbassadorOv/generative-ai-docs/blob/main/README.md",
+      "summary": "README identifies Google Gemini/Gemma developer documentation with notebooks, demos and examples. This is an external documentation corpus, not a WANGA implementation.",
+      "epistemic_status": "EXTERNAL_DOCUMENTATION_REFERENCE",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Use only as documentation when a specific interoperability task requires it; no API use in this batch."
+    },
+    {
+      "finding_id": "ECOSYS-MUJOCO-2026-11-13",
+      "repository_full_name": "AmbassadorOv/mujoco",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "62d57c19af93682355c27e668422bf8aa87c430b",
+      "source_uri": "https://github.com/AmbassadorOv/mujoco/blob/main/README.md",
+      "summary": "README describes a physics engine for articulated structures, robotics and simulation with C and Python interfaces. Potential spatial-simulation reference only.",
+      "epistemic_status": "EXTERNAL_SIMULATION_REFERENCE_NOT_ADOPTED",
+      "overlap_candidates": [
+        "WANGA-LAB spatial simulation"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare only against an explicitly scoped spatial-simulation requirement; do not treat the README as evidence of WANGA integration."
+    },
+    {
+      "finding_id": "ECOSYS-COOKBOOK-2026-11-13",
+      "repository_full_name": "AmbassadorOv/cookbook",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "646c146ea44ee0175fccf62427bcc03dd88ed1b6",
+      "source_uri": "https://github.com/AmbassadorOv/cookbook/blob/main/README.md",
+      "summary": "README describes the Gemini API Cookbook with quick starts and examples. No external API calls or credential use were performed.",
+      "epistemic_status": "EXTERNAL_API_EXAMPLES_NOT_EXECUTED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No action unless a specific provider integration is selected and explicitly authorized."
+    },
+    {
+      "finding_id": "ECOSYS-VSCODE-DOCS-2026-11-13",
+      "repository_full_name": "AmbassadorOv/vscode-docs",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
+      "source_uri": "https://github.com/AmbassadorOv/vscode-docs/blob/main/README.md",
+      "summary": "README identifies a source repository for Visual Studio Code documentation. No WANGA implementation dependency was found in the README.",
+      "epistemic_status": "DOCUMENTATION_INFRASTRUCTURE_ONLY",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No integration action; retain as a public documentation repository in the inventory."
+    },
+    {
+      "finding_id": "ECOSYS-MEDIAPIPE-2026-11-13",
+      "repository_full_name": "AmbassadorOv/mediapipe",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "e4f5dd182813dc073e0845be06d23d2c58bbeafb",
+      "source_uri": "https://github.com/AmbassadorOv/mediapipe/blob/master/README.md",
+      "summary": "README redirects to current MediaPipe documentation and describes on-device ML across mobile, web, desktop, edge and IoT. No WANGA integration was established.",
+      "epistemic_status": "EXTERNAL_ON_DEVICE_ML_REFERENCE",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No action until an explicit edge-runtime requirement exists."
+    },
+    {
+      "finding_id": "ECOSYS-PYTHON-GENAI-2026-11-13",
+      "repository_full_name": "AmbassadorOv/python-genai",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+      "source_uri": "https://github.com/AmbassadorOv/python-genai/blob/main/README.md",
+      "summary": "README describes the Google Gen AI Python SDK for Gemini Developer API and Vertex AI, including API-key/environment-variable configuration. No client was created and no external API was called.",
+      "epistemic_status": "EXTERNAL_MODEL_BACKEND_REFERENCE_NOT_CONFIGURED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Keep model backend NOT_CONFIGURED unless a provider and endpoint are explicitly selected."
+    },
+    {
+      "finding_id": "ECOSYS-BRANCHES-2026-11-13",
+      "repository_full_name": "AmbassadorOv/branches-",
+      "branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "26ee6fb7d42d9c86e1dee2a4082f9276a52815a2",
+      "source_uri": "https://github.com/AmbassadorOv/branches-/blob/WPinstitutions/-WPG%7B%3C%3Cbranches%3E%7B%3C%F0%9F%AA%BE%3E%7D%28%3CORG%3E%29%3E%3E%7D%5D%5D%5D/README.md",
+      "summary": "README contains an HTML example for an interactive Quilia/ethical-AGI hub with voting, forms and visualizations. It is a static example in a README, not proof of a deployed or functioning system.",
+      "epistemic_status": "STATIC_DESIGN_EXAMPLE_NOT_DEPLOYMENT_EVIDENCE",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect source files only if the site is selected for a separate deployment task."
+    },
+    {
+      "finding_id": "WANGA-PATTERN-OBSERVATION-PROTOCOL-2026-11-13",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "commit": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "path": "research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md",
+      "blob_sha": "48aba8827618a4888d6663939e0c61c8cde70b8d",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PATTERN_EMERGENCE_AND_LANGUAGE_ADOPTION_OBSERVATION.md",
+      "summary": "The protocol defines the pattern occurrence as the observation unit, separates prompted from unprompted language use, distinguishes similarity from transmission evidence, and requires search-coverage limits. It explicitly states that corpus-wide counts and adoption rates are not yet established.",
+      "epistemic_status": "PROJECT_PROTOCOL_SPECIFIED_NOT_DATA_COLLECTION",
+      "overlap_candidates": [
+        "WANGA MAKOM observation",
+        "WANGA Logic Wiki evidence-provenance"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Recover authorized dated artifacts, define reference patterns and keep first-seen, creation, publication and capture timestamps distinct."
+    },
+    {
+      "finding_id": "WANGA-MAKOM-SYMBOLIC-OBSERVATION-2026-11-13",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "commit": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "path": "research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md",
+      "blob_sha": "fdb04b432214d38008aad1ad817c97c5202db58d",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/f9d6fec740953e54da06ed1b2acc4b01c5b34adf/research/PRIMARY_PROJECT_MAKOM_SYMBOLIC_LANGUAGE_OBSERVATION.md",
+      "summary": "The project specification treats the target as symbolic-descriptive observation of 'place', not drift measurement; it separates symbolic language from mathematics and observation from documentation and mechanism explanation. The reported 28 historical work units are explicitly not a verified dataset.",
+      "epistemic_status": "SPECIFIED_EVIDENCE_COLLECTION_IN_PROGRESS",
+      "overlap_candidates": [
+        "WANGA pattern occurrence observation",
+        "WANGA source-span registry"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Recover the original prompts/responses and context; do not infer quantitative findings from the reported 28-unit archive."
+    },
+    {
+      "finding_id": "LIMBO-REGIONAL-PROBE-STATUS-2026-11-13",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "commit": "f9d6fec740953e54da06ed1b2acc4b01c5b34adf",
+      "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261113T024639Z-REG-EA.json",
+      "blob_sha": "7e19888b74042eb23a60322697ba9e8af7d8dbb6",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/global-drift-network/data/regional-observations/20261113T024639Z-REG-EA.json",
+      "summary": "Three sampled regional observation files each contain six probe records with status NOT_CONFIGURED and an empty model field. They contain input snapshot hashes but no model output, error trace or crash state. They are not Limbo crash points.",
+      "epistemic_status": "REGIONAL_PROBES_NOT_CONFIGURED_NO_CRASH_EVIDENCE",
+      "overlap_candidates": [
+        "Limbo Cartography Core",
+        "Global Drift Network"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Configure the probe target and capture output/error/state evidence before classifying any event as a crash.",
+      "related_sources": [
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261113T024639Z-REG-EU.json",
+          "blob_sha": "21eb2dfa9daa877f580981d06b396ffb69029493"
+        },
+        {
+          "path": "ai-drift-forensics/global-drift-network/data/regional-observations/20261113T024640Z-REG-IL-ME.json",
+          "blob_sha": "18c02e605492c46bae2c18f0e52d3b2b49e6e29e"
+        }
+      ],
+      "sampled_record_count": 18
+    },
+    {
+      "finding_id": "ECOSYS-QUALIA-DUPLICATE-README-2026-11-13",
+      "repository_full_name": "AmbassadorOv/Qualia",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "source_uri": "https://github.com/AmbassadorOv/Qualia/blob/main/README.md",
+      "summary": "README.md has the same Git blob SHA as Quadruple-Multilevel-projection-project/Qualia/README.md. This establishes identical README content only; repository identity, ownership history and code equivalence were not compared.",
+      "epistemic_status": "DUPLICATE_DOCUMENT_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/Qualia"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare repository trees and commit ancestry before classifying any repository-level duplication."
+    },
+    {
+      "finding_id": "ECOSYS-SCIGPT-REFERENCE-2026-11-13",
+      "repository_full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "2866fa41c2232edaf4bfa82e299e22d54ed267ec",
+      "source_uri": "https://github.com/AmbassadorOv/chatgpt-scientific-publications-extension/blob/main/README.md",
+      "summary": "README describes SciGPT as a bot for scientists and researchers and points to SingularityLabs as the upstream project. This is a possible literature-assistance comparator, not evidence of a WANGA integration or a validated retrieval pipeline.",
+      "epistemic_status": "README_DESCRIPTION_ONLY_REFERENCE_NOT_INTEGRATED",
+      "overlap_candidates": [
+        "WANGA-LAB source collection",
+        "WANGA-LAB research-agent workflow"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Keep as reference-only; inspect source tree and license only if a concrete integration proposal is raised."
+    },
+    {
+      "finding_id": "ECOSYS-AG-TRIPLE-README-DUPLICATE-2026-11-13",
+      "repository_full_name": "AmbassadorOv/AG-triple-X-",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "source_uri": "https://github.com/AmbassadorOv/AG-triple-X-/blob/master/README.md",
+      "summary": "README blob SHA matches AmbassadorOv/World-Party-Federation-Branches-managers/README.md exactly. The README text is only a heading and does not establish repository identity, code equivalence or shared history.",
+      "epistemic_status": "DUPLICATE_DOCUMENT_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "overlap_candidates": [
+        "AmbassadorOv/World-Party-Federation-Branches-managers"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare repository trees and commit ancestry before making any repository-level identity claim."
+    },
+    {
+      "finding_id": "ECOSYS-FLUFFY-CORSICAN-README-DUPLICATE-2026-11-13",
+      "repository_full_name": "AmbassadorOv/fluffy-parakeet",
+      "branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "70944f7da15632788024530d0c7faf9d91d74381",
+      "source_uri": "https://github.com/AmbassadorOv/fluffy-parakeet/blob/WPinstitutions/-WPG%7B%3C%3Cbranches%3E%7B%3C%F0%9F%AA%BE%3E%7D(%3CORG%3E)%3E%3E%7D%5D%5D%5D/README.md",
+      "summary": "The README blob SHA matches Quadruple-Multilevel-projection-project/-from-Corsican-/README.md exactly. Both README files contain only the heading 'AI231.meta.io'; repository identity and code equivalence are not established.",
+      "epistemic_status": "DUPLICATE_DOCUMENT_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/-from-Corsican-"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Compare repository trees and commit ancestry before making any repository-level identity claim."
+    },
+    {
+      "finding_id": "ECOSYS-STUNNING-OCTO-TEMPLATE-2026-11-13",
+      "repository_full_name": "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "3dd3c4fdfda2e43c50ba4e706ee16344d9f21488",
+      "source_uri": "https://github.com/AmbassadorOv/stunning-octo-garbanzo-d6cfaf53/blob/master/README.md",
+      "summary": "README contains a title mismatch and a proposed interdisciplinary computational-science project structure. The described modules, data and tests are template content in the README; their existence or execution was not verified.",
+      "epistemic_status": "TEMPLATE_PROPOSAL_ONLY",
+      "overlap_candidates": [
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+        "WANGA-LAB research archive"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Do not ingest the template as implemented logic; inspect concrete files only if a direct project relationship is established."
+    },
+    {
+      "finding_id": "ECOSYS-VQB-SHTFS-EMPTY-2026-11-13",
+      "repository_full_name": "AmbassadorOv/vqbshtfsprojects.org",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": null,
+      "source_uri": "https://github.com/AmbassadorOv/vqbshtfsprojects.org",
+      "summary": "GitHub returned an explicit empty-repository response for the README contents request. There was no source content to extract in this pass.",
+      "epistemic_status": "EMPTY_REPOSITORY_CONFIRMED_BY_GITHUB_RESPONSE",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Recheck in a later inventory snapshot; do not infer nonexistence of an external project from this empty repository."
+    },
+    {
+      "finding_id": "ECOSYS-HTTPS-AMBA-README-GAP-2026-11-13",
+      "repository_full_name": "AmbassadorOv/https-AmbassadorOv.io",
+      "branch": "main",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": null,
+      "source_uri": "https://github.com/AmbassadorOv/https-AmbassadorOv.io",
+      "summary": "README.md was not found at the default branch root. Repository metadata is visible, but the root README lookup does not establish the contents or purpose of the rest of the repository.",
+      "epistemic_status": "ACCESSIBLE_REPOSITORY_README_GAP",
+      "overlap_candidates": [
+        "AmbassadorOv/AmbassadorOv"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Inspect the default-branch tree only if needed for a specific WANGA integration question."
+    },
+    {
+      "finding_id": "ECOSYS-UNETBOOTIN-README-GAP-2026-11-13",
+      "repository_full_name": "AmbassadorOv/unetbootin",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": null,
+      "source_uri": "https://github.com/AmbassadorOv/unetbootin",
+      "summary": "README.md was not found at the default branch root. The repository is not classified as empty; the remaining tree was not reviewed in this bounded pass.",
+      "epistemic_status": "ACCESSIBLE_REPOSITORY_README_GAP",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Leave unclassified until a concrete relevant file can be fetched."
+    },
+    {
+      "finding_id": "ECOSYS-ORG-DASH-README-GAP-2026-11-13",
+      "repository_full_name": "Quadruple-Multilevel-projection-project/-",
+      "branch": "feat-yellow-quantic-simulation",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": null,
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-",
+      "summary": "README.md was not found at the default branch root. The repository is visible, but no purpose or implementation claim is inferred from its unusual repository name or branch label.",
+      "epistemic_status": "ACCESSIBLE_REPOSITORY_README_GAP",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "Keep as inventory-only until a specific relevant path is identified."
+    },
+    {
+      "finding_id": "ECOSYS-NOTEBOOK-LINKS-2026-11-13",
+      "repository_full_name": "AmbassadorOv/test-notebook-links",
+      "branch": "master",
+      "commit": null,
+      "path": "README.md",
+      "blob_sha": "cad8e71d3b07510fbcf15d7051db725b9a579cae",
+      "source_uri": "https://github.com/AmbassadorOv/test-notebook-links/blob/master/README.md",
+      "summary": "README is a link-checking note for Google, localhost and Colab notebook URLs. It is not a source of WANGA logic, provenance rules or model implementation.",
+      "epistemic_status": "LOW_RELEVANCE_DEVELOPER_TEST_NOTE",
+      "overlap_candidates": [
+        "GitHub notebook and artifact workflows"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ",
+      "next_action": "No integration action; retain the repository in the public inventory."
+    }
+  ],
+  "cross_repo_relationships": [
+    {
+      "id": "REL-AI231-GATE-OVERLAP",
+      "status": "OVERLAP_CANDIDATE_NOT_EQUIVALENCE",
+      "source_repos": [
+        "Quadruple-Multilevel-projection-project/AI231.meta.io",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "summary": "Both repositories describe sequential structural/derivation/relation validation followed by provenance and deterministic output filtering; exact rule semantics and source contracts still require reconciliation."
+    },
+    {
+      "id": "REL-NANOMATHEMATICS-README-DUPLICATE",
+      "status": "DUPLICATE_DOCUMENT_SIGNAL_NOT_REPO_IDENTITY",
+      "source_repos": [
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/MNM"
+      ],
+      "summary": "README blob SHA is identical in both repositories; compare trees and commit ancestry before classifying repository duplication."
+    },
+    {
+      "id": "REL-TERRAFORM-RUNTIME",
+      "status": "INFRASTRUCTURE_CANDIDATE_NOT_ADOPTED",
+      "source_repos": [
+        "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "summary": "Terraform repository could be a runtime/deployment source, but its README warns main is outdated; inspect active branches before any integration."
+    },
+    {
+      "id": "REL-WORLD-PARTY-README-DUPLICATE-2026-11-12",
+      "status": "DUPLICATE_BLOB_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "source_repos": [
+        "AmbassadorOv/World-Party-Federation-Branches-managers",
+        "AmbassadorOv/TTTTproject-un.govt"
+      ],
+      "summary": "Both README.md files resolve to Git blob SHA 8b36e3fec98319bade352adce9b99abe55705188. This proves identical README content only; repository trees, history and project identity were not compared."
+    },
+    {
+      "id": "REL-AMBASSADOROV-PUBLIC-RESEARCH-INDEX-2026-11-12",
+      "status": "PUBLIC_RESEARCH_INDEX_LINK_NOT_IMPLEMENTATION_DEPENDENCY",
+      "source_repos": [
+        "AmbassadorOv/AmbassadorOv",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "summary": "The AmbassadorOv profile README links the WANGA-LAB archive. This is a public documentation/index relationship, not proof of implementation dependency, ownership state or model readiness."
+    },
+    {
+      "id": "REL-ARTIFICIAL-Y-WANGA-LOGIC-BEFORE-WEIGHT-2026-11-13",
+      "status": "DECLARATIVE_OVERLAP_NOT_IMPLEMENTATION_DEPENDENCY",
+      "source_repos": [
+        "AmbassadorOv/-artificial-y",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "summary": "AI231_MASTER_DISTILLATE.json declares logic_before_weight=true and names WANGA-OS. The inspected files do not establish an executable source→logic→verification→weights pipeline or deployed 10,000-agent runtime; this remains a design-overlap candidate."
+    },
+    {
+      "id": "REL-TIKTOKEN-WANGA-INTAKE-2026-11-13",
+      "status": "TEXT_PREPROCESSING_REFERENCE_NOT_SEMANTIC_PROVENANCE",
+      "source_repos": [
+        "AmbassadorOv/openai_tiktoken",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "summary": "The tiktoken README states BPE tokenization is reversible and lossless. This may inform text preprocessing, but it does not preserve conversation parent links, source permissions or semantic relations and is not adopted as the intake provenance layer."
+    },
+    {
+      "id": "REL-QUALIA-README-DUPLICATE-2026-11-13",
+      "status": "DUPLICATE_BLOB_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "source_repos": [
+        "AmbassadorOv/Qualia",
+        "Quadruple-Multilevel-projection-project/Qualia"
+      ],
+      "summary": "Both README.md files resolve to Git blob SHA 72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2. This proves identical README content only; compare trees and commit ancestry before inferring project identity."
+    },
+    {
+      "id": "REL-AG-TRIPLE-WORLD-PARTY-README-DUPLICATE-2026-11-13",
+      "status": "DUPLICATE_BLOB_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "source_repos": [
+        "AmbassadorOv/AG-triple-X-",
+        "AmbassadorOv/World-Party-Federation-Branches-managers"
+      ],
+      "summary": "Both README.md files resolve to Git blob SHA 8b36e3fec98319bade352adce9b99abe55705188. This establishes identical README content only; repository trees and commit ancestry were not compared."
+    },
+    {
+      "id": "REL-FLUFFY-CORSICAN-README-DUPLICATE-2026-11-13",
+      "status": "DUPLICATE_BLOB_SIGNAL_NOT_REPOSITORY_IDENTITY",
+      "source_repos": [
+        "AmbassadorOv/fluffy-parakeet",
+        "Quadruple-Multilevel-projection-project/-from-Corsican-"
+      ],
+      "summary": "Both README.md files resolve to Git blob SHA 70944f7da15632788024530d0c7faf9d91d74381 and contain only the heading 'AI231.meta.io'. This is a duplicate-document signal, not repository identity."
+    },
+    {
+      "id": "REL-SCIGPT-WANGA-RESEARCH-REFERENCE-2026-11-13",
+      "status": "REFERENCE_ONLY_NOT_INTEGRATED",
+      "source_repos": [
+        "AmbassadorOv/chatgpt-scientific-publications-extension",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "summary": "The SciGPT README describes a scientific-literature assistant. This is a possible workflow comparator only; no WANGA source integration, dependency, API call or implementation relationship was established."
+    }
+  ],
+  "scan_limitations": [
+    "Only public repository names and content are stored in this public registry.",
+    "Five private repositories are excluded by policy; no private paths or excerpts are written.",
+    "Only 10 companion repositories plus WANGA-LAB core were content-scanned in this batch.",
+    "Latest update timestamps were fetched only for this batch; other public repository timestamps remain null until scanned.",
+    "A README/code-search result is source evidence for its text, not proof that the described behavior is implemented or correct.",
+    "For the 2026-11-12 batch, the live repository listing exposed default branch, visibility and permissions but not updated_at/pushed_at timestamps; those fields are stored as null rather than inferred.",
+    "No companion-repository test suites were executed; README descriptions are not implementation verification.",
+    "For the 2026-11-13 batch, repository metadata did not expose latest update/push timestamps; values remain null rather than inferred.",
+    "The -artificial-y README.md path returned NOT_FOUND; targeted code search and five selected files were used instead.",
+    "No companion repository test suites were executed; README and code contents are source evidence, not implementation verification.",
+    "No external model API calls or credentials were used.",
+    "Wix catalog updates remain staged in an open PR; no deployment/read-back was performed.",
+    "For batch 06, repository metadata did not expose latest update/push timestamps; values remain null rather than inferred.",
+    "For batch 06, README.md was not found in three accessible repositories; one separate repository returned an explicit empty-repository response. These states are not conflated.",
+    "Two bounded code-search queries returned no indexed matches in the batch repositories; NOT_FOUND_IN_SEARCH is not evidence of nonexistence.",
+    "No companion-repository test suites were executed; README content is source evidence, not implementation verification.",
+    "No external model API calls, credentials or external repository writes were used."
+  ],
+  "last_batch": {
+    "batch_id": "2026-11-13-batch-06",
+    "repositories": [
+      "AmbassadorOv/AG-triple-X-",
+      "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "AmbassadorOv/fluffy-parakeet",
+      "AmbassadorOv/https-AmbassadorOv.io",
+      "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "AmbassadorOv/test-notebook-links",
+      "AmbassadorOv/unetbootin",
+      "AmbassadorOv/vqbshtfsprojects.org",
+      "Quadruple-Multilevel-projection-project/-",
+      "Quadruple-Multilevel-projection-project/-from-Corsican-"
+    ],
+    "findings_added": 9,
+    "relationships_added": 3,
+    "scan_time": "2026-11-13T08:19:42+02:00"
+  }
+}

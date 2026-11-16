@@ -57,6 +57,38 @@
       "limitations": [
         "Not active until acceptance-state tracking and benchmark contracts are implemented."
       ]
+    },
+    {
+      "id": "COMPOSE-INTERFACE-SEQUENTIAL-V1",
+      "name": "Exact typed-interface sequential composition",
+      "status": "ACTIVE_SPECIFIED",
+      "inputs": [
+        "two distinct fragments that validate against the same source/span registry",
+        "the first fragment has an output whose type exactly matches a second-fragment input",
+        "every required second-fragment input must have a matching first-fragment output"
+      ],
+      "output": "a higher-scale candidate fragment with inherited claims, merged provenance and an explicit interface trace",
+      "invariants": [
+        "both parents validate against the source/span registry",
+        "a fragment cannot compose with itself",
+        "required interfaces match by exact type string",
+        "parent IDs and source provenance are preserved",
+        "inherited claims are reset to CANDIDATE",
+        "semantic_equivalence remains NOT_ESTABLISHED",
+        "candidate model hash is deterministic"
+      ],
+      "limitations": [
+        "Type compatibility is a structural interface check, not semantic entailment or equivalence.",
+        "The rule does not establish causal, cognitive, mathematical or empirical claims.",
+        "The contract is tested structurally; semantic ground-truth benchmarks remain separate."
+      ],
+      "source_refs": [
+        "logic_fractal/fragment_composer.py#compose_pair",
+        "logic_fractal/tests/test_fragment_composer.py::test_two_scale_composition_preserves_parent_ids_and_provenance",
+        "logic_fractal/tests/test_fragment_composer.py::test_type_mismatch_blocks_composition",
+        "logic_fractal/tests/test_fragment_composer.py::test_composition_never_auto_verifies_claims"
+      ],
+      "validation_scope": "STRUCTURAL_IMPLEMENTATION_AND_FIXTURE_TESTS; SOURCE_GROUNDED_CANDIDATES_REQUIRE_THIS_CYCLE_CI"
     }
   ]
 }

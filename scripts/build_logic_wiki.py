@@ -5,6 +5,9 @@ import argparse, datetime, html, json, re, sys
 from pathlib import Path
 
 ROOT_DEFAULT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT_DEFAULT))
+from logic_fractal.readiness import is_readiness_eligible
+
 ALLOWED_KINDS = {
   "ESTABLISHED_REFERENCE", "WANGA_ENGINEERING_CONCEPT", "WANGA_ARCHITECTURE_CONTRACT",
   "WANGA_RESEARCH_PROPOSAL", "WANGA_IMPLEMENTED_PROTOTYPE", "WANGA_RESEARCH_PROTOTYPE",
@@ -52,18 +55,87 @@ def validate(root):
     source_classes = sorted(set(s.get("type", "UNKNOWN") for s in sources))
     metrics_path = root / "logic_wiki/data/research_metrics.json"
     metrics = load_json(metrics_path) if metrics_path.exists() else {}
+    source_linked_articles = sum(1 for a in articles if a.get("sources"))
+    if source_linked_articles:
+        warnings.append("Source-linked Wiki articles are editorial summaries; they are not counted as literal logic units.")
+
+    logic_unit_path = root / "logic_fractal/data/logic_units.json"
+    logic_unit_registry = load_json(logic_unit_path) if logic_unit_path.exists() else {"units": []}
+    logic_units = logic_unit_registry.get("units", [])
+    source_by_id = {s.get("id"): s for s in sources}
+    unit_ids, span_ids, unit_errors = [], [], []
+    valid_logic_units = 0
+    excluded_test_fixture_units = 0
+    required_unit_fields = ("unit_id", "source_span_id", "source_id", "source_version", "source_uri",
+                            "exact_locator", "literal_excerpt", "language", "permission_scope")
+    for unit in logic_units:
+        if not isinstance(unit, dict):
+            unit_errors.append("Logic unit record must be an object.")
+            continue
+        missing = [field for field in required_unit_fields
+                   if not isinstance(unit.get(field), str) or not unit.get(field).strip()]
+        if missing:
+            unit_errors.append("Logic unit %r missing non-empty provenance fields: %s." %
+                               (unit.get("unit_id"), ", ".join(missing)))
+            continue
+        uid, span_id = unit["unit_id"], unit["source_span_id"]
+        if uid in unit_ids:
+            unit_errors.append("Duplicate logic unit ID %s." % uid)
+            continue
+        if span_id in span_ids:
+            unit_errors.append("Duplicate source span ID %s." % span_id)
+            continue
+        unit_ids.append(uid)
+        span_ids.append(span_id)
+        source_record = source_by_id.get(unit["source_id"])
+        if source_record is None:
+            unit_errors.append("Logic unit %s references unknown source %s." % (uid, unit["source_id"]))
+            continue
+        if unit["source_uri"] != source_record.get("uri"):
+            unit_errors.append("Logic unit %s source URI does not match registered source %s." %
+                               (uid, unit["source_id"]))
+            continue
+        if not is_readiness_eligible(unit, source_record):
+            excluded_test_fixture_units += 1
+            continue
+        valid_logic_units += 1
+    errors.extend(unit_errors)
+
+    contradiction_path = root / "logic_fractal/data/core_contradictions.json"
+    contradiction_inventory_available = contradiction_path.exists()
+    if contradiction_inventory_available:
+        contradiction_data = load_json(contradiction_path)
+        critical_core_contradictions = sum(
+            1 for item in contradiction_data.get("items", [])
+            if item.get("critical") is True and item.get("resolved") is not True
+        )
+    else:
+        critical_core_contradictions = None
+        warnings.append("Core contradiction inventory is absent; critical contradictions are NOT_MEASURED.")
+
+    composition_contract_path = root / "logic_fractal/data/composition_rules.json"
+    composition_contracts = load_json(composition_contract_path).get("rules", []) if composition_contract_path.exists() else []
+    active_composition_contracts = [r for r in composition_contracts if str(r.get("status", "")).startswith("ACTIVE") and r.get("inputs") and r.get("output") and r.get("invariants")]
+    if not composition_contract_path.exists():
+        warnings.append("Composition contract registry is absent; active composition rules are not measured.")
+
     observed = {
         "source_records": len(sources) + int(metrics.get("additional_source_records", 0)),
         "source_classes": len(set(source_classes) | set(metrics.get("additional_source_classes", []))),
-        "logic_units_with_provenance": sum(1 for a in articles if a.get("sources")) + int(metrics.get("additional_logic_units_with_provenance", 0)),
-        "composition_rules_with_contracts": int(metrics.get("composition_rules_with_contracts", 0)),
+        "source_linked_articles": source_linked_articles,
+        "logic_units_with_provenance": valid_logic_units,
+        "logic_unit_registry_count": len(logic_units),
+        "logic_unit_registry_errors": len(unit_errors),
+        "test_fixture_logic_units_excluded": excluded_test_fixture_units,
+        "composition_rules_with_contracts": len(active_composition_contracts),
         "counterexample_cases": int(metrics.get("counterexample_cases", 0)),
         "test_cases": int(metrics.get("test_cases", 0)),
         "benchmark_suites": int(metrics.get("benchmark_suites", 0)),
         "independent_review_cycles": int(metrics.get("independent_review_cycles", 0)),
-        "unresolved_dangling_source_refs": sum(1 for e in errors if "dangling source" in e),
-        "unresolved_duplicate_stable_ids": sum(1 for e in errors if "Duplicate or empty" in e),
-        "critical_core_contradictions": int(metrics.get("critical_core_contradictions", 0)),
+        "unresolved_dangling_source_refs": sum(1 for e in errors if "dangling source" in e or "unknown source" in e),
+        "unresolved_duplicate_stable_ids": sum(1 for e in errors if "Duplicate or empty" in e or "Duplicate logic unit" in e),
+        "contradiction_inventory_available": contradiction_inventory_available,
+        "critical_core_contradictions": critical_core_contradictions,
         "deterministic_build": bool(metrics.get("deterministic_build", False)),
         "holdout_split": bool(metrics.get("holdout_split", False)),
         "mirror_review": bool(metrics.get("mirror_review", False)),
@@ -80,7 +152,8 @@ def validate(root):
         "independent_review_cycles": observed["independent_review_cycles"] >= required["min_independent_review_cycles"],
         "unresolved_dangling_source_refs": observed["unresolved_dangling_source_refs"] <= required["unresolved_dangling_source_refs"],
         "unresolved_duplicate_stable_ids": observed["unresolved_duplicate_stable_ids"] <= required["unresolved_duplicate_stable_ids"],
-        "critical_core_contradictions": observed["critical_core_contradictions"] <= required["critical_core_contradictions"],
+        "critical_core_contradictions": observed["critical_core_contradictions"] is not None and observed["critical_core_contradictions"] <= required["critical_core_contradictions"],
+        "logic_unit_registry_validation": observed["logic_unit_registry_errors"] == 0,
         "deterministic_build_required": (not required["deterministic_build_required"]) or observed["deterministic_build"],
         "holdout_split_required": (not required["holdout_split_required"]) or observed["holdout_split"],
         "mirror_review_required": (not required["mirror_review_required"]) or observed["mirror_review"],
@@ -92,8 +165,9 @@ def validate(root):
         "agent_contract_count": len(agents.get("agents", [])), "errors": errors, "warnings": warnings,
         "readiness_gate": gate["gate_id"], "readiness_gate_status": "CANDIDATE_RELEASE_READY_FOR_HUMAN_REVIEW" if all(checks.values()) and not errors else "NOT_READY_INTERNAL_CANDIDATE_ONLY",
         "readiness_thresholds_status": gate["status"], "observed": observed, "checks": checks,
+        "logic_unit_registry_status": "EMPTY_NO_SOURCE_SPANS_REGISTERED" if not logic_units else ("VALIDATED" if not unit_errors else "INVALID"),
         "missing_requirements": [k for k, passed in checks.items() if not passed],
-        "important_limit": "Passing catalog validation does not establish semantic truth or intelligence. Readiness thresholds are provisional project policy.",
+        "important_limit": "Passing catalog validation does not establish semantic truth or intelligence. Source-linked article summaries are not literal logic units; only explicit source-span records count. Missing contradiction inventory is unmeasured, not zero. Readiness thresholds are provisional project policy.",
     }
     return catalog, gate, report
 
@@ -132,7 +206,9 @@ def render(root, out):
     }
     (out / "index.json").write_text(json.dumps(index, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     md = ["# WANGA Logic Wiki", "", "Generated: %s" % report["date"], "", "## Status", "",
-          "- Articles: %s" % report["article_count"], "- Registered sources: %s" % report["source_count"],
+          "- Articles: %s" % report["article_count"], "- Source-linked article summaries: %s" % report["observed"]["source_linked_articles"],
+          "- Literal logic units with provenance: %s" % report["observed"]["logic_units_with_provenance"],
+          "- Registered sources: %s" % report["source_count"],
           "- Relation edges: %s" % report["relation_edge_count"], "- Research agents: %s" % report["agent_contract_count"],
           "- First-model gate: **%s**" % report["readiness_gate_status"], "",
           "This is a source-linked research wiki. A reference does not automatically verify a claim.", ""]
@@ -169,7 +245,9 @@ def render(root, out):
       "- Relation edges: %s" % report["relation_edge_count"], "- Agent contracts: %s" % report["agent_contract_count"],
       "- Structural validation: %s" % report["status"], "", "## First-model readiness",
       "- Gate: %s" % report["readiness_gate"], "- Status: %s" % report["readiness_gate_status"],
-      "- Threshold type: %s" % report["readiness_thresholds_status"], "", "### Checks"]
+      "- Threshold type: %s" % report["readiness_thresholds_status"], "",
+      "- Source-linked articles are not treated as literal logic units.",
+      "- Logic-unit registry: %s" % report["logic_unit_registry_status"], "", "### Checks"]
     for name, passed in report["checks"].items():
         lines.append("- [%s] %s (observed: %s)" % ("x" if passed else " ", name, report["observed"].get(name)))
     lines += ["", "### Missing requirements"] + (["- " + x for x in report["missing_requirements"]] or ["- None detected by configured gate."])

@@ -1,0 +1,276 @@
+{
+  "schema_version": "wanga-logic-fractal-cycle/1.0",
+  "report_date": "2026-11-12",
+  "batch_id": "2026-11-12-batch-04",
+  "source_counts": {
+    "source_records": 17,
+    "source_classes": 11,
+    "source_linked_articles": 28,
+    "literal_logic_units_with_provenance": 0
+  },
+  "extraction": {
+    "new_literal_units": 0,
+    "reason": "No new source span was admitted from the ten README scans; Wiki article summaries are not counted as literal logic units."
+  },
+  "composition": {
+    "active_rules_with_contracts": 2,
+    "draft_rules": 1,
+    "new_rules_added": 0,
+    "semantic_entailments_claimed": 0,
+    "catalog_graph_candidate_paths": 523
+  },
+  "adversarial": {
+    "critical_core_contradictions": "NOT_MEASURED",
+    "reason": "logic_fractal/data/core_contradictions.json is absent; the previous static zero is no longer accepted as a measured count.",
+    "other_discrepancies": [
+      "Two repositories share an identical README blob but repository identity is unproven.",
+      "TTTT repository-name/README-name mismatch remains unresolved.",
+      "Wix manifest research catalog count differs from the live GitHub article catalog by one."
+    ]
+  },
+  "benchmarks": {
+    "software_ci": "PASS",
+    "propositional_smoke": {
+      "passed": 5,
+      "failed": 0,
+      "status": "PASS_SYNTHETIC_FIXTURES"
+    },
+    "typed_formal_fixture_suite": {
+      "passed": 7,
+      "failed": 0,
+      "status": "PASS_SYNTHETIC_FIXTURES"
+    },
+    "semantic_ground_truth_cases": 0,
+    "benchmark_suites": 0,
+    "counterexamples": 0,
+    "independent_reviews": 0,
+    "holdout": false,
+    "mirror_review": false,
+    "companion_repo_tests_run": 0
+  },
+  "model": {
+    "candidate_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "scale_1_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+    "status": "CANDIDATE_NOT_RELEASED",
+    "builder_run": 43164884718,
+    "rebuilt_in_ci_this_cycle": true,
+    "fixture_scope": "SYNTHETIC_ONLY",
+    "model_backend": "NOT_CONFIGURED"
+  },
+  "readiness_gate": {
+    "gate": "FIRST_MODEL_ALPHA_V1",
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "threshold_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "observed": {
+      "source_records": 17,
+      "source_classes": 11,
+      "source_class_names": [
+        "IMPLEMENTATION_SOURCE",
+        "LOCAL_ARCHIVE",
+        "OPEN_TEXTBOOK",
+        "PROJECT_CODE",
+        "PROJECT_CONTRACT",
+        "PROJECT_IMPLEMENTATION",
+        "PROJECT_PROPOSAL",
+        "PROJECT_REPOSITORY",
+        "PROJECT_RESEARCH",
+        "REFERENCE_ARTICLE",
+        "USER_PROVIDED_RESEARCH_HYPOTHESIS"
+      ],
+      "source_linked_wiki_articles": 28,
+      "logic_units_with_provenance": 0,
+      "composition_rules_with_contracts": 2,
+      "draft_composition_rules": 1,
+      "counterexample_cases": 0,
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "dangling_source_refs": 0,
+      "duplicate_article_ids": 0,
+      "critical_core_contradictions": "NOT_MEASURED_NO_INVENTORY",
+      "deterministic_build": "TESTED_ON_SYNTHETIC_FIXTURES",
+      "holdout_split": false,
+      "mirror_review": false
+    },
+    "missing": {
+      "source_records": 3,
+      "logic_units_with_provenance": 50,
+      "composition_rules_with_contracts": 18,
+      "counterexample_cases": 30,
+      "semantic_test_cases": 100,
+      "benchmark_suites": 3,
+      "independent_review_cycles": 2,
+      "contradiction_inventory": "REQUIRED"
+    },
+    "note": "The 28 source-linked Wiki articles are editorial summaries and are not counted as literal logic units. Only explicit records in logic_fractal/data/logic_units.json count. The core contradiction inventory is absent, so zero critical contradictions cannot be claimed."
+  },
+  "ci": {
+    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/140",
+    "state": "OPEN_UNMERGED",
+    "head_sha": "2995d54f6c1de8befbf11b086505e970a9c4a572",
+    "base_sha": "1cb36e4a05ff5e8ecc26d0dab2526f78e604b580",
+    "mergeable": true,
+    "behind_main_by": 14,
+    "runs": [
+      {
+        "name": "Logic Fractal Wiki Research",
+        "run_id": 43164884718,
+        "run_number": 253,
+        "conclusion": "success",
+        "runner": "ubuntu-26.04",
+        "job_id": 131004329119,
+        "approx_duration_seconds": 10,
+        "artifact_bytes": 85988
+      },
+      {
+        "name": "WANGA Ecosystem Agent Sweep",
+        "run_id": 43164885342,
+        "run_number": 201,
+        "conclusion": "success",
+        "runner": "ubuntu-26.04",
+        "job_id": 131004356847,
+        "approx_duration_seconds": 6,
+        "artifact_bytes": 3223
+      },
+      {
+        "name": "Repository Integrity",
+        "run_id": 43164884759,
+        "run_number": 960,
+        "conclusion": "success",
+        "runner": "ubuntu-26.04",
+        "job_id": 131004353863,
+        "approx_duration_seconds": 9,
+        "artifact_bytes": 0
+      },
+      {
+        "name": "CodeQL Advanced",
+        "run_id": 43164884798,
+        "run_number": 1445,
+        "conclusion": "success",
+        "jobs": [
+          "Analyze (actions)",
+          "Analyze (python)"
+        ]
+      }
+    ]
+  },
+  "limbo": {
+    "pr": 122,
+    "branch": "deploy/limbo-cartography-core-v1",
+    "head": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+    "pr_vs_main": {
+      "status": "DIVERGED",
+      "ahead_by": 63,
+      "behind_by": 26
+    },
+    "map_version": "1.0.0",
+    "map_status": "BUILT_FROM_REGISTERED_RECORDS",
+    "map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+    "registered_incident_count": 10,
+    "history_event_count": 2,
+    "map_node_count": 14,
+    "map_edge_count": 19,
+    "recurrence_clusters": [
+      {
+        "cluster_id": "CLUSTER-3ce9a39032dad563",
+        "component": "Vitruvius Research Index / build-index test contract",
+        "observation_count": 7,
+        "status": "RECURRENT_UNRESOLVED",
+        "root_cause": "NOT_ESTABLISHED"
+      },
+      {
+        "cluster_id": "CLUSTER-bb88393d0fa34e1e",
+        "component": "Daily Autonomous Operations / scripts/vitruvius_forensic_research.py compile stage",
+        "observation_count": 1,
+        "status": "SINGLE_POINT_UNRESOLVED",
+        "root_cause": "NOT_ESTABLISHED"
+      },
+      {
+        "cluster_id": "CLUSTER-bf39055b9c828b9a",
+        "component": "Logic Wiki generated-report proposal workflow",
+        "observation_count": 1,
+        "status": "SINGLE_POINT_UNRESOLVED",
+        "root_cause": "NOT_ESTABLISHED"
+      },
+      {
+        "cluster_id": "CLUSTER-c3786cdc92513d86",
+        "component": "limbo-cartography-core/engine/seismic_detector.py / test inbox path reporting",
+        "observation_count": 1,
+        "status": "SINGLE_POINT_WITH_PASS_RETEST",
+        "root_cause": "NOT_ESTABLISHED"
+      }
+    ],
+    "latest_execution": {
+      "timestamp_utc": "2026-11-07T06:12:35+00:00",
+      "execution_mode": "STRICT_MECHANICAL_RECORDING",
+      "epistemic_attempt": false,
+      "drift_detected": null,
+      "keystone_verified": false,
+      "status": "EXECUTION_RECORD_ONLY",
+      "verification_note": "Execution record created; this is not a claim of zero drift or semantic truth."
+    },
+    "crash_point_inbox": "NO_CRASH_POINT_INPUTS",
+    "keystone_case_inbox": "NO_KEYSTONE_CASE_INPUTS",
+    "history_event_inbox": "NO_NEW_HISTORY_EVENT_INPUTS",
+    "draft_logic_bundle_inbox_count": 1,
+    "logic_bundle": {
+      "id": "VITRUVIUS-QUEUE-CONTRACT-RECURRENCE",
+      "status": "DRAFT_UNVERIFIED",
+      "recurrence_count": 7,
+      "root_cause_status": "NOT_YET_ESTABLISHED"
+    },
+    "tuning_candidate": {
+      "id": "TUNE-9c166900cc4ad5dd",
+      "status": "CANDIDATE_REPLAY_REQUIRED",
+      "replay_status": "NOT_RUN",
+      "prior_retest": "PASS for recorded 15-software-test context only"
+    },
+    "regional_observation_files_added_to_main_since_pr122_base": 56,
+    "regional_observation_status": "Sampled records contain status NOT_CONFIGURED and model empty; they are not crash-point records and are not admitted to Limbo.",
+    "current_target_replay": "NOT_RUN",
+    "ci": {
+      "repository_integrity": "ACTION_REQUIRED_NO_JOBS",
+      "codeql": "ACTION_REQUIRED_NO_JOBS",
+      "limbo_workflow": "ACTION_REQUIRED_NO_JOBS"
+    }
+  },
+  "wix": {
+    "status": "NOT_PERFORMED",
+    "site_status": "PUBLISHED_PER_WIX_SITE_CONTEXT",
+    "manifest_status": "PUBLISHED_READ_BACK_PARTIAL",
+    "last_sync_date": "2026-10-12",
+    "manifest_synced_articles": 18,
+    "manifest_catalog_count": 27,
+    "current_github_catalog_count": 28,
+    "count_difference": 1,
+    "reconciliation_required": true,
+    "deployment_performed": false,
+    "read_back_performed": false
+  },
+  "built_tested_verified": {
+    "built": "Synthetic two-scale candidate built in CI.",
+    "tested": "Logic Fractal, Ecosystem Sweep, Repository Integrity and CodeQL passed on the code-update head.",
+    "verified": "No semantic model verification; no holdout or MIRROR review."
+  },
+  "blocked": [
+    "FIRST_MODEL_ALPHA release gate",
+    "50 explicit source-span logic units; current count 0",
+    "20 composition rules; current count 2",
+    "30 counterexamples; current count 0",
+    "100 semantic test cases in 3 suites; current count 0",
+    "2 independent reviews; current count 0",
+    "Measured contradiction inventory",
+    "ChatGPT conversation export access",
+    "Limbo current-target replay and PR #122 CI",
+    "Wix one-entry catalog/manifest reconciliation",
+    "Cross-repository GitHub Actions token"
+  ],
+  "next": [
+    "Continue next ten public repositories from scan_cursor.json.",
+    "Review the 28 Wiki articles as editorial summaries; extract literal source spans into logic_units.json only when provenance is complete.",
+    "Build a contradiction inventory before reporting any zero contradiction count.",
+    "Create semantic benchmark cases and holdout; keep software tests separate.",
+    "Reconcile PR #122's 26-commit divergence before attempting current-target Limbo replay.",
+    "Resolve Wix catalog count 28 versus manifest count 27 before deployment."
+  ]
+}

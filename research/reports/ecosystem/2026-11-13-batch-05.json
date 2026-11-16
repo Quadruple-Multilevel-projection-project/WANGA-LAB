@@ -1,0 +1,450 @@
+{
+  "schema_version": "wanga-ecosystem-batch-report/1.0",
+  "report_date": "2026-11-13",
+  "batch_id": "2026-11-13-batch-05",
+  "scan_time": "2026-11-13T07:52:06+02:00",
+  "scan_scope": "10 public repositories selected from the live repository cursor, plus two WANGA-LAB research protocols and three sampled regional observation records.",
+  "repository_snapshot": {
+    "visible_repositories": 63,
+    "public_repositories": 58,
+    "private_repositories_excluded": 5,
+    "public_repositories_scanned_total": 41,
+    "public_repositories_remaining": 17
+  },
+  "repositories_scanned": [
+    {
+      "full_name": "AmbassadorOv/openai_tiktoken",
+      "default_branch": "main",
+      "visibility": "public",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "ad8d88b13f731c1d946a4fc5bd3fc3a153393775",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README describes a BPE tokenizer and states that tokenization is reversible and lossless. Potential text-ingestion reference only; tokenizer reversibility does not preserve conversation parent links, provenance metadata or semantic relations."
+    },
+    {
+      "full_name": "AmbassadorOv/-artificial-y",
+      "default_branch": "main",
+      "visibility": "public",
+      "readme_status": "NOT_FOUND",
+      "readme_blob_sha": null,
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "inspected_paths": [
+        "AI231_MASTER_DISTILLATE.json",
+        "jules/THE_FLY_PROTOCOL.md",
+        "swarm/01_AGENT_ARCHETYPES.json",
+        "swarm/03_ENLIGHTENED_VALIDATOR.py",
+        "tests/test_main.py"
+      ],
+      "summary": "README.md was not found. Targeted search and five files were inspected: AI231_MASTER_DISTILLATE.json, THE_FLY_PROTOCOL.md, AGENT_ARCHETYPES.json, ENLIGHTENED_VALIDATOR.py and tests/test_main.py. The JSON declares logic_before_weight=true, 231 gates, 230 space groups and 10,000 agents; these are declarative project claims, not verified runtime or hardware facts."
+    },
+    {
+      "full_name": "AmbassadorOv/Qualia",
+      "default_branch": "main",
+      "visibility": "public",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README contains a title and a Blogspot link only; no technical architecture or implementation claim was established."
+    },
+    {
+      "full_name": "AmbassadorOv/generative-ai-docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "1bf3babd967e73a1cff092805c4ff151fba95baf",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README identifies Google Gemini API/Gemma developer documentation and describes notebooks, demos and examples. Documentation repository; no WANGA integration established."
+    },
+    {
+      "full_name": "AmbassadorOv/mujoco",
+      "default_branch": "main",
+      "visibility": "public",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "62d57c19af93682355c27e668422bf8aa87c430b",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README describes MuJoCo as a general-purpose physics engine for articulated structures, robotics, biomechanics and simulation, with C API and Python bindings. Potential spatial-simulation reference only; no WANGA integration or tests run."
+    },
+    {
+      "full_name": "AmbassadorOv/cookbook",
+      "default_branch": "main",
+      "visibility": "public",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "646c146ea44ee0175fccf62427bcc03dd88ed1b6",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README identifies the Gemini API Cookbook with quick starts and examples. External API examples were not executed; no credentials or API calls used."
+    },
+    {
+      "full_name": "AmbassadorOv/vscode-docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README describes the Visual Studio Code documentation source repository and its publishing destination. Documentation infrastructure only; no WANGA dependency established."
+    },
+    {
+      "full_name": "AmbassadorOv/mediapipe",
+      "default_branch": "master",
+      "visibility": "public",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "e4f5dd182813dc073e0845be06d23d2c58bbeafb",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README redirects to current MediaPipe developer documentation and describes on-device ML across mobile, web, desktop, edge and IoT. No WANGA integration established."
+    },
+    {
+      "full_name": "AmbassadorOv/python-genai",
+      "default_branch": "main",
+      "visibility": "public",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README describes Google's Gen AI Python SDK for Gemini Developer API and Vertex AI, including API-key/environment-variable setup. No SDK client was created and no external API was called."
+    },
+    {
+      "full_name": "AmbassadorOv/branches-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "readme_status": "FETCHED",
+      "readme_blob_sha": "26ee6fb7d42d9c86e1dee2a4082f9276a52815a2",
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_METADATA",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README contains an HTML design example for an interactive 'Quilia Project' hub with voting/forms/visualizations. Static example text is not evidence of a deployed or functioning site, AGI or governance system."
+    }
+  ],
+  "access_gaps": [
+    "No ChatGPT conversation export or private transcript was exposed in this run.",
+    "Five private repositories remain excluded from public registries.",
+    "Repository metadata did not expose latest update/push timestamps.",
+    "Companion repository tests were not run.",
+    "The -artificial-y README.md path was not found; targeted search and selected files were inspected."
+  ],
+  "new_duplicate_sources": {
+    "new_duplicate_readme_blobs": 1,
+    "previous_duplicate_clusters_preserved": true,
+    "new_duplicate_groups": [
+      {
+        "blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+        "repositories": [
+          "AmbassadorOv/Qualia",
+          "Quadruple-Multilevel-projection-project/Qualia"
+        ],
+        "status": "DUPLICATE_DOCUMENT_SIGNAL_NOT_REPOSITORY_IDENTITY"
+      }
+    ],
+    "note": "One new identical README blob was found in the Qualia pair; no repository-identity conclusion is drawn."
+  },
+  "claims_added": 0,
+  "wiki_articles_added": 2,
+  "source_records_added": 2,
+  "logic_units": {
+    "source_grounded_units_added": 11,
+    "total_units_after_admission": 11,
+    "source_classes_after_admission": 11,
+    "articles_after_admission": 30,
+    "all_units_have_exact_locator": true,
+    "formalization_status": "NOT_FORMALIZED",
+    "sol_review_status": "NOT_RUN"
+  },
+  "composition_count": {
+    "active_rules_with_contracts": 3,
+    "new_contracts_added": 1,
+    "typed_candidate_compositions_planned": 5,
+    "typed_candidate_build_status": "PASS",
+    "semantic_entailments_claimed": 0,
+    "typed_composition_hash": "8a5ad2ca37fabc42f28fa5114c1e58de8b2c6cb7ae12bbd30826e9a9863b0a07"
+  },
+  "contradictions": {
+    "critical_core_contradictions": "NOT_MEASURED",
+    "reason": "logic_fractal/data/core_contradictions.json remains absent.",
+    "new_contradictions_added": 0,
+    "open_issues": [
+      "The -artificial-y declarative logic_before_weight flag has no executable pipeline evidence in the inspected files.",
+      "The 28 historical MAKOM work units are explicitly not a verified dataset.",
+      "Regional probes are NOT_CONFIGURED and provide no crash-state evidence."
+    ]
+  },
+  "benchmarks": {
+    "software_tests": "PENDING_CI",
+    "semantic_ground_truth_cases": 0,
+    "benchmark_suites": 0,
+    "counterexamples": 0,
+    "holdout": "NOT_AVAILABLE",
+    "independent_reviews": 0,
+    "companion_repo_tests": "NOT_RUN"
+  },
+  "ci": {
+    "status": "PASS",
+    "commit_sha": "53d1ff2e0a5cadb4be7923acfd86f0f74a6b9a92",
+    "runs": [
+      {
+        "name": "Logic Fractal Wiki Research",
+        "run_id": 43377069731,
+        "conclusion": "success"
+      },
+      {
+        "name": "Repository Integrity",
+        "run_id": 43377069720,
+        "conclusion": "success"
+      },
+      {
+        "name": "WANGA Ecosystem Agent Sweep",
+        "run_id": 43377069654,
+        "conclusion": "success"
+      },
+      {
+        "name": "CodeQL Advanced",
+        "run_id": 43377069665,
+        "conclusion": "success",
+        "analyses": [
+          "actions",
+          "python"
+        ]
+      }
+    ],
+    "source_grounded_composer_test": "PASS",
+    "source_grounded_composer_build": "PASS",
+    "first_typed_candidate_build": "PASS",
+    "run_logic_agents": "PASS",
+    "repository_integrity": "PASS",
+    "ecosystem_sweep": "PASS",
+    "codeql": "PASS",
+    "proposal_update_step": "SKIPPED_NO_AUTO_MERGE",
+    "artifact": {
+      "run_id": 43377069731,
+      "artifact_id": 14014422831,
+      "artifact_name": "logic-wiki-research-report",
+      "size_in_bytes": 101118,
+      "digest": "sha256:555d47af29cd7e94634beb908351f30389f00d90f77c3faaea4d734e62ab12d9",
+      "created_at": "2026-11-13T06:12:32Z",
+      "expires_at": "2027-02-11T06:12:19Z",
+      "runner_label": "ubuntu-latest",
+      "python_version": "3.11.18",
+      "runner_image": "NOT_EXPOSED_BY_CONNECTOR",
+      "duration": "NOT_EXPOSED_BY_CONNECTOR"
+    }
+  },
+  "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+  "model_status": "EXISTING_SYNTHETIC_CANDIDATE_REBUILT_AND_TESTED_IN_CI; NOT_RELEASED",
+  "readiness_gate": {
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "threshold_policy": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "source_records": 19,
+    "source_classes": 11,
+    "logic_units_with_provenance": 11,
+    "composition_rules_with_contracts": 3,
+    "counterexamples": 0,
+    "semantic_test_cases": 0,
+    "benchmark_suites": 0,
+    "independent_reviews": 0,
+    "critical_contradictions": "NOT_MEASURED",
+    "holdout": false,
+    "mirror_review": false
+  },
+  "limbo": {
+    "pr": 122,
+    "status": "OPEN_DRAFT",
+    "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+    "main_divergence": {
+      "ahead_by": 30,
+      "behind_by": 63
+    },
+    "incidents": 10,
+    "history_events": 2,
+    "map_nodes": 14,
+    "map_edges": 19,
+    "inbox_new_crash_inputs": "NO_INPUTS",
+    "tuning_candidate": "TUNE-9c166900cc4ad5dd",
+    "replay_status": "NOT_RUN",
+    "reason": "PR branch is 63 commits behind current main and no new crash evidence was supplied; current-target replay is not justified on the stale branch."
+  },
+  "wix": {
+    "site_name": "Logic Engine Research Lab",
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "site_status": "PUBLISHED",
+    "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
+    "catalog_articles": 30,
+    "manifest_research_articles": 27,
+    "difference": 3,
+    "deployment_performed": false,
+    "read_back_performed": false,
+    "status": "BLOCKED_PENDING_PR_MERGE_AND_CATALOG_RECONCILIATION"
+  },
+  "agents": [
+    {
+      "role": "Repository Inventory",
+      "status": "COMPLETED",
+      "input": "Live affiliation snapshot and public inventory",
+      "output": "10 additional public repositories scanned; 41/58 public repositories scanned. One new duplicate README blob signal was registered.",
+      "evidence": "research/ecosystem/repository_inventory.json",
+      "next_action": "Continue from updated cursor."
+    },
+    {
+      "role": "README/Docs Collector",
+      "status": "COMPLETED",
+      "input": "10 repositories from cursor",
+      "output": "Nine README files plus five targeted -artificial-y files inspected; the Qualia README blob matches the collaborator Qualia repository.",
+      "evidence": "README Git blob SHAs and selected-file blob SHAs",
+      "next_action": "Inspect only relevant project docs in the next batch."
+    },
+    {
+      "role": "Conversation Export Collector",
+      "status": "BLOCKED",
+      "input": "Current conversation attachments and accessible export artifacts",
+      "output": "No export surfaced; no transcript ingested.",
+      "evidence": "No export artifact exposed",
+      "next_action": "Wait for an authorized reviewed/redacted export."
+    },
+    {
+      "role": "Logic Extractor",
+      "status": "COMPLETED",
+      "input": "Two WANGA-LAB research protocols",
+      "output": "11 literal source-span units admitted with exact locators; no semantic benchmark cases added.",
+      "evidence": "logic_fractal/data/logic_units.json",
+      "next_action": "Review candidate normalizations before FOL/SOL formalization."
+    },
+    {
+      "role": "Normalizer",
+      "status": "COMPLETED_CANDIDATE",
+      "input": "11 literal source-span units",
+      "output": "Primitives, relation candidates, operators, constraints and boundaries stored separately from literal excerpts.",
+      "evidence": "logic_units.json",
+      "next_action": "Run explicit FOL closure/source/variable checks and SOL review; currently NOT_RUN."
+    },
+    {
+      "role": "Typed Fractal Composer",
+      "status": "COMPLETED_BUILT_AND_TESTED",
+      "input": "11 admitted source-span units and 11 typed base fragments",
+      "output": "Five source-grounded typed composition candidates built; all structural invariants and deterministic rebuild checks passed. Semantic status remains NOT_YET_VERIFIED.",
+      "evidence": "source_grounded_fragments.json and COMPOSE-INTERFACE-SEQUENTIAL-V1",
+      "next_action": "Run builder and structural tests in PR CI."
+    },
+    {
+      "role": "Mirror/Contradiction Reviewer",
+      "status": "PARTIAL_REVIEW",
+      "input": "Negative boundaries and cross-repository declarative claims",
+      "output": "Non-entailment and scope boundaries recorded; no core contradiction inventory exists.",
+      "evidence": "logic_units.json and project_findings.json",
+      "next_action": "Build explicit contradiction inventory and independent review."
+    },
+    {
+      "role": "Benchmark Evaluator",
+      "status": "BLOCKED",
+      "input": "Source spans and existing benchmark registry",
+      "output": "No reviewed semantic ground truth, counterexamples, suites or holdout.",
+      "evidence": "research_metrics.json",
+      "next_action": "Construct positive/negative/boundary cases with independent adjudication."
+    },
+    {
+      "role": "Wiki Curator",
+      "status": "COMPLETED_ON_BRANCH",
+      "input": "Two source-backed WANGA research protocols",
+      "output": "Two protocol entries and two source records added to the branch catalog.",
+      "evidence": "logic_wiki/data/articles.json",
+      "next_action": "Review PR before publication."
+    },
+    {
+      "role": "Publisher",
+      "status": "CI_PASS_AWAITING_REVIEW_AND_MERGE",
+      "input": "Batch 05 registry and reports",
+      "output": "Four PR workflows passed and a 101,118-byte report artifact was uploaded; no Wix deployment or main write.",
+      "evidence": "PR #140 branch",
+      "next_action": "Inspect CI and PR review; sync Wix only after merge and reconciliation."
+    }
+  ],
+  "blocked": [
+    "Private ChatGPT history/export not exposed.",
+    "Semantic ground-truth benchmarks, counterexamples, holdout and independent reviews are absent.",
+    "Core contradiction inventory is absent.",
+    "Limbo PR #122 is 63 commits behind main; no current-target replay or new crash inputs.",
+    "Wix publication waits for PR merge and reconciliation of the 30-vs-27 catalog count."
+  ],
+  "next": [
+    "Run PR CI for the new source-span and typed-composition changes.",
+    "Review the 11 extracted units; formalize only after source/variable/closure checks.",
+    "Continue the next ten repositories from scan_cursor.json.",
+    "Obtain original MAKOM interaction records before any quantitative claim.",
+    "Reconcile Limbo branch divergence before replay.",
+    "Publish approved Wix changes only after merge and full read-back."
+  ],
+  "project_findings_added": 14,
+  "catalog_graph_candidate_hash": "732b60b500701f132ff08108f88ba8223fd7dcba9a2dfb4b7e24321724c7d42f",
+  "catalog_graph_candidate_count": 557,
+  "typed_composition_hash": "8a5ad2ca37fabc42f28fa5114c1e58de8b2c6cb7ae12bbd30826e9a9863b0a07",
+  "typed_composition_candidate_hashes": [
+    {
+      "id": "FL-COMPOSE-ebd27067b452214d",
+      "hash": "e862cff5d319a494439c2606dfc3501155a310e87e2db51b802a3a416137da12"
+    },
+    {
+      "id": "FL-COMPOSE-ef94aaefc9e24d90",
+      "hash": "5ffbe1474c522a50cc68de2e3414c5cbe487570edc64def21e16a8c791cf913d"
+    },
+    {
+      "id": "FL-COMPOSE-535b4d8e78bc198f",
+      "hash": "a312af07cddf427a1d0cb85182cacae91af0dc012398e65a4d0d33d6aa69f740"
+    },
+    {
+      "id": "FL-COMPOSE-cacea2311f1d76e7",
+      "hash": "e3b2a708b0e12fc17355beb284bac30c44f5a50eadfb67ce9225a5b057632cda"
+    },
+    {
+      "id": "FL-COMPOSE-b547843f1674cf5d",
+      "hash": "f4baba6bcb21f3923952b318db0d7f3e82fef24b560b2eaa5efb7a9f860e4bdd"
+    }
+  ],
+  "pr": {
+    "number": 140,
+    "state": "OPEN",
+    "mergeable": true,
+    "head_sha": "53d1ff2e0a5cadb4be7923acfd86f0f74a6b9a92",
+    "ahead_of_main": 31,
+    "behind_main": 18,
+    "merged": false
+  }
+}

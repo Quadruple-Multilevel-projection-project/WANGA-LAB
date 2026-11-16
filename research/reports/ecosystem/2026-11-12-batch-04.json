@@ -1,0 +1,706 @@
+{
+  "schema_version": "wanga-ecosystem-cycle-report/1.0",
+  "report_date": "2026-11-12",
+  "batch_id": "2026-11-12-batch-04",
+  "scan_time": "2026-11-12T07:44:54+02:00",
+  "scan_scope": "Public repositories visible through live owner/collaborator/organization-member GitHub listings; private repositories excluded from public artifacts.",
+  "repository_snapshot": {
+    "unique_visible": 63,
+    "public": 58,
+    "private_excluded": 5,
+    "affiliation_counts": {
+      "owner": 38,
+      "collaborator": 13,
+      "organization_member": 25,
+      "unique_union": 63
+    },
+    "scanned_public_total": 31,
+    "remaining_public": 27,
+    "next_batch_candidates": [
+      "AmbassadorOv/openai_tiktoken",
+      "AmbassadorOv/-artificial-y",
+      "AmbassadorOv/Qualia",
+      "AmbassadorOv/generative-ai-docs",
+      "AmbassadorOv/mujoco",
+      "AmbassadorOv/cookbook",
+      "AmbassadorOv/vscode-docs",
+      "AmbassadorOv/mediapipe",
+      "AmbassadorOv/python-genai",
+      "AmbassadorOv/branches-"
+    ]
+  },
+  "repositories_scanned": [
+    {
+      "full_name": "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_scope": "PUBLIC_READ",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "readme_path": "README.md",
+      "readme_git_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "scan_status": "README_SCANNED",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README contains only the heading 'World-Party-Federation-Branches-managers'. Its Git blob is identical to AmbassadorOv/TTTTproject-un.govt/README.md; this is a duplicate-document signal, not repository identity."
+    },
+    {
+      "full_name": "AmbassadorOv/googleapis",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_scope": "PUBLIC_READ",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "readme_path": "README.md",
+      "readme_git_blob_sha": "6ba73116d009c622bf3057f81a563b2070daea51",
+      "scan_status": "README_SCANNED",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README describes public API interface definitions, primarily Protocol Buffers/proto3 and generated API surfaces. Potential typed-interface reference only; not WANGA logic or a validated runtime dependency."
+    },
+    {
+      "full_name": "AmbassadorOv/desktop",
+      "default_branch": "development",
+      "visibility": "public",
+      "permission_scope": "PUBLIC_READ",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "readme_path": "README.md",
+      "readme_git_blob_sha": "c7702d385076e80f365a23d17dc868b9ecb6a5ad",
+      "scan_status": "README_SCANNED",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README describes GitHub Desktop, an Electron/TypeScript/React desktop client. General developer tooling; no direct WANGA logic, NTM, MLN, or provenance implementation identified."
+    },
+    {
+      "full_name": "AmbassadorOv/platform-samples",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_scope": "PUBLIC_READ",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "readme_path": "README.md",
+      "readme_git_blob_sha": "a2bb146a181b60c3df0d077c55b197287074ec53",
+      "scan_status": "README_SCANNED",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README describes GitHub Platform API, GraphQL, webhook, and integration samples. Possible CI/integration reference, but no WANGA-specific implementation or tests were inspected."
+    },
+    {
+      "full_name": "AmbassadorOv/extensions",
+      "default_branch": "next",
+      "visibility": "public",
+      "permission_scope": "PUBLIC_READ",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "readme_path": "README.md",
+      "readme_git_blob_sha": "6ef8b6a54813922bf64bad64c8e7301f8dc620c2",
+      "scan_status": "README_SCANNED",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README describes Firebase Extensions and their deployment/integration model. External infrastructure reference only; not evidence of WANGA runtime integration."
+    },
+    {
+      "full_name": "AmbassadorOv/AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_scope": "PUBLIC_READ",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "readme_path": "README.md",
+      "readme_git_blob_sha": "d2664df6ce794e353a4d1b04682627c3b13f0bb9",
+      "scan_status": "README_SCANNED",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "Profile README presents the public research identity and links the WANGA-LAB archive. This is a public research-index relationship, not an implementation dependency or proof of project status."
+    },
+    {
+      "full_name": "AmbassadorOv/docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_scope": "PUBLIC_READ",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "readme_path": "README.md",
+      "readme_git_blob_sha": "69090a601896b5189a5b3ee42105ed42638016be",
+      "scan_status": "README_SCANNED",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README identifies a GitHub documentation source tree. Useful as external documentation material only; no WANGA-specific logic or source corpus was identified."
+    },
+    {
+      "full_name": "AmbassadorOv/mermaid",
+      "default_branch": "develop",
+      "visibility": "public",
+      "permission_scope": "PUBLIC_READ",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "readme_path": "README.md",
+      "readme_git_blob_sha": "456747132cbc6ed1dde4f8d5f0712deb71b47be8",
+      "scan_status": "README_SCANNED",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README describes Mermaid text-based diagrams and chart rendering. Potential visualization tooling for maps; diagram output is not logical evidence or semantic validation."
+    },
+    {
+      "full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_scope": "PUBLIC_READ",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "readme_path": "README.md",
+      "readme_git_blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "scan_status": "README_SCANNED",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README describes an Azure Blockchain Development Kit for Ethereum and an older VS Code/Node/Python toolchain. Legacy tooling reference; no current WANGA runtime link established."
+    },
+    {
+      "full_name": "AmbassadorOv/eslint",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_scope": "PUBLIC_READ",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "latest_known_update": null,
+      "latest_known_push": null,
+      "update_status": "NOT_EXPOSED_BY_CURRENT_CONNECTOR_LISTING",
+      "readme_path": "README.md",
+      "readme_git_blob_sha": "326c6121e810f4d1edfbc781eff4d5b7f46d1c36",
+      "scan_status": "README_SCANNED",
+      "inspected_paths": [
+        "README.md"
+      ],
+      "summary": "README describes ESLint AST-based static analysis and rule plugins. Possible software-quality tooling; it cannot establish semantic correctness or source truth."
+    }
+  ],
+  "access_gaps": [
+    "No ChatGPT conversation export or current transcript file was exposed; no private conversation text was scanned or ingested.",
+    "Five private repositories remain excluded from public registry content.",
+    "Current connector listing did not expose updated_at/pushed_at for this batch; timestamps were not inferred.",
+    "No test suites were run inside the ten companion repositories.",
+    "GitHub Actions ecosystem workflow has no CROSS_REPO_READ_TOKEN and scanned only WANGA-LAB; this ten-repository batch was read through the connected GitHub repository connector.",
+    "Wix was not updated because the source catalog/manifest count differs by one and no catalog change was approved for publication."
+  ],
+  "new_duplicate_sources": [
+    {
+      "kind": "PUBLIC_REPOSITORY_README",
+      "source": "AmbassadorOv/World-Party-Federation-Branches-managers/README.md",
+      "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "note": "README contains only the heading 'World-Party-Federation-Branches-managers'. Its Git blob is identical to AmbassadorOv/TTTTproject-un.govt/README.md; this is a duplicate-document signal, not repository identity."
+    },
+    {
+      "kind": "PUBLIC_REPOSITORY_README",
+      "source": "AmbassadorOv/googleapis/README.md",
+      "blob_sha": "6ba73116d009c622bf3057f81a563b2070daea51",
+      "note": "README describes public API interface definitions, primarily Protocol Buffers/proto3 and generated API surfaces. Potential typed-interface reference only; not WANGA logic or a validated runtime dependency."
+    },
+    {
+      "kind": "PUBLIC_REPOSITORY_README",
+      "source": "AmbassadorOv/desktop/README.md",
+      "blob_sha": "c7702d385076e80f365a23d17dc868b9ecb6a5ad",
+      "note": "README describes GitHub Desktop, an Electron/TypeScript/React desktop client. General developer tooling; no direct WANGA logic, NTM, MLN, or provenance implementation identified."
+    },
+    {
+      "kind": "PUBLIC_REPOSITORY_README",
+      "source": "AmbassadorOv/platform-samples/README.md",
+      "blob_sha": "a2bb146a181b60c3df0d077c55b197287074ec53",
+      "note": "README describes GitHub Platform API, GraphQL, webhook, and integration samples. Possible CI/integration reference, but no WANGA-specific implementation or tests were inspected."
+    },
+    {
+      "kind": "PUBLIC_REPOSITORY_README",
+      "source": "AmbassadorOv/extensions/README.md",
+      "blob_sha": "6ef8b6a54813922bf64bad64c8e7301f8dc620c2",
+      "note": "README describes Firebase Extensions and their deployment/integration model. External infrastructure reference only; not evidence of WANGA runtime integration."
+    },
+    {
+      "kind": "PUBLIC_REPOSITORY_README",
+      "source": "AmbassadorOv/AmbassadorOv/README.md",
+      "blob_sha": "d2664df6ce794e353a4d1b04682627c3b13f0bb9",
+      "note": "Profile README presents the public research identity and links the WANGA-LAB archive. This is a public research-index relationship, not an implementation dependency or proof of project status."
+    },
+    {
+      "kind": "PUBLIC_REPOSITORY_README",
+      "source": "AmbassadorOv/docs/README.md",
+      "blob_sha": "69090a601896b5189a5b3ee42105ed42638016be",
+      "note": "README identifies a GitHub documentation source tree. Useful as external documentation material only; no WANGA-specific logic or source corpus was identified."
+    },
+    {
+      "kind": "PUBLIC_REPOSITORY_README",
+      "source": "AmbassadorOv/mermaid/README.md",
+      "blob_sha": "456747132cbc6ed1dde4f8d5f0712deb71b47be8",
+      "note": "README describes Mermaid text-based diagrams and chart rendering. Potential visualization tooling for maps; diagram output is not logical evidence or semantic validation."
+    },
+    {
+      "kind": "PUBLIC_REPOSITORY_README",
+      "source": "AmbassadorOv/vscode-azure-blockchain-ethereum/README.md",
+      "blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "note": "README describes an Azure Blockchain Development Kit for Ethereum and an older VS Code/Node/Python toolchain. Legacy tooling reference; no current WANGA runtime link established."
+    },
+    {
+      "kind": "PUBLIC_REPOSITORY_README",
+      "source": "AmbassadorOv/eslint/README.md",
+      "blob_sha": "326c6121e810f4d1edfbc781eff4d5b7f46d1c36",
+      "note": "README describes ESLint AST-based static analysis and rule plugins. Possible software-quality tooling; it cannot establish semantic correctness or source truth."
+    },
+    {
+      "kind": "DUPLICATE_README_BLOB_SIGNAL",
+      "source": "AmbassadorOv/World-Party-Federation-Branches-managers/README.md; AmbassadorOv/TTTTproject-un.govt/README.md",
+      "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "note": "Identical README blob; repository identity not established."
+    }
+  ],
+  "claims_added": 0,
+  "logic_units": {
+    "source_linked_wiki_articles": 28,
+    "literal_logic_units_with_provenance": 0,
+    "new_source_grounded_units_added": 0,
+    "source_reference_occurrences": 50,
+    "unique_source_ids_referenced": 17,
+    "dangling_source_refs": 0,
+    "duplicate_article_ids": 0,
+    "editorial_relation_edges": 111
+  },
+  "composition_count": {
+    "active_rules_with_contracts": 2,
+    "draft_rules": 1,
+    "new_rules_added": 0,
+    "semantic_entailments_claimed": 0,
+    "catalog_graph_candidate_paths": 523
+  },
+  "contradictions": {
+    "critical_core_contradictions": "NOT_MEASURED",
+    "reason": "logic_fractal/data/core_contradictions.json is absent; the previous static zero is no longer accepted as a measured count.",
+    "other_discrepancies": [
+      "Two repositories share an identical README blob but repository identity is unproven.",
+      "TTTT repository-name/README-name mismatch remains unresolved.",
+      "Wix manifest research catalog count differs from the live GitHub article catalog by one."
+    ]
+  },
+  "benchmarks": {
+    "software_ci": "PASS",
+    "propositional_smoke": {
+      "passed": 5,
+      "failed": 0,
+      "status": "PASS_SYNTHETIC_FIXTURES"
+    },
+    "typed_formal_fixture_suite": {
+      "passed": 7,
+      "failed": 0,
+      "status": "PASS_SYNTHETIC_FIXTURES"
+    },
+    "semantic_ground_truth_cases": 0,
+    "benchmark_suites": 0,
+    "counterexamples": 0,
+    "independent_reviews": 0,
+    "holdout": false,
+    "mirror_review": false,
+    "companion_repo_tests_run": 0
+  },
+  "ci": {
+    "pr140": {
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/140",
+      "state": "OPEN_UNMERGED",
+      "head_sha": "2995d54f6c1de8befbf11b086505e970a9c4a572",
+      "base_sha": "1cb36e4a05ff5e8ecc26d0dab2526f78e604b580",
+      "mergeable": true,
+      "behind_main_by": 14,
+      "runs": [
+        {
+          "name": "Logic Fractal Wiki Research",
+          "run_id": 43164884718,
+          "run_number": 253,
+          "conclusion": "success",
+          "runner": "ubuntu-26.04",
+          "job_id": 131004329119,
+          "approx_duration_seconds": 10,
+          "artifact_bytes": 85988
+        },
+        {
+          "name": "WANGA Ecosystem Agent Sweep",
+          "run_id": 43164885342,
+          "run_number": 201,
+          "conclusion": "success",
+          "runner": "ubuntu-26.04",
+          "job_id": 131004356847,
+          "approx_duration_seconds": 6,
+          "artifact_bytes": 3223
+        },
+        {
+          "name": "Repository Integrity",
+          "run_id": 43164884759,
+          "run_number": 960,
+          "conclusion": "success",
+          "runner": "ubuntu-26.04",
+          "job_id": 131004353863,
+          "approx_duration_seconds": 9,
+          "artifact_bytes": 0
+        },
+        {
+          "name": "CodeQL Advanced",
+          "run_id": 43164884798,
+          "run_number": 1445,
+          "conclusion": "success",
+          "jobs": [
+            "Analyze (actions)",
+            "Analyze (python)"
+          ]
+        }
+      ]
+    },
+    "pr122": {
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/122",
+      "state": "OPEN_DRAFT",
+      "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+      "behind_main_by": 26,
+      "workflow_runs": [
+        {
+          "run_id": 42345983634,
+          "conclusion": "action_required",
+          "jobs_returned": 0
+        },
+        {
+          "run_id": 42345983633,
+          "conclusion": "action_required",
+          "jobs_returned": 0
+        },
+        {
+          "run_id": 42345983702,
+          "conclusion": "action_required",
+          "jobs_returned": 0
+        }
+      ]
+    }
+  },
+  "model_hash": {
+    "candidate_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "scale_1_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+    "status": "CANDIDATE_NOT_RELEASED",
+    "builder_run": 43164884718,
+    "rebuilt_in_ci_this_cycle": true,
+    "fixture_scope": "SYNTHETIC_ONLY",
+    "model_backend": "NOT_CONFIGURED"
+  },
+  "readiness_gate": {
+    "gate": "FIRST_MODEL_ALPHA_V1",
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "threshold_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "observed": {
+      "source_records": 17,
+      "source_classes": 11,
+      "source_class_names": [
+        "IMPLEMENTATION_SOURCE",
+        "LOCAL_ARCHIVE",
+        "OPEN_TEXTBOOK",
+        "PROJECT_CODE",
+        "PROJECT_CONTRACT",
+        "PROJECT_IMPLEMENTATION",
+        "PROJECT_PROPOSAL",
+        "PROJECT_REPOSITORY",
+        "PROJECT_RESEARCH",
+        "REFERENCE_ARTICLE",
+        "USER_PROVIDED_RESEARCH_HYPOTHESIS"
+      ],
+      "source_linked_wiki_articles": 28,
+      "logic_units_with_provenance": 0,
+      "composition_rules_with_contracts": 2,
+      "draft_composition_rules": 1,
+      "counterexample_cases": 0,
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "dangling_source_refs": 0,
+      "duplicate_article_ids": 0,
+      "critical_core_contradictions": "NOT_MEASURED_NO_INVENTORY",
+      "deterministic_build": "TESTED_ON_SYNTHETIC_FIXTURES",
+      "holdout_split": false,
+      "mirror_review": false
+    },
+    "missing": {
+      "source_records": 3,
+      "logic_units_with_provenance": 50,
+      "composition_rules_with_contracts": 18,
+      "counterexample_cases": 30,
+      "semantic_test_cases": 100,
+      "benchmark_suites": 3,
+      "independent_review_cycles": 2,
+      "contradiction_inventory": "REQUIRED"
+    },
+    "note": "The 28 source-linked Wiki articles are editorial summaries and are not counted as literal logic units. Only explicit records in logic_fractal/data/logic_units.json count. The core contradiction inventory is absent, so zero critical contradictions cannot be claimed."
+  },
+  "limbo": {
+    "pr": 122,
+    "branch": "deploy/limbo-cartography-core-v1",
+    "head": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+    "pr_vs_main": {
+      "status": "DIVERGED",
+      "ahead_by": 63,
+      "behind_by": 26
+    },
+    "map_version": "1.0.0",
+    "map_status": "BUILT_FROM_REGISTERED_RECORDS",
+    "map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+    "registered_incident_count": 10,
+    "history_event_count": 2,
+    "map_node_count": 14,
+    "map_edge_count": 19,
+    "recurrence_clusters": [
+      {
+        "cluster_id": "CLUSTER-3ce9a39032dad563",
+        "component": "Vitruvius Research Index / build-index test contract",
+        "observation_count": 7,
+        "status": "RECURRENT_UNRESOLVED",
+        "root_cause": "NOT_ESTABLISHED"
+      },
+      {
+        "cluster_id": "CLUSTER-bb88393d0fa34e1e",
+        "component": "Daily Autonomous Operations / scripts/vitruvius_forensic_research.py compile stage",
+        "observation_count": 1,
+        "status": "SINGLE_POINT_UNRESOLVED",
+        "root_cause": "NOT_ESTABLISHED"
+      },
+      {
+        "cluster_id": "CLUSTER-bf39055b9c828b9a",
+        "component": "Logic Wiki generated-report proposal workflow",
+        "observation_count": 1,
+        "status": "SINGLE_POINT_UNRESOLVED",
+        "root_cause": "NOT_ESTABLISHED"
+      },
+      {
+        "cluster_id": "CLUSTER-c3786cdc92513d86",
+        "component": "limbo-cartography-core/engine/seismic_detector.py / test inbox path reporting",
+        "observation_count": 1,
+        "status": "SINGLE_POINT_WITH_PASS_RETEST",
+        "root_cause": "NOT_ESTABLISHED"
+      }
+    ],
+    "latest_execution": {
+      "timestamp_utc": "2026-11-07T06:12:35+00:00",
+      "execution_mode": "STRICT_MECHANICAL_RECORDING",
+      "epistemic_attempt": false,
+      "drift_detected": null,
+      "keystone_verified": false,
+      "status": "EXECUTION_RECORD_ONLY",
+      "verification_note": "Execution record created; this is not a claim of zero drift or semantic truth."
+    },
+    "crash_point_inbox": "NO_CRASH_POINT_INPUTS",
+    "keystone_case_inbox": "NO_KEYSTONE_CASE_INPUTS",
+    "history_event_inbox": "NO_NEW_HISTORY_EVENT_INPUTS",
+    "draft_logic_bundle_inbox_count": 1,
+    "logic_bundle": {
+      "id": "VITRUVIUS-QUEUE-CONTRACT-RECURRENCE",
+      "status": "DRAFT_UNVERIFIED",
+      "recurrence_count": 7,
+      "root_cause_status": "NOT_YET_ESTABLISHED"
+    },
+    "tuning_candidate": {
+      "id": "TUNE-9c166900cc4ad5dd",
+      "status": "CANDIDATE_REPLAY_REQUIRED",
+      "replay_status": "NOT_RUN",
+      "prior_retest": "PASS for recorded 15-software-test context only"
+    },
+    "regional_observation_files_added_to_main_since_pr122_base": 56,
+    "regional_observation_status": "Sampled records contain status NOT_CONFIGURED and model empty; they are not crash-point records and are not admitted to Limbo.",
+    "current_target_replay": "NOT_RUN",
+    "ci": {
+      "repository_integrity": "ACTION_REQUIRED_NO_JOBS",
+      "codeql": "ACTION_REQUIRED_NO_JOBS",
+      "limbo_workflow": "ACTION_REQUIRED_NO_JOBS"
+    }
+  },
+  "wix": {
+    "status": "NOT_PERFORMED",
+    "site_status": "PUBLISHED_PER_WIX_SITE_CONTEXT",
+    "manifest_status": "PUBLISHED_READ_BACK_PARTIAL",
+    "last_sync_date": "2026-10-12",
+    "manifest_synced_articles": 18,
+    "manifest_catalog_count": 27,
+    "current_github_catalog_count": 28,
+    "count_difference": 1,
+    "reconciliation_required": true,
+    "deployment_performed": false,
+    "read_back_performed": false
+  },
+  "agents": [
+    {
+      "role": "Repository Inventory",
+      "status": "COMPLETED",
+      "input": "Live owner/collaborator/organization_member listing",
+      "output": "63 visible repositories; 58 public and 5 private; ten new public repos scanned.",
+      "evidence": "Connected GitHub affiliation listings + repository_inventory.json",
+      "next_action": "Recheck live inventory next cycle."
+    },
+    {
+      "role": "README/Docs Collector",
+      "status": "COMPLETED",
+      "input": "Ten next-batch public repositories",
+      "output": "Ten README files fetched; blob SHAs and default branches recorded; no companion tests run.",
+      "evidence": "README Git blob SHAs in repository_inventory.json",
+      "next_action": "Continue from scan cursor."
+    },
+    {
+      "role": "Conversation Export Collector",
+      "status": "BLOCKED",
+      "input": "Current conversation attachments and exposed export artifacts",
+      "output": "No export available; no transcripts ingested.",
+      "evidence": "No export artifact surfaced in this run",
+      "next_action": "Wait for a user-provided reviewed/redacted export."
+    },
+    {
+      "role": "Logic Extractor/Normalizer",
+      "status": "COMPLETED_WITH_NO_ADMISSION",
+      "input": "Ten README sources and current Logic Wiki catalog",
+      "output": "Zero new source-grounded logic units; 28 source-linked articles retained as editorial summaries.",
+      "evidence": "logic_units.json empty; build_logic_wiki.py and run_logic_agents.py now count only explicit source-span records.",
+      "next_action": "Admit units only with literal excerpt, exact locator, source version, URI and permission scope."
+    },
+    {
+      "role": "Fractal Composer",
+      "status": "NOT_RUN_ON_NEW_SOURCES",
+      "input": "No newly admitted typed logic units",
+      "output": "No new composition; two active contracts and one draft contract remain.",
+      "evidence": "composition_rules.json",
+      "next_action": "Compose only after source-span units are normalized and reviewed."
+    },
+    {
+      "role": "Mirror/Contradiction Reviewer",
+      "status": "PARTIAL_REVIEW",
+      "input": "Duplicate README hashes, TTTT naming mismatch, readiness metrics",
+      "output": "Duplicate README signal recorded; critical contradiction count remains NOT_MEASURED.",
+      "evidence": "project_findings.json; absent core_contradictions.json",
+      "next_action": "Create a source-backed contradiction inventory with reviewer outcomes."
+    },
+    {
+      "role": "Benchmark Evaluator",
+      "status": "PARTIAL_SOFTWARE_VALIDATION",
+      "input": "Logic Fractal workflow and synthetic fixtures",
+      "output": "Software CI PASS; 5/5 and 7/7 synthetic fixture cases passed; zero semantic ground-truth cases.",
+      "evidence": "Workflow run 43164884718",
+      "next_action": "Register reviewed positive, negative and boundary semantic cases and holdout."
+    },
+    {
+      "role": "Wiki Curator",
+      "status": "BLOCKED_PENDING_REVIEW",
+      "input": "New repository descriptions",
+      "output": "No new article or public catalog entry approved.",
+      "evidence": "No articles.json write",
+      "next_action": "Review only source-backed summaries before adding Wiki entries."
+    },
+    {
+      "role": "Report Publisher",
+      "status": "COMPLETED_PENDING_CI_FOR_REPORT_COMMIT",
+      "input": "Batch 04 inventory and readiness audit",
+      "output": "Prepared updated public-only registry, cursor, manifest audit and dated reports on PR #140 branch.",
+      "evidence": "PR #140 branch",
+      "next_action": "Inspect CI after report commit; do not merge automatically."
+    }
+  ],
+  "blocked": [
+    "FIRST_MODEL_ALPHA release gate",
+    "50 explicit source-span logic units; current count 0",
+    "20 composition rules; current count 2",
+    "30 counterexamples; current count 0",
+    "100 semantic test cases in 3 suites; current count 0",
+    "2 independent reviews; current count 0",
+    "Measured contradiction inventory",
+    "ChatGPT conversation export access",
+    "Limbo current-target replay and PR #122 CI",
+    "Wix one-entry catalog/manifest reconciliation",
+    "Cross-repository GitHub Actions token"
+  ],
+  "next": [
+    "Continue next ten public repositories from scan_cursor.json.",
+    "Review the 28 Wiki articles as editorial summaries; extract literal source spans into logic_units.json only when provenance is complete.",
+    "Build a contradiction inventory before reporting any zero contradiction count.",
+    "Create semantic benchmark cases and holdout; keep software tests separate.",
+    "Reconcile PR #122's 26-commit divergence before attempting current-target Limbo replay.",
+    "Resolve Wix catalog count 28 versus manifest count 27 before deployment."
+  ]
+}
