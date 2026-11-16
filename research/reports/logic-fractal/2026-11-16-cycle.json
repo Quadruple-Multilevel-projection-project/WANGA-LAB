@@ -17,7 +17,7 @@
     "limbo_branch_files_read": 5,
     "library_relevant_artifacts": 3,
     "wix_site_files_listed": 29,
-    "wix_pages_read": 3,
+    "wix_pages_read": 4,
     "chatgpt_export_files": 0
   },
   "ACCESS_GAPS": [
@@ -89,38 +89,46 @@
       "head_sha": "2fb950e8f0bdf9a677d7255390a3db4506420057",
       "workflow_runs": [
         {
-          "id": 43812344838,
-          "name": "Repository Integrity",
-          "status": "in_progress",
-          "jobs": [
-            "integrity"
-          ]
-        },
-        {
-          "id": 43812344767,
-          "name": "CodeQL Advanced",
-          "status": "queued",
-          "jobs": []
-        },
-        {
-          "id": 43812344732,
+          "id": 43812380063,
           "name": "WANGA Ecosystem Agent Sweep",
-          "status": "in_progress",
+          "status": "completed",
+          "conclusion": "success",
           "jobs": [
             "public-repository-scout"
           ]
         },
         {
-          "id": 43812344778,
+          "id": 43812380041,
+          "name": "Repository Integrity",
+          "status": "in_progress",
+          "conclusion": null,
+          "jobs": [
+            "integrity"
+          ]
+        },
+        {
+          "id": 43812380058,
+          "name": "CodeQL Advanced",
+          "status": "in_progress",
+          "conclusion": null,
+          "jobs": [
+            "Analyze (actions)",
+            "Analyze (python)"
+          ]
+        },
+        {
+          "id": 43812380051,
           "name": "Logic Fractal Wiki Research",
           "status": "in_progress",
+          "conclusion": null,
           "jobs": [
             "validate-build-report"
           ]
         }
       ],
       "observed_head_sha_before_report_update": "ec327a8a669daa7d45e688a56de51029702af656",
-      "note": "The report update itself creates a new branch commit; CI will also be triggered for that final branch head."
+      "note": "Snapshot is for the branch head immediately before this report refresh; this commit triggers a fresh CI cycle.",
+      "latest_observed_head_sha_before_report_update": "a2cbc6efba0466f0c15be0aab55c3c6a0f87bcf1"
     }
   },
   "MODEL_HASH": {
