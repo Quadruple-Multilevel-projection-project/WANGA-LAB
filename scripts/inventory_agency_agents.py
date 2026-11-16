@@ -18,10 +18,10 @@ from pathlib import Path
 from typing import Any
 
 ACTION_RECORD = {
-    "timestamp": "2026-11-16T15:29:00+02:00",
+    "timestamp": "2026-11-16T15:30:00+02:00",
     "contract_start_time": "2026-11-16T15:27:30+02:00",
-    "action_id": "ACT-20261116-AI231-AGENCY-INVENTORY-TOOL-004",
-    "sha256": "c4b5114f8983246d14bc7daf5c94644cddfe20f4c6fcaf67a60c3c7659161ea7",
+    "action_id": "ACT-20261116-AI231-AGENCY-INVENTORY-FIX-005",
+    "sha256": "3bb25f09b033f015687bd5f7e7ccbcebd353cdc533b39739293f8d8a2ac82651",
 }
 
 
@@ -34,8 +34,7 @@ def sha256_file(path: Path) -> str:
 
 
 def frontmatter(path: Path) -> dict[str, str] | None:
-    text = path.read_text(encoding="utf-8")
-    lines = text.splitlines()
+    lines = path.read_text(encoding="utf-8").splitlines()
     if not lines or lines[0].strip() != "---":
         return None
     try:
@@ -44,9 +43,9 @@ def frontmatter(path: Path) -> dict[str, str] | None:
         return None
     result: dict[str, str] = {}
     for line in lines[1:end]:
-        match = re.match(r"^([A-Za-z0-9_-]+):\\s*(.*?)\\s*$", line)
+        match = re.match(r"^([A-Za-z0-9_-]+):\s*(.*?)\s*$", line)
         if match:
-            result[match.group(1)] = match.group(2).strip().strip('"\\'')
+            result[match.group(1)] = match.group(2).strip().strip("\"'")
     return result
 
 
@@ -126,7 +125,7 @@ def main() -> int:
 
     inventory = build_inventory(repo, args.commit)
     args.output.parent.mkdir(parents=True, exist_ok=True)
-    args.output.write_text(json.dumps(inventory, ensure_ascii=False, indent=2) + "\\n", encoding="utf-8")
+    args.output.write_text(json.dumps(inventory, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
     print(json.dumps({
         "status": "INVENTORY_WRITTEN",
         "agents": inventory["counts"]["agents"],
