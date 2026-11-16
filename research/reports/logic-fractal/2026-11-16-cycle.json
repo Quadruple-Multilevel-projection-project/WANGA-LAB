@@ -81,15 +81,57 @@
       42345983702
     ],
     "conclusion": "ACTION_REQUIRED_NO_JOB_DETAILS",
-    "current_cycle_repo_integrity": "NOT_RUN_IN_GITHUB_ACTIONS"
+    "current_cycle_repo_integrity": "IN_PROGRESS",
+    "current_cycle_pr": {
+      "number": 151,
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/151",
+      "state": "OPEN_DRAFT",
+      "head_sha": "2fb950e8f0bdf9a677d7255390a3db4506420057",
+      "workflow_runs": [
+        {
+          "id": 43812282641,
+          "name": "CodeQL Advanced",
+          "status": "in_progress",
+          "jobs": [
+            "Analyze (python)",
+            "Analyze (actions)"
+          ]
+        },
+        {
+          "id": 43812282604,
+          "name": "WANGA Ecosystem Agent Sweep",
+          "status": "in_progress",
+          "jobs": [
+            "public-repository-scout"
+          ]
+        },
+        {
+          "id": 43812282548,
+          "name": "Repository Integrity",
+          "status": "in_progress",
+          "jobs": [
+            "integrity"
+          ]
+        },
+        {
+          "id": 43812282654,
+          "name": "Logic Fractal Wiki Research",
+          "status": "in_progress",
+          "jobs": [
+            "validate-build-report"
+          ]
+        }
+      ]
+    }
   },
   "MODEL_HASH": {
     "candidate": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
     "scale_1": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
-    "artifact_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
-    "artifact_bytes": 9843,
     "execution": "LOCAL_REPLAY_OF_FETCHED_BUILDER_AND_SYNTHETIC_FIXTURE",
-    "semantic_status": "NOT_YET_VERIFIED"
+    "semantic_status": "NOT_YET_VERIFIED",
+    "local_artifact_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+    "local_artifact_bytes": 9843,
+    "github_blob_sha": "ba18702652b43481b440093bb7b5275ea918111c"
   },
   "READINESS_GATE": {
     "id": "FIRST_MODEL_ALPHA_V1",
@@ -177,5 +219,38 @@
     "Continue ecosystem scan with the next 10 priority repositories recorded in repository_inventory.json.",
     "Unblock CI for PR #122, replay its latest head, then preserve new crash/retest events append-only.",
     "After the report PR is reviewed/merged, sync only the approved Wix status page and verify read-back; then update last_sync_date/counts."
-  ]
+  ],
+  "PULL_REQUEST": {
+    "number": 151,
+    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/151",
+    "branch": "automation/wanga-cycle-2026-11-16",
+    "state": "OPEN_DRAFT",
+    "merged": false,
+    "mergeable": true,
+    "head_sha": "2fb950e8f0bdf9a677d7255390a3db4506420057"
+  },
+  "ecosystem_sweep": {
+    "unique_repositories_visible": 63,
+    "owner_affiliation": 38,
+    "collaborator_affiliation": 13,
+    "organization_member_affiliation": 25,
+    "scanned_this_batch": 10,
+    "readmes_fetched": 9,
+    "readme_not_found": 1,
+    "remaining": 53,
+    "next_cursor_index": 10,
+    "next_priority_repositories": [
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/Qualia",
+      "AmbassadorOv/O-Ms",
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "tribal-archery/-logicl-neural-order",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/MAM-parse",
+      "tribal-archery/Qdprojects",
+      "tribal-archery/AI231.meta.io"
+    ],
+    "updated_at_fields_exposed": false
+  }
 }
