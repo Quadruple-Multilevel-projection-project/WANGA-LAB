@@ -1,0 +1,181 @@
+{
+  "report_version": "wanga-unified-cycle/1.0",
+  "date": "2026-11-16",
+  "scan_time_utc": "2026-11-16T05:35:39Z",
+  "run_status": "REVIEW_WITH_BLOCKERS",
+  "source_commit": {
+    "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "branch": "main",
+    "sha": "3f62e820e566c778871065a633b459e9e2bfdcba",
+    "committed_at_utc": "2026-11-16T05:29:40Z"
+  },
+  "SOURCES_SCANNED": {
+    "github_repositories": 10,
+    "readme_fetch_success": 9,
+    "readme_not_found": 1,
+    "wanga_main_files_read": 20,
+    "limbo_branch_files_read": 5,
+    "library_relevant_artifacts": 3,
+    "wix_site_files_listed": 29,
+    "wix_pages_read": 3,
+    "chatgpt_export_files": 0
+  },
+  "ACCESS_GAPS": [
+    "No ChatGPT export or transcript was exposed in the current conversation/Library search; no account-wide private conversation scan is claimed.",
+    "10 WANGA-LAB paths were not found on main, including source-backed counterexample/semantic benchmark data, core contradiction inventory and holdout manifest.",
+    "Repository updated_at timestamps were not exposed by the live repository inventory tool.",
+    "glowing-octo-waddle repository metadata was visible but README.md returned 404.",
+    "PR #122 workflows are action_required and return no job details; current CI evidence is unavailable."
+  ],
+  "NEW_SOURCES": {
+    "added_to_catalog": 0,
+    "private_library_candidates_pending_review": 3,
+    "conversation_exports_ingested": 0
+  },
+  "DUPLICATE_SOURCES": [
+    {
+      "hash": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/MNM"
+      ],
+      "status": "IDENTICAL_README_BLOB_NOT_SAME_REPOSITORY"
+    }
+  ],
+  "CLAIMS_ADDED": 0,
+  "LOGIC_UNITS": {
+    "current_with_resolved_provenance": 28,
+    "new": 0,
+    "semantic_status": "SOURCE_REFERENCED_CATALOG_ENTRIES_NOT_INDEPENDENTLY_VERIFIED_PRIMITIVES"
+  },
+  "COMPOSITION_COUNT": {
+    "active_rules": 2,
+    "total_rules": 3,
+    "recursive_contract_levels": 4,
+    "candidate_compositions_from_catalog": "NOT_RECOMPUTED_THIS_CYCLE"
+  },
+  "CONTRADICTIONS": {
+    "inventory_status": "NOT_MEASURED_NO_FILE",
+    "configured_metric_value": 0,
+    "interpretation": "A configured zero is not evidence that no core contradictions exist."
+  },
+  "BENCHMARKS": {
+    "source_grounded_counterexamples": 0,
+    "semantic_test_cases": 0,
+    "suites": 0,
+    "source_grounded_manifest_cases": 0,
+    "independent_reviews": 0,
+    "software_tests": {
+      "typed_fragment_composer": 7,
+      "passed": 7,
+      "failed": 0,
+      "environment": "Python 3.13.5 local ChatGPT runtime"
+    },
+    "formal_adapter_fixtures": "7 synthetic cases reported in prior project audit; excluded from semantic readiness."
+  },
+  "CI": {
+    "main_head_runs_returned": 0,
+    "limbo_pr_122_runs": [
+      42345983634,
+      42345983633,
+      42345983702
+    ],
+    "conclusion": "ACTION_REQUIRED_NO_JOB_DETAILS",
+    "current_cycle_repo_integrity": "NOT_RUN_IN_GITHUB_ACTIONS"
+  },
+  "MODEL_HASH": {
+    "candidate": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "scale_1": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+    "artifact_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+    "artifact_bytes": 9843,
+    "execution": "LOCAL_REPLAY_OF_FETCHED_BUILDER_AND_SYNTHETIC_FIXTURE",
+    "semantic_status": "NOT_YET_VERIFIED"
+  },
+  "READINESS_GATE": {
+    "id": "FIRST_MODEL_ALPHA_V1",
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "threshold_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "metrics": {
+      "source_records": {
+        "actual": 17,
+        "required": 20
+      },
+      "source_classes": {
+        "actual": 11,
+        "required": 3
+      },
+      "logic_units_with_provenance": {
+        "actual": 28,
+        "required": 50
+      },
+      "composition_rules_with_contracts": {
+        "actual": 2,
+        "required": 20
+      },
+      "counterexamples": {
+        "actual": 0,
+        "required": 30
+      },
+      "semantic_test_cases": {
+        "actual": 0,
+        "required": 100
+      },
+      "benchmark_suites": {
+        "actual": 0,
+        "required": 3
+      },
+      "independent_reviews": {
+        "actual": 0,
+        "required": 2
+      },
+      "dangling_source_refs": {
+        "actual": 0,
+        "required": 0
+      },
+      "dangling_relation_refs": {
+        "actual": 0,
+        "required": 0
+      },
+      "duplicate_ids": {
+        "actual": 0,
+        "required": 0
+      },
+      "critical_core_contradictions": {
+        "actual": "NOT_MEASURED",
+        "required": 0
+      },
+      "deterministic_build": {
+        "actual": true,
+        "required": true
+      },
+      "holdout": {
+        "actual": false,
+        "required": true
+      },
+      "mirror_review": {
+        "actual": false,
+        "required": true
+      }
+    }
+  },
+  "BUILT_TESTED_VERIFIED": {
+    "built": "Two-scale typed candidate built from three synthetic fixtures; scale-1 and scale-2 hashes archived.",
+    "tested": "7 typed-fragment software tests passed locally; this is not repository CI.",
+    "verified": "No semantic claim or first model promoted to VERIFIED; candidate remains NOT_YET_VERIFIED."
+  },
+  "BLOCKED": [
+    "FIRST_MODEL_ALPHA release gate remains blocked by missing sources, units, contracts, counterexamples, semantic suites, reviews, holdout and MIRROR review.",
+    "Wix write is deferred until the GitHub report/catalog change is approved/merged; live read-back was performed, no write occurred.",
+    "Limbo PR #122 requires CI action; current branch has no accessible job results and current replay of TUNE-9c166900cc4ad5dd is NOT_RUN.",
+    "Full cross-repository sweep is incomplete: 10/63 repositories scanned in this batch."
+  ],
+  "NEXT": [
+    "Process a user-provided ChatGPT export only through private intake and privacy review; no raw transcript publication.",
+    "Add source-grounded counterexamples and 100 semantic cases across 3 suites, including frozen holdout.",
+    "Create and populate core_contradictions.json; do not infer zero contradictions from missing inventory.",
+    "Run independent MIRROR review and capture reviewer/status/evidence.",
+    "Continue ecosystem scan with the next 10 priority repositories recorded in repository_inventory.json.",
+    "Unblock CI for PR #122, replay its latest head, then preserve new crash/retest events append-only.",
+    "After the report PR is reviewed/merged, sync only the approved Wix status page and verify read-back; then update last_sync_date/counts."
+  ]
+}
