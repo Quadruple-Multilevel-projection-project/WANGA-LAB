@@ -1,0 +1,129 @@
+{
+  "report_id": "WANGA-ECOSYSTEM-BATCH-2026-10-25",
+  "generated_at_utc": "2026-10-25T05:50:17Z",
+  "status": "COMPLETED_WITH_ACCESS_GAPS",
+  "inventory": {
+    "visible": 62,
+    "public": 58,
+    "private_omitted": 4,
+    "unknown_visibility": 0,
+    "affiliations": {
+      "owner": 37,
+      "collaborator": 13,
+      "organization_member": 25,
+      "unique_union": 62
+    },
+    "current_batch": {
+      "count": 10,
+      "repositories": [
+        "AmbassadorOv/desktop",
+        "AmbassadorOv/extensions",
+        "AmbassadorOv/docs",
+        "AmbassadorOv/generative-ai-docs",
+        "AmbassadorOv/python-genai",
+        "AmbassadorOv/multi-agent-orchestator",
+        "AmbassadorOv/https-AmbassadorOv.io",
+        "AmbassadorOv/vqbshtfsprojects.org",
+        "AmbassadorOv/chatgpt-scientific-publications-extension",
+        "AmbassadorOv/test-notebook-links"
+      ],
+      "readmes_read": 8,
+      "readme_fetch_gaps": [
+        "AmbassadorOv/https-AmbassadorOv.io",
+        "AmbassadorOv/vqbshtfsprojects.org"
+      ],
+      "confirmed_empty_repositories": [
+        "AmbassadorOv/vqbshtfsprojects.org"
+      ]
+    },
+    "cumulative": {
+      "distinct_public_repositories_scanned": 30,
+      "readmes_read": 26,
+      "readme_fetch_gaps": 4,
+      "remaining_public_repositories": 28
+    }
+  },
+  "new_or_duplicate_sources": {
+    "readme_sources_added": 8,
+    "readme_fetch_gaps": [
+      "AmbassadorOv/https-AmbassadorOv.io",
+      "AmbassadorOv/vqbshtfsprojects.org"
+    ],
+    "new_duplicate_readme_clusters": [],
+    "candidate_logic_units_registered": [
+      {
+        "stable_id": "EXT-MAORCH-UNIT-001",
+        "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md",
+        "source_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+        "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+        "entailment_status": "NOT_ASSERTED"
+      },
+      {
+        "stable_id": "EXT-MAORCH-UNIT-002",
+        "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md",
+        "source_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+        "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+        "entailment_status": "NOT_ASSERTED"
+      },
+      {
+        "stable_id": "EXT-MAORCH-UNIT-003",
+        "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md",
+        "source_blob_sha1": "0842f72028c327011ddf364adccf29a26c15600c",
+        "epistemic_status": "SOURCE_TEXT_OBSERVATION_CANDIDATE_NOT_FORMALIZED",
+        "entailment_status": "NOT_ASSERTED"
+      }
+    ]
+  },
+  "local_library_scan": {
+    "targeted_queries": 3,
+    "ranked_results_returned": 10,
+    "conversation_export_found": false,
+    "local_html_candidate_hashed": 1,
+    "permission_scope": "PRIVATE_LIBRARY_READ",
+    "publication_status": "LOCAL_SOURCE_REVIEW_ONLY_NOT_PUBLISHED",
+    "raw_content_published": false,
+    "hash_or_excerpt_written_to_public_registry": false
+  },
+  "next_cursor": {
+    "priority_order_index": 30,
+    "next_batch": [
+      "AmbassadorOv/googleapis",
+      "AmbassadorOv/platform-samples",
+      "AmbassadorOv/mermaid",
+      "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "AmbassadorOv/eslint",
+      "AmbassadorOv/openai_tiktoken",
+      "AmbassadorOv/mujoco",
+      "AmbassadorOv/cookbook",
+      "AmbassadorOv/vscode-docs",
+      "AmbassadorOv/mediapipe"
+    ],
+    "after_last_scanned": "AmbassadorOv/test-notebook-links"
+  },
+  "private_content_policy": "Private repository names/content and local Library source text are omitted from the public registry. No writes were made to unrelated repositories.",
+  "updated_at_status": "NOT_EXPOSED_BY_CONNECTOR",
+  "next_actions": [
+    "Continue with the next 10 public repositories from the stored cursor.",
+    "Review the three cross-repository candidate logic units against WANGA's agent contracts; do not promote them to the formal catalog without source and scope review.",
+    "Keep the local HTML artifact in private review until specific excerpts are approved for publication.",
+    "Do not sync Wix until a catalog/report change is approved and deployment read-back can be recorded."
+  ],
+  "CI": {
+    "ecosystem_agent_sweep": {
+      "run_id": 40167405653,
+      "run_number": 65,
+      "status": "SUCCESS"
+    },
+    "repository_integrity": {
+      "run_id": 40167405682,
+      "run_number": 810,
+      "status": "SUCCESS"
+    },
+    "codeql": {
+      "run_id": 40167405665,
+      "run_number": 1292,
+      "status": "SUCCESS"
+    },
+    "scope": "Checks ran against the report/registry branch. No merge to main."
+  }
+}
