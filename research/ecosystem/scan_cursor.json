@@ -1,0 +1,30 @@
+{
+  "schema_version": "wanga-ecosystem-scan-cursor/1.0",
+  "snapshot_date": "2026-11-07",
+  "completed_batch": "2026-11-07-public-followup-batch-05",
+  "cumulative_public_scanned": 58,
+  "total_public": 58,
+  "remaining_public": 0,
+  "next_batch": [],
+  "private_repositories": {
+    "total": 5,
+    "names_redacted": true,
+    "content_persisted": false,
+    "readme_fetch_count_redacted": 1
+  },
+  "next_action": "Revalidate changed public repositories; handle private content only in private storage; continue Library pagination. No valid conversation export was found.",
+  "content_scanned": 57,
+  "content_skipped": 1,
+  "last_scan_time_utc": "2026-11-07T07:00:23.634Z",
+  "last_completed_batch": "2026-11-09-revalidation-batch-06",
+  "last_completed_at_utc": "2026-11-09T06:12:56Z",
+  "public_repositories_total": 58,
+  "public_metadata_accounted": 58,
+  "public_content_scanned": 57,
+  "public_content_skipped": 1,
+  "private_repositories_deferred": 5,
+  "private_names_redacted": true,
+  "private_readme_probe_success_count_redacted": 4,
+  "private_readme_probe_failure_count_redacted": 1,
+  "private_content_persisted": false
+}

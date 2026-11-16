@@ -1,0 +1,185 @@
+{
+  "schema_version": "wanga-ecosystem-batch/1.1",
+  "date": "2026-11-07",
+  "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+  "main_sha": "e40a240859a31ae96d5dd28adbdc4e4fc7655874",
+  "affiliation_snapshot": {
+    "owner": 38,
+    "collaborator": 13,
+    "organization_member": 25,
+    "unique": 63,
+    "public": 58,
+    "private_redacted": 5
+  },
+  "batch": {
+    "batch_id": "2026-11-07-public-batch-04",
+    "repositories": [
+      {
+        "full_name": "Quadruple-Multilevel-projection-project/-",
+        "branch": "feat-yellow-quantic-simulation",
+        "status": "SCANNED_METADATA_ONLY_README_MISSING",
+        "readme_sha": null
+      },
+      {
+        "full_name": "Quadruple-Multilevel-projection-project/-from-Corsican-",
+        "branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+        "status": "SCANNED_README",
+        "readme_sha": "70944f7da15632788024530d0c7faf9d91d74381",
+        "summary": "README title only: AI231.meta.io"
+      },
+      {
+        "full_name": "Quadruple-Multilevel-projection-project/branches-",
+        "branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+        "status": "SCANNED_README",
+        "readme_sha": "3c2d05890db488362257aa6bf373620050d7477d",
+        "summary": "Link list and placeholders for Quilia project resources; no implementation evidence."
+      },
+      {
+        "full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+        "branch": "main",
+        "status": "SKIPPED_CONTENT_SENSITIVE_NAME",
+        "readme_sha": null,
+        "summary": "Metadata only; repository content intentionally not opened."
+      },
+      {
+        "full_name": "tribal-archery/mermaid",
+        "branch": "develop",
+        "status": "SCANNED_README",
+        "readme_sha": "280725af7ea2fec9941f5711283c65a94523d60c",
+        "summary": "Mermaid diagramming tool README; upstream tooling only."
+      },
+      {
+        "full_name": "tribal-archery/unetbootin",
+        "branch": "master",
+        "status": "SCANNED_METADATA_ONLY_README_MISSING",
+        "readme_sha": null
+      },
+      {
+        "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
+        "branch": "master",
+        "status": "SCANNED_README",
+        "readme_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+        "summary": "Azure Blockchain VS Code extension README; no WANGA logic source identified."
+      }
+    ],
+    "readme_present": 4,
+    "readme_missing": 2,
+    "content_skipped_sensitive_name": 1,
+    "cumulative_public_scanned": 55,
+    "public_total": 58,
+    "remaining_public": 3
+  },
+  "project_repositories_revisited": [
+    "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+    "Quadruple-Multilevel-projection-project/AI231.meta.io",
+    "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+    "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+    "Quadruple-Multilevel-projection-project/MNM",
+    "Quadruple-Multilevel-projection-project/skills",
+    "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+    "tribal-archery/-logicl-neural-order"
+  ],
+  "findings": [
+    "NTM collaborator repo documents a V1 control-plane skeleton, 28 thought modes and a 1,000-entry planned agent registry; it does not establish 1,000 live agents or a production multi-model fabric.",
+    "AI231.meta.io governance points to WANGA-LAB's contract library and explicitly requires exact tag and verifier evidence before a sealed/verified claim.",
+    "ai-agent-terraform exposes a feature branch with Terraform validation and manual security workflows; no infrastructure was provisioned.",
+    "Quadruple-Multilevel-projection-project/-logicl-neural-order and MNM have the same README blob SHA but remain distinct repositories.",
+    "AI231.meta.io and ARK-KERNEL-OVERSIGHT share a handoff-notice blob; this is a template duplicate, not independent review."
+  ],
+  "duplicate_candidates": [
+    {
+      "blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/MNM"
+      ]
+    },
+    {
+      "blob_sha": "2e2698d337a60a93059d85d4302ea01cc3837b7b",
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/AI231.meta.io",
+        "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT"
+      ]
+    }
+  ],
+  "private_scope": {
+    "count": 5,
+    "names_redacted": true,
+    "one_readme_fetched_redacted": true,
+    "content_persisted": false,
+    "remaining_unscanned": 4
+  },
+  "conversation_export": {
+    "records_ingested": 0,
+    "files_search_scope": [
+      "conversation",
+      "library"
+    ],
+    "result": "No structurally valid export surfaced in the scoped search; no global ChatGPT history scan is claimed."
+  },
+  "write_actions": {
+    "collaborator_repositories_modified": 0,
+    "external_pull_requests_opened": 0,
+    "main_branch_writes": 0
+  },
+  "current_prs": {
+    "report_pr": {
+      "number": 139,
+      "branch": "automation/wanga-unified-work-loop-2026-11-06",
+      "state": "OPEN_DRAFT",
+      "head_sha": "2afa0d2ece4fb6810e21c8ce9a20796fde969af1",
+      "ahead_by": 22,
+      "behind_by": 4,
+      "mergeable": true
+    },
+    "limbo_pr": {
+      "number": 122,
+      "branch": "deploy/limbo-cartography-core-v1",
+      "state": "OPEN_DRAFT",
+      "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+      "ahead_by": 63,
+      "behind_by": 0,
+      "workflow_state": "ACTION_REQUIRED",
+      "jobs": 0,
+      "artifacts": 0
+    },
+    "taxonomy_pr": {
+      "number": 135,
+      "branch": "automation/wanga-workloop-2026-11-03",
+      "state": "OPEN",
+      "mergeable": false,
+      "main_taxonomy_gap": "ark-swarm-logic-trader"
+    }
+  },
+  "ci": {
+    "status": "SUCCESS",
+    "runs": [
+      {
+        "id": 42169282391,
+        "name": "WANGA Ecosystem Agent Sweep",
+        "conclusion": "success",
+        "artifact": "wanga-ecosystem-sweep-164",
+        "artifact_size_bytes": 3222,
+        "artifact_created_at": "2026-11-06T05:35:24Z"
+      },
+      {
+        "id": 42169282468,
+        "name": "Repository Integrity",
+        "conclusion": "success"
+      },
+      {
+        "id": 42169282315,
+        "name": "CodeQL Advanced",
+        "conclusion": "success"
+      }
+    ],
+    "runner_name": "NOT_EXPOSED_BY_CONNECTOR"
+  },
+  "next": [
+    "Inspect two README-missing repositories through safe metadata/tree checks.",
+    "Keep the credential-named repository content uninspected.",
+    "Review PR #135 mergeability to close the taxonomy coverage gap without duplicating its correction.",
+    "Continue only if a new repository or source-backed artifact changes the project findings."
+  ]
+}

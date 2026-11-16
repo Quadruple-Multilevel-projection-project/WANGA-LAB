@@ -1,0 +1,215 @@
+{
+  "schema_version": "wanga-ecosystem-batch/1.0",
+  "date": "2026-11-06",
+  "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+  "main_sha": "250e195bd7d162b4b1fee77f2d55e97332c3b99c",
+  "affiliation_snapshot": {
+    "owner": 38,
+    "collaborator": 13,
+    "organization_member": 25,
+    "unique": 63,
+    "public": 58,
+    "private_redacted": 5
+  },
+  "batch": {
+    "repositories": [
+      {
+        "full_name": "AmbassadorOv/python-genai",
+        "branch": "main",
+        "readme_sha": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+        "bytes": 35795,
+        "summary": "Google Gen AI Python SDK for Gemini Developer API and Vertex AI; runtime integration context only, no WANGA logic source identified.",
+        "commit_sha": "77253f4c48036d3e04e281c1f2d02e3be756c960",
+        "commit_date": "2026-10-29T19:16:58Z",
+        "commit_message": "Merge pull request #1: Add PCE contract breach notice",
+        "commit_url": "https://github.com/AmbassadorOv/python-genai/commit/77253f4c48036d3e04e281c1f2d02e3be756c960"
+      },
+      {
+        "full_name": "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+        "branch": "master",
+        "readme_sha": "3dd3c4fdfda2e43c50ba4e706ee16344d9f21488",
+        "bytes": 2949,
+        "summary": "Computational-science proposal/template README; no implementation or source-backed WANGA logic established by this bounded read.",
+        "commit_sha": "e8c06c250d18296bb0f160129d48305bdfd54f29",
+        "commit_date": "2026-10-19T19:00:46Z",
+        "commit_message": "Document compiler connectivity review and sandbox issues",
+        "commit_url": "https://github.com/AmbassadorOv/stunning-octo-garbanzo-d6cfaf53/commit/e8c06c250d18296bb0f160129d48305bdfd54f29"
+      },
+      {
+        "full_name": "AmbassadorOv/test-notebook-links",
+        "branch": "master",
+        "readme_sha": "cad8e71d3b07510fbcf15d7051db725b9a579cae",
+        "bytes": 284,
+        "summary": "Notebook and Colab link test README only; no WANGA logic or model implementation identified.",
+        "commit_sha": "a7c6cf2bda1fb7e341141cacf0415052857ee78c",
+        "commit_date": "2019-02-19T17:11:20Z",
+        "commit_message": "Add no-kernel notebook",
+        "commit_url": "https://github.com/AmbassadorOv/test-notebook-links/commit/a7c6cf2bda1fb7e341141cacf0415052857ee78c"
+      },
+      {
+        "full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+        "branch": "main",
+        "readme_sha": "ac7a2d203877442ddba493889239e61aed56ec78",
+        "bytes": 2978,
+        "summary": "Architecture-declared meta-orchestrator for research teams; LOGOS/CONNECTIONS/FRACTALS/ABSTRACTION/MODELS/VERIFICATION/SYNCHRONIZATION is a proposal, not implementation evidence.",
+        "commit_sha": "2c355168bb639ff1be22a918bc2838c54cea4ead",
+        "commit_date": "2026-10-22T06:42:13Z",
+        "commit_message": "Distribute PCE contract breach notice",
+        "commit_url": "https://github.com/AmbassadorOv/TTTT-0.0.0.0.1/commit/2c355168bb639ff1be22a918bc2838c54cea4ead"
+      },
+      {
+        "full_name": "AmbassadorOv/TTTTproject-un.govt",
+        "branch": "master",
+        "readme_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+        "bytes": 42,
+        "summary": "Title-only README; exact same README blob as World-Party-Federation-Branches-managers. Repository identity remains distinct.",
+        "commit_sha": "7499b46eb8af0ad2604ec63dd07f383507df55ca",
+        "commit_date": "2026-10-22T06:42:10Z",
+        "commit_message": "Distribute PCE contract breach notice",
+        "commit_url": "https://github.com/AmbassadorOv/TTTTproject-un.govt/commit/7499b46eb8af0ad2604ec63dd07f383507df55ca",
+        "duplicate": "EXACT_README_BLOB_DUPLICATE_WITH:AmbassadorOv/World-Party-Federation-Branches-managers"
+      },
+      {
+        "full_name": "AmbassadorOv/unetbootin",
+        "branch": "master",
+        "readme_sha": null,
+        "bytes": 0,
+        "summary": "Repository is accessible; README.md lookup returned 404. Bounded README scan incomplete; no inference about repository purpose from this missing file.",
+        "commit_sha": "e2eb0fe57aad24d02a0e535745bd4f33a30edb75",
+        "commit_date": "2021-02-04T09:30:06Z",
+        "commit_message": "fix macos big sur issue",
+        "commit_url": "https://github.com/AmbassadorOv/unetbootin/commit/e2eb0fe57aad24d02a0e535745bd4f33a30edb75",
+        "gap": "README_NOT_FOUND; REPOSITORY_CONTENT_NOT_SCANNED"
+      },
+      {
+        "full_name": "AmbassadorOv/vqbshtfsprojects.org",
+        "branch": "main",
+        "readme_sha": null,
+        "bytes": 0,
+        "summary": "GitHub returned 409: empty repository; no README or commit exists to inspect.",
+        "commit_sha": null,
+        "commit_date": null,
+        "commit_message": null,
+        "commit_url": null,
+        "gap": "EMPTY_REPOSITORY_NO_README_OR_COMMIT"
+      },
+      {
+        "full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
+        "branch": "master",
+        "readme_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+        "bytes": 6636,
+        "summary": "Azure Blockchain Development Kit VS Code extension documentation; third-party development tooling, no WANGA logic source identified.",
+        "commit_sha": "f07052ae06bbefb6b080c34afc315dc319366408",
+        "commit_date": "2020-02-28T18:01:30Z",
+        "commit_message": "Merge pull request #30 from microsoft/caleteet-v110: Updates for release v1.1.0",
+        "commit_url": "https://github.com/AmbassadorOv/vscode-azure-blockchain-ethereum/commit/f07052ae06bbefb6b080c34afc315dc319366408"
+      },
+      {
+        "full_name": "AmbassadorOv/vscode-docs",
+        "branch": "main",
+        "readme_sha": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
+        "bytes": 4853,
+        "summary": "Visual Studio Code documentation repository; no WANGA logic source identified.",
+        "commit_sha": "9e1375069dec24399735d672e447d7ecc81a4de7",
+        "commit_date": "2025-06-10T12:08:51Z",
+        "commit_message": "Update copilot-customization.md (#8458)",
+        "commit_url": "https://github.com/AmbassadorOv/vscode-docs/commit/9e1375069dec24399735d672e447d7ecc81a4de7"
+      },
+      {
+        "full_name": "AmbassadorOv/World-Party-Federation-Branches-managers",
+        "branch": "master",
+        "readme_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+        "bytes": 42,
+        "summary": "Title-only README; exact same README blob as TTTTproject-un.govt. Repository identity and history remain distinct.",
+        "commit_sha": "f21eabfa0bc4c41512b7a4cbe6072996570fd4c5",
+        "commit_date": "2026-10-22T06:41:58Z",
+        "commit_message": "Distribute PCE contract breach notice",
+        "commit_url": "https://github.com/AmbassadorOv/World-Party-Federation-Branches-managers/commit/f21eabfa0bc4c41512b7a4cbe6072996570fd4c5",
+        "duplicate": "EXACT_README_BLOB_DUPLICATE_WITH:AmbassadorOv/TTTTproject-un.govt"
+      }
+    ],
+    "readme_files_read": 8,
+    "readme_missing": 1,
+    "empty_repositories": 1,
+    "latest_commit_records": 9,
+    "exact_duplicate_readme_blob": "8b36e3fec98319bade352adce9b99abe55705188"
+  },
+  "cursor": {
+    "public_scanned_cumulative": 51,
+    "public_total": 58,
+    "remaining": [
+      "Quadruple-Multilevel-projection-project/-",
+      "Quadruple-Multilevel-projection-project/-from-Corsican-",
+      "Quadruple-Multilevel-projection-project/branches-",
+      "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "tribal-archery/mermaid",
+      "tribal-archery/unetbootin",
+      "tribal-archery/vscode-azure-blockchain-ethereum"
+    ]
+  },
+  "conversation_export": {
+    "conversation_files": 0,
+    "valid_exports": 0,
+    "global_scan": false,
+    "status": "BLOCKED_NO_VALID_EXPORT"
+  },
+  "library_scope": {
+    "relevant_project_archives_inspected": 2,
+    "primary_text_json_inspected": 1,
+    "raw_private_content_published": false,
+    "archive_details_published": false
+  },
+  "source_intake": {
+    "public_primary_work": "Milot Higayon, Hebrew translation, Warsaw 1928",
+    "gate_pages_reviewed": [
+      "I",
+      "VI",
+      "XIV"
+    ],
+    "source_pages_marked_unproofread": true,
+    "stable_sentence_ids_present": false,
+    "duplicate_catalog_source_added": 0,
+    "logic_candidates_extracted": 5
+  },
+  "regional_observations": {
+    "files_in_latest_main_commit": 8,
+    "records": 48,
+    "regions": 8,
+    "unique_input_hashes": 6,
+    "statuses": [
+      "NOT_CONFIGURED"
+    ],
+    "model_endpoint": "NOT_CONFIGURED"
+  },
+  "integration": {
+    "cross_repo_read_token": "NOT_EXPOSED_BY_CONNECTOR_IN_THIS_RUN",
+    "external_repository_writes": 0,
+    "wix_write": false
+  },
+  "statuses": {
+    "repository_inventory": "COMPLETED",
+    "project_findings": "COMPLETED",
+    "conversation_export_collector": "BLOCKED",
+    "logic_extractor": "COMPLETED_CANDIDATES_ONLY",
+    "publisher": "IN_PROGRESS_BRANCH_PR"
+  },
+  "next": [
+    "Scan the seven remaining public repositories.",
+    "Reconcile the unproofread text variants against the 1928 scan.",
+    "Review PR136/PR137/PR138 branch freshness before any merge.",
+    "Keep Wix unchanged until approved source/catalog/report changes exist."
+  ],
+  "pull_request": {
+    "number": 139,
+    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/139",
+    "state": "OPEN_DRAFT",
+    "changed_files": 8,
+    "initial_head_sha": "3527ce44cad0efb2b2f2c847b7b686221722fc9d"
+  },
+  "current_cycle_ci": {
+    "github_workflow_runs": "NONE_RETURNED",
+    "combined_status": "NO_STATUS_CHECKS_RETURNED",
+    "local_registry_integrity": "PASS",
+    "check_scope": "PR #139 documentation/evidence branch; no workflow runs returned on the initial head; final head check performed after this metadata update."
+  }
+}

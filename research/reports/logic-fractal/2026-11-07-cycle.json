@@ -1,0 +1,251 @@
+{
+  "schema_version": "wanga-logic-fractal-cycle/1.1",
+  "date": "2026-11-07",
+  "main_ref": "e40a240859a31ae96d5dd28adbdc4e4fc7655874",
+  "source_scope": {
+    "repository_files": [
+      "logic_wiki/data/articles.json",
+      "logic_wiki/data/readiness_gate.json",
+      "logic_wiki/data/research_metrics.json",
+      "logic_wiki/data/fractal_taxonomy.json",
+      "logic_wiki/data/wix_sync_manifest.json",
+      "logic_fractal/data/composition_rules.json",
+      "logic_fractal/data/recursive_composition_contracts_v1.json",
+      "logic_fractal/data/semantic_benchmark_plan_v1.json",
+      "formal_reasoning/examples/source_grounded_benchmark_manifest.json",
+      "formal_reasoning/examples/benchmark_cases.json",
+      "formal_reasoning/examples/typed_formal_cases.json",
+      "scripts/build_first_fractal_model.py",
+      "scripts/build_logic_wiki.py",
+      "scripts/run_logic_agents.py"
+    ],
+    "repository_batch": "2026-11-07-public-batch-04",
+    "library_items_read_for_analysis": 5,
+    "library_content_copied_to_public_repo": 0,
+    "conversation_exports_ingested": 0
+  },
+  "current_main_counts": {
+    "articles": 28,
+    "source_records": 17,
+    "source_classes": 11,
+    "articles_with_sources": 28,
+    "logic_units_with_provenance": 28,
+    "editorial_relation_links": 111,
+    "taxonomy_nodes": 27,
+    "taxonomy_missing_article_ids": [
+      "ark-swarm-logic-trader"
+    ],
+    "active_composition_rules": 2,
+    "configured_composition_rules": 3,
+    "recursive_contract_statuses": {
+      "ACTIVE": 2,
+      "DRAFT": 1,
+      "REQUIRED_NOT_SATISFIED": 1
+    },
+    "source_grounded_counterexamples": 0,
+    "semantic_test_cases": 0,
+    "benchmark_suites": 0,
+    "independent_reviews": 0,
+    "dangling_source_refs": 0,
+    "dangling_relation_refs": 0,
+    "duplicate_article_ids": 0,
+    "duplicate_source_ids": 0,
+    "core_contradictions": "UNKNOWN_NOT_MEASURED_NO_INVENTORY",
+    "holdout_split": false,
+    "mirror_review": false
+  },
+  "readiness_gate": {
+    "id": "FIRST_MODEL_ALPHA_V1",
+    "status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "thresholds": {
+      "sources": 20,
+      "source_classes": 3,
+      "logic_units_with_provenance": 50,
+      "composition_rules": 20,
+      "counterexamples": 30,
+      "semantic_test_cases": 100,
+      "benchmark_suites": 3,
+      "independent_reviews": 2
+    },
+    "current_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "release_decision": "BLOCKED_FIRST_MODEL_ALPHA_NOT_RELEASED",
+    "deficits": [
+      "17 source records < 20",
+      "28 logic units with provenance < 50",
+      "2 active composition rules < 20",
+      "0 source-grounded counterexamples < 30",
+      "0 semantic test cases < 100",
+      "0 registered benchmark suites < 3",
+      "0 independent reviews < 2",
+      "Core contradiction inventory absent; zero is not measured",
+      "Holdout and MIRROR review absent"
+    ]
+  },
+  "composition": {
+    "active_rules": 2,
+    "configured_rules": 3,
+    "recursive_contracts": 4,
+    "editorial_relations_are_not_semantic_entailment": true,
+    "semantic_entailment_edges_added": 0
+  },
+  "benchmarks": {
+    "source_grounded_cases": 0,
+    "registered_semantic_suites": 0,
+    "counterexamples": 0,
+    "propositional_fixture_cases": 5,
+    "typed_formal_fixture_cases": 7,
+    "fixture_cases_counted_as_semantic": false
+  },
+  "builder": {
+    "script": "scripts/build_first_fractal_model.py",
+    "latest_successful_run_date": "2026-11-07",
+    "latest_successful_run_id": 42349432298,
+    "latest_model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "latest_artifact_id": 13564364551,
+    "latest_artifact_size_bytes": 85798,
+    "latest_artifact_sha256": "41ee7cc9c822ebef96542e15a3e19e209d369411fa7a2dbf4f7b8b3dc374aa48",
+    "fixture_status": "SYNTHETIC_FIXTURES_ONLY",
+    "rerun_this_cycle": true,
+    "semantic_status": "NOT_YET_VERIFIED",
+    "release_status": "CANDIDATE_NOT_RELEASED",
+    "runner": "GitHub Actions ubuntu-latest; Python 3.11.18",
+    "execution_log": "Latest rerun 42349432298 / job 128334205708 executed python scripts/build_first_fractal_model.py and returned CANDIDATE_NOT_RELEASED; scale_1_hash da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0; scale_2_hash a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904.",
+    "previous_successful_run_id": 42347937078,
+    "latest_successful_job_id": 128334205708
+  },
+  "wix": {
+    "site_name": "Logic Engine Research Lab",
+    "readback_date": "2026-11-07",
+    "deployed_site_files": 29,
+    "main_page_entry_class_occurrences": 28,
+    "main_page_article_tags_with_ids": 27,
+    "github_catalog_articles": 28,
+    "missing_catalog_article_ids": [
+      "logical-particle",
+      "fractal-invariant",
+      "recursive-composition",
+      "conversation-evidence-unit",
+      "counterexample-case",
+      "autonomous-research-agent",
+      "multi-scale-fractal-map",
+      "longitudinal-research-cycle",
+      "logical-diamond",
+      "ark-swarm-logic-trader"
+    ],
+    "extra_main_page_resource_ids": [
+      "wiki-page-research-status",
+      "wiki-page-fractal-model",
+      "wiki-page-fractal-logic",
+      "wiki-page-typed-fragment",
+      "wiki-page-mln-field",
+      "wiki-page-231-gates",
+      "wiki-page-logic-before-weight",
+      "wiki-page-evidence-status",
+      "wiki-page-ntm"
+    ],
+    "supplemental_research_cards": 13,
+    "research_status_page_present": true,
+    "write_performed": false,
+    "status": "READ_BACK_MISMATCH_REVIEW_REQUIRED"
+  },
+  "taxonomy_pr": {
+    "number": 135,
+    "state": "OPEN",
+    "mergeable": true,
+    "missing_main_taxonomy_node": "ark-swarm-logic-trader",
+    "duplicate_fix_not_created": true,
+    "behind_by_main": 16,
+    "status": "STALE_BRANCH_REQUIRES_REFRESH_BEFORE_MERGE"
+  },
+  "ci": {
+    "report_pr": 139,
+    "current_head_sha": "2afa0d2ece4fb6810e21c8ce9a20796fde969af1",
+    "runs": [
+      {
+        "id": 42349432298,
+        "name": "Logic Fractal Wiki Research",
+        "conclusion": "success",
+        "artifact_id": 13564364551,
+        "artifact_size_bytes": 85798,
+        "artifact_sha256": "41ee7cc9c822ebef96542e15a3e19e209d369411fa7a2dbf4f7b8b3dc374aa48"
+      },
+      {
+        "id": 42349432266,
+        "name": "WANGA Ecosystem Agent Sweep",
+        "conclusion": "success",
+        "artifact_id": 13564782452,
+        "artifact_size_bytes": 3224,
+        "artifact_sha256": "ac458bfcae43f37bfc5261d37d8215c973d07a70a88d420332e7a1a38ecc63f9"
+      },
+      {
+        "id": 42349432299,
+        "name": "Repository Integrity",
+        "conclusion": "success"
+      },
+      {
+        "id": 42349432251,
+        "name": "CodeQL Advanced",
+        "conclusion": "success"
+      }
+    ],
+    "logic_fractal_last_run_id": 42349432298,
+    "logic_fractal_last_run_date": "2026-11-07",
+    "current_main_combined_status": "NO_STATUS_CHECKS_RETURNED",
+    "pr139_head_sha": "cdd2cc1eb42f60212bd25caff2c196e0bc118859",
+    "pr139_behind_by_main": 4,
+    "tested_head_sha": "0c6be28dec8f6a6f6d75639e7d3c3bd4999121cf",
+    "final_branch_head_sha": "9b33a3800e47f07b2c01a36400f433c26b8deb6c",
+    "final_branch_head_full_ci": "NOT_RUN_AFTER_DATA_ONLY_CURSOR_UPDATE",
+    "manual_json_integrity_check": {
+      "status": "PASS",
+      "passed": 10,
+      "total": 10,
+      "scope": "changed inventory/findings/cursor/report JSON artifacts"
+    }
+  },
+  "limbo": {
+    "pr_number": 122,
+    "branch": "deploy/limbo-cartography-core-v1",
+    "state": "OPEN_DRAFT",
+    "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+    "ahead_by": 63,
+    "behind_by": 0,
+    "reality_matrix_version": "1.3.0",
+    "incident_records": 10,
+    "history_events": 2,
+    "map_nodes": 14,
+    "map_edges": 19,
+    "map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+    "unresolved_recurring_clusters": 1,
+    "recurring_cluster_observations": 7,
+    "incidents_without_latest_passing_retest": 9,
+    "incidents_with_passing_retest": 1,
+    "incident_source_sha256_present": 0,
+    "latest_map_state": "2026-10-19T19:41:44Z",
+    "latest_execution_record": "2026-11-07T06:12:35Z",
+    "latest_execution_status": "EXECUTION_RECORD_ONLY",
+    "latest_execution_epistemic_attempt": false,
+    "tuning_candidate_status": "CANDIDATE_REPLAY_REQUIRED",
+    "logic_bundle_status": "DRAFT_UNVERIFIED",
+    "logic_bundle_source_refs": 8,
+    "workflow_state": "ACTION_REQUIRED",
+    "workflow_jobs": 0,
+    "workflow_artifacts": 0,
+    "new_crash_inputs_this_cycle": 0,
+    "current_state_status": "UNASSESSED_FROM_NEW_EXECUTION"
+  },
+  "statuses": {
+    "built": "Repository catalog, typed composer, readiness gate and Limbo branch artifacts exist.",
+    "tested": "On PR #139 tested head 0c6be28: Logic Fractal Wiki Research (builder rerun), Ecosystem Agent Sweep, Repository Integrity and CodeQL all passed. Final data-only cursor commit 9b33 has no new full Actions run; changed JSON artifacts passed a separate 10/10 consistency check.",
+    "verified": "No semantic truth, model readiness, independent review, full crash-map coverage, or current-system state is verified."
+  },
+  "next": [
+    "Refresh PR #139 against current main (4 commits behind) before review or merge; full Actions checks must cover the final head.",
+    "PR #135 is open and mergeable at the API level but 16 commits behind main; refresh before considering its taxonomy correction.",
+    "Review Wix article mismatches before any deployment write.",
+    "Register source-grounded counterexamples, semantic benchmark cases, suites, holdout and two independent reviews.",
+    "Create a core contradiction inventory before reporting any zero count.",
+    "Keep the typed candidate unreleased until the full FIRST_MODEL_ALPHA gate passes.",
+    "Replay Limbo tuning only after a fresh crash input or replayable test is available."
+  ]
+}

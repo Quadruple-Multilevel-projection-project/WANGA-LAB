@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "updated_date": "2026-10-12",
+  "updated_date": "2026-11-09",
   "status": "ACTIVE_RESEARCH_BACKLOG",
   "source_of_truth": "This backlog describes the current WANGA-LAB Logic Fractal/Logic Wiki workstream; status changes require explicit evidence.",
   "items": [
@@ -52,34 +52,28 @@
       "id": "FL-005",
       "priority": "P1",
       "title": "Integrate continuous MLN field core",
-      "status": "LOCAL_PROTOTYPE_NOT_IN_MAIN",
-      "evidence": [
-        "Local artifact and passing local tests were packaged earlier; no merge to main confirmed"
-      ],
+      "status": "PRIVATE_ARCHIVE_LOCAL_TESTS_PASS_21_OF_21_NOT_IN_MAIN_SEMANTIC_VALIDITY_UNVERIFIED",
+      "evidence": "Private Library MLN v0.2 archive: compileall passed; 21 unit tests passed locally on Python 3.13.5. No semantic benchmark or GitHub integration.",
       "next": "Open a review PR with schemas, test report, normalization assumptions and NTM adapter."
     },
     {
       "id": "FL-006",
       "priority": "P1",
       "title": "Integrate NTM state/evidence/ATLAS/MIRROR loop",
-      "status": "PARTIAL_SPECIFICATION_AND_ARCHIVE",
-      "evidence": [
-        "NTM V0.1 archive",
-        "NTM/MLN integration contract",
-        "current logic fractal pipeline tracks source status and counterexamples"
-      ],
+      "status": "PRIVATE_ARCHIVE_LOCAL_TESTS_PASS_15_OF_15_NOT_IN_MAIN_NO_TRAINED_MODEL",
+      "evidence": "Private Library NTM v0.2 archive: 15 unit tests passed locally. No trained model or semantic validation is established.",
       "next": "Port/merge current prototype only after tests are reproducible in repository CI."
     },
     {
       "id": "FL-007",
       "priority": "P1",
       "title": "Logic Wikipedia and backlinks",
-      "status": "BUILT_TESTED_INITIAL_CATALOG",
+      "status": "CATALOG_28_SOURCE_LINKED_WIX_READBACK_MISMATCH",
       "evidence": [
-        "18 article entries in logic_wiki/data/articles.json",
-        "Wix read-back confirmed main wiki links to eight extended pages"
+        "Current main catalog has 28 articles and 17 source records",
+        "Wix read-back found 10 catalog IDs missing from the main page"
       ],
-      "next": "Expand coverage from sources, ensure aliases/backlinks and report unresolved conflicts."
+      "next": "Review the 10 missing IDs and publish only approved source-backed entries."
     },
     {
       "id": "FL-008",
@@ -96,12 +90,9 @@
       "id": "FL-009",
       "priority": "P1",
       "title": "Wix additive publication and read-back",
-      "status": "PUBLISHED_WITH_READBACK_NOT_FULLY_AUTOSYNCED",
-      "evidence": [
-        "Wix upload returned HTTP 200",
-        "read-back found all eight article pages and their wiki links"
-      ],
-      "next": "Keep direct deployment through authorized Wix integration with version/deployment manifest; CI does not itself publish Wix."
+      "status": "READBACK_MISMATCH_RECONFIRMED_2026-11-09",
+      "evidence": "Live Wix revision 53d1e419; 29 files; 27 article tags; 28 GitHub catalog articles; 18 matching IDs; 10 missing catalog IDs. No write.",
+      "next": "Resolve the mismatch, then perform an authorized additive update and exact read-back."
     },
     {
       "id": "FL-010",
@@ -123,6 +114,90 @@
         "No random/shuffled baseline or held-out semantic benchmark"
       ],
       "next": "Compare interface/graph invariants against shuffled and random baselines."
+    },
+    {
+      "id": "FL-012",
+      "priority": "P0",
+      "title": "Reconcile current GitHub catalog with live Wix deployment",
+      "status": "BLOCKED_READBACK_MISMATCH_RECONFIRMED_2026-11-09",
+      "evidence": "Current catalog has 28 articles; live page has 18 matching catalog IDs and 9 extra resource IDs; ten catalog IDs are missing.",
+      "next": "Review missing entries for source scope and public permission; publish only approved entries and verify exact ID read-back."
+    },
+    {
+      "id": "FL-013",
+      "priority": "P0",
+      "title": "Create a source-backed core contradiction inventory",
+      "status": "NOT_MEASURED_INVENTORY_ABSENT_BUILDER_FIX_IN_PR_139",
+      "evidence": "core_contradictions.json is absent. The metrics file's previous zero was unsupported; this PR sets null and requires measured+complete inventory status.",
+      "next": "Register contradiction candidates with source spans, counter-readings, scope and adjudication; do not initialize an empty inventory as proof of zero."
+    },
+    {
+      "id": "FL-014",
+      "priority": "P0",
+      "title": "Execute typed first-model builder and archive output hash",
+      "status": "PREVIOUS_CI_BUILDER_PASS_SYNTHETIC_ONLY_CURRENT_CYCLE_CI_PENDING",
+      "evidence": "Last successful synthetic candidate hash a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904 from run 42349432298. New CI is pending.",
+      "next": "Run the existing workflow on an available GitHub Actions runner and archive the actual output hash, runner and artifact size."
+    },
+    {
+      "id": "FL-015",
+      "priority": "P1",
+      "title": "Map NTM collaborator architecture to WANGA interfaces",
+      "status": "IN_PROGRESS_SOURCE_POINTER_AND_ARCHIVE_REVALIDATED_NO_INTEGRATION",
+      "evidence": "AI231 governance pointer and neural-order prototype re-read; private NTM/MLN archive locally tested; no code integrated into main.",
+      "next": "Compare task/result envelopes, evidence/provenance, verification gate and drift schemas before any integration proposal."
+    },
+    {
+      "id": "FL-016",
+      "priority": "P1",
+      "title": "Finish remaining public repository metadata gaps",
+      "status": "PUBLIC_METADATA_COMPLETE_58_OF_58_CONTENT_57_OF_58_PRIVATE_5_REDACTED",
+      "evidence": "Live snapshot: 63 repositories, 58 public, 5 private; 57 public content scans and one content skip. Private content remains unpersisted.",
+      "next": "Resolve the two README-missing source gaps through safe metadata/tree inspection; keep credential-named content uninspected."
+    },
+    {
+      "id": "FL-017",
+      "priority": "P1",
+      "title": "Resolve article-to-taxonomy coverage gap through existing PR #135",
+      "status": "BLOCKED_EXISTING_PR_NOT_MERGEABLE",
+      "evidence": [
+        "Current main has 28 articles and 27 taxonomy nodes",
+        "ark-swarm-logic-trader is the single article ID absent from the taxonomy",
+        "PR #135 is open and currently reports mergeable=false"
+      ],
+      "next": "Review the existing PR #135 conflict/mergeability state; do not create a duplicate taxonomy correction."
+    },
+    {
+      "id": "FL-018",
+      "title": "Review private NTM/MLN v0.2 archive through a dedicated source-controlled PR",
+      "status": "LOCAL_TESTS_PASS_36_OF_36_NOT_IN_MAIN_SEMANTIC_NOT_VERIFIED",
+      "priority": "P1",
+      "evidence": "Private Library package and overlay are packaging variants; compileall passed; NTM 15/15 and MLN 21/21 unit tests passed locally. No semantic ground-truth benchmark or trained model.",
+      "next": "Review sanitized interfaces, remove pycache/duplicate artifacts, then propose a dedicated branch/PR only after source-scope approval."
+    },
+    {
+      "id": "FL-019",
+      "title": "Formalize anti-drift capture/rollback proposal before Limbo tuning activation",
+      "status": "PRIVATE_SPEC_REVIEW_ONLY_NOT_ACTIVATED",
+      "priority": "P1",
+      "evidence": "Private Library specification describes bounded search, anchor/capture zone, acceleration clamps and sandbox commit/rollback; no implementation or Limbo replay evidence.",
+      "next": "Map invariants to the Limbo tuning contract and require replay with a real crash input before activation."
+    },
+    {
+      "id": "FL-020",
+      "title": "Define the namespace relation between 231 letter gates and 321 ARK gate containers",
+      "status": "OPEN_NAMESPACE_BOUNDARY_NOT_ADJUDICATED",
+      "priority": "P1",
+      "evidence": "Two private specifications state different counts and object labels; no mapping or shared domain has been established.",
+      "next": "Define identity, scope and mapping rules before comparing counts or composing edges."
+    },
+    {
+      "id": "FL-021",
+      "title": "Refresh PR #139 base branch before any merge decision",
+      "status": "BLOCKED_13_COMMITS_BEHIND_MAIN",
+      "priority": "P0",
+      "evidence": "At the 2026-11-09 snapshot PR #139 was 45 commits ahead and 13 behind main; it remains a draft.",
+      "next": "Reconcile main changes on the PR branch and rerun all required CI before merge review."
     }
   ],
   "readiness_gate": {
@@ -162,11 +237,50 @@
     },
     "release_decision": "BLOCKED_FIRST_MODEL_ALPHA_NOT_RELEASED",
     "blockers": [
-      "No reviewed conversation-source fragments ingested in this cycle",
-      "0 benchmark cases / 0 benchmark suites in readiness metrics",
-      "holdout split not ready",
-      "MIRROR review not ready",
-      "0 independent review cycles"
-    ]
+      "17 source records versus 20 required",
+      "28 source-resolved logic units versus 50 required",
+      "2 active composition rules versus 20 required",
+      "0 source-grounded counterexamples versus 30 required",
+      "0 semantic benchmark cases versus 100 required",
+      "0 registered benchmark suites versus 3 required",
+      "0 independent reviews versus 2 required",
+      "Core contradiction inventory absent; count not measured",
+      "Holdout split and independent MIRROR review absent",
+      "Typed builder not executed in this cycle"
+    ],
+    "latest_measured_snapshot_2026_11_07": {
+      "metrics": {
+        "source_records": 17,
+        "source_classes": 11,
+        "logic_units_with_provenance": 28,
+        "active_composition_rules": 2,
+        "counterexamples": 0,
+        "semantic_test_cases": 0,
+        "benchmark_suites": 0,
+        "independent_reviews": 0,
+        "dangling_source_refs": 0,
+        "dangling_relation_refs": 0,
+        "duplicate_stable_ids": 0,
+        "critical_core_contradictions": "NOT_MEASURED_NO_INVENTORY",
+        "deterministic_build": "NOT_RERUN_THIS_CYCLE",
+        "holdout_split": false,
+        "mirror_review": false
+      },
+      "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+      "note": "Current main catalog and contracts were recomputed. The core contradiction inventory is absent, so 0 must not be treated as a measured absence."
+    }
+  },
+  "latest_cycle": {
+    "date": "2026-11-09",
+    "pr_number": 139,
+    "branch": "automation/wanga-unified-work-loop-2026-11-06",
+    "main_ref": "156a70b8106215617f437a05b3289be05ca43d60",
+    "repository_batch": "2026-11-09-revalidation-batch-06",
+    "public_repositories_revalidated": 10,
+    "new_logic_wiki_units": 0,
+    "new_compositions": 0,
+    "readiness": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "wix": "READBACK_MISMATCH_REVIEW_REQUIRED",
+    "limbo": "NO_INPUTS_CURRENT_PR_122_CI_ACTION_REQUIRED"
   }
 }

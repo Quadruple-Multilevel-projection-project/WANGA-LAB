@@ -47,6 +47,9 @@ on:
       - 'scripts/run_typed_formal_benchmark.py'
       - 'research/ARK_SWARM_FULL_STACK_GAP_ANALYSIS_V1.md'
       - 'research/ecosystem/library_integration_matrix.json'
+      - 'research/ecosystem/**'
+      - 'research/reports/logic-fractal/**'
+      - 'research/reports/limbo/**'
       - 'scripts/validate_ark_swarm_library_matrix.py'
       - '.github/workflows/logic-fractal-wiki.yml'
 
@@ -93,6 +96,9 @@ on:
       - 'scripts/run_typed_formal_benchmark.py'
       - 'research/ARK_SWARM_FULL_STACK_GAP_ANALYSIS_V1.md'
       - 'research/ecosystem/library_integration_matrix.json'
+      - 'research/ecosystem/**'
+      - 'research/reports/logic-fractal/**'
+      - 'research/reports/limbo/**'
       - 'scripts/validate_ark_swarm_library_matrix.py'
       - '.github/workflows/logic-fractal-wiki.yml'
 

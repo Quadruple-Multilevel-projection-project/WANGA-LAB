@@ -1,0 +1,273 @@
+{
+  "schema_version": "wanga-ecosystem-followup/1.0",
+  "date": "2026-11-07",
+  "scan_time_utc": "2026-11-07T07:00:23.634Z",
+  "main_ref": "e40a240859a31ae96d5dd28adbdc4e4fc7655874",
+  "pull_request": {
+    "number": 139,
+    "branch": "automation/wanga-unified-work-loop-2026-11-06",
+    "head_sha_before_followup": "cdd2cc1eb42f60212bd25caff2c196e0bc118859",
+    "state": "OPEN_DRAFT",
+    "behind_by_main": 4,
+    "head_sha_after_followup": "9b33a3800e47f07b2c01a36400f433c26b8deb6c"
+  },
+  "repository_snapshot": {
+    "unique_repositories": 63,
+    "public_repositories": 58,
+    "private_repositories": 5,
+    "private_names_redacted": true,
+    "public_metadata_accounted": 58,
+    "public_content_scanned": 57,
+    "public_content_skipped": 1,
+    "remaining_public": 0
+  },
+  "SOURCES_SCANNED": [
+    {
+      "repository": "Quadruple-Multilevel-projection-project/-",
+      "branch": "feat-yellow-quantic-simulation",
+      "path": "AI-AGENT-HANDOFF-NOTICE.md",
+      "blob_sha": "2e2698d337a60a93059d85d4302ea01cc3837b7b",
+      "status": "READ"
+    },
+    {
+      "repository": "tribal-archery/unetbootin",
+      "branch": "master",
+      "path": "readme.md",
+      "blob_sha": "fde193ae6f530b95854fa4d6a17cf7b73a109e80",
+      "status": "READ_UNRELATED"
+    },
+    {
+      "repository": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "branch": "main",
+      "status": "METADATA_ONLY_CONTENT_SKIPPED"
+    }
+  ],
+  "LIBRARY_REVIEW": {
+    "items_read": 5,
+    "hashes_computed": 5,
+    "permission_scope": "PRIVATE_LIBRARY",
+    "content_copied_to_public_repo": 0,
+    "private_names_and_hashes_persisted_publicly": false
+  },
+  "ACCESS_GAPS": [
+    "Credential-named public repository content intentionally not opened.",
+    "Five private repositories remain name-redacted and content-unscanned in public artifacts.",
+    "Three surfaced private-review conversation attachments were unreadable; materialization reported no downloadable backing file.",
+    "No structurally valid ChatGPT conversation export was ingested; no global conversation scan is claimed."
+  ],
+  "NEW_SOURCES": [
+    {
+      "id": "CROSS-REPO-HANDOFF-GATE-001",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-/blob/feat-yellow-quantic-simulation/AI-AGENT-HANDOFF-NOTICE.md",
+      "blob_sha": "2e2698d337a60a93059d85d4302ea01cc3837b7b",
+      "exact_locator": "lines 3-15, 21-29, 45",
+      "status": "SOURCE_SUPPORTED_POLICY_CANDIDATE"
+    }
+  ],
+  "DUPLICATE_SOURCES": [],
+  "RELATED_SOURCE_OVERLAPS": [
+    {
+      "source_a": "Quadruple-Multilevel-projection-project/-/AI-AGENT-HANDOFF-NOTICE.md",
+      "source_b": "Quadruple-Multilevel-projection-project/WANGA-LAB/AI-AGENT-NOTICE.md",
+      "same_blob": false,
+      "independent_review": false,
+      "decision": "OVERLAP_CANDIDATE_ONLY"
+    }
+  ],
+  "CLAIMS_ADDED": 0,
+  "SOURCE_BACKED_POLICY_CANDIDATES": 1,
+  "LOGIC_UNITS_ADDED": 0,
+  "COMPOSITION_COUNT": {
+    "active_rules": 2,
+    "configured_rules": 3,
+    "new_rules": 0,
+    "semantic_entailment_edges_added": 0
+  },
+  "CONTRADICTIONS": {
+    "new_observed": 0,
+    "core_inventory": "UNKNOWN_NOT_MEASURED_NO_INVENTORY"
+  },
+  "BENCHMARKS": {
+    "builder_run_id": 42349432298,
+    "builder_status": "SUCCESS",
+    "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "fixture_status": "SYNTHETIC_FIXTURES_ONLY",
+    "source_grounded_cases": 0,
+    "semantic_suites": 0,
+    "counterexamples": 0,
+    "synthetic_fixture_cases": {
+      "propositional": 5,
+      "typed_formal": 7
+    },
+    "semantic_status": "NOT_YET_VERIFIED",
+    "builder_job_id": 128334205708,
+    "artifact_id": 13564364551,
+    "artifact_size_bytes": 85798,
+    "artifact_sha256": "41ee7cc9c822ebef96542e15a3e19e209d369411fa7a2dbf4f7b8b3dc374aa48"
+  },
+  "MODEL_HASH": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+  "READINESS_GATE": {
+    "id": "FIRST_MODEL_ALPHA_V1",
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "thresholds_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "observed": {
+      "sources": 17,
+      "source_classes": 11,
+      "logic_units_with_provenance": 28,
+      "active_composition_rules": 2,
+      "counterexamples": 0,
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_reviews": 0,
+      "holdout": false,
+      "mirror_review": false,
+      "core_contradictions": "UNKNOWN_NOT_MEASURED"
+    }
+  },
+  "CI": {
+    "tested_head_sha": "0c6be28dec8f6a6f6d75639e7d3c3bd4999121cf",
+    "final_branch_head_sha": "9b33a3800e47f07b2c01a36400f433c26b8deb6c",
+    "workflow_runs": [
+      {
+        "id": 42349432298,
+        "name": "Logic Fractal Wiki Research",
+        "conclusion": "success",
+        "artifact_id": 13564364551,
+        "artifact_size_bytes": 85798,
+        "artifact_sha256": "41ee7cc9c822ebef96542e15a3e19e209d369411fa7a2dbf4f7b8b3dc374aa48"
+      },
+      {
+        "id": 42349432266,
+        "name": "WANGA Ecosystem Agent Sweep",
+        "conclusion": "success",
+        "artifact_id": 13564782452,
+        "artifact_size_bytes": 3224,
+        "artifact_sha256": "ac458bfcae43f37bfc5261d37d8215c973d07a70a88d420332e7a1a38ecc63f9"
+      },
+      {
+        "id": 42349432299,
+        "name": "Repository Integrity",
+        "conclusion": "success"
+      },
+      {
+        "id": 42349432251,
+        "name": "CodeQL Advanced",
+        "conclusion": "success"
+      }
+    ],
+    "final_branch_head_full_ci": "NOT_RUN_AFTER_DATA_ONLY_CURSOR_UPDATE",
+    "manual_json_integrity_check": {
+      "status": "PASS",
+      "passed": 10,
+      "total": 10
+    }
+  },
+  "WIX": {
+    "status": "READ_BACK_MISMATCH_REVIEW_REQUIRED",
+    "site_files": 29,
+    "write_performed": false,
+    "reason": "No approved catalog changes were made; the existing live-page mismatch remains a review item."
+  },
+  "LIMBO": {
+    "pr_number": 122,
+    "branch": "deploy/limbo-cartography-core-v1",
+    "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+    "state": "OPEN_DRAFT",
+    "ahead_by": 63,
+    "behind_by": 0,
+    "incident_records": 10,
+    "history_events": 2,
+    "map_nodes": 14,
+    "map_edges": 19,
+    "latest_execution_status": "EXECUTION_RECORD_ONLY",
+    "workflow_state": "ACTION_REQUIRED",
+    "workflow_jobs": 0,
+    "workflow_artifacts": 0,
+    "new_crash_inputs": 0,
+    "tuning_candidate_status": "CANDIDATE_REPLAY_REQUIRED"
+  },
+  "AGENT_ROLES": [
+    {
+      "role": "Repository Inventory",
+      "input": "Live affiliation snapshot and cursor",
+      "output": "3-repository follow-up; 58 public repositories accounted at metadata level",
+      "status": "COMPLETED",
+      "evidence": "Live GitHub repository metadata, branch heads and README/handoff reads",
+      "next": "Keep private repositories redacted; begin next snapshot only when access changes."
+    },
+    {
+      "role": "Project Docs Collector",
+      "input": "Two public repository documents",
+      "output": "One relevant handoff policy source and one unrelated installer README",
+      "status": "COMPLETED",
+      "evidence": "Blob SHAs and exact paths recorded",
+      "next": "Review the handoff source lineage against WANGA-LAB notice."
+    },
+    {
+      "role": "Conversation Export Collector",
+      "input": "Current conversation file listing and Library search",
+      "output": "No valid export; three private-review files unreadable/unmaterializable",
+      "status": "BLOCKED_ACCESS_GAP",
+      "evidence": "Files search/read/materialize results",
+      "next": "Wait for an accessible approved export; do not claim global history scan."
+    },
+    {
+      "role": "Logic Extractor / Normalizer",
+      "input": "AI-AGENT-HANDOFF-NOTICE.md",
+      "output": "One ordered-gate policy candidate; zero promoted Logic Wiki units",
+      "status": "COMPLETED",
+      "evidence": "Lines 3-15, 21-29, 45; blob SHA 2e2698d...",
+      "next": "Formalize only after source-lineage and independent review."
+    },
+    {
+      "role": "Fractal Composer",
+      "input": "Existing composition contracts and typed builder",
+      "output": "No new composition; current synthetic candidate rebuilt",
+      "status": "COMPLETED",
+      "evidence": "Builder run 42347937078 and model hash",
+      "next": "Wait for real source fragments and explicit contracts."
+    },
+    {
+      "role": "Mirror Reviewer",
+      "input": "Cross-repo handoff policy and WANGA notice",
+      "output": "Overlap identified; independence not established; no new contradiction",
+      "status": "COMPLETED",
+      "evidence": "Different blob SHAs and overlapping policy text",
+      "next": "Do not count as an independent review."
+    },
+    {
+      "role": "Benchmark Evaluator",
+      "input": "GitHub Actions builder and test workflow",
+      "output": "Synthetic builder and software tests passed; no semantic ground-truth benchmark",
+      "status": "COMPLETED",
+      "evidence": "Run 42347937078 job 128329641595; builder output",
+      "next": "Create source-grounded holdout and counterexample suites."
+    },
+    {
+      "role": "Wiki Curator / Publisher",
+      "input": "Current catalog and Wix read-back",
+      "output": "No catalog edit and no Wix write",
+      "status": "BLOCKED_REVIEW_REQUIRED",
+      "evidence": "Wix read-back mismatch; no approved page bundle",
+      "next": "Review missing article IDs before publishing."
+    }
+  ],
+  "BUILT_TESTED_VERIFIED": {
+    "built": "Repository inventory, cursor, project finding and follow-up report artifacts updated on PR #139 branch.",
+    "tested": "On tested head 0c6be28, Logic Fractal, Ecosystem Sweep, Repository Integrity and CodeQL passed; final cursor-only commit 9b33 passed a 10/10 JSON consistency check but has no full Actions run.",
+    "verified": "No semantic truth, model readiness, independent review, or full Limbo coverage verified."
+  },
+  "BLOCKED": [
+    "FIRST_MODEL_ALPHA release gate remains blocked.",
+    "Wix deployment update is blocked pending page/content review.",
+    "Conversation export intake is blocked by unreadable/unmaterializable private-review attachments.",
+    "Limbo tuning replay is blocked by zero new crash inputs and no replayable execution evidence."
+  ],
+  "NEXT": [
+    "Run CI on the updated PR #139 head and reconcile its 4-commit lag against main.",
+    "Keep PR #139 draft until the branch is current and evidence review is complete.",
+    "Review the handoff-policy overlap before any Logic Wiki promotion.",
+    "Review Wix missing-page IDs before any write.",
+    "Continue source-grounded benchmark, counterexample, holdout and independent-review work."
+  ]
+}

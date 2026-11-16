@@ -7,7 +7,7 @@
   "test_cases": 0,
   "benchmark_suites": 0,
   "independent_review_cycles": 0,
-  "critical_core_contradictions": 0,
+  "critical_core_contradictions": null,
   "deterministic_build": true,
   "holdout_split": false,
   "mirror_review": false,
@@ -39,5 +39,8 @@
       "readiness_gate": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
       "note": "Catalog graph paths only; not 189 verified logic units or conversation-derived fragments."
     }
-  }
+  },
+  "core_contradiction_inventory_status": "MISSING_NOT_MEASURED",
+  "core_contradiction_inventory_path": "logic_fractal/data/core_contradictions.json",
+  "core_contradiction_inventory_note": "No source-backed contradiction inventory is present. Null means not measured; it must not be interpreted as zero."
 }
