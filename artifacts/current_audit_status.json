@@ -1,0 +1,63 @@
+{
+  "schema": "WANGA_LIVE_STRUCTURAL_AUDIT_STATUS_V1",
+  "generated_at_utc": "2026-10-18T10:30:02.946602+00:00",
+  "overall_mechanical_status": "PASS",
+  "integration_status": "READY_FOR_REVIEW",
+  "coverage_status": "PASS",
+  "canonical_source_coverage_status": "PASS",
+  "canonical_source_full_match": true,
+  "legacy_gate14_registry_coverage": "PARTIAL",
+  "legacy_gate14_exact_quote_matches": 22,
+  "legacy_gate14_unit_count": 46,
+  "source_commit": "d1106d9a66528dc3e39cf1ea0732782927d9f678",
+  "source_gate_count": 14,
+  "candidate_sentence_count": 321,
+  "lexical_word_count": 7066,
+  "gate14_sentence_candidate_count": 34,
+  "gate14_word_token_count": 799,
+  "gate14_structural_annotations": 34,
+  "gate14_exact_surface_overlap_terms": 187,
+  "relation_matrix_status": "COMPLETE_PAIRWISE_MATRIX_STRUCTURAL_LINKS_NOT_VERIFIED",
+  "relation_matrix_cells": 442,
+  "relation_matrix_expected_cells": 442,
+  "relation_matrix_structural_status_counts": {
+    "UNRESOLVED": 404,
+    "STRUCTURAL_LINK_CANDIDATE": 25,
+    "EXPLICIT_SCOPE_REFERENCE": 13
+  },
+  "relation_matrix_unresolved_with_lexical_overlap": 357,
+  "relation_matrix_unresolved_without_lexical_overlap": 47,
+  "gate14_clause_candidate_count": 54,
+  "gate14_clause_word_token_count": 799,
+  "gate14_clause_token_coverage_complete": true,
+  "relation_review_queue_count": 270,
+  "relation_review_queue_unresolved_only_stopwords": 87,
+  "relation_review_queue_unresolved_no_surface_overlap": 47,
+  "word_role_counts": {
+    "SUBJECT_TERM_CANDIDATE": 49,
+    "UNASSIGNED_REQUIRES_REVIEW": 539,
+    "LOGICAL_CONNECTIVE_OR_SCOPE_CANDIDATE": 120,
+    "PREDICATE_TERM_CANDIDATE": 27,
+    "LOGIC_DOMAIN_TERM_CANDIDATE": 64
+  },
+  "audit_status": "PASS",
+  "audit_findings": [],
+  "warnings": [
+    "READY_FOR_REVIEW is not VERIFIED.",
+    "Punctuation-based sentence boundaries remain candidates.",
+    "Legacy Gate XIV excerpts cover only part of the canonical text.",
+    "Exact word overlap is not a semantic relationship.",
+    "Word-role labels are rule-based candidates; unassigned tokens require review.",
+    "The 34-by-13 relation matrix is pairwise-complete, but most cells remain unresolved or lexical-only.",
+    "Clause segmentation is punctuation-based and unverified; the review queue is not a set of confirmed structural links."
+  ],
+  "run": {
+    "id": "39119479706",
+    "number": "48",
+    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/39119479706",
+    "branch": "milaot-hahigayon-structural-integration-v1",
+    "commit": "93edab1d222e4607448ab7b67dc0202b21fc93b4",
+    "workflow": "Milaot HaHigayon Structural Integration Audit",
+    "event": "push"
+  }
+}

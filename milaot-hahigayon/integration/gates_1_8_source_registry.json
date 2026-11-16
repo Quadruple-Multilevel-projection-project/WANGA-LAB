@@ -1,0 +1,66 @@
+{
+  "registry_id": "MILAOT_HAHIGAYON_GATES_1_8_SOURCE_REGISTRY_V1",
+  "source_repository": "Sivan22/otzaria-library",
+  "source_commit": "d1106d9a66528dc3e39cf1ea0732782927d9f678",
+  "source_url": "https://github.com/Sivan22/otzaria-library/blob/d1106d9a66528dc3e39cf1ea0732782927d9f678/%D7%90%D7%95%D7%A6%D7%A8%D7%99%D7%90/%D7%9E%D7%97%D7%A9%D7%91%D7%AA%20%D7%99%D7%A9%D7%A8%D7%90%D7%9C/%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%D7%9D/%D7%9E%D7%99%D7%9C%D7%95%D7%AA%20%D7%94%D7%92%D7%99%D7%95%D7%9F.txt",
+  "status": "SOURCE_CHECKED",
+  "scope_note": "The original source file was retrieved at the immutable commit above. These are source locators and exact excerpts for Gate 14 cross-reference work; they do not claim complete sentence-level extraction for Gates 1-8.",
+  "gates": [
+    {
+      "gate": 1,
+      "target_unit_id": "G01-S01",
+      "source_heading": "שער א",
+      "source_status": "SOURCE-CHECKED",
+      "source_excerpt": "וכלל הדבור המרכב מהסיפור והמסופר ממנו יהיה חיוב או שלילה, רצוני לומר, הנושא והנשוא יחד, יקרא – המשפט או גזירה, ויקרא גם כן – המאמר הפוסק."
+    },
+    {
+      "gate": 2,
+      "target_unit_id": "G02-S01",
+      "source_heading": "שער ב",
+      "source_status": "SOURCE-CHECKED",
+      "source_excerpt": "ויהיו המשפטים בעלי ההיקפים ארבעה: מחייב כללי, מחייב חלקי, שולל כללי ושולל חלקי."
+    },
+    {
+      "gate": 3,
+      "target_unit_id": "G03-S01",
+      "source_heading": "שער ג",
+      "source_status": "SOURCE-CHECKED",
+      "source_excerpt": "ואנחנו נקרא הפעולה – הדיבור, והפעולות – הדיבורים."
+    },
+    {
+      "gate": 4,
+      "target_unit_id": "G04-S01",
+      "source_heading": "שער ד",
+      "source_status": "SOURCE-CHECKED",
+      "source_excerpt": "כל שני משפטים אשר נשואם ונושאם אחד בעצמו, זולת שהאחד מחייב והאחד שולל, הנה נקרא אלו שני המשפטים – מתנגדים."
+    },
+    {
+      "gate": 5,
+      "target_unit_id": "G05-S01",
+      "source_heading": "שער ה",
+      "source_status": "SOURCE-CHECKED",
+      "source_excerpt": "כל משפט שיחדור נשואו לנושאו ונושאו לנשואו, אם נשאר צודק כמו שהיה, קראנו אותו – היפוך המשפט או משפט מהופך."
+    },
+    {
+      "gate": 6,
+      "target_unit_id": "G06-S01",
+      "source_heading": "שער ו",
+      "source_status": "SOURCE-CHECKED",
+      "source_excerpt": "ואם השתתפו במין אחד מן השיתוף עד שיתחייב מהם יחד משפט אחר, הנה הרכבת אותם שני המשפטים, אז יקרא היקש."
+    },
+    {
+      "gate": 7,
+      "target_unit_id": "G07-S01",
+      "source_heading": "שער ז",
+      "source_status": "SOURCE-CHECKED",
+      "source_excerpt": "ההיקשים אשר קרה בהקדמותיהם או באחת מהן שטעה עמה או טעה בה או שקר בה במין ממיני ההיקשים, אלו יקראו – היקשים מטעים."
+    },
+    {
+      "gate": 8,
+      "target_unit_id": "G08-S01",
+      "source_heading": "שער ח",
+      "source_status": "SOURCE-CHECKED",
+      "source_excerpt": "המשפטים אשר יודעו ולא נצטרך אל ראיה על אמתותם ארבעה מינים:"
+    }
+  ]
+}

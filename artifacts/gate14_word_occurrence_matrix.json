@@ -1,0 +1,8531 @@
+{
+  "schema": "WANGA_GATE14_EXACT_SURFACE_OVERLAP_MATRIX_V1",
+  "work": "מילות ההגיון",
+  "target_gate": 14,
+  "source_commit": "d1106d9a66528dc3e39cf1ea0732782927d9f678",
+  "status": "LEXICAL_OVERLAP_ONLY",
+  "normalization": "EXACT_SURFACE_TOKEN_MATCH_NO_LEMMATIZATION",
+  "unique_gate14_terms": 446,
+  "terms_with_prior_gate_overlap": 187,
+  "overlaps": [
+    {
+      "surface_term": "אבל",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S011",
+        "G14-S015",
+        "G14-S019"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S007"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S004"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G04-S016"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G05-S001",
+            "G05-S003"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G07-S005",
+            "G07-S008",
+            "G07-S037",
+            "G07-S039"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S012"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S007"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S008",
+            "G11-S013"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "או",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S020",
+        "G14-S021"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 9,
+          "sentence_ids": [
+            "G01-S003",
+            "G01-S004",
+            "G01-S009",
+            "G01-S010",
+            "G01-S012",
+            "G01-S013"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 12,
+          "sentence_ids": [
+            "G02-S001",
+            "G02-S006",
+            "G02-S011",
+            "G02-S014",
+            "G02-S015"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 13,
+          "sentence_ids": [
+            "G03-S001",
+            "G03-S002",
+            "G03-S005",
+            "G03-S006",
+            "G03-S007"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G04-S003",
+            "G04-S010",
+            "G04-S015",
+            "G04-S016"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G05-S001"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G06-S008",
+            "G06-S011"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G07-S039",
+            "G07-S050"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S008",
+            "G08-S009",
+            "G08-S010"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 8,
+          "sentence_ids": [
+            "G09-S002",
+            "G09-S004",
+            "G09-S006",
+            "G09-S015"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 10,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S004",
+            "G10-S006",
+            "G10-S014",
+            "G10-S015",
+            "G10-S017",
+            "G10-S024",
+            "G10-S033",
+            "G10-S036"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S005"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S005"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G13-S003",
+            "G13-S018",
+            "G13-S020",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "אותה",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S022",
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S004"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "אותם",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S015",
+        "G14-S029"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S003"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S007"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G08-S011",
+            "G08-S012"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S005",
+            "G10-S041"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "אחד",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S015"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G02-S005",
+            "G02-S009"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G04-S001",
+            "G04-S005",
+            "G04-S006",
+            "G04-S009",
+            "G04-S016"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G05-S002"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G06-S002",
+            "G06-S003",
+            "G06-S004",
+            "G06-S007",
+            "G06-S018"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S044"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S007",
+            "G10-S028"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G11-S016",
+            "G11-S017",
+            "G11-S026",
+            "G11-S027"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G12-S005",
+            "G12-S006",
+            "G12-S007"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G13-S012",
+            "G13-S018",
+            "G13-S020",
+            "G13-S021",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "אחת",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S007",
+        "G14-S008"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S005"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G08-S003",
+            "G08-S008",
+            "G08-S009"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S013",
+            "G10-S014"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G12-S007"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S018"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "איננו",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S011"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 8,
+          "sentence_ids": [
+            "G07-S020",
+            "G07-S024",
+            "G07-S025",
+            "G07-S028",
+            "G07-S031",
+            "G07-S032"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "איש",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S029"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S014"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S013",
+            "G13-S020"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "אל",
+      "gate14_occurrences": 5,
+      "gate14_sentence_ids": [
+        "G14-S001",
+        "G14-S005",
+        "G14-S022",
+        "G14-S030",
+        "G14-S034"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S003"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S001"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G09-S016",
+            "G09-S017",
+            "G09-S018",
+            "G09-S022"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S024"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S024"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G12-S004",
+            "G12-S005"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G13-S003",
+            "G13-S011",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "אלה",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S021"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S009",
+            "G13-S013"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "אלו",
+      "gate14_occurrences": 5,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S013",
+        "G14-S014",
+        "G14-S018",
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G03-S003",
+            "G03-S007",
+            "G03-S012"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G04-S001",
+            "G04-S004",
+            "G04-S005",
+            "G04-S008",
+            "G04-S009"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S017"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G07-S033",
+            "G07-S034",
+            "G07-S039"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 8,
+          "sentence_ids": [
+            "G08-S007",
+            "G08-S008",
+            "G08-S009",
+            "G08-S010",
+            "G08-S011",
+            "G08-S014"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G09-S005",
+            "G09-S007",
+            "G09-S009"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G10-S005",
+            "G10-S029",
+            "G10-S038"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S027"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G13-S012",
+            "G13-S014",
+            "G13-S018",
+            "G13-S019",
+            "G13-S023",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "אם",
+      "gate14_occurrences": 4,
+      "gate14_sentence_ids": [
+        "G14-S011",
+        "G14-S020",
+        "G14-S022",
+        "G14-S034"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G01-S012"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G02-S001",
+            "G02-S015"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G03-S004",
+            "G03-S005"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G04-S005"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G05-S001",
+            "G05-S003",
+            "G05-S004"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G06-S002",
+            "G06-S007",
+            "G06-S011"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 24,
+          "sentence_ids": [
+            "G07-S001",
+            "G07-S011",
+            "G07-S017",
+            "G07-S018",
+            "G07-S019",
+            "G07-S020",
+            "G07-S022",
+            "G07-S023",
+            "G07-S024",
+            "G07-S025",
+            "G07-S027",
+            "G07-S028",
+            "G07-S029",
+            "G07-S030",
+            "G07-S031",
+            "G07-S032",
+            "G07-S037",
+            "G07-S039",
+            "G07-S049",
+            "G07-S051"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S012"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G09-S002",
+            "G09-S016"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S013",
+            "G10-S040"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G11-S004",
+            "G11-S013",
+            "G11-S017",
+            "G11-S022",
+            "G11-S025",
+            "G11-S027"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G12-S003",
+            "G12-S005"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S011"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "אמנם",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S011",
+        "G14-S022"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S016"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S004"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "אמרו",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S006",
+        "G14-S020"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S008"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S015"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "אצל",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S007"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G08-S003",
+            "G08-S004"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S023",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ארבעה",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S012",
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S017"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G02-S009",
+            "G02-S010",
+            "G02-S020"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G05-S005"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G07-S005",
+            "G07-S006",
+            "G07-S016",
+            "G07-S021",
+            "G07-S033",
+            "G07-S035"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S001"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "אשר",
+      "gate14_occurrences": 8,
+      "gate14_sentence_ids": [
+        "G14-S002",
+        "G14-S003",
+        "G14-S005",
+        "G14-S012",
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G01-S001",
+            "G01-S002",
+            "G01-S015",
+            "G01-S016"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G03-S006",
+            "G03-S012"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G04-S001",
+            "G04-S010",
+            "G04-S017"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 10,
+          "sentence_ids": [
+            "G06-S007",
+            "G06-S009",
+            "G06-S013",
+            "G06-S014",
+            "G06-S017",
+            "G06-S018"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G07-S005",
+            "G07-S044",
+            "G07-S045",
+            "G07-S050"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 8,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S007",
+            "G08-S010",
+            "G08-S011"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 12,
+          "sentence_ids": [
+            "G09-S004",
+            "G09-S007",
+            "G09-S008",
+            "G09-S012",
+            "G09-S013",
+            "G09-S014",
+            "G09-S015",
+            "G09-S017"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 13,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S002",
+            "G10-S004",
+            "G10-S010",
+            "G10-S015",
+            "G10-S019",
+            "G10-S024",
+            "G10-S029",
+            "G10-S035",
+            "G10-S038"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 8,
+          "sentence_ids": [
+            "G11-S010",
+            "G11-S022",
+            "G11-S024",
+            "G11-S027",
+            "G11-S028",
+            "G11-S030"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G12-S005",
+            "G12-S009"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 23,
+          "sentence_ids": [
+            "G13-S001",
+            "G13-S002",
+            "G13-S003",
+            "G13-S005",
+            "G13-S006",
+            "G13-S007",
+            "G13-S017",
+            "G13-S018",
+            "G13-S019",
+            "G13-S020",
+            "G13-S022",
+            "G13-S024",
+            "G13-S026"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "את",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S017",
+        "G14-S027"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S002"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S047"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S006"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G09-S007",
+            "G09-S008"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S016"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G13-S008",
+            "G13-S010",
+            "G13-S014"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "באלו",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S007"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S005"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S015"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S041"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בה",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S026",
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G06-S009",
+            "G06-S013"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S005"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G08-S010"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בהם",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S014",
+        "G14-S029"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G08-S002",
+            "G08-S010"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S041"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S005",
+            "G11-S017"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S007"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בו",
+      "gate14_occurrences": 7,
+      "gate14_sentence_ids": [
+        "G14-S002",
+        "G14-S005",
+        "G14-S008",
+        "G14-S014"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G02-S001",
+            "G02-S002"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G06-S007",
+            "G06-S014"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S045"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G08-S003",
+            "G08-S011"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S003",
+            "G09-S007"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G10-S002",
+            "G10-S010",
+            "G10-S015",
+            "G10-S029"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G11-S007",
+            "G11-S008"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G13-S018",
+            "G13-S020",
+            "G13-S022",
+            "G13-S023"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בזה",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S015",
+        "G14-S031"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S017"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S020"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S012"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G04-S016",
+            "G04-S017"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G05-S005"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G06-S007",
+            "G06-S010",
+            "G06-S018"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G07-S001",
+            "G07-S013"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G08-S012",
+            "G08-S014"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S021"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S029",
+            "G10-S038"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S030"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S009"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S023",
+            "G13-S025"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בזמן",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S014",
+        "G14-S027"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G03-S005",
+            "G03-S006"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G11-S003"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G12-S002",
+            "G12-S007",
+            "G12-S010"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בחומר",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S011"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S012"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בחכמה",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S016",
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S005"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בטבע",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S014"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S013"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G12-S003",
+            "G12-S007",
+            "G12-S010"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בכל",
+      "gate14_occurrences": 4,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S014",
+        "G14-S015",
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S006"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S005"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S029"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S011",
+            "G13-S018"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בלשון",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S004",
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S006",
+            "G09-S017"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S024"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S003",
+            "G13-S013"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בלתי",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S011"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G01-S007",
+            "G01-S008"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G02-S006",
+            "G02-S007",
+            "G02-S019"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S003"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S047"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S006"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S017"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S008",
+            "G11-S015"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S006"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S005"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "במה",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S011",
+        "G14-S015"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G03-S005"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S053"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S025"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "במושכלות",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S005"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "במלאכת",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S020"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S017"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בעבור",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S003"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S004"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G10-S012",
+            "G10-S013",
+            "G10-S023"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S015"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G13-S018",
+            "G13-S020",
+            "G13-S021",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בעניינים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G09-S004",
+            "G09-S006",
+            "G09-S007"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "בענינים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S011"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S002"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "גם",
+      "gate14_occurrences": 11,
+      "gate14_sentence_ids": [
+        "G14-S002",
+        "G14-S003",
+        "G14-S004",
+        "G14-S005",
+        "G14-S007",
+        "G14-S008",
+        "G14-S009",
+        "G14-S015",
+        "G14-S017",
+        "G14-S025",
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G01-S013",
+            "G01-S014"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S015"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S009"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G06-S004",
+            "G06-S009"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G07-S008",
+            "G07-S010",
+            "G07-S011",
+            "G07-S021"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S005"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S011"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 8,
+          "sentence_ids": [
+            "G10-S015",
+            "G10-S018",
+            "G10-S020",
+            "G10-S022",
+            "G10-S025",
+            "G10-S035",
+            "G10-S037"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G11-S002",
+            "G11-S003",
+            "G11-S012"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G13-S008",
+            "G13-S009",
+            "G13-S021"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "גשם",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S015"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G07-S049",
+            "G07-S051"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S013"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "דבר",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S020"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G02-S001",
+            "G02-S002"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S010"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G06-S001",
+            "G06-S002",
+            "G06-S011"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 11,
+          "sentence_ids": [
+            "G07-S018",
+            "G07-S020",
+            "G07-S022",
+            "G07-S023",
+            "G07-S024",
+            "G07-S028",
+            "G07-S031",
+            "G07-S033"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S016"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S040"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G11-S024",
+            "G11-S025",
+            "G11-S027"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S004"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "דרכי",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S011"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S008"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S012"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "האדם",
+      "gate14_occurrences": 8,
+      "gate14_sentence_ids": [
+        "G14-S002",
+        "G14-S003",
+        "G14-S005",
+        "G14-S014",
+        "G14-S021",
+        "G14-S022",
+        "G14-S026",
+        "G14-S032"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 9,
+          "sentence_ids": [
+            "G02-S004",
+            "G02-S006",
+            "G02-S011",
+            "G02-S012",
+            "G02-S013",
+            "G02-S019"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G04-S003",
+            "G04-S006",
+            "G04-S012",
+            "G04-S014"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G06-S015",
+            "G06-S016"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S002"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S008"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 11,
+          "sentence_ids": [
+            "G10-S006",
+            "G10-S007",
+            "G10-S010",
+            "G10-S012",
+            "G10-S013",
+            "G10-S015",
+            "G10-S023",
+            "G10-S034",
+            "G10-S035",
+            "G10-S036",
+            "G10-S037"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S005"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G12-S003"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G13-S018",
+            "G13-S021",
+            "G13-S023"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "האל",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S034"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S008"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "האמת",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S016"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הבית",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S021",
+        "G14-S027",
+        "G14-S032"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S028"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הגדולה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S021"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G06-S009",
+            "G06-S012",
+            "G06-S013",
+            "G06-S016",
+            "G06-S018"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G07-S010",
+            "G07-S011"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הדבור",
+      "gate14_occurrences": 9,
+      "gate14_sentence_ids": [
+        "G14-S002",
+        "G14-S003",
+        "G14-S004",
+        "G14-S005",
+        "G14-S015",
+        "G14-S025",
+        "G14-S032"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S013"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S009",
+            "G10-S010"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הדבר",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S020"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S010"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S047"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G09-S007",
+            "G09-S015",
+            "G09-S017"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S019"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S008"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הדברים",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S030",
+        "G14-S031"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S047"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G08-S011"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S041"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S017"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ההגיון",
+      "gate14_occurrences": 6,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S006",
+        "G14-S019",
+        "G14-S020",
+        "G14-S032",
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G01-S001",
+            "G01-S002"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S017"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S034"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S006"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S029"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S003"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ההוא",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S004",
+        "G14-S027"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S010"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G06-S009"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G07-S046",
+            "G07-S047"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G09-S004",
+            "G09-S007",
+            "G09-S008",
+            "G09-S010"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G10-S002",
+            "G10-S003",
+            "G10-S004",
+            "G10-S007",
+            "G10-S035"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 13,
+          "sentence_ids": [
+            "G11-S007",
+            "G11-S008",
+            "G11-S020",
+            "G11-S022",
+            "G11-S024",
+            "G11-S025",
+            "G11-S027",
+            "G11-S028"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S005"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G13-S018",
+            "G13-S020",
+            "G13-S023"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ההם",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S011",
+        "G14-S029"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S034"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S010"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הוא",
+      "gate14_occurrences": 6,
+      "gate14_sentence_ids": [
+        "G14-S001",
+        "G14-S002",
+        "G14-S003",
+        "G14-S004",
+        "G14-S015",
+        "G14-S021"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G01-S001",
+            "G01-S002"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G03-S005"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G04-S016"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G05-S003"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 12,
+          "sentence_ids": [
+            "G06-S005",
+            "G06-S007",
+            "G06-S009",
+            "G06-S010",
+            "G06-S011",
+            "G06-S014",
+            "G06-S016"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 12,
+          "sentence_ids": [
+            "G07-S007",
+            "G07-S017",
+            "G07-S034",
+            "G07-S037",
+            "G07-S039",
+            "G07-S045",
+            "G07-S049",
+            "G07-S051",
+            "G07-S052"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S005"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 13,
+          "sentence_ids": [
+            "G09-S002",
+            "G09-S005",
+            "G09-S008",
+            "G09-S011",
+            "G09-S012",
+            "G09-S013",
+            "G09-S015",
+            "G09-S017"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 15,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S009",
+            "G10-S010",
+            "G10-S020",
+            "G10-S021",
+            "G10-S024",
+            "G10-S027",
+            "G10-S029",
+            "G10-S031",
+            "G10-S037"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G11-S008",
+            "G11-S013",
+            "G11-S015",
+            "G11-S017",
+            "G11-S027"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G12-S002",
+            "G12-S003",
+            "G12-S006"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 13,
+          "sentence_ids": [
+            "G13-S003",
+            "G13-S005",
+            "G13-S009",
+            "G13-S017",
+            "G13-S018",
+            "G13-S020",
+            "G13-S021",
+            "G13-S022",
+            "G13-S023",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הזה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S008"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S005"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S011"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S017"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "החומר",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S015"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G09-S001",
+            "G09-S017",
+            "G09-S022"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S023"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "החכמה",
+      "gate14_occurrences": 10,
+      "gate14_sentence_ids": [
+        "G14-S009",
+        "G14-S011",
+        "G14-S012",
+        "G14-S013",
+        "G14-S014",
+        "G14-S017",
+        "G14-S021",
+        "G14-S032"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S020"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S005"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "החלקים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S013"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G06-S008"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S039"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "היא",
+      "gate14_occurrences": 5,
+      "gate14_sentence_ids": [
+        "G14-S019",
+        "G14-S020",
+        "G14-S022",
+        "G14-S027",
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G06-S006",
+            "G06-S009",
+            "G06-S014",
+            "G06-S016"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G07-S014",
+            "G07-S016",
+            "G07-S021",
+            "G07-S026"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G08-S007",
+            "G08-S008",
+            "G08-S009",
+            "G08-S013"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S008"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S015"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S009"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S006"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S001",
+            "G13-S018"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "היה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S022"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G01-S015",
+            "G01-S016"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S014"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G03-S004",
+            "G03-S005",
+            "G03-S006"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G05-S003"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S037"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S005"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "היות",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S011"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G07-S011",
+            "G07-S050"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S001"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S025"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הישר",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G07-S044",
+            "G07-S055"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S003",
+            "G13-S026"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הכוכבים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S012"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S020"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הכוללים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S005"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הכונה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S034"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S041"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הכח",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S002",
+        "G14-S032"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S008"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S010"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G11-S011",
+            "G11-S030"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הכלי",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S020"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S013"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הלשון",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S006"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 13,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G13-S023",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הלשונות",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S007"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הם",
+      "gate14_occurrences": 7,
+      "gate14_sentence_ids": [
+        "G14-S012",
+        "G14-S014",
+        "G14-S015",
+        "G14-S031",
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S020"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G03-S003",
+            "G03-S006",
+            "G03-S012"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S008"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G05-S005"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G06-S007",
+            "G06-S018"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G07-S005",
+            "G07-S033",
+            "G07-S036",
+            "G07-S051",
+            "G07-S054"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S014"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G09-S011",
+            "G09-S013",
+            "G09-S014",
+            "G09-S021"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G10-S005",
+            "G10-S027",
+            "G10-S038"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S004",
+            "G11-S030"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S009"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G13-S006",
+            "G13-S012",
+            "G13-S013",
+            "G13-S024",
+            "G13-S025"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "המאמר",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S013"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G07-S034",
+            "G07-S042"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S012"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S029"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S010",
+            "G13-S026"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "המדבר",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S032"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S008"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S020"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "המופת",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S008"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S045"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G08-S007",
+            "G08-S014"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S031"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "המושכלות",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S002",
+        "G14-S025"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G08-S004",
+            "G08-S014"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S008"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S010",
+            "G10-S029"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "המלאכה",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S043"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "המלאכות",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S002"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S005"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "המלאכתיים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S007"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S002",
+            "G09-S004"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S015"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "המליצה",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S004",
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S029"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "המספר",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S012"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S039"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הן",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S018",
+        "G14-S023"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S016"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S004"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הנה",
+      "gate14_occurrences": 5,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S014",
+        "G14-S018",
+        "G14-S019",
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G01-S016",
+            "G01-S017"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G03-S004",
+            "G03-S009",
+            "G03-S012"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 9,
+          "sentence_ids": [
+            "G04-S001",
+            "G04-S004",
+            "G04-S005",
+            "G04-S007",
+            "G04-S008",
+            "G04-S016",
+            "G04-S017"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G05-S003",
+            "G05-S004",
+            "G05-S005"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G06-S003",
+            "G06-S017"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 12,
+          "sentence_ids": [
+            "G07-S004",
+            "G07-S036",
+            "G07-S037",
+            "G07-S039",
+            "G07-S044",
+            "G07-S046",
+            "G07-S047",
+            "G07-S049",
+            "G07-S050",
+            "G07-S054"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G08-S003",
+            "G08-S005",
+            "G08-S007",
+            "G08-S011",
+            "G08-S013"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S011",
+            "G09-S012"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 10,
+          "sentence_ids": [
+            "G10-S005",
+            "G10-S007",
+            "G10-S016",
+            "G10-S018",
+            "G10-S021",
+            "G10-S032",
+            "G10-S034",
+            "G10-S036",
+            "G10-S038"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 14,
+          "sentence_ids": [
+            "G11-S003",
+            "G11-S004",
+            "G11-S006",
+            "G11-S007",
+            "G11-S008",
+            "G11-S009",
+            "G11-S011",
+            "G11-S012",
+            "G11-S015",
+            "G11-S017",
+            "G11-S023",
+            "G11-S025",
+            "G11-S028",
+            "G11-S030"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 8,
+          "sentence_ids": [
+            "G12-S003",
+            "G12-S004",
+            "G12-S005",
+            "G12-S006",
+            "G12-S007",
+            "G12-S009"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G13-S004",
+            "G13-S007",
+            "G13-S012",
+            "G13-S014",
+            "G13-S021",
+            "G13-S025"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "העניינים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S054"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S008"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G11-S004",
+            "G11-S005",
+            "G11-S030"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הענין",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S003",
+        "G14-S004",
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G08-S003",
+            "G08-S013"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S005"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S002"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G11-S015",
+            "G11-S024",
+            "G11-S025",
+            "G11-S028"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G13-S012",
+            "G13-S018",
+            "G13-S020"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הענינים",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S011",
+        "G14-S027"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S005"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S015"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S017"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הערב",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S001"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S028"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G13-S001",
+            "G13-S003",
+            "G13-S006"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הצמחים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S014"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S013"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G10-S018",
+            "G10-S019",
+            "G10-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הקודמים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S007"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S005"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הראשון",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S002",
+        "G14-S021"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S017"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G06-S009",
+            "G06-S016",
+            "G06-S018"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S039"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S017",
+            "G09-S022"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G10-S026",
+            "G10-S027",
+            "G10-S029"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S002"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S006",
+            "G13-S026"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הראשונות",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S018"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S004",
+            "G08-S014"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הרבה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S002"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S023"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הרביעי",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S021"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G07-S007",
+            "G07-S020",
+            "G07-S025",
+            "G07-S030"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S026",
+            "G10-S031"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S005"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "הרחוקות",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S016"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S022"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "השלישי",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S004",
+        "G14-S021"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S004"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G07-S007",
+            "G07-S019",
+            "G07-S024",
+            "G07-S029"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S026",
+            "G10-S029"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S004"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "השם",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S001",
+        "G14-S008"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S001"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S037"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S025",
+            "G11-S028"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 22,
+          "sentence_ids": [
+            "G13-S003",
+            "G13-S005",
+            "G13-S009",
+            "G13-S020",
+            "G13-S021",
+            "G13-S023",
+            "G13-S024",
+            "G13-S026"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "השמות",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S017"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S020"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S012"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S017"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G05-S005"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G06-S017",
+            "G06-S018"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S014"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S021"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S038"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G11-S024",
+            "G11-S025",
+            "G11-S030"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S009"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 8,
+          "sentence_ids": [
+            "G13-S006",
+            "G13-S012",
+            "G13-S014",
+            "G13-S015",
+            "G13-S023",
+            "G13-S024",
+            "G13-S025",
+            "G13-S026"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "השני",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S003",
+        "G14-S016",
+        "G14-S021"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 4,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G04-S009",
+            "G04-S017"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G07-S018",
+            "G07-S023",
+            "G07-S028",
+            "G07-S039"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S026"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S003"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "השער",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S031"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S017"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S020"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S012"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S017"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G05-S005"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S018"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S054"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S014"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S021"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S038"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S021",
+            "G11-S030"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S009"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S025"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "השערים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S041"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ו",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S025"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G07-S001",
+            "G07-S002"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G13-S007",
+            "G13-S013",
+            "G13-S015"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ואולם",
+      "gate14_occurrences": 4,
+      "gate14_sentence_ids": [
+        "G14-S019",
+        "G14-S021",
+        "G14-S027",
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 4,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G04-S005",
+            "G04-S016"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G05-S004"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S007"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S036"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G08-S002",
+            "G08-S003",
+            "G08-S013"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S015",
+            "G11-S028"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G13-S005",
+            "G13-S010",
+            "G13-S020"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ובכל",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S014"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S029"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "והוא",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S015",
+        "G14-S025"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S015"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S006"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G07-S045",
+            "G07-S046",
+            "G07-S047",
+            "G07-S050"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S001"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S008",
+            "G09-S016"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 9,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S018",
+            "G10-S019",
+            "G10-S020",
+            "G10-S024",
+            "G10-S027",
+            "G10-S029",
+            "G10-S031"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S005"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S021",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "והיא",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S012"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G07-S016",
+            "G07-S021",
+            "G07-S026"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "והם",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S012",
+        "G14-S032"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S020"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S012"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S017"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G05-S005"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G06-S017",
+            "G06-S018"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G07-S005",
+            "G07-S051",
+            "G07-S055"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S014"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S022"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S039"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S030"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S010"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S026"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "והנה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S011"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G06-S007",
+            "G06-S018"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S011"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S041"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S026"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S021"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "והענין",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S003"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S002",
+            "G10-S004",
+            "G10-S015"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "והשם",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S007"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 13,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G13-S002",
+            "G13-S003",
+            "G13-S017",
+            "G13-S018",
+            "G13-S022",
+            "G13-S023"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "וחלקי",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S012"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S015"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ויקרא",
+      "gate14_occurrences": 4,
+      "gate14_sentence_ids": [
+        "G14-S002",
+        "G14-S003",
+        "G14-S004"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S013"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S004"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S013"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S008",
+            "G10-S009"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "וכל",
+      "gate14_occurrences": 5,
+      "gate14_sentence_ids": [
+        "G14-S026",
+        "G14-S031",
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S020"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S004"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G06-S004",
+            "G06-S005",
+            "G06-S010",
+            "G06-S014"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 13,
+          "sentence_ids": [
+            "G07-S001",
+            "G07-S002",
+            "G07-S003",
+            "G07-S017",
+            "G07-S019",
+            "G07-S023",
+            "G07-S025",
+            "G07-S027",
+            "G07-S029",
+            "G07-S033",
+            "G07-S038",
+            "G07-S040",
+            "G07-S041"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G08-S003",
+            "G08-S004",
+            "G08-S005"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G10-S003",
+            "G10-S007",
+            "G10-S029"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G11-S004",
+            "G11-S007",
+            "G11-S016"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S007"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "וכן",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S025",
+        "G14-S028",
+        "G14-S029"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G01-S007",
+            "G01-S009",
+            "G01-S011",
+            "G01-S012"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S013"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S009"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S002"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G08-S004",
+            "G08-S005",
+            "G08-S011",
+            "G08-S013"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G09-S003",
+            "G09-S005",
+            "G09-S018",
+            "G09-S020"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G10-S011",
+            "G10-S013",
+            "G10-S014",
+            "G10-S019",
+            "G10-S025",
+            "G10-S037"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G11-S002",
+            "G11-S003",
+            "G11-S010",
+            "G11-S014",
+            "G11-S020",
+            "G11-S021",
+            "G11-S027"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G12-S005",
+            "G12-S007",
+            "G12-S008"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G13-S009",
+            "G13-S015",
+            "G13-S019"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ולא",
+      "gate14_occurrences": 5,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S015",
+        "G14-S020",
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S011"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G05-S004"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 9,
+          "sentence_ids": [
+            "G07-S010",
+            "G07-S011",
+            "G07-S013",
+            "G07-S014",
+            "G07-S015",
+            "G07-S039"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S003",
+            "G08-S012"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G10-S003",
+            "G10-S004",
+            "G10-S012",
+            "G10-S040"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G11-S013",
+            "G11-S017",
+            "G11-S022",
+            "G11-S025"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G12-S006",
+            "G12-S007"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S023"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ומה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S007"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G03-S001",
+            "G03-S006",
+            "G03-S007"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S051"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S016"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G11-S015",
+            "G11-S024",
+            "G11-S025",
+            "G11-S026"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ונאמר",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S025"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G07-S037",
+            "G07-S039",
+            "G07-S048",
+            "G07-S050"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S007"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ופעמים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S008"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G02-S003",
+            "G02-S004",
+            "G02-S005",
+            "G02-S006"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S007"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S035"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S023"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ושם",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S008"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S017"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "זאת",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S005"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S043"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "זה",
+      "gate14_occurrences": 5,
+      "gate14_sentence_ids": [
+        "G14-S002",
+        "G14-S003",
+        "G14-S004",
+        "G14-S030",
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G01-S003",
+            "G01-S005",
+            "G01-S012",
+            "G01-S015",
+            "G01-S016"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G02-S011",
+            "G02-S014",
+            "G02-S018",
+            "G02-S019"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G03-S002",
+            "G03-S005"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 10,
+          "sentence_ids": [
+            "G04-S003",
+            "G04-S005",
+            "G04-S011",
+            "G04-S012",
+            "G04-S013",
+            "G04-S015",
+            "G04-S016"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G05-S001",
+            "G05-S002",
+            "G05-S003",
+            "G05-S004"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G06-S005",
+            "G06-S014",
+            "G06-S015"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 8,
+          "sentence_ids": [
+            "G07-S007",
+            "G07-S034",
+            "G07-S039",
+            "G07-S042",
+            "G07-S049",
+            "G07-S054"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S005",
+            "G08-S013"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G09-S002",
+            "G09-S006",
+            "G09-S008",
+            "G09-S010",
+            "G09-S012",
+            "G09-S019"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G10-S006",
+            "G10-S025",
+            "G10-S034"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G11-S006",
+            "G11-S010",
+            "G11-S012",
+            "G11-S015",
+            "G11-S023",
+            "G11-S025",
+            "G11-S026"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S005"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 9,
+          "sentence_ids": [
+            "G13-S001",
+            "G13-S004",
+            "G13-S013",
+            "G13-S020",
+            "G13-S021",
+            "G13-S023"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "זולתו",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S026"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S002"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "חבור",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S012"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S005"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S008"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "חלקים",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S010",
+        "G14-S015",
+        "G14-S021"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S014"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G06-S007"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S016"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "יותר",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S003"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S011"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S015",
+            "G10-S022"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G11-S011",
+            "G11-S012",
+            "G11-S017",
+            "G11-S025"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G12-S003",
+            "G12-S005",
+            "G12-S006"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S018",
+            "G13-S020"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "יחד",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S002"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S013"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S003"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G07-S002",
+            "G07-S003"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S007"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S017",
+            "G11-S026"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 9,
+          "sentence_ids": [
+            "G12-S007",
+            "G12-S008",
+            "G12-S010"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S021",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "יקראו",
+      "gate14_occurrences": 4,
+      "gate14_sentence_ids": [
+        "G14-S008",
+        "G14-S015"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G08-S006",
+            "G08-S010"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S006"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "יתאר",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S007",
+            "G11-S008"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "כבר",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S003"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S017"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S001"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S001",
+            "G13-S003"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "כולם",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S014"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G03-S003",
+            "G03-S010"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G07-S005",
+            "G07-S050"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S001"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S004"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S018"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S004",
+            "G11-S005"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S007"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "כח",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S015"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G02-S012",
+            "G02-S015"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S013"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "כי",
+      "gate14_occurrences": 4,
+      "gate14_sentence_ids": [
+        "G14-S011",
+        "G14-S015",
+        "G14-S020"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S012"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G03-S005",
+            "G03-S006",
+            "G03-S009"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G04-S005",
+            "G04-S010",
+            "G04-S014",
+            "G04-S016"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G05-S003"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G06-S001",
+            "G06-S007",
+            "G06-S009"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 12,
+          "sentence_ids": [
+            "G07-S001",
+            "G07-S005",
+            "G07-S010",
+            "G07-S011",
+            "G07-S013",
+            "G07-S014",
+            "G07-S033",
+            "G07-S044",
+            "G07-S045",
+            "G07-S049"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S003",
+            "G08-S005",
+            "G08-S012"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 8,
+          "sentence_ids": [
+            "G09-S004",
+            "G09-S006",
+            "G09-S008",
+            "G09-S009",
+            "G09-S010",
+            "G09-S013",
+            "G09-S016"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 11,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S009",
+            "G10-S013",
+            "G10-S015",
+            "G10-S018",
+            "G10-S023",
+            "G10-S024",
+            "G10-S025",
+            "G10-S026",
+            "G10-S040"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 14,
+          "sentence_ids": [
+            "G11-S008",
+            "G11-S009",
+            "G11-S013",
+            "G11-S015",
+            "G11-S017",
+            "G11-S022",
+            "G11-S025",
+            "G11-S027"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G12-S003",
+            "G12-S005",
+            "G12-S006"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G13-S012",
+            "G13-S018",
+            "G13-S021",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "כל",
+      "gate14_occurrences": 8,
+      "gate14_sentence_ids": [
+        "G14-S007",
+        "G14-S013",
+        "G14-S018",
+        "G14-S029",
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G01-S003",
+            "G01-S012"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 10,
+          "sentence_ids": [
+            "G02-S001",
+            "G02-S003",
+            "G02-S006",
+            "G02-S007",
+            "G02-S008",
+            "G02-S009",
+            "G02-S013",
+            "G02-S018"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G03-S001",
+            "G03-S003",
+            "G03-S009",
+            "G03-S012"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 10,
+          "sentence_ids": [
+            "G04-S001",
+            "G04-S005",
+            "G04-S008",
+            "G04-S010",
+            "G04-S011",
+            "G04-S013",
+            "G04-S016",
+            "G04-S017"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G05-S001",
+            "G05-S003",
+            "G05-S004"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 14,
+          "sentence_ids": [
+            "G06-S001",
+            "G06-S002",
+            "G06-S005",
+            "G06-S007",
+            "G06-S010",
+            "G06-S011",
+            "G06-S014",
+            "G06-S016"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 15,
+          "sentence_ids": [
+            "G07-S001",
+            "G07-S002",
+            "G07-S003",
+            "G07-S005",
+            "G07-S010",
+            "G07-S011",
+            "G07-S017",
+            "G07-S018",
+            "G07-S022",
+            "G07-S027",
+            "G07-S028",
+            "G07-S030",
+            "G07-S032"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S005",
+            "G08-S011"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S004",
+            "G09-S013"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S007",
+            "G10-S011",
+            "G10-S013",
+            "G10-S023",
+            "G10-S041"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 11,
+          "sentence_ids": [
+            "G11-S001",
+            "G11-S002",
+            "G11-S003",
+            "G11-S005",
+            "G11-S014",
+            "G11-S015",
+            "G11-S017",
+            "G11-S021",
+            "G11-S026",
+            "G11-S027"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S007"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 9,
+          "sentence_ids": [
+            "G13-S015",
+            "G13-S018",
+            "G13-S019",
+            "G13-S020",
+            "G13-S022",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "כן",
+      "gate14_occurrences": 11,
+      "gate14_sentence_ids": [
+        "G14-S002",
+        "G14-S003",
+        "G14-S004",
+        "G14-S005",
+        "G14-S007",
+        "G14-S008",
+        "G14-S009",
+        "G14-S015",
+        "G14-S017",
+        "G14-S025",
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G01-S013",
+            "G01-S014"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S015"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G04-S009",
+            "G04-S016"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G06-S004",
+            "G06-S009",
+            "G06-S011"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 25,
+          "sentence_ids": [
+            "G07-S008",
+            "G07-S010",
+            "G07-S011",
+            "G07-S017",
+            "G07-S018",
+            "G07-S019",
+            "G07-S020",
+            "G07-S021",
+            "G07-S022",
+            "G07-S023",
+            "G07-S024",
+            "G07-S025",
+            "G07-S027",
+            "G07-S028",
+            "G07-S029",
+            "G07-S030",
+            "G07-S031",
+            "G07-S032",
+            "G07-S038",
+            "G07-S040",
+            "G07-S048",
+            "G07-S049",
+            "G07-S051"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S005"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S011",
+            "G09-S016"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 9,
+          "sentence_ids": [
+            "G10-S015",
+            "G10-S018",
+            "G10-S020",
+            "G10-S022",
+            "G10-S025",
+            "G10-S035",
+            "G10-S037"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G11-S002",
+            "G11-S003",
+            "G11-S009",
+            "G11-S012",
+            "G11-S018",
+            "G11-S029"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G13-S008",
+            "G13-S009",
+            "G13-S021",
+            "G13-S023",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "לא",
+      "gate14_occurrences": 5,
+      "gate14_sentence_ids": [
+        "G14-S011",
+        "G14-S014",
+        "G14-S015",
+        "G14-S028",
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G02-S001",
+            "G02-S011"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G03-S005"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G04-S009",
+            "G04-S010",
+            "G04-S016"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G05-S001",
+            "G05-S002"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G06-S001",
+            "G06-S002"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G07-S005",
+            "G07-S015",
+            "G07-S033"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S012"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S006",
+            "G09-S007"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S025"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G11-S022",
+            "G11-S025",
+            "G11-S027"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G12-S003",
+            "G12-S005"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G13-S005"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "להם",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S007"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S004"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S051"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S016"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S023"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G11-S024",
+            "G11-S025",
+            "G11-S026",
+            "G11-S027"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "להן",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S007"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G03-S007"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S016"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "לו",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S014"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G04-S005",
+            "G04-S010"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S005"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S008"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S002",
+            "G10-S026"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S008",
+            "G11-S022"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S012"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "לומר",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S014",
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S013"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 8,
+          "sentence_ids": [
+            "G07-S008",
+            "G07-S010",
+            "G07-S011",
+            "G07-S033",
+            "G07-S039",
+            "G07-S047"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S005"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S008"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S010",
+            "G10-S023"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S017"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "לכל",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S020"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S003"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G09-S008",
+            "G09-S015"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G10-S003",
+            "G10-S012",
+            "G10-S013",
+            "G10-S014",
+            "G10-S026"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "למה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S025"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "לפי",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S015",
+        "G14-S027",
+        "G14-S029"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S005",
+            "G10-S026"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S017"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "לשני",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S015"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S008"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "מאד",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S016"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S002"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S013"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "מאה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S005"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "מה",
+      "gate14_occurrences": 8,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S014",
+        "G14-S016",
+        "G14-S017",
+        "G14-S032",
+        "G14-S034"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S012"
+          ]
+        },
+        {
+          "chapter": 2,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G02-S016",
+            "G02-S017"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G04-S004",
+            "G04-S010",
+            "G04-S016",
+            "G04-S017"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G07-S001",
+            "G07-S002",
+            "G07-S003",
+            "G07-S033",
+            "G07-S054"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S003",
+            "G08-S004",
+            "G08-S005"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S015"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G10-S003",
+            "G10-S005",
+            "G10-S024",
+            "G10-S026",
+            "G10-S029",
+            "G10-S030",
+            "G10-S040"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 17,
+          "sentence_ids": [
+            "G11-S001",
+            "G11-S002",
+            "G11-S003",
+            "G11-S004",
+            "G11-S005",
+            "G11-S006",
+            "G11-S014",
+            "G11-S015",
+            "G11-S017",
+            "G11-S030"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S001"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G13-S002",
+            "G13-S021",
+            "G13-S023",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "מהם",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S015",
+        "G14-S029",
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S006"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G06-S001",
+            "G06-S003"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S006"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S011",
+            "G09-S012"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S007",
+            "G10-S023",
+            "G10-S027",
+            "G10-S028",
+            "G10-S040"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G11-S016",
+            "G11-S017",
+            "G11-S026",
+            "G11-S027"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G12-S004",
+            "G12-S005",
+            "G12-S006",
+            "G12-S007"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 8,
+          "sentence_ids": [
+            "G13-S016",
+            "G13-S018",
+            "G13-S020",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "מהן",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S023"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G08-S008",
+            "G08-S009",
+            "G08-S010"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S009"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "מכל",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S016"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S005"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S005"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S018"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "מכלל",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S019"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S051"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "מלאכת",
+      "gate14_occurrences": 5,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S006",
+        "G14-S008",
+        "G14-S019"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G01-S001",
+            "G01-S002"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 10,
+          "sentence_ids": [
+            "G08-S007",
+            "G08-S008",
+            "G08-S009",
+            "G08-S010",
+            "G08-S011",
+            "G08-S013",
+            "G08-S014"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G12-S005"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S003"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ממנה",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S022",
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G07-S009",
+            "G07-S010",
+            "G07-S011"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ממנו",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S013"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S010"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S016"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S004"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G09-S012",
+            "G09-S013"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G10-S004",
+            "G10-S015",
+            "G10-S017",
+            "G10-S022",
+            "G10-S040"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S025"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S004"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S002",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "מן",
+      "gate14_occurrences": 6,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S006",
+        "G14-S015",
+        "G14-S020"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G06-S003",
+            "G06-S009"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 12,
+          "sentence_ids": [
+            "G07-S001",
+            "G07-S003",
+            "G07-S007",
+            "G07-S033",
+            "G07-S044",
+            "G07-S046",
+            "G07-S055"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S010"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 8,
+          "sentence_ids": [
+            "G09-S007",
+            "G09-S008",
+            "G09-S010",
+            "G09-S011",
+            "G09-S015",
+            "G09-S019"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S015",
+            "G10-S031"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G11-S005",
+            "G11-S012",
+            "G11-S017",
+            "G11-S025"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G12-S003",
+            "G12-S005",
+            "G12-S006"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G13-S013",
+            "G13-S017",
+            "G13-S020",
+            "G13-S022"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "משותף",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S001",
+        "G14-S007",
+        "G14-S008"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S016"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S012"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "משותפים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 13,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G13-S011",
+            "G13-S014",
+            "G13-S016"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "משתי",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S008"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S001"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "נאה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S001"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "נבדלים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S015"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S001"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G13-S011",
+            "G13-S012",
+            "G13-S015"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "נמצא",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S015"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S016"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S047"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S008"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G11-S007",
+            "G11-S008",
+            "G11-S016"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S018"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "נמצאים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S011"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 12,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G12-S007"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "נקראת",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S026"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S005"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S009"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S002"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S007"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S013"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "עד",
+      "gate14_occurrences": 8,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S023",
+        "G14-S027",
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S003"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S007"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S019"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S011"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S025"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "על",
+      "gate14_occurrences": 7,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S007",
+        "G14-S008",
+        "G14-S020",
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S016"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G03-S005",
+            "G03-S006",
+            "G03-S007"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S016"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 11,
+          "sentence_ids": [
+            "G07-S005",
+            "G07-S010",
+            "G07-S011",
+            "G07-S016",
+            "G07-S021",
+            "G07-S026",
+            "G07-S034",
+            "G07-S047",
+            "G07-S050"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G08-S001",
+            "G08-S011"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G09-S006",
+            "G09-S010"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G10-S011",
+            "G10-S029",
+            "G10-S040"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G11-S002",
+            "G11-S003",
+            "G11-S004",
+            "G11-S005"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G12-S001",
+            "G12-S008"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 22,
+          "sentence_ids": [
+            "G13-S017",
+            "G13-S018",
+            "G13-S019",
+            "G13-S020",
+            "G13-S021",
+            "G13-S022",
+            "G13-S023",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "עליהם",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S021"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "עליו",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S011",
+        "G14-S016"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G02-S016",
+            "G02-S017"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S010"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S002"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S024"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G11-S002",
+            "G11-S003",
+            "G11-S004",
+            "G11-S024",
+            "G11-S025"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S009",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "עם",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S011"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S005"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S001"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "ענייניהם",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S031"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S012"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "עניינם",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S027"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S017"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "עשר",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S020"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S017"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S018"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G07-S005",
+            "G07-S033",
+            "G07-S035",
+            "G07-S054"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S014"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S038"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G11-S030"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "פעמים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S008"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S004"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S037"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "צריכים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S003"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "קצת",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 7,
+          "sentence_ids": [
+            "G02-S004",
+            "G02-S006",
+            "G02-S009",
+            "G02-S012",
+            "G02-S019"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G04-S006",
+            "G04-S009",
+            "G04-S012"
+          ]
+        },
+        {
+          "chapter": 5,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G05-S003"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 18,
+          "sentence_ids": [
+            "G07-S003",
+            "G07-S019",
+            "G07-S020",
+            "G07-S024",
+            "G07-S025",
+            "G07-S027",
+            "G07-S028",
+            "G07-S029",
+            "G07-S030",
+            "G07-S031",
+            "G07-S032",
+            "G07-S046"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "קצתם",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S027"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G09-S016"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "רבים",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S026"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S018"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S012"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "רצוני",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S014",
+        "G14-S030"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S013"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 10,
+          "sentence_ids": [
+            "G07-S008",
+            "G07-S010",
+            "G07-S011",
+            "G07-S013",
+            "G07-S033",
+            "G07-S039",
+            "G07-S047"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S005"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S008"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G10-S001",
+            "G10-S010",
+            "G10-S023"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S017"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "שאינו",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S015"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S012",
+            "G10-S029"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "שבכח",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S015",
+            "G11-S030"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "שבעה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S031"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S038"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "שדומה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S007"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S007"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S004"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S051"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S005"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S016"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G11-S014",
+            "G11-S024",
+            "G11-S025",
+            "G11-S026"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "שהם",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S011",
+        "G14-S015"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S003"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S008"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 4,
+          "sentence_ids": [
+            "G11-S016",
+            "G11-S017",
+            "G11-S024",
+            "G11-S029"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G12-S007",
+            "G12-S008"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "שיהיה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G01-S003",
+            "G01-S004"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G03-S001",
+            "G03-S005"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G04-S008",
+            "G04-S009"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G07-S001",
+            "G07-S002",
+            "G07-S003",
+            "G07-S037",
+            "G07-S045",
+            "G07-S046"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G08-S003",
+            "G08-S004"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G12-S005",
+            "G12-S007"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S018",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "שימצא",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S014"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S003"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G11-S001",
+            "G11-S002",
+            "G11-S003",
+            "G11-S005",
+            "G11-S022"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "שלא",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S005",
+        "G14-S020",
+        "G14-S028"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 5,
+          "sentence_ids": [
+            "G07-S010",
+            "G07-S011",
+            "G07-S039"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G10-S013",
+            "G10-S040"
+          ]
+        },
+        {
+          "chapter": 11,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G11-S015",
+            "G11-S025"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "שלשה",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S001"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G06-S007",
+            "G06-S015"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S041"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S006"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S030"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G13-S011"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "שם",
+      "gate14_occurrences": 3,
+      "gate14_sentence_ids": [
+        "G14-S001",
+        "G14-S007",
+        "G14-S008"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 1,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G01-S003"
+          ]
+        },
+        {
+          "chapter": 3,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G03-S004"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S005"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 3,
+          "sentence_ids": [
+            "G10-S022",
+            "G10-S036",
+            "G10-S037"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 12,
+          "sentence_ids": [
+            "G13-S002",
+            "G13-S003",
+            "G13-S005",
+            "G13-S012",
+            "G13-S019",
+            "G13-S022",
+            "G13-S024"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "שמות",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S031",
+        "G14-S033"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 2,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G02-S020"
+          ]
+        },
+        {
+          "chapter": 4,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G04-S017"
+          ]
+        },
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S018"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S054"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S014"
+          ]
+        },
+        {
+          "chapter": 9,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G09-S021"
+          ]
+        },
+        {
+          "chapter": 10,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G10-S038"
+          ]
+        },
+        {
+          "chapter": 12,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G12-S009"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 6,
+          "sentence_ids": [
+            "G13-S006",
+            "G13-S012",
+            "G13-S013",
+            "G13-S015",
+            "G13-S025"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "שתגיע",
+      "gate14_occurrences": 2,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S005"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "שתי",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S008"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 6,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G06-S004"
+          ]
+        },
+        {
+          "chapter": 7,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G07-S001"
+          ]
+        },
+        {
+          "chapter": 8,
+          "occurrences": 1,
+          "sentence_ids": [
+            "G08-S007"
+          ]
+        },
+        {
+          "chapter": 13,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G13-S017",
+            "G13-S020"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "תוסיף",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G07-S010",
+            "G07-S011"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    },
+    {
+      "surface_term": "תחסר",
+      "gate14_occurrences": 1,
+      "gate14_sentence_ids": [
+        "G14-S005"
+      ],
+      "prior_chapter_occurrences": [
+        {
+          "chapter": 7,
+          "occurrences": 2,
+          "sentence_ids": [
+            "G07-S010",
+            "G07-S011"
+          ]
+        }
+      ],
+      "relation_status": "LEXICAL_OVERLAP_ONLY_NOT_A_SEMANTIC_LINK"
+    }
+  ],
+  "warning": "Exact surface overlap is evidence of token reuse only; it does not establish conceptual identity or a structural relationship."
+}
