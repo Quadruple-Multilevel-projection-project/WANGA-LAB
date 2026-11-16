@@ -1,0 +1,298 @@
+{
+  "model": "WANGA Typed Fractal Logic Candidate V0.1",
+  "status": "CANDIDATE_NOT_RELEASED",
+  "scope": "SYNTHETIC_TEST_FIXTURES_NOT_REAL_CONVERSATION_OR_EXTERNAL_FACTS",
+  "source_registry": {
+    "SRC-OBS-001": {
+      "source_id": "SRC-OBS-001",
+      "locator": "logic_fractal/data/typed_fragments_fixture.json#observation",
+      "sha256": "fixture-sha256-a"
+    },
+    "SRC-REL-001": {
+      "source_id": "SRC-REL-001",
+      "locator": "logic_fractal/data/typed_fragments_fixture.json#relation",
+      "sha256": "fixture-sha256-b"
+    },
+    "SRC-TEST-001": {
+      "source_id": "SRC-TEST-001",
+      "locator": "logic_fractal/data/typed_fragments_fixture.json#review",
+      "sha256": "fixture-sha256-c"
+    }
+  },
+  "base_fragment_checks": [
+    {
+      "status": "VALID_STRUCTURE",
+      "fragment_id": "FL-OBSERVATION",
+      "claim_count": 1,
+      "scale": 0
+    },
+    {
+      "status": "VALID_STRUCTURE",
+      "fragment_id": "FL-RELATION-EXTRACT",
+      "claim_count": 1,
+      "scale": 0
+    },
+    {
+      "status": "VALID_STRUCTURE",
+      "fragment_id": "FL-REVIEW",
+      "claim_count": 1,
+      "scale": 0
+    }
+  ],
+  "composition_levels": [
+    {
+      "scale": 1,
+      "fragment": {
+        "fragment_id": "FL-COMPOSE-afa39aaea024d56e",
+        "version": "0.1",
+        "status": "CANDIDATE",
+        "scale": 1,
+        "claims": [
+          {
+            "claim_id": "FL-OBSERVATION::C1",
+            "text": "A synthetic source contains a stated observation.",
+            "status": "CANDIDATE",
+            "source_span_ids": [
+              "SRC-OBS-001"
+            ],
+            "origin_fragment_id": "FL-OBSERVATION",
+            "inherited_status": "TESTED"
+          },
+          {
+            "claim_id": "FL-RELATION-EXTRACT::C2",
+            "text": "A relation candidate was extracted from the synthetic source span.",
+            "status": "CANDIDATE",
+            "source_span_ids": [
+              "SRC-REL-001"
+            ],
+            "origin_fragment_id": "FL-RELATION-EXTRACT",
+            "inherited_status": "TESTED"
+          }
+        ],
+        "inputs": [
+          {
+            "name": "source_text",
+            "type": "SourceText",
+            "required": true
+          }
+        ],
+        "outputs": [
+          {
+            "name": "relation_candidate",
+            "type": "LogicRelationCandidate"
+          }
+        ],
+        "composition": {
+          "parent_ids": [
+            "FL-OBSERVATION",
+            "FL-RELATION-EXTRACT"
+          ],
+          "rule_id": "COMPOSE-INTERFACE-SEQUENTIAL-V1",
+          "interface_checks": [
+            {
+              "from_fragment": "FL-OBSERVATION",
+              "from_output": "observed_span",
+              "to_fragment": "FL-RELATION-EXTRACT",
+              "to_input": "source_span",
+              "type": "ObservedSpan",
+              "status": "TYPE_COMPATIBLE_INTERFACE_NOT_SEMANTICALLY_PROVEN"
+            }
+          ],
+          "interface_result": "TYPE_COMPATIBLE_CANDIDATE",
+          "semantic_equivalence": "NOT_ESTABLISHED"
+        },
+        "provenance": [
+          {
+            "source_id": "SRC-OBS-001",
+            "locator": "logic_fractal/data/typed_fragments_fixture.json#observation",
+            "sha256": "fixture-sha256-a"
+          },
+          {
+            "source_id": "SRC-REL-001",
+            "locator": "logic_fractal/data/typed_fragments_fixture.json#relation",
+            "sha256": "fixture-sha256-b"
+          }
+        ],
+        "tests": [],
+        "counterexamples": [],
+        "model_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+        "assumptions": [
+          "Type compatibility is necessary but not sufficient for semantic composition.",
+          "A candidate inherits lineage but does not inherit VERIFIED status."
+        ]
+      },
+      "trace": {
+        "parent_ids": [
+          "FL-OBSERVATION",
+          "FL-RELATION-EXTRACT"
+        ],
+        "rule_id": "COMPOSE-INTERFACE-SEQUENTIAL-V1",
+        "matched_interfaces": [
+          {
+            "from_fragment": "FL-OBSERVATION",
+            "from_output": "observed_span",
+            "to_fragment": "FL-RELATION-EXTRACT",
+            "to_input": "source_span",
+            "type": "ObservedSpan",
+            "status": "TYPE_COMPATIBLE_INTERFACE_NOT_SEMANTICALLY_PROVEN"
+          }
+        ],
+        "unmatched_optional_inputs": [],
+        "source_ids_preserved": [
+          "SRC-OBS-001",
+          "SRC-REL-001"
+        ],
+        "claim_origin_ids_preserved": [
+          "FL-OBSERVATION",
+          "FL-RELATION-EXTRACT"
+        ],
+        "model_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+        "semantic_status": "NOT_YET_VERIFIED"
+      }
+    },
+    {
+      "scale": 2,
+      "fragment": {
+        "fragment_id": "FL-COMPOSE-ab1b08a4197fd719",
+        "version": "0.1",
+        "status": "CANDIDATE",
+        "scale": 2,
+        "claims": [
+          {
+            "claim_id": "FL-COMPOSE-afa39aaea024d56e::FL-OBSERVATION::C1",
+            "text": "A synthetic source contains a stated observation.",
+            "status": "CANDIDATE",
+            "source_span_ids": [
+              "SRC-OBS-001"
+            ],
+            "origin_fragment_id": "FL-COMPOSE-afa39aaea024d56e",
+            "inherited_status": "CANDIDATE"
+          },
+          {
+            "claim_id": "FL-COMPOSE-afa39aaea024d56e::FL-RELATION-EXTRACT::C2",
+            "text": "A relation candidate was extracted from the synthetic source span.",
+            "status": "CANDIDATE",
+            "source_span_ids": [
+              "SRC-REL-001"
+            ],
+            "origin_fragment_id": "FL-COMPOSE-afa39aaea024d56e",
+            "inherited_status": "CANDIDATE"
+          },
+          {
+            "claim_id": "FL-REVIEW::C3",
+            "text": "A candidate relation keeps an explicit review status.",
+            "status": "CANDIDATE",
+            "source_span_ids": [
+              "SRC-TEST-001"
+            ],
+            "origin_fragment_id": "FL-REVIEW",
+            "inherited_status": "SPECIFIED"
+          }
+        ],
+        "inputs": [
+          {
+            "name": "source_text",
+            "type": "SourceText",
+            "required": true
+          }
+        ],
+        "outputs": [
+          {
+            "name": "review_state",
+            "type": "ReviewState"
+          }
+        ],
+        "composition": {
+          "parent_ids": [
+            "FL-COMPOSE-afa39aaea024d56e",
+            "FL-REVIEW"
+          ],
+          "rule_id": "COMPOSE-INTERFACE-SEQUENTIAL-V1",
+          "interface_checks": [
+            {
+              "from_fragment": "FL-COMPOSE-afa39aaea024d56e",
+              "from_output": "relation_candidate",
+              "to_fragment": "FL-REVIEW",
+              "to_input": "candidate",
+              "type": "LogicRelationCandidate",
+              "status": "TYPE_COMPATIBLE_INTERFACE_NOT_SEMANTICALLY_PROVEN"
+            }
+          ],
+          "interface_result": "TYPE_COMPATIBLE_CANDIDATE",
+          "semantic_equivalence": "NOT_ESTABLISHED"
+        },
+        "provenance": [
+          {
+            "source_id": "SRC-OBS-001",
+            "locator": "logic_fractal/data/typed_fragments_fixture.json#observation",
+            "sha256": "fixture-sha256-a"
+          },
+          {
+            "source_id": "SRC-REL-001",
+            "locator": "logic_fractal/data/typed_fragments_fixture.json#relation",
+            "sha256": "fixture-sha256-b"
+          },
+          {
+            "source_id": "SRC-TEST-001",
+            "locator": "logic_fractal/data/typed_fragments_fixture.json#review",
+            "sha256": "fixture-sha256-c"
+          }
+        ],
+        "tests": [],
+        "counterexamples": [],
+        "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+        "assumptions": [
+          "Type compatibility is necessary but not sufficient for semantic composition.",
+          "A candidate inherits lineage but does not inherit VERIFIED status."
+        ]
+      },
+      "trace": {
+        "parent_ids": [
+          "FL-COMPOSE-afa39aaea024d56e",
+          "FL-REVIEW"
+        ],
+        "rule_id": "COMPOSE-INTERFACE-SEQUENTIAL-V1",
+        "matched_interfaces": [
+          {
+            "from_fragment": "FL-COMPOSE-afa39aaea024d56e",
+            "from_output": "relation_candidate",
+            "to_fragment": "FL-REVIEW",
+            "to_input": "candidate",
+            "type": "LogicRelationCandidate",
+            "status": "TYPE_COMPATIBLE_INTERFACE_NOT_SEMANTICALLY_PROVEN"
+          }
+        ],
+        "unmatched_optional_inputs": [],
+        "source_ids_preserved": [
+          "SRC-OBS-001",
+          "SRC-REL-001",
+          "SRC-TEST-001"
+        ],
+        "claim_origin_ids_preserved": [
+          "FL-COMPOSE-afa39aaea024d56e",
+          "FL-COMPOSE-afa39aaea024d56e",
+          "FL-REVIEW"
+        ],
+        "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+        "semantic_status": "NOT_YET_VERIFIED"
+      }
+    }
+  ],
+  "release_gate": {
+    "source_lineage_preserved": true,
+    "two_scales_composed": true,
+    "replay_deterministic": true,
+    "uses_synthetic_only_fixtures": true,
+    "real_conversation_sources_reviewed": false,
+    "negative_boundary_benchmark_complete": false,
+    "independent_review_complete": false,
+    "decision": "BLOCKED_PENDING_REAL_SOURCE_FRAGMENTS_NEGATIVE_BOUNDARY_TESTS_AND_INDEPENDENT_REVIEW"
+  },
+  "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+  "semantic_status": "NOT_YET_VERIFIED",
+  "limits": [
+    "This validates a typed composition mechanism on synthetic fixtures only.",
+    "Type compatibility does not establish semantic equivalence.",
+    "This is not a trained AI model or proof of intelligence."
+  ]
+}

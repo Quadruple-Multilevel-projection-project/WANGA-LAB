@@ -1,0 +1,590 @@
+{
+  "schema_version": "wanga-ecosystem-cycle-report/1.0",
+  "report_id": "WANGA-ECOSYSTEM-BATCH-2026-10-31-RUN11",
+  "generated_at_utc": "2026-10-31T05:21:07Z",
+  "snapshot": {
+    "unique_repositories": 63,
+    "owner_affiliations": 38,
+    "collaborator_affiliations": 13,
+    "organization_member_affiliations": 25,
+    "public_repositories": 58,
+    "private_repositories_omitted": 5,
+    "unknown_visibility": 0,
+    "public_readme_attempts_cumulative": 58,
+    "public_readme_reads_cumulative": 50,
+    "public_readme_http_404_cumulative": 7,
+    "public_readme_policy_skips_cumulative": 1
+  },
+  "batch": {
+    "repositories_attempted": 10,
+    "public_repositories": 10,
+    "private_repositories_sampled": 0,
+    "readme_successes": 8,
+    "readme_http_404": 2,
+    "additional_documents_read": 12,
+    "scanned_repositories": [
+      {
+        "full_name": "tribal-archery/MAM-parsed",
+        "default_branch": "main",
+        "visibility": "public",
+        "permission": "admin",
+        "latest_commit_sha": "d07ad9704386dc564a1c214852ca2b544cc973bf",
+        "latest_commit_author_date": "2026-10-02T01:05:33Z",
+        "readme_status": "READ",
+        "readme_blob_sha1": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c",
+        "readme_summary": "Miqra According to the Masorah in parsed JSON formats; upstream source is a Google Sheet/Wikisource and the README notes the data format is not stable.",
+        "duplicate_cluster": null,
+        "documents": [
+          "SESSION_SOURCE_EXTRACTION_SUMMARY_2026-10-02.md"
+        ]
+      },
+      {
+        "full_name": "tribal-archery/Qdprojects",
+        "default_branch": "master",
+        "visibility": "public",
+        "permission": "admin",
+        "latest_commit_sha": "15c8fe9fa3bc940ac52f2489d2c103990717bd3e",
+        "latest_commit_author_date": "2025-01-06T00:57:10Z",
+        "readme_status": "READ",
+        "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+        "readme_summary": "README is title-only ('Nanomathematics'); identical README blob occurs in two other distinct repository identifiers.",
+        "duplicate_cluster": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+        "documents": []
+      },
+      {
+        "full_name": "Quadruple-Multilevel-projection-project/skills",
+        "default_branch": "main",
+        "visibility": "public",
+        "permission": "admin",
+        "latest_commit_sha": "3e20332d62908d30420e223a2f2ba2fca48148ba",
+        "latest_commit_author_date": "2026-10-08T13:22:22Z",
+        "readme_status": "READ",
+        "readme_blob_sha1": "2246383e993f161fd909122d01769059adfb9eab",
+        "readme_summary": "CLI for discovering and installing agent skills across multiple coding agents; README describes source resolution and supported-agent integration.",
+        "duplicate_cluster": null,
+        "documents": [
+          "research/EMERGING_AGENT_LOGIC_MARKET_EVIDENCE.md"
+        ]
+      },
+      {
+        "full_name": "AmbassadorOv/python-genai",
+        "default_branch": "main",
+        "visibility": "public",
+        "permission": "admin",
+        "latest_commit_sha": "77253f4c48036d3e04e281c1f2d02e3be756c960",
+        "latest_commit_author_date": "2026-10-29T19:16:58Z",
+        "readme_status": "READ",
+        "readme_blob_sha1": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+        "readme_summary": "Google Gen AI Python SDK for Gemini Developer API and Vertex AI; this README does not establish a selected or configured WANGA backend.",
+        "duplicate_cluster": null,
+        "documents": []
+      },
+      {
+        "full_name": "AmbassadorOv/https-AmbassadorOv.io",
+        "default_branch": "main",
+        "visibility": "public",
+        "permission": "admin",
+        "latest_commit_sha": "5e8bfc8624291ec945e1ad59f2e0fa601fd1d2a3",
+        "latest_commit_author_date": "2025-09-12T10:59:17Z",
+        "readme_status": "HTTP_404",
+        "readme_blob_sha1": null,
+        "readme_summary": "README.md fetch returned HTTP 404; repository metadata and latest commit were accessible; no absence claim is made.",
+        "duplicate_cluster": null,
+        "documents": []
+      },
+      {
+        "full_name": "AmbassadorOv/-artificial-y",
+        "default_branch": "main",
+        "visibility": "public",
+        "permission": "admin",
+        "latest_commit_sha": "0b6041813f71cc05932d941ab3e38682d0a57544",
+        "latest_commit_author_date": "2026-10-28T16:36:45Z",
+        "readme_status": "HTTP_404_TARGETED_TREE_AND_CODE_READ",
+        "readme_blob_sha1": null,
+        "readme_summary": "README.md fetch returned HTTP 404, but the tree exposed a Fly Brain rule-engine module, configuration, release note and tests.",
+        "duplicate_cluster": null,
+        "documents": [
+          "swarm/fly_brain.py",
+          "swarm/fly_brain_config.json",
+          "swarm/00_RELEASE_FROM_DRIFT.md",
+          "tests/test_fly_brain.py"
+        ]
+      },
+      {
+        "full_name": "AmbassadorOv/awesome-chatgpt-prompts",
+        "default_branch": "main",
+        "visibility": "public",
+        "permission": "admin",
+        "latest_commit_sha": "728789c54cf23240fa351ff43100a21291f9330b",
+        "latest_commit_author_date": "2025-12-02T18:15:02Z",
+        "readme_status": "READ",
+        "readme_blob_sha1": "25c6254b882a96645aeacb866e735a14040913dc",
+        "readme_summary": "Prompt collection and prompt-sharing repository; no formal logic engine or provenance implementation established by README.",
+        "duplicate_cluster": null,
+        "documents": []
+      },
+      {
+        "full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
+        "default_branch": "main",
+        "visibility": "public",
+        "permission": "admin",
+        "latest_commit_sha": "c85743e6739b9529c93cdd9c5a50144a90d0c4d5",
+        "latest_commit_author_date": "2024-05-10T17:36:57Z",
+        "readme_status": "READ",
+        "readme_blob_sha1": "2866fa41c2232edaf4bfa82e299e22d54ed267ec",
+        "readme_summary": "SciGPT browser extension/bot for scientific researchers; no WANGA logic integration is established by the README.",
+        "duplicate_cluster": null,
+        "documents": []
+      },
+      {
+        "full_name": "AmbassadorOv/AmbassadorOv",
+        "default_branch": "main",
+        "visibility": "public",
+        "permission": "admin",
+        "latest_commit_sha": "6262f5bd5c204de661822ee39c2f698baf9193bf",
+        "latest_commit_author_date": "2026-10-22T06:42:08Z",
+        "readme_status": "READ",
+        "readme_blob_sha1": "d2664df6ce794e353a4d1b04682627c3b13f0bb9",
+        "readme_summary": "README presents Logic Research as the central inquiry into structures, relations, constraints, rules, derivations and validity boundaries.",
+        "duplicate_cluster": null,
+        "documents": []
+      },
+      {
+        "full_name": "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+        "default_branch": "master",
+        "visibility": "public",
+        "permission": "admin",
+        "latest_commit_sha": "698966f3071cdd99afcb119a36a6e65f1f643e59",
+        "latest_commit_author_date": "2026-10-05T08:21:30Z",
+        "readme_status": "READ",
+        "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
+        "readme_summary": "README is title-only and byte-identical to two other distinct repository README blobs; repository identity is not inferred.",
+        "duplicate_cluster": "8b36e3fec98319bade352adce9b99abe55705188",
+        "documents": []
+      }
+    ],
+    "next_priority_batch": [
+      "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "AmbassadorOv/googleapis",
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/desktop",
+      "AmbassadorOv/platform-samples",
+      "AmbassadorOv/extensions",
+      "AmbassadorOv/TTTT-0.0.0.0.1",
+      "AmbassadorOv/TTTTproject-un.govt",
+      "AmbassadorOv/docs",
+      "AmbassadorOv/mermaid"
+    ],
+    "remaining_public_repositories_for_focused_review": 39
+  },
+  "repositories": [
+    {
+      "full_name": "tribal-archery/MAM-parsed",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission": "admin",
+      "latest_commit_sha": "d07ad9704386dc564a1c214852ca2b544cc973bf",
+      "latest_commit_author_date": "2026-10-02T01:05:33Z",
+      "readme_status": "READ",
+      "readme_blob_sha1": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c",
+      "readme_summary": "Miqra According to the Masorah in parsed JSON formats; upstream source is a Google Sheet/Wikisource and the README notes the data format is not stable.",
+      "duplicate_cluster": null,
+      "documents": [
+        "SESSION_SOURCE_EXTRACTION_SUMMARY_2026-10-02.md"
+      ]
+    },
+    {
+      "full_name": "tribal-archery/Qdprojects",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission": "admin",
+      "latest_commit_sha": "15c8fe9fa3bc940ac52f2489d2c103990717bd3e",
+      "latest_commit_author_date": "2025-01-06T00:57:10Z",
+      "readme_status": "READ",
+      "readme_blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "readme_summary": "README is title-only ('Nanomathematics'); identical README blob occurs in two other distinct repository identifiers.",
+      "duplicate_cluster": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "documents": []
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/skills",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission": "admin",
+      "latest_commit_sha": "3e20332d62908d30420e223a2f2ba2fca48148ba",
+      "latest_commit_author_date": "2026-10-08T13:22:22Z",
+      "readme_status": "READ",
+      "readme_blob_sha1": "2246383e993f161fd909122d01769059adfb9eab",
+      "readme_summary": "CLI for discovering and installing agent skills across multiple coding agents; README describes source resolution and supported-agent integration.",
+      "duplicate_cluster": null,
+      "documents": [
+        "research/EMERGING_AGENT_LOGIC_MARKET_EVIDENCE.md"
+      ]
+    },
+    {
+      "full_name": "AmbassadorOv/python-genai",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission": "admin",
+      "latest_commit_sha": "77253f4c48036d3e04e281c1f2d02e3be756c960",
+      "latest_commit_author_date": "2026-10-29T19:16:58Z",
+      "readme_status": "READ",
+      "readme_blob_sha1": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+      "readme_summary": "Google Gen AI Python SDK for Gemini Developer API and Vertex AI; this README does not establish a selected or configured WANGA backend.",
+      "duplicate_cluster": null,
+      "documents": []
+    },
+    {
+      "full_name": "AmbassadorOv/https-AmbassadorOv.io",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission": "admin",
+      "latest_commit_sha": "5e8bfc8624291ec945e1ad59f2e0fa601fd1d2a3",
+      "latest_commit_author_date": "2025-09-12T10:59:17Z",
+      "readme_status": "HTTP_404",
+      "readme_blob_sha1": null,
+      "readme_summary": "README.md fetch returned HTTP 404; repository metadata and latest commit were accessible; no absence claim is made.",
+      "duplicate_cluster": null,
+      "documents": []
+    },
+    {
+      "full_name": "AmbassadorOv/-artificial-y",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission": "admin",
+      "latest_commit_sha": "0b6041813f71cc05932d941ab3e38682d0a57544",
+      "latest_commit_author_date": "2026-10-28T16:36:45Z",
+      "readme_status": "HTTP_404_TARGETED_TREE_AND_CODE_READ",
+      "readme_blob_sha1": null,
+      "readme_summary": "README.md fetch returned HTTP 404, but the tree exposed a Fly Brain rule-engine module, configuration, release note and tests.",
+      "duplicate_cluster": null,
+      "documents": [
+        "swarm/fly_brain.py",
+        "swarm/fly_brain_config.json",
+        "swarm/00_RELEASE_FROM_DRIFT.md",
+        "tests/test_fly_brain.py"
+      ]
+    },
+    {
+      "full_name": "AmbassadorOv/awesome-chatgpt-prompts",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission": "admin",
+      "latest_commit_sha": "728789c54cf23240fa351ff43100a21291f9330b",
+      "latest_commit_author_date": "2025-12-02T18:15:02Z",
+      "readme_status": "READ",
+      "readme_blob_sha1": "25c6254b882a96645aeacb866e735a14040913dc",
+      "readme_summary": "Prompt collection and prompt-sharing repository; no formal logic engine or provenance implementation established by README.",
+      "duplicate_cluster": null,
+      "documents": []
+    },
+    {
+      "full_name": "AmbassadorOv/chatgpt-scientific-publications-extension",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission": "admin",
+      "latest_commit_sha": "c85743e6739b9529c93cdd9c5a50144a90d0c4d5",
+      "latest_commit_author_date": "2024-05-10T17:36:57Z",
+      "readme_status": "READ",
+      "readme_blob_sha1": "2866fa41c2232edaf4bfa82e299e22d54ed267ec",
+      "readme_summary": "SciGPT browser extension/bot for scientific researchers; no WANGA logic integration is established by the README.",
+      "duplicate_cluster": null,
+      "documents": []
+    },
+    {
+      "full_name": "AmbassadorOv/AmbassadorOv",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission": "admin",
+      "latest_commit_sha": "6262f5bd5c204de661822ee39c2f698baf9193bf",
+      "latest_commit_author_date": "2026-10-22T06:42:08Z",
+      "readme_status": "READ",
+      "readme_blob_sha1": "d2664df6ce794e353a4d1b04682627c3b13f0bb9",
+      "readme_summary": "README presents Logic Research as the central inquiry into structures, relations, constraints, rules, derivations and validity boundaries.",
+      "duplicate_cluster": null,
+      "documents": []
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission": "admin",
+      "latest_commit_sha": "698966f3071cdd99afcb119a36a6e65f1f643e59",
+      "latest_commit_author_date": "2026-10-05T08:21:30Z",
+      "readme_status": "READ",
+      "readme_blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
+      "readme_summary": "README is title-only and byte-identical to two other distinct repository README blobs; repository identity is not inferred.",
+      "duplicate_cluster": "8b36e3fec98319bade352adce9b99abe55705188",
+      "documents": []
+    }
+  ],
+  "source_documents": [
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "branch_ref": "main",
+      "source_commit_sha": "9f10f1919596084f7983804a9682a18b1e7960a3",
+      "exact_file_path": "datasets/embeddings/cloud_master_logic.json",
+      "git_blob_sha1": "04ce79e8620c34446b6e772aaae307188b481a28",
+      "epistemic_status": "PROJECT_DATA_DECLARATIONS_NOT_VALIDATED",
+      "excerpt_or_summary": "Declares 231 gates, logic base index 441, 32 active pathways and an accuracy_peak field; the file supplies no measurement protocol or independent evidence for the numeric claims.",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/articles.json",
+        "WANGA-LAB/logic_fractal"
+      ],
+      "contradictions": [],
+      "next_action": "Preserve as a project data artifact; do not use numeric fields as measured performance or count gates as distinct logic units without source and metric validation.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io/blob/main/datasets/embeddings/cloud_master_logic.json",
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_time_utc": "2026-10-31T05:21:07Z"
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "branch_ref": "main",
+      "source_commit_sha": "9f10f1919596084f7983804a9682a18b1e7960a3",
+      "exact_file_path": "datasets/embeddings/epistemic_layer/reconciled_v705_logic.json",
+      "git_blob_sha1": "c96f422bdbd4d3d48f1ba787a7ed994e0090d939",
+      "epistemic_status": "PROJECT_DATA_DECLARATIONS_NOT_VALIDATED",
+      "excerpt_or_summary": "Declares version v70.5, logic base 441, 231 gates, agent roles and repeated beta/gamma pathways; values are repository declarations, not independently verified behavior.",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_fractal",
+        "WANGA-LAB/research/LOGIC_FRACTAL_PROGRAM_V1.md"
+      ],
+      "contradictions": [],
+      "next_action": "Compare declared agents and gate ranges to executable code and tests before any integration.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io/blob/main/datasets/embeddings/epistemic_layer/reconciled_v705_logic.json",
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_time_utc": "2026-10-31T05:21:07Z"
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "branch_ref": "main",
+      "source_commit_sha": "9f10f1919596084f7983804a9682a18b1e7960a3",
+      "exact_file_path": "datasets/embeddings/epistemic_layer/temporal_delta/historical_logic_delta.json",
+      "git_blob_sha1": "dfea7718e48fd9c7aae020a5ad46f84480f3f114",
+      "epistemic_status": "GENERATED_REPETITIVE_MAPPING_OBSERVED",
+      "excerpt_or_summary": "The 231 indexed entries repeat five short descriptions in a cycle; repeated records do not establish 231 distinct source-derived logical units.",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/articles.json"
+      ],
+      "contradictions": [
+        "The declared 231-entry count exceeds the five distinct repeated descriptions visible in this generated mapping."
+      ],
+      "next_action": "Retain the duplicate-pattern boundary and locate the primary text/mapping specification before treating entries as distinct.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io/blob/main/datasets/embeddings/epistemic_layer/temporal_delta/historical_logic_delta.json",
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_time_utc": "2026-10-31T05:21:07Z"
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "branch_ref": "main",
+      "source_commit_sha": "9f10f1919596084f7983804a9682a18b1e7960a3",
+      "exact_file_path": "datasets/embeddings/epistemic_layer/temporal_delta/historical_logic_parser.py",
+      "git_blob_sha1": "cd49133c4469ace4f4461449f3985580fdf826c9",
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED",
+      "excerpt_or_summary": "Parser comments say it simulates extraction; it cycles a list of five definitions over indices 1 through 231 using modulo assignment.",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/evidence-provenance",
+        "WANGA-LAB/logic_fractal"
+      ],
+      "contradictions": [
+        "The parser is a cyclic synthetic assignment, not a demonstrated extraction of 231 distinct source spans."
+      ],
+      "next_action": "Do not count its 231 output keys as 231 logic units; require primary-source spans and a non-synthetic extraction test.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io/blob/main/datasets/embeddings/epistemic_layer/temporal_delta/historical_logic_parser.py",
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_time_utc": "2026-10-31T05:21:07Z"
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "branch_ref": "main",
+      "source_commit_sha": "fb7ecae90a26ad4cac786d39b7bcb90fb31b5614",
+      "exact_file_path": ".github/workflows/call-swarms.yml",
+      "git_blob_sha1": "6c2e3aed21a726f24136e8ec3ed5f0a48b96328a",
+      "epistemic_status": "INFRASTRUCTURE_WORKFLOW_SOURCE_OBSERVED_NOT_EXECUTED",
+      "excerpt_or_summary": "Workflow configures AWS credentials through OIDC and invokes an SSM deployment command for an agent API environment; no WANGA logic contract is evidenced by this workflow.",
+      "overlap_candidates": [
+        "WANGA-LAB/agents",
+        "WANGA-LAB/research/ecosystem/agent_registry.json"
+      ],
+      "contradictions": [],
+      "next_action": "Treat as deployment/infrastructure context only; do not reuse credentials or mutate this repository.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/ai-agent-terraform/blob/main/.github/workflows/call-swarms.yml",
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_time_utc": "2026-10-31T05:21:07Z"
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "branch_ref": "main",
+      "source_commit_sha": "fb7ecae90a26ad4cac786d39b7bcb90fb31b5614",
+      "exact_file_path": "environments/swarms-aws-agent-api/dev/us-east-1/components/work_queue/Readme.md",
+      "git_blob_sha1": "a57c904425242588a50e788f062adb3da2d2b904",
+      "epistemic_status": "SOURCE_LOCATED_MINIMAL_CONTENT",
+      "excerpt_or_summary": "The file contains only the label 'work_queue'; it does not specify queue semantics or a reusable contract.",
+      "overlap_candidates": [
+        "WANGA-LAB/Vitruvius work queue"
+      ],
+      "contradictions": [],
+      "next_action": "Do not infer queue behavior from the path name; locate implementation and tests if integration is later required.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/ai-agent-terraform/blob/main/environments/swarms-aws-agent-api/dev/us-east-1/components/work_queue/Readme.md",
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_time_utc": "2026-10-31T05:21:07Z"
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/skills",
+      "branch_ref": "main",
+      "source_commit_sha": "3e20332d62908d30420e223a2f2ba2fca48148ba",
+      "exact_file_path": "research/EMERGING_AGENT_LOGIC_MARKET_EVIDENCE.md",
+      "git_blob_sha1": "097d569c5a285bc24352831d3af76a1872b10abe",
+      "epistemic_status": "RESEARCH_NOT_YET_VERIFIED",
+      "excerpt_or_summary": "Research note distinguishes an installable agent Skill from a Logic Architecture and links external capability-registry/skill-evolution references; those references were not independently fetched in this cycle.",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_wiki/data/articles.json",
+        "WANGA-LAB/logic_wiki/data/agent_registry.json"
+      ],
+      "contradictions": [],
+      "next_action": "Verify each external reference independently before market or uniqueness claims; keep Skill and Logic Architecture categories distinct.",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/skills/blob/main/research/EMERGING_AGENT_LOGIC_MARKET_EVIDENCE.md",
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_time_utc": "2026-10-31T05:21:07Z"
+    },
+    {
+      "repository_full_name": "tribal-archery/MAM-parsed",
+      "branch_ref": "main",
+      "source_commit_sha": "d07ad9704386dc564a1c214852ca2b544cc973bf",
+      "exact_file_path": "SESSION_SOURCE_EXTRACTION_SUMMARY_2026-10-02.md",
+      "git_blob_sha1": "198d7366470aa232c2febf9206e639431114c1ec",
+      "epistemic_status": "PROJECT_RESEARCH_SUMMARY_NOT_PRIMARY_SOURCE",
+      "excerpt_or_summary": "Hebrew summary describes a non-linear extraction schema for cause/action/transition/relation/combination/convergence/purpose/disclosure and explicitly warns not to fill missing primary-source text from memory.",
+      "overlap_candidates": [
+        "WANGA-LAB/first-order-logic",
+        "WANGA-LAB/logic_fractal"
+      ],
+      "contradictions": [],
+      "next_action": "Use as a research-navigation summary only; obtain the primary text and any approved original transcript before formalizing its claims.",
+      "source_uri": "https://github.com/tribal-archery/MAM-parsed/blob/main/SESSION_SOURCE_EXTRACTION_SUMMARY_2026-10-02.md",
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_time_utc": "2026-10-31T05:21:07Z"
+    },
+    {
+      "repository_full_name": "AmbassadorOv/-artificial-y",
+      "branch_ref": "main",
+      "source_commit_sha": "0b6041813f71cc05932d941ab3e38682d0a57544",
+      "exact_file_path": "swarm/fly_brain.py",
+      "git_blob_sha1": "4fe965a8be757f56d34599c2cefdf58e52a9bc8a",
+      "epistemic_status": "IMPLEMENTATION_SOURCE_OBSERVED_NOT_EXECUTED",
+      "excerpt_or_summary": "FlyBrain.decide() contains an ordered BUY/SELL/HALT/WAIT rule set; act() and run_market_tick() use random values, so fixed-state decision determinism does not establish end-to-end deterministic replay.",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_engine_v1",
+        "WANGA-LAB/ark_swarm"
+      ],
+      "contradictions": [
+        "The class docstring calls the engine deterministic while action and market generation paths contain random draws."
+      ],
+      "next_action": "Test the decision function separately from action effects; add seeded replay or revise the deterministic scope claim.",
+      "source_uri": "https://github.com/AmbassadorOv/-artificial-y/blob/main/swarm/fly_brain.py",
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_time_utc": "2026-10-31T05:21:07Z"
+    },
+    {
+      "repository_full_name": "AmbassadorOv/-artificial-y",
+      "branch_ref": "main",
+      "source_commit_sha": "0b6041813f71cc05932d941ab3e38682d0a57544",
+      "exact_file_path": "swarm/fly_brain_config.json",
+      "git_blob_sha1": "69cc8c187d740e056389e2810e227e43a5b4efae",
+      "epistemic_status": "CONFIGURATION_DECLARATION_NOT_LINKED_TO_RUNTIME",
+      "excerpt_or_summary": "Config declares debt, buy, sell and demand thresholds; the inspected FlyBrain implementation does not load this file and uses hard-coded values in decide()/act().",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_engine_v1",
+        "WANGA-LAB/logic_fractal composition contracts"
+      ],
+      "contradictions": [
+        "Declared configuration values are not shown to be consumed by the inspected runtime."
+      ],
+      "next_action": "Locate configuration loading or add a test proving each declared field controls the runtime; otherwise mark the config as documentary only.",
+      "source_uri": "https://github.com/AmbassadorOv/-artificial-y/blob/main/swarm/fly_brain_config.json",
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_time_utc": "2026-10-31T05:21:07Z"
+    },
+    {
+      "repository_full_name": "AmbassadorOv/-artificial-y",
+      "branch_ref": "main",
+      "source_commit_sha": "0b6041813f71cc05932d941ab3e38682d0a57544",
+      "exact_file_path": "tests/test_fly_brain.py",
+      "git_blob_sha1": "3c5ef25c96480c226bf2a6ed47c9f75a92e8faa6",
+      "epistemic_status": "TEST_SOURCE_NOT_TEST_RESULT",
+      "excerpt_or_summary": "Tests cover initialization, perception, branch decisions and action outcomes; no deterministic replay or configuration-loading test is present in the inspected file.",
+      "overlap_candidates": [
+        "WANGA-LAB/tests",
+        "WANGA-LAB/logic_engine_v1"
+      ],
+      "contradictions": [],
+      "next_action": "Do not treat test definitions as executed test results; add explicit replay/configuration tests before making runtime claims.",
+      "source_uri": "https://github.com/AmbassadorOv/-artificial-y/blob/main/tests/test_fly_brain.py",
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_time_utc": "2026-10-31T05:21:07Z"
+    },
+    {
+      "repository_full_name": "AmbassadorOv/-artificial-y",
+      "branch_ref": "main",
+      "source_commit_sha": "0b6041813f71cc05932d941ab3e38682d0a57544",
+      "exact_file_path": "swarm/00_RELEASE_FROM_DRIFT.md",
+      "git_blob_sha1": "8cc4109900d20a193b62fbddfe9bd770ddb788f5",
+      "epistemic_status": "PROJECT_PROPOSAL_NOT_VERIFIED",
+      "excerpt_or_summary": "Release note asserts no-drift trading, agentic-credit backing and instant settlement; the inspected FlyBrain code/tests do not establish these release-level guarantees.",
+      "overlap_candidates": [
+        "WANGA-LAB/evidence-provenance",
+        "WANGA-LAB/logic_engine_v1"
+      ],
+      "contradictions": [],
+      "next_action": "Keep as proposal text; require corresponding Action Guard, settlement implementation and independent tests before any capability claim.",
+      "source_uri": "https://github.com/AmbassadorOv/-artificial-y/blob/main/swarm/00_RELEASE_FROM_DRIFT.md",
+      "permission_scope": "PUBLIC_REPOSITORY_READ",
+      "scan_time_utc": "2026-10-31T05:21:07Z"
+    }
+  ],
+  "duplicate_readme_clusters": [
+    {
+      "blob_sha1": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/MNM",
+        "tribal-archery/Qdprojects"
+      ],
+      "note": "Identical README blob only; repository identity or code equivalence is not inferred."
+    },
+    {
+      "blob_sha1": "8b36e3fec98319bade352adce9b99abe55705188",
+      "repositories": [
+        "AmbassadorOv/World-Party-Federation-Branches-managers",
+        "AmbassadorOv/TTTTproject-un.govt",
+        "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo"
+      ],
+      "note": "Identical README blob only; repository identity or code equivalence is not inferred."
+    }
+  ],
+  "access_gaps": [
+    "README.md returned HTTP 404 for AmbassadorOv/https-AmbassadorOv.io; repository content is not assumed absent.",
+    "README.md returned HTTP 404 for AmbassadorOv/-artificial-y; targeted tree and code files were accessible.",
+    "The scheduled Actions ecosystem scout run 111 had CROSS_REPO_READ_TOKEN unset and returned only WANGA-LAB (HTTP 403). The connected GitHub connector separately exposed the 63-repository snapshot and enabled this ten-repository batch.",
+    "No full private ChatGPT conversation history is exposed; no export was ingested.",
+    "Five private repositories remain omitted from public names/content."
+  ],
+  "source_findings": {
+    "new_public_document_reads": 12,
+    "candidate_logic_units_added": 2,
+    "candidate_boundary_cases_added": 4,
+    "formal_logic_units_added": 0,
+    "claims_added": 0,
+    "semantic_entailments_asserted": 0,
+    "new_compositions": 0,
+    "weights_applied": false
+  },
+  "private_review_aggregate": {
+    "files_reviewed": 4,
+    "candidate_units": 9,
+    "formal_logic_units_added": 0,
+    "publication": "NONE",
+    "raw_content_included": false
+  },
+  "next": "Continue with the ten-repository focused batch listed in next_priority_batch; inspect source code/docs only where directly relevant and preserve repository boundaries."
+}
