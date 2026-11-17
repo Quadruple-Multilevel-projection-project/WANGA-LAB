@@ -214,5 +214,113 @@
     "Canonical": "Timestamp=2026-11-17T20:16:33Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-CREATE-ACTION-LEDGER-20261117-15",
     "Status": "COMMITTED",
     "Evidence": "Created project ACTION_SIGNATURES.json."
+  },
+  {
+    "Action_ID": "ACT-GROUPS-PLUGIN-SEARCH-20261117-16",
+    "Timestamp": "2026-11-17T20:17:33Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "a81efe952be15ca9a4eabd1a9750bc155bed93a0de0accb0228bc9688025947b",
+    "Canonical": "Timestamp=2026-11-17T20:17:33Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GROUPS-PLUGIN-SEARCH-20261117-16",
+    "Status": "SEARCHED_NO_GROUPS_ADMIN_CONNECTOR_FOUND",
+    "Evidence": "Plugin search returned Gmail but no Google Groups administration connector; plugin search results are not exhaustive."
+  },
+  {
+    "Action_ID": "ACT-WIX-SITE-CONTEXT-20261117-16",
+    "Timestamp": "2026-11-17T20:17:33Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "3595413f613206d4f2b1a8db997ddc69823fa78fcd4787faaa63518bf91d0b49",
+    "Canonical": "Timestamp=2026-11-17T20:17:33Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-WIX-SITE-CONTEXT-20261117-16",
+    "Status": "PUBLISHED_READBACK_CONFIRMED",
+    "Evidence": "Wix site context returned Map Link Provenance as Published at the published site URL."
+  },
+  {
+    "Action_ID": "ACT-GH-FINAL-READBACK-20261117-16",
+    "Timestamp": "2026-11-17T20:17:33Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "ac50bbb306d22ed1711c11cbc12d86d6f663b4bbd6dce08a3610d0628fb7a825",
+    "Canonical": "Timestamp=2026-11-17T20:17:33Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-FINAL-READBACK-20261117-16",
+    "Status": "READBACK_CONFIRMED",
+    "Evidence": "GitHub integration manifest and 24-record action ledger fetched successfully."
+  },
+  {
+    "Action_ID": "ACT-AGENTMAIL-ASSOCIATE-01-20261117-17",
+    "Timestamp": "2026-11-17T20:18:08Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "544203ce3d27f66345bb92291e7f1edbfea3deea8df56fd5c464992c677c9493",
+    "Canonical": "Timestamp=2026-11-17T20:18:08Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-AGENTMAIL-ASSOCIATE-01-20261117-17",
+    "Status": "REQUESTED",
+    "Evidence": "Metadata association request dispatched for SY-NeuroKernel Agent 01."
+  },
+  {
+    "Action_ID": "ACT-AGENTMAIL-ASSOCIATE-02-20261117-17",
+    "Timestamp": "2026-11-17T20:18:08Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "ddf40969fd05fbe4b04fce0d79b12834476c349b6cf8b546ce3b9b4cb7f7361c",
+    "Canonical": "Timestamp=2026-11-17T20:18:08Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-AGENTMAIL-ASSOCIATE-02-20261117-17",
+    "Status": "REQUESTED",
+    "Evidence": "Metadata association request dispatched for SY-NeuroKernel Agent 02."
+  },
+  {
+    "Action_ID": "ACT-AGENTMAIL-ASSOCIATE-03-20261117-17",
+    "Timestamp": "2026-11-17T20:18:08Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "968271aad4aa5fa4a64a7efc89914b5329bed63b8509a33a264e18f45a95a0f1",
+    "Canonical": "Timestamp=2026-11-17T20:18:08Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-AGENTMAIL-ASSOCIATE-03-20261117-17",
+    "Status": "REQUESTED",
+    "Evidence": "Metadata association request dispatched for SY-NeuroKernel Agent 03."
+  },
+  {
+    "Action_ID": "ACT-AGENTMAIL-METADATA-SET-01-20261117T201816Z",
+    "Timestamp": "2026-11-17T20:18:16.318Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "a5d8d4e40c19dfc655a74e30ed6f2ed4ffdab1ed6b810289c5afc4ad5806f18c",
+    "Canonical": "Timestamp=2026-11-17T20:18:16.318Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-AGENTMAIL-METADATA-SET-01-20261117T201816Z",
+    "Status": "UPDATED_CONFIRMED",
+    "Evidence": "AgentMail inbox sy-neuro-01@agentmail.to returned project metadata for SY-NeuroKernel Agent 01."
+  },
+  {
+    "Action_ID": "ACT-AGENTMAIL-METADATA-SET-02-20261117T201817Z",
+    "Timestamp": "2026-11-17T20:18:17.791Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "320817460a440bf90bdc25d38bab19bda62057c99fb6f71cf852a1cecf3f80cf",
+    "Canonical": "Timestamp=2026-11-17T20:18:17.791Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-AGENTMAIL-METADATA-SET-02-20261117T201817Z",
+    "Status": "UPDATED_CONFIRMED",
+    "Evidence": "AgentMail inbox sy-neuro-02@agentmail.to returned project metadata for SY-NeuroKernel Agent 02."
+  },
+  {
+    "Action_ID": "ACT-AGENTMAIL-METADATA-SET-03-20261117T201819Z",
+    "Timestamp": "2026-11-17T20:18:19.227Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "01b4a9779e0bc9c7129eac60b7195a73d33cc43d4a35a779d3e4575520a998ee",
+    "Canonical": "Timestamp=2026-11-17T20:18:19.227Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-AGENTMAIL-METADATA-SET-03-20261117T201819Z",
+    "Status": "UPDATED_CONFIRMED",
+    "Evidence": "AgentMail inbox sy-neuro-03@agentmail.to returned project metadata for SY-NeuroKernel Agent 03."
+  },
+  {
+    "Action_ID": "ACT-AGENTMAIL-GITHUB-READBACK-20261117-18",
+    "Timestamp": "2026-11-17T20:18:34Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "79687d164181cb1c48da3fa7cf7701f50696b36589ad4ce5ed1af8682b8c671a",
+    "Canonical": "Timestamp=2026-11-17T20:18:34Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-AGENTMAIL-GITHUB-READBACK-20261117-18",
+    "Status": "READBACK_CONFIRMED",
+    "Evidence": "All three AgentMail inboxes returned the project metadata; GitHub manifest and ledger were read."
+  },
+  {
+    "Action_ID": "ACT-GH-MANIFEST-AGENTMAIL-GMAIL-UPDATE-20261117-19",
+    "Timestamp": "2026-11-17T20:19:21Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "cda49f2d4ed0eec77debb0f016adc1d91535eb64b5521465e8962af46e4156ad",
+    "Canonical": "Timestamp=2026-11-17T20:19:21Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-MANIFEST-AGENTMAIL-GMAIL-UPDATE-20261117-19",
+    "Status": "COMMITTED",
+    "Evidence": "Integration manifest updated with AgentMail metadata association and Gmail label/Google Groups boundary."
+  },
+  {
+    "Action_ID": "ACT-GH-ACTION-LEDGER-UPDATE-20261117-19",
+    "Timestamp": "2026-11-17T20:19:21Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "bda7bd37e525c1857dd36e8312c07e37e4d67a2ad724c33269e1768a63db2ff6",
+    "Canonical": "Timestamp=2026-11-17T20:19:21Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-ACTION-LEDGER-UPDATE-20261117-19",
+    "Status": "COMMITTED",
+    "Evidence": "Action ledger updated with Google Groups search, Wix read-back, AgentMail associations and verification records."
   }
 ]
