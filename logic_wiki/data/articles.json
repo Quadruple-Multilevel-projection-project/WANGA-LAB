@@ -526,6 +526,58 @@
         "model-readiness",
         "logical-diamond"
       ]
+    },
+    {
+      "id": "ntm-one-system-invariant",
+      "title": "NTM One-System Invariant",
+      "category": "WANGA architecture",
+      "kind": "WANGA_ARCHITECTURE_CONTRACT",
+      "status": "PROJECT_CONTRACT_REQUIRES_REVIEW",
+      "definition": "The NTM architecture defines a single system as replaceable model nodes sharing task identity, context binding, directive/state protocol, evidence and provenance, verification contract, drift taxonomy, decision gate, and audit trail.",
+      "scope_note": "This is a project architecture specification, not evidence that all nodes are deployed or that the AGI target is achieved. The source explicitly treats satisfaction of that target as an empirical evaluation question.",
+      "sources": [
+        "SRC-NTM-ARCH-V1"
+      ],
+      "relations": []
+    },
+    {
+      "id": "ntm-task-envelope-contract",
+      "title": "NTM Task Envelope Contract",
+      "category": "WANGA architecture",
+      "kind": "WANGA_ARCHITECTURE_CONTRACT",
+      "status": "SCHEMA_DEFINED_SEMANTICS_PENDING",
+      "definition": "The task envelope schema requires request and task identity, intent, context, input, constraints, evidence requirements, and an expected output schema; nested intent and context objects also have required fields.",
+      "scope_note": "JSON Schema conformance validates required structure only. Field presence does not prove that the intent, evidence, or task content is correct or complete.",
+      "sources": [
+        "SRC-NTM-TASK-ENVELOPE"
+      ],
+      "relations": []
+    },
+    {
+      "id": "ntm-result-envelope-contract",
+      "title": "NTM Result Envelope Contract",
+      "category": "WANGA architecture",
+      "kind": "WANGA_ARCHITECTURE_CONTRACT",
+      "status": "SCHEMA_DEFINED_SEMANTICS_PENDING",
+      "definition": "The result envelope schema requires request/task/machine identity, role, model reference, output, uncertainty, status, latency, input hash, provenance, and evidence references; provenance requires origin and chain ID.",
+      "scope_note": "Schema validation cannot establish output truth, evidence quality, provenance authenticity, or whether a declared status is justified. The status field remains data until independently checked.",
+      "sources": [
+        "SRC-NTM-RESULT-ENVELOPE"
+      ],
+      "relations": []
+    },
+    {
+      "id": "mam-source-derivation-verification-chain",
+      "title": "MAM Source-to-Verification Chain",
+      "category": "Forensic logic",
+      "kind": "WANGA_ARCHITECTURE_CONTRACT",
+      "status": "PROJECT_CONTRACT_REQUIRES_REVIEW",
+      "definition": "The MAM repository topology specifies an addressability chain from book through chapter, verse, token or feature, evidence, derivation, and verification, with derived records retaining provenance to the canonical corpus and source event.",
+      "scope_note": "The topology document states ARCHITECTURE_DEFINED, DATA_NOT_MODIFIED, and REPOSITORY_SPLIT_NOT_EXECUTED. Parsed structure and provenance do not verify an interpretation.",
+      "sources": [
+        "SRC-MAM-TOPOLOGY"
+      ],
+      "relations": []
     }
   ],
   "sources": [
@@ -664,6 +716,38 @@
       "type": "PROJECT_IMPLEMENTATION",
       "status": "IMPLEMENTED_PROTOTYPE_NOT_SEMANTICALLY_VERIFIED",
       "note": "Bounded deterministic candidate ranker and local swarm coordinator; no P2P transport, external LLM or model release."
+    },
+    {
+      "id": "SRC-NTM-ARCH-V1",
+      "title": "Neural Orchestration Architecture V1",
+      "uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+      "type": "PROJECT_REPOSITORY",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "PUBLIC_SOURCE; exact_locator=Purpose; Fundamental definition; One-system invariant; Decision gate; blob_sha=68c171349aedc8f9c24d3a795de7bcde9eb07539. Architecture specification only; the source states that satisfaction of its AGI target remains an empirical evaluation question."
+    },
+    {
+      "id": "SRC-NTM-TASK-ENVELOPE",
+      "title": "Neural Thinking Machine Task Envelope Schema",
+      "uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/schemas/task_envelope.schema.json",
+      "type": "PROJECT_CODE",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "PUBLIC_SOURCE; exact_locator=JSON Schema required/properties/additionalProperties; blob_sha=a0bef3a92fc042b5df9ca65a0dc8e0499ea35b41. Structural schema, not semantic validation."
+    },
+    {
+      "id": "SRC-NTM-RESULT-ENVELOPE",
+      "title": "Neural Thinking Machine Result Envelope Schema",
+      "uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/schemas/result_envelope.schema.json",
+      "type": "PROJECT_CODE",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "PUBLIC_SOURCE; exact_locator=JSON Schema required/properties/status/provenance; blob_sha=06dd1df7a4b480d421e4e7d355a988d4cf560518. Structural schema, not proof of output truth or provenance authenticity."
+    },
+    {
+      "id": "SRC-MAM-TOPOLOGY",
+      "title": "Masorah Repository Topology",
+      "uri": "https://github.com/tribal-archery/MAM-parsed/blob/main/ARCHITECTURE/MASORAH_REPOSITORY_TOPOLOGY.md",
+      "type": "PROJECT_RESEARCH",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "PUBLIC_SOURCE; exact_locator=Source; Proposed topology; Identity; Safety rule; Current status; blob_sha=bdbae64e00cbd13f7d5588a1afe7103c29d60149. Document status says ARCHITECTURE_DEFINED, DATA_NOT_MODIFIED, REPOSITORY_SPLIT_NOT_EXECUTED."
     }
   ]
 }

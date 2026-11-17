@@ -1,0 +1,207 @@
+{
+  "report_version": "wanga-ecosystem-sweep/1.0",
+  "date": "2026-11-17",
+  "scan_time_utc": "2026-11-17T05:13:01Z",
+  "snapshot": {
+    "owner_affiliation": 38,
+    "collaborator_affiliation": 13,
+    "organization_member_affiliation": 25,
+    "unique_repositories": 63,
+    "public_repositories": 58,
+    "private_repositories_redacted": 5,
+    "updated_at_exposed": false
+  },
+  "batch": {
+    "number": 2,
+    "size": 10,
+    "public_repositories_scanned": [
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/Qualia",
+      "AmbassadorOv/O-Ms",
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "tribal-archery/-logicl-neural-order",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/Qdprojects"
+    ],
+    "public_readmes_fetched": 8,
+    "public_readme_404": 0,
+    "private_readmes_fetched_redacted": 2,
+    "private_names_or_content_published": 0,
+    "cumulative_public_readmes_fetched": 17,
+    "cumulative_public_readme_404": 1
+  },
+  "findings": {
+    "ntm": {
+      "repository": "tribal-archery/-logicl-neural-order",
+      "readme_blob_sha": "0ffc15fb869fd479081714d71464b1a77563b92e",
+      "related_files": [
+        {
+          "path": "AGENTS.md",
+          "blob_sha": "ca0531df522da9f03f280cbc2b2633bb4b473e0f",
+          "summary": "Agent contract requires priority/context/intent/route/evidence/compute/verify/self-audit/result; Decision Gate authorizes system-level action."
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+          "blob_sha": "68c171349aedc8f9c24d3a795de7bcde9eb07539",
+          "summary": "Defines one-system invariant, replaceable model nodes, computation allocation, shared result envelope and decision gate; AGI target remains an empirical question."
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/schemas/task_envelope.schema.json",
+          "blob_sha": "a0bef3a92fc042b5df9ca65a0dc8e0499ea35b41",
+          "summary": "JSON Schema required task identity, intent, context, input, constraints, evidence requirements and output schema."
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/schemas/result_envelope.schema.json",
+          "blob_sha": "06dd1df7a4b480d421e4e7d355a988d4cf560518",
+          "summary": "JSON Schema required result identity, status, uncertainty, latency, input hash, provenance and evidence references."
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/tests/test_orchestrator.py",
+          "blob_sha": "e64ceb000557976726a8eafb3140872c2ff53424",
+          "summary": "Tests use EchoAdapter mocks; cover routing, blocked missing adapter, deterministic provenance and unverified evidence requirements."
+        }
+      ],
+      "epistemic_status": "PROJECT_SPECIFICATION_AND_SCHEMA_OBSERVED_NOT_RUNTIME_VERIFIED"
+    },
+    "mam": {
+      "repository": "tribal-archery/MAM-parsed",
+      "readme_blob_sha": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c",
+      "related_files": [
+        {
+          "path": "ARCHITECTURE/MASORAH_REPOSITORY_TOPOLOGY.md",
+          "blob_sha": "bdbae64e00cbd13f7d5588a1afe7103c29d60149",
+          "summary": "Declares canonical corpus topology and book→chapter→verse→token/feature→evidence→derivation→verification; data not modified and repository split not executed."
+        },
+        {
+          "path": "README.md",
+          "blob_sha": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c"
+        }
+      ],
+      "epistemic_status": "PUBLIC_CORPUS_DESCRIPTION_AND_TOPOLOGY_SPECIFICATION"
+    },
+    "multi_agent_orchestrator": {
+      "repository": "AmbassadorOv/multi-agent-orchestator",
+      "readme_blob_sha": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+      "epistemic_status": "README_ONLY_REFERENCE"
+    },
+    "duplicate_readme_blob": {
+      "sha256": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/MNM",
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+        "tribal-archery/Qdprojects"
+      ],
+      "status": "DUPLICATE_FILE_CONTENT_CANDIDATE_NOT_DUPLICATE_REPOSITORY"
+    }
+  },
+  "integration_proposals": [
+    {
+      "id": "REL-NTM-WANGA-ENVELOPE-PROVENANCE",
+      "repositories": [
+        "tribal-archery/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "status": "INTEGRATION_PROPOSAL_NOT_IMPLEMENTED",
+      "relationship_type": "TASK_RESULT_ENVELOPE_TO_SOURCE_PROVENANCE_ALIGNMENT",
+      "evidence_refs": [
+        "SRC-NTM-ARCH-V1",
+        "SRC-NTM-TASK-ENVELOPE",
+        "SRC-NTM-RESULT-ENVELOPE"
+      ],
+      "wanga_targets": [
+        "logic_fractal/fragment_composer.py",
+        "logic_wiki/data/readiness_gate.json"
+      ],
+      "proposal": "Map task_id, input_hash, evidence_refs, provenance.origin/chain_id and UNVERIFIED/BLOCKED/CONFLICT statuses into WANGA source/claim/evidence records through an explicit adapter contract.",
+      "boundaries": [
+        "No code-level integration was written.",
+        "A schema-valid result is not semantically verified.",
+        "Do not conflate NTM, MLN and LNL."
+      ],
+      "semantic_entailment_asserted": false,
+      "next_action": "Design a versioned mapping schema and negative tests before implementation."
+    },
+    {
+      "id": "REL-MAM-WANGA-CANONICAL-SOURCE-INGESTION",
+      "repositories": [
+        "tribal-archery/MAM-parsed",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "status": "INTEGRATION_PROPOSAL_NOT_IMPLEMENTED",
+      "relationship_type": "CANONICAL_CORPUS_SOURCE_INGESTION",
+      "evidence_refs": [
+        "SRC-MAM-TOPOLOGY"
+      ],
+      "wanga_targets": [
+        "scripts/ingest_conversation_export.py",
+        "logic_fractal/fragment_composer.py"
+      ],
+      "proposal": "Treat the parsed corpus as a version-pinned source layer addressable by book/chapter/verse/token, with source-event provenance and reversible mapping.",
+      "boundaries": [
+        "MAM plus format is documented as unstable.",
+        "No data was copied or modified.",
+        "Parsed structure does not verify interpretation."
+      ],
+      "semantic_entailment_asserted": false,
+      "next_action": "Pin corpus revision and inspect license/schema before a read-only adapter prototype."
+    },
+    {
+      "id": "REL-MULTI-AGENT-ORCHESTRATOR-REFERENCE",
+      "repositories": [
+        "AmbassadorOv/multi-agent-orchestator",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "status": "REFERENCE_ONLY_NO_INTEGRATION",
+      "relationship_type": "SPECIALIST_AGENT_ROUTING_COMPARISON",
+      "evidence_refs": [
+        "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md"
+      ],
+      "proposal": "Compare its classifier/retriever/reasoner split and mock evaluation approach with WANGA's bounded agent roles.",
+      "boundaries": [
+        "README only; no code audit or tests run.",
+        "README describes API-key-backed providers and optional external retrieval; no external API calls authorized.",
+        "No code copied."
+      ],
+      "semantic_entailment_asserted": false,
+      "next_action": "No action until a concrete, licensed component is identified."
+    }
+  ],
+  "cursor": {
+    "next_index": 20,
+    "remaining": 43,
+    "next_batch": [
+      "AmbassadorOv/-artificial-y",
+      "AmbassadorOv/AG-triple-X-",
+      "AmbassadorOv/AmbassadorOv",
+      "PRIVATE_REPO_SLOT_003",
+      "AmbassadorOv/TTTT-0.0.0.0.1",
+      "AmbassadorOv/TTTTproject-un.govt",
+      "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "AmbassadorOv/awesome-chatgpt-prompts",
+      "AmbassadorOv/branches-",
+      "AmbassadorOv/chatgpt-scientific-publications-extension"
+    ]
+  },
+  "access_gaps": [
+    "Five private repository identities redacted.",
+    "updated_at timestamps not exposed.",
+    "No ChatGPT export or transcript available.",
+    "No private repository contents published."
+  ],
+  "writes": {
+    "collaborator_repositories": 0,
+    "third_party_repositories": 0,
+    "wanga_lab_branch_updates": 1,
+    "main_branch_writes": 0
+  },
+  "validation": {
+    "catalog_source_refs_resolvable": true,
+    "duplicate_ids": 0,
+    "dangling_source_refs": 0,
+    "dangling_relation_refs": 0,
+    "repository_integrity_ci": "PENDING"
+  }
+}

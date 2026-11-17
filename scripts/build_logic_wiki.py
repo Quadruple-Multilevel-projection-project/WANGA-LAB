@@ -52,6 +52,22 @@ def validate(root):
     source_classes = sorted(set(s.get("type", "UNKNOWN") for s in sources))
     metrics_path = root / "logic_wiki/data/research_metrics.json"
     metrics = load_json(metrics_path) if metrics_path.exists() else {}
+    contradiction_path = root / "logic_fractal/data/core_contradictions.json"
+    contradiction_inventory = load_json(contradiction_path) if contradiction_path.exists() else None
+    contradiction_inventory_status = "NOT_MEASURED_NO_INVENTORY"
+    critical_core_contradictions = None
+    if isinstance(contradiction_inventory, dict):
+        declared_status = contradiction_inventory.get("status")
+        evidence_refs = contradiction_inventory.get("evidence_refs")
+        if declared_status == "MEASURED" and contradiction_inventory.get("reviewer") and contradiction_inventory.get("reviewed_at") and isinstance(evidence_refs, list) and evidence_refs:
+            items = contradiction_inventory.get("items", [])
+            if isinstance(items, list):
+                critical_core_contradictions = sum(1 for item in items if item.get("critical") is True and item.get("resolved") is not True)
+                contradiction_inventory_status = "MEASURED"
+            else:
+                contradiction_inventory_status = "INVALID_INVENTORY"
+        else:
+            contradiction_inventory_status = declared_status or "NOT_MEASURED"
     observed = {
         "source_records": len(sources) + int(metrics.get("additional_source_records", 0)),
         "source_classes": len(set(source_classes) | set(metrics.get("additional_source_classes", []))),
@@ -63,7 +79,8 @@ def validate(root):
         "independent_review_cycles": int(metrics.get("independent_review_cycles", 0)),
         "unresolved_dangling_source_refs": sum(1 for e in errors if "dangling source" in e),
         "unresolved_duplicate_stable_ids": sum(1 for e in errors if "Duplicate or empty" in e),
-        "critical_core_contradictions": int(metrics.get("critical_core_contradictions", 0)),
+        "critical_core_contradictions": critical_core_contradictions,
+        "contradiction_inventory_status": contradiction_inventory_status,
         "deterministic_build": bool(metrics.get("deterministic_build", False)),
         "holdout_split": bool(metrics.get("holdout_split", False)),
         "mirror_review": bool(metrics.get("mirror_review", False)),
@@ -80,7 +97,7 @@ def validate(root):
         "independent_review_cycles": observed["independent_review_cycles"] >= required["min_independent_review_cycles"],
         "unresolved_dangling_source_refs": observed["unresolved_dangling_source_refs"] <= required["unresolved_dangling_source_refs"],
         "unresolved_duplicate_stable_ids": observed["unresolved_duplicate_stable_ids"] <= required["unresolved_duplicate_stable_ids"],
-        "critical_core_contradictions": observed["critical_core_contradictions"] <= required["critical_core_contradictions"],
+        "critical_core_contradictions": observed["critical_core_contradictions"] is not None and observed["critical_core_contradictions"] <= required["critical_core_contradictions"],
         "deterministic_build_required": (not required["deterministic_build_required"]) or observed["deterministic_build"],
         "holdout_split_required": (not required["holdout_split_required"]) or observed["holdout_split"],
         "mirror_review_required": (not required["mirror_review_required"]) or observed["mirror_review"],

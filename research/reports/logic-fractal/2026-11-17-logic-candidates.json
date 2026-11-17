@@ -1,0 +1,262 @@
+{
+  "schema_version": "wanga-source-grounded-logic-candidates/1.0",
+  "created_at_utc": "2026-11-17T05:13:01Z",
+  "epistemic_status": "CANDIDATE_FORMALIZATIONS_NOT_REVIEWED",
+  "source_records": [
+    {
+      "id": "SRC-NTM-ARCH-V1",
+      "uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+      "type": "PROJECT_REPOSITORY",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "PUBLIC_SOURCE; exact_locator=Purpose; Fundamental definition; One-system invariant; Decision gate; blob_sha=68c171349aedc8f9c24d3a795de7bcde9eb07539. Architecture specification only; the source states that satisfaction of its AGI target remains an empirical evaluation question."
+    },
+    {
+      "id": "SRC-NTM-TASK-ENVELOPE",
+      "uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/schemas/task_envelope.schema.json",
+      "type": "PROJECT_CODE",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "PUBLIC_SOURCE; exact_locator=JSON Schema required/properties/additionalProperties; blob_sha=a0bef3a92fc042b5df9ca65a0dc8e0499ea35b41. Structural schema, not semantic validation."
+    },
+    {
+      "id": "SRC-NTM-RESULT-ENVELOPE",
+      "uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/schemas/result_envelope.schema.json",
+      "type": "PROJECT_CODE",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "PUBLIC_SOURCE; exact_locator=JSON Schema required/properties/status/provenance; blob_sha=06dd1df7a4b480d421e4e7d355a988d4cf560518. Structural schema, not proof of output truth or provenance authenticity."
+    },
+    {
+      "id": "SRC-MAM-TOPOLOGY",
+      "uri": "https://github.com/tribal-archery/MAM-parsed/blob/main/ARCHITECTURE/MASORAH_REPOSITORY_TOPOLOGY.md",
+      "type": "PROJECT_RESEARCH",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "PUBLIC_SOURCE; exact_locator=Source; Proposed topology; Identity; Safety rule; Current status; blob_sha=bdbae64e00cbd13f7d5588a1afe7103c29d60149. Document status says ARCHITECTURE_DEFINED, DATA_NOT_MODIFIED, REPOSITORY_SPLIT_NOT_EXECUTED."
+    }
+  ],
+  "candidates": [
+    {
+      "candidate_id": "LC-NTM-ONE-SYSTEM-INVARIANT-001",
+      "source_id": "SRC-NTM-ARCH-V1",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+      "source_blob_sha": "68c171349aedc8f9c24d3a795de7bcde9eb07539",
+      "exact_locator": "NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md#One-system invariant",
+      "literal_excerpt": "The models themselves remain replaceable.",
+      "primitives": [
+        "Node",
+        "System",
+        "TaskIdentity",
+        "ContextBindingSchema",
+        "DirectiveStateProtocol",
+        "EvidenceProvenanceModel",
+        "VerificationContract",
+        "DriftTaxonomy",
+        "DecisionGate",
+        "AuditTrail"
+      ],
+      "relations": [
+        "ParticipatesIn(node,system)",
+        "Shares(node,protocol_component)"
+      ],
+      "operators": [
+        "forall",
+        "and",
+        "implies"
+      ],
+      "constraints": [
+        "All participating nodes share the listed protocol components.",
+        "Model/provider identity is replaceable.",
+        "Decision Gate authorizes system-level action."
+      ],
+      "boundaries": [
+        "Architecture specification only; no proof of deployment.",
+        "The source treats AGI-target satisfaction as an empirical question."
+      ],
+      "candidate_fol": "∀n ((Node(n) ∧ ParticipatesIn(n, System)) → (Shares(n, TaskIdentity) ∧ Shares(n, ContextBindingSchema) ∧ Shares(n, DirectiveStateProtocol) ∧ Shares(n, EvidenceProvenanceModel) ∧ Shares(n, VerificationContract) ∧ Shares(n, DriftTaxonomy) ∧ Shares(n, DecisionGate) ∧ Shares(n, AuditTrail)))",
+      "formalization_status": "CANDIDATE_NOT_REVIEWED",
+      "closure_check": "VARIABLES_BOUND_BY_INSPECTION_NOT_MACHINE_CHECKED",
+      "sol_review": "NOT_RUN",
+      "contradiction_check": "NOT_RUN",
+      "composition_status": "NOT_COMPOSED_NO_CROSS_SOURCE_ENTAILMENT",
+      "weights_status": "NOT_ASSIGNED",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "counter_reading": "A shared protocol is a normative architecture condition; it does not prove that live nodes satisfy it or that the system has general intelligence.",
+      "tests": [],
+      "counterexamples": []
+    },
+    {
+      "candidate_id": "LC-NTM-TASK-ENVELOPE-001",
+      "source_id": "SRC-NTM-TASK-ENVELOPE",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/schemas/task_envelope.schema.json",
+      "source_blob_sha": "a0bef3a92fc042b5df9ca65a0dc8e0499ea35b41",
+      "exact_locator": "task_envelope.schema.json#required and properties",
+      "literal_excerpt": "required: request_id, task_id, intent, context, input, constraints, evidence_requirements, expected_output_schema",
+      "primitives": [
+        "TaskEnvelope",
+        "request_id",
+        "task_id",
+        "intent",
+        "context",
+        "input",
+        "constraints",
+        "evidence_requirements",
+        "expected_output_schema"
+      ],
+      "relations": [
+        "Has(task,field)",
+        "HasField(task,intent,action)",
+        "HasField(task,intent,object)",
+        "HasField(task,context,project)",
+        "HasField(task,context,component)",
+        "HasField(task,context,version)",
+        "HasField(task,context,process)",
+        "HasField(task,context,source)"
+      ],
+      "operators": [
+        "forall",
+        "and",
+        "implies"
+      ],
+      "constraints": [
+        "Required top-level fields are explicit.",
+        "Intent requires action and object.",
+        "Context requires project, component, version, process and source.",
+        "additionalProperties=false."
+      ],
+      "boundaries": [
+        "Schema conformance does not validate field meaning or evidence truth.",
+        "No semantic test case was executed."
+      ],
+      "candidate_fol": "∀t (TaskEnvelope(t) → (Has(t, request_id) ∧ Has(t, task_id) ∧ Has(t, intent) ∧ Has(t, context) ∧ Has(t, input) ∧ Has(t, constraints) ∧ Has(t, evidence_requirements) ∧ Has(t, expected_output_schema)))",
+      "formalization_status": "CANDIDATE_NOT_REVIEWED",
+      "closure_check": "VARIABLES_BOUND_BY_INSPECTION_NOT_MACHINE_CHECKED",
+      "sol_review": "NOT_RUN",
+      "contradiction_check": "NOT_RUN",
+      "composition_status": "NOT_COMPOSED",
+      "weights_status": "NOT_ASSIGNED",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "counter_reading": "A valid envelope can still contain incorrect intent, empty evidence, or an unusable output schema.",
+      "tests": [],
+      "counterexamples": []
+    },
+    {
+      "candidate_id": "LC-NTM-RESULT-ENVELOPE-001",
+      "source_id": "SRC-NTM-RESULT-ENVELOPE",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/schemas/result_envelope.schema.json",
+      "source_blob_sha": "06dd1df7a4b480d421e4e7d355a988d4cf560518",
+      "exact_locator": "result_envelope.schema.json#required, status enum and provenance",
+      "literal_excerpt": "status enum: OK, ERROR, CONFLICT, UNVERIFIED, BLOCKED",
+      "primitives": [
+        "ResultEnvelope",
+        "request_id",
+        "task_id",
+        "machine_id",
+        "role",
+        "model_ref",
+        "output",
+        "uncertainty",
+        "status",
+        "latency_ms",
+        "input_hash",
+        "provenance",
+        "evidence_refs"
+      ],
+      "relations": [
+        "Has(result,field)",
+        "HasField(result,provenance,origin)",
+        "HasField(result,provenance,chain_id)",
+        "StatusIn(result,allowed_status)"
+      ],
+      "operators": [
+        "forall",
+        "and",
+        "implies",
+        "set_membership"
+      ],
+      "constraints": [
+        "Required result fields are explicit.",
+        "uncertainty is bounded from 0 to 1.",
+        "latency_ms is non-negative.",
+        "status belongs to the declared enum.",
+        "provenance requires origin and chain_id."
+      ],
+      "boundaries": [
+        "Schema conformance cannot establish output truth or evidence authenticity.",
+        "A declared UNVERIFIED or OK status is not independent verification."
+      ],
+      "candidate_fol": "∀r (ResultEnvelope(r) → (Has(r, request_id) ∧ Has(r, task_id) ∧ Has(r, machine_id) ∧ Has(r, role) ∧ Has(r, model_ref) ∧ Has(r, output) ∧ Has(r, uncertainty) ∧ Has(r, status) ∧ Has(r, latency_ms) ∧ Has(r, input_hash) ∧ Has(r, provenance) ∧ Has(r, evidence_refs)))",
+      "formalization_status": "CANDIDATE_NOT_REVIEWED",
+      "closure_check": "VARIABLES_BOUND_BY_INSPECTION_NOT_MACHINE_CHECKED",
+      "sol_review": "NOT_RUN",
+      "contradiction_check": "NOT_RUN",
+      "composition_status": "NOT_COMPOSED",
+      "weights_status": "NOT_ASSIGNED",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "counter_reading": "The schema permits a caller to populate evidence_refs and provenance fields without proving their authenticity or the output's correctness.",
+      "tests": [],
+      "counterexamples": []
+    },
+    {
+      "candidate_id": "LC-MAM-SOURCE-DERIVATION-CHAIN-001",
+      "source_id": "SRC-MAM-TOPOLOGY",
+      "source_uri": "https://github.com/tribal-archery/MAM-parsed/blob/main/ARCHITECTURE/MASORAH_REPOSITORY_TOPOLOGY.md",
+      "source_blob_sha": "bdbae64e00cbd13f7d5588a1afe7103c29d60149",
+      "exact_locator": "MASORAH_REPOSITORY_TOPOLOGY.md#Identity and #Safety rule",
+      "literal_excerpt": "No extracted interpretation is treated as verified merely because an agent generated it.",
+      "primitives": [
+        "CanonicalCorpus",
+        "Book",
+        "Chapter",
+        "Verse",
+        "TokenOrFeature",
+        "Evidence",
+        "Derivation",
+        "Verification",
+        "SourceEvent"
+      ],
+      "relations": [
+        "AddressableBy(record,path)",
+        "DerivedFrom(record,canonical_corpus)",
+        "PreservesProvenance(record,source_event)"
+      ],
+      "operators": [
+        "ordered_path"
+      ],
+      "constraints": [
+        "One canonical corpus remains source of truth.",
+        "Derived records retain provenance to canonical corpus and source event.",
+        "No interpretation is verified by generation alone."
+      ],
+      "boundaries": [
+        "Topology document says DATA_NOT_MODIFIED and REPOSITORY_SPLIT_NOT_EXECUTED.",
+        "MAM plus format is documented as unstable; version pinning is required.",
+        "Addressability is not semantic correctness."
+      ],
+      "ordered_path": [
+        "book",
+        "chapter",
+        "verse",
+        "token_or_feature",
+        "evidence",
+        "derivation",
+        "verification"
+      ],
+      "candidate_fol": "∀d (DerivedRecord(d) → (CanonicalCorpusSource(d) ∧ HasSourceEvent(d) ∧ PreservesProvenance(d)))",
+      "formalization_status": "CANDIDATE_NOT_REVIEWED",
+      "closure_check": "VARIABLES_BOUND_BY_INSPECTION_NOT_MACHINE_CHECKED",
+      "sol_review": "NOT_RUN",
+      "contradiction_check": "NOT_RUN",
+      "composition_status": "NOT_COMPOSED",
+      "weights_status": "NOT_ASSIGNED",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "counter_reading": "A deterministic address path and preserved provenance support traceability, but neither establishes the correctness of a derived interpretation.",
+      "tests": [],
+      "counterexamples": []
+    }
+  ],
+  "global_boundaries": [
+    "No weights assigned.",
+    "No semantic entailment asserted.",
+    "No composition performed across source families.",
+    "FOL candidates are not machine-checked or independently reviewed.",
+    "No source-grounded counterexamples or semantic benchmark cases added."
+  ]
+}

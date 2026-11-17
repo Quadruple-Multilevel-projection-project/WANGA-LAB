@@ -1,6 +1,6 @@
 {
   "schema_version": "wanga-ecosystem-project-findings/1.0",
-  "snapshot_time_utc": "2026-11-16T05:35:39Z",
+  "snapshot_time_utc": "2026-11-17T05:13:01Z",
   "repository_batch": [
     {
       "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
@@ -181,6 +181,206 @@
       "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
       "summary": "README excerpt is an example Python article generator with mixed conceptual themes; no production integration inferred.",
       "next_action": "No write proposed; continue bounded documentation scan."
+    },
+    {
+      "repository_full_name": "AmbassadorOv/multi-agent-orchestator",
+      "branch": "main",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+      "source_uri": "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README describes a three-role orchestrator (classification, retrieval, reasoning), optional local LanceDB retrieval, external retrieval by default, HotPotQA/GSM8K datasets, and a tests.py workflow. No runtime test was run; no WANGA integration is asserted.",
+      "next_action": "Reference-only comparison; inspect code and licensing before any reuse.",
+      "scan_batch": 2,
+      "scan_time_utc": "2026-11-17T05:13:01Z",
+      "related_files": []
+    },
+    {
+      "repository_full_name": "AmbassadorOv/Qualia",
+      "branch": "main",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "source_uri": "https://github.com/AmbassadorOv/Qualia/blob/main/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README contains a title and an external blog URL only; no technical architecture inferred.",
+      "next_action": "No integration proposal until source documentation is available.",
+      "scan_batch": 2,
+      "scan_time_utc": "2026-11-17T05:13:01Z",
+      "related_files": []
+    },
+    {
+      "repository_full_name": "AmbassadorOv/O-Ms",
+      "branch": "main",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "5477f49658507c3de65a774eb54976d22a3e0c52",
+      "source_uri": "https://github.com/AmbassadorOv/O-Ms/blob/main/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README contains only the repository title; no technical capability inferred.",
+      "next_action": "No integration proposal until source documentation is available.",
+      "scan_batch": 2,
+      "scan_time_utc": "2026-11-17T05:13:01Z",
+      "related_files": []
+    },
+    {
+      "repository_full_name": "AmbassadorOv/Nanomathematics",
+      "branch": "master",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/AmbassadorOv/Nanomathematics/blob/master/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README title is Nanomathematics. Blob is byte-identical to four other distinct repository READMEs; no repository identity or code equivalence inferred.",
+      "next_action": "Retain as a file-content duplicate candidate only.",
+      "scan_batch": 2,
+      "scan_time_utc": "2026-11-17T05:13:01Z",
+      "related_files": []
+    },
+    {
+      "repository_full_name": "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "branch": "master",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/AmbassadorOv/ROBOTICS_TRIPARTITA_Logos/blob/master/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README title/content blob matches the Nanomathematics cluster; repository identity remains distinct and no code equivalence inferred.",
+      "next_action": "Retain as a file-content duplicate candidate only.",
+      "scan_batch": 2,
+      "scan_time_utc": "2026-11-17T05:13:01Z",
+      "related_files": []
+    },
+    {
+      "repository_full_name": "tribal-archery/-logicl-neural-order",
+      "branch": "master",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "0ffc15fb869fd479081714d71464b1a77563b92e",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README describes a provider-neutral NTM orchestration layer with 28 reasoning modes, task/result envelopes, machine registry, verification gate, audit and provenance. M100+ is a scaling target, not 100 live connections.",
+      "next_action": "Review the envelope/provenance alignment proposal in WANGA-LAB; no external write.",
+      "scan_batch": 2,
+      "scan_time_utc": "2026-11-17T05:13:01Z",
+      "related_files": [
+        {
+          "path": "AGENTS.md",
+          "blob_sha": "ca0531df522da9f03f280cbc2b2633bb4b473e0f",
+          "summary": "Agent contract requires priority/context/intent/route/evidence/compute/verify/self-audit/result; Decision Gate authorizes system-level action."
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+          "blob_sha": "68c171349aedc8f9c24d3a795de7bcde9eb07539",
+          "summary": "Defines one-system invariant, replaceable model nodes, computation allocation, shared result envelope and decision gate; AGI target remains an empirical question."
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/schemas/task_envelope.schema.json",
+          "blob_sha": "a0bef3a92fc042b5df9ca65a0dc8e0499ea35b41",
+          "summary": "JSON Schema required task identity, intent, context, input, constraints, evidence requirements and output schema."
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/schemas/result_envelope.schema.json",
+          "blob_sha": "06dd1df7a4b480d421e4e7d355a988d4cf560518",
+          "summary": "JSON Schema required result identity, status, uncertainty, latency, input hash, provenance and evidence references."
+        },
+        {
+          "path": "NEURAL_ORCHESTRATION/tests/test_orchestrator.py",
+          "blob_sha": "e64ceb000557976726a8eafb3140872c2ff53424",
+          "summary": "Tests use EchoAdapter mocks; cover routing, blocked missing adapter, deterministic provenance and unverified evidence requirements."
+        }
+      ]
+    },
+    {
+      "repository_full_name": "tribal-archery/MAM-parsed",
+      "branch": "main",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "fd3cb6f1ff1ec8a77b8d1226e4e7b314ef38105c",
+      "source_uri": "https://github.com/tribal-archery/MAM-parsed/blob/main/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README describes a parsed Miqra/Masorah corpus in plain and plus JSON formats for 24 books, derived from a Google Sheet; plus format adds/removes features and the format is explicitly not stable.",
+      "next_action": "Potential canonical source-ingestion test corpus after version pinning and exact source/hash capture.",
+      "scan_batch": 2,
+      "scan_time_utc": "2026-11-17T05:13:01Z",
+      "related_files": [
+        {
+          "path": "ARCHITECTURE/MASORAH_REPOSITORY_TOPOLOGY.md",
+          "blob_sha": "bdbae64e00cbd13f7d5588a1afe7103c29d60149",
+          "summary": "Declares canonical corpus topology and book→chapter→verse→token/feature→evidence→derivation→verification; data not modified and repository split not executed."
+        }
+      ]
+    },
+    {
+      "repository_full_name": "tribal-archery/Qdprojects",
+      "branch": "master",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/tribal-archery/Qdprojects/blob/master/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README title/content blob matches the Nanomathematics cluster; repository identity remains distinct.",
+      "next_action": "Retain as a file-content duplicate candidate only.",
+      "scan_batch": 2,
+      "scan_time_utc": "2026-11-17T05:13:01Z",
+      "related_files": []
     }
   ],
   "duplicate_candidates": [
@@ -188,17 +388,20 @@
       "content_hash": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
       "repositories": [
         "Quadruple-Multilevel-projection-project/-logicl-neural-order",
-        "Quadruple-Multilevel-projection-project/MNM"
+        "Quadruple-Multilevel-projection-project/MNM",
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+        "tribal-archery/Qdprojects"
       ],
-      "evidence": "Identical GitHub README blob SHA and title Nanomathematics.",
+      "evidence": "Identical GitHub README blob SHA and title Nanomathematics across five distinct repository identifiers.",
       "status": "DUPLICATE_FILE_CONTENT_CANDIDATE_NOT_DUPLICATE_REPOSITORY"
     }
   ],
   "wanga_lab": {
     "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
     "branch": "main",
-    "commit_sha": "3f62e820e566c778871065a633b459e9e2bfdcba",
-    "commit_date_utc": "2026-11-16T05:29:40Z",
+    "commit_sha": "deafd43e1b9da389f29584edb6026c5b0bc5b2e4",
+    "commit_date_utc": "2026-11-17T00:23:58Z",
     "core_files": [
       {
         "path": "README.md",
@@ -310,82 +513,99 @@
       "logic_fractal/data/core_contradictions.json",
       "logic_fractal/data/holdout_manifest.json"
     ],
-    "note": "No source-backed claims or Logic Wiki articles were added in this cycle; the catalog was audited only."
-  },
-  "limbo": {
-    "pr": {
-      "number": 122,
-      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/122",
-      "state": "open",
-      "merged": false,
-      "mergeable": true,
-      "branch": "deploy/limbo-cartography-core-v1",
-      "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
-      "updated_at": "2026-11-07T06:12:39Z",
-      "changed_files": 100,
-      "additions": 7875,
-      "deletions": 0
-    },
-    "workflow_runs": [
+    "note": "No source-backed claims or Logic Wiki articles were added in this cycle; the catalog was audited only.",
+    "current_main_snapshot": "Live GitHub default branch read during cycle 9.",
+    "current_core_files": [
       {
-        "id": 42345983634,
-        "name": "Repository Integrity",
-        "status": "completed",
-        "conclusion": "action_required"
+        "path": "logic_wiki/data/articles.json",
+        "blob_sha": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed"
       },
       {
-        "id": 42345983633,
-        "name": "CodeQL Advanced",
-        "status": "completed",
-        "conclusion": "action_required"
+        "path": "logic_wiki/data/readiness_gate.json",
+        "blob_sha": "3e782e63ab7ac50e6e7152e938a6d8af169800e4"
       },
       {
-        "id": 42345983702,
-        "name": "WANGA-LAB Limbo Cartography Core",
-        "status": "completed",
-        "conclusion": "action_required"
+        "path": "logic_fractal/data/composition_rules.json",
+        "blob_sha": "3d8bc142785d7d401b705736fe0f384d33d996f3"
+      },
+      {
+        "path": "logic_fractal/fragment_composer.py",
+        "blob_sha": "e0823383f8b768f1cb324ea07883c4d9798aa136"
+      },
+      {
+        "path": "scripts/build_first_fractal_model.py",
+        "blob_sha": "f3416947a435b1bde0ddd3dc691503d130c88ef4"
+      },
+      {
+        "path": "scripts/build_logic_wiki.py",
+        "blob_sha": "a014aa4d192ceab78a5c35ee289d6a9d445d0873"
       }
     ],
-    "matrix": {
-      "blob_sha": "86593dd31e5c20bf47c81d09d527967cf0a22476",
-      "version": "1.3.0",
-      "last_updated": "2026-10-19",
-      "incident_records": 10,
-      "history_events": 2,
-      "system_state": "RECURRENCE_PATTERN_OBSERVED_CURRENT_SYSTEM_STATE_UNASSESSED"
+    "latest_regional_observation_batch": {
+      "files": 8,
+      "timestamp_utc": "2026-11-17T00:23Z",
+      "status": "NOT_CONFIGURED",
+      "model_field_empty": true,
+      "interpretation": "No model outputs or crash evidence; not a zero-drift observation."
+    }
+  },
+  "limbo": {
+    "status": "BLOCKED_NO_NEW_INPUTS_AND_STALE_BRANCHES",
+    "source_pr122": {
+      "number": 122,
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/122",
+      "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+      "branch": "deploy/limbo-cartography-core-v1",
+      "compare_to_current_main": {
+        "status": "DIVERGED",
+        "ahead_by": 63,
+        "behind_by": 95
+      },
+      "workflow_runs": [
+        42345983634,
+        42345983633,
+        42345983702
+      ],
+      "conclusion": "ACTION_REQUIRED",
+      "job_details_count": 0
     },
-    "cumulative_map": {
-      "blob_sha": "3617504c68262f71366a244563fc06b1be270da2",
-      "version": "1.0.0",
+    "refresh_pr138": {
+      "number": 138,
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/138",
+      "head_sha": "624ede1d01441823b7972a75599b6feea4c51d13",
+      "branch": "fix/limbo-cartography-refresh-2026-11-04",
+      "compare_to_current_main": {
+        "status": "DIVERGED",
+        "ahead_by": 45,
+        "behind_by": 86
+      },
+      "workflow_runs": [
+        42576418766,
+        42576418805,
+        42576418735
+      ],
+      "conclusion": "SUCCESS_ON_2026-11-04_BASE_NOT_FRESH_ON_CURRENT_MAIN"
+    },
+    "map": {
+      "version": "1.3.0",
+      "incidents": 10,
+      "history_events": 2,
       "nodes": 14,
       "edges": 19,
-      "history_retention": "APPEND_ONLY_NO_AUTOMATIC_PRUNING",
-      "recurring_unresolved_clusters": 1,
-      "latest_registered_time_utc": "2026-10-19T19:41:44Z"
+      "latest_incident_utc": "2026-10-19T19:40:40Z",
+      "latest_execution_utc": "2026-11-07T06:12:35Z",
+      "unresolved_queue_recurrence_incidents": 7,
+      "incidents_without_latest_passing_retest": 9,
+      "incidents_with_recorded_pass_retest": 1
     },
     "tuning_candidate": {
       "id": "TUNE-9c166900cc4ad5dd",
-      "status": "CANDIDATE_REPLAY_REQUIRED",
-      "previous_retest": "PASS",
-      "current_replay": "NOT_RUN",
-      "source_blob_sha": "3c18338fba440158a2feb6ecc84c08258118f282"
+      "replay_status": "NOT_RUN",
+      "linked_retest_result": "PASS",
+      "semantic_status": "NOT_YET_VERIFIED"
     },
-    "unresolved_bundle": {
-      "id": "VITRUVIUS-QUEUE-CONTRACT-RECURRENCE",
-      "status": "DRAFT_UNVERIFIED",
-      "recurrence_count": 7,
-      "root_cause": "NOT_YET_ESTABLISHED",
-      "source_blob_sha": "2133344b33cbf5640e03421f4b4977d080182e7a"
-    },
-    "latest_execution": {
-      "timestamp_utc": "2026-11-07T06:12:35Z",
-      "status": "EXECUTION_RECORD_ONLY",
-      "epistemic_attempt": false,
-      "drift_detected": null,
-      "keystone_verified": false,
-      "blob_sha": "72b24f49fa34205a93fe1ed3623412ad66df7e83"
-    },
-    "conclusion": "The map is populated and append-only, but the last registered incident data is from 2026-10-19 and the latest execution record is record-only. Current system state and tuning replay are not verified."
+    "input_status": "NO_INPUTS",
+    "note": "No current regional observation was accepted as a crash record; NOT_CONFIGURED observations are not failures or proof of stability."
   },
   "private_library_scan": {
     "scope": "PRIVATE_LIBRARY_SEARCH_ONLY",
@@ -439,5 +659,377 @@
     "manifest_drift": true,
     "write_performed": false,
     "reason": "The current report is being placed in a draft GitHub PR; no Wix deployment was made before review/merge."
-  }
+  },
+  "batch_summaries": [
+    {
+      "batch_number": 2,
+      "total_repositories_scanned": 10,
+      "public_readme_fetch_success": 8,
+      "public_readme_not_found": 0,
+      "private_readme_fetches_redacted": 2,
+      "private_names_published": false,
+      "repositories_scanned_public": [
+        "AmbassadorOv/multi-agent-orchestator",
+        "AmbassadorOv/Qualia",
+        "AmbassadorOv/O-Ms",
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+        "tribal-archery/-logicl-neural-order",
+        "tribal-archery/MAM-parsed",
+        "tribal-archery/Qdprojects"
+      ],
+      "private_repository_slots_scanned": [
+        "PRIVATE_REPO_SLOT_001",
+        "PRIVATE_REPO_SLOT_002"
+      ],
+      "remaining_repositories": 43,
+      "next_cursor_index": 20,
+      "next_batch": [
+        "AmbassadorOv/-artificial-y",
+        "AmbassadorOv/AG-triple-X-",
+        "AmbassadorOv/AmbassadorOv",
+        "PRIVATE_REPO_SLOT_003",
+        "AmbassadorOv/TTTT-0.0.0.0.1",
+        "AmbassadorOv/TTTTproject-un.govt",
+        "AmbassadorOv/World-Party-Federation-Branches-managers",
+        "AmbassadorOv/awesome-chatgpt-prompts",
+        "AmbassadorOv/branches-",
+        "AmbassadorOv/chatgpt-scientific-publications-extension"
+      ]
+    }
+  ],
+  "private_repository_scans_redacted": {
+    "total_private_repositories_visible": 5,
+    "scanned_this_batch": 2,
+    "readme_fetches_redacted": 2,
+    "private_names_or_content_published": 0
+  },
+  "logic_candidates": [
+    {
+      "candidate_id": "LC-NTM-ONE-SYSTEM-INVARIANT-001",
+      "source_id": "SRC-NTM-ARCH-V1",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md",
+      "source_blob_sha": "68c171349aedc8f9c24d3a795de7bcde9eb07539",
+      "exact_locator": "NEURAL_ORCHESTRATION/ARCHITECTURE_V1.md#One-system invariant",
+      "literal_excerpt": "The models themselves remain replaceable.",
+      "primitives": [
+        "Node",
+        "System",
+        "TaskIdentity",
+        "ContextBindingSchema",
+        "DirectiveStateProtocol",
+        "EvidenceProvenanceModel",
+        "VerificationContract",
+        "DriftTaxonomy",
+        "DecisionGate",
+        "AuditTrail"
+      ],
+      "relations": [
+        "ParticipatesIn(node,system)",
+        "Shares(node,protocol_component)"
+      ],
+      "operators": [
+        "forall",
+        "and",
+        "implies"
+      ],
+      "constraints": [
+        "All participating nodes share the listed protocol components.",
+        "Model/provider identity is replaceable.",
+        "Decision Gate authorizes system-level action."
+      ],
+      "boundaries": [
+        "Architecture specification only; no proof of deployment.",
+        "The source treats AGI-target satisfaction as an empirical question."
+      ],
+      "candidate_fol": "∀n ((Node(n) ∧ ParticipatesIn(n, System)) → (Shares(n, TaskIdentity) ∧ Shares(n, ContextBindingSchema) ∧ Shares(n, DirectiveStateProtocol) ∧ Shares(n, EvidenceProvenanceModel) ∧ Shares(n, VerificationContract) ∧ Shares(n, DriftTaxonomy) ∧ Shares(n, DecisionGate) ∧ Shares(n, AuditTrail)))",
+      "formalization_status": "CANDIDATE_NOT_REVIEWED",
+      "closure_check": "VARIABLES_BOUND_BY_INSPECTION_NOT_MACHINE_CHECKED",
+      "sol_review": "NOT_RUN",
+      "contradiction_check": "NOT_RUN",
+      "composition_status": "NOT_COMPOSED_NO_CROSS_SOURCE_ENTAILMENT",
+      "weights_status": "NOT_ASSIGNED",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "counter_reading": "A shared protocol is a normative architecture condition; it does not prove that live nodes satisfy it or that the system has general intelligence.",
+      "tests": [],
+      "counterexamples": []
+    },
+    {
+      "candidate_id": "LC-NTM-TASK-ENVELOPE-001",
+      "source_id": "SRC-NTM-TASK-ENVELOPE",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/schemas/task_envelope.schema.json",
+      "source_blob_sha": "a0bef3a92fc042b5df9ca65a0dc8e0499ea35b41",
+      "exact_locator": "task_envelope.schema.json#required and properties",
+      "literal_excerpt": "required: request_id, task_id, intent, context, input, constraints, evidence_requirements, expected_output_schema",
+      "primitives": [
+        "TaskEnvelope",
+        "request_id",
+        "task_id",
+        "intent",
+        "context",
+        "input",
+        "constraints",
+        "evidence_requirements",
+        "expected_output_schema"
+      ],
+      "relations": [
+        "Has(task,field)",
+        "HasField(task,intent,action)",
+        "HasField(task,intent,object)",
+        "HasField(task,context,project)",
+        "HasField(task,context,component)",
+        "HasField(task,context,version)",
+        "HasField(task,context,process)",
+        "HasField(task,context,source)"
+      ],
+      "operators": [
+        "forall",
+        "and",
+        "implies"
+      ],
+      "constraints": [
+        "Required top-level fields are explicit.",
+        "Intent requires action and object.",
+        "Context requires project, component, version, process and source.",
+        "additionalProperties=false."
+      ],
+      "boundaries": [
+        "Schema conformance does not validate field meaning or evidence truth.",
+        "No semantic test case was executed."
+      ],
+      "candidate_fol": "∀t (TaskEnvelope(t) → (Has(t, request_id) ∧ Has(t, task_id) ∧ Has(t, intent) ∧ Has(t, context) ∧ Has(t, input) ∧ Has(t, constraints) ∧ Has(t, evidence_requirements) ∧ Has(t, expected_output_schema)))",
+      "formalization_status": "CANDIDATE_NOT_REVIEWED",
+      "closure_check": "VARIABLES_BOUND_BY_INSPECTION_NOT_MACHINE_CHECKED",
+      "sol_review": "NOT_RUN",
+      "contradiction_check": "NOT_RUN",
+      "composition_status": "NOT_COMPOSED",
+      "weights_status": "NOT_ASSIGNED",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "counter_reading": "A valid envelope can still contain incorrect intent, empty evidence, or an unusable output schema.",
+      "tests": [],
+      "counterexamples": []
+    },
+    {
+      "candidate_id": "LC-NTM-RESULT-ENVELOPE-001",
+      "source_id": "SRC-NTM-RESULT-ENVELOPE",
+      "source_uri": "https://github.com/tribal-archery/-logicl-neural-order/blob/master/NEURAL_ORCHESTRATION/schemas/result_envelope.schema.json",
+      "source_blob_sha": "06dd1df7a4b480d421e4e7d355a988d4cf560518",
+      "exact_locator": "result_envelope.schema.json#required, status enum and provenance",
+      "literal_excerpt": "status enum: OK, ERROR, CONFLICT, UNVERIFIED, BLOCKED",
+      "primitives": [
+        "ResultEnvelope",
+        "request_id",
+        "task_id",
+        "machine_id",
+        "role",
+        "model_ref",
+        "output",
+        "uncertainty",
+        "status",
+        "latency_ms",
+        "input_hash",
+        "provenance",
+        "evidence_refs"
+      ],
+      "relations": [
+        "Has(result,field)",
+        "HasField(result,provenance,origin)",
+        "HasField(result,provenance,chain_id)",
+        "StatusIn(result,allowed_status)"
+      ],
+      "operators": [
+        "forall",
+        "and",
+        "implies",
+        "set_membership"
+      ],
+      "constraints": [
+        "Required result fields are explicit.",
+        "uncertainty is bounded from 0 to 1.",
+        "latency_ms is non-negative.",
+        "status belongs to the declared enum.",
+        "provenance requires origin and chain_id."
+      ],
+      "boundaries": [
+        "Schema conformance cannot establish output truth or evidence authenticity.",
+        "A declared UNVERIFIED or OK status is not independent verification."
+      ],
+      "candidate_fol": "∀r (ResultEnvelope(r) → (Has(r, request_id) ∧ Has(r, task_id) ∧ Has(r, machine_id) ∧ Has(r, role) ∧ Has(r, model_ref) ∧ Has(r, output) ∧ Has(r, uncertainty) ∧ Has(r, status) ∧ Has(r, latency_ms) ∧ Has(r, input_hash) ∧ Has(r, provenance) ∧ Has(r, evidence_refs)))",
+      "formalization_status": "CANDIDATE_NOT_REVIEWED",
+      "closure_check": "VARIABLES_BOUND_BY_INSPECTION_NOT_MACHINE_CHECKED",
+      "sol_review": "NOT_RUN",
+      "contradiction_check": "NOT_RUN",
+      "composition_status": "NOT_COMPOSED",
+      "weights_status": "NOT_ASSIGNED",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "counter_reading": "The schema permits a caller to populate evidence_refs and provenance fields without proving their authenticity or the output's correctness.",
+      "tests": [],
+      "counterexamples": []
+    },
+    {
+      "candidate_id": "LC-MAM-SOURCE-DERIVATION-CHAIN-001",
+      "source_id": "SRC-MAM-TOPOLOGY",
+      "source_uri": "https://github.com/tribal-archery/MAM-parsed/blob/main/ARCHITECTURE/MASORAH_REPOSITORY_TOPOLOGY.md",
+      "source_blob_sha": "bdbae64e00cbd13f7d5588a1afe7103c29d60149",
+      "exact_locator": "MASORAH_REPOSITORY_TOPOLOGY.md#Identity and #Safety rule",
+      "literal_excerpt": "No extracted interpretation is treated as verified merely because an agent generated it.",
+      "primitives": [
+        "CanonicalCorpus",
+        "Book",
+        "Chapter",
+        "Verse",
+        "TokenOrFeature",
+        "Evidence",
+        "Derivation",
+        "Verification",
+        "SourceEvent"
+      ],
+      "relations": [
+        "AddressableBy(record,path)",
+        "DerivedFrom(record,canonical_corpus)",
+        "PreservesProvenance(record,source_event)"
+      ],
+      "operators": [
+        "ordered_path"
+      ],
+      "constraints": [
+        "One canonical corpus remains source of truth.",
+        "Derived records retain provenance to canonical corpus and source event.",
+        "No interpretation is verified by generation alone."
+      ],
+      "boundaries": [
+        "Topology document says DATA_NOT_MODIFIED and REPOSITORY_SPLIT_NOT_EXECUTED.",
+        "MAM plus format is documented as unstable; version pinning is required.",
+        "Addressability is not semantic correctness."
+      ],
+      "ordered_path": [
+        "book",
+        "chapter",
+        "verse",
+        "token_or_feature",
+        "evidence",
+        "derivation",
+        "verification"
+      ],
+      "candidate_fol": "∀d (DerivedRecord(d) → (CanonicalCorpusSource(d) ∧ HasSourceEvent(d) ∧ PreservesProvenance(d)))",
+      "formalization_status": "CANDIDATE_NOT_REVIEWED",
+      "closure_check": "VARIABLES_BOUND_BY_INSPECTION_NOT_MACHINE_CHECKED",
+      "sol_review": "NOT_RUN",
+      "contradiction_check": "NOT_RUN",
+      "composition_status": "NOT_COMPOSED",
+      "weights_status": "NOT_ASSIGNED",
+      "semantic_status": "NOT_YET_VERIFIED",
+      "counter_reading": "A deterministic address path and preserved provenance support traceability, but neither establishes the correctness of a derived interpretation.",
+      "tests": [],
+      "counterexamples": []
+    }
+  ],
+  "cross_repo_relationships": [
+    {
+      "id": "REL-NTM-WANGA-ENVELOPE-PROVENANCE",
+      "repositories": [
+        "tribal-archery/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "status": "INTEGRATION_PROPOSAL_NOT_IMPLEMENTED",
+      "relationship_type": "TASK_RESULT_ENVELOPE_TO_SOURCE_PROVENANCE_ALIGNMENT",
+      "evidence_refs": [
+        "SRC-NTM-ARCH-V1",
+        "SRC-NTM-TASK-ENVELOPE",
+        "SRC-NTM-RESULT-ENVELOPE"
+      ],
+      "wanga_targets": [
+        "logic_fractal/fragment_composer.py",
+        "logic_wiki/data/readiness_gate.json"
+      ],
+      "proposal": "Map task_id, input_hash, evidence_refs, provenance.origin/chain_id and UNVERIFIED/BLOCKED/CONFLICT statuses into WANGA source/claim/evidence records through an explicit adapter contract.",
+      "boundaries": [
+        "No code-level integration was written.",
+        "A schema-valid result is not semantically verified.",
+        "Do not conflate NTM, MLN and LNL."
+      ],
+      "semantic_entailment_asserted": false,
+      "next_action": "Design a versioned mapping schema and negative tests before implementation."
+    },
+    {
+      "id": "REL-MAM-WANGA-CANONICAL-SOURCE-INGESTION",
+      "repositories": [
+        "tribal-archery/MAM-parsed",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "status": "INTEGRATION_PROPOSAL_NOT_IMPLEMENTED",
+      "relationship_type": "CANONICAL_CORPUS_SOURCE_INGESTION",
+      "evidence_refs": [
+        "SRC-MAM-TOPOLOGY"
+      ],
+      "wanga_targets": [
+        "scripts/ingest_conversation_export.py",
+        "logic_fractal/fragment_composer.py"
+      ],
+      "proposal": "Treat the parsed corpus as a version-pinned source layer addressable by book/chapter/verse/token, with source-event provenance and reversible mapping.",
+      "boundaries": [
+        "MAM plus format is documented as unstable.",
+        "No data was copied or modified.",
+        "Parsed structure does not verify interpretation."
+      ],
+      "semantic_entailment_asserted": false,
+      "next_action": "Pin corpus revision and inspect license/schema before a read-only adapter prototype."
+    },
+    {
+      "id": "REL-MULTI-AGENT-ORCHESTRATOR-REFERENCE",
+      "repositories": [
+        "AmbassadorOv/multi-agent-orchestator",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB"
+      ],
+      "status": "REFERENCE_ONLY_NO_INTEGRATION",
+      "relationship_type": "SPECIALIST_AGENT_ROUTING_COMPARISON",
+      "evidence_refs": [
+        "https://github.com/AmbassadorOv/multi-agent-orchestator/blob/main/README.md"
+      ],
+      "proposal": "Compare its classifier/retriever/reasoner split and mock evaluation approach with WANGA's bounded agent roles.",
+      "boundaries": [
+        "README only; no code audit or tests run.",
+        "README describes API-key-backed providers and optional external retrieval; no external API calls authorized.",
+        "No code copied."
+      ],
+      "semantic_entailment_asserted": false,
+      "next_action": "No action until a concrete, licensed component is identified."
+    }
+  ],
+  "mirror_review": {
+    "status": "BOUNDED_COUNTER_READINGS_NOT_INDEPENDENT_REVIEW",
+    "reviewed_candidates": [
+      "LC-NTM-ONE-SYSTEM-INVARIANT-001",
+      "LC-NTM-TASK-ENVELOPE-001",
+      "LC-NTM-RESULT-ENVELOPE-001",
+      "LC-MAM-SOURCE-DERIVATION-CHAIN-001"
+    ],
+    "counter_readings": [
+      {
+        "candidate_id": "LC-NTM-ONE-SYSTEM-INVARIANT-001",
+        "counter_reading": "A shared protocol is a normative architecture condition; it does not prove that live nodes satisfy it or that the system has general intelligence."
+      },
+      {
+        "candidate_id": "LC-NTM-TASK-ENVELOPE-001",
+        "counter_reading": "A valid envelope can still contain incorrect intent, empty evidence, or an unusable output schema."
+      },
+      {
+        "candidate_id": "LC-NTM-RESULT-ENVELOPE-001",
+        "counter_reading": "The schema permits a caller to populate evidence_refs and provenance fields without proving their authenticity or the output's correctness."
+      },
+      {
+        "candidate_id": "LC-MAM-SOURCE-DERIVATION-CHAIN-001",
+        "counter_reading": "A deterministic address path and preserved provenance support traceability, but neither establishes the correctness of a derived interpretation."
+      }
+    ],
+    "source_conflicts_detected": 0,
+    "note": "Zero conflicts were observed in this bounded comparison; no complete contradiction inventory exists, so global core contradiction count remains NOT_MEASURED."
+  },
+  "access_gaps": [
+    "No accessible ChatGPT conversation export or transcript; no account-wide private conversation scan is claimed.",
+    "Repository updated_at timestamps are not exposed by the connected GitHub inventory/get_repo calls.",
+    "Five private repository identities are redacted from the public registry; two private README fetches were not published.",
+    "No source-grounded counterexample, semantic benchmark case, benchmark suite, holdout manifest or independent review was found.",
+    "The core contradiction inventory file is absent; core contradictions remain NOT_MEASURED."
+  ]
 }

@@ -1,0 +1,329 @@
+{
+  "report_version": "wanga-unified-cycle/1.1",
+  "date": "2026-11-17",
+  "scan_time_utc": "2026-11-17T05:13:01Z",
+  "run_status": "REVIEW_WITH_BLOCKERS",
+  "source_commit": {
+    "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "branch": "main",
+    "sha": "deafd43e1b9da389f29584edb6026c5b0bc5b2e4",
+    "committed_at_utc": "2026-11-17T00:23:58Z"
+  },
+  "working_branch": {
+    "branch": "automation/wanga-cycle-2026-11-16",
+    "base_merge_commit": "9903d0434eceef78cc57b86e3dc64c897d9ae286",
+    "pull_request": 151,
+    "state": "OPEN_DRAFT_NOT_MERGED"
+  },
+  "SOURCES_SCANNED": {
+    "github_repositories_visible": 63,
+    "owner_affiliation": 38,
+    "collaborator_affiliation": 13,
+    "organization_member_affiliation": 25,
+    "public_repositories": 58,
+    "private_repositories_redacted": 5,
+    "github_repositories_scanned_this_batch": 10,
+    "public_readmes_fetched_this_batch": 8,
+    "private_readmes_fetched_redacted_this_batch": 2,
+    "public_readmes_fetched_cumulative": 17,
+    "public_readme_404_cumulative": 1,
+    "ntm_additional_docs_read": 5,
+    "mam_additional_docs_read": 1,
+    "multi_agent_orchestrator_readme": 1,
+    "library_relevant_artifacts_surfaced": 3,
+    "chatgpt_export_files": 0,
+    "conversation_transcripts": 0
+  },
+  "ACCESS_GAPS": [
+    "No accessible ChatGPT conversation export or transcript; no account-wide private conversation scan is claimed.",
+    "Repository updated_at timestamps are not exposed by the connected GitHub inventory/get_repo calls.",
+    "Five private repository identities are redacted from the public registry; two private README fetches were not published.",
+    "No source-grounded counterexample, semantic benchmark case, benchmark suite, holdout manifest or independent review was found.",
+    "The core contradiction inventory file is absent; core contradictions remain NOT_MEASURED."
+  ],
+  "NEW_SOURCES": {
+    "catalog_source_records_added": 4,
+    "catalog_articles_added": 4,
+    "private_library_candidates_pending_review": 3,
+    "conversation_exports_ingested": 0,
+    "private_repository_content_published": 0
+  },
+  "DUPLICATE_SOURCES": [
+    {
+      "content_hash": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/MNM",
+        "AmbassadorOv/Nanomathematics",
+        "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+        "tribal-archery/Qdprojects"
+      ],
+      "evidence": "Identical GitHub README blob SHA and title Nanomathematics across five distinct repository identifiers.",
+      "status": "DUPLICATE_FILE_CONTENT_CANDIDATE_NOT_DUPLICATE_REPOSITORY"
+    }
+  ],
+  "CLAIMS_ADDED": {
+    "source_supported_summaries": 4,
+    "epistemic_status": "PROJECT_SPECIFICATION_NOT_INDEPENDENTLY_VALIDATED"
+  },
+  "LOGIC_UNITS": {
+    "current_with_resolved_provenance": 32,
+    "new_candidate_structures": 4,
+    "fol_candidates": 4,
+    "sol_reviewed": 0,
+    "weights_assigned": 0,
+    "semantic_verified": 0
+  },
+  "COMPOSITION_COUNT": {
+    "active_rules": 2,
+    "total_rules": 3,
+    "new_compositions": 0,
+    "semantic_entailments_asserted": 0
+  },
+  "CONTRADICTIONS": {
+    "bounded_source_conflicts_detected": 0,
+    "global_core_contradiction_inventory": "NOT_MEASURED",
+    "boundary_counter_readings": 4,
+    "independent_mirror_review_cycles": 0
+  },
+  "BENCHMARKS": {
+    "source_grounded_counterexamples": 0,
+    "semantic_test_cases": 0,
+    "suites": 0,
+    "holdout_cases": 0,
+    "independent_reviews": 0,
+    "typed_fragment_software_tests_previous_ci": {
+      "passed": 7,
+      "failed": 0,
+      "workflow_run_id": 43812470525
+    },
+    "semantic_ground_truth_benchmarks": "NOT_RUN_NO_REGISTERED_CASES"
+  },
+  "CI": {
+    "previous_pr151_head": "30800470ac2d9c84ac3f5146d1815ae88c5d15cd",
+    "previous_workflow_runs": [
+      {
+        "id": 43812470525,
+        "name": "Logic Fractal Wiki Research",
+        "conclusion": "success",
+        "builder_step": "Build first typed fractal model candidate: success",
+        "artifact_bytes": 85435
+      },
+      {
+        "id": 43812470582,
+        "name": "Repository Integrity",
+        "conclusion": "success"
+      },
+      {
+        "id": 43812470533,
+        "name": "WANGA Ecosystem Agent Sweep",
+        "conclusion": "success"
+      },
+      {
+        "id": 43812470548,
+        "name": "CodeQL Advanced",
+        "conclusion": "success"
+      }
+    ],
+    "current_commit_ci": "PENDING_AFTER_CATALOG_AND_GATE_FIX"
+  },
+  "MODEL_HASH": {
+    "candidate": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "scale_1": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+    "local_artifact_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+    "local_artifact_bytes": 9843,
+    "execution": "PR151 previous-head GitHub Actions run; synthetic fixtures only",
+    "semantic_status": "NOT_YET_VERIFIED"
+  },
+  "READINESS_GATE": {
+    "gate_id": "FIRST_MODEL_ALPHA_V1",
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "threshold_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "metrics": {
+      "source_records": {
+        "actual": 21,
+        "required": 20
+      },
+      "source_classes": {
+        "actual": 11,
+        "required": 3
+      },
+      "logic_units_with_provenance": {
+        "actual": 32,
+        "required": 50
+      },
+      "composition_rules_with_contracts": {
+        "actual": 2,
+        "required": 20
+      },
+      "counterexamples": {
+        "actual": 0,
+        "required": 30
+      },
+      "semantic_test_cases": {
+        "actual": 0,
+        "required": 100
+      },
+      "benchmark_suites": {
+        "actual": 0,
+        "required": 3
+      },
+      "independent_reviews": {
+        "actual": 0,
+        "required": 2
+      },
+      "dangling_source_refs": {
+        "actual": 0,
+        "required": 0
+      },
+      "dangling_relation_refs": {
+        "actual": 0,
+        "required": 0
+      },
+      "duplicate_ids": {
+        "actual": 0,
+        "required": 0
+      },
+      "critical_core_contradictions": {
+        "actual": "NOT_MEASURED",
+        "required": 0
+      },
+      "deterministic_build": {
+        "actual": true,
+        "required": true
+      },
+      "holdout": {
+        "actual": false,
+        "required": true
+      },
+      "mirror_review": {
+        "actual": false,
+        "required": true
+      }
+    }
+  },
+  "BUILT_TESTED_VERIFIED": {
+    "built": "Two-scale typed candidate previously built by GitHub Actions from three synthetic fixtures; no source-validated model built.",
+    "tested": "Previous PR151 Logic Fractal workflow passed; builder step passed; current branch CI pending.",
+    "verified": "No semantic claim, candidate, or first model promoted to VERIFIED."
+  },
+  "LIMBO_FORENSIC_CRASH_CARTOGRAPHY": {
+    "status": "BLOCKED_NO_NEW_INPUTS_AND_STALE_BRANCHES",
+    "source_pr122": {
+      "number": 122,
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/122",
+      "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+      "branch": "deploy/limbo-cartography-core-v1",
+      "compare_to_current_main": {
+        "status": "DIVERGED",
+        "ahead_by": 63,
+        "behind_by": 95
+      },
+      "workflow_runs": [
+        42345983634,
+        42345983633,
+        42345983702
+      ],
+      "conclusion": "ACTION_REQUIRED",
+      "job_details_count": 0
+    },
+    "refresh_pr138": {
+      "number": 138,
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/138",
+      "head_sha": "624ede1d01441823b7972a75599b6feea4c51d13",
+      "branch": "fix/limbo-cartography-refresh-2026-11-04",
+      "compare_to_current_main": {
+        "status": "DIVERGED",
+        "ahead_by": 45,
+        "behind_by": 86
+      },
+      "workflow_runs": [
+        42576418766,
+        42576418805,
+        42576418735
+      ],
+      "conclusion": "SUCCESS_ON_2026-11-04_BASE_NOT_FRESH_ON_CURRENT_MAIN"
+    },
+    "map": {
+      "version": "1.3.0",
+      "incidents": 10,
+      "history_events": 2,
+      "nodes": 14,
+      "edges": 19,
+      "latest_incident_utc": "2026-10-19T19:40:40Z",
+      "latest_execution_utc": "2026-11-07T06:12:35Z",
+      "unresolved_queue_recurrence_incidents": 7,
+      "incidents_without_latest_passing_retest": 9,
+      "incidents_with_recorded_pass_retest": 1
+    },
+    "tuning_candidate": {
+      "id": "TUNE-9c166900cc4ad5dd",
+      "replay_status": "NOT_RUN",
+      "linked_retest_result": "PASS",
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    "input_status": "NO_INPUTS",
+    "note": "No current regional observation was accepted as a crash record; NOT_CONFIGURED observations are not failures or proof of stability."
+  },
+  "WIX": {
+    "site_name": "Logic Engine Research Lab",
+    "site_status": "PUBLISHED",
+    "last_readback_utc": "2026-11-16T05:35:39Z",
+    "pages_read": 4,
+    "live_catalog_at_readback": {
+      "articles": 28,
+      "sources": 17,
+      "source_types": 11,
+      "relations": 111,
+      "active_contracts": 2
+    },
+    "last_successful_sync_date_in_manifest": "2026-10-12",
+    "write_performed_this_cycle": false,
+    "status": "NO_WRITE_PENDING_GITHUB_REVIEW"
+  },
+  "REPOSITORY_ECOSYSTEM": {
+    "batch_number": 2,
+    "scanned_public": [
+      "AmbassadorOv/multi-agent-orchestator",
+      "AmbassadorOv/Qualia",
+      "AmbassadorOv/O-Ms",
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "tribal-archery/-logicl-neural-order",
+      "tribal-archery/MAM-parsed",
+      "tribal-archery/Qdprojects"
+    ],
+    "private_scans_redacted": 2,
+    "remaining": 43,
+    "next_cursor_index": 20,
+    "next_batch": [
+      "AmbassadorOv/-artificial-y",
+      "AmbassadorOv/AG-triple-X-",
+      "AmbassadorOv/AmbassadorOv",
+      "PRIVATE_REPO_SLOT_003",
+      "AmbassadorOv/TTTT-0.0.0.0.1",
+      "AmbassadorOv/TTTTproject-un.govt",
+      "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "AmbassadorOv/awesome-chatgpt-prompts",
+      "AmbassadorOv/branches-",
+      "AmbassadorOv/chatgpt-scientific-publications-extension"
+    ]
+  },
+  "BLOCKED": [
+    "FIRST_MODEL_ALPHA remains not ready: 32/50 source-resolved entries, 2/20 composition rules, 0/30 counterexamples, 0/100 semantic cases, 0/3 suites, 0/2 reviews, no holdout, no MIRROR review and core contradictions NOT_MEASURED.",
+    "No ChatGPT export is accessible; private Library candidates remain review-only and were not published.",
+    "Limbo PR #122 and refresh PR #138 are stale relative to current main; PR #122 runs are action_required with no job details; no new crash inputs exist.",
+    "Wix deployment is deferred until the GitHub PR is reviewed and merged; no Wix write or sync claim is made.",
+    "New catalog/gate-fix CI is pending."
+  ],
+  "NEXT": [
+    "Review the draft WANGA cycle PR only after its current CI succeeds; do not auto-merge.",
+    "Continue repository batch 3 from cursor index 20.",
+    "Pin the MAM corpus revision and define a read-only provenance-preserving adapter before importing parsed records.",
+    "Define the NTM task/result envelope mapping and negative tests without collapsing NTM, MLN and LNL.",
+    "Add source-grounded counterexamples, semantic benchmark cases, 3 suites and a frozen holdout.",
+    "Run an independent MIRROR review and create a reviewed core contradiction inventory before any zero count is accepted.",
+    "Rebase/refresh Limbo against current main, obtain fresh CI, and replay the tuning candidate only with recorded evidence.",
+    "After PR approval/merge, deploy approved Wix catalog/report changes through the connected Wix integration and perform public read-back."
+  ]
+}
