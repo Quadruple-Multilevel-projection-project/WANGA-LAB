@@ -1,0 +1,23 @@
+flowchart LR
+  subgraph SOURCE["Source map"]
+    A["SOURCE_CREATED"]
+    B["SOURCE_APPROVED"]
+    C["DISPATCHED"]
+    H["SOURCE_ACK_RECORDED"]
+    A --> B --> C
+    H --> I["Source read-back"]
+  end
+  subgraph DESTINATION["Destination map"]
+    D["DESTINATION_RECEIVED"]
+    E["DESTINATION_APPROVED"]
+    F["DESTINATION_INGESTED"]
+    G["ACK_RETURNED"]
+    D --> E --> F --> G
+    F --> J["Destination read-back"]
+  end
+  C --> D
+  G --> H
+  I -. "compare transfer_id + hashes" .-> K{"Both sides match?"}
+  J -. "compare transfer_id + hashes" .-> K
+  K -->|yes| L["BILATERAL_VERIFIED"]
+  K -->|no / missing evidence| M["PENDING or BLOCKED"]
