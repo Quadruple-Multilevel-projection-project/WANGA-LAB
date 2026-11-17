@@ -6,17 +6,11 @@
     "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
     "branch": "feat/map-link-provenance-project",
     "project_path": "projects/map-link-provenance/",
-    "status": "PROJECT_CONTENT_AND_ACTION_LEDGER_COMMITTED",
-    "file_commit_shas": {
-      "README.md": "ecb8e4d6e034ed6ca2a15a33eab0a46ba00b81cc",
-      "event-schema.json": "01da2d63ab0933d348bd60a80672b2b0e81c8481",
-      "sign_event.py": "1503294ff84979614e5d6d8008f9f973cdf03f69",
-      "integration-manifest.json": "b8597067104c6ebd69a1ea2e674a02f3bcb382d7",
-      "sequence.mmd": "35f0e24dff8416f4ea0f6e8585c3d70ea2a43ae2",
-      "ACTION_SIGNATURES.json": "81321f65684f3207b45da0850cc009bfb41907db"
-    },
+    "status": "PROJECT_CONTENT_AND_ACTION_LEDGER_READBACK_CONFIRMED",
     "project_files_commit": "35f0e24dff8416f4ea0f6e8585c3d70ea2a43ae2",
-    "action_ledger_path": "projects/map-link-provenance/ACTION_SIGNATURES.json"
+    "action_ledger_path": "projects/map-link-provenance/ACTION_SIGNATURES.json",
+    "initial_content_batch_last_commit": "35f0e24dff8416f4ea0f6e8585c3d70ea2a43ae2",
+    "action_ledger_entries": 36
   },
   "components": {
     "chatgpt_plugin": {
@@ -53,13 +47,15 @@
         "project_role"
       ],
       "routing_to_project_events": "NOT_CONFIGURED",
-      "public_mailbox_addresses": "OMITTED"
+      "public_mailbox_addresses": "OMITTED",
+      "metadata_readback_confirmed": true
     },
     "gmail": {
       "status": "THREE_AGENT_LABELS_CREATED_AND_READBACK_CONFIRMED",
       "labels_are_google_groups": false,
       "automatic_filters": "NOT_CONFIGURED",
-      "google_groups_admin_connector": "NOT_FOUND_IN_CURRENT_PLUGIN_SEARCH"
+      "google_groups_admin_connector": "NOT_FOUND_IN_CURRENT_PLUGIN_SEARCH",
+      "labels_readback_confirmed": true
     },
     "external_map_adapters": {
       "status": "NOT_CONFIGURED",
