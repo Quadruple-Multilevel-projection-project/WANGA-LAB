@@ -43,3 +43,25 @@
 
 ## יעד
 המאגר נועד להיות ניתן לשליפה בכל שלב של העבודה על מילות ההגיון, בלי לאבד את המספור, השער, המונח או סטטוס האימות.
+
+
+## Logic Factory map integration
+The 175-term retrieval layer is now connected by reference to the central map integration contract and machine-readable registry:
+- `docs/LOGIC_FACTORY/MASTER_MAP_INTEGRATION_CONTRACT.md`
+- `docs/LOGIC_FACTORY/map_registry.v1.json`
+
+Routing sequence:
+1. Resolve the gate and term range from `INDEX.md`.
+2. Resolve the term record.
+3. Resolve map and app dependencies from the map registry.
+4. Require evidence for every relation edge.
+5. Route through SERIAL_RETURN, PARALLEL_14_GATE, or COMPARISON without merging their outputs.
+6. On any source or relation gap, retain UNRESOLVED / ABSTAIN.
+
+The Logical Map Clock tracks map-change sequence and dependency impact. It does not change source meaning or replace the source index.
+
+## Integration action signature
+Timestamp=2026-11-18T00:12:00+02:00
+Contract_Start_Time=2026-11-17T20:29:00+02:00
+Action_ID=AI231-ORCHESTRATOR-LINK-003
+SHA256=fe85f2e5896e590f0ee864680455abb5a1919a715d313b96bee437ef7993bc66
