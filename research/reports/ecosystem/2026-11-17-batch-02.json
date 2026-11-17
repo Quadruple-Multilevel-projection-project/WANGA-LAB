@@ -195,13 +195,39 @@
     "collaborator_repositories": 0,
     "third_party_repositories": 0,
     "wanga_lab_branch_updates": 1,
-    "main_branch_writes": 0
+    "main_branch_writes": 0,
+    "wanga_lab_content_commit": "603d50b378cad42df1d5cd62c89488f0f5b0fa98"
   },
   "validation": {
     "catalog_source_refs_resolvable": true,
     "duplicate_ids": 0,
     "dangling_source_refs": 0,
     "dangling_relation_refs": 0,
-    "repository_integrity_ci": "PENDING"
+    "repository_integrity_ci": "SUCCESS",
+    "current_pr_ci": "SUCCESS",
+    "ci_run_ids": [
+      44024275523,
+      44024275432,
+      44024275528,
+      44024275408
+    ],
+    "software_test_summary": {
+      "test_groups": 13,
+      "tests_passed": 103,
+      "failures": 0,
+      "classification": "SOFTWARE_TESTS_NOT_SEMANTIC_GROUND_TRUTH"
+    },
+    "artifacts": [
+      {
+        "name": "logic-wiki-research-report",
+        "bytes": 103393,
+        "workflow_run_id": 44024275523
+      },
+      {
+        "name": "wanga-ecosystem-sweep-239",
+        "bytes": 3291,
+        "workflow_run_id": 44024275528
+      }
+    ]
   }
 }

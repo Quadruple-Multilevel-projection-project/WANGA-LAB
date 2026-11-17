@@ -13,7 +13,13 @@
     "branch": "automation/wanga-cycle-2026-11-16",
     "base_merge_commit": "9903d0434eceef78cc57b86e3dc64c897d9ae286",
     "pull_request": 151,
-    "state": "OPEN_DRAFT_NOT_MERGED"
+    "state": "OPEN_DRAFT_NOT_MERGED",
+    "content_commit_sha": "603d50b378cad42df1d5cd62c89488f0f5b0fa98",
+    "compare_to_main": {
+      "status": "AHEAD",
+      "ahead_by": 13,
+      "behind_by": 0
+    }
   },
   "SOURCES_SCANNED": {
     "github_repositories_visible": 63,
@@ -100,40 +106,82 @@
     "semantic_ground_truth_benchmarks": "NOT_RUN_NO_REGISTERED_CASES"
   },
   "CI": {
-    "previous_pr151_head": "30800470ac2d9c84ac3f5146d1815ae88c5d15cd",
-    "previous_workflow_runs": [
+    "validated_head_sha": "603d50b378cad42df1d5cd62c89488f0f5b0fa98",
+    "current_commit_ci": "SUCCESS",
+    "workflow_runs": [
       {
-        "id": 43812470525,
+        "id": 44024275523,
         "name": "Logic Fractal Wiki Research",
+        "status": "completed",
         "conclusion": "success",
-        "builder_step": "Build first typed fractal model candidate: success",
-        "artifact_bytes": 85435
+        "started_at_utc": "2026-11-17T05:27:44Z",
+        "completed_at_utc": "2026-11-17T05:28:02Z",
+        "runner_label": "ubuntu-latest",
+        "python": "3.11.18",
+        "artifact": {
+          "id": 14302187372,
+          "name": "logic-wiki-research-report",
+          "bytes": 103393,
+          "created_at_utc": "2026-11-17T05:27:58Z"
+        }
       },
       {
-        "id": 43812470582,
+        "id": 44024275432,
         "name": "Repository Integrity",
-        "conclusion": "success"
+        "status": "completed",
+        "conclusion": "success",
+        "started_at_utc": "2026-11-17T05:27:43Z",
+        "completed_at_utc": "2026-11-17T05:28:00Z",
+        "runner_label": "ubuntu-latest"
       },
       {
-        "id": 43812470533,
+        "id": 44024275528,
         "name": "WANGA Ecosystem Agent Sweep",
-        "conclusion": "success"
+        "status": "completed",
+        "conclusion": "success",
+        "started_at_utc": "2026-11-17T05:27:44Z",
+        "completed_at_utc": "2026-11-17T05:27:54Z",
+        "runner_label": "ubuntu-latest",
+        "artifact": {
+          "id": 14302187409,
+          "name": "wanga-ecosystem-sweep-239",
+          "bytes": 3291,
+          "created_at_utc": "2026-11-17T05:27:50Z"
+        }
       },
       {
-        "id": 43812470548,
+        "id": 44024275408,
         "name": "CodeQL Advanced",
-        "conclusion": "success"
+        "status": "completed",
+        "conclusion": "success",
+        "started_at_utc": "2026-11-17T05:27:43Z",
+        "completed_at_utc": "2026-11-17T05:28:31Z",
+        "runner_label": "ubuntu-latest"
       }
     ],
-    "current_commit_ci": "PENDING_AFTER_CATALOG_AND_GATE_FIX"
+    "software_test_summary": {
+      "test_groups": 13,
+      "tests_passed": 103,
+      "failures": 0,
+      "classification": "SOFTWARE_UNIT_AND_INTEGRATION_TESTS_NOT_SEMANTIC_GROUND_TRUTH"
+    },
+    "builder_execution": {
+      "workflow_run_id": 44024275523,
+      "status": "CANDIDATE_NOT_RELEASED",
+      "scale_1_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+      "scale_2_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+      "decision": "BLOCKED_PENDING_REAL_SOURCE_FRAGMENTS_NEGATIVE_BOUNDARY_TESTS_AND_INDEPENDENT_REVIEW"
+    },
+    "runner_details": "ubuntu-latest label and Python 3.11.18 observed; physical runner hostname was not exposed."
   },
   "MODEL_HASH": {
     "candidate": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
     "scale_1": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
     "local_artifact_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
     "local_artifact_bytes": 9843,
-    "execution": "PR151 previous-head GitHub Actions run; synthetic fixtures only",
-    "semantic_status": "NOT_YET_VERIFIED"
+    "execution": "Rebuilt by GitHub Actions run 44024275523 on head 603d50b378cad42df1d5cd62c89488f0f5b0fa98; synthetic fixtures only.",
+    "semantic_status": "NOT_YET_VERIFIED",
+    "workflow_run_id": 44024275523
   },
   "READINESS_GATE": {
     "gate_id": "FIRST_MODEL_ALPHA_V1",
@@ -204,7 +252,7 @@
   },
   "BUILT_TESTED_VERIFIED": {
     "built": "Two-scale typed candidate previously built by GitHub Actions from three synthetic fixtures; no source-validated model built.",
-    "tested": "Previous PR151 Logic Fractal workflow passed; builder step passed; current branch CI pending.",
+    "tested": "13 software/integration test groups (103 tests) passed; Logic Fractal Wiki Research, Repository Integrity, WANGA Ecosystem Agent Sweep and CodeQL all completed successfully.",
     "verified": "No semantic claim, candidate, or first model promoted to VERIFIED."
   },
   "LIMBO_FORENSIC_CRASH_CARTOGRAPHY": {
@@ -314,9 +362,10 @@
     "No ChatGPT export is accessible; private Library candidates remain review-only and were not published.",
     "Limbo PR #122 and refresh PR #138 are stale relative to current main; PR #122 runs are action_required with no job details; no new crash inputs exist.",
     "Wix deployment is deferred until the GitHub PR is reviewed and merged; no Wix write or sync claim is made.",
-    "New catalog/gate-fix CI is pending."
+    "PR #151 remains a draft and requires review/merge; Wix deployment remains deferred."
   ],
   "NEXT": [
+    "Review the draft PR now that the content commit CI passed; do not auto-merge.",
     "Review the draft WANGA cycle PR only after its current CI succeeds; do not auto-merge.",
     "Continue repository batch 3 from cursor index 20.",
     "Pin the MAM corpus revision and define a read-only provenance-preserving adapter before importing parsed records.",

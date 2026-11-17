@@ -1031,5 +1031,67 @@
     "Five private repository identities are redacted from the public registry; two private README fetches were not published.",
     "No source-grounded counterexample, semantic benchmark case, benchmark suite, holdout manifest or independent review was found.",
     "The core contradiction inventory file is absent; core contradictions remain NOT_MEASURED."
-  ]
+  ],
+  "ci_validation": {
+    "validated_head_sha": "603d50b378cad42df1d5cd62c89488f0f5b0fa98",
+    "status": "ALL_REQUIRED_WORKFLOWS_SUCCESS",
+    "workflow_runs": [
+      {
+        "id": 44024275523,
+        "name": "Logic Fractal Wiki Research",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at_utc": "2026-11-17T05:27:44Z",
+        "completed_at_utc": "2026-11-17T05:28:02Z",
+        "runner_label": "ubuntu-latest",
+        "python": "3.11.18",
+        "artifact": {
+          "id": 14302187372,
+          "name": "logic-wiki-research-report",
+          "bytes": 103393,
+          "created_at_utc": "2026-11-17T05:27:58Z"
+        }
+      },
+      {
+        "id": 44024275432,
+        "name": "Repository Integrity",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at_utc": "2026-11-17T05:27:43Z",
+        "completed_at_utc": "2026-11-17T05:28:00Z",
+        "runner_label": "ubuntu-latest"
+      },
+      {
+        "id": 44024275528,
+        "name": "WANGA Ecosystem Agent Sweep",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at_utc": "2026-11-17T05:27:44Z",
+        "completed_at_utc": "2026-11-17T05:27:54Z",
+        "runner_label": "ubuntu-latest",
+        "artifact": {
+          "id": 14302187409,
+          "name": "wanga-ecosystem-sweep-239",
+          "bytes": 3291,
+          "created_at_utc": "2026-11-17T05:27:50Z"
+        }
+      },
+      {
+        "id": 44024275408,
+        "name": "CodeQL Advanced",
+        "status": "completed",
+        "conclusion": "success",
+        "started_at_utc": "2026-11-17T05:27:43Z",
+        "completed_at_utc": "2026-11-17T05:28:31Z",
+        "runner_label": "ubuntu-latest"
+      }
+    ],
+    "software_tests": {
+      "groups": 13,
+      "passed": 103,
+      "failed": 0,
+      "semantic_ground_truth_cases": 0
+    },
+    "note": "The typed builder ran successfully on synthetic fixtures. These checks validate software and repository contracts, not semantic truth."
+  }
 }
