@@ -20,11 +20,12 @@
     "chatgpt_plugin": {
       "name": "map-link-provenance",
       "plugin_id": "plugins_6afcb34d54c481918a1a317a6db628b2",
-      "version": "0.1.0",
+      "version": "0.1.1",
       "visibility": "PRIVATE",
-      "status": "CREATED_SOURCE_READBACK_CONFIRMED",
+      "status": "UPDATED_READBACK_CONFIRMED",
       "url": "https://chatgpt.com/plugins/plugins_6afcb34d54c481918a1a317a6db628b2",
-      "external_listener": "NOT_PROVIDED_BY_PLUGIN"
+      "external_listener": "NOT_PROVIDED_BY_PLUGIN",
+      "current_release_id": "pluginrel_6afcb5fc5ce881919ef0f5dd73baae09"
     },
     "figjam": {
       "file_key": "mBeYn5jZU8mHRV7fco9eaU",
