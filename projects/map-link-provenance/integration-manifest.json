@@ -6,7 +6,15 @@
     "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
     "branch": "feat/map-link-provenance-project",
     "project_path": "projects/map-link-provenance/",
-    "status": "BRANCH_CREATED_CONTENT_PENDING_READBACK"
+    "status": "CONTENT_READBACK_CONFIRMED",
+    "head_commit": "35f0e24dff8416f4ea0f6e8585c3d70ea2a43ae2",
+    "file_commit_shas": {
+      "README.md": "ecb8e4d6e034ed6ca2a15a33eab0a46ba00b81cc",
+      "event-schema.json": "01da2d63ab0933d348bd60a80672b2b0e81c8481",
+      "sign_event.py": "1503294ff84979614e5d6d8008f9f973cdf03f69",
+      "integration-manifest.json": "5dc4a17bf54d6e74f8be9206efdcc3bdab7f5be2",
+      "sequence.mmd": "35f0e24dff8416f4ea0f6e8585c3d70ea2a43ae2"
+    }
   },
   "components": {
     "chatgpt_plugin": {
