@@ -1,0 +1,511 @@
+{
+  "schema_version": "1.0.0",
+  "project": "AI231/WANGA Logic Factory",
+  "status": "INTEGRATION_SPECIFICATION_PARTIALLY_SOURCE_BOUND",
+  "source_of_truth": {
+    "term_index": "milaot-hahigayon/INDEX.md",
+    "term_orchestrator": "milaot-hahigayon/ORCHESTRATOR.md",
+    "sentence_index": "milaot-hahigayon/sentences/INDEX.md",
+    "master_contract": "docs/LOGIC_FACTORY/MASTER_MAP_INTEGRATION_CONTRACT.md"
+  },
+  "gates": [
+    {
+      "gate_id": "GATE-א",
+      "gate": "א",
+      "term_range": [
+        1,
+        4
+      ],
+      "term_ids": [
+        "TERM-001",
+        "TERM-002",
+        "TERM-003",
+        "TERM-004"
+      ],
+      "source_status": "EXTRACTION_INCOMPLETE_OR_UNRESOLVED"
+    },
+    {
+      "gate_id": "GATE-ב",
+      "gate": "ב",
+      "term_range": [
+        5,
+        18
+      ],
+      "term_ids": [
+        "TERM-005",
+        "TERM-006",
+        "TERM-007",
+        "TERM-008",
+        "TERM-009",
+        "TERM-010",
+        "TERM-011",
+        "TERM-012",
+        "TERM-013",
+        "TERM-014",
+        "TERM-015",
+        "TERM-016",
+        "TERM-017",
+        "TERM-018"
+      ],
+      "source_status": "EXTRACTION_INCOMPLETE_OR_UNRESOLVED"
+    },
+    {
+      "gate_id": "GATE-ג",
+      "gate": "ג",
+      "term_range": [
+        19,
+        23
+      ],
+      "term_ids": [
+        "TERM-019",
+        "TERM-020",
+        "TERM-021",
+        "TERM-022",
+        "TERM-023"
+      ],
+      "source_status": "EXTRACTION_INCOMPLETE_OR_UNRESOLVED"
+    },
+    {
+      "gate_id": "GATE-ד",
+      "gate": "ד",
+      "term_range": [
+        24,
+        36
+      ],
+      "term_ids": [
+        "TERM-024",
+        "TERM-025",
+        "TERM-026",
+        "TERM-027",
+        "TERM-028",
+        "TERM-029",
+        "TERM-030",
+        "TERM-031",
+        "TERM-032",
+        "TERM-033",
+        "TERM-034",
+        "TERM-035",
+        "TERM-036"
+      ],
+      "source_status": "EXTRACTION_INCOMPLETE_OR_UNRESOLVED"
+    },
+    {
+      "gate_id": "GATE-ה",
+      "gate": "ה",
+      "term_range": [
+        37,
+        40
+      ],
+      "term_ids": [
+        "TERM-037",
+        "TERM-038",
+        "TERM-039",
+        "TERM-040"
+      ],
+      "source_status": "EXTRACTION_INCOMPLETE_OR_UNRESOLVED"
+    },
+    {
+      "gate_id": "GATE-ו",
+      "gate": "ו",
+      "term_range": [
+        41,
+        51
+      ],
+      "term_ids": [
+        "TERM-041",
+        "TERM-042",
+        "TERM-043",
+        "TERM-044",
+        "TERM-045",
+        "TERM-046",
+        "TERM-047",
+        "TERM-048",
+        "TERM-049",
+        "TERM-050",
+        "TERM-051"
+      ],
+      "source_status": "EXTRACTION_INCOMPLETE_OR_UNRESOLVED"
+    },
+    {
+      "gate_id": "GATE-ז",
+      "gate": "ז",
+      "term_range": [
+        52,
+        63
+      ],
+      "term_ids": [
+        "TERM-052",
+        "TERM-053",
+        "TERM-054",
+        "TERM-055",
+        "TERM-056",
+        "TERM-057",
+        "TERM-058",
+        "TERM-059",
+        "TERM-060",
+        "TERM-061",
+        "TERM-062",
+        "TERM-063"
+      ],
+      "source_status": "EXTRACTION_INCOMPLETE_OR_UNRESOLVED"
+    },
+    {
+      "gate_id": "GATE-ח",
+      "gate": "ח",
+      "term_range": [
+        64,
+        79
+      ],
+      "term_ids": [
+        "TERM-064",
+        "TERM-065",
+        "TERM-066",
+        "TERM-067",
+        "TERM-068",
+        "TERM-069",
+        "TERM-070",
+        "TERM-071",
+        "TERM-072",
+        "TERM-073",
+        "TERM-074",
+        "TERM-075",
+        "TERM-076",
+        "TERM-077",
+        "TERM-078",
+        "TERM-079"
+      ],
+      "source_status": "EXTRACTION_INCOMPLETE_OR_UNRESOLVED"
+    },
+    {
+      "gate_id": "GATE-ט",
+      "gate": "ט",
+      "term_range": [
+        80,
+        89
+      ],
+      "term_ids": [
+        "TERM-080",
+        "TERM-081",
+        "TERM-082",
+        "TERM-083",
+        "TERM-084",
+        "TERM-085",
+        "TERM-086",
+        "TERM-087",
+        "TERM-088",
+        "TERM-089"
+      ],
+      "source_status": "EXTRACTED"
+    },
+    {
+      "gate_id": "GATE-י",
+      "gate": "י",
+      "term_range": [
+        90,
+        107
+      ],
+      "term_ids": [
+        "TERM-090",
+        "TERM-091",
+        "TERM-092",
+        "TERM-093",
+        "TERM-094",
+        "TERM-095",
+        "TERM-096",
+        "TERM-097",
+        "TERM-098",
+        "TERM-099",
+        "TERM-100",
+        "TERM-101",
+        "TERM-102",
+        "TERM-103",
+        "TERM-104",
+        "TERM-105",
+        "TERM-106",
+        "TERM-107"
+      ],
+      "source_status": "EXTRACTED"
+    },
+    {
+      "gate_id": "GATE-יא",
+      "gate": "יא",
+      "term_range": [
+        108,
+        123
+      ],
+      "term_ids": [
+        "TERM-108",
+        "TERM-109",
+        "TERM-110",
+        "TERM-111",
+        "TERM-112",
+        "TERM-113",
+        "TERM-114",
+        "TERM-115",
+        "TERM-116",
+        "TERM-117",
+        "TERM-118",
+        "TERM-119",
+        "TERM-120",
+        "TERM-121",
+        "TERM-122",
+        "TERM-123"
+      ],
+      "source_status": "EXTRACTED"
+    },
+    {
+      "gate_id": "GATE-יב",
+      "gate": "יב",
+      "term_range": [
+        124,
+        132
+      ],
+      "term_ids": [
+        "TERM-124",
+        "TERM-125",
+        "TERM-126",
+        "TERM-127",
+        "TERM-128",
+        "TERM-129",
+        "TERM-130",
+        "TERM-131",
+        "TERM-132"
+      ],
+      "source_status": "EXTRACTED"
+    },
+    {
+      "gate_id": "GATE-יג",
+      "gate": "יג",
+      "term_range": [
+        133,
+        149
+      ],
+      "term_ids": [
+        "TERM-133",
+        "TERM-134",
+        "TERM-135",
+        "TERM-136",
+        "TERM-137",
+        "TERM-138",
+        "TERM-139",
+        "TERM-140",
+        "TERM-141",
+        "TERM-142",
+        "TERM-143",
+        "TERM-144",
+        "TERM-145",
+        "TERM-146",
+        "TERM-147",
+        "TERM-148",
+        "TERM-149"
+      ],
+      "source_status": "EXTRACTED"
+    },
+    {
+      "gate_id": "GATE-יד",
+      "gate": "יד",
+      "term_range": [
+        150,
+        175
+      ],
+      "term_ids": [
+        "TERM-150",
+        "TERM-151",
+        "TERM-152",
+        "TERM-153",
+        "TERM-154",
+        "TERM-155",
+        "TERM-156",
+        "TERM-157",
+        "TERM-158",
+        "TERM-159",
+        "TERM-160",
+        "TERM-161",
+        "TERM-162",
+        "TERM-163",
+        "TERM-164",
+        "TERM-165",
+        "TERM-166",
+        "TERM-167",
+        "TERM-168",
+        "TERM-169",
+        "TERM-170",
+        "TERM-171",
+        "TERM-172",
+        "TERM-173",
+        "TERM-174",
+        "TERM-175"
+      ],
+      "source_status": "EXTRACTED"
+    }
+  ],
+  "map_families": [
+    {
+      "map_family_id": "CHAPTER_MAPS",
+      "planned_count": 14,
+      "description": "13 chapter maps plus one chapter-14 synthesis map",
+      "status": "CHAPTER_TO_GATE_MAPPING_UNRESOLVED"
+    },
+    {
+      "map_family_id": "EXISTING_13_DIAGRAMS",
+      "planned_count": 13,
+      "description": "Preserve original 13-diagram sequence; map to chapters/gates only after relation checking",
+      "status": "RELATION_MAPPING_PENDING"
+    },
+    {
+      "map_family_id": "META_MAPS",
+      "artifacts": [
+        "Place_Photograph_Complete-1.xlsx",
+        "Division_Reason_Photograph.xlsx",
+        "Terms_Logic_Photograph.xlsx",
+        "Logic_Photograph_Gaps.xlsx"
+      ],
+      "status": "FILE_BYTES_AND_SHEET_SCHEMA_UNVERIFIED"
+    },
+    {
+      "map_family_id": "TERM_MAPS",
+      "planned_count": 175,
+      "description": "One linked map per indexed term",
+      "status": "NOT_YET_GENERATED"
+    },
+    {
+      "map_family_id": "NETWORK_MAP",
+      "components": [
+        "Propagated Logic",
+        "XL Links",
+        "Logical Map Clock"
+      ],
+      "status": "SPECIFICATION"
+    }
+  ],
+  "pipeline_configurations": [
+    {
+      "config_id": "SERIAL_RETURN",
+      "stages": [
+        "source_snapshot",
+        "gate_routing",
+        "term_retrieval",
+        "relation_checks",
+        "validation",
+        "readout"
+      ],
+      "status": "SPECIFIED_NOT_DEPLOYED"
+    },
+    {
+      "config_id": "PARALLEL_14_GATE",
+      "workers": [
+        "PAR-01",
+        "PAR-02",
+        "PAR-03",
+        "PAR-04",
+        "PAR-05",
+        "PAR-06",
+        "PAR-07",
+        "PAR-08",
+        "PAR-09",
+        "PAR-10",
+        "PAR-11",
+        "PAR-12",
+        "PAR-13",
+        "PAR-14"
+      ],
+      "stages": [
+        "immutable_snapshot",
+        "parallel_gate_workers",
+        "aggregation",
+        "validation"
+      ],
+      "status": "SPECIFIED_NOT_DEPLOYED"
+    },
+    {
+      "config_id": "COMPARISON",
+      "stages": [
+        "serial_output",
+        "parallel_output",
+        "same_snapshot_comparison",
+        "omission_conflict_drift_report"
+      ],
+      "status": "SPECIFIED_NOT_DEPLOYED"
+    }
+  ],
+  "agent_roles": [
+    "OR-01",
+    "SRC-01",
+    "TERM-175",
+    "GATE-01",
+    "GATE-02",
+    "GATE-03",
+    "GATE-04",
+    "GATE-05",
+    "GATE-06",
+    "GATE-07",
+    "GATE-08",
+    "GATE-09",
+    "GATE-10",
+    "GATE-11",
+    "GATE-12",
+    "GATE-13",
+    "GATE-14",
+    "SER-01",
+    "PAR-01",
+    "PAR-02",
+    "PAR-03",
+    "PAR-04",
+    "PAR-05",
+    "PAR-06",
+    "PAR-07",
+    "PAR-08",
+    "PAR-09",
+    "PAR-10",
+    "PAR-11",
+    "PAR-12",
+    "PAR-13",
+    "PAR-14",
+    "CMP-01",
+    "DRIFT-01",
+    "VAL-01",
+    "DELTA-01"
+  ],
+  "status_vocabulary": [
+    "INDEXED",
+    "SOURCE-CHECKED",
+    "RELATION-CHECKED",
+    "VERIFIED",
+    "HYPOTHESIS",
+    "UNRESOLVED",
+    "REJECTED",
+    "STALE",
+    "BLOCKED",
+    "ABSTAIN"
+  ],
+  "link_rule": "Every edge requires stable IDs, evidence_ref, evidence_location, relation_status and dependency_policy. Similar labels are not evidence.",
+  "logical_map_clock": {
+    "meaning": "Map-change sequence tracking dependencies and affected map views; not a wall-clock substitute.",
+    "event_fields": [
+      "change_event_id",
+      "logical_map_sequence",
+      "timestamp",
+      "changed_node_ids",
+      "changed_edge_ids",
+      "source_commit_or_artifact_version",
+      "affected_map_ids",
+      "pipeline_config",
+      "validation_result"
+    ],
+    "update_policy": [
+      "snapshot",
+      "detect_delta",
+      "compute_reverse_dependency_closure",
+      "rebuild_affected_views",
+      "run_checks",
+      "mark_current_or_stale_or_blocked",
+      "record_return_path"
+    ]
+  },
+  "action_signature": {
+    "Timestamp": "2026-11-18T00:11:30+02:00",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "Action_ID": "AI231-MAP-REGISTRY-002",
+    "SHA256": "c3541353a4d8816d77c79503e4ef8a78312c85acf6d61a8c67325ca94484d3b0"
+  }
+}
