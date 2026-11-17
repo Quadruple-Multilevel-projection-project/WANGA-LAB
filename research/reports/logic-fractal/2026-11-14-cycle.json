@@ -1,0 +1,300 @@
+{
+  "schema_version": "wanga-unified-cycle/1.0",
+  "date": "2026-11-14",
+  "status": "IN_PROGRESS",
+  "sources_scanned": {
+    "github_unique_repositories": 63,
+    "public_repositories": 58,
+    "nonpublic_redacted": 5,
+    "github_batch_scanned": 10,
+    "library_items_read": 6,
+    "conversation_exports_found": 0
+  },
+  "access_gaps": [
+    "No explicit ChatGPT export artifact surfaced in targeted Library searches; no global conversation history scan.",
+    "48 public repositories remain in the bounded sweep.",
+    "Five nonpublic repository names/content excluded from public artifacts.",
+    "GitHub Actions cross-repository token not evidenced.",
+    "Limbo root workflow missing; PR #122 checks action_required."
+  ],
+  "source_registry": {
+    "current_source_records": 17,
+    "current_source_types": 11,
+    "new_records_added": 0,
+    "duplicate_records_added": 0,
+    "articles": 28,
+    "editorial_relation_links": 111
+  },
+  "logic": {
+    "claims_added": 0,
+    "new_provenance_linked_units": 0,
+    "last_readiness_logic_units": 28,
+    "composition_rules_active": 2,
+    "new_rules_added": 0,
+    "candidate_composition_paths_last_ci": 523,
+    "semantic_entailment_edges_added": 0
+  },
+  "mirror": {
+    "independent_reviews": 0,
+    "review_status": "REVIEW_REQUIRED",
+    "core_contradictions": "NOT_MEASURED_NO_INVENTORY"
+  },
+  "benchmark": {
+    "source_grounded_cases": 0,
+    "semantic_test_cases": 0,
+    "suites": 0,
+    "counterexamples": 0,
+    "holdout": false,
+    "status": "BLOCKED_INSUFFICIENT_REVIEWED_CASES"
+  },
+  "model": {
+    "name": "WANGA Typed Fractal Logic Candidate V0.1",
+    "status": "CANDIDATE_NOT_RELEASED",
+    "hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "scope": "THREE_SYNTHETIC_TYPED_FIXTURES",
+    "semantic_status": "NOT_YET_VERIFIED",
+    "backend": "NOT_CONFIGURED"
+  },
+  "ci": {
+    "last_logic_fractal_run_id": 43564186807,
+    "last_logic_fractal_run_date": "2026-11-14",
+    "builder_and_prior_tests": "PASS_ON_VALIDATED_HEAD",
+    "final_pr_proposal_step": "FAIL_NONEXISTENT_PATHSPEC",
+    "fix_branch": "automation/wanga-unified-cycle-2026-11-14",
+    "new_pr_ci": "PASS",
+    "first_pr_run_id": 43562891099,
+    "first_pr_run_status": "FAIL_TEST_WIX_MANIFEST_HARDCODED_18",
+    "regression": "Manifest count was correctly updated to 28; test was stale and hard-coded 18.",
+    "test_fix": "Committed dynamic catalog-derived count assertions in logic_wiki/tests/test_logic_wiki.py",
+    "pr_number": 144,
+    "workflow_runs": [
+      {
+        "name": "Logic Fractal Wiki Research",
+        "run_id": 43564186807,
+        "conclusion": "success"
+      },
+      {
+        "name": "WANGA Ecosystem Agent Sweep",
+        "run_id": 43564186824,
+        "conclusion": "success"
+      },
+      {
+        "name": "Repository Integrity",
+        "run_id": 43564186832,
+        "conclusion": "success"
+      },
+      {
+        "name": "CodeQL Advanced",
+        "run_id": 43564186867,
+        "conclusion": "success"
+      }
+    ],
+    "logic_fractal_steps": {
+      "wiki_build": "SUCCESS",
+      "wiki_tests": "SUCCESS",
+      "composer_tests": "SUCCESS",
+      "typed_fragment_tests": "SUCCESS",
+      "first_typed_fractal_builder": "SUCCESS",
+      "formal_reasoning_tests": "SUCCESS",
+      "source_grounded_benchmark_audit": "SUCCESS_ZERO_CASES",
+      "create_pull_request_step": "SKIPPED_PULL_REQUEST_EVENT"
+    },
+    "artifact": {
+      "name": "logic-wiki-research-report",
+      "size_bytes": 83167,
+      "sha256": "904be1958b24f3edfbb2a9268b8ab6b31de2f09b5c8af3e9071c999a969b4117",
+      "created_at": "2026-11-14T06:00:35Z",
+      "expires_at": "2027-02-12T06:00:20Z"
+    },
+    "scheduled_manual_pr_proposal_step_exercised": false,
+    "prior_scheduled_run": 42629315588,
+    "prior_scheduled_run_date": "2026-11-09",
+    "prior_scheduled_proposal_failure": "FAIL_NONEXISTENT_PATHSPEC",
+    "validated_head_sha": "cdc5983f770fc322383e2e4f54cf6ace9ccacb28",
+    "validated_pr_state": "OPEN_UNMERGED",
+    "prior_head_run_id": 43562980192,
+    "prior_head_run_status": "PASS",
+    "earlier_regression_run_id": 43562891099,
+    "earlier_regression_run_status": "FAIL_TEST_WIX_MANIFEST_HARDCODED_18",
+    "historical_scheduled_run": 42629315588,
+    "historical_scheduled_run_date": "2026-11-09",
+    "historical_scheduled_proposal_failure": "FAIL_NONEXISTENT_PATHSPEC"
+  },
+  "readiness": {
+    "gate": "FIRST_MODEL_ALPHA_V1",
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "thresholds": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "source_records": {
+      "observed": 17,
+      "required": 20
+    },
+    "source_classes": {
+      "observed": 11,
+      "required": 3
+    },
+    "logic_units_with_provenance": {
+      "observed": 28,
+      "required": 50
+    },
+    "composition_rules": {
+      "observed": 2,
+      "required": 20
+    },
+    "counterexamples": {
+      "observed": 0,
+      "required": 30
+    },
+    "semantic_cases": {
+      "observed": 0,
+      "required": 100
+    },
+    "benchmark_suites": {
+      "observed": 0,
+      "required": 3
+    },
+    "independent_reviews": {
+      "observed": 0,
+      "required": 2
+    },
+    "dangling_refs": 0,
+    "duplicate_ids": 0,
+    "holdout": false,
+    "mirror_review": false
+  },
+  "limbo": {
+    "pr": 122,
+    "branch": "deploy/limbo-cartography-core-v1",
+    "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+    "ahead": 63,
+    "behind": 34,
+    "map_version": "1.0.0",
+    "nodes": 14,
+    "edges": 19,
+    "incidents": 10,
+    "history_events": 2,
+    "unresolved_retest_incidents": 9,
+    "passing_retest_incidents": 1,
+    "recurrence_cluster_occurrences": 7,
+    "tuning_candidate": "TUNE-9c166900cc4ad5dd",
+    "tuning_replay": "NOT_RUN",
+    "latest_execution": "EXECUTION_RECORD_ONLY_2026-11-07",
+    "new_inputs": "NO_INPUTS_THIS_CYCLE",
+    "root_workflow": "MISSING"
+  },
+  "wix": {
+    "site_name": "Logic Engine Research Lab",
+    "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/",
+    "upload_id": "bce8ba31-77fe-4b2c-821c-480e5b017bd7",
+    "published": true,
+    "files_replaced": 3,
+    "files_total": 29,
+    "homepage_entry_cards": 28,
+    "readback": "PUBLISHED_READ_BACK_PARTIAL",
+    "site_panel_refreshed": true,
+    "site_status": "PUBLISHED",
+    "site_file_count": 29,
+    "live_readback": {
+      "method": "Connected Wix Headless files.list/read",
+      "date": "2026-11-14",
+      "pages_read": 3,
+      "full_site_audit": false,
+      "pages": [
+        {
+          "path": "logic-wiki.html",
+          "bytes": 53739,
+          "entry_class_count": 28,
+          "article_element_count": 27,
+          "interpretation": "28 entry cards are present; 27 use semantic article tags."
+        },
+        {
+          "path": "logic-wiki-research-status.html",
+          "bytes": 12315,
+          "contains_not_ready_marker": true,
+          "observed": {
+            "source_records": 17,
+            "source_classes": 11,
+            "logic_units_with_provenance": 28,
+            "composition_rules": 2,
+            "counterexamples": 0,
+            "semantic_cases": 0,
+            "independent_reviews": 0
+          }
+        },
+        {
+          "path": "logic-wiki-fractal-research.html",
+          "bytes": 12297,
+          "contains_catalog_counts": {
+            "articles": 28,
+            "source_records": 17,
+            "source_classes": 11
+          }
+        }
+      ],
+      "remaining_files_not_read": 26
+    }
+  },
+  "agents": [
+    {
+      "role": "repository-inventory",
+      "status": "COMPLETED",
+      "output": "10 public repositories scanned"
+    },
+    {
+      "role": "project-docs-collector",
+      "status": "COMPLETED_BOUNDED",
+      "output": "README plus selected docs"
+    },
+    {
+      "role": "conversation-export-collector",
+      "status": "BLOCKED",
+      "output": "No actual export"
+    },
+    {
+      "role": "logic-extractor",
+      "status": "IN_PROGRESS",
+      "output": "No new units promoted"
+    },
+    {
+      "role": "normalizer",
+      "status": "TESTED_LAST_CI",
+      "output": "Latest readiness artifact has no dangling refs or duplicate IDs"
+    },
+    {
+      "role": "fractal-composer",
+      "status": "TESTED_LAST_CI",
+      "output": "Synthetic two-level candidate"
+    },
+    {
+      "role": "mirror-reviewer",
+      "status": "REVIEW_REQUIRED",
+      "output": "No independent review"
+    },
+    {
+      "role": "benchmark-evaluator",
+      "status": "BLOCKED",
+      "output": "Zero reviewed semantic cases"
+    },
+    {
+      "role": "wiki-curator",
+      "status": "COMPLETED_PARTIAL",
+      "output": "Current catalog metrics recorded"
+    },
+    {
+      "role": "wix-publisher",
+      "status": "COMPLETED_PARTIAL",
+      "output": "Three pages published and read back"
+    },
+    {
+      "role": "limbo-cartographer",
+      "status": "IN_PROGRESS",
+      "output": "Cumulative map inspected; no new inputs"
+    }
+  ],
+  "next": [
+    "Verify CI for the new branch PR.",
+    "Do not merge automatically.",
+    "Reconcile PR #122 and move Limbo workflow to root .github/workflows through a separate PR.",
+    "Scan next 10 public repositories from the cursor.",
+    "Add reviewed source-grounded counterexamples and semantic benchmarks; keep Alpha blocked."
+  ]
+}

@@ -1,0 +1,203 @@
+{
+  "schema_version": "wanga-logic-fractal-cycle-report/1.0",
+  "date": "2026-11-15",
+  "sources_scanned": {
+    "github_repositories": 10,
+    "readme_files": 10,
+    "library_files_read": 3,
+    "regional_probe_files": 8,
+    "regional_probe_records": 48,
+    "conversation_exports": 0
+  },
+  "access_gaps": [
+    "No complete ChatGPT conversations.json or ZIP surfaced; no global conversation history scan.",
+    "Five nonpublic repository names/content remain redacted.",
+    "GitHub Actions cross-repository read token is not evidenced.",
+    "Regional probe records are NOT_CONFIGURED; no model outputs or HTTP results are present.",
+    "Wix site context resolves as published, but no live file read-back was available in this cycle; no Wix write was needed because no approved catalog change was made.",
+    "Limbo has no new crash inputs; the existing tuning candidate remains NOT_RUN."
+  ],
+  "new_sources": {
+    "ecosystem_readme_locators_added": 10,
+    "logic_wiki_source_records_added": 0,
+    "regional_observation_records_logged": 48
+  },
+  "duplicate_sources": {
+    "identical_readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+    "repositories": [
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "tribal-archery/Qdprojects"
+    ],
+    "duplicate_occurrences": 2,
+    "repository_identity_deduplicated": false
+  },
+  "claims_added": {
+    "ecosystem_findings_added": 12,
+    "source_grounded_logic_claims_added": 0
+  },
+  "logic_units": {
+    "public_new": 0,
+    "private_review_candidates": 2,
+    "promoted_to_verified": 0,
+    "note": "Two candidate structures were identified in private Library material and withheld from public publication pending privacy/source review."
+  },
+  "composition": {
+    "active_rules": 2,
+    "draft_rules": 1,
+    "structural_candidate_substructures": 523,
+    "semantic_entailments_added": 0
+  },
+  "contradictions": {
+    "new_confirmed": 0,
+    "critical_core_inventory": "NOT_MEASURED_NO_INVENTORY",
+    "policy_violations": [
+      {
+        "id": "REGIONAL_DIRECT_MAIN_WRITE",
+        "status": "CONFIRMED",
+        "resolution_pr": "146"
+      }
+    ]
+  },
+  "benchmarks": {
+    "software_ci": "PR144_ALL_PASS",
+    "semantic_cases": 0,
+    "benchmark_suites": 0,
+    "source_grounded_cases": 0,
+    "holdout": false,
+    "mirror_review": false,
+    "regional_model_outputs": 0
+  },
+  "ci": {
+    "pr144": {
+      "head": "9c09b42a5465eb83de85c8548f1e999d3e4984d0",
+      "compare": {
+        "ahead_by": 32,
+        "behind_by": 4
+      },
+      "runs": {
+        "repository_integrity": {
+          "run_id": 43683297128,
+          "status": "pending"
+        },
+        "wanga_ecosystem_agent_sweep": {
+          "run_id": 43683297125,
+          "status": "success"
+        },
+        "logic_fractal_wiki_research": {
+          "run_id": 43683297126,
+          "status": "success"
+        },
+        "codeql_advanced": {
+          "run_id": 43683297121,
+          "status": "in_progress",
+          "actions_analysis": "success",
+          "python_analysis": "in_progress"
+        }
+      }
+    },
+    "pr146": {
+      "number": 146,
+      "head": "30881f5319cd083b0fcc59530a44ce927e6e6006",
+      "state": "OPEN",
+      "compare": {
+        "ahead_by": 2,
+        "behind_by": 0
+      },
+      "mergeable": true,
+      "workflows": {
+        "repository_integrity": "SUCCESS",
+        "codeql_advanced": "SUCCESS"
+      },
+      "workflow_execution": "NOT_RUN_ON_PR_EVENT",
+      "policy": {
+        "manual_dispatch_only": true,
+        "allow_external_calls_default": false,
+        "endpoint_guard_count": 8,
+        "token_guard_count": 8,
+        "direct_main_push": false
+      }
+    },
+    "pr122": {
+      "number": 122,
+      "state": "OPEN_DRAFT",
+      "checks": "ACTION_REQUIRED",
+      "tuning_replay": "NOT_RUN"
+    },
+    "pr138": {
+      "number": 138,
+      "state": "OPEN_DRAFT",
+      "ahead_by": 45,
+      "behind_by": 29,
+      "checks": "PASS_ON_2026-11-09_HEAD_NOT_CURRENT_MAIN"
+    }
+  },
+  "model_hashes": {
+    "typed_synthetic_candidate": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "logic_agent_candidate": "fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf",
+    "semantic_status": "NOT_YET_VERIFIED"
+  },
+  "readiness_gate": {
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "thresholds": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "observed": {
+      "source_records": 17,
+      "source_classes": 11,
+      "logic_units_with_provenance": 28,
+      "composition_rules_with_contracts": 2,
+      "counterexamples": 0,
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "dangling_source_refs": 0,
+      "dangling_relation_refs": 0,
+      "duplicate_stable_ids": 0,
+      "deterministic_build": true,
+      "holdout_split": false,
+      "mirror_review": false,
+      "critical_core_contradictions": "NOT_MEASURED_NO_INVENTORY"
+    },
+    "required": {
+      "source_records": 20,
+      "source_classes": 3,
+      "logic_units_with_provenance": 50,
+      "composition_rules_with_contracts": 20,
+      "counterexamples": 30,
+      "semantic_test_cases": 100,
+      "benchmark_suites": 3,
+      "independent_review_cycles": 2,
+      "holdout_split": true,
+      "mirror_review": true
+    }
+  },
+  "epistemic_status": {
+    "built": [
+      "Wiki generation",
+      "two-level typed candidate from three synthetic fixtures"
+    ],
+    "tested": [
+      "PR144 software/unit/integrity/CodeQL workflows"
+    ],
+    "verified": [],
+    "not_verified": [
+      "semantic truth",
+      "source-grounded entailment",
+      "model capability",
+      "full Wix deployment read-back"
+    ]
+  },
+  "blocked": [
+    "Conversation export unavailable.",
+    "Semantic ground-truth cases and independent reviews absent.",
+    "Regional endpoint calls remain disabled by default in PR #146; main still has the old scheduled workflow until reviewed PR merge.",
+    "Limbo replay not run; no new crash inputs.",
+    "Wix live file read-back not completed this cycle."
+  ],
+  "next": [
+    "Verify PR146 CI; keep the regional publisher on branch→PR→CI and do not merge automatically.",
+    "Continue ecosystem batch 03 using the updated cursor.",
+    "Inspect NTM repository implementation/tests before cross-repo integration.",
+    "Reconcile Limbo PR122/PR138 against current main; preserve all incidents and run replay only with evidence.",
+    "Add reviewed source-grounded negative/boundary/counterexample cases and holdout before Alpha."
+  ]
+}

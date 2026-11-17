@@ -1,0 +1,67 @@
+{
+  "schema_version": "wanga-ecosystem-sweep-report/1.0",
+  "date": "2026-11-15",
+  "status": "COMPLETED_BOUNDED_BATCH",
+  "total_unique_accessible_repositories": 63,
+  "public_repositories": 58,
+  "nonpublic_or_private_redacted": 5,
+  "scanned_count": 10,
+  "remaining_public_count": 38,
+  "scanned_repositories": [
+    "AmbassadorOv/Nanomathematics",
+    "AmbassadorOv/multi-agent-orchestator",
+    "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+    "Quadruple-Multilevel-projection-project/skills",
+    "tribal-archery/-logicl-neural-order",
+    "tribal-archery/MAM-parsed",
+    "tribal-archery/Qdprojects",
+    "AmbassadorOv/python-genai",
+    "AmbassadorOv/openai_tiktoken",
+    "AmbassadorOv/platform-samples"
+  ],
+  "next_batch": [
+    "AmbassadorOv/-artificial-y",
+    "AmbassadorOv/AG-triple-X-",
+    "AmbassadorOv/AmbassadorOv",
+    "AmbassadorOv/awesome-chatgpt-prompts",
+    "AmbassadorOv/branches-",
+    "AmbassadorOv/chatgpt-scientific-publications-extension",
+    "AmbassadorOv/cookbook",
+    "AmbassadorOv/desktop",
+    "AmbassadorOv/docs",
+    "AmbassadorOv/eslint"
+  ],
+  "duplicate_readme_blob": {
+    "sha256": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+    "repositories": [
+      "AmbassadorOv/Nanomathematics",
+      "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
+      "tribal-archery/Qdprojects"
+    ],
+    "repository_identity_deduplicated": false
+  },
+  "key_findings": [
+    "NTM README in tribal-archery/-logicl-neural-order documents 28 modes and evidence/provenance claims; code/tests not verified in this batch.",
+    "AmbassadorOv/multi-agent-orchestator documents a generic three-agent classifier/retriever/reasoner architecture; no WANGA integration proven.",
+    "tribal-archery/MAM-parsed documents an unstable parsed Miqra dataset format; no ingestion performed.",
+    "Eight regional collector files on WANGA main contain 48 NOT_CONFIGURED records and no model outputs.",
+    "Regional workflow used direct git push to main; PR #146 changes this to PR-based publication."
+  ],
+  "private_content_published": false,
+  "other_repositories_modified": false,
+  "logic_wiki_source_records_added": 0,
+  "pr146": {
+    "number": 146,
+    "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/146",
+    "head": "30881f5319cd083b0fcc59530a44ce927e6e6006",
+    "state": "OPEN",
+    "ahead_by": 2,
+    "behind_by": 0,
+    "mergeable": true,
+    "repository_integrity": "SUCCESS",
+    "codeql": "SUCCESS",
+    "manual_dispatch_only": true,
+    "external_calls_default": false
+  },
+  "regional_workflow_policy": "PR #146 replaces direct main push with review PR and removes the 15-minute schedule; it is not merged, so main remains unchanged until review."
+}

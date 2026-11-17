@@ -1,23 +1,23 @@
 {
   "schema_version": "logic-wiki-wix-sync/1.0",
-  "last_sync_date": "2026-10-12",
+  "last_sync_date": "2026-11-14",
   "status": "PUBLISHED_READ_BACK_PARTIAL",
   "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
   "wiki_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
   "source_catalog": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/articles.json",
-  "synced_article_count": 18,
-  "source_record_count": 16,
-  "relation_link_count": 102,
+  "synced_article_count": 28,
+  "source_record_count": 17,
+  "relation_link_count": 111,
   "homepage_navigation_verified": true,
   "homepage_card_verified": true,
   "existing_model_builder_preserved": true,
   "existing_corpus_atlas_preserved": true,
-  "verification_method": "Wix upload API returned HTTP 200. Public fetch confirmed the new research page title, navigation from homepage and Logic Wiki, and links to the GitHub catalog/taxonomy. Extracted public page text was partial, so exact topic-by-topic read-back remains incomplete.",
+  "verification_method": "Connected Wix Headless patch published upload bce8ba31-77fe-4b2c-821c-480e5b017bd7. Read-back verified logic-wiki-research-status.html (12,315 bytes), logic-wiki.html (53,739 bytes; 28 entry cards), and logic-wiki-fractal-research.html (12,297 bytes). The other 26 site files were not re-read in this cycle; status is therefore partial, not a full-site audit.",
   "automation_boundary": "Connected Wix upload/read-back was used. GitHub Actions does not have Wix credentials; scheduled research must use the connected Wix integration and record a read-back result.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
-  "note": "18 legacy catalog entries remain on the core Logic Wiki. The GitHub research catalog contains 27 entries, including 9 new concepts described on the supplemental fractal-research page. Publication is not semantic verification.",
+  "note": "GitHub catalog snapshot: 28 articles, 17 source records and 11 source types; 111 editorial relation links. Last readiness report counted 28 provenance-linked logic units, 2 active composition contracts, 0 source-grounded counterexamples, 0 semantic benchmark cases, 0 benchmark suites and 0 independent reviews. First model remains NOT_READY_INTERNAL_CANDIDATE_ONLY. Source registration and catalog links do not prove semantic truth.",
   "extended_topic_page_count": 10,
-  "main_page_card_count": 27,
+  "main_page_card_count": 28,
   "extended_page_resources": [
     {
       "id": "wiki-page-research-status",
@@ -108,9 +108,22 @@
   "fractal_research_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki-fractal-research.html",
   "fractal_research_navigation_verified": true,
   "additional_pages": [
+    "logic-wiki-research-status.html",
     "logic-wiki-fractal-research.html"
   ],
-  "main_page_catalog_article_count": 18,
-  "research_catalog_article_count": 27,
-  "supplemental_research_concept_count": 9
+  "main_page_catalog_article_count": 28,
+  "research_catalog_article_count": 28,
+  "supplemental_research_concept_count": 9,
+  "source_class_count": 11,
+  "readback_scope": {
+    "upload_id": "bce8ba31-77fe-4b2c-821c-480e5b017bd7",
+    "published": true,
+    "files_replaced": [
+      "logic-wiki-research-status.html",
+      "logic-wiki.html",
+      "logic-wiki-fractal-research.html"
+    ],
+    "homepage_entry_cards": 28,
+    "all_site_files_reaudited": false
+  }
 }
