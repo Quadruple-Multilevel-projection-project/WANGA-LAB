@@ -1,0 +1,58 @@
+{
+  "project": "Map Link Provenance",
+  "version": "0.1.0",
+  "contract_start_time": "2026-11-17T20:29:00+02:00",
+  "repository": {
+    "full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "branch": "feat/map-link-provenance-project",
+    "project_path": "projects/map-link-provenance/",
+    "status": "BRANCH_CREATED_CONTENT_PENDING_READBACK"
+  },
+  "components": {
+    "chatgpt_plugin": {
+      "name": "map-link-provenance",
+      "plugin_id": "plugins_6afcb34d54c481918a1a317a6db628b2",
+      "version": "0.1.0",
+      "visibility": "PRIVATE",
+      "status": "CREATED_SOURCE_READBACK_CONFIRMED",
+      "url": "https://chatgpt.com/plugins/plugins_6afcb34d54c481918a1a317a6db628b2",
+      "external_listener": "NOT_PROVIDED_BY_PLUGIN"
+    },
+    "figjam": {
+      "file_key": "mBeYn5jZU8mHRV7fco9eaU",
+      "url": "https://www.figma.com/board/mBeYn5jZU8mHRV7fco9eaU",
+      "diagram": "Map Link Provenance — Bilateral Timestamp Receipts",
+      "status": "DIAGRAM_ADDED_TO_EXISTING_FILE"
+    },
+    "wix": {
+      "site_name": "Map Link Provenance",
+      "site_id": "f3a43d48-2263-4b32-ad69-f4fa2939ded5",
+      "url": "https://headless-smcvcvopnwd-beywolf5-1408.wix-site-host.com",
+      "status": "STATIC_SITE_PUBLISHED",
+      "custom_domain": "NOT_CONNECTED"
+    },
+    "agentmail": {
+      "status": "THREE_EXISTING_AGENT_INBOXES_DISCOVERED",
+      "routing_to_project_events": "NOT_CONFIGURED",
+      "public_mailbox_addresses": "OMITTED"
+    },
+    "gmail": {
+      "status": "THREE_AGENT_LABELS_CREATED",
+      "labels_are_google_groups": false,
+      "automatic_filters": "NOT_CONFIGURED"
+    },
+    "external_map_adapters": {
+      "status": "NOT_CONFIGURED",
+      "required": [
+        "documented source and destination event APIs",
+        "authenticated webhook adapters",
+        "durable event storage",
+        "idempotency and replay protection",
+        "delivery test",
+        "bilateral read-back test"
+      ]
+    }
+  },
+  "acceptance_state": "SPECIFIED_NOT_PRODUCTION_VERIFIED",
+  "verification_boundary": "Plugin file read-back and Wix publication are confirmed; external map event delivery and bilateral ingestion are not verified."
+}
