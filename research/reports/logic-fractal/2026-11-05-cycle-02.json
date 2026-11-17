@@ -1,0 +1,93 @@
+{
+  "date": "2026-11-05",
+  "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+  "main_snapshot": {
+    "articles": 28,
+    "source_records": 17,
+    "source_classes": 11,
+    "relation_links": 111,
+    "taxonomy_nodes": 27,
+    "missing_taxonomy_article": "ark-swarm-logic-trader"
+  },
+  "review_branch": {
+    "pr": 136,
+    "head_sha": "63b07d21bb59d51ffd459ec8ee404190d9bebbbc",
+    "behind_by": 0,
+    "articles": 29,
+    "source_records": 18,
+    "source_classes": 12,
+    "relation_links": 114,
+    "taxonomy_nodes": 29,
+    "structural_validation": "PASS",
+    "ci_runs": [
+      41978292136,
+      41978292138,
+      41978292218,
+      41978292166
+    ]
+  },
+  "candidate": {
+    "status": "CANDIDATE_NOT_RELEASED",
+    "semantic_status": "NOT_YET_VERIFIED",
+    "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "candidate_json_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+    "artifact_zip_sha256": "71a41115f07cc6936d918001a71858f854e8cb09abdf8aa011832e2d1354e28f",
+    "artifact_size_bytes": 92173,
+    "fixture_scope": "SYNTHETIC_ONLY",
+    "release_gate": "BLOCKED_PENDING_REAL_SOURCE_FRAGMENTS_NEGATIVE_BOUNDARY_TESTS_AND_INDEPENDENT_REVIEW"
+  },
+  "composition": {
+    "active_rules": 2,
+    "total_declared_rules": 3,
+    "structural_candidate_compositions": 535,
+    "semantically_verified_compositions": 0
+  },
+  "readiness": {
+    "threshold_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "observed": {
+      "source_records": 18,
+      "source_classes": 12,
+      "logic_units_with_provenance": 29,
+      "composition_rules_with_contracts": 2,
+      "counterexample_cases": 0,
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "unresolved_dangling_source_refs": 0,
+      "unresolved_dangling_relation_refs": 0,
+      "unresolved_duplicate_stable_ids": 0,
+      "critical_core_contradictions": "NOT_MEASURED_NO_INVENTORY",
+      "deterministic_build": true,
+      "holdout_split": false,
+      "mirror_review": false
+    },
+    "deficits": {
+      "source_records": 2,
+      "logic_units_with_provenance": 21,
+      "composition_rules_with_contracts": 18,
+      "counterexample_cases": 30,
+      "semantic_test_cases": 100,
+      "benchmark_suites": 3,
+      "independent_review_cycles": 2,
+      "critical_core_contradictions": "NO_INVENTORY",
+      "holdout_split": true,
+      "mirror_review": true
+    }
+  },
+  "tests": {
+    "logic_wiki_structural_validation": "PASS",
+    "logic_fractal_composer_software_tests": "PASS",
+    "typed_multiscale_fragment_tests": "PASS",
+    "first_candidate_builder": "PASS_SYNTHETIC_ONLY",
+    "semantic_ground_truth_cases": 0,
+    "semantic_benchmark_suites": 0
+  },
+  "conversation_export_records": 0,
+  "wix_sync": "NOT_PERFORMED_PENDING_PR_APPROVAL",
+  "epistemic_distinction": {
+    "built": true,
+    "tested": true,
+    "verified": false,
+    "notes": "Software tests and deterministic synthetic build do not establish semantic truth; editorial relation links are not entailment."
+  }
+}

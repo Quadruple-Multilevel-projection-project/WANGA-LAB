@@ -1,0 +1,195 @@
+{
+  "schema_version": "wanga-ecosystem-batch-report/1.1",
+  "date": "2026-11-06",
+  "generated_at_utc": "2026-11-06T05:38:50Z",
+  "status": "COMPLETED_WITH_ACCESS_GAPS",
+  "snapshot": {
+    "unique_repositories_visible": 63,
+    "public_repositories": 58,
+    "private_repositories_redacted": 5,
+    "affiliation_counts": {
+      "owner": 38,
+      "collaborator": 13,
+      "organization_member": 25
+    },
+    "note": "Affiliation counts overlap; repository inventory is a live access snapshot."
+  },
+  "batch": {
+    "batch_id": "2026-11-06-public-batch-01",
+    "scanned_public_repositories": 10,
+    "readme_present": 8,
+    "readme_missing": 1,
+    "empty_repositories": 1,
+    "additional_documents_read": 4,
+    "cumulative_public_scanned": 51,
+    "public_total": 58,
+    "remaining_public": 7
+  },
+  "scanned_repositories": [
+    {
+      "full_name": "AmbassadorOv/python-genai",
+      "default_branch": "main",
+      "visibility": "public",
+      "latest_known_update": "2026-10-29T19:19:21Z",
+      "readme_blob_sha": "c5ba72e6d6b2ce6e4e12b9a93d81f10a68cc2f8e",
+      "summary": "Google Gen AI Python SDK for Gemini Developer API and Vertex AI; external adapter surface only; no WANGA logic source and no API calls.",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED"
+    },
+    {
+      "full_name": "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "default_branch": "master",
+      "visibility": "public",
+      "latest_known_update": "2026-10-19T19:00:52Z",
+      "readme_blob_sha": "3dd3c4fdfda2e43c50ba4e706ee16344d9f21488",
+      "summary": "README presents a Unity-Theorem/quantum-linguistics template; no runnable implementation or WANGA semantic evidence established.",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED"
+    },
+    {
+      "full_name": "AmbassadorOv/test-notebook-links",
+      "default_branch": "master",
+      "visibility": "public",
+      "latest_known_update": "2026-01-07T10:43:52Z",
+      "readme_blob_sha": "cad8e71d3b07510fbcf15d7051db725b9a579cae",
+      "summary": "README contains test Colab and localhost links only; no substantive WANGA logic source.",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED"
+    },
+    {
+      "full_name": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "default_branch": "main",
+      "visibility": "public",
+      "latest_known_update": "2026-10-22T06:42:17Z",
+      "readme_blob_sha": "ac7a2d203877442ddba493889239e61aed56ec78",
+      "summary": "Think Tank Teams / Artificial Philosopher orchestration concept; four architecture documents specify registry, orchestration, C1/C2 gates and proposal-only neural substrate; structural candidates only.",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED"
+    },
+    {
+      "full_name": "AmbassadorOv/TTTTproject-un.govt",
+      "default_branch": "master",
+      "visibility": "public",
+      "latest_known_update": "2026-10-22T06:42:15Z",
+      "readme_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "summary": "README contains only the World-Party-Federation-Branches-managers title; duplicate README blob with that separate repository.",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED"
+    },
+    {
+      "full_name": "AmbassadorOv/unetbootin",
+      "default_branch": "master",
+      "visibility": "public",
+      "latest_known_update": "2025-12-09T20:05:57Z",
+      "readme_blob_sha": null,
+      "summary": "README.md returned 404; no content-based finding.",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED"
+    },
+    {
+      "full_name": "AmbassadorOv/vqbshtfsprojects.org",
+      "default_branch": "main",
+      "visibility": "public",
+      "latest_known_update": "2025-09-12T13:26:57Z",
+      "readme_blob_sha": null,
+      "summary": "GitHub API reports an empty public repository; no README or source files.",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED"
+    },
+    {
+      "full_name": "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "default_branch": "master",
+      "visibility": "public",
+      "latest_known_update": "2024-12-04T06:09:54Z",
+      "readme_blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "summary": "Azure Blockchain Development Kit for Ethereum development; no WANGA logic or fractal source.",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED"
+    },
+    {
+      "full_name": "AmbassadorOv/vscode-docs",
+      "default_branch": "main",
+      "visibility": "public",
+      "latest_known_update": "2025-06-11T03:07:10Z",
+      "readme_blob_sha": "eb997a5d18ce1c9ae0ad480dfc93d73b51a5b570",
+      "summary": "Visual Studio Code documentation repository; no WANGA logic source.",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED"
+    },
+    {
+      "full_name": "AmbassadorOv/World-Party-Federation-Branches-managers",
+      "default_branch": "master",
+      "visibility": "public",
+      "latest_known_update": "2026-10-22T06:42:03Z",
+      "readme_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "summary": "README contains only repository title; duplicate README blob with AmbassadorOv/TTTTproject-un.govt.",
+      "permission_scope": "PUBLIC_REPOSITORY_READ_ONLY; NO_WRITE_PERFORMED"
+    }
+  ],
+  "additional_documents": [
+    {
+      "repository": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "path": "architecture/ALGORITHMIC_INTERIOR_REGISTRY.md",
+      "blob_sha": "fa4dcee62706b4aea37afdfd013d2a3e2b2f8a2e"
+    },
+    {
+      "repository": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "path": "architecture/ARTIFICIAL_PHILOSOPHER_ORCHESTRATION.md",
+      "blob_sha": "28ae6093db718fc14efdc9306b61d9803c40ee45"
+    },
+    {
+      "repository": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "path": "architecture/GOLEM_TRVM_C1_C2.md",
+      "blob_sha": "bc81260a20118ad63172f3062e549aa63e739e3c"
+    },
+    {
+      "repository": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "path": "architecture/NEURAL_SUBSTRATE_UPDATE.md",
+      "blob_sha": "99557b9c038df1f1480784dcd87eabf1e5164498"
+    }
+  ],
+  "duplicate_content": [
+    {
+      "blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "repositories": [
+        "AmbassadorOv/TTTTproject-un.govt",
+        "AmbassadorOv/World-Party-Federation-Branches-managers"
+      ],
+      "status": "IDENTICAL_README_BLOB_DISTINCT_REPOSITORIES"
+    }
+  ],
+  "extraction": {
+    "new_wanga_logic_units": 0,
+    "cross_repository_structural_candidates": 4,
+    "semantic_entailments_added": 0,
+    "new_composition_rules": 0,
+    "weights_added": 0
+  },
+  "access_gaps": [
+    "Five private repositories remain redacted.",
+    "No conversations.json or ChatGPT export ZIP was found in the exposed current conversation/Library search; this is not a global history scan.",
+    "GitHub Actions lacks CROSS_REPO_READ_TOKEN and scans only WANGA-LAB; this batch used the connected live GitHub connector.",
+    "Seven public repositories remain."
+  ],
+  "ci": {
+    "latest_ecosystem_workflow_run": 42170997129,
+    "run_number": 170,
+    "conclusion": "success",
+    "scope": "CURRENT_REPOSITORY_ONLY",
+    "cross_repo_read_token_configured": false,
+    "artifact_id": 13481086149,
+    "artifact_size_bytes": 3222,
+    "started_at": "2026-11-06T05:52:41Z",
+    "completed_at": "2026-11-06T05:53:03Z",
+    "duration_seconds": 22,
+    "runner_name": "NOT_EXPOSED_BY_GITHUB_CONNECTOR",
+    "note": "The GitHub Actions runner completed its own WANGA-LAB-only scan; the 10-repository batch in this report was collected separately through the connected live GitHub connector."
+  },
+  "next_batch": [
+    "Quadruple-Multilevel-projection-project/-",
+    "Quadruple-Multilevel-projection-project/-from-Corsican-",
+    "Quadruple-Multilevel-projection-project/branches-",
+    "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+    "tribal-archery/mermaid",
+    "tribal-archery/unetbootin",
+    "tribal-archery/vscode-azure-blockchain-ethereum"
+  ],
+  "next": "Scan the seven remaining public repositories; keep private repositories redacted and do not write to external repositories.",
+  "review_branch_head_at_scan": "81fc1210710b06edd5872e05ffb2f3ae0b0a7334",
+  "review_branch_compare_to_main": {
+    "ahead_by": 46,
+    "behind_by": 4,
+    "status": "DIVERGED"
+  }
+}

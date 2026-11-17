@@ -27,16 +27,63 @@ class LogicWikiTests(unittest.TestCase):
   report=json.loads((out/'readiness-report.json').read_text(encoding='utf-8'))
   catalog=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
   self.assertEqual(report['article_count'],len(catalog['articles']))
+  self.assertEqual(report['observed']['source_records'],len(catalog['sources']))
+  self.assertEqual(report['observed']['logic_units_with_provenance'],sum(1 for a in catalog['articles'] if a.get('sources')))
+  self.assertIsNone(report['observed']['critical_core_contradictions'])
+  self.assertFalse(report['observed']['contradiction_inventory_available'])
+  self.assertFalse(report['checks']['critical_core_contradictions'])
+  self.assertIn('critical_core_contradictions',report['missing_requirements'])
   self.assertNotEqual(report['readiness_gate_status'],'CANDIDATE_RELEASE_READY_FOR_HUMAN_REVIEW')
  def test_wix_sync_manifest_records_stable_extended_resources(self):
+  catalog=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
   manifest=json.loads((ROOT/'logic_wiki/data/wix_sync_manifest.json').read_text(encoding='utf-8'))
-  self.assertEqual(manifest['synced_article_count'],18)
+  catalog_counts={
+   'articles':len(catalog['articles']),
+   'source_records':len(catalog['sources']),
+   'relation_links':sum(len(a.get('relations',[])) for a in catalog['articles'])
+  }
+  readback_counts=manifest['last_readback_counts']
+  self.assertEqual(manifest['synced_article_count'],readback_counts['articles'])
+  self.assertEqual(manifest['source_record_count'],readback_counts['source_records'])
+  self.assertEqual(manifest['relation_link_count'],readback_counts['relation_links'])
+  self.assertEqual(manifest['main_page_card_count'],readback_counts['articles'])
+  self.assertEqual(manifest['research_catalog_article_count'],readback_counts['articles'])
+  self.assertEqual(manifest['current_catalog_counts'],catalog_counts)
+  self.assertEqual(manifest['catalog_readback_delta'],{
+   key:catalog_counts[key]-readback_counts[key] for key in catalog_counts
+  })
+  self.assertEqual(manifest['catalog_readback_delta_status'],'UNRESOLVED_ITEM_LEVEL_GAP_NO_WIX_WRITE')
+  self.assertTrue(all(value>=0 for value in manifest['catalog_readback_delta'].values()))
   self.assertEqual(manifest['extended_topic_page_count'],10)
   ids=[x['id'] for x in manifest['extended_page_resources']]
   self.assertEqual(len(ids),10)
   self.assertEqual(len(ids),len(set(ids)))
   self.assertTrue(all(x.get('source_refs') for x in manifest['extended_page_resources']))
   self.assertTrue(manifest['all_extended_resources_have_source_or_explicit_local_boundary'])
+
+ def test_taxonomy_covers_catalog_and_declared_relations(self):
+  catalog=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
+  taxonomy=json.loads((ROOT/'logic_wiki/data/fractal_taxonomy.json').read_text(encoding='utf-8'))
+  article_ids={x['id'] for x in catalog['articles']}
+  node_ids={x['id'] for x in taxonomy['nodes']}
+  source_ids={x['id'] for x in catalog['sources']}
+  self.assertEqual(article_ids,node_ids)
+  for node in taxonomy['nodes']:
+   self.assertTrue(set(node.get('source_ids',[])).issubset(source_ids),node['id'])
+   self.assertTrue(set(node.get('relation_ids',[])).issubset(node_ids),node['id'])
+  self.assertEqual(taxonomy['validation']['article_count'],len(catalog['articles']))
+  self.assertEqual(taxonomy['validation']['source_count'],len(catalog['sources']))
+ def test_milot_higayon_gate_xiv_is_source_linked_and_bounded(self):
+  data=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
+  source=next(x for x in data['sources'] if x['id']=='SRC-RAMBAM-MILOT-HIGAYON-GATE-XIV')
+  article=next(x for x in data['articles'] if x['id']=='milot-higayon-gate-xiv')
+  self.assertEqual(article['sources'],[source['id']])
+  self.assertEqual(article['status'],'SOURCE_SUPPORTED_SUMMARY')
+  self.assertEqual(source['type'],'PRIMARY_TEXT_TRANSLATION')
+  self.assertIn('783578',source['uri'])
+  self.assertIn('unproofread',article['scope_note'].lower())
+  self.assertIn('not a claim about Moreh Nevukhim chapter 14',article['scope_note'])
+
  def tearDown(self):
   p=ROOT/'logic_wiki/generated-test'
   if p.exists():

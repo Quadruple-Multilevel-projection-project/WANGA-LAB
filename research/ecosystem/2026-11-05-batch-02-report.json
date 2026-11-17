@@ -1,0 +1,240 @@
+{
+  "schema_version": "wanga-ecosystem-batch-report/1.0",
+  "date": "2026-11-05",
+  "generated_at": "2026-11-05T06:16:15.938Z",
+  "batch_id": "2026-11-05-public-batch-02",
+  "status": "COMPLETED_WITH_ACCESS_GAPS",
+  "repository_snapshot": {
+    "unique_repositories": 63,
+    "public_repositories": 58,
+    "private_repositories_redacted": 5,
+    "visibility": "snapshot_from_live_connector"
+  },
+  "batch": {
+    "scanned_repositories": [
+      {
+        "full_name": "AmbassadorOv/extensions",
+        "default_branch": "next",
+        "latest_commit_sha": "0a0d806ab156adf55e9401a15e73085c911825a9",
+        "latest_commit_date": "2026-10-22T06:42:38Z",
+        "readme_blob_sha": "6ef8b6a54813922bf64bad64c8e7301f8dc620c2",
+        "readme_status": "README_PRESENT",
+        "summary": "Firebase Extensions source repository; README describes extension APIs, resources and access granted. No WANGA logic source identified."
+      },
+      {
+        "full_name": "AmbassadorOv/fluffy-parakeet",
+        "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+        "latest_commit_sha": "d8d0cad7395794da08bd834b38386021a8d762f7",
+        "latest_commit_date": "2025-08-05T19:18:18Z",
+        "readme_blob_sha": "70944f7da15632788024530d0c7faf9d91d74381",
+        "readme_status": "README_PRESENT_MINIMAL",
+        "summary": "README contains only the title AI231.meta.io; no substantive documentation or source-grounded logic was exposed."
+      },
+      {
+        "full_name": "AmbassadorOv/generative-ai-docs",
+        "default_branch": "main",
+        "latest_commit_sha": "61a3666ac3b44e6a5ea15a6f6b4cbedd1a162e6d",
+        "latest_commit_date": "2025-03-25T16:09:33Z",
+        "readme_blob_sha": "1bf3babd967e73a1cff092805c4ff151fba95baf",
+        "readme_status": "README_PRESENT",
+        "summary": "Google Gemini API and Gemma developer documentation, including site content, demos and examples; external API documentation only."
+      },
+      {
+        "full_name": "AmbassadorOv/googleapis",
+        "default_branch": "master",
+        "latest_commit_sha": "bda86fbaa605e02ee544ec0d2230779755274265",
+        "latest_commit_date": "2026-10-22T06:41:52Z",
+        "readme_blob_sha": "6ba73116d009c622bf3057f81a563b2070daea51",
+        "readme_status": "README_PRESENT",
+        "summary": "Public Google API interface definitions for REST and gRPC with Bazel build guidance; no WANGA logic source identified."
+      },
+      {
+        "full_name": "AmbassadorOv/https-AmbassadorOv.io",
+        "default_branch": "main",
+        "latest_commit_sha": "5e8bfc8624291ec945e1ad59f2e0fa601fd1d2a3",
+        "latest_commit_date": "2025-09-12T10:59:17Z",
+        "readme_blob_sha": null,
+        "readme_status": "README_MISSING_404",
+        "summary": "README.md returned HTTP 404. The inspected latest commit adds an issue-template file; no substantive project documentation was found in this bounded pass."
+      },
+      {
+        "full_name": "AmbassadorOv/mediapipe",
+        "default_branch": "master",
+        "latest_commit_sha": "2a95a9603387b631d47bc4dfcbc4a675a39c26b3",
+        "latest_commit_date": "2025-09-12T18:32:25Z",
+        "readme_blob_sha": "e4f5dd182813dc073e0845be06d23d2c58bbeafb",
+        "readme_status": "README_PRESENT",
+        "summary": "MediaPipe documentation points to on-device machine-learning solutions and developer resources; no WANGA-specific logic or model evidence identified."
+      },
+      {
+        "full_name": "AmbassadorOv/mermaid",
+        "default_branch": "develop",
+        "latest_commit_sha": "df636c6d0a127a5ce3270672499dd7e230ce33fc",
+        "latest_commit_date": "2024-11-28T03:40:56Z",
+        "readme_blob_sha": "456747132cbc6ed1dde4f8d5f0712deb71b47be8",
+        "readme_status": "README_PRESENT",
+        "summary": "Mermaid generates diagrams from Markdown-like text. This is a possible presentation renderer, not a source of semantic relations."
+      },
+      {
+        "full_name": "AmbassadorOv/mujoco",
+        "default_branch": "main",
+        "latest_commit_sha": "8a7c42c747bfcf9160e3125048219566b41ff8cf",
+        "latest_commit_date": "2025-05-12T17:53:39Z",
+        "readme_blob_sha": "62d57c19af93682355c27e668422bf8aa87c430b",
+        "readme_status": "README_PRESENT",
+        "summary": "MuJoCo is a physics engine for multi-joint dynamics and simulation; possible spatial simulation infrastructure, not WANGA semantic evidence."
+      },
+      {
+        "full_name": "AmbassadorOv/openai_tiktoken",
+        "default_branch": "main",
+        "latest_commit_sha": "63527649963def8c759b0f91f2eb69a40934e468",
+        "latest_commit_date": "2024-10-03T21:15:34Z",
+        "readme_blob_sha": "ad8d88b13f731c1d946a4fc5bd3fc3a153393775",
+        "readme_status": "README_PRESENT",
+        "summary": "tiktoken is a BPE tokenizer for OpenAI models; tokenization infrastructure only, not a logic or semantic model."
+      },
+      {
+        "full_name": "AmbassadorOv/platform-samples",
+        "default_branch": "master",
+        "latest_commit_sha": "4a10583e53d384f3846e7534608e40b0a42409b1",
+        "latest_commit_date": "2020-03-20T14:20:20Z",
+        "readme_blob_sha": "a2bb146a181b60c3df0d077c55b197287074ec53",
+        "readme_status": "README_PRESENT",
+        "summary": "GitHub Platform API, GraphQL and webhook sample projects; no WANGA logic source identified."
+      }
+    ],
+    "readme_present": 9,
+    "readme_missing": 1,
+    "duplicate_non_readme_document": {
+      "path": "governance/PCE_SYSTEM_CONTRACT_BREACH_NOTICE_v1.0.md",
+      "blob_sha": "07f1bea91260a22f2a1398de8a8adba2ce1b3eb5",
+      "repositories": [
+        "AmbassadorOv/extensions",
+        "AmbassadorOv/googleapis"
+      ],
+      "status": "IDENTICAL_FILE_BLOB_DISTINCT_REPOSITORIES"
+    }
+  },
+  "cumulative": {
+    "public_scanned": 41,
+    "public_total": 58,
+    "remaining_public": 17,
+    "next_batch": [
+      "AmbassadorOv/python-genai",
+      "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+      "AmbassadorOv/test-notebook-links",
+      "AmbassadorOv/TTTT-0.0.0.0.1",
+      "AmbassadorOv/TTTTproject-un.govt",
+      "AmbassadorOv/unetbootin",
+      "AmbassadorOv/vqbshtfsprojects.org",
+      "AmbassadorOv/vscode-azure-blockchain-ethereum",
+      "AmbassadorOv/vscode-docs",
+      "AmbassadorOv/World-Party-Federation-Branches-managers"
+    ],
+    "cursor_repaired": true
+  },
+  "conversation_export": {
+    "status": "BLOCKED_NO_VALID_EXPORT",
+    "targeted_search": true,
+    "search_surfaces": [
+      "conversation",
+      "library"
+    ],
+    "valid_export_records": 0,
+    "global_chat_history_scanned": false,
+    "private_library_material_published": false
+  },
+  "logic_extraction": {
+    "new_source_records": 0,
+    "new_logic_units": 0,
+    "new_composition_rules": 0,
+    "new_counterexamples": 0,
+    "new_weights": 0,
+    "semantic_entailments_added": 0
+  },
+  "workflow": {
+    "run_id": 41978292138,
+    "status": "SUCCESS",
+    "scope": "CURRENT_REPOSITORY_ONLY",
+    "cross_repo_read_token_configured": false,
+    "artifact_id": 13393345109,
+    "artifact_size_bytes": 3224,
+    "artifact_sha256": "58d962a121689dfe4e8955583a8ba8a075263ba4cb742ea4d16f0a8176f71d1c"
+  },
+  "pull_requests": {
+    "pr136": {
+      "head_sha": "63b07d21bb59d51ffd459ec8ee404190d9bebbbc",
+      "behind_by": 0,
+      "ci": "SUCCESS"
+    },
+    "pr122": {
+      "head_sha": "fcdbe51c76c81f0d5335ec029ec084b9958e41bc",
+      "ahead_by": 61,
+      "behind_by": 0,
+      "ci": "ACTION_REQUIRED_NO_JOBS_RETURNED"
+    }
+  },
+  "wix": {
+    "deployed_file_count": 29,
+    "main_page": {
+      "articles": 28,
+      "sources": 17,
+      "relations": 111,
+      "sync_banner_date": "2026-10-12"
+    },
+    "research_status_page": {
+      "articles": 18,
+      "sources": 11,
+      "snapshot_date": "2026-10-12",
+      "stale": true
+    },
+    "write_performed": false
+  },
+  "agents": [
+    {
+      "role": "Repository Inventory",
+      "status": "COMPLETED",
+      "output": "10 scanned; 41/58 cumulative; 17 remaining."
+    },
+    {
+      "role": "README/Docs Collector",
+      "status": "COMPLETED",
+      "output": "9 README files read; 1 missing; latest commit metadata captured for all ten."
+    },
+    {
+      "role": "Conversation Export Collector",
+      "status": "BLOCKED",
+      "output": "No valid ChatGPT export artifact found in targeted Files search."
+    },
+    {
+      "role": "Logic/Fractal Extractor",
+      "status": "COMPLETED",
+      "output": "0 new WANGA logic units or semantic edges."
+    },
+    {
+      "role": "Cross-Repo Relationship Mapper",
+      "status": "COMPLETED",
+      "output": "One identical document blob observed across two distinct repositories."
+    },
+    {
+      "role": "Mirror Reviewer",
+      "status": "IN_PROGRESS",
+      "output": "Duplicate content is not repository equivalence; no new semantic contradiction adjudicated."
+    },
+    {
+      "role": "Test/CI Evaluator",
+      "status": "COMPLETED_WITH_BLOCKER",
+      "output": "PR136 CI success; PR122 checks action_required with no jobs."
+    },
+    {
+      "role": "Wiki Curator",
+      "status": "IN_PROGRESS",
+      "output": "Wix read-back completed; supplemental research-status page is stale."
+    },
+    {
+      "role": "Report Publisher",
+      "status": "COMPLETED_WITH_OPEN_PR",
+      "output": "Reports recorded on PR136 branch; no main merge or Wix publish."
+    }
+  ]
+}
