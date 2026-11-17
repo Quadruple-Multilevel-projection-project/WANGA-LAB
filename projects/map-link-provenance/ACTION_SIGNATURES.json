@@ -1,0 +1,218 @@
+[
+  {
+    "Action_ID": "ACT-PLUGIN_CREATE-20261117T200424Z",
+    "Timestamp": "2026-11-17T20:04:24Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "73dbac7bd87249bc0a2ff6cdee250cb39ce986a286f22b5cfbeef6d15ac4f821",
+    "Canonical": "Timestamp=2026-11-17T20:04:24Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-PLUGIN_CREATE-20261117T200424Z",
+    "Status": "CREATED",
+    "Evidence": "Plugin Creator returned plugin_id plugins_6afcb34d54c481918a1a317a6db628b2."
+  },
+  {
+    "Action_ID": "ACT-FIGJAM_APPEND-20261117T200445Z",
+    "Timestamp": "2026-11-17T20:04:45Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "edf0694d86580df1c93ace383d0a0b3560b47ae7867bb361f7d1cfcaedaab3d7",
+    "Canonical": "Timestamp=2026-11-17T20:04:45Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-FIGJAM_APPEND-20261117T200445Z",
+    "Status": "DIAGRAM_ADDED",
+    "Evidence": "Figma confirmed diagram added to file mBeYn5jZU8mHRV7fco9eaU."
+  },
+  {
+    "Action_ID": "ACT-PLUGIN_READBACK-20261117T200500Z",
+    "Timestamp": "2026-11-17T20:05:00Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "a9a42cc169da9b4b5c394e82f10a56e2bf498cca98ae17b81a357986a6beaddc",
+    "Canonical": "Timestamp=2026-11-17T20:05:00Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-PLUGIN_READBACK-20261117T200500Z",
+    "Status": "READBACK_CONFIRMED",
+    "Evidence": "Plugin file read-back returned missing_paths=[]."
+  },
+  {
+    "Action_ID": "ACT-GH-BRANCH-CREATE-20261117-04",
+    "Timestamp": "2026-11-17T20:08:59Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "041c83d86879f14166952f5089af8daa3ecfe79482924c8363e5d55387b2dd24",
+    "Canonical": "Timestamp=2026-11-17T20:08:59Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-BRANCH-CREATE-20261117-04",
+    "Status": "CREATED",
+    "Evidence": "GitHub branch feat/map-link-provenance-project created from main."
+  },
+  {
+    "Action_ID": "ACT-WIX-PROVISION-MAPLINK-20261117-05",
+    "Timestamp": "2026-11-17T20:09:28Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "aa8b4389eca9291e11811c7df189d11e3a96278e5874f87717fd83c72866ba48",
+    "Canonical": "Timestamp=2026-11-17T20:09:28Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-WIX-PROVISION-MAPLINK-20261117-05",
+    "Status": "CREATED",
+    "Evidence": "Wix returned site ID f3a43d48-2263-4b32-ad69-f4fa2939ded5."
+  },
+  {
+    "Action_ID": "ACT-GMAIL-AGENT-LABEL-01-20261117-04",
+    "Timestamp": "2026-11-17T20:08:59Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "b8fcffcf0d675509a44cc07b0fec342f13ebdd6c522d132346c30f827b5256b4",
+    "Canonical": "Timestamp=2026-11-17T20:08:59Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GMAIL-AGENT-LABEL-01-20261117-04",
+    "Status": "CREATED",
+    "Evidence": "Gmail created Agents/SY-NeuroKernel Agent 01."
+  },
+  {
+    "Action_ID": "ACT-GMAIL-AGENT-LABEL-02-20261117-04",
+    "Timestamp": "2026-11-17T20:08:59Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "3a59d12d5cd00366a0917c140bad4d78e97f43ed1ff088b798bb3e179f802a3c",
+    "Canonical": "Timestamp=2026-11-17T20:08:59Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GMAIL-AGENT-LABEL-02-20261117-04",
+    "Status": "CREATED",
+    "Evidence": "Gmail created Agents/SY-NeuroKernel Agent 02."
+  },
+  {
+    "Action_ID": "ACT-GMAIL-AGENT-LABEL-03-20261117-04",
+    "Timestamp": "2026-11-17T20:08:59Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "35fb98c0e302ba71ebdd2246684ee0b5c7b30dbf4a386f842e5fe75dfddeb824",
+    "Canonical": "Timestamp=2026-11-17T20:08:59Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GMAIL-AGENT-LABEL-03-20261117-04",
+    "Status": "CREATED",
+    "Evidence": "Gmail created Agents/SY-NeuroKernel Agent 03."
+  },
+  {
+    "Action_ID": "ACT-WIX-STATIC-UPLOAD-20261117-06",
+    "Timestamp": "2026-11-17T20:10:12Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "07a49545063cade564c4038aa11b34a2fe2450a86e7d779bfe3b4d1119b5a938",
+    "Canonical": "Timestamp=2026-11-17T20:10:12Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-WIX-STATIC-UPLOAD-20261117-06",
+    "Status": "PUBLISHED",
+    "Evidence": "Wix static site published at headless-smcvcvopnwd-beywolf5-1408.wix-site-host.com."
+  },
+  {
+    "Action_ID": "ACT-WIX-SITE-PANEL-20261117-07",
+    "Timestamp": "2026-11-17T20:11:37Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "c7471f8eb0f49e798ccf5d27433a548f3718ceadd227ecc12a8e556ecef5d33c",
+    "Canonical": "Timestamp=2026-11-17T20:11:37Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-WIX-SITE-PANEL-20261117-07",
+    "Status": "DISPLAYED",
+    "Evidence": "WixSitePanel displayed the published site."
+  },
+  {
+    "Action_ID": "ACT-GH-CREATE-README-20261117-09",
+    "Timestamp": "2026-11-17T20:12:37Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "363f3c3a246d07455b5d907185f4d837d03b239212ec87b0b4c28978226240c8",
+    "Canonical": "Timestamp=2026-11-17T20:12:37Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-CREATE-README-20261117-09",
+    "Status": "COMMITTED",
+    "Evidence": "README.md created; commit ecb8e4d6e034ed6ca2a15a33eab0a46ba00b81cc."
+  },
+  {
+    "Action_ID": "ACT-GH-CREATE-SCHEMA-20261117-09",
+    "Timestamp": "2026-11-17T20:12:37Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "e2c4dcfeb037e563007c44916aa8cb7570b9aedb7abfb5698b3779bdc6628c24",
+    "Canonical": "Timestamp=2026-11-17T20:12:37Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-CREATE-SCHEMA-20261117-09",
+    "Status": "COMMITTED",
+    "Evidence": "event-schema.json created; commit 01da2d63ab0933d348bd60a80672b2b0e81c8481."
+  },
+  {
+    "Action_ID": "ACT-GH-CREATE-SIGNER-20261117-09",
+    "Timestamp": "2026-11-17T20:12:37Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "c9a26b1598d347026ee6c33c801d25b4fe11b0f7382bdf9c1b674ef7edb97459",
+    "Canonical": "Timestamp=2026-11-17T20:12:37Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-CREATE-SIGNER-20261117-09",
+    "Status": "COMMITTED",
+    "Evidence": "sign_event.py created; commit 1503294ff84979614e5d6d8008f9f973cdf03f69."
+  },
+  {
+    "Action_ID": "ACT-GH-CREATE-MANIFEST-20261117-09",
+    "Timestamp": "2026-11-17T20:12:37Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "399d5cf7e56b341566f26760e7af9a029e23218661823639f62948c9461169b7",
+    "Canonical": "Timestamp=2026-11-17T20:12:37Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-CREATE-MANIFEST-20261117-09",
+    "Status": "COMMITTED",
+    "Evidence": "integration-manifest.json created; commit 5dc4a17bf54d6e74f8be9206efdcc3bdab7f5be2."
+  },
+  {
+    "Action_ID": "ACT-GH-CREATE-SEQUENCE-20261117-09",
+    "Timestamp": "2026-11-17T20:12:37Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "8f00298445faa1f01a0d1efb9a994bb3adf80bf1485cf3f3bef89d6cc02a49e0",
+    "Canonical": "Timestamp=2026-11-17T20:12:37Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-CREATE-SEQUENCE-20261117-09",
+    "Status": "COMMITTED",
+    "Evidence": "sequence.mmd created; commit 35f0e24dff8416f4ea0f6e8585c3d70ea2a43ae2."
+  },
+  {
+    "Action_ID": "ACT-GH-PROJECT-READBACK-20261117-10",
+    "Timestamp": "2026-11-17T20:13:36Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "1639377e7e4ecb368d6ca89b2c301473e87e76f677d94606fcf8dedfedc73678",
+    "Canonical": "Timestamp=2026-11-17T20:13:36Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-PROJECT-READBACK-20261117-10",
+    "Status": "READBACK_CONFIRMED",
+    "Evidence": "All five GitHub project files were fetched and returned blob SHAs."
+  },
+  {
+    "Action_ID": "ACT-GMAIL-LABEL-VERIFY-20261117-10",
+    "Timestamp": "2026-11-17T20:13:36Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "88dcc0c5d78a97210b60e1513bc56f72a7c95df05a02253a43b81e157a8bc45f",
+    "Canonical": "Timestamp=2026-11-17T20:13:36Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GMAIL-LABEL-VERIFY-20261117-10",
+    "Status": "READBACK_CONFIRMED",
+    "Evidence": "Gmail returned all three Agents/SY-NeuroKernel labels."
+  },
+  {
+    "Action_ID": "ACT-GH-MANIFEST-READBACK-UPDATE-20261117-11",
+    "Timestamp": "2026-11-17T20:13:49Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "a1862fd3c611329640ecf11a730819ee98f9d4f135a8b57175769dd597d6005a",
+    "Canonical": "Timestamp=2026-11-17T20:13:49Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-MANIFEST-READBACK-UPDATE-20261117-11",
+    "Status": "COMMITTED",
+    "Evidence": "Integration manifest read-back status update committed as f20baac4ff70089acc1f0224217923cd201ce173."
+  },
+  {
+    "Action_ID": "ACT-PLUGIN-UPDATE-INTEGRATION-20261117-12",
+    "Timestamp": "2026-11-17T20:15:03Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "ab13e0b2b04b27ad8ee54c3156a96c9384ca227cdba21005840b9ff5f3bec7ec",
+    "Canonical": "Timestamp=2026-11-17T20:15:03Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-PLUGIN-UPDATE-INTEGRATION-20261117-12",
+    "Status": "FAILED",
+    "Evidence": "First overlay ZIP rejected because it lacked a recognized plugin manifest; no release changed."
+  },
+  {
+    "Action_ID": "ACT-PLUGIN-MANIFEST-READ-20261117-13",
+    "Timestamp": "2026-11-17T20:15:17Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "75191452eecfbf6326fada0b9ca1aa47eb3dc70be9bcff5b57e3bf3080732aa9",
+    "Canonical": "Timestamp=2026-11-17T20:15:17Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-PLUGIN-MANIFEST-READ-20261117-13",
+    "Status": "READBACK_CONFIRMED",
+    "Evidence": "Plugin manifest .codex-plugin/plugin.json read back with missing_paths=[]."
+  },
+  {
+    "Action_ID": "ACT-PLUGIN-UPDATE-SUCCESS-20261117-14",
+    "Timestamp": "2026-11-17T20:16:10Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "4318c206e47f3c4f6e820e53d0f51fa34b3c77f5d7421c8d6d9b8890787663d9",
+    "Canonical": "Timestamp=2026-11-17T20:16:10Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-PLUGIN-UPDATE-SUCCESS-20261117-14",
+    "Status": "UPDATED",
+    "Evidence": "Plugin updated to version 0.1.1; release pluginrel_6afcb5fc5ce881919ef0f5dd73baae09."
+  },
+  {
+    "Action_ID": "ACT-PLUGIN-READBACK-UPDATED-20261117-14",
+    "Timestamp": "2026-11-17T20:16:10Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "0e2ab2f77219f7f48f3240613d413cc4d21f14be4ad6cfb6c8e6c674349c75f2",
+    "Canonical": "Timestamp=2026-11-17T20:16:10Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-PLUGIN-READBACK-UPDATED-20261117-14",
+    "Status": "READBACK_CONFIRMED",
+    "Evidence": "Plugin README, ACTION_SIGNATURES.json and both manifests read back; missing_paths=[]."
+  },
+  {
+    "Action_ID": "ACT-GH-MANIFEST-PLUGIN-UPDATE-20261117-15",
+    "Timestamp": "2026-11-17T20:16:33Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "6320d76efec5b1ddbd714907fdc0c7ee1471c54a86402e3ebc887e5925f7970a",
+    "Canonical": "Timestamp=2026-11-17T20:16:33Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-MANIFEST-PLUGIN-UPDATE-20261117-15",
+    "Status": "COMMITTED",
+    "Evidence": "Manifest updated with plugin version 0.1.1 and release pluginrel_6afcb5fc5ce881919ef0f5dd73baae09."
+  },
+  {
+    "Action_ID": "ACT-GH-CREATE-ACTION-LEDGER-20261117-15",
+    "Timestamp": "2026-11-17T20:16:33Z",
+    "Contract_Start_Time": "2026-11-17T20:29:00+02:00",
+    "SHA256": "6544df3f7bcaec2cad6377e70e91ef714dcfa0c8d70c6be2de2f1f6a76423593",
+    "Canonical": "Timestamp=2026-11-17T20:16:33Z|Contract_Start_Time=2026-11-17T20:29:00+02:00|Action_ID=ACT-GH-CREATE-ACTION-LEDGER-20261117-15",
+    "Status": "COMMITTED",
+    "Evidence": "Created project ACTION_SIGNATURES.json."
+  }
+]
