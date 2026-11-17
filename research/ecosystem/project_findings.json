@@ -1,0 +1,443 @@
+{
+  "schema_version": "wanga-ecosystem-project-findings/1.0",
+  "snapshot_time_utc": "2026-11-16T05:35:39Z",
+  "repository_batch": [
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "branch": "main",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "2956c2e209459bab9a37c927cd29f8440b528d4d",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "Canonical WANGA-LAB repository for evidence integrity, logic mining, drift forensics, provenance reconstruction and verification; README distinguishes operational capability from future-facing research.",
+      "next_action": "No write proposed; continue bounded documentation scan."
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "branch": "master",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-logicl-neural-order/blob/master/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README title is Nanomathematics; no further README content was present in the fetched excerpt.",
+      "next_action": "No write proposed; continue bounded documentation scan."
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "branch": "main",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "1530209671f6f76eb1808cf17d9584437e1e867b",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/ai-agent-terraform/blob/main/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "Terraform infrastructure for deploying AI-agent APIs across environments/regions; README warns the main branch is out of date and directs readers to latest branches.",
+      "next_action": "Inspect latest non-default branches in a later batch; README says main is outdated."
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "branch": "main",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io/blob/main/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README contains one GitHub Pages URL only; insufficient to infer implementation or relationship.",
+      "next_action": "No write proposed; continue bounded documentation scan."
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "branch": "main",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT/blob/main/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README contains only the repository title; no technical capability inferred.",
+      "next_action": "No write proposed; continue bounded documentation scan."
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/globalSpeed",
+      "branch": "master",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "a6976e6480700db0264d5dd7a20267a04f9209f0",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/globalSpeed/blob/master/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "Browser extension for HTML media speed, hotkeys and filters; no direct WANGA logic/fractal integration identified.",
+      "next_action": "No write proposed; continue bounded documentation scan."
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "branch": "main",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": null,
+      "source_uri": null,
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "Repository metadata is visible, but README.md returned 404; no project content inferred.",
+      "next_action": "Retry content discovery through tree/search; do not infer from metadata."
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/MNM",
+      "branch": "master",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/MNM/blob/master/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README hash exactly matches -logicl-neural-order and title is Nanomathematics; separate repository identity retained.",
+      "next_action": "No write proposed; continue bounded documentation scan."
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/skills",
+      "branch": "main",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "2246383e993f161fd909122d01769059adfb9eab",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/skills/blob/main/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README describes the skills.sh CLI for installing and using agent skills across supported coding agents.",
+      "next_action": "No write proposed; continue bounded documentation scan."
+    },
+    {
+      "repository_full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "branch": "master",
+      "visibility": "public",
+      "permission_flags": {
+        "admin": true,
+        "maintain": true,
+        "pull": true,
+        "push": true,
+        "triage": true
+      },
+      "readme_path": "README.md",
+      "readme_blob_sha": "5bce36b9ed2ffd0c0ebfec2a5e806e974c12ca05",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department/blob/master/README.md",
+      "epistemic_status": "README_OBSERVED_NOT_INDEPENDENTLY_VALIDATED",
+      "summary": "README excerpt is an example Python article generator with mixed conceptual themes; no production integration inferred.",
+      "next_action": "No write proposed; continue bounded documentation scan."
+    }
+  ],
+  "duplicate_candidates": [
+    {
+      "content_hash": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "repositories": [
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "Quadruple-Multilevel-projection-project/MNM"
+      ],
+      "evidence": "Identical GitHub README blob SHA and title Nanomathematics.",
+      "status": "DUPLICATE_FILE_CONTENT_CANDIDATE_NOT_DUPLICATE_REPOSITORY"
+    }
+  ],
+  "wanga_lab": {
+    "repository_full_name": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "branch": "main",
+    "commit_sha": "3f62e820e566c778871065a633b459e9e2bfdcba",
+    "commit_date_utc": "2026-11-16T05:29:40Z",
+    "core_files": [
+      {
+        "path": "README.md",
+        "blob_sha": "2956c2e209459bab9a37c927cd29f8440b528d4d",
+        "summary": "Repository mission and operational/research split."
+      },
+      {
+        "path": "logic_wiki/data/articles.json",
+        "blob_sha": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed",
+        "summary": "28 articles, 17 sources, 11 source types, 111 editorial relation links; 28 articles carry resolved source references; zero duplicate IDs and zero dangling source/relation references."
+      },
+      {
+        "path": "logic_wiki/data/research_metrics.json",
+        "blob_sha": "2b3b05dbc9d154ca916d00dfeb63a9522c37a266",
+        "summary": "2 active composition contracts; zero registered counterexamples, semantic tests, suites and independent reviews; deterministic build configured true; holdout and mirror review false."
+      },
+      {
+        "path": "logic_fractal/data/composition_rules.json",
+        "blob_sha": "3d8bc142785d7d401b705736fe0f384d33d996f3",
+        "summary": "Two ACTIVE_SPECIFIED rules and one DRAFT_NOT_EXECUTED rule; relations remain candidates, not entailment."
+      },
+      {
+        "path": "logic_fractal/data/recursive_composition_contracts_v1.json",
+        "blob_sha": "762f89ae972dbc58e92201e9c032b9da7b0e9f89",
+        "summary": "L0/L1 active specified; L2 draft for testing; L3 counterexample gate required but unsatisfied."
+      },
+      {
+        "path": "logic_fractal/data/typed_fragments_fixture.json",
+        "blob_sha": "c7496775dfd18b473ec92993401daa6679a32212",
+        "summary": "Three synthetic typed fragments only; scope explicitly excludes real conversations and external facts."
+      },
+      {
+        "path": "logic_fractal/fragment_composer.py",
+        "blob_sha": "e0823383f8b768f1cb324ea07883c4d9798aa136",
+        "summary": "Deterministic typed candidate composer; validates source references and interfaces; semantic equivalence remains NOT_ESTABLISHED."
+      },
+      {
+        "path": "scripts/build_first_fractal_model.py",
+        "blob_sha": "f3416947a435b1bde0ddd3dc691503d130c88ef4",
+        "summary": "Builds a two-level candidate from the three synthetic fixtures; release gate intentionally blocked."
+      },
+      {
+        "path": "logic_wiki/data/readiness_gate.json",
+        "blob_sha": "3e782e63",
+        "summary": "FIRST_MODEL_ALPHA_V1 thresholds configured but not empirically validated."
+      },
+      {
+        "path": "formal_reasoning/examples/source_grounded_benchmark_manifest.json",
+        "blob_sha": "ad3ecfb9562caaa00770ea96322497ecce1908e3",
+        "summary": "Empty source-grounded benchmark case manifest; status BLOCKED_EMPTY_WAITING_REVIEWED_CASES."
+      },
+      {
+        "path": "logic_fractal/data/semantic_benchmark_plan_v1.json",
+        "blob_sha": "c06d0629965ef2ee392d7dd7df28ee20b9a88154",
+        "summary": "Three specified suites totaling 100 intended cases; plan is not populated."
+      },
+      {
+        "path": "scripts/ingest_conversation_export.py",
+        "blob_sha": "7aae7cf8ca4e803ed59a9377ef4065702ef6a3a8",
+        "summary": "Local ChatGPT export intake with IDs, parent links, timestamps, hashes and PRIVATE_REVIEW_ONLY/NOT_APPROVED defaults."
+      },
+      {
+        "path": "scripts/run_logic_agents.py",
+        "blob_sha": "f2cdebf7bda25da0222ac135f2fa3f496094512b",
+        "summary": "Recomputes source/provenance, benchmark, contradiction-inventory, deterministic build and readiness metrics; missing benchmark and contradiction files remain explicit gaps."
+      },
+      {
+        "path": "research/LOGIC_FRACTAL_PROGRAM_V1.md",
+        "blob_sha": "b7857f852184bc07b7f362539d10fc9a256aa4d9",
+        "summary": "Source-first pipeline and release gate; separates MLN numerical research, LNL explicit language and fractal composition."
+      },
+      {
+        "path": "logic_wiki/data/wix_sync_manifest.json",
+        "blob_sha": "d4dcaa4c439d66b380ffa7be5d3169de78104395",
+        "summary": "Historical manifest last sync 2026-10-12; stored catalog counts 18/16/102."
+      }
+    ],
+    "current_metrics": {
+      "articles": 28,
+      "sources": 17,
+      "source_types": 11,
+      "articles_with_resolved_sources": 28,
+      "editorial_relation_edges": 111,
+      "active_composition_rules": 2,
+      "total_composition_rules": 3,
+      "counterexamples": 0,
+      "semantic_benchmark_cases": 0,
+      "benchmark_suites": 0,
+      "independent_reviews": 0,
+      "dangling_source_refs": 0,
+      "dangling_relation_refs": 0,
+      "duplicate_ids": 0,
+      "contradiction_inventory": "NOT_MEASURED_NO_FILE",
+      "research_metrics_configured_critical_contradictions": 0,
+      "deterministic_build_configured": true,
+      "holdout": false,
+      "mirror_review": false,
+      "repository_conversation_exports": 0
+    },
+    "missing_paths": [
+      "research/ecosystem/repository_inventory.json",
+      "research/ecosystem/project_findings.json",
+      "research/limbo/README.md",
+      "limbo-cartography-core/README.md",
+      "logic_wiki/data/source_registry.json",
+      "logic_fractal/data/counterexamples.json",
+      "logic_fractal/data/semantic_benchmark_cases.json",
+      "logic_fractal/data/benchmark_suites.json",
+      "logic_fractal/data/core_contradictions.json",
+      "logic_fractal/data/holdout_manifest.json"
+    ],
+    "note": "No source-backed claims or Logic Wiki articles were added in this cycle; the catalog was audited only."
+  },
+  "limbo": {
+    "pr": {
+      "number": 122,
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/122",
+      "state": "open",
+      "merged": false,
+      "mergeable": true,
+      "branch": "deploy/limbo-cartography-core-v1",
+      "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+      "updated_at": "2026-11-07T06:12:39Z",
+      "changed_files": 100,
+      "additions": 7875,
+      "deletions": 0
+    },
+    "workflow_runs": [
+      {
+        "id": 42345983634,
+        "name": "Repository Integrity",
+        "status": "completed",
+        "conclusion": "action_required"
+      },
+      {
+        "id": 42345983633,
+        "name": "CodeQL Advanced",
+        "status": "completed",
+        "conclusion": "action_required"
+      },
+      {
+        "id": 42345983702,
+        "name": "WANGA-LAB Limbo Cartography Core",
+        "status": "completed",
+        "conclusion": "action_required"
+      }
+    ],
+    "matrix": {
+      "blob_sha": "86593dd31e5c20bf47c81d09d527967cf0a22476",
+      "version": "1.3.0",
+      "last_updated": "2026-10-19",
+      "incident_records": 10,
+      "history_events": 2,
+      "system_state": "RECURRENCE_PATTERN_OBSERVED_CURRENT_SYSTEM_STATE_UNASSESSED"
+    },
+    "cumulative_map": {
+      "blob_sha": "3617504c68262f71366a244563fc06b1be270da2",
+      "version": "1.0.0",
+      "nodes": 14,
+      "edges": 19,
+      "history_retention": "APPEND_ONLY_NO_AUTOMATIC_PRUNING",
+      "recurring_unresolved_clusters": 1,
+      "latest_registered_time_utc": "2026-10-19T19:41:44Z"
+    },
+    "tuning_candidate": {
+      "id": "TUNE-9c166900cc4ad5dd",
+      "status": "CANDIDATE_REPLAY_REQUIRED",
+      "previous_retest": "PASS",
+      "current_replay": "NOT_RUN",
+      "source_blob_sha": "3c18338fba440158a2feb6ecc84c08258118f282"
+    },
+    "unresolved_bundle": {
+      "id": "VITRUVIUS-QUEUE-CONTRACT-RECURRENCE",
+      "status": "DRAFT_UNVERIFIED",
+      "recurrence_count": 7,
+      "root_cause": "NOT_YET_ESTABLISHED",
+      "source_blob_sha": "2133344b33cbf5640e03421f4b4977d080182e7a"
+    },
+    "latest_execution": {
+      "timestamp_utc": "2026-11-07T06:12:35Z",
+      "status": "EXECUTION_RECORD_ONLY",
+      "epistemic_attempt": false,
+      "drift_detected": null,
+      "keystone_verified": false,
+      "blob_sha": "72b24f49fa34205a93fe1ed3623412ad66df7e83"
+    },
+    "conclusion": "The map is populated and append-only, but the last registered incident data is from 2026-10-19 and the latest execution record is record-only. Current system state and tuning replay are not verified."
+  },
+  "private_library_scan": {
+    "scope": "PRIVATE_LIBRARY_SEARCH_ONLY",
+    "relevant_artifact_count": 3,
+    "actual_chatgpt_export_files_found": 0,
+    "conversation_transcripts_ingested": 0,
+    "publication": "NO_PRIVATE_CONTENT_PUBLISHED",
+    "status": "ARTIFACTS_PENDING_SOURCE_AND_PRIVACY_REVIEW"
+  },
+  "wix_readback": {
+    "site_name": "Logic Engine Research Lab",
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
+    "site_status": "Published",
+    "files_listed": 29,
+    "pages_read": [
+      "index.html",
+      "logic-wiki.html",
+      "logic-wiki-research-status.html",
+      "logic-wiki-fractal-research.html"
+    ],
+    "observed_main_page": {
+      "label_date": "2026-11-14",
+      "articles": 28,
+      "sources": 17,
+      "relation_edges": 111,
+      "active_contracts": "2/3"
+    },
+    "observed_research_status_page": {
+      "label_date": "2026-11-14",
+      "latest_readiness_report_date": "2026-11-09",
+      "articles": 28,
+      "sources": 17,
+      "source_types": 11,
+      "logic_units": 28,
+      "active_rules": 2,
+      "counterexamples": 0,
+      "semantic_cases": 0,
+      "suites": 0,
+      "reviews": 0
+    },
+    "historical_manifest": {
+      "last_sync_date": "2026-10-12",
+      "stored_counts": {
+        "articles": 18,
+        "sources": 16,
+        "relations": 102
+      },
+      "status": "PUBLISHED_READ_BACK_PARTIAL"
+    },
+    "manifest_drift": true,
+    "write_performed": false,
+    "reason": "The current report is being placed in a draft GitHub PR; no Wix deployment was made before review/merge."
+  }
+}

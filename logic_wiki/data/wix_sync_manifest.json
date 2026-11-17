@@ -112,5 +112,40 @@
   ],
   "main_page_catalog_article_count": 18,
   "research_catalog_article_count": 27,
-  "supplemental_research_concept_count": 9
+  "supplemental_research_concept_count": 9,
+  "latest_readback": {
+    "observed_at_utc": "2026-11-16T05:35:39Z",
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "site_name": "Logic Engine Research Lab",
+    "site_status": "PUBLISHED",
+    "site_file_count": 29,
+    "read_pages": [
+      "index.html",
+      "logic-wiki.html",
+      "logic-wiki-research-status.html",
+      "logic-wiki-fractal-research.html"
+    ],
+    "observed_catalog": {
+      "articles": 28,
+      "sources": 17,
+      "source_types": 11,
+      "relation_links": 111,
+      "active_composition_rules": 2,
+      "total_composition_rules": 3
+    },
+    "page_labels": {
+      "main_catalog": "2026-11-14",
+      "research_status": "2026-11-14",
+      "latest_readiness_report": "2026-11-09"
+    },
+    "historical_manifest_counts": {
+      "articles": 18,
+      "sources": 16,
+      "relations": 102
+    },
+    "manifest_drift": true,
+    "status": "READ_BACK_OBSERVED_NO_WRITE",
+    "write_performed": false,
+    "reason": "Current GitHub report is submitted via a draft PR; no Wix deployment was performed before review/merge."
+  }
 }
