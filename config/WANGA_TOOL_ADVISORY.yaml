@@ -1,0 +1,165 @@
+version: 1
+name: WANGA-TOOL-ADVISORY
+status: SPECIFIED
+purpose: >
+  Add an advisory decision node after preflight. Agents and specialized
+  evaluators may recommend which available tool or tool-chain is most suitable
+  for a task. Recommendations are evidence inputs, not automatic authority.
+
+pipeline:
+  - PREFLIGHT
+  - TOOL_INVENTORY
+  - AGENT_ADVICE
+  - TOOL_COMPARISON
+  - ROUTE_SELECTION
+  - EXECUTION
+  - TEST
+  - VERIFICATION
+  - FEEDBACK
+
+node:
+  name: TOOL-ADVISORY-NODE
+  inputs:
+    - task
+    - scope
+    - preflight_results
+    - available_tools
+    - required_capabilities
+    - prior_route_results
+    - agent_recommendations
+  outputs:
+    - ranked_candidates
+    - preferred_route
+    - fallback_routes
+    - rationale
+    - confidence
+    - evidence_refs
+    - unresolved_gaps
+
+advisory_agents:
+  role: >
+    Independently assess tool suitability from their domain perspective.
+  rules:
+    - "Agents recommend; router decides."
+    - "No agent may mark a tool CONNECTED without connectivity evidence."
+    - "No recommendation may be treated as verification."
+    - "Conflicting recommendations must be preserved, not silently merged."
+    - "An agent may recommend a tool even when it is not connected, but it must be marked CANDIDATE."
+
+comparison_criteria:
+  required:
+    - capability_fit
+    - current_connectivity
+    - permission_fit
+    - evidence_quality
+    - task_specificity
+  optional:
+    - output_quality
+    - reproducibility
+    - latency
+    - reliability_history
+    - cost_when_known
+    - provenance_support
+    - failure_recovery
+  rule: >
+    Do not invent missing measurements. Use UNKNOWN when a criterion has no
+    evidence.
+
+decision_logic:
+  hard_filters:
+    - "Required capability must exist or be explicitly unavailable."
+    - "Required authorization must be present."
+    - "A blocked required tool cannot be selected as the active route."
+    - "Security restrictions override convenience."
+  soft_preference:
+    - "Prefer verified connected routes."
+    - "Prefer deterministic and reproducible routes when equivalent."
+    - "Prefer routes with stronger provenance."
+    - "Prefer routes with successful prior execution for the same task class."
+    - "Prefer simpler tool chains when they satisfy the same requirement."
+  fallback:
+    - "Second verified route"
+    - "Alternative connected route"
+    - "Registry-discovered candidate"
+    - "Manual evidence-preserving route"
+    - "BLOCKED"
+
+continuous_configuration:
+  purpose: "Improve the tool registry from observed execution outcomes."
+  feedback_sources:
+    - preflight_results
+    - execution_success
+    - execution_failure
+    - test_results
+    - verification_results
+    - agent_recommendations
+    - permission_changes
+    - runtime_changes
+  update_rules:
+    - "Record observations after execution."
+    - "Do not rewrite historical evidence."
+    - "Do not change a preferred route solely from an unverified opinion."
+    - "A repeated verified success may strengthen route preference."
+    - "A verified failure may downgrade a route."
+    - "Configuration changes require a reason and evidence reference."
+  versioning:
+    format: "TOOL_CONFIG_V<major>.<minor>"
+    preserve_previous: true
+
+recommendation_record:
+  fields:
+    - agent
+    - timestamp
+    - task_class
+    - tool
+    - recommendation
+    - criteria
+    - evidence_refs
+    - limitations
+    - confidence
+    - conflict_group
+
+selection_record:
+  fields:
+    - task
+    - preflight_snapshot
+    - advisor_snapshot
+    - selected_tool_chain
+    - fallback_chain
+    - selection_reason
+    - evidence_refs
+    - verification_result
+    - resulting_config_version
+
+anti_drift:
+  rules:
+    - "Do not select a tool because it is familiar."
+    - "Do not select a tool because its name sounds relevant."
+    - "Do not confuse installed skill with live connectivity."
+    - "Do not confuse recommendation with capability."
+    - "Do not confuse capability with permission."
+    - "Do not confuse successful execution with correctness."
+    - "Do not silently change the evaluation criteria."
+
+security:
+  - "No secret values in recommendations or records."
+  - "No test writes used only to measure health."
+  - "No credential discovery as part of tool comparison."
+
+integration_with_preflight:
+  rule: >
+    PREFLIGHT establishes what is actually usable now. TOOL-ADVISORY-NODE
+    determines which usable route is most appropriate and records alternatives.
+    The advisory node cannot override a failed preflight.
+
+integration_with_agents:
+  rule: >
+    Existing WANGA agents remain bounded by their responsibility matrix.
+    Tool advice must be added without changing their source/evidence
+    responsibilities unless separately authorized.
+
+final_rule:
+  >
+    Every task begins with Preflight, then receives evidence-backed tool advice,
+    then selects a route. The system learns from verified outcomes, not from
+    unsupported preference.
