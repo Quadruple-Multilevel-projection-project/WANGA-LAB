@@ -1,0 +1,7 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema","title":"TNRL Architecture Manifest","type":"object",
+  "required":["architecture","version","layers","operators","kernel_contract","status"],"properties":{
+    "architecture":{"type":"string"},"version":{"type":"string"},"layers":{"type":"array","items":{"type":"string"}},
+    "operators":{"type":"array","items":{"type":"string"}},"kernel_contract":{"type":"object"},"status":{"type":"string"}
+  }
+}
