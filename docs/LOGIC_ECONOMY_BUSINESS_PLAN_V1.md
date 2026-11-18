@@ -205,12 +205,12 @@ Before any financial launch, obtain jurisdiction-specific legal, regulatory, tax
 
 ### 8.7 Initial repository count
 
-The proposed initial integration set is **15 repositories**:
+The proposed initial integration set is **16 repositories**:
 - 1 canonical core;
 - 2 economy / governance references;
 - 6 logic research/source candidates;
 - 3 product / evidence / oversight candidates;
-- 3 runtime / distribution candidates.
+- 4 runtime / distribution candidates.
 
 The organizational context repository is additional and should remain reference-only unless an audit finds a direct product dependency. Some repositories may be duplicates, forks, mirrors, or inactive. This is a connection target, not a claim that 15 repositories have already been technically integrated.
 
@@ -347,7 +347,7 @@ Existing GitHub issue workstreams to reconcile before opening duplicates:
 
 - WANGA-LAB is the canonical Logic Economy engineering and productization repository.
 - QUALIA is the related economic-governance framework and must remain separately governed.
-- The initial connection target is 15 repositories across five functional types, plus one organizational reference repository.
+- The initial connection target is 16 repositories across five functional types, plus one organizational reference repository.
 - The first commercial proof should be a bounded, source-grounded Logic Box and a paid pilot—not a token launch.
 - The protected logical foundation is not the commodity; verified applications and services are the initial commercial outputs.
 - All financial instruments remain proposals until legal, governance, reserve, custody, audit, and regulatory requirements are independently resolved.
