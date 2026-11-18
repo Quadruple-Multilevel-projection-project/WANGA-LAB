@@ -194,6 +194,26 @@ Access=automation_registry_and_connected_GitHub_available;unseen_chats_disconnec
 Status=PARTIAL;A3_prompt_updated_and_read_back;A2_not_changed;no_project_execution;no_schedule_or_enabled_state_change
 ```
 
-SHA-256: `053ae87040e7e4706af92aeb88fdbe8ecb66edd28ada6653818bcd0445975497`
+SHA-256: `f20d054466636e1d0a018303e0f06f437f7efc6b4c9ab6b9c8eeb5701875d08f`
 
 No Git tag, `core/verify_contract.py` PASS, or `git push` of a tag was performed. No contract-seal claim is made.
+
+
+## 10. Signature correction record
+
+The first stored supervisor-run SHA-256 value was incorrect. The exact embedded newline-delimited payload was re-read from this file and recomputed; the corrected value above is `f20d054466636e1d0a018303e0f06f437f7efc6b4c9ab6b9c8eeb5701875d08f`.
+
+Correction action signature payload:
+
+```text
+Timestamp=2026-11-18T05:33:19.682Z
+Contract_Start_Time=2026-11-18T05:24:50.598436Z
+Action_ID=ACT-20261118-AI231-SUPERVISOR-RUN-003-SIGNATURE-CORRECTION-001
+Target=business_brain/logs/2026-11-18-AI231-SUPERVISOR-RUN-003.md
+Before_Blob_SHA=bc7ceee16213951bc895ad4b485a31fca6b1ea29
+Before_Recorded_Log_SHA=053ae87040e7e4706af92aeb88fdbe8ecb66edd28ada6653818bcd0445975497
+After_Correct_Log_SHA=f20d054466636e1d0a018303e0f06f437f7efc6b4c9ab6b9c8eeb5701875d08f
+Correction=replace incorrect supervisor-run payload hash with recomputed SHA-256 from exact embedded newline-delimited payload
+Scope=log correction only; no automation or project-state change
+```
+SHA-256: `5a5781b2875507a163d44f70d4d6d004267b40cbcc5441051da6408b9704efcf`
