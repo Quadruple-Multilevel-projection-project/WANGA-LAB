@@ -1,19 +1,19 @@
 {
   "schema_version": "wanga-ecosystem-scan-cursor/1.0",
-  "snapshot_date": "2026-11-15",
+  "snapshot_date": "2026-11-18",
   "batch_size": 10,
-  "completed_batch": "2026-11-15-batch-02",
+  "completed_batch": "2026-11-18-batch-03-priority",
   "last_scanned_repositories": [
-    "AmbassadorOv/Nanomathematics",
+    "AmbassadorOv/WANGA-LAB.-01",
+    "AmbassadorOv/agent-orchestrator",
     "AmbassadorOv/multi-agent-orchestator",
-    "AmbassadorOv/ROBOTICS_TRIPARTITA_Logos",
-    "Quadruple-Multilevel-projection-project/skills",
-    "tribal-archery/-logicl-neural-order",
-    "tribal-archery/MAM-parsed",
-    "tribal-archery/Qdprojects",
-    "AmbassadorOv/python-genai",
-    "AmbassadorOv/openai_tiktoken",
-    "AmbassadorOv/platform-samples"
+    "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+    "Quadruple-Multilevel-projection-project/MNM",
+    "Quadruple-Multilevel-projection-project/AI231.meta.io",
+    "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+    "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+    "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+    "Quadruple-Multilevel-projection-project/skills"
   ],
   "next_batch": [
     "AmbassadorOv/-artificial-y",
@@ -27,7 +27,7 @@
     "AmbassadorOv/docs",
     "AmbassadorOv/eslint"
   ],
-  "remaining_public_count": 38,
+  "remaining_public_count": 39,
   "remaining_public_repositories": [
     "AmbassadorOv/-artificial-y",
     "AmbassadorOv/AG-triple-X-",
@@ -66,9 +66,11 @@
     "tribal-archery/copilot-cli",
     "tribal-archery/mermaid",
     "tribal-archery/unetbootin",
-    "tribal-archery/vscode-azure-blockchain-ethereum"
+    "tribal-archery/vscode-azure-blockchain-ethereum",
+    "AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS"
   ],
   "nonpublic_or_private_count_redacted": 5,
   "cursor_mode": "PRIORITY_ORDER",
-  "status": "READY_FOR_NEXT_BATCH"
+  "status": "READY_FOR_NEXT_BATCH",
+  "note": "Priority batch 03 refreshed eight existing entries and indexed two new public forks. AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS remains queued; next deterministic batch is unchanged."
 }
