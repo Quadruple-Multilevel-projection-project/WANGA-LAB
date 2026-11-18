@@ -1,6 +1,6 @@
 {
   "schema_version": "wanga-ecosystem-project-findings/1.0",
-  "snapshot_date": "2026-11-15",
+  "snapshot_date": "2026-11-18",
   "epistemic_rule": "A source proves only what is written in that source; structural links and candidate compositions are not semantic entailments.",
   "findings": [
     {
@@ -465,6 +465,61 @@
       "permission_scope": "PUBLIC_READ; repository permission ADMIN",
       "next_action": "No integration action.",
       "scan_date": "2026-11-15"
+    },
+    {
+      "id": "F-WANGA-LAB-01-FRACTAL-SPEC-2026-11-18",
+      "repository": "AmbassadorOv/WANGA-LAB.-01",
+      "ref": "main",
+      "file_path": "docs/LOGIC_WIKI_FRACTAL_ARCHITECTURE_V2.md",
+      "git_blob_sha": "6cec349a3b73a559d7b8fb4eb788afac68eeb9ee",
+      "source_uri": "https://github.com/AmbassadorOv/WANGA-LAB.-01/blob/main/docs/LOGIC_WIKI_FRACTAL_ARCHITECTURE_V2.md",
+      "summary": "A public fork of canonical WANGA-LAB restates L0-L3 logic-fractal scales and distinguishes editorial Wiki relationships from contract-driven composition. It explicitly says neither edge type establishes semantic entailment. Because this is a fork, it is not counted as an independent source.",
+      "epistemic_status": "FORKED_SPECIFICATION_NOT_INDEPENDENT_EVIDENCE",
+      "overlap_candidates": [
+        "WANGA-LAB/logic_fractal/data/composition_rules.json",
+        "WANGA-LAB/logic_fractal/data/recursive_composition_contracts_v1.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN; fork of WANGA-LAB",
+      "next_action": "Compare fork delta with upstream main; do not duplicate its specification into the source catalog.",
+      "scan_date": "2026-11-18"
+    },
+    {
+      "id": "F-AGENT-ORCHESTRATOR-CONTRACT-2026-11-18",
+      "repository": "AmbassadorOv/agent-orchestrator",
+      "ref": "main",
+      "file_path": "contracts/session-start-interface.json",
+      "git_blob_sha": "0fa5d158dfdd412c5cad8f907bdfdd38f5524f17",
+      "source_uri": "https://github.com/AmbassadorOv/agent-orchestrator/blob/main/contracts/session-start-interface.json",
+      "summary": "A public fork of OrchestratorInc/agent-orchestrator contains a session-start contract with nine declared worker/orchestrator cases and distinct local/cloud defaults. This is a contract document only; no WANGA integration or runtime test was verified.",
+      "epistemic_status": "UPSTREAM_FORK_CONTRACT_NOT_RUNTIME_VERIFIED",
+      "overlap_candidates": [
+        "WANGA Global Work Manager",
+        "NTM orchestration/session routing"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN; fork of OrchestratorInc/agent-orchestrator",
+      "next_action": "Compare fork changes with upstream and inspect code/tests before proposing an adapter; do not modify the fork.",
+      "scan_date": "2026-11-18"
+    },
+    {
+      "id": "F-LIMBO-LOGIC-WIKI-PATHSPEC-2026-11-16",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "0e0435b72c84fb748b8481f6ba824165aa558d16",
+      "file_path": ".github/workflows/logic-fractal-wiki.yml",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/43877547764",
+      "evidence_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/43877547764",
+      "current_file_git_blob_sha": "6e4a7760ecc972b84519381f0d12360c9d5de315",
+      "summary": "The 2026-11-16 scheduled Logic Fractal workflow failed in the generated-report proposal step: git add rejected the pathspec research/reports/agent-evaluation/** because no matching path existed. Earlier build, composer, typed-fragment, formal and benchmark steps passed. Current main workflow no longer lists that path in create-pull-request add-paths, but the latest successful run skipped the proposal step, so the correction has not been exercised by a successful scheduled publication.",
+      "epistemic_status": "OBSERVED_CI_FAILURE_PENDING_LIMBO_REGISTRATION_AND_RETEST",
+      "overlap_candidates": [
+        "Limbo Cartography Core",
+        "Logic Fractal Wiki Research"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_SOURCE",
+      "next_action": "After PR #122 branch reconciliation and CI authorization, append this exact run as a separate Limbo incident and replay the publication step; do not infer recurrence or causation.",
+      "scan_date": "2026-11-18"
     }
   ],
   "system_boundaries": {
