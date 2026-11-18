@@ -1,0 +1,5 @@
+from enum import Enum
+
+class Provenance(str, Enum):
+    VERIFIED_FROM_SOURCE = "VERIFIED_FROM_SOURCE"
+    COMPUTATIONAL_HYPOTHESIS = "COMPUTATIONAL_HYPOTHESIS"
