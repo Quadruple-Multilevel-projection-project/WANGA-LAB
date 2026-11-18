@@ -1,0 +1,240 @@
+=== Wiki-Agent/Lexicon.json ===
+{
+  "status": "לא נמצאו קבצים"
+}
+
+=== Wiki-Agent/Rules.json ===
+{
+  "Zero_Hubris": "אסור לפרש, לסכם או להסביר. הכלי סטטיסטי בלבד.",
+  "Anti_Hagdalah": "אסור להוסיף מילים שלא מופיעות בטקסט המקור.",
+  "Core_Inyan_Max_Words": 15,
+  "No_Quantum": true
+}
+
+=== Wiki-Agent/urls.txt ===
+https://he.wikipedia.org/wiki/רמב%22ם
+
+=== Wiki-Agent/agent.py ===
+#!/usr/bin/env python3
+import json
+import re
+import sys
+from pathlib import Path
+from datetime import datetime
+
+URLS_FILE = Path("urls.txt")
+RULES_FILE = Path("Rules.json")
+LEXICON_FILE = Path("Lexicon.json")
+ENTRIES_DIR = Path("Wiki_Entries")
+ENTRIES_DIR.mkdir(exist_ok=True)
+
+def load_json(path):
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+def extract_from_text(text):
+    words = re.findall(r"[\w׳״]+", text)
+    names = list(set([w for w in words if len(w) > 2]))[:10]
+    actions = list(set([w for w in words if w.endswith(("ל", "ה", "ים", "ות"))]))[:10]
+    core = " ".join(words[:15])
+    return {
+        "Title": words[0] if words else "untitled",
+        "Names": names,
+        "Actions": actions,
+        "Core_Inyan": core
+    }
+
+def run_verifier(data, source_text):
+    from verify_math import verify
+    return verify(data, source_text)
+
+def save_entry(data):
+    ts = datetime.utcnow().strftime("%Y%m%d_%H%M%S")
+    fname = ENTRIES_DIR / f"entry_{ts}.md"
+    content = f"""# {data.get('Title', 'untitled')}
+
+## Names
+{chr(10).join('- ' + n for n in data.get('Names', []))}
+
+## Actions
+{chr(10).join('- ' + a for a in data.get('Actions', []))}
+
+## Core_Inyan
+{data.get('Core_Inyan', '')}
+"""
+    with open(fname, "w", encoding="utf-8") as f:
+        f.write(content)
+    return fname
+
+def main():
+    if not URLS_FILE.exists():
+        print("no urls.txt")
+        sys.exit(1)
+    urls = URLS_FILE.read_text(encoding="utf-8").strip().splitlines()
+    for url in urls:
+        source_text = ""
+        attempts = 0
+        while attempts < 3:
+            data = extract_from_text(source_text or "רמבם")
+            status, msg = run_verifier(data, source_text)
+            if status == "ACCEPTED":
+                path = save_entry(data)
+                print(f"SAVED {path}")
+                break
+            else:
+                attempts += 1
+                print(f"REJECTED attempt {attempts}: {msg}")
+        else:
+            print("FAILED after 3 attempts")
+
+if __name__ == "__main__":
+    main()
+
+=== Wiki-Agent/verify_math.py ===
+#!/usr/bin/env python3
+import json
+import sys
+import re
+from pathlib import Path
+
+try:
+    from sympy import *
+except ImportError:
+    pass
+
+LEXICON_PATH = Path("Lexicon.json")
+RULES_PATH = Path("Rules.json")
+
+def load_json(path):
+    if path.exists():
+        with open(path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+def word_count(text):
+    return len(re.findall(r"[\w׳״]+", text))
+
+def check_contradictions(names, lexicon):
+    for name in names:
+        if name in lexicon and lexicon.get(name) == "סתירה":
+            return False, f"סתירה במונח: {name}"
+    return True, ""
+
+def check_actions_in_source(actions, source_text):
+    source_lower = source_text.lower()
+    for action in actions:
+        if action.lower() not in source_lower:
+            return False, f"פעולה לא מופיעה במקור: {action}"
+    return True, ""
+
+def verify(data, source_text=""):
+    rules = load_json(RULES_PATH)
+    lexicon = load_json(LEXICON_PATH)
+    
+    names = data.get("Names", [])
+    actions = data.get("Actions", [])
+    core = data.get("Core_Inyan", "")
+    
+    if word_count(core) > rules.get("Core_Inyan_Max_Words", 15):
+        return "REJECTED", f"Core_Inyan ארוך מ-{rules.get('Core_Inyan_Max_Words', 15)} מילים"
+    
+    ok, msg = check_contradictions(names, lexicon)
+    if not ok:
+        return "REJECTED", msg
+    
+    if source_text:
+        ok, msg = check_actions_in_source(actions, source_text)
+        if not ok:
+            return "REJECTED", msg
+    
+    return "ACCEPTED", "OK"
+
+if __name__ == "__main__":
+    if len(sys.argv) < 2:
+        print("Usage: python verify_math.py <json_file> [source_text_file]")
+        sys.exit(1)
+    with open(sys.argv[1], "r", encoding="utf-8") as f:
+        data = json.load(f)
+    source = ""
+    if len(sys.argv) > 2:
+        with open(sys.argv[2], "r", encoding="utf-8") as f:
+            source = f.read()
+    status, msg = verify(data, source)
+    print(status)
+    print(msg)
+    sys.exit(0 if status == "ACCEPTED" else 1)
+
+=== Wiki-Agent/optimizer.py ===
+#!/usr/bin/env python3
+import json
+from pathlib import Path
+from collections import Counter
+
+RULES_FILE = Path("Rules.json")
+LOG_FILE = Path("rejection_log.txt")
+
+def load_rules():
+    if RULES_FILE.exists():
+        with open(RULES_FILE, "r", encoding="utf-8") as f:
+            return json.load(f)
+    return {}
+
+def save_rules(rules):
+    with open(RULES_FILE, "w", encoding="utf-8") as f:
+        json.dump(rules, f, ensure_ascii=False, indent=2)
+
+def main():
+    if not LOG_FILE.exists():
+        return
+    lines = LOG_FILE.read_text(encoding="utf-8").splitlines()
+    words = []
+    for line in lines:
+        if "פעולה לא מופיעה" in line or "מילה" in line:
+            parts = line.split(":")
+            if len(parts) > 1:
+                words.append(parts[-1].strip())
+    if not words:
+        return
+    cnt = Counter(words)
+    rules = load_rules()
+    banned = rules.get("Banned_Words", [])
+    for w, c in cnt.most_common(5):
+        if c >= 2 and w not in banned:
+            banned.append(w)
+    rules["Banned_Words"] = banned
+    save_rules(rules)
+    print("Rules updated")
+
+if __name__ == "__main__":
+    main()
+
+=== Wiki-Agent/.github/workflows/auto_wiki.yml ===
+name: Auto Wiki Agent
+on:
+  schedule:
+    - cron: '0 */6 * * *'
+  workflow_dispatch:
+jobs:
+  run-agent:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Install deps
+        run: pip install sympy requests
+      - name: Run agent
+        run: python Wiki-Agent/agent.py
+      - name: Run optimizer
+        run: python Wiki-Agent/optimizer.py
+      - name: Commit
+        run: |
+          git config user.name "Wiki-Agent"
+          git config user.email "agent@local"
+          git add Wiki-Agent/Wiki_Entries/ Wiki-Agent/Rules.json || true
+          git commit -m "Auto update" || true
+          git push || true
