@@ -673,9 +673,20 @@
       "file_path": "scripts/build_logic_wiki.py + logic_wiki/data/research_metrics.json",
       "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/automation/wanga-unified-cycle-2026-11-19-b/scripts/build_logic_wiki.py",
       "summary": "The generated catalog readiness report coerced a missing critical-contradiction inventory to 0 via metrics.get(..., 0), while run_logic_agents.py correctly returned NOT_MEASURED_NO_INVENTORY because logic_fractal/data/core_contradictions.json is absent. Updated the builder to preserve null/NOT_MEASURED unless an explicit inventory-available flag and integer count exist; added a regression assertion and a two-run artifact hash comparison for the typed synthetic builder.",
-      "epistemic_status": "CODE_DEFECT_IDENTIFIED_FIX_IN_PR_CI_PENDING",
+      "epistemic_status": "FIX_TESTED_IN_PR_CI_NOT_MERGED",
       "permission_scope": "PUBLIC_SOURCE",
-      "next_action": "Require PR CI to confirm the regression test and deterministic artifact comparison."
+      "next_action": "Keep the explicit inventory-available guard; merge only after review and all required checks."
+    },
+    {
+      "id": "F-LOGIC-FRACTAL-CI-2026-11-19",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "automation/wanga-unified-cycle-2026-11-19-b",
+      "file_path": "Actions runs 44469693207, 44469693206, 44469693175, 44469693230",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/44469693207",
+      "summary": "Second PR validation passed: Logic Fractal Wiki Research, Repository Integrity, WANGA Ecosystem Agent Sweep and CodeQL all succeeded. Typed synthetic builder was run twice; candidate file SHA-256 matched exactly (f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4) and model hash matched exactly (a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904). Candidate remains CANDIDATE_NOT_RELEASED / NOT_YET_VERIFIED.",
+      "epistemic_status": "SOFTWARE_CI_PASS_SYNTHETIC_REBUILD_ONLY",
+      "permission_scope": "PUBLIC_CI_ARTIFACT",
+      "next_action": "Keep PR open for human review; do not release the synthetic candidate."
     }
   ],
   "system_boundaries": {
