@@ -55,7 +55,7 @@
     "independent_reviews": 0
   },
   "CI": {
-    "status": "FIRST_PR_VALIDATION_PASSED_SECOND_VALIDATION_PENDING",
+    "status": "SECOND_PR_VALIDATION_PASSED_THIRD_RUN_WILL_VALIDATE_REPORT_UPDATE",
     "limbo_pr122_runs": [
       40167547736,
       40167547828,
@@ -84,11 +84,11 @@
       "status": "in_progress"
     },
     "artifact": {
-      "id": 14503941189,
+      "id": 14504146351,
       "name": "logic-wiki-research-report",
-      "size_bytes": 94358,
-      "sha256": "5427cd01d68d668d6ad90cd000c44d22bdba060634e47471ba1748f2d0da2827",
-      "expires_at": "2027-02-17T06:02:34Z"
+      "size_bytes": 95761,
+      "sha256": "9aaddbd47bd37097e354cd9c4ab455749ee2c8920a40e3dc78c49bca3047407f",
+      "expires_at": "2027-02-17T06:05:57Z"
     },
     "typed_builder": {
       "status": "CANDIDATE_NOT_RELEASED",
@@ -99,6 +99,28 @@
     "readiness_artifact": {
       "catalog_build_status": "PASS",
       "readiness_gate_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY"
+    },
+    "first_validation": {
+      "logic_fractal_run": 44469292356,
+      "repository_integrity_run": 44469292416,
+      "ecosystem_agent_sweep_run": 44469292348,
+      "codeql_run": 44469292533,
+      "all_conclusions": "success"
+    },
+    "second_validation": {
+      "logic_fractal_run": 44469693207,
+      "repository_integrity_run": 44469693206,
+      "ecosystem_agent_sweep_run": 44469693175,
+      "codeql_run": 44469693230,
+      "all_conclusions": "success"
+    },
+    "deterministic_typed_builder": {
+      "runs": 2,
+      "first_file_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+      "second_file_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+      "first_model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+      "second_model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+      "equal": true
     }
   },
   "MODEL_HASH": {
@@ -106,7 +128,9 @@
     "scale_1": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
     "scale_2": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
     "semantic_status": "NOT_YET_VERIFIED",
-    "artifact_sha256": "5427cd01d68d668d6ad90cd000c44d22bdba060634e47471ba1748f2d0da2827"
+    "artifact_sha256": "5427cd01d68d668d6ad90cd000c44d22bdba060634e47471ba1748f2d0da2827",
+    "typed_artifact_file_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+    "deterministic_double_run": true
   },
   "READINESS_GATE": {
     "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
@@ -125,18 +149,21 @@
     "holdout": false,
     "mirror_review": false,
     "critical_contradictions": "NOT_MEASURED_NO_INVENTORY",
-    "deterministic_build": "VERIFIED_BY_RUN_LOGIC_AGENTS_TWO_CANDIDATE_HASHES_EQUAL; TYPED_SCRIPT_DOUBLE_RUN_ADDED_TO_NEXT_CI"
+    "deterministic_build": "VERIFIED_BY_RUN_LOGIC_AGENTS_TWO_CANDIDATE_HASHES_EQUAL; TYPED_SCRIPT_DOUBLE_RUN_ADDED_TO_NEXT_CI",
+    "builder_false_zero_fixed_in_pr": true
   },
   "BUILT": [
     "Ecosystem registry, cursor and dated reports committed to a non-main branch"
   ],
   "TESTED": [
     "Catalog structural checks: 28/28 source-linked; all source/relation refs resolve; duplicate IDs 0",
-    "Logic Fractal workflow run 44469292356 passed; generated catalog and typed synthetic candidate; unit suites reported success."
+    "Logic Fractal workflow run 44469292356 passed; generated catalog and typed synthetic candidate; unit suites reported success.",
+    "Second PR validation run 44469693207 passed all Logic Fractal steps; typed builder file hash and model hash matched across two executions."
   ],
   "VERIFIED": [
     "Live repository/Wix metadata reads and catalog structural checks only",
-    "Current CI artifact 14503941189 captured; candidate scale-2 hash a16a83e...; release gate remains blocked."
+    "Current CI artifact 14503941189 captured; candidate scale-2 hash a16a83e...; release gate remains blocked.",
+    "Readiness artifact now records critical_core_contradictions=null and contradiction_inventory_available=false; this is NOT_MEASURED, not zero."
   ],
   "BLOCKED": [
     "No conversation export",
@@ -144,7 +171,8 @@
     "PR #122 stale/action_required",
     "PR #146 not merged",
     "Wix site identity unconfirmed",
-    "Core contradiction count is NOT_MEASURED because no core_contradictions.json inventory exists; builder false-zero reporting fix is in PR."
+    "Core contradiction count is NOT_MEASURED because no core_contradictions.json inventory exists; builder false-zero reporting fix is in PR.",
+    "Core contradiction count remains NOT_MEASURED because no core_contradictions.json inventory exists."
   ],
   "NEXT": [
     "Run PR CI and archive synthetic builder hash",
