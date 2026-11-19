@@ -236,6 +236,17 @@
     },
     "runtime": {
       "type": "object",
+      "required": [
+        "isolation_required",
+        "network_egress",
+        "runtime_status",
+        "backend_configuration",
+        "environment",
+        "invocation_log_refs",
+        "isolation_evidence_refs",
+        "network_egress_policy_ref",
+        "acceptance_test_refs"
+      ],
       "properties": {
         "isolation_required": {
           "const": true
@@ -248,9 +259,296 @@
           "items": {
             "type": "string"
           }
+        },
+        "runtime_status": {
+          "enum": [
+            "NOT_CONFIGURED",
+            "CONFIGURED_NOT_INVOKED",
+            "INVOKED_UNVERIFIED",
+            "TESTED",
+            "ACTIVE",
+            "BLOCKED"
+          ]
+        },
+        "backend_configuration": {
+          "type": "string",
+          "minLength": 1
+        },
+        "environment": {
+          "type": "string",
+          "minLength": 1
+        },
+        "invocation_log_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "isolation_evidence_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "network_egress_policy_ref": {
+          "type": "string",
+          "minLength": 1
+        },
+        "acceptance_test_refs": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "additionalProperties": false
+    },
+    "system_requirements": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "portability_contract": {
+      "type": "object",
+      "required": [
+        "provider_dependencies",
+        "model_adapter_interface",
+        "alternative_providers_or_fallback",
+        "data_export_format",
+        "owner_controlled_source_location",
+        "deployment_reproduction_steps",
+        "secrets_location_and_rotation",
+        "exit_test",
+        "portability_status"
+      ],
+      "properties": {
+        "provider_dependencies": {
+          "type": "string",
+          "minLength": 10
+        },
+        "model_adapter_interface": {
+          "type": "string",
+          "minLength": 10
+        },
+        "alternative_providers_or_fallback": {
+          "type": "string",
+          "minLength": 10
+        },
+        "data_export_format": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "owner_controlled_source_location": {
+          "type": "string",
+          "minLength": 5
+        },
+        "deployment_reproduction_steps": {
+          "type": "string",
+          "minLength": 10
+        },
+        "secrets_location_and_rotation": {
+          "type": "string",
+          "minLength": 10
+        },
+        "exit_test": {
+          "type": "string",
+          "minLength": 10
+        },
+        "portability_status": {
+          "enum": [
+            "Unresolved",
+            "Verified",
+            "Blocked"
+          ]
+        },
+        "portability_status_note": {
+          "type": "string",
+          "minLength": 10
+        }
+      },
+      "additionalProperties": false
+    },
+    "audit_contract": {
+      "type": "object",
+      "required": [
+        "hash_algorithm",
+        "required_fields",
+        "canonical_payload",
+        "verification",
+        "retention",
+        "evidence_location"
+      ],
+      "properties": {
+        "hash_algorithm": {
+          "const": "SHA-256"
+        },
+        "required_fields": {
+          "type": "array",
+          "minItems": 8,
+          "uniqueItems": true,
+          "items": {
+            "enum": [
+              "timestamp_iso8601",
+              "contract_start_time",
+              "action_id",
+              "repository",
+              "branch",
+              "artifact_identifiers",
+              "commit_identifiers",
+              "sha256"
+            ]
+          }
+        },
+        "canonical_payload": {
+          "type": "string",
+          "minLength": 50
+        },
+        "verification": {
+          "type": "string",
+          "minLength": 30
+        },
+        "retention": {
+          "type": "string",
+          "minLength": 30
+        },
+        "evidence_location": {
+          "type": "string",
+          "minLength": 5
+        }
+      },
+      "additionalProperties": false
+    },
+    "rollback": {
+      "type": "object",
+      "required": [
+        "trigger",
+        "procedure",
+        "verification",
+        "authority",
+        "data_preservation"
+      ],
+      "properties": {
+        "trigger": {
+          "type": "string",
+          "minLength": 20
+        },
+        "procedure": {
+          "type": "array",
+          "minItems": 3,
+          "items": {
+            "type": "string",
+            "minLength": 5
+          }
+        },
+        "verification": {
+          "type": "string",
+          "minLength": 20
+        },
+        "authority": {
+          "type": "string",
+          "minLength": 20
+        },
+        "data_preservation": {
+          "type": "string",
+          "minLength": 20
         }
       },
       "additionalProperties": false
     }
-  }
+  },
+  "allOf": [
+    {
+      "if": {
+        "required": [
+          "runtime"
+        ]
+      },
+      "then": {
+        "required": [
+          "audit_contract",
+          "rollback"
+        ],
+        "properties": {
+          "runtime": {
+            "required": [
+              "isolation_required",
+              "network_egress",
+              "runtime_status",
+              "backend_configuration",
+              "environment",
+              "invocation_log_refs",
+              "isolation_evidence_refs",
+              "network_egress_policy_ref",
+              "acceptance_test_refs"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "status": {
+            "enum": [
+              "tested",
+              "active"
+            ]
+          }
+        },
+        "required": [
+          "status"
+        ]
+      },
+      "then": {
+        "required": [
+          "runtime"
+        ],
+        "properties": {
+          "runtime": {
+            "properties": {
+              "runtime_status": {
+                "enum": [
+                  "TESTED",
+                  "ACTIVE"
+                ]
+              },
+              "backend_configuration": {
+                "not": {
+                  "const": "NOT_CONFIGURED"
+                }
+              },
+              "environment": {
+                "not": {
+                  "const": "NOT_CONFIGURED"
+                }
+              },
+              "invocation_log_refs": {
+                "minItems": 1
+              },
+              "isolation_evidence_refs": {
+                "minItems": 1
+              },
+              "network_egress_policy_ref": {
+                "not": {
+                  "const": "NOT_CONFIGURED"
+                }
+              },
+              "acceptance_test_refs": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
 }
