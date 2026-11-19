@@ -308,6 +308,31 @@
       ],
       "status": "DRAFT",
       "blueprint_path": "agent_blueprints/agent-runtime-verifier.json"
+    },
+    {
+      "id": "robotics-site-auditor",
+      "role": "AUDIT_SITE_QUALITY_AND_DRAFT_SAFE_FIXES",
+      "inputs": [
+        "authorized Wix site inventory record",
+        "read-only public page and project-file snapshots",
+        "latest execution log and cumulative backlog",
+        "approved terminology and source references"
+      ],
+      "outputs": [
+        "evidence-linked page findings",
+        "prioritized reversible non-production patch",
+        "before/after evidence and rollback plan",
+        "acceptance results and next action"
+      ],
+      "constraints": [
+        "No production Wix writes or publication",
+        "No access/security changes, payment flows, personal-data collection or external messages",
+        "No link-reachability claim without current HTTP evidence",
+        "No agent-active claim without runtime, isolation and acceptance evidence",
+        "No duplicate goal when an existing backlog item covers the finding"
+      ],
+      "status": "DRAFT",
+      "blueprint_path": "agent_blueprints/robotics-site-auditor.json"
     }
   ]
 }
