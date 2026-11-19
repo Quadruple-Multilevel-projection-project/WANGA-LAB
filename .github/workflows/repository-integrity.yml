@@ -32,6 +32,9 @@ jobs:
       - name: Validate Python syntax
         run: python -m compileall -q .
 
+      - name: Regional drift workflow and artifact-scope tests
+        run: python -m unittest discover -s ai-drift-forensics/tests -p 'test_regional_drift_workflow.py' -v
+
       - name: Formal reasoning adapter tests
         run: python -m unittest discover -s tests -p 'test_formal_reasoning.py' -v
 
@@ -43,7 +46,6 @@ jobs:
 
       - name: Audit source-grounded benchmark readiness
         run: python scripts/audit_source_grounded_logic_benchmark.py --out research/reports/formal-reasoning/source-grounded-benchmark-latest.json
-
 
       - name: Typed formal-fragment tests
         run: python -m unittest discover -s tests -p 'test_formal_typed_fragment.py' -v
@@ -59,7 +61,6 @@ jobs:
 
       - name: Validate ARK-Swarm library matrix
         run: python scripts/validate_ark_swarm_library_matrix.py
-
 
       - name: ARK-Swarm + Logic Trader integration tests
         run: python -m unittest discover -s tests -p 'test_ark_swarm_logic_trader.py' -v
