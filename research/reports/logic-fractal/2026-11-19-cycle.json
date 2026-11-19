@@ -55,18 +55,58 @@
     "independent_reviews": 0
   },
   "CI": {
-    "status": "PENDING_PR_CI_AT_REPORT_CREATION",
+    "status": "FIRST_PR_VALIDATION_PASSED_SECOND_VALIDATION_PENDING",
     "limbo_pr122_runs": [
       40167547736,
       40167547828,
       40167547744
     ],
     "limbo_pr122_conclusion": "ACTION_REQUIRED",
-    "jobs_returned": 0
+    "jobs_returned": 0,
+    "logic_fractal_run": {
+      "id": 44469292356,
+      "run_number": 291,
+      "conclusion": "success"
+    },
+    "repository_integrity_run": {
+      "id": 44469292416,
+      "run_number": 1111,
+      "conclusion": "success"
+    },
+    "ecosystem_agent_sweep_run": {
+      "id": 44469292348,
+      "run_number": 243,
+      "conclusion": "success"
+    },
+    "codeql_run": {
+      "id": 44469292533,
+      "run_number": 1597,
+      "status": "in_progress"
+    },
+    "artifact": {
+      "id": 14503941189,
+      "name": "logic-wiki-research-report",
+      "size_bytes": 94358,
+      "sha256": "5427cd01d68d668d6ad90cd000c44d22bdba060634e47471ba1748f2d0da2827",
+      "expires_at": "2027-02-17T06:02:34Z"
+    },
+    "typed_builder": {
+      "status": "CANDIDATE_NOT_RELEASED",
+      "scale_1_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+      "scale_2_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    "readiness_artifact": {
+      "catalog_build_status": "PASS",
+      "readiness_gate_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY"
+    }
   },
   "MODEL_HASH": {
-    "status": "PENDING_CURRENT_CI",
-    "last_recorded_typed_synthetic": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904"
+    "status": "BUILT_SYNTHETIC_CANDIDATE_NOT_RELEASED",
+    "scale_1": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+    "scale_2": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "semantic_status": "NOT_YET_VERIFIED",
+    "artifact_sha256": "5427cd01d68d668d6ad90cd000c44d22bdba060634e47471ba1748f2d0da2827"
   },
   "READINESS_GATE": {
     "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
@@ -83,23 +123,28 @@
     "duplicate_ids": 0,
     "core_contradictions": "NOT_MEASURED",
     "holdout": false,
-    "mirror_review": false
+    "mirror_review": false,
+    "critical_contradictions": "NOT_MEASURED_NO_INVENTORY",
+    "deterministic_build": "VERIFIED_BY_RUN_LOGIC_AGENTS_TWO_CANDIDATE_HASHES_EQUAL; TYPED_SCRIPT_DOUBLE_RUN_ADDED_TO_NEXT_CI"
   },
   "BUILT": [
     "Ecosystem registry, cursor and dated reports committed to a non-main branch"
   ],
   "TESTED": [
-    "Catalog structural checks: 28/28 source-linked; all source/relation refs resolve; duplicate IDs 0"
+    "Catalog structural checks: 28/28 source-linked; all source/relation refs resolve; duplicate IDs 0",
+    "Logic Fractal workflow run 44469292356 passed; generated catalog and typed synthetic candidate; unit suites reported success."
   ],
   "VERIFIED": [
-    "Live repository/Wix metadata reads and catalog structural checks only"
+    "Live repository/Wix metadata reads and catalog structural checks only",
+    "Current CI artifact 14503941189 captured; candidate scale-2 hash a16a83e...; release gate remains blocked."
   ],
   "BLOCKED": [
     "No conversation export",
     "No semantic benchmark cases",
     "PR #122 stale/action_required",
     "PR #146 not merged",
-    "Wix site identity unconfirmed"
+    "Wix site identity unconfirmed",
+    "Core contradiction count is NOT_MEASURED because no core_contradictions.json inventory exists; builder false-zero reporting fix is in PR."
   ],
   "NEXT": [
     "Run PR CI and archive synthetic builder hash",
