@@ -1,5 +1,6 @@
 name: Logic Fractal Wiki Research
 on:
+  # Keep ecosystem registries and dated research reports in both push and PR filters so each cycle is CI-gated.
   workflow_dispatch:
   schedule:
     - cron: '17 5 * * 1'
