@@ -665,6 +665,17 @@
       "epistemic_status": "ILLUSTRATIVE_README_NOT_RUNTIME_VERIFIED",
       "permission_scope": "PUBLIC_SOURCE",
       "next_action": "Do not integrate without code-level validation."
+    },
+    {
+      "id": "F-READINESS-CONTRADICTION-METRIC-2026-11-19",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "automation/wanga-unified-cycle-2026-11-19-b",
+      "file_path": "scripts/build_logic_wiki.py + logic_wiki/data/research_metrics.json",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/automation/wanga-unified-cycle-2026-11-19-b/scripts/build_logic_wiki.py",
+      "summary": "The generated catalog readiness report coerced a missing critical-contradiction inventory to 0 via metrics.get(..., 0), while run_logic_agents.py correctly returned NOT_MEASURED_NO_INVENTORY because logic_fractal/data/core_contradictions.json is absent. Updated the builder to preserve null/NOT_MEASURED unless an explicit inventory-available flag and integer count exist; added a regression assertion and a two-run artifact hash comparison for the typed synthetic builder.",
+      "epistemic_status": "CODE_DEFECT_IDENTIFIED_FIX_IN_PR_CI_PENDING",
+      "permission_scope": "PUBLIC_SOURCE",
+      "next_action": "Require PR CI to confirm the regression test and deterministic artifact comparison."
     }
   ],
   "system_boundaries": {
