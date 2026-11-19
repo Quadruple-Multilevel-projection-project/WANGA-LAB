@@ -70,8 +70,48 @@ def validate_blueprint(item: object, source: Path) -> None:
     if not isinstance(item["provenance"], dict) or not item["provenance"].get("created_at") or not item["provenance"].get("created_by"):
         fail(f"{source}: provenance must include created_at and created_by")
     runtime = item.get("runtime", {})
-    if runtime and (runtime.get("isolation_required") is not True or runtime.get("network_egress") is not False):
-        fail(f"{source}: runtime must require isolation and deny network egress")
+    if runtime:
+        if runtime.get("isolation_required") is not True or runtime.get("network_egress") is not False:
+            fail(f"{source}: runtime must require isolation and deny network egress")
+        runtime_required = {
+            "runtime_status", "backend_configuration", "environment",
+            "invocation_log_refs", "isolation_evidence_refs",
+            "network_egress_policy_ref", "acceptance_test_refs",
+        }
+        missing_runtime = runtime_required - runtime.keys()
+        if missing_runtime:
+            fail(f"{source}: runtime missing evidence fields: {', '.join(sorted(missing_runtime))}")
+        if runtime.get("runtime_status") not in {
+            "NOT_CONFIGURED", "CONFIGURED_NOT_INVOKED", "INVOKED_UNVERIFIED",
+            "TESTED", "ACTIVE", "BLOCKED",
+        }:
+            fail(f"{source}: invalid runtime_status")
+        audit = item.get("audit_contract")
+        rollback = item.get("rollback")
+        if not isinstance(audit, dict) or audit.get("hash_algorithm") != "SHA-256":
+            fail(f"{source}: runtime blueprint requires a SHA-256 audit_contract")
+        required_audit = {
+            "timestamp_iso8601", "contract_start_time", "action_id", "repository",
+            "branch", "artifact_identifiers", "commit_identifiers", "sha256",
+        }
+        if not required_audit.issubset(set(audit.get("required_fields", []))):
+            fail(f"{source}: audit_contract is missing required signature fields")
+        if not isinstance(rollback, dict) or len(rollback.get("procedure", [])) < 3:
+            fail(f"{source}: runtime blueprint requires a complete rollback procedure")
+        if item["status"] in {"tested", "active"}:
+            required_evidence = (
+                runtime.get("runtime_status") in {"TESTED", "ACTIVE"}
+                and runtime.get("backend_configuration") != "NOT_CONFIGURED"
+                and runtime.get("environment") != "NOT_CONFIGURED"
+                and bool(runtime.get("invocation_log_refs"))
+                and bool(runtime.get("isolation_evidence_refs"))
+                and runtime.get("network_egress_policy_ref") != "NOT_CONFIGURED"
+                and bool(runtime.get("acceptance_test_refs"))
+            )
+            if not required_evidence:
+                fail(f"{source}: tested/active status lacks exact runtime evidence")
+        elif runtime.get("runtime_status") in {"TESTED", "ACTIVE"}:
+            fail(f"{source}: runtime evidence cannot be promoted while blueprint status is draft/blocked")
 
 
 def main() -> None:
