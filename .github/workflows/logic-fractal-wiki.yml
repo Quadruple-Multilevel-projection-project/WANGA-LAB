@@ -6,6 +6,10 @@ on:
   push:
     branches: ['main']
     paths:
+      - 'research/ecosystem/**'
+      - 'research/reports/logic-fractal/**'
+      - 'research/reports/ark-swarm/**'
+      - 'research/reports/formal-reasoning/**'
       - 'logic_wiki/**'
       - 'research/inbox/conversations/**'
       - 'research/LOGIC_FRACTAL_PROGRAM_V1.md'
@@ -52,6 +56,10 @@ on:
 
   pull_request:
     paths:
+      - 'research/ecosystem/**'
+      - 'research/reports/logic-fractal/**'
+      - 'research/reports/ark-swarm/**'
+      - 'research/reports/formal-reasoning/**'
       - 'logic_wiki/**'
       - 'research/inbox/conversations/**'
       - 'research/LOGIC_FRACTAL_PROGRAM_V1.md'
