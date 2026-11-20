@@ -251,6 +251,72 @@
         }
       },
       "additionalProperties": false
+    },
+    "system_requirements": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "portability_contract": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider_dependencies",
+        "model_adapter_interface",
+        "alternative_providers_or_fallback",
+        "data_export_format",
+        "owner_controlled_source_location",
+        "deployment_reproduction_steps",
+        "secrets_location_and_rotation",
+        "exit_test",
+        "portability_status"
+      ],
+      "properties": {
+        "provider_dependencies": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_adapter_interface": {
+          "type": "string",
+          "minLength": 1
+        },
+        "alternative_providers_or_fallback": {
+          "type": "string",
+          "minLength": 1
+        },
+        "data_export_format": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "owner_controlled_source_location": {
+          "type": "string",
+          "minLength": 1
+        },
+        "deployment_reproduction_steps": {
+          "type": "string",
+          "minLength": 1
+        },
+        "secrets_location_and_rotation": {
+          "type": "string",
+          "minLength": 1
+        },
+        "exit_test": {
+          "type": "string",
+          "minLength": 1
+        },
+        "portability_status": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
     }
   }
 }
