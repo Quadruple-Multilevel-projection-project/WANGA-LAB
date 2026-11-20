@@ -1,0 +1,52 @@
+{
+  "snapshot_id": "wanga-lab-open-issue-sample-2026-11-20",
+  "source_commit": "854a055f28131f091519717d27653fe3fd041c30",
+  "source_ref": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues?q=is%3Aopen",
+  "issues": [
+    {
+      "number": 148,
+      "title": "[REVENUE VALIDATION] Run first paid Logic Auditor / Wix operations pilot discovery",
+      "state": "open",
+      "updated_at": "2026-11-15T16:55:18Z",
+      "labels": ["research", "commercialization"],
+      "assignees": [],
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/148"
+    },
+    {
+      "number": 149,
+      "title": "[REVENUE VALIDATION] Validate first paid Logic Auditor pilot",
+      "state": "open",
+      "updated_at": "2026-11-15T16:55:26Z",
+      "labels": [],
+      "assignees": [],
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/149"
+    },
+    {
+      "number": 126,
+      "title": "[SOURCE VERIFICATION] שער י״ג: פער 18 מול 17 בשמות משותפים",
+      "state": "open",
+      "updated_at": "2026-10-18T22:09:17Z",
+      "labels": [],
+      "assignees": [],
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/126"
+    },
+    {
+      "number": 90,
+      "title": "[ONTOLOGICAL REWARD] Specify Proof-of-Logic and reward ledger before any token issuance",
+      "state": "open",
+      "updated_at": "2026-10-11T12:46:40Z",
+      "labels": [],
+      "assignees": [],
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/90"
+    },
+    {
+      "number": 91,
+      "title": "[LOGIC MARKETPLACE] Define package catalog, usage metering and Execution Shield boundary",
+      "state": "open",
+      "updated_at": "2026-10-11T12:46:44Z",
+      "labels": [],
+      "assignees": [],
+      "url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/91"
+    }
+  ]
+}
