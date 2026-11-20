@@ -172,10 +172,10 @@ def main() -> int:
         )
     except (ValueError, json.JSONDecodeError) as exc:
         json.dump({"status": "BLOCKED", "error": str(exc)}, sys.stdout, indent=2)
-        sys.stdout.write("\\n")
+        sys.stdout.write("\n")
         return 2
     json.dump(report, sys.stdout, indent=2, sort_keys=True)
-    sys.stdout.write("\\n")
+    sys.stdout.write("\n")
     return 0
 
 
