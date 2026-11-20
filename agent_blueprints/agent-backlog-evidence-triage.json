@@ -1,0 +1,127 @@
+{
+  "id": "agent-backlog-evidence-triage",
+  "name": "Backlog Evidence Triage Agent",
+  "version": "1.0.0",
+  "status": "draft",
+  "mission": "Analyze a supplied, provenance-linked GitHub issue snapshot to identify stale open work, missing priority metadata, unassigned work and possible duplicate goals without changing any external system.",
+  "system_instructions": "Operate only on supplied issue snapshots. Use deterministic title-token comparison and timestamp rules. Report candidates, not decisions. Preserve issue numbers, titles, timestamps, source commit and source URL. Distinguish verified metadata from heuristic duplicate candidates. Never create, close, merge, relabel, assign or comment on issues. Never send messages, access credentials, browse private data or make network requests. Keep the agent in draft until its schema and acceptance tests pass and an operator separately approves materialization. The worker is provider-neutral and has no model-provider dependency.",
+  "capabilities": [
+    "stale issue detection from supplied timestamps",
+    "priority and assignment metadata gap detection",
+    "possible duplicate candidate detection with explainable token overlap",
+    "evidence-linked JSON report generation"
+  ],
+  "tool_permissions": [
+    "analyze_supplied_data",
+    "read_agent_registry",
+    "write_internal_report"
+  ],
+  "input_contract": {
+    "requirements": [
+      "A JSON snapshot containing issue number, title, state, updated_at, labels and assignees for each issue",
+      "An explicit ISO 8601 as_of timestamp, stale threshold and duplicate similarity threshold"
+    ],
+    "sources": [
+      "Read-only GitHub issue search or operator-supplied export",
+      "Exact repository commit SHA and issue URLs recorded in the snapshot"
+    ]
+  },
+  "output_contract": {
+    "format": "JSON report",
+    "required_fields": [
+      "agent_id",
+      "rules_version",
+      "as_of",
+      "snapshot_id",
+      "source_commit",
+      "source_ref",
+      "stale_open_issue_numbers",
+      "missing_priority_issue_numbers",
+      "unassigned_open_issue_numbers",
+      "possible_duplicate_pairs",
+      "decision_boundary"
+    ],
+    "evidence_labels": [
+      "Verified",
+      "Assessment",
+      "Hypothesis",
+      "Unresolved"
+    ]
+  },
+  "boundaries": [
+    "Read-only analysis of supplied snapshots; no network access or external mutations",
+    "Possible duplicates are review candidates and must never be automatically merged or closed",
+    "Missing priority metadata is not permission to invent or apply a priority label",
+    "Do not assign owners, send comments, messages, emails or outreach",
+    "Do not access private customer data, secrets, payment data or credentials",
+    "No deployment, production Wix changes, token issuance, spending or contract execution",
+    "A blueprint or successful unit test does not establish an active or deployed agent"
+  ],
+  "acceptance_tests": [
+    {
+      "id": "AT-backlog-triage-1",
+      "description": "An open issue older than the configured threshold is reported as stale using the supplied as_of timestamp",
+      "expected": "The exact issue number appears in stale_open_issue_numbers"
+    },
+    {
+      "id": "AT-backlog-triage-2",
+      "description": "Two similar paid-pilot issues are reported as a possible duplicate pair with shared tokens and no automatic merge",
+      "expected": "The pair is returned with review_required true and automatic_merge false"
+    },
+    {
+      "id": "AT-backlog-triage-3",
+      "description": "Malformed issue input fails closed and no external system is mutated",
+      "expected": "A structured BLOCKED result or ValueError; no network or write capability exists"
+    }
+  ],
+  "failure_behavior": "Reject malformed snapshots, invalid timestamps, unsupported states and invalid thresholds. Return BLOCKED with an error and preserve the source snapshot. Never repair input silently or mutate the source system.",
+  "dependencies": [
+    "business_brain/agents/backlog_evidence_triage.py",
+    "schemas/agent-blueprint-v1.schema.json",
+    "tests/test_agent_backlog_evidence_triage.py"
+  ],
+  "handoffs": [
+    {
+      "to": "agent-runtime-verifier",
+      "when": "The blueprint, worker and exact CI evidence are ready for independent review",
+      "payload": [
+        "blueprint path and blob SHA",
+        "worker path and blob SHA",
+        "test file and workflow run/job/step evidence",
+        "runtime isolation status"
+      ]
+    }
+  ],
+  "provenance": {
+    "created_at": "2026-11-20T09:06:41+02:00",
+    "created_by": "AI231 Meta-Agent Factory",
+    "source_refs": [
+      "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/148",
+      "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/149",
+      "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/AI231_META_AGENT_FACTORY_V1.md"
+    ],
+    "source_commit": "main@854a055f28131f091519717d27653fe3fd041c30"
+  },
+  "runtime": {
+    "isolation_required": true,
+    "network_egress": false,
+    "credential_refs": []
+  },
+  "system_requirements": [
+    "SYS-PORTABILITY-001"
+  ],
+  "portability_contract": {
+    "provider_dependencies": "No model-provider or cloud dependency; deterministic Python standard-library worker.",
+    "model_adapter_interface": "No model call is required; future orchestration must call the pure triage_issues function through a replaceable adapter.",
+    "alternative_providers_or_fallback": "Run locally or in any Python 3.12-compatible isolated runtime; manual review remains the fallback.",
+    "data_export_format": [
+      "JSON",
+      "Markdown"
+    ],
+    "owner_controlled_source_location": "Quadruple-Multilevel-projection-project/WANGA-LAB, business_brain/agents/backlog_evidence_triage.py",
+    "deployment_reproduction_steps": "Install Python 3.12, provide a versioned JSON snapshot, and run the dedicated unit test before any materialization.",
+    "secrets_location_and_rotation": "No secrets required; no credentials are accepted by the worker.",
+    "exit_test": "Export the JSON input/output and rerun the same snapshot with the standard-library CLI without a provider connection.",
+    "portability_status": "Assessment: provider-neutral source; runtime portability test not yet executed."
+  }
+}
