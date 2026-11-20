@@ -1,0 +1,438 @@
+{
+  "schema_version": "wanga-logic-fractal-cycle-report/1.0",
+  "date": "2026-11-20",
+  "scan_time_utc": "2026-11-20T05:24:56Z",
+  "SOURCES_SCANNED": {
+    "wanga_main_commit": "eb01c643c56f764d894a1bdd52fb1c06b2165b5f",
+    "wanga_main_tree_paths": 4090,
+    "wanga_main_files": [
+      "logic_wiki/data/articles.json",
+      "logic_wiki/data/research_metrics.json",
+      "logic_wiki/data/readiness_gate.json",
+      "logic_fractal/data/composition_rules.json",
+      "logic_fractal/data/recursive_composition_contracts_v1.json",
+      "logic_fractal/data/semantic_benchmark_plan_v1.json",
+      "logic_fractal/fragment_composer.py",
+      "scripts/build_first_fractal_model.py",
+      "scripts/build_logic_wiki.py",
+      "logic_wiki/data/wix_sync_manifest.json",
+      "research/ecosystem/repository_inventory.json",
+      "research/ecosystem/project_findings.json",
+      "research/ecosystem/scan_cursor.json"
+    ],
+    "limbo_pr122": {
+      "head": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+      "files_read": 8,
+      "branch": "deploy/limbo-cartography-core-v1"
+    },
+    "repository_batch": {
+      "batch_id": "2026-11-20-batch-03",
+      "repositories": 10,
+      "readmes_read": 9,
+      "readmes_missing": 1
+    },
+    "private_library": {
+      "artifacts_reviewed": 3,
+      "candidate_structures": 2,
+      "publication_status": "PRIVATE_REVIEW_ONLY_NOT_PUBLISHED"
+    },
+    "conversation_exports": 0,
+    "wix_site_contexts": 1
+  },
+  "ACCESS_GAPS": [
+    "No complete ChatGPT conversations.json or ZIP surfaced; this is not a scan of all ChatGPT conversations.",
+    "Five nonpublic/private repository names and contents remain redacted.",
+    "No CROSS_REPO_READ_TOKEN was evidenced or used.",
+    "No workflow-dispatch action is exposed by the connected GitHub toolset; the local read-only clone attempt failed because github.com DNS could not be resolved.",
+    "PR #122 current head has three action_required workflow runs; the API returned no jobs and combined commit status returned no status entries.",
+    "No current Limbo inbox scan or tuning replay was executed.",
+    "No semantic ground-truth suite or independent MIRROR review is registered."
+  ],
+  "NEW_SOURCES": {
+    "ecosystem_repository_records_added": 10,
+    "readme_blob_sources_added": 9,
+    "readme_missing": 1,
+    "new_public_candidate_logic_units": 1,
+    "private_review_candidate_structures": 2,
+    "logic_wiki_source_records_added": 0,
+    "conversation_export_records_added": 0
+  },
+  "DUPLICATE_SOURCES": {
+    "duplicate_readme_blob_hashes": [],
+    "duplicate_affiliation_entries": 13,
+    "repository_identity_deduplicated_by_full_name": true
+  },
+  "CLAIMS_ADDED": {
+    "ecosystem_findings_added": 4,
+    "public_source_backed_candidate_units": 1,
+    "private_review_only_candidates": 2,
+    "semantic_entailments_added": 0,
+    "claims_promoted_to_verified": 0
+  },
+  "LOGIC_UNITS": {
+    "existing_catalog_units_with_resolved_provenance": 28,
+    "new_public_candidate_units": 1,
+    "private_review_candidate_units": 2,
+    "promoted_to_logic_wiki": 0,
+    "verified": 0
+  },
+  "COMPOSITION_COUNT": {
+    "active_rules": 2,
+    "draft_rules": 1,
+    "new_compositions": 0,
+    "semantic_entailments": 0
+  },
+  "CONTRADICTIONS": {
+    "new_confirmed": 0,
+    "new_counter_readings": 1,
+    "critical_core_inventory": "NOT_MEASURED_NO_INVENTORY"
+  },
+  "BENCHMARKS": {
+    "software_tests": "NOT_RUN_THIS_CYCLE",
+    "semantic_cases": 0,
+    "source_grounded_counterexamples": 0,
+    "benchmark_suites": 0,
+    "holdout": false,
+    "mirror_review": false,
+    "independent_review_cycles": 0
+  },
+  "CI": {
+    "PR122": {
+      "state": "OPEN",
+      "draft": true,
+      "merged": false,
+      "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+      "compare_to_main": {
+        "status": "diverged",
+        "ahead_by": 63,
+        "behind_by": 164
+      },
+      "workflow_runs": [
+        {
+          "id": 42345983702,
+          "name": "WANGA-LAB Limbo Cartography Core",
+          "conclusion": "action_required",
+          "jobs_returned": 0
+        },
+        {
+          "id": 42345983634,
+          "name": "Repository Integrity",
+          "conclusion": "action_required",
+          "jobs_returned": 0
+        },
+        {
+          "id": 42345983633,
+          "name": "CodeQL Advanced",
+          "conclusion": "action_required",
+          "jobs_returned": 0
+        }
+      ],
+      "combined_status_entries": 0,
+      "pr_body_head_reference": "f70e09e61b9850f446a1f54450e732287b3f248e"
+    },
+    "cycle_branch": "automation/wanga-unified-cycle-2026-11-20-072456",
+    "status": "DRAFT_PR_TO_BE_OPENED"
+  },
+  "MODEL_HASH": {
+    "current_build": "NOT_RUN",
+    "last_recorded_synthetic_candidate_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "last_recorded_date": "2026-11-15",
+    "semantic_status": "NOT_YET_VERIFIED"
+  },
+  "READINESS_GATE": {
+    "gate_id": "FIRST_MODEL_ALPHA_V1",
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "threshold_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "observed": {
+      "source_records": 17,
+      "source_classes": 11,
+      "logic_units_with_provenance": 28,
+      "composition_rules_with_contracts": 2,
+      "counterexample_cases": 0,
+      "test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "unresolved_dangling_source_refs": 0,
+      "unresolved_dangling_relation_refs": 0,
+      "unresolved_duplicate_stable_ids": 0,
+      "critical_core_contradictions": 0,
+      "deterministic_build": true,
+      "holdout_split": false,
+      "mirror_review": false
+    },
+    "required": {
+      "min_source_records": 20,
+      "min_source_classes": 3,
+      "min_logic_units_with_provenance": 50,
+      "min_composition_rules_with_contracts": 20,
+      "min_counterexample_cases": 30,
+      "min_test_cases": 100,
+      "min_benchmark_suites": 3,
+      "min_independent_review_cycles": 2,
+      "unresolved_dangling_source_refs": 0,
+      "unresolved_duplicate_stable_ids": 0,
+      "critical_core_contradictions": 0,
+      "deterministic_build_required": true,
+      "holdout_split_required": true,
+      "mirror_review_required": true
+    },
+    "checks": {
+      "source_records": false,
+      "source_classes": true,
+      "logic_units_with_provenance": false,
+      "composition_rules_with_contracts": false,
+      "counterexample_cases": false,
+      "test_cases": false,
+      "benchmark_suites": false,
+      "independent_review_cycles": false,
+      "dangling_source_refs": true,
+      "duplicate_stable_ids": true,
+      "deterministic_build": true,
+      "holdout_split": false,
+      "mirror_review": false
+    },
+    "missing_requirements": [
+      "source_records",
+      "logic_units_with_provenance",
+      "composition_rules_with_contracts",
+      "counterexample_cases",
+      "test_cases",
+      "benchmark_suites",
+      "independent_review_cycles",
+      "holdout_split",
+      "mirror_review"
+    ],
+    "relation_edges": 111,
+    "article_count": 28,
+    "source_classes": [
+      "IMPLEMENTATION_SOURCE",
+      "LOCAL_ARCHIVE",
+      "OPEN_TEXTBOOK",
+      "PROJECT_CODE",
+      "PROJECT_CONTRACT",
+      "PROJECT_IMPLEMENTATION",
+      "PROJECT_PROPOSAL",
+      "PROJECT_REPOSITORY",
+      "PROJECT_RESEARCH",
+      "REFERENCE_ARTICLE",
+      "USER_PROVIDED_RESEARCH_HYPOTHESIS"
+    ],
+    "critical_core_contradiction_inventory": "NOT_MEASURED_NO_INVENTORY",
+    "deterministic_build_scope": "SYNTHETIC_FIXTURES_ONLY",
+    "note": "Source/catalog counts were recomputed from the current tracked JSON. The critical contradiction inventory remains unmeasured; metrics value 0 is not treated as proof of absence."
+  },
+  "LIMBO_FORENSIC_CRASH_CARTOGRAPHY": {
+    "pr_number": 122,
+    "pr_state": "OPEN_DRAFT",
+    "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+    "matrix_version": "1.3.0",
+    "matrix_blob_sha": "86593dd31e5c20bf47c81d09d527967cf0a22476",
+    "incident_count": 10,
+    "history_event_count": 2,
+    "map_node_count": 14,
+    "map_edge_count": 19,
+    "map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+    "latest_recorded_time_utc": "2026-10-19T19:41:44Z",
+    "incidents_without_latest_passing_retest": 9,
+    "incidents_with_passing_retest": 1,
+    "tuning_candidate": {
+      "id": "TUNE-9c166900cc4ad5dd",
+      "status": "CANDIDATE_REPLAY_REQUIRED",
+      "replay_status": "NOT_RUN",
+      "recorded_retest_result": "PASS"
+    },
+    "logic_bundle": {
+      "id": "VITRUVIUS-QUEUE-CONTRACT-RECURRENCE",
+      "status": "DRAFT_UNVERIFIED",
+      "root_cause_status": "NOT_YET_ESTABLISHED"
+    },
+    "latest_execution_record": {
+      "timestamp_utc": "2026-11-07T06:12:35+00:00",
+      "status": "EXECUTION_RECORD_ONLY",
+      "epistemic_attempt": false
+    },
+    "current_inbox_scan": "NOT_RUN_THIS_CYCLE",
+    "new_crash_records_added": 0,
+    "branch_divergence": {
+      "ahead_by": 63,
+      "behind_by": 164,
+      "status": "diverged"
+    },
+    "decision": "KEEP_DRAFT; do not merge; refresh/reconcile against main, obtain fresh CI, then source-backed replay."
+  },
+  "WIX": {
+    "site_name": "Logic Engine Research Lab",
+    "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
+    "wiki_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
+    "site_status": "PUBLISHED",
+    "manifest_last_sync_date": "2026-11-14",
+    "manifest_status": "PUBLISHED_READ_BACK_PARTIAL",
+    "catalog_articles": 28,
+    "source_records": 17,
+    "relation_links": 111,
+    "write_performed": false,
+    "reason": "No approved catalog delta; current catalog counts match the last recorded 28-card sync. The manifest remains PUBLISHED_READ_BACK_PARTIAL; no new deployment read-back is claimed."
+  },
+  "BUILT_TESTED_VERIFIED": {
+    "BUILT": [
+      "Existing Logic Wiki catalog and composer implementation",
+      "Existing two-level typed candidate builder from synthetic fixtures",
+      "Existing Limbo branch artifacts and cumulative map"
+    ],
+    "TESTED": [
+      "Previously recorded synthetic composer tests and earlier CI artifacts; no new test run was executed in this cycle"
+    ],
+    "VERIFIED": [],
+    "NOT_VERIFIED": [
+      "Semantic truth",
+      "Source-grounded entailment",
+      "Current Limbo tuning replay",
+      "Whole-system crash coverage",
+      "Full Wix deployment read-back"
+    ]
+  },
+  "AGENT_ROLES": [
+    {
+      "role": "Repository Inventory",
+      "input": "Live owner/collaborator/organization-member repository lists",
+      "output": "66 unique accessible repositories; batch of 10 recorded",
+      "evidence": "Connected GitHub affiliation lists",
+      "status": "COMPLETED",
+      "next_action": "Continue with 31 public repositories remaining."
+    },
+    {
+      "role": "Project README/Docs Collector",
+      "input": "README.md from the next cursor batch",
+      "output": "9 READ; 1 NOT_FOUND; no duplicate README blob hashes",
+      "evidence": "README blob SHAs recorded in repository_inventory.json",
+      "status": "COMPLETED",
+      "next_action": "Inspect deeper docs only for direct relevance."
+    },
+    {
+      "role": "Conversation Export Collector",
+      "input": "Conversation and Library search for conversations.json/ZIP",
+      "output": "No complete export surfaced",
+      "evidence": "Current files search returned unrelated Library items only",
+      "status": "BLOCKED",
+      "next_action": "Wait for a user-provided export; keep raw transcript intake private."
+    },
+    {
+      "role": "Logic/Fractal Extractor",
+      "input": "Public research-index README plus private Library artifacts",
+      "output": "1 public literal-sequence candidate; 2 private review candidates withheld",
+      "evidence": "README blob SHA and private FileCite references in the run record",
+      "status": "COMPLETED",
+      "next_action": "Review candidate boundaries before any catalog promotion."
+    },
+    {
+      "role": "Normalizer",
+      "input": "Public README explanatory sequence",
+      "output": "EXPLICIT_EXPLANATORY_ORDER with five ordered terms and non-applicability boundaries",
+      "evidence": "0ae0b936c66f5eb3fb1f907c2cff79af6c1091050f1caf21afe00801f729ce59",
+      "status": "COMPLETED",
+      "next_action": "Keep as a source-backed candidate; do not treat arrows as entailment."
+    },
+    {
+      "role": "Cross-Repo Relationship Mapper",
+      "input": "Repository README summaries and WANGA catalog",
+      "output": "Two overlap candidates; no integration edge promoted",
+      "evidence": "Project findings F-LOGIC-EXPLANATORY-ORDER and F-SCIGPT-RESEARCH-TOOL",
+      "status": "COMPLETED",
+      "next_action": "Inspect implementation and licenses before proposing integration."
+    },
+    {
+      "role": "Mirror/Contradiction Reviewer",
+      "input": "Public explanatory sequence and private Root→Letter→Gate→Path candidate",
+      "output": "One counter-reading recorded; no confirmed contradiction",
+      "evidence": "Counter-reading stored with the public candidate; private candidates remain private",
+      "status": "IN_PROGRESS",
+      "next_action": "Obtain an independent review and explicit relation semantics."
+    },
+    {
+      "role": "Provenance Checker",
+      "input": "README blobs, catalog source IDs, Limbo matrix/map",
+      "output": "9 README blob hashes; catalog source/relation refs checked",
+      "evidence": {
+        "dangling_source_refs": 0,
+        "dangling_relation_refs": 0,
+        "duplicate_ids": 0
+      },
+      "status": "COMPLETED",
+      "next_action": "Add source-span locators before composing."
+    },
+    {
+      "role": "Test/CI Evaluator",
+      "input": "Current PR #122 head checks and readiness metrics",
+      "output": "PR #122 checks action_required; no semantic benchmark cases",
+      "evidence": "Runs 42345983702, 42345983634, 42345983633; jobs arrays empty",
+      "status": "BLOCKED",
+      "next_action": "Obtain authorized CI execution and register semantic test suites."
+    },
+    {
+      "role": "Limbo Cartography Agent",
+      "input": "PR #122 current branch matrix, map, tuning candidate and execution log",
+      "output": "10 incidents, 2 history events, 14 nodes, 19 edges; 9 incidents lack passing retest",
+      "evidence": "Current branch file blobs and PR comparison",
+      "status": "IN_PROGRESS",
+      "next_action": "Refresh stale branch, run current workflow, then replay tuning candidate with source-backed evidence."
+    },
+    {
+      "role": "Wiki Curator",
+      "input": "Current article catalog, source records, metrics and readiness gate",
+      "output": "Recomputed gate; no article/catalog mutation",
+      "evidence": "articles.json, research_metrics.json, readiness_gate.json, composition_rules.json",
+      "status": "COMPLETED",
+      "next_action": "Add reviewed source-backed entries only after source registry and scope review."
+    },
+    {
+      "role": "Wix Publisher",
+      "input": "Wix manifest and connected site context",
+      "output": "Exact Logic Engine Research Lab site resolved; no upload required",
+      "evidence": "Site URL matches wix_sync_manifest.json; catalog unchanged",
+      "status": "NOT_NEEDED",
+      "next_action": "Publish only after approved catalog changes and verify read-back."
+    }
+  ],
+  "BLOCKED": [
+    "No complete conversation export.",
+    "PR #122 is 164 commits behind main and diverged; its three current workflows are action_required with no jobs returned.",
+    "No workflow-dispatch tool or available local clone path; first typed builder and Limbo replay were not run.",
+    "Semantic benchmark cases, counterexamples, holdout and independent reviews are absent.",
+    "Core contradiction inventory remains unmeasured.",
+    "Private Library findings were not copied to public repository."
+  ],
+  "NEXT": [
+    "Reconcile PR #122 with current main without losing its 10 incident records and history; then obtain fresh CI on the exact head.",
+    "Run scripts/build_first_fractal_model.py on an authorized GitHub runner and archive its real output/hash; keep synthetic-only status explicit.",
+    "Inspect SciGPT implementation/license and continue the repository sweep using the updated cursor.",
+    "Review the public explanatory-order candidate against WANGA source-first contracts; do not promote it to semantic entailment.",
+    "Build reviewed positive, negative/counterexample and boundary suites, freeze holdout, and obtain two independent MIRROR reviews.",
+    "Publish Wix only after approved catalog changes; verify deployment read-back before updating the sync date."
+  ],
+  "backlog": [
+    {
+      "topic": "Formal meaning of the public profile's explanatory arrows",
+      "status": "OPEN_SOURCE_BACKED_CANDIDATE"
+    },
+    {
+      "topic": "Root/Letter/Gate/Path relation semantics and gate directionality",
+      "status": "PRIVATE_REVIEW_ONLY_OPEN"
+    },
+    {
+      "topic": "175×14 and 4900-direction closure gaps",
+      "status": "PRIVATE_REVIEW_ONLY_OPEN"
+    },
+    {
+      "topic": "Source-grounded positive/negative/boundary benchmark dataset",
+      "status": "NOT_STARTED"
+    },
+    {
+      "topic": "Critical contradiction inventory",
+      "status": "NOT_MEASURED"
+    }
+  ],
+  "publication": {
+    "branch": "automation/wanga-unified-cycle-2026-11-20-072456",
+    "status": "DRAFT_PR_PENDING"
+  }
+}
