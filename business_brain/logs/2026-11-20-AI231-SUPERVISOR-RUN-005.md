@@ -234,3 +234,41 @@ Status=PARTIAL
 SHA-256: `ccb06199b5c74db0915ea3bc5d6baa62bf7184c4587e7a314737b46b4a9590f9`
 
 No Git tag was created, `core/verify_contract.py` was not run to PASS, and no tag was pushed. This log does not claim the contract is sealed.
+
+
+## 9. Post-write recheck — 2026-11-20
+
+A subsequent exact-ID peek after the 07:30 local Automation 3 slot confirmed:
+- Automation 3 still has last recorded run `2e3ace00-b1c0-8322-b3dd-5f41bcb6f2ae`, completed 18 Nov. No 20 Nov run is recorded. Its next_run_time is now `2026-11-21T07:30:00+02:00`; therefore the 20 Nov 07:30 slot passed without a recorded Automation 3 run. This is NO_RECORDED_RUN, not FAILED.
+- Automation 2 remains enabled with next_run_time `2026-11-20T08:00:00+02:00`; its latest recorded run remains FAILED on 19 Nov. The root cause remains UNKNOWN.
+- The latest Automation 3→Automation 2 handoff that could be fetched is dated 18 Nov. Fetching `business_brain/handoffs/2026-11-19-AUTOMATION3-TO-AUTOMATION2.md` returned 404 / NOT_FOUND.
+- The 20 Nov Supervisor log is available for Automation 3's next run, but Automation 3 did not run in time to apply the pending patch before Automation 2's 20 Nov 08:00 slot. No manual run was issued and Automation 2 was not edited directly.
+
+Final Automation 3 prompt read-back:
+- enabled=true; daily 07:30 schedule unchanged.
+- `updated_at` observed on the subsequent peek: `2026-11-20T05:42:41.536338+00:00`.
+- the consolidated procedure is present, has ten top-level numbered controls, and the duplicated handoff/log headings are absent.
+
+### Recheck signature
+
+```text
+Timestamp=2026-11-20T05:47:23.477766Z
+Contract_Start_Time=2026-11-20T05:36:51.684747Z
+Action_ID=ACT-20261120-AI231-SUPERVISOR-RUN-005-RECHECK-ADDENDUM-001
+Supervisor_ID=Automation_148c65055034819188de8415b2349983
+Automation3_ID=6af9e12b3c288191b4f487adbdeb0446
+Automation3_Last_Run_ID=2e3ace00-b1c0-8322-b3dd-5f41bcb6f2ae
+Automation3_Last_Run_Status=completed
+Automation3_Last_Run_Completed_At=2026-11-18T06:16:26.765301Z
+Automation3_Next_Run_Time=2026-11-21T07:30:00+02:00
+Automation3_Readback_Updated_At=2026-11-20T05:42:41.536338+00:00
+Automation2_ID=6af9dfe86ba08191b148931561fd7774
+Automation2_Last_Run_ID=379b9dc6-fcf0-8332-b8b5-f9724f7f09e3
+Automation2_Last_Run_Status=failed
+Automation2_Next_Run_Time=2026-11-20T08:00:00+02:00
+Latest_Automation3_Handoff=2026-11-18-AUTOMATION3-TO-AUTOMATION2.md
+Automation3_Handoff_2026_11_19=NOT_FOUND
+Status=BLOCKED_FOR_2026_11_20_GOVERNANCE_HANDOFF
+```
+
+SHA-256: `d2dfad6d020012afe041f12fba472fc501f7d65a8c7558d3ec50ed95012abf1e`
