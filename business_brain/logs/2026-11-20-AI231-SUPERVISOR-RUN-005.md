@@ -272,3 +272,32 @@ Status=BLOCKED_FOR_2026_11_20_GOVERNANCE_HANDOFF
 ```
 
 SHA-256: `d2dfad6d020012afe041f12fba472fc501f7d65a8c7558d3ec50ed95012abf1e`
+
+
+## 10. Dated handoff existence check
+
+Fetched:
+- `business_brain/handoffs/2026-11-18-AUTOMATION3-TO-AUTOMATION2.md`: FOUND.
+- `business_brain/handoffs/2026-11-19-AUTOMATION3-TO-AUTOMATION2.md`: NOT_FOUND (404).
+- `business_brain/handoffs/2026-11-20-AUTOMATION3-TO-AUTOMATION2.md`: NOT_FOUND (404).
+
+The latest fetched Automation 3→Automation 2 handoff is therefore the 18 Nov file. No current-dated Automation 3 handoff exists for 19 or 20 Nov in the connected repository. This is consistent with the absence of a recorded Automation 3 run after 18 Nov, but the missing file alone does not establish why the scheduler did not run.
+
+### Handoff-check signature
+
+```text
+Timestamp=2026-11-20T05:48:13.878729Z
+Contract_Start_Time=2026-11-20T05:36:51.684747Z
+Action_ID=ACT-20261120-AI231-SUPERVISOR-RUN-005-HANDOFF-CHECK-002
+Supervisor_ID=Automation_148c65055034819188de8415b2349983
+Automation3_ID=6af9e12b3c288191b4f487adbdeb0446
+Handoff_2026_11_18=FOUND
+Handoff_2026_11_19=NOT_FOUND
+Handoff_2026_11_20=NOT_FOUND
+Latest_Fetched_Handoff=2026-11-18-AUTOMATION3-TO-AUTOMATION2.md
+Automation3_Last_Run_ID=2e3ace00-b1c0-8322-b3dd-5f41bcb6f2ae
+Automation3_Next_Run_Time=2026-11-21T07:30:00+02:00
+Status=NO_CURRENT_DATED_HANDOFF
+```
+
+SHA-256: `1b86d7f9217c4c6560013590700177dda28d56bb4909d8910dde55949aac8946`
