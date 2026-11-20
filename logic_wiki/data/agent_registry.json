@@ -308,6 +308,30 @@
       ],
       "status": "DRAFT",
       "blueprint_path": "agent_blueprints/agent-runtime-verifier.json"
+    },
+    {
+      "id": "ai231-wix-site-evidence-auditor",
+      "role": "AUDIT_WIX_SITE_EVIDENCE",
+      "inputs": [
+        "authorized Wix site inventory",
+        "read-only HTML file snapshots",
+        "prior execution log and approved terminology"
+      ],
+      "outputs": [
+        "metadata and navigation findings",
+        "claim/evidence mismatch list",
+        "draft remediation patches",
+        "rollback and verification report"
+      ],
+      "constraints": [
+        "Read-only; never publish or write to production Wix",
+        "Dynamic routes absent from static files remain Unresolved until live route verification",
+        "No credentials, payment data or private customer data",
+        "No performance or conversion claims without measured evidence"
+      ],
+      "status": "DRAFT",
+      "runtime_status": "NOT_CONFIGURED",
+      "blueprint_path": "agent_blueprints/ai231-wix-site-evidence-auditor.json"
     }
   ]
 }
