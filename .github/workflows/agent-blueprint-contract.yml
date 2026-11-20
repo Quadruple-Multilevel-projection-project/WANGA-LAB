@@ -16,6 +16,8 @@ on:
       - "agent_blueprints/**/*.json"
       - "logic_wiki/data/agent_registry.json"
       - "core/verify_contract.py"
+      - "scripts/validate_agent_blueprints.py"
+      - "tests/test_ai231_wix_site_evidence_auditor.py"
       - ".github/workflows/agent-blueprint-contract.yml"
   workflow_dispatch:
 
