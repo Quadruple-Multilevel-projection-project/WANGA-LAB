@@ -27,6 +27,7 @@ def main() -> int:
     queue = {
         "schema_version": "1.0.0",
         "generated_at": now(),
+        "agents": 7,
         "orchestrator": "OR-01",
         "source_of_truth": "agents/AGENT_RESPONSIBILITY_MATRIX_V1.yaml",
         "mode": "ROUTE_ONLY",
