@@ -1,0 +1,42 @@
+name: AI231 Agent Blueprint Validation
+
+on:
+  pull_request:
+    branches: [main]
+    paths:
+      - "agent_blueprints/agent-*.json"
+      - "schemas/agent-blueprint-v1.schema.json"
+      - "business_brain/agents/backlog_evidence_triage.py"
+      - "examples/backlog-triage-snapshot-2026-11-20.json"
+      - "tests/test_agent_backlog_evidence_triage.py"
+      - ".github/workflows/agent-blueprint-validation.yml"
+  push:
+    branches:
+      - "automation/ai231-execution-2026-11-20"
+    paths:
+      - "agent_blueprints/agent-*.json"
+      - "schemas/agent-blueprint-v1.schema.json"
+      - "business_brain/agents/backlog_evidence_triage.py"
+      - "examples/backlog-triage-snapshot-2026-11-20.json"
+      - "tests/test_agent_backlog_evidence_triage.py"
+      - ".github/workflows/agent-blueprint-validation.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  blueprint-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install JSON Schema validator
+        run: python -m pip install --disable-pip-version-check jsonschema
+      - name: Backlog evidence triage agent tests
+        run: python -m unittest discover -s tests -p 'test_agent_backlog_evidence_triage.py' -v
+      - name: Compile backlog evidence triage worker
+        run: python -m py_compile business_brain/agents/backlog_evidence_triage.py
