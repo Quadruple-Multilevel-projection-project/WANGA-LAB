@@ -24,6 +24,7 @@ jobs:
         with: {python-version: "3.12"}
       - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
+        if: always()
         with: {name: regional-REG-US, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
 
   reg-eu:
@@ -41,6 +42,7 @@ jobs:
         with: {python-version: "3.12"}
       - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
+        if: always()
         with: {name: regional-REG-EU, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
 
   reg-il-me:
@@ -58,6 +60,7 @@ jobs:
         with: {python-version: "3.12"}
       - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
+        if: always()
         with: {name: regional-REG-IL-ME, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
 
   reg-sa:
@@ -75,6 +78,7 @@ jobs:
         with: {python-version: "3.12"}
       - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
+        if: always()
         with: {name: regional-REG-SA, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
 
   reg-ea:
@@ -92,6 +96,7 @@ jobs:
         with: {python-version: "3.12"}
       - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
+        if: always()
         with: {name: regional-REG-EA, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
 
   reg-latam:
@@ -109,6 +114,7 @@ jobs:
         with: {python-version: "3.12"}
       - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
+        if: always()
         with: {name: regional-REG-LATAM, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
 
   reg-oceania:
@@ -126,6 +132,7 @@ jobs:
         with: {python-version: "3.12"}
       - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
+        if: always()
         with: {name: regional-REG-OCEANIA, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
 
   reg-africa:
@@ -143,6 +150,7 @@ jobs:
         with: {python-version: "3.12"}
       - run: python ai-drift-forensics/global-drift-network/agents/regional_collector.py
       - uses: actions/upload-artifact@v4
+        if: always()
         with: {name: regional-REG-AFRICA, path: ai-drift-forensics/global-drift-network/data/regional-observations/}
 
   publish-observations:
