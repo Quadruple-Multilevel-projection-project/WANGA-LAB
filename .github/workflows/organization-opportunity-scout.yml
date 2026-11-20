@@ -1,0 +1,34 @@
+name: Organization Opportunity Scout
+
+on:
+  schedule:
+    - cron: "30 7 * * *" # 09:30 Asia/Jerusalem during standard time
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: organization-opportunity-scout
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Discover GitHub projects relevant to AI231
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: python scripts/github_opportunity_scout.py
+
+      - name: Publish daily report artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: github-opportunity-scout-${{ github.run_id }}
+          path: reports/opportunity-scout/
+          if-no-files-found: error
+          retention-days: 30
