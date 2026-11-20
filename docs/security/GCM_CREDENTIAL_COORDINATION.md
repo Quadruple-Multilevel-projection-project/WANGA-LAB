@@ -33,12 +33,12 @@ The Logic Factory Hub needs its own server-side credential if it is to call GitH
 
 - Name: `GITHUB_FINE_GRAINED_TOKEN`
 - Scope: the WANGA-LAB repository only
-- Requested permissions: repository metadata read, contents read/write, pull requests read/write
+- Initial permissions: repository metadata read, contents read, pull requests read only. Request write permissions only with a separately approved, implemented write workflow.
 - Not requested: organization administration, repository administration, or workflow write
 
 The secret must be entered through AppDeploy's secure secret-entry flow and read only by backend code via `secrets.readSecret`. The UI may display whether the secret is configured, but never its value. This token is not copied into GCM, Git configuration, a lock file, a checked-in configuration file, a browser bundle, or logs.
 
-For a production institutional deployment, prefer a GitHub App installation token with a short lifetime over a long-lived personal token. The current prepared field is a fine-grained-token bootstrap only; it is not yet connected or tested.
+For a production institutional deployment, prefer a GitHub App installation token with a short lifetime over a long-lived personal token. The current prepared field is a fine-grained-token bootstrap only; its initial scope is read-only and it is not yet connected or tested. A later write workflow must request explicit scope expansion.
 
 ## 3. Concurrency model
 
