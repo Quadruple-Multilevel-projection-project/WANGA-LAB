@@ -43,7 +43,9 @@ def main() -> int:
         ],
     }
     OUT.write_text(json.dumps(queue, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
-    print(json.dumps({"stages": len(STAGES), "agents": 7, "mode": "ROUTE_ONLY"}))
+    # The CLI contract is the complete machine-readable queue on stdout.
+    # Keep diagnostics out of stdout so callers can safely json.loads() it.
+    print(json.dumps(queue, ensure_ascii=False))
     return 0
 
 if __name__ == "__main__":
