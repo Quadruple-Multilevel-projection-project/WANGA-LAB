@@ -25,7 +25,7 @@ def _canonical_inventory_path(value: str) -> str | None:
     """Normalize a site-inventory entry to a safe, site-root-relative path."""
     if not isinstance(value, str) or not value.strip():
         return None
-    path = unquote(value.strip().replace("\\\\", "/"))
+    path = unquote(value.strip())
     normalized = posixpath.normpath(path.lstrip("/"))
     if normalized in ("", ".") or normalized == ".." or normalized.startswith("../"):
         return None
