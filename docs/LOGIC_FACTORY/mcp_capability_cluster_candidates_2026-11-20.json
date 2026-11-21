@@ -1,0 +1,279 @@
+{
+  "schema_version": "1.0.0",
+  "snapshot_id": "WANGA-MCP-CAPABILITY-CANDIDATES-2026-11-20",
+  "observed_at": "2026-11-20T02:57:50+02:00",
+  "canonical_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+  "branch": "feat/mcp-capability-combinatorics-v1",
+  "source_scope": "Current AppDeploy app inventory and source snapshots, current ChatGPT tool catalog, WANGA-LAB contracts, official MCP Registry documentation",
+  "existing_apps": [
+    {
+      "app_id": "logic-factory-hub-9jj4jw",
+      "name": "Logic Factory Hub",
+      "status": "ready",
+      "version": "1795008418481",
+      "role": "Primary extension target: existing app catalog, workflow planner, app links, registry relay, agent dispatch gates",
+      "url": "https://logic-factory-hub-9jj4jw.v2.appdeploy.ai/"
+    },
+    {
+      "app_id": "logical-configuration-orchestrator-5fvr64",
+      "name": "Logical Configuration Orchestrator",
+      "status": "ready",
+      "version": "1792653876594",
+      "role": "Configuration extraction and approval-gated deployment planning",
+      "url": "https://logical-configuration-orchestrator-5fvr64.v2.appdeploy.ai/"
+    },
+    {
+      "app_id": "ai231-agent-foundry-35gumn",
+      "name": "AI231 Agent Foundry",
+      "status": "ready",
+      "version": "1794734398523",
+      "role": "Agent blueprint creation and bounded agent execution",
+      "url": "https://ai231-agent-foundry-35gumn.v2.appdeploy.ai/"
+    },
+    {
+      "app_id": "ai231-logic-registry-1y5kvl",
+      "name": "AI231 Logic Registry",
+      "status": "deployed",
+      "role": "Source and logic record registry; current Hub relays authenticated workbook and map operations to it",
+      "url": "https://ai231-logic-registry-1y5kvl.v2.appdeploy.ai/"
+    }
+  ],
+  "existing_hub_catalog": {
+    "app_id": "logic-factory-hub-9jj4jw",
+    "source_file": "backend/index.ts",
+    "snapshot_version": "1795008418481",
+    "catalog_type": "STATIC_CURATED_INITIAL_SET",
+    "item_count": 18,
+    "examples": [
+      {
+        "id": "drawio-mcp",
+        "name": "draw.io MCP Server",
+        "declared_status": "HIGH_FIT_FOR_EDITABLE_VISUAL_MAPS",
+        "connection_state": "NOT_CONFIGURED_IN_HUB"
+      },
+      {
+        "id": "gitdiagram",
+        "name": "GitDiagram",
+        "declared_status": "HIGH_FIT_FOR_REPOSITORY_DISCOVERY",
+        "connection_state": "NOT_CONFIGURED_IN_HUB",
+        "declared_endpoint": "https://gitdiagram.com/mcp"
+      },
+      {
+        "id": "n8n",
+        "name": "n8n",
+        "declared_status": "HIGH_FIT_FOR_CROSS_APP_AUTOMATION",
+        "connection_state": "NOT_PROBED"
+      },
+      {
+        "id": "github-connector",
+        "name": "GitHub",
+        "declared_status": "CONNECTOR_AVAILABLE_READ_RESEARCH_DONE_NO_PROJECT_WRITE",
+        "connection_state": "CHATGPT_CONNECTOR_AVAILABLE"
+      },
+      {
+        "id": "figma",
+        "name": "Figma",
+        "declared_status": "CONNECTOR_AVAILABLE_NOT_USED_IN_THIS_DEPLOYMENT",
+        "connection_state": "CHATGPT_CONNECTOR_AVAILABLE"
+      },
+      {
+        "id": "canva",
+        "name": "Canva",
+        "declared_status": "CONNECTOR_AVAILABLE_NOT_USED_IN_THIS_DEPLOYMENT",
+        "connection_state": "CHATGPT_CONNECTOR_AVAILABLE"
+      }
+    ],
+    "dynamic_registry_api_present": false,
+    "capability_graph_present": false,
+    "composition_engine_present": false
+  },
+  "candidate_clusters": [
+    {
+      "capability_cluster_id": "MCP-DISCOVERY-REGISTRY-001",
+      "name": "MCP Discovery & Registry",
+      "user_outcome": "Search official MCP metadata and candidate directories, normalize server records, and preserve publisher/source provenance.",
+      "capability_ids": [
+        "OFFICIAL-MCP-REGISTRY-GET-SERVERS",
+        "GITHUB-SEARCH-FETCH",
+        "HUB-TOOL-CATALOG"
+      ],
+      "proposed_action_coordinate_id": "AC-MCP-DISCOVERY-001",
+      "execution_order": [
+        "query_registry",
+        "normalize_server_metadata",
+        "cross_reference_publisher_source",
+        "record_candidate_and_evidence"
+      ],
+      "preconditions": [
+        "Official Registry API client is wired to the Hub",
+        "Pagination and query filters are implemented",
+        "Candidate source and discovery timestamp are persisted"
+      ],
+      "approval_gate": "NOT_REQUIRED_READ_ONLY",
+      "status": "BLOCKED",
+      "blocking_reasons": [
+        "Official Registry API is documented but not yet wired to the Hub",
+        "Live registry API query was not confirmed in this run"
+      ],
+      "evidence": [
+        "https://github.com/modelcontextprotocol/registry/blob/main/docs/reference/api/official-registry-api.md",
+        "https://blog.modelcontextprotocol.io/posts/2025-09-08-mcp-registry-preview/",
+        "AppDeploy app logic-factory-hub-9jj4jw, backend/index.ts, snapshot 1795008418481"
+      ]
+    },
+    {
+      "capability_cluster_id": "MCP-CAPABILITY-GRAPH-001",
+      "name": "Capability Graph & Relations",
+      "user_outcome": "Map servers, tools, skills, inputs, outputs, dependencies, permissions and compatible handoffs.",
+      "capability_ids": [
+        "HUB-TOOL-CATALOG",
+        "MCP-CAPABILITY-JSON-SCHEMA",
+        "GITHUB-SOURCE-INSPECTION",
+        "NOTION-EVIDENCE-RECORD"
+      ],
+      "proposed_action_coordinate_id": "AC-MCP-GRAPH-001",
+      "execution_order": [
+        "ingest_declared_tool_schema",
+        "normalize_input_output_contract",
+        "derive_candidate_edges",
+        "check_compatibility_and_permissions",
+        "store_evidence_backed_graph"
+      ],
+      "preconditions": [
+        "Per-tool schemas captured from source declarations",
+        "Stable resource and capability IDs assigned",
+        "Every edge has an evidence locator"
+      ],
+      "approval_gate": "REQUIRED_FOR_WRITES",
+      "status": "PROPOSED",
+      "blocking_reasons": [
+        "Current Hub catalog is static and curated; it does not contain a dynamic capability graph",
+        "No per-tool graph edge has been validated yet"
+      ],
+      "evidence": [
+        "AppDeploy app logic-factory-hub-9jj4jw, backend/index.ts, snapshot 1795008418481",
+        "docs/LOGIC_FACTORY/mcp_capability_schemas_v1.json"
+      ]
+    },
+    {
+      "capability_cluster_id": "MCP-COMBINATORIAL-PLANNER-001",
+      "name": "Combinatorial Capability Planner",
+      "user_outcome": "Generate bounded, dependency-aware combinations that produce distinct outcomes and prune incompatible or duplicate sequences.",
+      "capability_ids": [
+        "HUB-PLAN-API",
+        "CAPABILITY-GRAPH-001",
+        "MCP-CAPABILITY-SCHEMA"
+      ],
+      "proposed_action_coordinate_id": "AC-MCP-COMPOSE-001",
+      "execution_order": [
+        "select_target_outcome",
+        "retrieve_candidate_capabilities",
+        "compose_typed_dag",
+        "prune_duplicates_cycles_and_scope_conflicts",
+        "emit_reviewable_composition"
+      ],
+      "preconditions": [
+        "Capability graph contains source-backed nodes and edges",
+        "I/O schema compatibility checks exist",
+        "No invented cost, latency or weights"
+      ],
+      "approval_gate": "REQUIRED_BEFORE_EXECUTION",
+      "status": "PROPOSED",
+      "blocking_reasons": [
+        "Current Hub /api/plan creates proposed workflow tasks, not typed MCP execution graphs",
+        "No composition acceptance suite has run"
+      ],
+      "evidence": [
+        "AppDeploy app logic-factory-hub-9jj4jw, backend/index.ts, snapshot 1795008418481"
+      ]
+    },
+    {
+      "capability_cluster_id": "MCP-ACTION-COORDINATE-001",
+      "name": "Action Coordinate & Evidence Runner",
+      "user_outcome": "Compile a validated composition into a signed, permission-bounded execution plan with step-level evidence and verification.",
+      "capability_ids": [
+        "HUB-ACTION-META",
+        "PCE-CONTRACT-GUARD",
+        "GITHUB-EVIDENCE",
+        "NOTION-AUDIT-RECORD"
+      ],
+      "proposed_action_coordinate_id": "AC-MCP-ACTION-001",
+      "execution_order": [
+        "resolve_contract_start_time",
+        "compile_action_coordinate",
+        "check_auth_scope_and_approval",
+        "execute_approved_steps",
+        "capture_step_evidence",
+        "verify_readback"
+      ],
+      "preconditions": [
+        "Governing Contract_Start_Time reconciled against source",
+        "Action signature implementation read-back verified",
+        "Every mutation has explicit approval and compensation policy"
+      ],
+      "approval_gate": "REQUIRED",
+      "status": "BLOCKED",
+      "blocking_reasons": [
+        "Existing Logic Factory Hub backend declares CONTRACT_START_TIME=2026-11-17T20:12:00+02:00; current project instruction context declares 2026-11-17T20:29:00+02:00. This discrepancy is unresolved and must not be silently overwritten.",
+        "No new MCP execution runtime is deployed"
+      ],
+      "evidence": [
+        "AppDeploy app logic-factory-hub-9jj4jw, backend/index.ts, snapshot 1795008418481",
+        "User-provided action-signature requirement and current project contract context"
+      ]
+    },
+    {
+      "capability_cluster_id": "MCP-CAPABILITY-APP-FOUNDRY-001",
+      "name": "Capability App Foundry",
+      "user_outcome": "Generate a dedicated application from a distinct, validated capability cluster and register its source and runtime.",
+      "capability_ids": [
+        "APPDEPLOY-GET-APPS",
+        "APPDEPLOY-DEPLOY-APP",
+        "GITHUB-SPEC-REGISTRY",
+        "PRODUCT-DESIGN-WORKFLOW"
+      ],
+      "proposed_action_coordinate_id": "AC-MCP-APP-001",
+      "execution_order": [
+        "check_existing_apps_for_duplicate",
+        "validate_cluster_is_distinct",
+        "select_product_design_direction",
+        "generate_app_and_tests",
+        "deploy",
+        "read_back_and_register"
+      ],
+      "preconditions": [
+        "Distinct capability cluster is VERIFIED",
+        "Product Design visual direction is selected",
+        "AppDeploy test suite covers all material workflows",
+        "Existing app duplication check passes"
+      ],
+      "approval_gate": "REQUIRED_FOR_DEPLOYMENT",
+      "status": "BLOCKED",
+      "blocking_reasons": [
+        "Product Design full workflow is not available in standard ChatGPT chat; Work mode is required for visual ideation/build",
+        "No capability cluster has reached VERIFIED"
+      ],
+      "evidence": [
+        "AppDeploy get_apps result: 14 existing apps",
+        "Product Design plugin index/get-context workflow"
+      ]
+    }
+  ],
+  "contract_discrepancies": [
+    {
+      "field": "Contract_Start_Time",
+      "hub_code_value": "2026-11-17T20:12:00+02:00",
+      "current_project_context_value": "2026-11-17T20:29:00+02:00",
+      "status": "UNRESOLVED",
+      "handling": "Do not silently replace either value. Hold generation of Hub-signed action records until governing source is reconciled."
+    }
+  ],
+  "policy": {
+    "app_generation": "One app per distinct validated capability cluster; no app per arbitrary permutation.",
+    "source_of_truth": "GitHub",
+    "coordination": "Notion",
+    "existing_primary_app": "logic-factory-hub-9jj4jw",
+    "weights": "NOT_CREATED",
+    "runtime_claims": "No new MCP endpoint, agent, composition runtime or dedicated app is claimed active."
+  }
+}
