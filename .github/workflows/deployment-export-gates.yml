@@ -1,0 +1,58 @@
+name: Deployment Export Gates G1-G8
+
+on:
+  push:
+    branches:
+      - docs/deployment-architecture
+    paths:
+      - "EXPORT_BLUEPRINT.md"
+      - "manifest.schema.json"
+      - "scripts/export.sh"
+      - "first-order-logic/part-1/ai231_task.py"
+      - "tests/test_ai231_task.py"
+      - "docs/deployment-architecture/**"
+      - ".github/workflows/deployment-export-gates.yml"
+  pull_request:
+    paths:
+      - "EXPORT_BLUEPRINT.md"
+      - "manifest.schema.json"
+      - "scripts/export.sh"
+      - "first-order-logic/part-1/ai231_task.py"
+      - "tests/test_ai231_task.py"
+      - "docs/deployment-architecture/**"
+      - ".github/workflows/deployment-export-gates.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  gates:
+    name: G1-G8
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: G1 — Parse manifest schema
+        run: python -m json.tool manifest.schema.json >/dev/null
+
+      - name: G2 — Validate Python syntax
+        run: python -m compileall -q first-order-logic/part-1/ai231_task.py tests/test_ai231_task.py
+
+      - name: G3 — Install test dependencies
+        run: python -m pip install --disable-pip-version-check pytest jsonschema
+
+      - name: G4 — Source reference fail-closed tests
+        run: python -m pytest -q tests/test_ai231_task.py -k 'source_ref'
+
+      - name: G5 — Neural proposal cannot override formal gate
+        run: python -m pytest -q tests/test_ai231_task.py -k 'neural_proposal'
+
+      - name: G6 — Validate export script syntax
+        run: bash -n scripts/export.sh
+
+      - name: G7 — Validate manifest schema meta-schema
+        run: python -c 'import json, jsonschema; s=json.load(open("manifest.schema.json", encoding="utf-8")); jsonschema.Draft202012Validator.check_schema(s)'
+
+      - name: G8 — Run complete AI231 gate suite
+        run: python -m pytest -q tests/test_ai231_task.py
