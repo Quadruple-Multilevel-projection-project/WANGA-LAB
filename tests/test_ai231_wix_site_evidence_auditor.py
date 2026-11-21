@@ -58,5 +58,19 @@ class WixSiteEvidenceAuditorBlueprintTests(unittest.TestCase):
         self.assertTrue(list(self.validator.iter_errors(unsafe)))
 
 
+    def test_root_relative_links_are_normalized_before_missing_link_classification(self):
+        text = " ".join(
+            boundary for boundary in self.blueprint["boundaries"]
+        ).lower()
+        acceptance = " ".join(
+            test["description"] + " " + test["expected"]
+            for test in self.blueprint["acceptance_tests"]
+        ).lower()
+        self.assertIn("root-relative", text)
+        self.assertIn("normalize", text)
+        self.assertIn("root-relative", acceptance)
+        self.assertIn("unresolved", acceptance)
+
+
 if __name__ == "__main__":
     unittest.main()
