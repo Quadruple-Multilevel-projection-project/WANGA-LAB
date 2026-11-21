@@ -62,3 +62,19 @@ After explicit user authorization for outreach:
 
 ## Independence-first capital rule
 Proceed with the smallest paid validation that can be delivered safely from current capabilities. Grants and investors remain optional. Evaluate any grant against the independent baseline using net cash benefit, restrictions, IP/control impact, reporting burden, timing and exit obligations. No grant or investor is assumed.
+
+
+## 2026-11-21 — differentiation and timed delivery-cost protocol
+**Market check:** Lighthouse, Screaming Frog and Semrush already cover broad technical/performance/SEO audits. The offer should therefore emphasize evidence-linked claim review and provenance rather than generic SEO scoring. Sources: https://developer.chrome.com/docs/lighthouse/overview ; https://www.screamingfrog.co.uk/seo-spider/user-guide/general/ ; https://www.semrush.com/kb/31-site-audit
+
+**Delivery-cost measurement (not yet executed):** for an authorized dry run, record elapsed time separately for:
+1. inventory and page selection;
+2. static metadata/navigation checks;
+3. supplied claim-to-source verification;
+4. dynamic-route confirmation or unresolved classification;
+5. remediation drafting and QA;
+6. report assembly and rework.
+
+Compute direct cost only from measured labor hours at an approved internal rate plus attributable model/API/tool charges, payment fees and rework. Until those inputs exist, the earlier 2–4 hour estimate remains an unverified planning estimate and contribution margin remains NOT_COMPUTABLE.
+
+**Pricing status:** €290 excluding VAT remains a hypothesis only. It is not a quote, proven market price or evidence of willingness to pay. Do not lower or raise it from competitor list prices alone; test it only after explicit outreach authorization and record buyer objections, accepted scope and actual payment evidence.
