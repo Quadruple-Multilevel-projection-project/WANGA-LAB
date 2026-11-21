@@ -1,0 +1,178 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "LimboHistoryEventV1",
+  "type": "object",
+  "properties": {
+    "event_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "CHANGE_APPLIED",
+        "RETEST"
+      ]
+    },
+    "timestamp_utc": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "affected_incident_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "component": {
+      "type": "string",
+      "minLength": 1
+    },
+    "source_evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "source_uri": {
+            "type": "string",
+            "minLength": 1
+          },
+          "source_version": {
+            "type": [
+              "string",
+              "null"
+            ]
+          },
+          "source_sha256": {
+            "type": [
+              "string",
+              "null"
+            ],
+            "pattern": "^[A-Fa-f0-9]{64}$"
+          },
+          "exact_locator": {
+            "type": "string",
+            "minLength": 1
+          },
+          "language": {
+            "type": "string",
+            "minLength": 1
+          },
+          "permission_scope": {
+            "type": "string",
+            "enum": [
+              "PUBLIC_SOURCE",
+              "PUBLIC_REDACTED_SUMMARY",
+              "SYNTHETIC_TEST_FIXTURE"
+            ]
+          },
+          "excerpt_or_summary": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "source_uri",
+          "source_version",
+          "source_sha256",
+          "exact_locator",
+          "language",
+          "permission_scope",
+          "excerpt_or_summary"
+        ],
+        "additionalProperties": false
+      },
+      "minItems": 1
+    },
+    "previous_event_ids": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "change_summary": {
+      "type": "string",
+      "minLength": 1
+    },
+    "configuration_delta": {
+      "type": "object",
+      "minProperties": 1
+    },
+    "test_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "result": {
+      "type": "string",
+      "enum": [
+        "PASS",
+        "FAIL",
+        "BLOCKED",
+        "NOT_RUN"
+      ]
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    }
+  },
+  "required": [
+    "event_id",
+    "event_type",
+    "timestamp_utc",
+    "affected_incident_ids",
+    "component",
+    "source_evidence",
+    "previous_event_ids"
+  ],
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "CHANGE_APPLIED"
+          }
+        },
+        "required": [
+          "event_type"
+        ]
+      },
+      "then": {
+        "required": [
+          "change_summary",
+          "configuration_delta"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "RETEST"
+          }
+        },
+        "required": [
+          "event_type"
+        ]
+      },
+      "then": {
+        "required": [
+          "test_id",
+          "result",
+          "evidence_refs"
+        ]
+      }
+    }
+  ],
+  "additionalProperties": false
+}
