@@ -64,3 +64,14 @@ The Logic Economy Wix site is published and has Wix Payments and Wix Stores V3 a
 
 ## 8. Next action
 Use existing GitHub issue #148 as the detailed discovery scope; issue #149 is a possible duplicate and remains open pending maintainer review. No outreach is authorized by this run. The next measurable gate is user-authorized discovery followed by a priced pilot offer and actual cash/cost recording.
+
+
+## 9. 2026-11-21 — current alternative check and positioning
+Official product documentation confirms that generic technical-site auditing is a mature market:
+- Google Lighthouse covers performance, accessibility, best practices and SEO, with DevTools, CLI and Node workflows: https://developer.chrome.com/docs/lighthouse/overview
+- Screaming Frog SEO Spider supports technical crawls and export of titles, descriptions and headings; its free tier crawls up to 500 URLs and the documented annual license is £199: https://www.screamingfrog.co.uk/seo-spider/user-guide/general/
+- Semrush Site Audit documents more than 140 on-page/technical checks, JavaScript rendering and scheduled re-audits: https://www.semrush.com/kb/31-site-audit
+
+**Economic assessment:** do not position AI231 as another generic SEO crawler. The testable wedge is source-linked public-claim consistency, evidence provenance, dynamic-route uncertainty handling and permission-gated remediation drafts. This remains a hypothesis; no customer demand, conversion advantage or willingness-to-pay evidence was found in this run.
+
+**Capital decision:** retain the independent baseline. No grant, investor, partner commitment or funding outcome was evidenced. Evaluate a future instrument only through the existing risk-adjusted net-benefit formula and its IP/control costs.
