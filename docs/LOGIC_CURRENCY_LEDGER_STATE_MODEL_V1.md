@@ -63,3 +63,17 @@ Contribution margin is computed only from collected cash and attributable actual
 
 ## Explicit exclusions
 No token issuance, transfer, exchange, redemption, reserve backing, fiat peg, guaranteed value, share offering or payment was performed or authorized.
+
+
+## 2026-11-21 aggregate-state implementation update
+A separate aggregate-state contract and fail-closed transition helper have been added on the existing Logic Currency Ledger draft PR #150:
+- Schema: `schemas/logic-currency-ledger-state-v1.schema.json`
+- Illustrative empty fixture: `examples/logic-currency-ledger-state.v1.example.json`
+- Transition helper: `business_brain/ledger_state.py`
+- Dedicated validator: `scripts/validate_logic_currency_ledger_state.py`
+- Dedicated tests: `tests/test_logic_currency_ledger_state.py`
+- Workflow steps: `Logic currency ledger aggregate-state schema validation` and `Logic currency ledger aggregate-state transition tests` in `.github/workflows/repository-integrity.yml`
+
+The v1 aggregate schema keeps planned, approved, internal-issued and external-token quantities distinct. It requires internal-issued quantity and external-token quantity to remain exactly zero; no issuance event is implemented. Planned quantity requires source-event provenance, approved quantity requires authorization references, and unverified cash fields remain null. The transition helper only permits proposal and authorized approval movements; issuance and reversal fail closed.
+
+**Status:** implementation committed to PR #150 branch; CI for the exact new head is pending. This does not create a live ledger or issue Logic Credits/Logic Coin.
