@@ -77,3 +77,16 @@ A separate aggregate-state contract and fail-closed transition helper have been 
 The v1 aggregate schema keeps planned, approved, internal-issued and external-token quantities distinct. It requires internal-issued quantity and external-token quantity to remain exactly zero; no issuance event is implemented. Planned quantity requires source-event provenance, approved quantity requires authorization references, and unverified cash fields remain null. The transition helper only permits proposal and authorized approval movements; issuance and reversal fail closed.
 
 **Status:** implementation committed to PR #150 branch; CI for the exact new head is pending. This does not create a live ledger or issue Logic Credits/Logic Coin.
+
+
+## CI result — 2026-11-21
+The aggregate-state implementation was verified on the exact PR #150 head commit `a471226e8763f9326613abdd5bbc1a01501ea619`.
+
+- Workflow: `.github/workflows/repository-integrity.yml`, blob `5049b14b410569e14b9aa91023df69c9e01e4839`.
+- Workflow run: `44879970500`.
+- Job: `136774097187`, name `integrity`, conclusion `success`.
+- Step: `Logic currency ledger aggregate-state schema validation` — success. Exact command: `python scripts/validate_logic_currency_ledger_state.py`. Output: the exact schema validated the exact example; non-zero external tokens, internal issuance and unverified cash promotion were rejected.
+- Step: `Logic currency ledger aggregate-state transition tests` — success. Exact command: `python -m unittest discover -s tests -p 'test_logic_currency_ledger_state.py' -v`. Result: 11 tests ran; `OK`.
+- Existing event-ledger verifier step also passed on the same run: five tests ran; `OK`.
+
+**Acceptance:** PASS for the draft aggregate-state schema, validator and proposal/approval transition tests on this commit. **NOT_YET_VERIFIED:** a live append-only ledger, persistent storage, production authorization service, actual cash transaction records and any internal issuance. Issued-internal quantity and external-token quantity remain fixed at zero in v1.
