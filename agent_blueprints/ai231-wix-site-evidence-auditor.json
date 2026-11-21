@@ -62,7 +62,8 @@
     "A placeholder anchor is not automatically a broken link; inspect its behavior before classification",
     "Do not claim mobile performance, Core Web Vitals, search ranking or conversion impact without direct measurements",
     "Do not promote a content claim to Verified without a cited source and an applicable acceptance test",
-    "Do not activate or deploy the agent from this blueprint"
+    "Do not activate or deploy the agent from this blueprint",
+    "Normalize root-relative static HTML paths before matching them against the site file inventory; do not classify an existing file as missing solely because its href begins with a slash."
   ],
   "acceptance_tests": [
     {
@@ -94,6 +95,11 @@
       "id": "AT-WIX-006",
       "description": "Rollback a proposed remediation draft.",
       "expected": "The draft can be discarded or its dedicated branch commit reverted; no production site mutation exists."
+    },
+    {
+      "id": "AT-WIX-007",
+      "description": "Resolve root-relative static HTML links such as /roadmap.html against the authorized site file inventory.",
+      "expected": "Normalize the leading URL path separator before matching; an existing static file is not reported missing, while unresolved Wix dynamic routes remain UNRESOLVED."
     }
   ],
   "failure_behavior": "Fail closed when the site identity, source snapshot, route behavior, permission scope or evidence is incomplete. Return BLOCKED or Unresolved rather than guessing. Rollback: discard the generated draft or revert the dedicated branch commit. This agent never performs a Wix write, so production rollback is not required.",
