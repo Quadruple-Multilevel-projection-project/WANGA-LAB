@@ -29,6 +29,7 @@ REQUIRED = {
     "id", "name", "version", "status", "mission", "system_instructions",
     "capabilities", "tool_permissions", "input_contract", "output_contract",
     "boundaries", "acceptance_tests", "failure_behavior", "provenance",
+    "system_requirements", "portability_contract",
 }
 STATUSES = {
     "draft", "validated", "approved", "materialized",
@@ -69,6 +70,22 @@ def validate_blueprint(item: object, source: Path) -> None:
         fail(f"{source}: output_contract must be an object")
     if not isinstance(item["provenance"], dict) or not item["provenance"].get("created_at") or not item["provenance"].get("created_by"):
         fail(f"{source}: provenance must include created_at and created_by")
+    system_requirements = item.get("system_requirements")
+    if not isinstance(system_requirements, list) or "SYS-PORTABILITY-001" not in system_requirements:
+        fail(f"{source}: SYS-PORTABILITY-001 must be declared")
+    portability = item.get("portability_contract")
+    required_portability = {
+        "provider_dependencies", "model_adapter_interface", "alternative_providers_or_fallback",
+        "data_export_format", "owner_controlled_source_location", "deployment_reproduction_steps",
+        "secrets_location_and_rotation", "exit_test", "portability_status",
+    }
+    if not isinstance(portability, dict):
+        fail(f"{source}: portability_contract must be an object")
+    missing_portability = required_portability - portability.keys()
+    if missing_portability:
+        fail(f"{source}: missing portability fields: {', '.join(sorted(missing_portability))}")
+    if portability.get("portability_status") == "Verified" and not portability.get("exit_test_evidence"):
+        fail(f"{source}: portability cannot be Verified without exit-test evidence")
     runtime = item.get("runtime", {})
     if runtime and (runtime.get("isolation_required") is not True or runtime.get("network_egress") is not False):
         fail(f"{source}: runtime must require isolation and deny network egress")
