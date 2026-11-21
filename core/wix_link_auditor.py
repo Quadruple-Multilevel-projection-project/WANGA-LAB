@@ -52,7 +52,7 @@ def normalize_root_relative_path(
     if parsed.scheme or parsed.netloc or not parsed.path:
         return None
 
-    path = unquote(parsed.path.replace("\\\\", "/"))
+    path = unquote(parsed.path)
     if path.startswith("/"):
         candidate = path.lstrip("/")
     else:
