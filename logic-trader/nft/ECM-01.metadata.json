@@ -1,0 +1,24 @@
+{
+  "name": "ECM-01 — Evidence Gatekeeper",
+  "description": "Draft NFT metadata for a versioned logic package. The package distinguishes referenced evidence from unsupported claims and preserves NOT_YET_VERIFIED status. This metadata is not minted and is not a representation of a live blockchain asset.",
+  "external_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/tree/main/logic-trader",
+  "attributes": [
+    { "trait_type": "Logic ID", "value": "ECM-01" },
+    { "trait_type": "Version", "value": "1.0.0-draft" },
+    { "trait_type": "Lifecycle", "value": "SPECIFIED" },
+    { "trait_type": "Verification", "value": "NOT_YET_VERIFIED" },
+    { "trait_type": "Asset State", "value": "METADATA_DRAFT_NOT_MINTED" }
+  ],
+  "properties": {
+    "record_type": "logic-package-metadata-draft",
+    "schema_version": "1.0.0",
+    "source_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "artifact_sha256": null,
+    "license": "NOT_SET — define license terms before publication",
+    "network": null,
+    "contract_address": null,
+    "token_id": null,
+    "minted": false,
+    "publication_approval": "REQUIRED"
+  }
+}

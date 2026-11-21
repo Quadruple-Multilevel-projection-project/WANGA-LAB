@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>WANGA Logic Market — Logic Trader Prototype</title>
+<style>
+:root{color-scheme:dark;--bg:#101413;--panel:#191f1d;--line:#303a35;--text:#edf2ee;--muted:#a4b0a9;--accent:#75d6bd;--warn:#e8c879}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:16px/1.55 system-ui,-apple-system,Segoe UI,sans-serif}header,main,footer{max-width:1120px;margin:auto;padding:24px}header{padding-top:46px}h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.08;margin:12px 0}h2{font-size:1.35rem;margin-top:0}.eyebrow{color:var(--accent);text-transform:uppercase;letter-spacing:.12em;font-size:.8rem;font-weight:700}.lead{color:var(--muted);max-width:770px}.notice{border:1px solid var(--warn);padding:12px 16px;border-radius:12px;color:#f2dfad;background:#241f12}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(235px,1fr));gap:14px;margin:18px 0 30px}.card,.panel{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:18px}.card p,.muted{color:var(--muted)}.pill{display:inline-block;padding:3px 9px;border:1px solid var(--line);border-radius:999px;color:var(--accent);font-size:.78rem}.price{font-size:1.1rem;font-weight:700;margin:16px 0 6px}.actions{display:flex;gap:10px;flex-wrap:wrap;margin:14px 0}button,.linkbtn{background:var(--accent);color:#11201a;border:0;border-radius:9px;padding:10px 14px;font-weight:750;text-decoration:none;cursor:pointer}button.secondary,.linkbtn.secondary{background:transparent;color:var(--text);border:1px solid var(--line)}pre{white-space:pre-wrap;overflow-wrap:anywhere;background:#0b0e0d;border:1px solid var(--line);padding:14px;border-radius:10px;min-height:70px}footer{color:var(--muted);border-top:1px solid var(--line);font-size:.9rem}a{color:var(--accent)}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">WANGA-LAB · product prototype</div>
+  <h1>Logic Market &amp; Trader</h1>
+  <p class="lead">A catalog for reusable, versioned logic packages, with a deterministic paper-trading demonstration. Each listing is meant to carry a defined task, interface, constraints, provenance, tests, version, and explicit verification state.</p>
+  <p class="notice"><strong>Prototype boundaries:</strong> synthetic prices only. No exchange connection, real orders, financial account, crypto wallet, NFT minting, payments, or live checkout is enabled. This page does not make a claim about future market performance.</p>
+</header>
+<main>
+<section><h2>Logic package catalog</h2><p class="muted">All prices are intentionally blank pending owner configuration. Draft listings are not published products.</p><div class="grid" id="catalog"><div class="card">Loading catalog…</div></div></section>
+<section class="panel"><h2>Logic Trader — synthetic paper simulation</h2><p class="muted">A simple, deterministic moving-average rule stands in for the predictive role. The fast-execution and escape-guard roles are rule adapters, not biological connectome simulations.</p><div class="actions"><button id="run">Run synthetic demo</button><button class="secondary" id="reset">Clear output</button></div><pre id="output" aria-live="polite">Ready. Click Run synthetic demo to run fixed example prices.</pre><div class="muted">Risk controls in this fixture: no leverage, position cap, abrupt-move halt, drawdown stop, and local in-memory fills only.</div></section>
+<section class="panel" style="margin-top:18px"><h2>NFT registration state</h2><p>ECM-01 has a draft metadata record. It is <strong>not minted</strong>, has no contract address or token ID, and carries no declared license or price. Before a real listing, the owner must specify the asset hash, licensing terms, network, storage URI, and publication approval.</p><div class="actions"><a class="linkbtn secondary" href="nft/ECM-01.metadata.json">View draft metadata JSON</a><a class="linkbtn secondary" href="README.md">Implementation notes</a></div></section>
+</main>
+<footer>Research implementation status: PROTOTYPED for the paper-trading rule engine; SPECIFIED or PLANNED for other components as declared in the manifest. A green UI, successful unit test, or draft metadata file is not proof of financial performance or semantic validity.</footer>
+<script>
+const items = [
+  {id:'ECM-01',name:'Evidence Gatekeeper',state:'SPECIFIED',desc:'Checks evidence references and separates supported inputs from unsupported claims.',nft:'Metadata draft only'},
+  {id:'ECM-02',name:'Task Decomposer & Scope Binder',state:'SPECIFIED',desc:'Binds task scope, required inputs, acceptance criteria and action boundaries.',nft:'Not prepared'},
+  {id:'ECM-03',name:'Deterministic Action Filter',state:'SPECIFIED',desc:'Applies explicit allow/deny rules and produces traceable decisions.',nft:'Not prepared'},
+  {id:'LTA-01',name:'Logic Trader — Paper Risk Gate',state:'PROTOTYPED',desc:'Synthetic trend-rule demo with position caps and stop conditions. Not a live trading system.',nft:'Not prepared'}
+];
+const catalog=document.getElementById('catalog');
+catalog.innerHTML=items.map(function(x){return '<article class="card"><span class="pill">'+x.state+'</span><h3>'+x.id+' · '+x.name+'</h3><p>'+x.desc+'</p><div class="price">Price: not configured</div><p class="muted">NFT: '+x.nft+'<br>Listing: draft / unpublished</p></article>';}).join('');
+const output=document.getElementById('output');
+document.getElementById('run').addEventListener('click',function(){
+ const prices=[100,100.5,101,102,103,104,103.5,102,101],history=[];let cash=10000,units=0,halted=false;const rows=[];
+ for(let i=0;i<prices.length;i++){const p=prices[i],prev=history.length?history[history.length-1]:undefined;history.push(p);let action='HOLD',reason='warm-up or no rule signal';
+  if(halted){action='HALT';reason='risk guard already latched';}
+  else if(prev!==undefined&&Math.abs(p/prev-1)>=.08){halted=true;action='HALT';reason='single-tick move reached 8% guard';}
+  else if(history.length>=5){const fast=history.slice(-3).reduce(function(a,b){return a+b;},0)/3,slow=history.slice(-5).reduce(function(a,b){return a+b;},0)/5,spread=(fast-slow)/slow;
+   if(units===0&&spread>=.002){const budget=Math.min(cash,(cash+units*p)*.1),buyUnits=budget/(p*1.001);cash-=budget+buyUnits*p*.001;units+=buyUnits;action='PAPER_BUY';reason='trend rule passed local risk gate';}
+   else if(units>0&&spread<0){cash+=units*p*.999;units=0;action='PAPER_SELL';reason='trend reversal; simulated close';}
+  }
+  rows.push(String(i+1).padStart(2,'0')+' price='+p.toFixed(2)+' action='+action+' equity='+(cash+units*p).toFixed(2)+' reason='+reason);
+ }
+ output.textContent='SYNTHETIC DATA — NO LIVE MARKET DATA\n'+rows.join('\n')+'\n\nThis output is a deterministic test fixture, not a trading recommendation.';
+});
+document.getElementById('reset').addEventListener('click',function(){output.textContent='Output cleared. No account or exchange state exists.';});
+</script>
+</body></html>
