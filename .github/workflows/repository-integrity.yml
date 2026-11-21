@@ -29,6 +29,47 @@ jobs:
       - name: Install bounded formal reasoning dependency
         run: python -m pip install --disable-pip-version-check -r requirements-formal.txt
 
+      - name: Logic contribution ledger verifier tests
+        run: python -m unittest discover -s tests -p 'test_logic_contribution_ledger_verifier.py' -v
+
+      - name: Logic contribution ledger JSON Schema validation
+        run: |
+          python - <<'PY'
+          import copy
+          import json
+          from pathlib import Path
+          from jsonschema import Draft202012Validator, FormatChecker
+
+          schema_path = Path("schemas/logic-contribution-ledger-event-v1.schema.json")
+          example_path = Path("examples/logic-contribution-ledger-event.v1.example.json")
+          schema = json.loads(schema_path.read_text(encoding="utf-8"))
+          example = json.loads(example_path.read_text(encoding="utf-8"))
+          Draft202012Validator.check_schema(schema)
+          validator = Draft202012Validator(schema, format_checker=FormatChecker())
+          validator.validate(example)
+
+          negative_quantity = copy.deepcopy(example)
+          negative_quantity["quantity"] = -1
+          if not list(validator.iter_errors(negative_quantity)):
+              raise SystemExit("FAIL: ledger schema accepted a negative quantity")
+
+          invalid_approval = copy.deepcopy(example)
+          invalid_approval["event_type"] = "CREDIT_APPROVED"
+          invalid_approval["review_status"] = "ACCEPTED"
+          invalid_approval["authorization"]["state"] = "PENDING"
+          if not list(validator.iter_errors(invalid_approval)):
+              raise SystemExit("FAIL: ledger schema accepted a pending authorization for CREDIT_APPROVED")
+
+          print(f"PASS: {schema_path} validates the example and rejects invalid quantity/authorization states")
+          print("NOTE: the example event_sha256 is an illustrative placeholder; cryptographic chain checks run in the dedicated verifier tests")
+          PY
+
+      - name: Logic currency ledger aggregate-state schema validation
+        run: python scripts/validate_logic_currency_ledger_state.py
+
+      - name: Logic currency ledger aggregate-state transition tests
+        run: python -m unittest discover -s tests -p 'test_logic_currency_ledger_state.py' -v
+
       - name: Validate Python syntax
         run: python -m compileall -q .
 
