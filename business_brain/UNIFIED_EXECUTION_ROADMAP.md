@@ -60,8 +60,8 @@ This file is the single cumulative project backlog for the unified queue. It is 
 - Dependencies: aggregate state schema, distinct internal issuance semantics, authorization and transition tests.
 - Acceptance: planned, approved and issued-internal quantities are separate; external-token quantity remains zero; cash and contribution margin are independent.
 - Permission/risk: repository design and test work only; no token or payment operation.
-- Status: PARTIAL — aggregate-state schema, validator and fail-closed proposal/approval transition helper committed to PR #150; exact CI run pending at roadmap update.
-- Evidence: `docs/LOGIC_CURRENCY_LEDGER_STATE_MODEL_V1.md`; PR #150 base implementation `774252990d53bc7f7a2687f942a2230db5031619`; schema `schemas/logic-currency-ledger-state-v1.schema.json`; validator `scripts/validate_logic_currency_ledger_state.py`; tests `tests/test_logic_currency_ledger_state.py`; final PR #150 commit `a471226e8763f9326613abdd5bbc1a01501ea619`.
+- Status: DONE_SPECIFIED_AND_CI_VERIFIED; live ledger and issuance NOT_CONFIGURED.
+- Evidence: `docs/LOGIC_CURRENCY_LEDGER_STATE_MODEL_V1.md`; PR #150 head `a471226e8763f9326613abdd5bbc1a01501ea619`; workflow `.github/workflows/repository-integrity.yml` blob `5049b14b410569e14b9aa91023df69c9e01e4839`; run `44879970500`; job `136774097187`; exact steps `Logic currency ledger aggregate-state schema validation` and `Logic currency ledger aggregate-state transition tests`; validator PASS; 11 transition/schema tests passed.
 - Next action: add the aggregate state schema and tests in a separate reviewable branch.
 
 ### AI231-LOGICAL-ISLANDS-ECONOMY-001
@@ -132,7 +132,7 @@ This file is the single cumulative project backlog for the unified queue. It is 
 
 ## Staleness and priority flags
 - Searches for open issues labeled P0 and P1 returned no results. No separate priority field was exposed; do not infer labels.
-- The open-issue query for `updated:<2026-11-13` returned 25 stale issues, consistent with Supervisor Run 005. Preserve them; do not silently displace them.
+- The current open-issue query returned 27 issues; `updated:<2026-11-14` returned 25 stale issues. Preserve them; do not silently displace them.
 - Issue #126 (source verification, 18-versus-17 mismatch) is among the stale items and remains open. No source-level resolution was performed in this run.
 - P0/P1 staleness cannot be classified by label because no P0/P1 labels or priority field were found. The newly created P1 queue entries above retain their evidence and next acceptance conditions.
 
@@ -166,3 +166,15 @@ This file is the single cumulative project backlog for the unified queue. It is 
 - Current open-issue search: 27 open issues; 25 match the stale updated-before-2026-11-14 query. No open issues labeled P0 or P1 were returned. Do not infer priority from title.
 - Latest Automation 3 handoff accessible in the repository remains dated 2026-11-18; no newer Automation 3 to Automation 2 handoff was found.
 - Actual cash collected, actual cash costs and contribution margin remain NOT_YET_VERIFIED / NOT_COMPUTABLE from connected records; internal Logic Credits remain non-cash.
+
+
+### AI231-REGIONAL-COLLECTOR-CONFIG-GATE-001
+- Source: scheduled workflow run 44845331257 on main; open PRs #146 and #137 already cover regional observation PR-only routing and explicit external-call opt-in.
+- Priority: P2.
+- Owner: Regional Drift Agent / Automation Governance.
+- Dependencies: review the existing PRs and obtain explicit approval before changing workflow settings or dispatching external calls.
+- Acceptance: scheduled collector no longer runs without approved configuration; manual dispatch defaults to no external calls; any authorized call has endpoint/model configuration and produces evidence without direct push to main.
+- Permission/risk: no credentials exposed; no external endpoint call, dispatch or merge without approval.
+- Status: BLOCKED — scheduled run 44845331257 failed in eight regional jobs because DRIFT_ENDPOINT and DRIFT_MODEL were empty; DRIFT_TOKEN was also empty. The collector stopped before external calls. PR #146 remains open and proposes manual-dispatch-only behavior with allow_external_calls=false by default.
+- Evidence: run 44845331257; job 136663508924; exact step Run python ai-drift-forensics/global-drift-network/agents/regional_collector.py; log: BLOCKED: missing required configuration: DRIFT_ENDPOINT, DRIFT_MODEL; PR #146 head 30881f5319cd083b0fcc59530a44ce927e6e6006.
+- Next action: preserve the existing PR-based approval boundary; obtain authorization before merging or dispatching any endpoint call.
