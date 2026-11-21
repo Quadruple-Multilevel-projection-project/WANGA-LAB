@@ -1,3 +1,97 @@
 from .core import WangaRuntime, Task, EvidenceRecord
+from .tinkin52 import Tinkin52, build_tinkin52
+from .tinkin_bridge import WangaRunManifest, WangaTinkinSession
+from .space_group_layer import (
+    GlobalGate,
+    GateSpaceGroupRegistry,
+    NestedConfiguration,
+    SpaceGroupOperatorSpec,
+    build_231_global_gates,
+)
+from .unified_tinkin import UnifiedTinkinRuntime
+from .reversible_router import (
+    ReversibleCombinatorialRouter,
+    ReversibleRoute,
+    decode_triple,
+    encode_triple,
+    gate_index_from_code,
+    residual_from_code,
+    space_group_slot_from_code,
+)
+from .logic_crystal_engine import (
+    CONCEPT_SLOTS,
+    EVOLUTION_LAYERS,
+    DriftGrid6D,
+    StructuralNode,
+    StructuralUpdate,
+    deterministic_structural_update,
+    TiedWeightAdaptiveNeuron,
+    HyperNeuron,
+    HexaComplex,
+    LogicPillar,
+    build_hexa_complexes,
+    DeterministicSatisfiabilityConsensus,
+)
+from .holistic_5d6d import (
+    GateDirection,
+    Holistic5D6DNetwork,
+    MetaLogicalLoss,
+    TorsionLayer,
+    TorsionalProjection,
+    DistributedFractalGraphLayer,
+    build_231_gate_directions,
+)
+from .tziruf_manifold import (
+    CombinatorialWeightOperator,
+    DynamicNameConfiguration,
+    DynamicRoutingEngine,
+    MaimonidesCombinatorialCrystalNetwork,
+    SeferHaTzirufManifold,
+)
 
-__all__ = ["WangaRuntime", "Task", "EvidenceRecord"]
+__all__ = [
+    "WangaRuntime",
+    "Task",
+    "EvidenceRecord",
+    "Tinkin52",
+    "build_tinkin52",
+    "WangaRunManifest",
+    "WangaTinkinSession",
+    "GlobalGate",
+    "GateSpaceGroupRegistry",
+    "NestedConfiguration",
+    "SpaceGroupOperatorSpec",
+    "build_231_global_gates",
+    "CombinatorialWeightOperator",
+    "DynamicNameConfiguration",
+    "DynamicRoutingEngine",
+    "MaimonidesCombinatorialCrystalNetwork",
+    "SeferHaTzirufManifold",
+    "UnifiedTinkinRuntime",
+    "ReversibleCombinatorialRouter",
+    "ReversibleRoute",
+    "decode_triple",
+    "encode_triple",
+    "gate_index_from_code",
+    "residual_from_code",
+    "space_group_slot_from_code",
+    "GateDirection",
+    "Holistic5D6DNetwork",
+    "MetaLogicalLoss",
+    "TorsionLayer",
+    "TorsionalProjection",
+    "DistributedFractalGraphLayer",
+    "build_231_gate_directions",
+    "CONCEPT_SLOTS",
+    "EVOLUTION_LAYERS",
+    "DriftGrid6D",
+    "StructuralNode",
+    "StructuralUpdate",
+    "deterministic_structural_update",
+    "TiedWeightAdaptiveNeuron",
+    "HyperNeuron",
+    "HexaComplex",
+    "LogicPillar",
+    "build_hexa_complexes",
+    "DeterministicSatisfiabilityConsensus",
+]

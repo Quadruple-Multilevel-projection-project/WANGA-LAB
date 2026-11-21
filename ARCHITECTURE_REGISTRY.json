@@ -223,6 +223,22 @@
       "scope": "INSTITUTIONAL",
       "status": "SPECIFICATION",
       "source": "docs/ARCHITECTURE/VITRUVIUS_ORCHESTRATOR_ARCHITECTURE.md"
+    },
+    {
+      "id": "TINKIN-52",
+      "name": "Tinkin 52 Nested Galgal Runtime",
+      "parent": "COMPUTE-FABRIC",
+      "scope": "EXPERIMENTAL",
+      "status": "BUILDING",
+      "source": "wanga_runtime/tinkin52.py",
+      "topology": "4 layers × 13 networks × 3 wheels × 11 gates",
+      "totals": {
+        "networks": 52,
+        "wheels": 156,
+        "gates": 1716,
+        "letter_endpoints": 3432
+      },
+      "drift_axes": 6
     }
   ]
 }
