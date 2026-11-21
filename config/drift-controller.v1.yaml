@@ -1,0 +1,111 @@
+version: 1
+name: wanga-drift-controller
+status: ARCHITECTURE_SPECIFIED
+
+control_plane:
+  router: capability_and_target_router
+  relay: cross_group_relay
+  evidence_gate: mandatory
+  human_approval: explicit
+  fail_closed: true
+
+sources_of_truth:
+  operational_registry:
+    system: Airtable
+    table: Automation Registry
+    table_id: tblk6xENv3JLWOFyt
+  knowledge:
+    system: Notion
+  source_code:
+    system: GitHub
+    repository: Quadruple-Multilevel-projection-project/WANGA-LAB
+    default_branch: main
+
+capabilities:
+  wayfinder: decision_mapping
+  productos: product_specification
+  mavixx_forge: implementation_quality
+  nvidia_skills: gpu_cuda_nvidia
+  notion: knowledge_decisions
+  airtable: registry_operations
+  codex_coordinator: bounded_parallelism
+  codex_process_jobs: durable_local_jobs
+  codex_advisor: read_only_architecture_review
+  empire_llm: quarantined_external_review
+  supabase: database_backend
+  github: source_pr_release
+  browser: web_interaction
+  documents: document_generation
+
+execution:
+  default_sequence:
+    - INTAKE
+    - INTENT_GATE
+    - ROUTE
+    - RELAY
+    - EXECUTE
+    - EVIDENCE
+    - DRIFT_CHECK
+    - VERIFY
+    - RETURN
+  publication_requires:
+    - authorized_target
+    - diff_or_artifact
+    - verification_gate
+
+webhook:
+  enabled: false
+  role: event_transport_only
+  secret_location: external_secret_store
+  bypass_control_plane: false
+  direct_side_effects: false
+  verify_results: false
+  activation_state: READY_FOR_INPUT_REVIEW
+
+thinking_machine:
+  taxonomy_28:
+    status: ARCHITECTURE_CONFIRMED_LIST_PENDING
+    source_path: wanga-research-groups/neural-thinking-machine/
+  roots_32:
+    status: USER_PROVIDED_RESEARCH_BUNDLE
+    implementation_status: PENDING_SOURCE_NORMALIZATION
+  configurations_52:
+    status: CANONICAL_LIST_PENDING
+    rule: do_not_invent
+
+drift:
+  classes:
+    - LETTER_DRIFT
+    - POSITION_DRIFT
+    - SEQUENCE_DRIFT
+    - WORD_DRIFT
+    - SEMANTIC_DRIFT
+    - STRUCTURAL_DRIFT
+    - VERSION_DIRECTION_DRIFT
+    - ROUTING_DRIFT
+    - CONFIGURATION_DRIFT
+    - CAPABILITY_DRIFT
+    - PROVENANCE_DRIFT
+    - INTENT_RECOVERY_CANDIDATE
+    - UNAVAILABLE
+    - REVIEW
+
+verification_states:
+  - HYPOTHETICAL
+  - ONTOLOGICAL_MODEL
+  - SIMULATION_MODEL
+  - ENGINEERING_ASSUMPTION
+  - SPECIFIED
+  - PROTOTYPED
+  - TESTED
+  - VERIFIED
+  - NOT_YET_VERIFIED
+  - UNVERIFIED
+
+safety_invariants:
+  - secrets_never_committed
+  - no_global_memory_broadcast
+  - no_unverified_claim_as_fact
+  - no_specified_to_verified_shortcut
+  - no_external_side_effect_without_authorization
+  - no_silent_provider_substitution
