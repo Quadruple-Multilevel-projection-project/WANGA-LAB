@@ -47,6 +47,9 @@ on:
       - 'scripts/run_typed_formal_benchmark.py'
       - 'research/ARK_SWARM_FULL_STACK_GAP_ANALYSIS_V1.md'
       - 'research/ecosystem/library_integration_matrix.json'
+      - 'research/ecosystem/**'
+      - 'research/reports/logic-fractal/**'
+      - 'scripts/build_source_backed_logic_candidates.py'
       - 'scripts/validate_ark_swarm_library_matrix.py'
       - '.github/workflows/logic-fractal-wiki.yml'
 
@@ -93,6 +96,9 @@ on:
       - 'scripts/run_typed_formal_benchmark.py'
       - 'research/ARK_SWARM_FULL_STACK_GAP_ANALYSIS_V1.md'
       - 'research/ecosystem/library_integration_matrix.json'
+      - 'research/ecosystem/**'
+      - 'research/reports/logic-fractal/**'
+      - 'scripts/build_source_backed_logic_candidates.py'
       - 'scripts/validate_ark_swarm_library_matrix.py'
       - '.github/workflows/logic-fractal-wiki.yml'
 
@@ -125,6 +131,8 @@ jobs:
         run: python -m unittest discover -s logic_fractal/tests -p 'test_fragment_composer.py' -v
       - name: Build first typed fractal model candidate
         run: python scripts/build_first_fractal_model.py
+      - name: Build source-backed Gate XIII composition candidate
+        run: python scripts/build_source_backed_logic_candidates.py
       - name: Test integrated logic-agent roles
         run: python -m unittest discover -s tests -p 'test_multi_agent_logic_evaluation.py' -v
       - name: Run formal reasoning adapter tests
