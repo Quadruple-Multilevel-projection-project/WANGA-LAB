@@ -66,6 +66,7 @@
         "currency",
         "actual_cash_collected_minor_units",
         "actual_cash_costs_paid_minor_units",
+        "actual_variable_cash_costs_paid_minor_units",
         "contribution_margin_minor_units"
       ],
       "properties": {
@@ -101,6 +102,13 @@
             "integer",
             "null"
           ]
+        },
+        "actual_variable_cash_costs_paid_minor_units": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
         }
       },
       "allOf": [
@@ -127,6 +135,9 @@
                 "type": "null"
               },
               "contribution_margin_minor_units": {
+                "type": "null"
+              },
+              "actual_variable_cash_costs_paid_minor_units": {
                 "type": "null"
               }
             }
@@ -156,6 +167,10 @@
               },
               "contribution_margin_minor_units": {
                 "type": "integer"
+              },
+              "actual_variable_cash_costs_paid_minor_units": {
+                "type": "integer",
+                "minimum": 0
               }
             }
           }
