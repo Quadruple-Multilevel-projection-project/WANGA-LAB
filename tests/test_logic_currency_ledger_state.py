@@ -70,27 +70,42 @@ class LogicCurrencyLedgerStateTests(unittest.TestCase):
         with self.assertRaisesRegex(LedgerStateTransitionError, "must remain null"):
             validate_cash_separation(unsafe["cash_separation"])
 
-    def test_verified_cash_margin_must_equal_collected_minus_costs(self):
+    def test_verified_cash_margin_must_equal_collected_minus_variable_costs(self):
         valid_cash = {
             "status": "VERIFIED",
             "currency": "USD",
             "actual_cash_collected_minor_units": 12500,
             "actual_cash_costs_paid_minor_units": 4500,
-            "contribution_margin_minor_units": 8000,
+            "actual_variable_cash_costs_paid_minor_units": 3000,
+            "contribution_margin_minor_units": 9500,
         }
         validate_cash_separation(valid_cash)
 
         invalid_cash = dict(valid_cash)
-        invalid_cash["contribution_margin_minor_units"] = 8001
+        invalid_cash["contribution_margin_minor_units"] = 9501
         with self.assertRaisesRegex(LedgerStateTransitionError, "must equal actual cash collected"):
             validate_cash_separation(invalid_cash)
+
+
+    def test_variable_cash_costs_cannot_exceed_total_cash_costs(self):
+        cash = {
+            "status": "VERIFIED",
+            "currency": "USD",
+            "actual_cash_collected_minor_units": 1000,
+            "actual_cash_costs_paid_minor_units": 500,
+            "actual_variable_cash_costs_paid_minor_units": 700,
+            "contribution_margin_minor_units": 300,
+        }
+        with self.assertRaisesRegex(LedgerStateTransitionError, "must not exceed total cash costs"):
+            validate_cash_separation(cash)
 
     def test_verified_cash_allows_negative_margin_without_relabeling_revenue(self):
         cash = {
             "status": "VERIFIED",
             "currency": "EUR",
             "actual_cash_collected_minor_units": 1000,
-            "actual_cash_costs_paid_minor_units": 1500,
+            "actual_cash_costs_paid_minor_units": 1800,
+            "actual_variable_cash_costs_paid_minor_units": 1500,
             "contribution_margin_minor_units": -500,
         }
         validate_cash_separation(cash)
