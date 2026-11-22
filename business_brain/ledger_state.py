@@ -13,6 +13,49 @@ class LedgerStateTransitionError(ValueError):
     """Raised when an aggregate-state transition lacks required evidence."""
 
 
+def validate_cash_separation(cash: Mapping[str, Any]) -> None:
+    """Validate the cash snapshot and its derived contribution-margin invariant.
+
+    The aggregate schema validates field types and status-dependent nullability.
+    This function adds the cross-field invariant that JSON Schema does not
+    express here: contribution margin equals cash collected minus cash costs.
+    """
+    status = cash.get("status")
+    currency = cash.get("currency")
+    collected = cash.get("actual_cash_collected_minor_units")
+    costs = cash.get("actual_cash_costs_paid_minor_units")
+    margin = cash.get("contribution_margin_minor_units")
+
+    if status == "NOT_YET_VERIFIED":
+        if any(value is not None for value in (currency, collected, costs, margin)):
+            raise LedgerStateTransitionError(
+                "unverified cash fields must remain null"
+            )
+        return
+
+    if status != "VERIFIED":
+        raise LedgerStateTransitionError("cash status must be VERIFIED or NOT_YET_VERIFIED")
+
+    if not isinstance(currency, str) or len(currency) != 3 or not all("A" <= char <= "Z" for char in currency):
+        raise LedgerStateTransitionError("verified cash requires a three-letter uppercase currency code")
+
+    for label, value in (
+        ("actual cash collected", collected),
+        ("actual cash costs paid", costs),
+        ("contribution margin", margin),
+    ):
+        if isinstance(value, bool) or not isinstance(value, int):
+            raise LedgerStateTransitionError(f"verified {label} must be an integer minor-unit amount")
+
+    if collected < 0 or costs < 0:
+        raise LedgerStateTransitionError("verified cash collected and cash costs must be non-negative")
+
+    if margin != collected - costs:
+        raise LedgerStateTransitionError(
+            "contribution margin must equal actual cash collected minus actual cash costs paid"
+        )
+
+
 def apply_event(
     balances: Mapping[str, Any],
     event: Mapping[str, Any],
