@@ -59,11 +59,13 @@ def build_candidate_artifact(
         for provenance in parent.get("provenance", [])
     })
     source_lineage_ok = sorted(trace["source_ids_preserved"]) == expected_sources
+    parent_ids_ok = trace["parent_ids"] == parent_ids
+    interface_match_ok = bool(trace["matched_interfaces"]) and not trace["unmatched_optional_inputs"]
     deterministic_ok = (
         composed["fragment"]["model_hash"] == replay["fragment"]["model_hash"]
         and trace == replay_trace
     )
-    semantic_equivalence = trace.get("semantic_equivalence", "NOT_ESTABLISHED")
+    semantic_equivalence = composed["fragment"]["composition"].get("semantic_equivalence", "NOT_ESTABLISHED")
 
     artifact: dict[str, Any] = {
         "schema_version": "source-backed-fractal-candidate/1.0",
@@ -80,15 +82,15 @@ def build_candidate_artifact(
         "scope": fixture["scope"],
         "non_applicability": fixture["non_applicability"],
         "invariants": {
-            "parent_ids_preserved": trace.get("parent_ids_preserved", False),
+            "parent_ids_preserved": parent_ids_ok,
             "source_lineage_preserved": source_lineage_ok,
-            "required_interface_type_match": trace.get("type_compatibility", False),
+            "required_interface_type_match": interface_match_ok,
             "semantic_equivalence": semantic_equivalence,
             "no_verified_promotion": composed["fragment"].get("status") == "CANDIDATE",
         },
         "test_outcomes": {
             "base_fragment_structural_validation": "PASS",
-            "typed_composition": "PASS" if composed.get("status") == "COMPOSED_CANDIDATE" else "FAIL",
+            "typed_composition": "PASS" if composed.get("status") == "COMPOSITION_CANDIDATE_READY_FOR_TESTS" else "FAIL",
             "deterministic_rebuild": "PASS" if deterministic_ok else "FAIL",
             "source_lineage": "PASS" if source_lineage_ok else "FAIL",
             "semantic_ground_truth": "NOT_RUN",
