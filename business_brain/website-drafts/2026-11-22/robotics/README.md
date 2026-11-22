@@ -24,9 +24,14 @@ Source access: Wix headless files.list/read (read-only)
 **After:** “The AI231 Agent Foundry workbench is deployed and contains seven role definitions plus task-run workflows. Deployment readiness is verified; live invocation history, continuous autonomous operation, sandbox isolation and network-egress controls have not been verified.”
 
 ## Draft files
-- index.html — source 14709 bytes; draft 16438 bytes.
-- about.html — source 22857 bytes; draft 21195 bytes.
-- agents.html — source 10775 bytes; draft 12594 bytes.
+- index.html — source 14709 bytes; draft 16438 JavaScript string characters.
+- about.html — source 22857 bytes; draft 21195 JavaScript string characters.
+- agents.html — source 10775 bytes; draft 12594 JavaScript string characters.
+
+## Draft commit identifiers
+- index.html: d4fa9cf8cbdf1f143b110c01c8b1ee729ab0b5c4
+- about.html: 05cb10c3aa007ddc3599d0234aea0a87c717a394
+- agents.html: c8d51577fed01f7928256046af8c4a2eb8c6f7dd
 
 ## Verification boundary
 - Drafts are stored only in the GitHub execution branch; no Wix file was patched, uploaded or published.
