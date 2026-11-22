@@ -7,6 +7,8 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
 
+from business_brain.ledger_state import LedgerStateTransitionError, validate_cash_separation
+
 
 ROOT = Path(__file__).resolve().parents[1]
 SCHEMA_PATH = ROOT / "schemas" / "logic-currency-ledger-state-v1.schema.json"
@@ -19,6 +21,7 @@ def main() -> int:
     Draft202012Validator.check_schema(schema)
     validator = Draft202012Validator(schema, format_checker=FormatChecker())
     validator.validate(example)
+    validate_cash_separation(example["cash_separation"])
 
     invalid_cases = []
     external_token = copy.deepcopy(example)
@@ -37,8 +40,23 @@ def main() -> int:
         if not list(validator.iter_errors(candidate)):
             raise SystemExit(f"FAIL: schema accepted invalid {label}")
 
+    inconsistent_margin = {
+        "status": "VERIFIED",
+        "currency": "USD",
+        "actual_cash_collected_minor_units": 1000,
+        "actual_cash_costs_paid_minor_units": 300,
+        "contribution_margin_minor_units": 699
+    }
+    try:
+        validate_cash_separation(inconsistent_margin)
+    except LedgerStateTransitionError:
+        pass
+    else:
+        raise SystemExit("FAIL: cash validator accepted an inconsistent contribution margin")
+
     print(f"PASS: {SCHEMA_PATH.relative_to(ROOT)} validates {EXAMPLE_PATH.relative_to(ROOT)}")
     print("PASS: non-zero external tokens, internal issuance and unverified cash promotion are rejected")
+    print("PASS: contribution margin must equal collected cash minus paid cash costs")
     return 0
 
 
