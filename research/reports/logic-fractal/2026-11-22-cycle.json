@@ -103,46 +103,50 @@
   "CI": {
     "PR159": {
       "state": "OPEN_DRAFT",
-      "head_sha": "3b83f0d3dcc75e6a2b22ff5a5699a5306a7e6219",
+      "head_sha": "1948150d210229155e653cd0decca2892a202113",
       "compare": {
         "status": "diverged",
-        "ahead_by": 26,
+        "ahead_by": 27,
         "behind_by": 19
       },
       "workflows": [
         {
-          "id": 44990774569,
+          "id": 44992103564,
           "name": "Logic Fractal Wiki Research",
           "status": "completed",
           "conclusion": "failure",
-          "failed_step": "Run Logic Wiki tests"
+          "failed_step": "Run Logic Wiki tests",
+          "detail": "synced_article_count=28; catalog articles=34"
         },
         {
-          "id": 44990774566,
+          "id": 44992103643,
           "name": "Vitruvius Research Index",
           "status": "completed",
           "conclusion": "success"
         },
         {
-          "id": 44990774582,
+          "id": 44992103578,
           "name": "WANGA Ecosystem Agent Sweep",
           "status": "completed",
           "conclusion": "success"
         },
         {
-          "id": 44990774573,
+          "id": 44992103574,
           "name": "Repository Integrity",
           "status": "completed",
           "conclusion": "success"
         },
         {
-          "id": 44990774558,
+          "id": 44992103563,
           "name": "CodeQL Advanced",
-          "status": "completed",
-          "conclusion": "success"
+          "status": "in_progress",
+          "conclusion": null
         }
       ],
-      "failure_detail": "The catalog has 34 entries while wix_sync_manifest.synced_article_count remains 28. Do not set the synced count to 34 without a successful Wix deployment read-back."
+      "failure_detail": "The catalog has 34 entries while wix_sync_manifest.synced_article_count remains 28. Do not set the synced count to 34 without a successful Wix deployment read-back.",
+      "source_snapshot_head": "3b83f0d3dcc75e6a2b22ff5a5699a5306a7e6219",
+      "current_status": "OPEN_DRAFT",
+      "last_status_poll_utc": "2026-11-22T06:05:52.658Z"
     },
     "PR122": {
       "state": "OPEN_DRAFT",
@@ -358,11 +362,11 @@
     },
     {
       "role": "Publisher",
-      "status": "IN_PROGRESS",
+      "status": "COMPLETED",
       "input": "Batch 05 registry and cycle reports",
-      "output": "Prepared for commit to existing draft PR #159",
+      "output": "Batch 05 inventory, cursor, ecosystem report and cycle report committed to existing draft PR #159; post-commit CI started.",
       "evidence": "Branch automation/wanga-unified-cycle-2026-11-20-072456",
-      "next": "Wait for post-commit CI; do not merge automatically."
+      "next": "Wait for CodeQL completion; keep PR draft and do not merge."
     },
     {
       "role": "Limbo Cartography Inspector",
@@ -382,6 +386,7 @@
     "The first model remains NOT_READY_INTERNAL_CANDIDATE_ONLY."
   ],
   "NEXT": [
+    "Wait for CodeQL Advanced on the new PR #159 head; do not merge while any check is pending or failed.",
     "Review the four TTTT candidate structures; define arrow/transition semantics and explicit preconditions before FOL/SOL formalization.",
     "Reconcile the 21 catalog source IDs and 34 source-linked articles against the readiness metrics that still report 17 source records and 28 logic units.",
     "Obtain approval for the six draft catalog additions; then deploy to the connected Wix site, read the deployment back, and only then update the sync manifest.",
