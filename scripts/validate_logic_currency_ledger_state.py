@@ -4,13 +4,16 @@ from __future__ import annotations
 import copy
 import json
 from pathlib import Path
+import sys
 
 from jsonschema import Draft202012Validator, FormatChecker
 
-from business_brain.ledger_state import LedgerStateTransitionError, validate_cash_separation
-
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from business_brain.ledger_state import LedgerStateTransitionError, validate_cash_separation
 SCHEMA_PATH = ROOT / "schemas" / "logic-currency-ledger-state-v1.schema.json"
 EXAMPLE_PATH = ROOT / "examples" / "logic-currency-ledger-state.v1.example.json"
 
