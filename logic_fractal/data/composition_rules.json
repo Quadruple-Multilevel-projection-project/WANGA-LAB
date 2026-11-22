@@ -57,6 +57,29 @@
       "limitations": [
         "Not active until acceptance-state tracking and benchmark contracts are implemented."
       ]
+    },
+    {
+      "id": "COMPOSE-INTERFACE-SEQUENTIAL-V1",
+      "name": "Typed sequential interface composition",
+      "status": "ACTIVE_SPECIFIED",
+      "inputs": [
+        "The first fragment exposes an output type that exactly matches a required input type of the second fragment."
+      ],
+      "output": "A candidate fragment with ordered parent IDs, merged claims and preserved source provenance.",
+      "invariants": [
+        "Every parent fragment passes validate_fragment before composition.",
+        "Every required input of the second fragment has an exact type match in the first fragment outputs.",
+        "All parent IDs and source IDs are preserved in the composition trace.",
+        "All claim origins remain attached to their source spans.",
+        "The composed fragment remains CANDIDATE and never inherits VERIFIED status.",
+        "semantic_equivalence remains NOT_ESTABLISHED.",
+        "The composition content hash is deterministic for identical inputs."
+      ],
+      "limitations": [
+        "Exact type compatibility does not establish semantic entailment or equivalence.",
+        "The composer does not resolve source contradictions or missing source spans.",
+        "The composer does not assign weights or promote claims to verified."
+      ]
     }
   ]
 }
