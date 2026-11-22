@@ -44,7 +44,8 @@ def main() -> int:
         "status": "VERIFIED",
         "currency": "USD",
         "actual_cash_collected_minor_units": 1000,
-        "actual_cash_costs_paid_minor_units": 300,
+        "actual_cash_costs_paid_minor_units": 500,
+        "actual_variable_cash_costs_paid_minor_units": 300,
         "contribution_margin_minor_units": 699
     }
     try:
@@ -56,7 +57,7 @@ def main() -> int:
 
     print(f"PASS: {SCHEMA_PATH.relative_to(ROOT)} validates {EXAMPLE_PATH.relative_to(ROOT)}")
     print("PASS: non-zero external tokens, internal issuance and unverified cash promotion are rejected")
-    print("PASS: contribution margin must equal collected cash minus paid cash costs")
+    print("PASS: contribution margin must equal collected cash minus variable cash costs")
     return 0
 
 
