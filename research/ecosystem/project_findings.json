@@ -832,6 +832,98 @@
       "permission_scope": "PUBLIC_READ; repository permission ADMIN where applicable; no external write",
       "next_action": "Wait for the current PR CI result before appending a retest event to Limbo; do not infer a pass from source inspection.",
       "scan_time_utc": "2026-11-22T05:30:44Z"
+    },
+    {
+      "id": "F-TTTT-ORCHESTRATOR-DECLARED-STRUCTURES-2026-11-22",
+      "repository": "AmbassadorOv/TTTT-0.0.0.0.1",
+      "ref": "main",
+      "file_path": "README.md",
+      "git_blob_sha": "ac7a2d203877442ddba493889239e61aed56ec78",
+      "source_uri": "https://github.com/AmbassadorOv/TTTT-0.0.0.0.1/blob/main/README.md",
+      "literal_excerpts": [
+        "LOGOS → CONNECTIONS → FRACTALS → ABSTRACTION → MODELS → VERIFICATION → SYNCHRONIZATION",
+        "OBSERVED → DERIVED → INVARIANT → MODEL → FUNCTION → TERMINUS → DECISION",
+        "TEAM_A ↔ REFLECTOR ↔ TEAM_B ↔ REFLECTOR ↔ TEAM_C"
+      ],
+      "candidate_structures": [
+        {
+          "id": "TTTT-ORDER-01",
+          "kind": "DECLARED_ORDER",
+          "items": [
+            "LOGOS",
+            "CONNECTIONS",
+            "FRACTALS",
+            "ABSTRACTION",
+            "MODELS",
+            "VERIFICATION",
+            "SYNCHRONIZATION"
+          ],
+          "semantics": "ARROW_SEMANTICS_NOT_SPECIFIED",
+          "status": "CANDIDATE_NOT_FORMALIZED"
+        },
+        {
+          "id": "TTTT-ORDER-02",
+          "kind": "DECLARED_EPISTEMIC_STATE_ORDER",
+          "items": [
+            "OBSERVED",
+            "DERIVED",
+            "INVARIANT",
+            "MODEL",
+            "FUNCTION",
+            "TERMINUS",
+            "DECISION"
+          ],
+          "semantics": "TRANSITION_PRECONDITIONS_NOT_SPECIFIED",
+          "status": "CANDIDATE_NOT_FORMALIZED"
+        },
+        {
+          "id": "TTTT-TOPOLOGY-01",
+          "kind": "DECLARED_REFLECTOR_PATTERN",
+          "items": [
+            "TEAM_A",
+            "REFLECTOR",
+            "TEAM_B",
+            "REFLECTOR",
+            "TEAM_C"
+          ],
+          "relation_symbol": "↔",
+          "semantics": "TOPOLOGY_AND_ROUTING_RULES_NOT_SPECIFIED",
+          "status": "CANDIDATE_NOT_FORMALIZED"
+        },
+        {
+          "id": "TTTT-CONTRACT-01",
+          "kind": "DECLARED_TRANSFER_PRESERVATION_CONSTRAINTS",
+          "required_fields": [
+            "source",
+            "sequence",
+            "evidence references",
+            "provenance",
+            "invariants",
+            "verification status",
+            "dependencies",
+            "correlation",
+            "computational cost"
+          ],
+          "boundary": "A team output is not silently treated as truth; no SPECIFIED→VERIFIED shortcut.",
+          "status": "CANDIDATE_NOT_FORMALIZED"
+        }
+      ],
+      "summary": "The README declares an Artificial Philosopher meta-orchestrator and three structural patterns: two ordered sequences and a Reflector-mediated team topology. It also states a transfer-preservation constraint set. The README itself labels the repository ARCHITECTURAL / INITIAL ORGANIZATION; these are source-backed declarations, not proof of implementation or semantic entailment.",
+      "epistemic_status": "PROPOSAL_NOT_IMPLEMENTATION_VERIFIED",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/WANGA-LAB:logic_wiki/data/agent_registry.json",
+        "Quadruple-Multilevel-projection-project/WANGA-LAB:scripts/run_logic_agents.py",
+        "AmbassadorOv/Nanomathematics",
+        "tribal-archery/-logicl-neural-order",
+        "AmbassadorOv/multi-agent-orchestator"
+      ],
+      "contradictions": [],
+      "unresolved_references": [
+        "AmbassadorOv/branches was not found in the current accessible inventory.",
+        "README reference AmbassadorOv/TTTTproject-un.gov differs from accessible repository AmbassadorOv/TTTTproject-un.govt."
+      ],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "Compare the declared sequences and transfer constraints with WANGA agent contracts; formalize only after arrow/transition semantics, preconditions, and non-applicability boundaries are explicit."
     }
   ],
   "system_boundaries": {
