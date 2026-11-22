@@ -23,7 +23,7 @@ class SourceBackedCandidateTests(unittest.TestCase):
             second["composition"]["fragment"]["model_hash"],
         )
         self.assertEqual(first["status"], "CANDIDATE_NOT_RELEASED")
-        self.assertEqual(first["composition"]["status"], "COMPOSED_CANDIDATE")
+        self.assertEqual(first["composition"]["status"], "COMPOSITION_CANDIDATE_READY_FOR_TESTS")
         self.assertEqual(first["composition"]["fragment"]["status"], "CANDIDATE")
         self.assertEqual(first["invariants"]["semantic_equivalence"], "NOT_ESTABLISHED")
         self.assertTrue(first["invariants"]["source_lineage_preserved"])
