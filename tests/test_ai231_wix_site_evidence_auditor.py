@@ -9,6 +9,8 @@ from core.wix_link_auditor import (
     LinkStatus,
     classify_static_link,
     normalize_root_relative_path,
+    PublicationStatus,
+    classify_publication_state,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -112,6 +114,34 @@ class WixSiteEvidenceAuditorBlueprintTests(unittest.TestCase):
         self.assertEqual(
             classify_static_link("/../../secrets.txt", {"secrets.txt"}),
             LinkStatus.INVALID_LOCAL_PATH,
+        )
+
+    def test_publication_status_conflict_blocks_live_claim(self):
+        self.assertEqual(
+            classify_publication_state(True, False),
+            PublicationStatus.STATUS_CONFLICT,
+        )
+
+    def test_publication_status_requires_both_independent_signals(self):
+        self.assertEqual(
+            classify_publication_state(True, None),
+            PublicationStatus.UNRESOLVED_MISSING_EVIDENCE,
+        )
+
+    def test_matching_publication_signals_are_classified_consistently(self):
+        self.assertEqual(
+            classify_publication_state(True, True),
+            PublicationStatus.CONSISTENT_PUBLISHED,
+        )
+        self.assertEqual(
+            classify_publication_state(False, False),
+            PublicationStatus.CONSISTENT_UNPUBLISHED,
+        )
+
+    def test_invalid_publication_signal_is_not_coerced_to_boolean(self):
+        self.assertEqual(
+            classify_publication_state("Published", False),
+            PublicationStatus.UNRESOLVED_INVALID_EVIDENCE,
         )
 
 
