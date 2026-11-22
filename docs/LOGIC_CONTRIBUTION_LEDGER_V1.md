@@ -40,3 +40,13 @@ The schema validates event shape only. It does not implement hash-chain verifica
 - Define deterministic credit policy only after contribution scoring and appeal rules are independently reviewed.
 - Keep cash ledger and internal contribution ledger physically/logically separate.
 - Obtain legal review before any transferable or redeemable unit is considered.
+
+
+## Cash measurement boundary — 2026-11-22 clarification
+
+The aggregate cash snapshot keeps three concepts separate:
+- `actual_cash_collected_minor_units`: cash receipts actually collected.
+- `actual_cash_costs_paid_minor_units`: all cash costs actually paid.
+- `actual_variable_cash_costs_paid_minor_units`: the direct/variable subset of paid costs used for contribution-margin calculation.
+
+For a VERIFIED cash snapshot, `contribution_margin_minor_units = actual_cash_collected_minor_units - actual_variable_cash_costs_paid_minor_units`. Variable costs must not exceed total cash costs paid. Contribution margin is not net profit or total cash flow; fixed operating costs, taxes, partner obligations, reserves and other expenses remain separately relevant to distributable profit and cash runway. While cash evidence is NOT_YET_VERIFIED, every cash amount and currency remains null. The illustrative fixture is not a live financial record.
