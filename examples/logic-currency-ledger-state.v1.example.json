@@ -15,7 +15,8 @@
     "currency": null,
     "actual_cash_collected_minor_units": null,
     "actual_cash_costs_paid_minor_units": null,
-    "contribution_margin_minor_units": null
+    "contribution_margin_minor_units": null,
+    "actual_variable_cash_costs_paid_minor_units": null
   },
   "provenance": {
     "source_event_ids": [],
