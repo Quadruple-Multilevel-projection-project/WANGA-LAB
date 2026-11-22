@@ -535,7 +535,7 @@
       "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
       "ref": "automation/wanga-unified-cycle-2026-11-20-072456",
       "file_path": "logic_wiki/data/articles.json",
-      "git_blob_sha": "PENDING_BRANCH_COMMIT",
+      "git_blob_sha": null,
       "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/articles.json",
       "related_file_paths": [
         "logic_wiki/data/research_metrics.json",
@@ -599,7 +599,7 @@
       "ref": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
       "file_path": "README.md",
       "git_blob_sha": "70944f7da15632788024530d0c7faf9d91d74381",
-      "source_uri": "https://github.com/AmbassadorOv/fluffy-parakeet/blob/WPinstitutions/-WPG%7B%3C%3Cbranches%3E%7B%3C%F0%9F%AA%BE%3E%7D(%3CORG%3E)%3E%7D%5D%5D%5D/README.md",
+      "source_uri": "https://github.com/AmbassadorOv/fluffy-parakeet",
       "related_file_paths": [],
       "summary": "README contains only the title AI231.meta.io; insufficient evidence to infer architecture or identity with the separately named AI231.meta.io repository.",
       "epistemic_status": "LOW_INFORMATION_README_ONLY",
