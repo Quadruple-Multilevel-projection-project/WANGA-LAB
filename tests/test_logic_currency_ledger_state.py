@@ -5,7 +5,11 @@ from pathlib import Path
 
 from jsonschema import Draft202012Validator, FormatChecker
 
-from business_brain.ledger_state import LedgerStateTransitionError, apply_event
+from business_brain.ledger_state import (
+    LedgerStateTransitionError,
+    apply_event,
+    validate_cash_separation,
+)
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -42,6 +46,7 @@ class LogicCurrencyLedgerStateTests(unittest.TestCase):
 
     def test_exact_aggregate_schema_accepts_draft_fixture(self):
         self.validator.validate(self.example)
+        validate_cash_separation(self.example["cash_separation"])
 
     def test_schema_rejects_external_token_quantity(self):
         unsafe = copy.deepcopy(self.example)
@@ -62,6 +67,33 @@ class LogicCurrencyLedgerStateTests(unittest.TestCase):
         unsafe = copy.deepcopy(self.example)
         unsafe["cash_separation"]["actual_cash_collected_minor_units"] = 1
         self.assertTrue(list(self.validator.iter_errors(unsafe)))
+        with self.assertRaisesRegex(LedgerStateTransitionError, "must remain null"):
+            validate_cash_separation(unsafe["cash_separation"])
+
+    def test_verified_cash_margin_must_equal_collected_minus_costs(self):
+        valid_cash = {
+            "status": "VERIFIED",
+            "currency": "USD",
+            "actual_cash_collected_minor_units": 12500,
+            "actual_cash_costs_paid_minor_units": 4500,
+            "contribution_margin_minor_units": 8000,
+        }
+        validate_cash_separation(valid_cash)
+
+        invalid_cash = dict(valid_cash)
+        invalid_cash["contribution_margin_minor_units"] = 8001
+        with self.assertRaisesRegex(LedgerStateTransitionError, "must equal actual cash collected"):
+            validate_cash_separation(invalid_cash)
+
+    def test_verified_cash_allows_negative_margin_without_relabeling_revenue(self):
+        cash = {
+            "status": "VERIFIED",
+            "currency": "EUR",
+            "actual_cash_collected_minor_units": 1000,
+            "actual_cash_costs_paid_minor_units": 1500,
+            "contribution_margin_minor_units": -500,
+        }
+        validate_cash_separation(cash)
 
     def test_proposal_increases_planned_only(self):
         balances = {
