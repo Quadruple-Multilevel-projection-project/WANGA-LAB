@@ -21,6 +21,38 @@ class LinkStatus(str, Enum):
     INVALID_LOCAL_PATH = "INVALID_LOCAL_PATH"
 
 
+class PublicationStatus(str, Enum):
+    """Fail-closed result when Wix publication signals are compared."""
+
+    CONSISTENT_PUBLISHED = "CONSISTENT_PUBLISHED"
+    CONSISTENT_UNPUBLISHED = "CONSISTENT_UNPUBLISHED"
+    STATUS_CONFLICT = "STATUS_CONFLICT"
+    UNRESOLVED_MISSING_EVIDENCE = "UNRESOLVED_MISSING_EVIDENCE"
+    UNRESOLVED_INVALID_EVIDENCE = "UNRESOLVED_INVALID_EVIDENCE"
+
+
+def classify_publication_state(
+    site_context_published: bool | None,
+    page_inventory_published: bool | None,
+) -> PublicationStatus:
+    """Compare independent Wix publication signals without guessing.
+
+    A conflict blocks any public/live status claim. Missing or malformed
+    evidence remains unresolved rather than being coerced to False.
+    """
+    if site_context_published is None or page_inventory_published is None:
+        return PublicationStatus.UNRESOLVED_MISSING_EVIDENCE
+    if not isinstance(site_context_published, bool) or not isinstance(page_inventory_published, bool):
+        return PublicationStatus.UNRESOLVED_INVALID_EVIDENCE
+    if site_context_published != page_inventory_published:
+        return PublicationStatus.STATUS_CONFLICT
+    return (
+        PublicationStatus.CONSISTENT_PUBLISHED
+        if site_context_published
+        else PublicationStatus.CONSISTENT_UNPUBLISHED
+    )
+
+
 def _canonical_inventory_path(value: str) -> str | None:
     """Normalize a site-inventory entry to a safe, site-root-relative path."""
     if not isinstance(value, str) or not value.strip():
