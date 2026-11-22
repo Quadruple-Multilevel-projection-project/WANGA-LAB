@@ -24,10 +24,11 @@ def validate_cash_separation(cash: Mapping[str, Any]) -> None:
     currency = cash.get("currency")
     collected = cash.get("actual_cash_collected_minor_units")
     costs = cash.get("actual_cash_costs_paid_minor_units")
+    variable_costs = cash.get("actual_variable_cash_costs_paid_minor_units")
     margin = cash.get("contribution_margin_minor_units")
 
     if status == "NOT_YET_VERIFIED":
-        if any(value is not None for value in (currency, collected, costs, margin)):
+        if any(value is not None for value in (currency, collected, costs, variable_costs, margin)):
             raise LedgerStateTransitionError(
                 "unverified cash fields must remain null"
             )
@@ -42,17 +43,20 @@ def validate_cash_separation(cash: Mapping[str, Any]) -> None:
     for label, value in (
         ("actual cash collected", collected),
         ("actual cash costs paid", costs),
+        ("actual variable cash costs paid", variable_costs),
         ("contribution margin", margin),
     ):
         if isinstance(value, bool) or not isinstance(value, int):
             raise LedgerStateTransitionError(f"verified {label} must be an integer minor-unit amount")
 
-    if collected < 0 or costs < 0:
-        raise LedgerStateTransitionError("verified cash collected and cash costs must be non-negative")
+    if collected < 0 or costs < 0 or variable_costs < 0:
+        raise LedgerStateTransitionError("verified cash and cost amounts must be non-negative")
+    if variable_costs > costs:
+        raise LedgerStateTransitionError("actual variable cash costs must not exceed total cash costs paid")
 
-    if margin != collected - costs:
+    if margin != collected - variable_costs:
         raise LedgerStateTransitionError(
-            "contribution margin must equal actual cash collected minus actual cash costs paid"
+            "contribution margin must equal actual cash collected minus actual variable cash costs paid"
         )
 
 
