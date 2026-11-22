@@ -63,7 +63,8 @@
     "Do not claim mobile performance, Core Web Vitals, search ranking or conversion impact without direct measurements",
     "Do not promote a content claim to Verified without a cited source and an applicable acceptance test",
     "Do not activate or deploy the agent from this blueprint",
-    "Normalize root-relative static HTML paths before matching them against the site file inventory; do not classify an existing file as missing solely because its href begins with a slash."
+    "Normalize root-relative static HTML paths before matching them against the site file inventory; do not classify an existing file as missing solely because its href begins with a slash.",
+    "If Wix site metadata and the static page inventory disagree about publication state, return STATUS_CONFLICT and block any live/publication claim."
   ],
   "acceptance_tests": [
     {
@@ -100,9 +101,14 @@
       "id": "AT-WIX-007",
       "description": "Resolve root-relative static HTML links such as /roadmap.html against the authorized site file inventory.",
       "expected": "Normalize the leading URL path separator before matching; an existing static file is not reported missing, while unresolved Wix dynamic routes remain UNRESOLVED."
+    },
+    {
+      "id": "AT-WIX-008",
+      "description": "Compare the Wix site-context Published signal with the static-page inventory published flag when the two disagree.",
+      "expected": "Return STATUS_CONFLICT, preserve both source values and block any public/live claim or write until the discrepancy is independently resolved."
     }
   ],
-  "failure_behavior": "Fail closed when the site identity, source snapshot, route behavior, permission scope or evidence is incomplete. Return BLOCKED or Unresolved rather than guessing. Rollback: discard the generated draft or revert the dedicated branch commit. This agent never performs a Wix write, so production rollback is not required.",
+  "failure_behavior": "Fail closed when the site identity, source snapshot, route behavior, permission scope or evidence is incomplete. Return BLOCKED or Unresolved rather than guessing. Rollback: discard the generated draft or revert the dedicated branch commit. This agent never performs a Wix write, so production rollback is not required. If the site-context and static-page inventory publication signals disagree, return STATUS_CONFLICT and block public/live status claims; do not coerce missing evidence to False.",
   "dependencies": [
     "Wix headless files.list/read supplied by the orchestrator",
     "WANGA-LAB repository and versioned execution logs",
