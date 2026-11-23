@@ -263,3 +263,44 @@ No P0 item was identified. P1 items without a fresh evidence update remain carri
 - Initial snapshot blob: 6b6aab9e613c2d88441f78e87c2bc405d18215ab.
 - Final handoff Action_ID: ACT-20261123-AI231-AUTOMATION3-HANDOFF-FINAL-005.
 - Governance log and SHA-256 signature payload: business_brain/logs/2026-11-23-AUTOMATION-GOVERNANCE-RUN-005.md.
+
+ 
+## Addendum — PR #159 Logic Wiki failure trace and current-head reconciliation
+This addendum extends the same dated handoff; it does not create another handoff or project queue.
+
+### Historical failing run — direct root-cause evidence
+- Repository: Quadruple-Multilevel-projection-project/WANGA-LAB.
+- Branch: automation/wanga-unified-cycle-2026-11-20-072456.
+- Commit: 1948150d210229155e653cd0decca2892a202113.
+- Workflow run: 44992103564; .github/workflows/logic-fractal-wiki.yml; event pull_request; created/started 2026-11-22T06:04:34Z; updated/completed 06:04:44Z; conclusion failure.
+- Job: 137115185273, validate-build-report.
+- Exact failed step: Run Logic Wiki tests; command python -m unittest discover -s logic_wiki/tests -v.
+- Direct log at 2026-11-22T06:04:41.8312788Z: AssertionError: 28 != 34; Process completed with exit code 1.
+- Steps after the failed test, including Composer, typed-fragment, agent, benchmark and artifact-upload steps, were skipped.
+
+Source inspection at the exact failing commit:
+- Workflow YAML blob f8900ab3e8e285e0d77ec0bf188230dfccc5b869.
+- Catalog logic_wiki/data/articles.json blob 24b1d15326b36ca5b4acd73c098b9fff8c00c86a: 34 articles, 21 source records.
+- Sync manifest logic_wiki/data/wix_sync_manifest.json blob 7b5c83502b82673e1ec79f7a4ae094324c1d6e26: last_sync_date 2026-11-14; status PUBLISHED_READ_BACK_PARTIAL; synced_article_count 28; source_record_count 17; relation_link_count 111; homepage_entry_cards 28.
+- Test logic_wiki/tests/test_logic_wiki.py blob 742c1fd0b04c842d2fe2aabc9f5f9e2e5785f375 asserted synced_article_count == len(catalog['articles']), which compared a last-read-back count of 28 with a newer branch catalog count of 34.
+- requirements-formal.txt blob 2f4319fba7e2829e98ff8bb5c30fc97357da13cd pins z3-solver==5.1.0.0 and jsonschema>=4,<5. The bounded formal-reasoning dependency installation step succeeded before the failing test; dependency installation is not the causal failure.
+- Build step emitted status PASS, articles 34, sources 21, gate NOT_READY_INTERNAL_CANDIDATE_ONLY, errors empty. This is local branch build evidence, not Wix live read-back.
+
+### Current PR #159 head — reconciled, not published
+- Current PR head: c75e3e9e3a71196cf66b58d61c5cdb7212fb8488; PR #159 remains open, Draft, unmerged, no submitted reviews.
+- Current workflow run 45122996237; job 137520839511; created/started 2026-11-23T06:16:29Z; completed/updated 06:16:51Z; conclusion success.
+- Exact step Run Logic Wiki tests succeeded on the current head. The same run also passed Logic Fractal Composer, typed multi-scale fragment, source-backed Gate XIII composition candidate and integrated logic-agent-role steps. The proposal step Propose generated wiki/report updates (no auto-merge) was skipped.
+- Current catalog remains 34 articles / 21 sources.
+- Current manifest blob fd02c20199bd66d9f4a096002d65c13ae8804043 deliberately retains last verified read-back counts (28 articles, 17 sources, 111 relations; last sync 2026-11-14) and adds catalog_reconciliation: current branch 34 articles / 21 sources / 123 relations; unsynced deltas 6 / 4 / 12; status DRAFT_BRANCH_UNAPPROVED_NOT_SYNCED; publication_approval NOT_GRANTED; readback_required true.
+- Current test blob 55c224fbdcdb49cd34063e56e015016c494fc768 no longer equates the old live-readback count to the new branch catalog count. It verifies the last-readback values against readback_scope, verifies current branch counts and exact deltas, and requires DRAFT_BRANCH_UNAPPROVED_NOT_SYNCED plus readback_required.
+- Interpretation: the earlier failure exposed a stale test invariant, not proof that the live Wix site had 34 entries. The later branch makes the distinction explicit and its exact test passes. No live Wix read, upload, write or publication was performed by Automation 3.
+
+Two-pass consistency:
+- Re-fetched run 44992103564, job 137115185273, workflow YAML, catalog, manifest, test and requirements.
+- Both passes returned the same head SHA, run ID, job ID, step name/conclusion, timestamps and source blob SHAs listed above. No inconsistency detected.
+
+### Additional visible Supervisor recommendations
+- APPLIED as handoff only: preserve the runtime boundary — LangGraph may coordinate bounded workflows; any independent verifier remains read-only and must not be represented as active until runtime isolation, network-egress controls and acceptance tests are verified. Keep model providers behind a replaceable adapter. No runtime was deployed.
+- APPLIED as handoff only: regional configuration preflight before fan-out and review-PR publication rather than direct push to main. No workflow or permission was changed.
+- REJECTED_WITH_EVIDENCE as a current-state claim: the Supervisor report said current PR #150/#160 head SHAs were unavailable. This audit retrieved exact heads d77a91bc4456ec0894257fba2a9fc8ae1d164a62 and 91b0775a25d3f1c994a498cf70e02d0162d04bf6, with matching exact-head CI runs 45001947753 and 45001843107.
+- BLOCKED: any recommendation in the truncated portion of the Supervisor result beyond the visible report. The matching persisted Supervisor log/addendum remains unavailable.
