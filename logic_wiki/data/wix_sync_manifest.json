@@ -125,5 +125,18 @@
     ],
     "homepage_entry_cards": 28,
     "all_site_files_reaudited": false
+  },
+  "last_checked_date": "2026-11-23",
+  "current_cycle_sync_status": "BLOCKED_TARGET_SITE_ID_UNRESOLVED_NO_UPLOAD",
+  "last_attempt": {
+    "date": "2026-11-23",
+    "status": "BLOCKED",
+    "target_site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
+    "site_id_resolution": "NOT_RESOLVED",
+    "lookup_summary": "Wix name search for Logic Wiki returned zero sites. The connected account exposes similarly named sites, but no exact host-to-site-ID match was established.",
+    "publication_performed": false,
+    "read_back_performed": false,
+    "reason": "No approved public catalog delta and no exact site ID for the manifest host was resolved.",
+    "next_action": "Resolve the exact site ID for the manifest host, then publish only approved source-backed catalog changes and verify deployed files by read-back."
   }
 }
