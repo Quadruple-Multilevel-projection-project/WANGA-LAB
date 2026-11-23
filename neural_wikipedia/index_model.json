@@ -1,0 +1,6 @@
+{
+  "role": "Index",
+  "channels": ["up_down", "width", "depth"],
+  "temporal": ["current", "previous", "next"],
+  "holds": "231 gates as 3D directional parameters + planetary coordinates"
+}

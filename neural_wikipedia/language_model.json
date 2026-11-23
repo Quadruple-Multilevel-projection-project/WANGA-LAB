@@ -1,0 +1,6 @@
+{
+  "role": "Language Model",
+  "channels": ["up_down", "width", "depth"],
+  "temporal": ["current", "previous", "next"],
+  "holds": "Formatted output only"
+}

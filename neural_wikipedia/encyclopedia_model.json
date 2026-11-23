@@ -1,0 +1,10 @@
+{
+  "role": "Encyclopedia (Logic Wikipedia)",
+  "channels": ["up_down", "width", "depth"],
+  "temporal": ["current", "previous", "next"],
+  "holds": "Locked logic rules",
+  "axes": {
+    "day": "Talmud logic",
+    "night": "Sefer HaHiggayon language logic"
+  }
+}
