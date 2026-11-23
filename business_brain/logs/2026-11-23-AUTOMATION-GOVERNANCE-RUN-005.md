@@ -3,7 +3,7 @@
 Status: COMPLETED WITH GOVERNANCE PATCHES; Automation 2's last recorded execution remains FAILED; current Automation 3 run remains IN_PROGRESS at final inspection. No project execution performed.
 
 ## Run identity
-- Timestamp: 2026-11-23T06:44:39.919Z
+- Timestamp: 2026-11-23T06:47:38.201Z
 - Contract_Start_Time: 2026-11-23T06:26:57.073999Z
 - Action_ID: ACT-20261123-AI231-AUTOMATION3-GOVERNANCE-RUN-005-LOG
 - Audit window: 2026-11-23T06:26:57.073999Z through 2026-11-23T06:44:39.919Z
@@ -65,7 +65,7 @@ Handoff attribution:
 ## GitHub baseline, PRs, workflows and failures
 Repository: Quadruple-Multilevel-projection-project/WANGA-LAB; default branch main.
 Previous Governance Run 004 baseline: a1220697a0724f8cdbc888ac56f0cfb6bd2cf9b5.
-Initial snapshot commit d0ee34fd44530933f3c418b373849e06e4aaa5e6; compare was 1 ahead / 0 behind, only this handoff file added. Final handoff update commit ff91c2c1f7de5c5d36310c3918fdf3e7a53fe52a; final blob 5abc553078f1c61036e84134ce3453b62094725b. No project source/code change on main was observed.
+Initial snapshot commit d0ee34fd44530933f3c418b373849e06e4aaa5e6; compare was 1 ahead / 0 behind, only this handoff file added. Final handoff update commit 03f83c46342a7dcdc6bd87d64b490871dfd9619f; final blob fd6ecab09743f574c48fe500d6472581fffade46. Last handoff update Timestamp 2026-11-23T06:47:23.538Z; Action_ID ACT-20261123-AI231-AUTOMATION3-HANDOFF-ADDENDUM-005. No project source/code change on main was observed.
 
 ### PR #159
 - Branch automation/wanga-unified-cycle-2026-11-20-072456; current head c75e3e9e3a71196cf66b58d61c5cdb7212fb8488.
@@ -152,7 +152,7 @@ No external messages, spending, contracts, token/credit issuance, credential exp
 The SHA-256 below covers the following 29 UTF-8 lines separated by LF, with no trailing LF:
 
 ```text
-Timestamp=2026-11-23T06:44:39.919Z
+Timestamp=2026-11-23T06:47:38.201Z
 Contract_Start_Time=2026-11-23T06:26:57.073999Z
 Action_ID=ACT-20261123-AI231-AUTOMATION3-GOVERNANCE-RUN-005-LOG
 Supervisor_ID=Automation_148c65055034819188de8415b2349983
@@ -167,8 +167,10 @@ Automation2_prompt_updated_at=2026-11-23T06:29:30.997328Z
 Supervisor_log=matching_2026-11-23_log_and_addendum_unavailable|latest_result_authoritative_but_truncated
 GitHub_baseline=main:a1220697a0724f8cdbc888ac56f0cfb6bd2cf9b5
 Main_after_initial_snapshot=d0ee34fd44530933f3c418b373849e06e4aaa5e6|only_governance_handoff_added
-Handoff_final_commit=ff91c2c1f7de5c5d36310c3918fdf3e7a53fe52a
-Handoff_final_blob=5abc553078f1c61036e84134ce3453b62094725b
+Handoff_initial_commit=d0ee34fd44530933f3c418b373849e06e4aaa5e6|blob:6b6aab9e613c2d88441f78e87c2bc405d18215ab
+Handoff_final_commit=03f83c46342a7dcdc6bd87d64b490871dfd9619f
+Handoff_final_blob=fd6ecab09743f574c48fe500d6472581fffade46
+Handoff_last_updated=2026-11-23T06:47:23.538Z|Action_ID:ACT-20261123-AI231-AUTOMATION3-HANDOFF-ADDENDUM-005
 PR159_failure=run:44992103564|commit:1948150d210229155e653cd0decca2892a202113|job:137115185273|step:Run Logic Wiki tests|exit:1|root_cause:28_readback_vs_34_branch_catalog
 PR159_current=run:45122996237|commit:c75e3e9e3a71196cf66b58d61c5cdb7212fb8488|job:137520839511|Logic_Wiki_tests:success|manifest_reconciliation:6_articles_4_sources_12_relations_unsynced
 PR150=run:45001947753|commit:d77a91bc4456ec0894257fba2a9fc8ae1d164a62|job:137145211088|ledger_verifier_and_schema_steps:success
@@ -183,6 +185,6 @@ Safety=no_project_execution|no_Wix_write|no_external_contact|no_spend|no_token_i
 SignatureState=COMPUTED
 ```
 
-SHA-256: 59137c7666f8977c6a9e5184ba911d5b8abc48930fca487556ad33b470358144
+SHA-256: c4e8677b08f285c436f9d5e729e762e7ff09415a609626be6c1425812e1e50d0
 
 No Git tag, core/verify_contract.py PASS, or tag push was performed. No contract-seal claim is made.
