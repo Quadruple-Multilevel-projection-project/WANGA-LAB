@@ -92,9 +92,29 @@ The manifest still records the prior 2026-11-14 `PUBLISHED_READ_BACK_PARTIAL` de
 | Cross-Repo Relationship Mapper | COMPLETED_BOUNDED | Research-profile and SciGPT overlaps are candidates only; no confirmed integration. |
 | Mirror/Contradiction Reviewer | IN_PROGRESS | No new confirmed contradiction; core contradiction inventory absent. |
 | Provenance Checker | COMPLETED_BOUNDED | README blob SHAs captured; private Library hashes computed locally but not published. |
-| Test/CI Evaluator | BLOCKED/PENDING | PR #122 runs require Actions approval; this batch's PR CI is pending. |
+| Test/CI Evaluator | COMPLETED | PR #165: five workflows success; Logic Fractal builder and software/synthetic suites passed. PR #122 remains blocked separately. |
 | Wiki Curator | BLOCKED_NO_APPROVED_DELTA | No source-approved catalog addition this cycle. |
-| Publisher | IN_PROGRESS | Branch prepared; report and registry changes await PR/CI. |
+| Publisher | COMPLETED_BOUNDED | PR #165 is open and ready for review; no merge or Wix upload. |
+
+## CI validation on PR #165
+
+All five workflows completed successfully on head `bf881111b618fc3e69e91e14eded75467b3bd501` against main `d0ee34fd44530933f3c418b373849e06e4aaa5e6`:
+
+| Workflow | Run | Duration | Artifact |
+|---|---:|---:|---:|
+| Ecosystem Agent Sweep | 45125697694 | 9s | 3,290 bytes |
+| Logic Fractal Wiki Research | 45125697718 | 15s | 92,010 bytes |
+| Repository Integrity | 45125697754 | 15s | none |
+| Vitruvius Research Index | 45125697764 | 21s | 10,450 bytes |
+| CodeQL Advanced | 45125697773 | 52s | none |
+
+All used the workflow-configured `ubuntu-latest` runner. The Logic Fractal run passed the first typed-fractal builder and software/synthetic fixture suites. It built 523 structural candidate compositions; the catalog candidate hash is `fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf`, and the synthetic typed scale-2 hash is `a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904`. The candidate remains unreleased.
+
+The 5-case propositional smoke suite and 7-case typed formal fixture suite passed, but both are synthetic and remain `NOT_YET_VERIFIED`. The source-grounded benchmark audit had zero cases. MIRROR returned `REVIEW_REQUIRED`; independent review count remains 0. The generated agent cycle reported 12 roles, with the benchmark evaluator blocked on the absence of grounded cases.
+
+The automated ecosystem run completed with a scope blocker: no `CROSS_REPO_READ_TOKEN`, API 403, one repository scanned by the workflow. This is separate from the manual connector batch of 10 repositories.
+
+A readiness-report inconsistency was observed: `readiness-report.json` reports 0 critical contradictions, while `agent_cycle_report.json` reports `null` and `contradiction_inventory_available=false`. The count must be treated as unknown until the report generator is corrected.
 
 ## Next
 
