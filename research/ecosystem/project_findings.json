@@ -668,6 +668,71 @@
       "permission_scope": "PUBLIC_READ; repository permission ADMIN",
       "next_action": "Resolve the exact Wix site ID/host mapping before the next approved catalog publication; do not substitute a similarly named site.",
       "scan_date": "2026-11-23"
+    },
+    {
+      "id": "F-WANGA-CI-LOGIC-FRACTAL-2026-11-23",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "research/2026-11-23-ecosystem-batch-03",
+      "file_path": "scripts/build_first_fractal_model.py",
+      "git_blob_sha": null,
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/45125697718",
+      "summary": "Logic Fractal Wiki Research run 334 passed all configured steps, including the first typed fractal builder, Logic Wiki tests, composer tests, formal adapter tests, and agent cycle. The builder produced a synthetic fixture-only candidate (typed scale-2 hash a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904); the broader catalog candidate hash is fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf with 523 structural candidate compositions. Candidate remains unreleased and NOT_YET_VERIFIED.",
+      "epistemic_status": "TESTED_SYNTHETIC_CANDIDATE_NOT_SEMANTICALLY_VERIFIED",
+      "overlap_candidates": [
+        "logic_fractal/fragment_composer.py",
+        "logic_fractal/data/typed_fragments_fixture.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_GITHUB_ACTIONS_ARTIFACT",
+      "next_action": "Keep the candidate internal; add source-grounded counterexamples, semantic cases, holdout and independent review before Alpha.",
+      "scan_date": "2026-11-23"
+    },
+    {
+      "id": "F-WANGA-CI-ECOSYSTEM-SCOPE-2026-11-23",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "research/2026-11-23-ecosystem-batch-03",
+      "file_path": "research/ecosystem/repository_inventory.json",
+      "git_blob_sha": null,
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/45125697694",
+      "summary": "The automated ecosystem workflow completed with scope blocker: CROSS_REPO_READ_TOKEN was not configured, GitHub API returned 403, and the workflow scanned only WANGA-LAB (one repository, 40 relevant paths). This is separate from the manual connected-connector batch 03, which scanned 10 repositories.",
+      "epistemic_status": "COMPLETED_WITH_SCOPE_BLOCKER",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_GITHUB_ACTIONS_ARTIFACT",
+      "next_action": "Configure an approved least-privilege cross-repository token only if authorized; otherwise continue bounded manual connector batches and preserve the blocker.",
+      "scan_date": "2026-11-23"
+    },
+    {
+      "id": "F-WANGA-CI-QUALITY-2026-11-23",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "research/2026-11-23-ecosystem-batch-03",
+      "file_path": ".github/workflows/logic-fractal-wiki.yml",
+      "git_blob_sha": "6e4a7760ecc972b84519381f0d12360c9d5de315",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/165",
+      "summary": "On PR #165 all five workflows completed successfully: Ecosystem Agent Sweep (9s, 3,290-byte artifact), Logic Fractal Wiki Research (15s, 92,010-byte artifact), Repository Integrity (15s), Vitruvius Research Index (21s, 10,450-byte artifact), and CodeQL Advanced (52s). All used ubuntu-latest as configured. Software and synthetic fixture checks passed; no semantic ground-truth benchmark or human review was completed.",
+      "epistemic_status": "CI_TESTED_SOFTWARE_AND_SYNTHETIC_FIXTURES",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_GITHUB_ACTIONS_RUNS",
+      "next_action": "Keep PR #165 ready for review; do not merge automatically. Record any subsequent reviewer feedback and holdout/semantic evidence separately.",
+      "scan_date": "2026-11-23"
+    },
+    {
+      "id": "F-WANGA-READINESS-REPORT-METRIC-DISAGREEMENT-2026-11-23",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "research/2026-11-23-ecosystem-batch-03",
+      "file_path": "logic_wiki/generated/readiness-report.json",
+      "git_blob_sha": null,
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/45125697718",
+      "summary": "The generated readiness-report.json records critical_core_contradictions=0, while agent_cycle_report.json records null with contradiction_inventory_available=false and deficit NOT_MEASURED_NO_INVENTORY. Treat the contradiction count as unknown; the discrepancy is a reporting/measurement issue, not evidence of zero contradictions.",
+      "epistemic_status": "REPORTING_INCONSISTENCY_REQUIRES_RECONCILIATION",
+      "overlap_candidates": [],
+      "contradictions": [
+        "Readiness report emits 0 while agent-cycle report emits NOT_MEASURED_NO_INVENTORY."
+      ],
+      "permission_scope": "PUBLIC_GITHUB_ACTIONS_ARTIFACT",
+      "next_action": "Fix the readiness report generator so absent contradiction inventory remains null/NOT_MEASURED and does not pass the zero-contradiction gate by default.",
+      "scan_date": "2026-11-23"
     }
   ],
   "system_boundaries": {
@@ -683,5 +748,6 @@
     "private_repository_names_published": false,
     "other_repositories_modified": false
   },
-  "last_batch_id": "2026-11-23-batch-03"
+  "last_batch_id": "2026-11-23-batch-03",
+  "last_ci_pr": 165
 }
