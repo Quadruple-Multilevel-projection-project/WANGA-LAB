@@ -15,11 +15,38 @@ def read(path, default=None):
 def sha(value):
     return hashlib.sha256(json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":")).encode("utf-8")).hexdigest()
 
+
+def wix_audit_state(manifest):
+    last_attempt = manifest.get("last_attempt") or {}
+    read_back_performed = bool(last_attempt.get("read_back_performed"))
+    publication_performed = bool(last_attempt.get("publication_performed"))
+    exact_site_resolved = last_attempt.get("site_id_resolution") == "RESOLVED_EXACT_HOST_MATCH"
+    if read_back_performed and exact_site_resolved:
+        status = "PUBLISHED_READ_BACK_VERIFIED" if publication_performed else "READ_BACK_VERIFIED_NO_UPLOAD"
+    elif manifest.get("status") == "READ_BACK_VERIFIED":
+        status = "READ_BACK_VERIFIED"
+    elif manifest.get("status") == "PUBLISHED_READ_BACK_PARTIAL":
+        status = "PARTIAL_READ_BACK_REQUIRES_FURTHER_CHECK"
+    else:
+        status = "BLOCKED_OR_STALE_MANIFEST"
+    return {
+        "status": status,
+        "manifest_status": manifest.get("status", "NOT_RECORDED"),
+        "current_cycle_sync_status": manifest.get("current_cycle_sync_status"),
+        "last_sync_date": manifest.get("last_sync_date"),
+        "site_id": last_attempt.get("site_id"),
+        "site_id_resolution": last_attempt.get("site_id_resolution"),
+        "read_back_performed": read_back_performed,
+        "publication_performed": publication_performed,
+        "synced_articles": manifest.get("synced_article_count", 0)
+    }
+
 def main():
     catalog = read(ROOT / "logic_wiki/data/articles.json")
     gate = read(ROOT / "logic_wiki/data/readiness_gate.json")
     contracts = load_contracts(ROOT / "logic_fractal/data/composition_rules.json")
     wix_manifest = read(ROOT / "logic_wiki/data/wix_sync_manifest.json", {})
+    wix_audit = wix_audit_state(wix_manifest)
     evidence_dir = ROOT / "research/inbox/conversations"
     inbox_files = sorted(p for p in evidence_dir.rglob("*.json") if p.is_file()) if evidence_dir.exists() else []
     imported, intake_errors = [], []
@@ -136,7 +163,7 @@ def main():
         {"agent": "benchmark-evaluator", "status": "BLOCKED_NO_GROUNDED_BENCHMARKS" if not semantic_benchmark.get("cases") else "BENCHMARK_CASES_REGISTERED", "semantic_test_cases": len(semantic_benchmark.get("cases", [])), "benchmark_suites": len(benchmark_suites.get("suites", [])), "note": "Unit tests validate software contracts; they do not count as semantic ground-truth cases."},
         {"agent": "readiness-gatekeeper", "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY" if deficits else "READY_FOR_HUMAN_REVIEW", "metrics": metrics, "deficits": deficits, "threshold_policy": gate.get("status", "NOT_RECORDED")},
         {"agent": "wiki-curator", "status": "READY_FOR_REVIEW", "articles": len(articles), "sources": len(sources), "taxonomy_status": "EDITORIAL_RELATIONS_NOT_ENTAILMENT"},
-        {"agent": "wix-sync-auditor", "status": "READ_BACK_VERIFIED" if wix_manifest.get("status") == "READ_BACK_VERIFIED" else ("PARTIAL_READ_BACK_REQUIRES_FURTHER_CHECK" if wix_manifest.get("status") == "PUBLISHED_READ_BACK_PARTIAL" else "BLOCKED_OR_STALE_MANIFEST"), "last_sync_date": wix_manifest.get("last_sync_date"), "synced_articles": wix_manifest.get("synced_article_count", 0), "live_write_performed_by_this_cycle": False, "note": "GitHub runner has no Wix credentials; connected Wix sync must be performed separately and read back."},
+        {"agent": "wix-sync-auditor", "status": wix_audit["status"], "last_sync_date": wix_audit["last_sync_date"], "synced_articles": wix_audit["synced_articles"], "current_cycle_sync_status": wix_audit["current_cycle_sync_status"], "site_id": wix_audit["site_id"], "site_id_resolution": wix_audit["site_id_resolution"], "read_back_performed": wix_audit["read_back_performed"], "publication_performed": wix_audit["publication_performed"], "live_write_performed_by_this_cycle": wix_audit["publication_performed"], "note": "The connected Wix tool may verify read-back separately; GitHub Actions has no Wix credentials and does not publish."},
         {"agent": "report-publisher", "status": "REPORT_GENERATED", "wix_write_performed": False, "note": "This run records status and artifacts; it does not perform a Wix deployment."}
     ]
     operational_pass = not intake_errors and not dangling_sources and not dangling_relations and not duplicate_source_ids and not duplicate_article_ids and deterministic_rebuild
@@ -150,7 +177,7 @@ def main():
         "conversation_records_ingested": imported,
         "model_candidate": {"hash": sha(model_a), "status": "CANDIDATE_NOT_RELEASED", "deterministic_rebuild": deterministic_rebuild, "candidate_composition_count": model_a.get("candidate_composition_count", 0)},
         "first_model_gate": readiness, "readiness_metrics": metrics, "readiness_deficits": deficits,
-        "wix_sync": {"manifest_status": wix_manifest.get("status", "NOT_RECORDED"), "last_sync_date": wix_manifest.get("last_sync_date"), "current_cycle_write_performed": False, "note": "Wix is updated only through the connected authorized tool followed by read-back."},
+        "wix_sync": {**wix_audit, "current_cycle_write_performed": wix_audit["publication_performed"], "note": "Wix changes are made only through the connected authorized tool; a read-back without publication is not a new deployment."},
         "open_gaps": [
             "Scheduled jobs cannot fetch private ChatGPT history; they scan only explicit repository-visible export records.",
             "Semantic benchmark cases, named benchmark suites, a holdout manifest and independent review logs are not yet registered.",

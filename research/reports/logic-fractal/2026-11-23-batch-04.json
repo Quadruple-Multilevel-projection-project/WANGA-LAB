@@ -1,0 +1,124 @@
+{
+  "date": "2026-11-23",
+  "batch_id": "2026-11-23-batch-04",
+  "SOURCES_SCANNED": {
+    "repositories": 10,
+    "files_read_or_hash_checked": 29,
+    "conversation_exports": 0
+  },
+  "ACCESS_GAPS": [
+    "No private ChatGPT export exposed.",
+    "Five private repositories remain redacted and were not content-scanned.",
+    "No source-grounded crash input was supplied to Limbo."
+  ],
+  "NEW_SOURCES": [
+    "Qualia logical-economy blueprint: open proposal, not implemented.",
+    "ARTIFICAL-LOGICAL-ORDERS temporal routing proposal: not runtime-verified.",
+    "WANGA-LAB.-01 Milot HaHigayon analytics map: fork proposal; diagram counts not verified."
+  ],
+  "DUPLICATE_SOURCES": [
+    "WANGA-LAB.-01 exact blob duplicates with canonical WANGA-LAB for README, articles.json, research_metrics.json, terms 001/175, NTM README and fragment_composer.py.",
+    "Same PCE governance notice blob appears in AmbassadorOv/extensions and AmbassadorOv/googleapis."
+  ],
+  "CLAIMS_ADDED": {
+    "logic_wiki": 0,
+    "ecosystem_findings": 10,
+    "cross_repo_duplicate_findings": 1
+  },
+  "LOGIC_UNITS": {
+    "new_source_verified_units": 0,
+    "existing_catalog_entries_with_source_refs": 28,
+    "semantic_status": "NOT_YET_VERIFIED"
+  },
+  "COMPOSITION_COUNT": {
+    "active_contracts": 2,
+    "structural_candidates": 523,
+    "semantic_entailments_proven": 0
+  },
+  "CONTRADICTIONS": {
+    "critical_core_contradictions": "UNKNOWN_NO_INVENTORY",
+    "new_source_grounded_contradictions": 0
+  },
+  "BENCHMARKS": {
+    "source_grounded_counterexamples": 0,
+    "semantic_test_cases": 0,
+    "semantic_suites": 0,
+    "independent_reviews": 0,
+    "synthetic_fixtures": "Prior CI only; not semantic ground truth."
+  },
+  "CI": {
+    "pr": 165,
+    "previous_head_status": "PASS",
+    "updated_head_status": "PENDING",
+    "note": "The new readiness/Wix code corrections have not yet been tested by the updated PR head."
+  },
+  "MODEL_HASH": {
+    "typed_candidate_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "catalog_candidate_hash": "fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf",
+    "status": "HISTORICAL_PRIOR_CI_OUTPUT_NOT_REBUILT_AFTER_BATCH_04"
+  },
+  "READINESS_GATE": {
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "thresholds_status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "source_records": 17,
+    "source_classes": 11,
+    "logic_units_with_provenance": 28,
+    "active_composition_contracts": 2,
+    "counterexamples": 0,
+    "semantic_test_cases": 0,
+    "benchmark_suites": 0,
+    "independent_reviews": 0,
+    "dangling_source_refs": 0,
+    "duplicate_ids": 0,
+    "critical_core_contradictions": "UNKNOWN_NO_INVENTORY",
+    "deterministic_build": "PRIOR_CI_PASS_SYNTHETIC_FIXTURES",
+    "holdout_split": false,
+    "mirror_review": false
+  },
+  "LIMBO": {
+    "pr": 122,
+    "state": "OPEN_DRAFT",
+    "head": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+    "current_main": "744bbea2be17b0de6f0c8353f61bb76aed62fec0",
+    "compare": "63 ahead / 184 behind",
+    "workflow_runs": "action_required",
+    "inbox": "NO_INPUTS",
+    "observed_incidents": 10,
+    "history_events": 2,
+    "map_nodes": 14,
+    "map_edges": 19,
+    "map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+    "tuning_candidate": "TUNE-9c166900cc4ad5dd",
+    "tuning_replay": "NOT_RUN",
+    "logic_bundle": "DRAFT_UNVERIFIED",
+    "semantic_verification": "NOT_ESTABLISHED"
+  },
+  "WIX": {
+    "site_name": "Logic Engine Research Lab",
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "host": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
+    "files_listed": 29,
+    "pages_read_back": 3,
+    "homepage_cards": 28,
+    "publication_performed": false,
+    "current_cycle_sync_status": "READ_BACK_VERIFIED_NO_UPLOAD_NO_CATALOG_DELTA",
+    "full_site_content_audit": false
+  },
+  "BUILT": "Prior CI built a synthetic two-level candidate from synthetic typed fragments; no source-validated first model was released.",
+  "TESTED": "Prior PR #165 CI passed software and synthetic-fixture tests; updated head pending CI.",
+  "VERIFIED": "No new semantic claim or composition promoted to VERIFIED.",
+  "BLOCKED": [
+    "No source-grounded counterexamples or semantic benchmark cases.",
+    "No holdout manifest or independent MIRROR reviews.",
+    "Core contradiction inventory absent; zero cannot be claimed.",
+    "PR #122 approval/reconciliation and Limbo replay remain blocked.",
+    "No approved Wix catalog delta; only read-back verification completed."
+  ],
+  "NEXT": [
+    "Verify updated PR #165 CI and review findings.",
+    "Continue repository batch 05 from persisted cursor.",
+    "Source-check the 175-term corpus against the cited primary edition before extracting units.",
+    "Populate reviewed positive/negative/boundary benchmark cases and freeze holdout.",
+    "Run Limbo tuning replay only after source-backed crash inputs and a reconciled branch are available."
+  ]
+}

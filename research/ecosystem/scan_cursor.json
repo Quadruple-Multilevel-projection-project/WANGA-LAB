@@ -2,20 +2,8 @@
   "schema_version": "wanga-ecosystem-scan-cursor/1.0",
   "snapshot_date": "2026-11-23",
   "batch_size": 10,
-  "completed_batch": "2026-11-23-batch-03",
+  "completed_batch": "2026-11-23-batch-04",
   "last_scanned_repositories": [
-    "AmbassadorOv/-artificial-y",
-    "AmbassadorOv/AG-triple-X-",
-    "AmbassadorOv/AmbassadorOv",
-    "AmbassadorOv/awesome-chatgpt-prompts",
-    "AmbassadorOv/branches-",
-    "AmbassadorOv/chatgpt-scientific-publications-extension",
-    "AmbassadorOv/cookbook",
-    "AmbassadorOv/desktop",
-    "AmbassadorOv/docs",
-    "AmbassadorOv/eslint"
-  ],
-  "next_batch": [
     "AmbassadorOv/agent-orchestrator",
     "AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS",
     "AmbassadorOv/WANGA-LAB.-01",
@@ -27,20 +15,22 @@
     "AmbassadorOv/googleapis",
     "AmbassadorOv/https-AmbassadorOv.io"
   ],
-  "remaining_public_count": 31,
-  "remaining_public_repositories": [
-    "AmbassadorOv/WANGA-LAB.-01",
-    "AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS",
-    "AmbassadorOv/agent-orchestrator",
-    "AmbassadorOv/extensions",
-    "AmbassadorOv/fluffy-parakeet",
-    "AmbassadorOv/generative-ai-docs",
-    "AmbassadorOv/googleapis",
-    "AmbassadorOv/https-AmbassadorOv.io",
+  "next_batch": [
     "AmbassadorOv/mediapipe",
-    "AmbassadorOv/mermaid",
     "AmbassadorOv/mujoco",
-    "AmbassadorOv/Qualia",
+    "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
+    "AmbassadorOv/test-notebook-links",
+    "AmbassadorOv/TTTT-0.0.0.0.1",
+    "AmbassadorOv/TTTTproject-un.govt",
+    "AmbassadorOv/unetbootin",
+    "AmbassadorOv/vqbshtfsprojects.org",
+    "AmbassadorOv/vscode-azure-blockchain-ethereum",
+    "AmbassadorOv/vscode-docs"
+  ],
+  "remaining_public_count": 21,
+  "remaining_public_repositories": [
+    "AmbassadorOv/mediapipe",
+    "AmbassadorOv/mujoco",
     "AmbassadorOv/stunning-octo-garbanzo-d6cfaf53",
     "AmbassadorOv/test-notebook-links",
     "AmbassadorOv/TTTT-0.0.0.0.1",
@@ -63,5 +53,7 @@
   ],
   "nonpublic_or_private_count_redacted": 5,
   "cursor_mode": "PRIORITY_ORDER",
-  "status": "READY_FOR_NEXT_BATCH"
+  "status": "READY_FOR_NEXT_BATCH",
+  "ci_status": "PENDING_PR_CI",
+  "ci_pr": 165
 }

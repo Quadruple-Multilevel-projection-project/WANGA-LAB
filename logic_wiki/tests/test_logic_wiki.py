@@ -1,6 +1,9 @@
-import json, subprocess, sys, unittest
+import json, subprocess, sys, unittest, tempfile
 from pathlib import Path
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(ROOT))
+from scripts.build_logic_wiki import validate as validate_wiki
+from scripts.run_logic_agents import wix_audit_state
 class LogicWikiTests(unittest.TestCase):
  def test_seed_data_has_stable_unique_ids(self):
   data=json.loads((ROOT/'logic_wiki/data/articles.json').read_text(encoding='utf-8'))
@@ -44,6 +47,50 @@ class LogicWikiTests(unittest.TestCase):
   self.assertEqual(len(ids),len(set(ids)))
   self.assertTrue(all(x.get('source_refs') for x in manifest['extended_page_resources']))
   self.assertTrue(manifest['all_extended_resources_have_source_or_explicit_local_boundary'])
+
+ def test_unknown_core_contradictions_block_zero_gate(self):
+  with tempfile.TemporaryDirectory() as temp:
+   root=Path(temp)
+   data=root/'logic_wiki'/'data'
+   data.mkdir(parents=True)
+   (data/'articles.json').write_text(json.dumps({
+    'articles':[{'id':'a1','title':'A1','category':'test','kind':'ESTABLISHED_REFERENCE','status':'INDEXED','definition':'A bounded test entry.','scope_note':'Test-only scope.','sources':['s1'],'relations':[]}],
+    'sources':[{'id':'s1','uri':'https://example.org/source','status':'INDEXED','type':'REFERENCE'}]
+   }),encoding='utf-8')
+   thresholds={
+    'min_source_records':0,'min_source_classes':0,'min_logic_units_with_provenance':0,
+    'min_composition_rules_with_contracts':0,'min_counterexample_cases':0,'min_test_cases':0,
+    'min_benchmark_suites':0,'min_independent_review_cycles':0,
+    'unresolved_dangling_source_refs':0,'unresolved_duplicate_stable_ids':0,
+    'critical_core_contradictions':0,'deterministic_build_required':False,
+    'holdout_split_required':False,'mirror_review_required':False
+   }
+   (data/'readiness_gate.json').write_text(json.dumps({
+    'gate_id':'FIRST_MODEL_ALPHA','status':'CONFIGURED_NOT_EMPIRICALLY_VALIDATED','thresholds':thresholds
+   }),encoding='utf-8')
+   (data/'agent_registry.json').write_text(json.dumps({'agents':[{'id':'test-agent'}]}),encoding='utf-8')
+   (data/'research_metrics.json').write_text(json.dumps({'critical_core_contradictions':None}),encoding='utf-8')
+   _,_,report=validate_wiki(root)
+   self.assertIsNone(report['observed']['critical_core_contradictions'])
+   self.assertFalse(report['checks']['critical_core_contradictions'])
+   self.assertIn('critical_core_contradictions',report['missing_requirements'])
+
+ def test_wix_audit_surfaces_readback_without_claiming_publication(self):
+  state=wix_audit_state({
+   'status':'PUBLISHED_READ_BACK_PARTIAL',
+   'current_cycle_sync_status':'READ_BACK_VERIFIED_NO_UPLOAD_NO_CATALOG_DELTA',
+   'last_attempt':{
+    'site_id':'9d15d5e8-ebae-4660-8092-81f1fc817509',
+    'site_id_resolution':'RESOLVED_EXACT_HOST_MATCH',
+    'read_back_performed':True,
+    'publication_performed':False
+   }
+  })
+  self.assertEqual(state['status'],'READ_BACK_VERIFIED_NO_UPLOAD')
+  self.assertTrue(state['read_back_performed'])
+  self.assertFalse(state['publication_performed'])
+  self.assertEqual(state['current_cycle_sync_status'],'READ_BACK_VERIFIED_NO_UPLOAD_NO_CATALOG_DELTA')
+
  def tearDown(self):
   p=ROOT/'logic_wiki/generated-test'
   if p.exists():
