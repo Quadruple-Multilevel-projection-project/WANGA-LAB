@@ -1,6 +1,6 @@
 {
   "schema_version": "wanga-ecosystem-project-findings/1.0",
-  "snapshot_date": "2026-11-22",
+  "snapshot_date": "2026-11-23",
   "epistemic_rule": "A source proves only what is written in that source; structural links and candidate compositions are not semantic entailments.",
   "findings": [
     {
@@ -924,6 +924,129 @@
       ],
       "permission_scope": "PUBLIC_READ; repository permission ADMIN",
       "next_action": "Compare the declared sequences and transfer constraints with WANGA agent contracts; formalize only after arrow/transition semantics, preconditions, and non-applicability boundaries are explicit."
+    },
+    {
+      "id": "F-AGENT-ORCHESTRATOR-FORK-2026-11-23",
+      "repository": "AmbassadorOv/agent-orchestrator",
+      "ref": "main",
+      "file_path": "README.md; AGENTS.md; DESIGN.md",
+      "git_blob_sha": "3630865a27acb6f93b188972c69563910f4fb55d",
+      "source_uri": "https://github.com/AmbassadorOv/agent-orchestrator/blob/main/README.md",
+      "additional_sources": [
+        {
+          "path": "AGENTS.md",
+          "git_blob_sha": "488eb8d1c364152f73ae4bf0e65668f6fb00f603",
+          "source_uri": "https://github.com/AmbassadorOv/agent-orchestrator/blob/main/AGENTS.md"
+        },
+        {
+          "path": "DESIGN.md",
+          "git_blob_sha": "053505b772771d813a594ae5d51ff22593a44899",
+          "source_uri": "https://github.com/AmbassadorOv/agent-orchestrator/blob/main/DESIGN.md"
+        }
+      ],
+      "summary": "Repository metadata identifies a fork of OrchestratorInc/agent-orchestrator. AGENTS.md documents a Go daemon/CLI, Electron/React supervisor, typed API boundary, storage and test commands. This is an external orchestration reference, not evidence of WANGA integration or an executed local runtime.",
+      "epistemic_status": "EXTERNAL_FORK_IMPLEMENTATION_REFERENCE_NOT_INTEGRATED",
+      "overlap_candidates": [
+        "WANGA-LAB bounded agent roles",
+        "WANGA GitHub branch/PR/CI workloop"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN; no external write",
+      "next_action": "If adoption is considered, compare API contracts, review boundaries and permission model in a separate WANGA proposal; do not copy or deploy automatically.",
+      "scan_date": "2026-11-23"
+    },
+    {
+      "id": "F-ARTIFICAL-LOGICAL-ORDERS-TEMPORAL-ROUTING-2026-11-23",
+      "repository": "AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS",
+      "ref": "main",
+      "file_path": "TEMPORAL_NETWORK_ROUTING_V0_1.md",
+      "git_blob_sha": "c7d88552d8d301832110c3b88fe28ac7f34fd271",
+      "source_uri": "https://github.com/AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS/blob/main/TEMPORAL_NETWORK_ROUTING_V0_1.md",
+      "additional_sources": [
+        {
+          "path": "orchestrator.py",
+          "git_blob_sha": "dfc7b09542583194fbc3dafd6e40c7a850b4eda0",
+          "source_uri": "https://github.com/AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS/blob/main/orchestrator.py"
+        },
+        {
+          "path": "tests.py",
+          "git_blob_sha": "55826e94ba4a2b3ae73968226f258d88c4cf5895",
+          "source_uri": "https://github.com/AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS/blob/main/tests.py"
+        },
+        {
+          "path": "README.md",
+          "git_blob_sha": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+          "source_uri": "https://github.com/AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS/blob/main/README.md"
+        }
+      ],
+      "summary": "The specification models a temporal envelope containing a UTC timestamp, GitHub repository state snapshot, configuration hashes and route ID, and explicitly says chart coordinates are not causal evidence. The code shows classifier-driven agent dispatch. Its test script selects GSM8K/HotPotQA examples randomly and was not run, so it is not a deterministic holdout benchmark.",
+      "epistemic_status": "SPECIFICATION_AND_CODE_READ_NOT_EXECUTED",
+      "overlap_candidates": [
+        "WANGA NTM evidence/replay",
+        "repository snapshot identity",
+        "Logic Fractal source lineage"
+      ],
+      "contradictions": [
+        "Random dataset sampling in tests.py is incompatible with deterministic replay unless inputs are frozen; this is a test-design limitation, not a semantic contradiction."
+      ],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN; no external write",
+      "next_action": "Treat temporal snapshot/hash fields as an integration candidate only; freeze test inputs and run deterministic tests before benchmark reuse.",
+      "scan_date": "2026-11-23"
+    },
+    {
+      "id": "F-BRANCHES-LEGACY-WIX-2026-11-23",
+      "repository": "Quadruple-Multilevel-projection-project/branches-",
+      "ref": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "file_path": "README.md",
+      "git_blob_sha": "3c2d05890db488362257aa6bf373620050d7477d",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/branches-/blob/WPinstitutions%2F-WPG%7B%3C%3Cbranches%3E%7B%3C%F0%9F%AA%BE%3E%7D(%3CORG%3E)%3E%3E%7D%5D%5D%5D/README.md",
+      "summary": "README lists legacy Quilia resources and explicitly placeholder contribution/discussion/license links alongside Wix references. This is not evidence of current Wix deployment or synchronization.",
+      "epistemic_status": "LEGACY_LINK_INDEX_PLACEHOLDER_NOT_DEPLOYMENT_EVIDENCE",
+      "overlap_candidates": [
+        "WANGA-LAB Logic Wiki Wix sync manifest",
+        "legacy Quilia site references"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN; no external write",
+      "next_action": "Keep separate from current Logic Wiki; require live deployment read-back before any publication claim.",
+      "scan_date": "2026-11-23"
+    },
+    {
+      "id": "F-STUNNING-OCTO-README-DUPLICATE-2026-11-23",
+      "repository": "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "ref": "master",
+      "file_path": "README.md",
+      "git_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/stunning-octo-garbanzo/blob/master/README.md",
+      "summary": "The README blob SHA matches three other repository identities already in the inventory. This is duplicate README content only; it does not establish repository identity, code equivalence or semantic equivalence.",
+      "epistemic_status": "DUPLICATE_README_BLOB_LOW_SIGNAL",
+      "overlap_candidates": [
+        "AmbassadorOv/AG-triple-X-",
+        "AmbassadorOv/TTTTproject-un.govt",
+        "AmbassadorOv/World-Party-Federation-Branches-managers"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN; no external write",
+      "next_action": "Preserve all repository identities; compare code trees only if a later integration decision requires it.",
+      "scan_date": "2026-11-23"
+    },
+    {
+      "id": "F-COPILOT-CLI-REFERENCE-2026-11-23",
+      "repository": "tribal-archery/copilot-cli",
+      "ref": "main",
+      "file_path": "README.md",
+      "git_blob_sha": "1cff9f51b830cee89bfc656ddc6ab140141226cf",
+      "source_uri": "https://github.com/tribal-archery/copilot-cli/blob/main/README.md",
+      "summary": "README describes the public-preview GitHub Copilot CLI, agentic terminal coding support, GitHub context and MCP extensibility with action preview. No WANGA runtime connection or deployment was observed.",
+      "epistemic_status": "EXTERNAL_TOOL_REFERENCE_NOT_CONNECTED",
+      "overlap_candidates": [
+        "WANGA bounded agent roles",
+        "GitHub branch/PR/CI workloop"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN; no external write",
+      "next_action": "Reference only; do not infer a connected or active WANGA agent runtime.",
+      "scan_date": "2026-11-23"
     }
   ],
   "system_boundaries": {

@@ -1,21 +1,9 @@
 {
   "schema_version": "wanga-ecosystem-scan-cursor/1.0",
-  "snapshot_date": "2026-11-22",
+  "snapshot_date": "2026-11-23",
   "batch_size": 10,
-  "completed_batch": "2026-11-22-batch-05",
+  "completed_batch": "2026-11-23-batch-06",
   "last_scanned_repositories": [
-    "AmbassadorOv/test-notebook-links",
-    "AmbassadorOv/TTTT-0.0.0.0.1",
-    "AmbassadorOv/TTTTproject-un.govt",
-    "AmbassadorOv/unetbootin",
-    "AmbassadorOv/vqbshtfsprojects.org",
-    "AmbassadorOv/vscode-azure-blockchain-ethereum",
-    "AmbassadorOv/vscode-docs",
-    "AmbassadorOv/World-Party-Federation-Branches-managers",
-    "Quadruple-Multilevel-projection-project/-",
-    "Quadruple-Multilevel-projection-project/-from-Corsican-"
-  ],
-  "next_batch": [
     "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
     "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
     "Quadruple-Multilevel-projection-project/branches-",
@@ -27,18 +15,11 @@
     "AmbassadorOv/agent-orchestrator",
     "AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS"
   ],
-  "remaining_public_count": 11,
+  "next_batch": [
+    "AmbassadorOv/WANGA-LAB.-01"
+  ],
+  "remaining_public_count": 1,
   "remaining_public_repositories": [
-    "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
-    "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
-    "Quadruple-Multilevel-projection-project/branches-",
-    "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
-    "tribal-archery/copilot-cli",
-    "tribal-archery/mermaid",
-    "tribal-archery/unetbootin",
-    "tribal-archery/vscode-azure-blockchain-ethereum",
-    "AmbassadorOv/agent-orchestrator",
-    "AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS",
     "AmbassadorOv/WANGA-LAB.-01"
   ],
   "nonpublic_or_private_count_redacted": 5,
