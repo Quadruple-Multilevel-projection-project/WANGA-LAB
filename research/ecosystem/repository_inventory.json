@@ -44,7 +44,9 @@
     ],
     "remaining_public_count": 31,
     "cursor": "priority-order-after-batch-03",
-    "previous_batch_id": "2026-11-15-batch-02"
+    "previous_batch_id": "2026-11-15-batch-02",
+    "ci_status": "PASS",
+    "ci_pr": 165
   },
   "repositories": [
     {
@@ -986,6 +988,11 @@
       "id": "WIX_TARGET_SITE_ID",
       "status": "BLOCKED",
       "detail": "The current Wix connection did not resolve the exact headless site URL in wix_sync_manifest.json to a site ID. No upload or read-back was attempted."
+    },
+    {
+      "id": "CROSS_REPO_READ_TOKEN",
+      "status": "BLOCKED",
+      "detail": "The automated WANGA Ecosystem Agent Sweep run 45125697694 completed but CROSS_REPO_READ_TOKEN was not configured; GitHub API returned 403 and the workflow scanned only WANGA-LAB. The separate manual connected-connector batch 03 scanned 10 repositories."
     }
   ],
   "policy": {
@@ -1056,7 +1063,131 @@
         "AmbassadorOv/generative-ai-docs",
         "AmbassadorOv/googleapis",
         "AmbassadorOv/https-AmbassadorOv.io"
+      ],
+      "ci_runs": [
+        {
+          "name": "WANGA Ecosystem Agent Sweep",
+          "run_id": 45125697694,
+          "run_number": 271,
+          "status": "success",
+          "duration_seconds": 9,
+          "runner_config": "ubuntu-latest",
+          "artifact_name": "wanga-ecosystem-sweep-271",
+          "artifact_size_bytes": 3290
+        },
+        {
+          "name": "Logic Fractal Wiki Research",
+          "run_id": 45125697718,
+          "run_number": 334,
+          "status": "success",
+          "duration_seconds": 15,
+          "runner_config": "ubuntu-latest",
+          "artifact_name": "logic-wiki-research-report",
+          "artifact_size_bytes": 92010
+        },
+        {
+          "name": "Repository Integrity",
+          "run_id": 45125697754,
+          "run_number": 1205,
+          "status": "success",
+          "duration_seconds": 15,
+          "runner_config": "ubuntu-latest",
+          "artifact_size_bytes": 0
+        },
+        {
+          "name": "Vitruvius Research Index",
+          "run_id": 45125697764,
+          "run_number": 141,
+          "status": "success",
+          "duration_seconds": 21,
+          "runner_config": "ubuntu-latest",
+          "artifact_name": "vitruvius-research-index",
+          "artifact_size_bytes": 10450
+        },
+        {
+          "name": "CodeQL Advanced",
+          "run_id": 45125697773,
+          "run_number": 1691,
+          "status": "success",
+          "duration_seconds": 52,
+          "runner_config": "ubuntu-latest",
+          "artifact_size_bytes": 0
+        }
       ]
     }
-  ]
+  ],
+  "last_workflow_validation": {
+    "date": "2026-11-23",
+    "pull_request": 165,
+    "head_sha": "bf881111b618fc3e69e91e14eded75467b3bd501",
+    "base_sha": "d0ee34fd44530933f3c418b373849e06e4aaa5e6",
+    "status": "ALL_FIVE_WORKFLOWS_SUCCESS",
+    "runner_config": "ubuntu-latest",
+    "runs": [
+      {
+        "name": "WANGA Ecosystem Agent Sweep",
+        "run_id": 45125697694,
+        "run_number": 271,
+        "status": "success",
+        "duration_seconds": 9,
+        "runner_config": "ubuntu-latest",
+        "artifact_name": "wanga-ecosystem-sweep-271",
+        "artifact_size_bytes": 3290
+      },
+      {
+        "name": "Logic Fractal Wiki Research",
+        "run_id": 45125697718,
+        "run_number": 334,
+        "status": "success",
+        "duration_seconds": 15,
+        "runner_config": "ubuntu-latest",
+        "artifact_name": "logic-wiki-research-report",
+        "artifact_size_bytes": 92010
+      },
+      {
+        "name": "Repository Integrity",
+        "run_id": 45125697754,
+        "run_number": 1205,
+        "status": "success",
+        "duration_seconds": 15,
+        "runner_config": "ubuntu-latest",
+        "artifact_size_bytes": 0
+      },
+      {
+        "name": "Vitruvius Research Index",
+        "run_id": 45125697764,
+        "run_number": 141,
+        "status": "success",
+        "duration_seconds": 21,
+        "runner_config": "ubuntu-latest",
+        "artifact_name": "vitruvius-research-index",
+        "artifact_size_bytes": 10450
+      },
+      {
+        "name": "CodeQL Advanced",
+        "run_id": 45125697773,
+        "run_number": 1691,
+        "status": "success",
+        "duration_seconds": 52,
+        "runner_config": "ubuntu-latest",
+        "artifact_size_bytes": 0
+      }
+    ],
+    "logic_fractal_candidate": {
+      "catalog_candidate_hash": "fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf",
+      "typed_fixture_candidate_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+      "candidate_composition_count": 523,
+      "deterministic_rebuild": true,
+      "semantic_status": "NOT_YET_VERIFIED",
+      "release_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY"
+    },
+    "automated_cross_repo_scope": {
+      "run_id": 45125697694,
+      "status": "COMPLETED_WITH_SCOPE_BLOCKER",
+      "cross_repo_token_configured": false,
+      "repositories_scanned_by_workflow": 1,
+      "inventory_error": "GitHub API 403 Resource not accessible by integration",
+      "manual_connector_batch_scanned": 10
+    }
+  }
 }
