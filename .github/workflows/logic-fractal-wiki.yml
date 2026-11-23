@@ -49,6 +49,7 @@ on:
       - 'research/ecosystem/library_integration_matrix.json'
       - 'scripts/validate_ark_swarm_library_matrix.py'
       - '.github/workflows/logic-fractal-wiki.yml'
+      - 'neural_wikipedia/**'
 
   pull_request:
     paths:
