@@ -4,7 +4,9 @@ Run: Automation 3 current recorded run 9cce4f85-0394-832d-998a-be8287e53080
 Status: FINAL GOVERNANCE HANDOFF — one cumulative project queue; no project execution performed.
 
 ## Run identity and timing
-- Final handoff Timestamp: 2026-11-23T06:40:43.315Z
+- Initial complete-audit Timestamp: 2026-11-23T06:40:43.315Z
+- Final handoff last_updated Timestamp: 2026-11-23T06:47:23.538Z
+- Last update Action_ID: ACT-20261123-AI231-AUTOMATION3-HANDOFF-ADDENDUM-005
 - Contract_Start_Time: 2026-11-23T06:26:57.073999Z
 - Action_ID: ACT-20261123-AI231-AUTOMATION3-HANDOFF-FINAL-005
 - Audit window: 2026-11-23T06:26:57.073999Z through 2026-11-23T06:40:43.315Z
