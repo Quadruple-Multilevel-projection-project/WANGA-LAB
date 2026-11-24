@@ -1,6 +1,6 @@
 {
   "schema_version": "logic-wiki-wix-sync/1.0",
-  "last_sync_date": "2026-11-14",
+  "last_sync_date": "2026-11-24",
   "status": "PUBLISHED_READ_BACK_PARTIAL",
   "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
   "wiki_page": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
@@ -12,10 +12,10 @@
   "homepage_card_verified": true,
   "existing_model_builder_preserved": true,
   "existing_corpus_atlas_preserved": true,
-  "verification_method": "Connected Wix Headless patch published upload bce8ba31-77fe-4b2c-821c-480e5b017bd7. Read-back verified logic-wiki-research-status.html (12,315 bytes), logic-wiki.html (53,739 bytes; 28 entry cards), and logic-wiki-fractal-research.html (12,297 bytes). The other 26 site files were not re-read in this cycle; status is therefore partial, not a full-site audit.",
+  "verification_method": "Connected Wix Headless patch replaced logic-wiki-research-status.html. Immediate wix.headless.files.read returned exact matching content (10,527 bytes); the site still lists 29 static files. The other 28 files were not re-read, so status remains partial, not a full-site audit.",
   "automation_boundary": "Connected Wix upload/read-back was used. GitHub Actions does not have Wix credentials; scheduled research must use the connected Wix integration and record a read-back result.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
-  "note": "GitHub catalog snapshot: 28 articles, 17 source records and 11 source types; 111 editorial relation links. Last readiness report counted 28 provenance-linked logic units, 2 active composition contracts, 0 source-grounded counterexamples, 0 semantic benchmark cases, 0 benchmark suites and 0 independent reviews. First model remains NOT_READY_INTERNAL_CANDIDATE_ONLY. Source registration and catalog links do not prove semantic truth.",
+  "note": "Current GitHub snapshot: 28 articles, 17 source records, 11 source classes, 111 editorial relation links; 28 provenance-linked units; 2 active composition rules with contracts; 0 source-grounded semantic cases; 0 counterexamples; 0 independent reviews. The synthetic candidate rebuilt deterministically with hash a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904, but remains CANDIDATE_NOT_RELEASED. Catalog validation passed; semantic truth remains NOT_YET_VERIFIED.",
   "extended_topic_page_count": 10,
   "main_page_card_count": 28,
   "extended_page_resources": [
@@ -23,8 +23,9 @@
       "id": "wiki-page-research-status",
       "url": "/logic-wiki-research-status.html",
       "source_refs": [
-        "research/reports/logic-fractal/2026-10-12-readiness-snapshot.md",
-        "logic_wiki/data/readiness_gate.json"
+        "research/reports/logic-fractal/2026-11-24-cycle.md",
+        "logic_wiki/data/readiness_gate.json",
+        "logic_wiki/data/research_metrics.json"
       ]
     },
     {
@@ -124,6 +125,33 @@
       "logic-wiki-fractal-research.html"
     ],
     "homepage_entry_cards": 28,
-    "all_site_files_reaudited": false
+    "all_site_files_reaudited": false,
+    "latest_patch_method": "wix.headless.files.patch",
+    "latest_files_replaced": [
+      "logic-wiki-research-status.html"
+    ],
+    "latest_files_read_back": [
+      "logic-wiki-research-status.html"
+    ],
+    "latest_page_bytes": 10527,
+    "latest_exact_match": true,
+    "latest_site_file_count": 29
+  },
+  "latest_attempt": {
+    "date": "2026-11-24",
+    "status": "PUBLISHED_READ_BACK_PARTIAL",
+    "page": "logic-wiki-research-status.html",
+    "files_replaced": [
+      "logic-wiki-research-status.html"
+    ],
+    "files_read_back": [
+      "logic-wiki-research-status.html"
+    ],
+    "page_bytes": 10527,
+    "exact_match": true,
+    "site_file_count": 29,
+    "all_site_files_reaudited": false,
+    "ci_run_id": 45333262038,
+    "report_pr": 167
   }
 }

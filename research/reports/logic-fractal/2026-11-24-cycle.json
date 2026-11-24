@@ -1,0 +1,352 @@
+{
+  "schema_version": "wanga-logic-fractal-cycle-report/1.0",
+  "date": "2026-11-24",
+  "sources_scanned": {
+    "wanga_main_commit": "efed7d60a62cd1207357728413cea9fe50edaeae",
+    "github_repositories": {
+      "accessible_unique": 66,
+      "public": 61,
+      "private_or_nonpublic_redacted": 5,
+      "batch_scanned": 10,
+      "already_in_prior_inventory": 9,
+      "new_unique_registry_entries": 1,
+      "readme_files_read": 9,
+      "readme_not_found": 1,
+      "selected_handoff_documents_read": 3
+    },
+    "library_files_read_private_review_only": 3,
+    "current_conversation_files_surfaced": 4,
+    "complete_conversation_exports_found": 0,
+    "wix_site": {
+      "name": "Logic Engine Research Lab",
+      "url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/",
+      "static_files_listed": 29,
+      "research_status_page_bytes_before_sync": 12315
+    }
+  },
+  "access_gaps": [
+    "No complete ChatGPT conversations.json or export ZIP surfaced; no global conversation history scan was performed.",
+    "Five private/nonpublic GitHub repositories are counted but their names and contents are redacted from the public registry.",
+    "The GitHub Actions runtime has no evidenced CROSS_REPO_READ_TOKEN; connected-session reads do not prove scheduled cross-repository access.",
+    "Only a bounded repository metadata/README/selected-document scan was performed; full code, workflow and test audits remain incomplete.",
+    "Three private Library files were read under PRIVATE_REVIEW_ONLY; their contents and identifiers were not copied into public repository files.",
+    "No new source-grounded semantic benchmark cases or independent reviews are available."
+  ],
+  "new_sources": {
+    "repository_batch_scanned": 10,
+    "repository_findings_added": 10,
+    "new_unique_repository_inventory_entries": 1,
+    "library_source_records_added_to_public_catalog": 0,
+    "conversation_export_records_added": 0,
+    "source_grounded_logic_claims_added": 0
+  },
+  "duplicate_sources": {
+    "identical_readme_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+    "identical_readme_repositories": [
+      "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "Quadruple-Multilevel-projection-project/MNM",
+      "AmbassadorOv/Nanomathematics",
+      "tribal-archery/Qdprojects"
+    ],
+    "shared_handoff_notice_blob_sha": "2e2698d337a60a93059d85d4302ea01cc3837b7b",
+    "shared_handoff_notice_repositories": [
+      "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "Quadruple-Multilevel-projection-project/glowing-octo-waddle"
+    ],
+    "note": "Duplicate content is not repository identity and does not establish semantic equivalence."
+  },
+  "claims_added": {
+    "source_grounded_logic_claims": 0,
+    "ecosystem_findings_added": 13,
+    "interpretation_status": "Repository findings describe what the inspected files say; they do not establish external truth or semantic entailment."
+  },
+  "logic_units": {
+    "existing_catalog_articles": 28,
+    "existing_articles_with_source_refs": 28,
+    "new_public_logic_units": 0,
+    "private_review_logic_units_promoted": 0,
+    "relation_links": 111,
+    "dangling_source_refs": 0,
+    "dangling_relation_refs": 0,
+    "duplicate_article_ids": 0,
+    "duplicate_source_ids": 0
+  },
+  "composition": {
+    "active_specified_rules": 2,
+    "draft_rules": 1,
+    "recursive_contracts": 4,
+    "semantic_entailments_added": 0,
+    "note": "Catalog relations remain editorial links; no relation was promoted to semantic entailment."
+  },
+  "contradictions": {
+    "new_confirmed": 0,
+    "critical_core_inventory": "NOT_MEASURED_NO_INVENTORY",
+    "readiness_report_registered_count": 0,
+    "agent_cycle_inventory_available": false,
+    "note": "The generated readiness report reports zero critical contradictions, while the agent cycle says no contradiction inventory is available. The conservative report status is NOT_MEASURED."
+  },
+  "benchmarks": {
+    "software_ci": "PASS",
+    "formal_reasoning_software_cases": 5,
+    "typed_fragment_software_cases": 7,
+    "semantic_test_cases": 0,
+    "benchmark_suites": 0,
+    "counterexamples": 0,
+    "holdout_split": false,
+    "mirror_review": false,
+    "independent_review_cycles": 0,
+    "note": "The 5 formal-reasoning and 7 typed-fragment cases are software/formal checks and do not count as source-grounded semantic ground-truth cases."
+  },
+  "ci": {
+    "status": "PASS",
+    "runs": [
+      {
+        "name": "Logic Fractal Wiki Research",
+        "run_id": 45333262038,
+        "conclusion": "success",
+        "duration_seconds": 30
+      },
+      {
+        "name": "Vitruvius Research Index",
+        "run_id": 45333262026,
+        "conclusion": "success",
+        "duration_seconds": 24
+      },
+      {
+        "name": "CodeQL Advanced",
+        "run_id": 45333261960,
+        "conclusion": "success",
+        "duration_seconds": 56
+      },
+      {
+        "name": "WANGA Ecosystem Agent Sweep",
+        "run_id": 45333261948,
+        "conclusion": "success",
+        "duration_seconds": 15
+      },
+      {
+        "name": "Repository Integrity",
+        "run_id": 45333261936,
+        "conclusion": "success",
+        "duration_seconds": 16
+      }
+    ],
+    "runner_name": "NOT_EXPOSED_BY_CONNECTOR",
+    "artifact": {
+      "id": 14892563484,
+      "name": "logic-wiki-research-report",
+      "size_bytes": 97982,
+      "file_count": 54
+    },
+    "current_cycle_builder": "PASS",
+    "builder_scope": "THREE_SYNTHETIC_TYPED_FIXTURES_ONLY"
+  },
+  "model_hashes": {
+    "last_recorded_synthetic_candidate": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "current_cycle_rebuild": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "candidate_file_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+    "candidate_file_bytes": 9843,
+    "semantic_status": "NOT_YET_VERIFIED",
+    "candidate_status": "CANDIDATE_NOT_RELEASED"
+  },
+  "readiness_gate": {
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "thresholds": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "observed": {
+      "source_records": 17,
+      "source_classes": 11,
+      "logic_units_with_provenance": 28,
+      "composition_rules_with_contracts": 2,
+      "counterexamples": 0,
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "dangling_source_refs": 0,
+      "dangling_relation_refs": 0,
+      "duplicate_stable_ids": 0,
+      "deterministic_build": "PREVIOUS_SYNTHETIC_TEST_ONLY_CURRENT_REBUILD_PENDING",
+      "holdout_split": false,
+      "mirror_review": false,
+      "critical_core_contradictions": "NOT_MEASURED_NO_INVENTORY"
+    },
+    "required": {
+      "source_records": 20,
+      "source_classes": 3,
+      "logic_units_with_provenance": 50,
+      "composition_rules_with_contracts": 20,
+      "counterexamples": 30,
+      "semantic_test_cases": 100,
+      "benchmark_suites": 3,
+      "independent_review_cycles": 2,
+      "holdout_split": true,
+      "mirror_review": true
+    }
+  },
+  "limbo": {
+    "pr_number": 122,
+    "branch": "deploy/limbo-cartography-core-v1",
+    "pr_state": "OPEN_DRAFT",
+    "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+    "divergence": {
+      "ahead_by": 63,
+      "behind_by": 191
+    },
+    "checks": "ACTION_REQUIRED",
+    "reality_matrix": {
+      "version": "1.3.0",
+      "daily_seismic_records": 10,
+      "history_events": 2,
+      "last_updated": "2026-10-19"
+    },
+    "iterative_map": {
+      "version": "1.0.0",
+      "nodes": 14,
+      "edges": 19,
+      "sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5"
+    },
+    "latest_recorded_incident": "CRASH-GHA-39312967972",
+    "historical_retest": {
+      "run_id": 39313112365,
+      "result": "PASS",
+      "scope": "15 software tests and 9-node/6-edge map rebuild at the recorded branch state"
+    },
+    "new_crash_point_inputs": 0,
+    "existing_logic_bundle_inputs": 1,
+    "tuning_candidate": {
+      "id": "TUNE-9c166900cc4ad5dd",
+      "replay_status": "NOT_RUN",
+      "historical_retest": "PASS"
+    },
+    "latest_execution_record": "2026-11-07T06:12:35Z / EXECUTION_RECORD_ONLY",
+    "status": "NO_NEW_CRASH_INPUTS_CURRENT_REPLAY_BLOCKED"
+  },
+  "wix": {
+    "site_name": "Logic Engine Research Lab",
+    "url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/",
+    "static_file_count": 29,
+    "read_access": "CONFIRMED",
+    "write_status": "PUBLISHED_READ_BACK_PARTIAL",
+    "updated_file": "logic-wiki-research-status.html",
+    "updated_file_bytes": 10527,
+    "exact_readback": true,
+    "full_site_audit": false,
+    "report_pr": 167
+  },
+  "epistemic_status": {
+    "built": [
+      "2026-11-24 repository inventory, cursor and findings updates on a review branch",
+      "2026-11-24 cycle and ecosystem reports",
+      "two-level synthetic typed candidate rebuilt by GitHub Actions"
+    ],
+    "tested": [
+      "Logic Wiki build and tests",
+      "Logic Fractal Composer tests",
+      "typed multi-scale fragment tests",
+      "formal reasoning and typed formal software benchmarks",
+      "CodeQL Advanced",
+      "Repository Integrity",
+      "Wix research-status page read-back"
+    ],
+    "verified": [
+      "All five PR workflow runs completed successfully",
+      "Wix status page returned exact content match after patch",
+      "Catalog duplicate/dangling reference checks returned zero"
+    ],
+    "not_verified": [
+      "Semantic truth or source-grounded entailment",
+      "Current Limbo replay against current main",
+      "Full Wix site audit",
+      "First-model readiness"
+    ]
+  },
+  "agents": [
+    {
+      "role": "Repository Inventory",
+      "input": "Live owner/collaborator/organization-member repository lists",
+      "output": "66 unique accessible repositories; 61 public, 5 private/nonpublic redacted; 10-repository batch recorded",
+      "evidence": "Connected GitHub repository-list APIs",
+      "status": "COMPLETED",
+      "next_action": "Continue from scan cursor batch 04."
+    },
+    {
+      "role": "Project README/Docs Collector",
+      "input": "10 selected repository READMEs and three shared handoff documents",
+      "output": "9 README files read; one README missing; duplicate blobs and fork relationship recorded",
+      "evidence": "Git blob SHAs and repository metadata",
+      "status": "COMPLETED_BOUNDED",
+      "next_action": "Inspect relevant branch/docs in next prioritized batch."
+    },
+    {
+      "role": "Conversation Export Collector",
+      "input": "Current conversation files and accessible Library search",
+      "output": "0 complete exports; 3 private Library files read but withheld",
+      "evidence": "Current Files/Library results",
+      "status": "BLOCKED_EXPORT_NOT_AVAILABLE",
+      "next_action": "Wait for an actual user-provided export; keep private content out of public paths."
+    },
+    {
+      "role": "Logic Extractor/Normalizer",
+      "input": "Logic Wiki catalog, composition rules and recursive contracts",
+      "output": "Counts recomputed; no new source-grounded logic units added",
+      "evidence": "articles.json, composition_rules.json, recursive_composition_contracts_v1.json",
+      "status": "COMPLETED_BOUNDED",
+      "next_action": "Add units only after exact source spans and mappings are reviewed."
+    },
+    {
+      "role": "Fractal Composer",
+      "input": "Fragment composer, contracts and synthetic typed fixture",
+      "output": "Two-level synthetic candidate rebuilt deterministically; hash a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904.",
+      "evidence": "logic_fractal/data/* and builder workflow definition",
+      "status": "COMPLETED_SYNTHETIC_CANDIDATE_BUILT",
+      "next_action": "Do not release; obtain real source fragments and semantic reviews."
+    },
+    {
+      "role": "Mirror/Contradiction Reviewer",
+      "input": "Current catalog and readiness records",
+      "output": "No new counterexamples; readiness report says zero registered contradictions, but the agent cycle says no contradiction inventory is available.",
+      "evidence": "research_metrics.json and benchmark plan",
+      "status": "BLOCKED_NO_GROUNDED_CASES",
+      "next_action": "Create source-grounded negative/boundary cases and independent review records."
+    },
+    {
+      "role": "Benchmark Evaluator",
+      "input": "Semantic benchmark plan and Logic Fractal workflow",
+      "output": "5 formal reasoning and 7 typed-fragment software cases passed; 0 source-grounded semantic cases and 0 suites.",
+      "evidence": "semantic_benchmark_plan_v1.json",
+      "status": "BLOCKED_SEMANTIC_DATA_ABSENT",
+      "next_action": "Register reviewed positive/negative/boundary cases with frozen holdout."
+    },
+    {
+      "role": "Limbo Cartography",
+      "input": "PR #122 branch, matrix, map, inboxes, tuning candidate and run log",
+      "output": "10 incidents, 2 history events, 14 nodes, 19 edges; no new crash-point inputs; current replay not run",
+      "evidence": "branch cartography files and PR workflow runs",
+      "status": "BLOCKED_STALE_BRANCH_AND_ACTION_REQUIRED",
+      "next_action": "Reconcile branch with current main, obtain CI approval, then replay the exact tests."
+    },
+    {
+      "role": "Wix Curator/Publisher",
+      "input": "Connected Logic Engine Research Lab site and file list",
+      "output": "Research-status page patched and read back exactly at 10,527 bytes; site has 29 files; other 28 not re-audited.",
+      "evidence": "Wix site context and headless file listing",
+      "status": "PUBLISHED_READ_BACK_PARTIAL",
+      "next_action": "After PR CI passes, publish only the reviewed status summary and read it back."
+    }
+  ],
+  "blocked": [
+    "No complete ChatGPT conversation export.",
+    "FIRST_MODEL_ALPHA readiness thresholds are not met.",
+    "Current-cycle builder execution is pending PR CI.",
+    "PR #122 is stale by 191 commits and its checks are ACTION_REQUIRED.",
+    "Limbo tuning replay against current main is not run; no new crash-point inputs exist.",
+    "FIRST_MODEL_ALPHA readiness thresholds remain unmet despite successful software CI.",
+    "PR #122 still requires branch reconciliation and workflow approval; current Limbo replay is not run."
+  ],
+  "next": [
+    "Continue the ecosystem sweep from batch 04.",
+    "Create source-grounded positive, negative and boundary semantic benchmark cases and independent reviews.",
+    "Reconcile PR #122 with current main, obtain the required CI approval, then replay the exact Limbo tests.",
+    "Keep the candidate internal until every readiness gate passes."
+  ]
+}
