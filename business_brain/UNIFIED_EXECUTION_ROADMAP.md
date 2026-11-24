@@ -319,3 +319,71 @@ This addendum updates existing goals; it does not create a parallel queue or ano
 - Repository Integrity run `45344250661`, job `138274885085`: SUCCESS. All returned integrity job steps SUCCESS.
 - CodeQL run `45344250599` and Logic Fractal run `45344250610` were still in progress at this read-back; no conclusion is claimed for them.
 - PR #160 remains OPEN / DRAFT and is 24 commits behind current main and 51 commits ahead. Reconcile before merge.
+
+
+## 2026-11-24 Automation 2 evidence update — retry 02
+
+### Intake and optimizer provenance
+- Current accessible optimizer handoff remains `business_brain/handoffs/2026-11-23-AUTOMATION3-TO-AUTOMATION2.md`.
+- `business_brain/handoffs/2026-11-24-AUTOMATION3-TO-AUTOMATION2.md` was checked on `main` and the current evidence branch and is NOT_FOUND. The current-day Automation 3 handoff is therefore absent.
+- A separate 2026-11-24 Automation 2 handoff already present on the Wix-auditor branch uses the same scheduler run ID as this execution but records Contract_Start_Time `2026-11-24T08:34:43.672+02:00`; the current Automation 2 run record starts at `2026-11-24T09:02:33.587+02:00`. Treat that artifact as a provenance conflict, not as the current optimizer handoff.
+- Existing P1 task `AI231-AUTO2-HANDOFF-FRESHNESS-001` remains BLOCKED_PENDING_CURRENT_DAY_HANDOFF. Continue read-only validation and repository drafts only until a current-day Automation 3 handoff is available.
+
+### Existing-goal updates — no duplicate top-level goals created
+
+#### AI231-AGENT-FACTORY-WIX-AUDITOR-001
+- Status remains DONE_SPECIFIED_AND_CI_VERIFIED; runtime NOT_CONFIGURED.
+- Current PR #160 head: `b06dbd05648fa90baa9ad1bc4787aacc599b8811`.
+- Blueprint `agent_blueprints/ai231-wix-site-evidence-auditor.json`, blob `4560b0b4ce900ace6c32cbbe9465f23b4da67bf2`, status draft.
+- Contract workflow `.github/workflows/agent-blueprint-contract.yml`, blob `c6b6b480feba3e5e048695c726a4b6a0b196622a`; run `45344474779`, job `138275622985`; exact steps Verify agent blueprint contract, Validate agent blueprint JSON Schemas, Wix site evidence auditor tests — SUCCESS.
+- Runtime workflow `.github/workflows/agent-runtime-catalog.yml`, blob `770665ed91b8105ccdc9482741bb96c13fd4da75`; run `45344474785`, job `138275623155` (pinned framework install + import/graph smoke) and job `138275623470` (catalog + blueprint checks) — SUCCESS.
+- These CI jobs do not prove a real Wix auditor deployment, isolated backend, network-egress denial or real site invocation.
+- New subordinate task `AI231-AGENT-RUNTIME-ADAPTER-001`, P1. Source: verified blueprint/runtime CI plus OpenAI sandbox, A2A and MCP primary-source review. Owner: Agent Runtime Verifier. Dependencies: pinned backend/image, OS/container isolation, denied-egress test, immutable snapshot adapter and real invocation logging. Acceptance: AT-WIX-001–017, including snapshot hash validation, dynamic-route handling, prompt-injection resistance, write denial and egress denial. Permission: repository draft only; no deployment or credentials. Rollback: stop worker, revoke scoped capability, discard workspace and restore previous runtime image. Evidence: `docs/AI231_WIX_AUDITOR_RUNTIME_ADAPTER_DRAFT_V1.md`. Status: DRAFT_ONLY / NOT_CONFIGURED. Next action: implement only after the current-day optimizer handoff and runtime authorization.
+
+#### AI231-WIX-CORE-METADATA-001
+- Existing P1 goal advanced using the current read-only The Logic Economy snapshot.
+- Site inventory: 70 authorized sites; this rotation deeply rechecked The Logic Economy (26 HTML pages). No production Wix change was made.
+- Verified static findings: all 26 pages lack canonical tags; one page lacks a meta description; no missing local static-file links; eight dynamic-looking Wix Blog links remain unresolved; one `href="#"` anchor is untested; 36 external URLs remain unverified. Static-file absence of sitemap/robots is not proof of live-route absence.
+- New subordinate task `AI231-WIX-LOGIC-ECONOMY-METADATA-001`, P1. Source: Wix site `2ef4aa6f-39e0-489e-8002-33c31e29d60b`, 26-page snapshot. Owner: Site Evidence Auditor (draft). Dependencies: current-day Automation 3 handoff, live sitemap/robots and Wix Blog route verification, and explicit approval for the exact metadata-only production scope. Acceptance: exactly one correct canonical per static page, one accurate Hebrew description on the historical 2026-11-10 page, body hashes unchanged, live route checks and mobile/accessibility verification. Permission: read-only + repository draft; production write/publish BLOCKED. Rollback: restore original HTML snapshots; no production rollback exists because no live change occurred. Evidence: `business_brain/website-drafts/2026-11-24-THE-LOGIC-ECONOMY-METADATA-PATCH.md`. Status: DRAFT_READY / PRODUCTION_BLOCKED. Next action: retain draft pending handoff and exact-scope approval.
+
+#### AI231-WIX-COVERAGE-063-001
+- Current inventory is 70 sites (previous inventory: 69). Eight unique sites were previously deeply inspected; The Logic Economy was revisited, so unique coverage remains eight and 62 sites remain unreviewed.
+- The Logic Economy: BLOCKED for production remediation; read-only static audit and draft prepared. AI231 Robotics Collaboration: carried forward for the next rotation; no deep audit in this cycle.
+- Next action: rotate to the highest-priority unreviewed authorized site; preserve one Step 3 website slot.
+
+#### AI231-LEDGER-STATE-SEPARATION-001
+- PR #150 head `d77a91bc4456ec0894257fba2a9fc8ae1d164a62`; current main comparison: 30 commits ahead, 119 behind, mergeable=false.
+- Exact workflow `.github/workflows/repository-integrity.yml`, blob `5049b14b410569e14b9aa91023df69c9e01e4839`; run `45001947753`, job `137145211088`; exact steps Logic currency ledger aggregate-state schema validation and Logic currency ledger aggregate-state transition tests — SUCCESS on the old PR head.
+- The dedicated validator references `schemas/logic-currency-ledger-state-v1.schema.json`; the dedicated test reads that same schema. This is valid CI evidence for the PR head, not evidence that the schema is integrated into current main.
+- State model keeps planned, approved and issued-internal quantities distinct; external token quantity remains zero. No token issuance or monetary value was created.
+- Status: SPECIFIED_AND_CI_VERIFIED_ON_OLD_HEAD / MAIN_INTEGRATION_UNRESOLVED. Next action: reconcile the stale branch against current main after the handoff gate; rerun exact schema/test steps on the resulting commit.
+
+#### AI231-LOGICAL-ISLANDS-ECONOMY-001
+- Updated with current The Logic Economy site context and market alternatives. Wix Payments/Stores/Invoices are installed, but no transaction data was accessed.
+- The site keeps the proposed development model separate from secured land, approvals, occupancy, tenant demand or guaranteed returns. Logic Value Exchange is not described as fiat or a conventional stock exchange.
+- Competitor reference prices checked 2026-11-24: Screaming Frog free up to 500 URLs / €245 per user per year; Semrush SEO $117.33/month billed annually; a Wix specialist lists €200 ex VAT + €49.90/month; another fixed technical audit lists €200 + VAT.
+- Status remains PARTIAL: market alternatives refreshed; no buyer, cash receipt, cash cost, partner term or contribution-margin evidence. Next action: instrument actual cash and delivery-cost records before making unit-economics claims.
+
+#### AI231-REVENUE-PILOT-VALIDATION-001
+- Existing €290 ex-VAT pilot remains a price hypothesis, not a validated price.
+- Arithmetic break-even direct-cost ceilings before other direct costs: €145/hour at 2 hours, €96.67/hour at 3 hours, €72.50/hour at 4 hours. The 2–4 hour delivery estimate is unmeasured; these are not actual costs or margins.
+- Issues #148 and #149 remain open, with no comments or assignees and last updated 2026-11-15; duplicate assessment remains unresolved. No outreach was sent.
+- Status: DRAFT_ONLY / WILLINGNESS_TO_PAY_NOT_VERIFIED. Next action: obtain explicit outreach authorization, then collect buyer/budget evidence and run a timed delivery test.
+
+#### AI231-EXTERNAL-CONVERGENCE-TRACK-001
+- Updated with A2A, MCP authorization, OpenAI Agents SDK sandbox and LangGraph workflow/persistence primary sources.
+- Internal PR #167 remains an internal candidate: 28 source-referenced articles, 17 source records, 111 editorial relations, zero semantic benchmark suites and zero independent reviews. No external adoption or causal influence is claimed.
+- Evidence: `research/2026-11-24-AGENT-CONVERGENCE-UPDATE-2.md`. Status: ONGOING / NOT_READY_INTERNAL_CANDIDATE_ONLY.
+
+### Staleness flags
+- Issue #90: OPEN, last updated 2026-10-11; 44 days without issue-level evidence update.
+- Issue #91: OPEN, last updated 2026-10-11; 44 days without issue-level evidence update.
+- Issue #126: OPEN, last updated 2026-10-18; 37 days without source-level resolution.
+- Issues #148 and #149: OPEN, last updated 2026-11-15; 9 days without buyer/WTP evidence. They remain a possible duplicate pair and must not be silently closed.
+- No P0/P1 labels or separate priority field were exposed by the issue search; do not infer priority from labels. The roadmap P1 tasks above retain their status and next acceptance conditions.
+
+### Current dated artifacts
+- Agent runtime adapter draft: `docs/AI231_WIX_AUDITOR_RUNTIME_ADAPTER_DRAFT_V1.md`
+- The Logic Economy metadata patch: `business_brain/website-drafts/2026-11-24-THE-LOGIC-ECONOMY-METADATA-PATCH.md`
+- External convergence research: `research/2026-11-24-AGENT-CONVERGENCE-UPDATE-2.md`
+- Logical Islands economic review: `business_brain/economy/2026-11-24-LOGICAL-ISLANDS-ECONOMIC-REVIEW.md`
