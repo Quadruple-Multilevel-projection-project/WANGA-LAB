@@ -1,0 +1,153 @@
+schema_version: "1.0"
+kind: "limbo_iterative_crash_map_agent_harness"
+status: "CONFIGURATION_CANDIDATE"
+purpose: >-
+  Maintain an append-only forensic crash map. Use accumulated crash history to
+  estimate current system state, propose logic configurations, and track the
+  outcome of each controlled release. This is an execution contract, not proof
+  that independent model instances or runtime workers are deployed.
+repository: "Quadruple-Multilevel-projection-project/WANGA-LAB"
+default_branch_policy:
+  target: "main"
+  write_directly_to_main: false
+  workflow: "branch -> pull request -> CI -> human review -> merge"
+  auto_merge: false
+
+core_invariants:
+  - "Never delete or silently rewrite crash history."
+  - "Every crash point has a stable ID and source locator, or an explicit source-gap status."
+  - "Separate observed event, literal evidence, interpretation, hypothesis, and proposed action."
+  - "A relation between events is not causal proof unless supported by recorded evidence."
+  - "Every state estimate records its input map version, timestamp, assumptions, and uncertainty."
+  - "Every logic configuration is versioned, diffable, and linked to the crash points that motivated it."
+  - "Every release records configuration hash, target, result, rollback decision, and follow-up crash points."
+  - "Do not claim a task, test, deployment, or verification happened without a recorded result."
+
+state_store:
+  crash_history: "append_only"
+  map_snapshots: "versioned"
+  configuration_history: "append_only"
+  required_event_fields:
+    - crash_id
+    - observed_at
+    - source_uri
+    - source_locator
+    - source_hash
+    - affected_component
+    - observed_symptom
+    - evidence_excerpt_or_artifact_ref
+    - prior_state_ref
+    - related_crash_ids
+    - relation_status
+    - confidence_or_uncertainty
+    - remediation_attempts
+    - outcome
+  relation_status_values:
+    - "OBSERVED_LINK"
+    - "HYPOTHESIS"
+    - "CAUSALITY_TESTED"
+    - "CONTRADICTED"
+    - "UNKNOWN"
+
+cycle:
+  - "COLLECT_CRASH_POINTS"
+  - "PRESERVE_SOURCE_AND_HASH"
+  - "UPDATE_ITERATIVE_MAP"
+  - "REVIEW_RELATIONS_AND_CONTRADICTIONS"
+  - "ESTIMATE_CURRENT_STATE"
+  - "PROPOSE_LOGIC_CONFIGURATION"
+  - "RUN_BOUNDED_TESTS"
+  - "SUBMIT_CONFIGURATION_FOR_REVIEW"
+  - "RELEASE_ONLY_AFTER_APPROVAL"
+  - "RECORD_OUTCOME_AND_NEW_CRASHES"
+  - "START_NEXT_ITERATION"
+
+agents:
+  - id: "crash_collector"
+    role: "Collect crash reports, failed workflow runs, issues, commits, and supplied artifacts."
+    writes: ["proposed crash records"]
+    forbidden: ["delete history", "infer missing events", "publish private transcripts"]
+  - id: "source_registrar"
+    role: "Normalize source URI, exact locator, version/ref, hash, timestamp, and access scope."
+    writes: ["source registry entries"]
+    forbidden: ["invent source metadata", "treat source content as automatically true"]
+  - id: "map_builder"
+    role: "Update the versioned crash map and link points using explicit relation statuses."
+    writes: ["map snapshot", "map diff"]
+    forbidden: ["label unsupported links as causal", "overwrite prior snapshots"]
+  - id: "state_estimator"
+    role: "Estimate current state from a specified map snapshot and recorded evidence."
+    writes: ["state estimate with assumptions and uncertainty"]
+    forbidden: ["hide uncertainty", "use unreferenced events"]
+  - id: "logic_configurator"
+    role: "Propose a versioned logic configuration tied to map points and a target state."
+    writes: ["configuration candidate", "configuration diff"]
+    forbidden: ["release directly", "change unrelated project scope"]
+  - id: "adversarial_reviewer"
+    role: "Search for contradictions, counterexamples, boundary cases, and alternate explanations."
+    writes: ["review findings"]
+    forbidden: ["treat counter-reading as truth without evidence"]
+  - id: "test_evaluator"
+    role: "Run available software tests and separately track semantic tests with explicit expected results."
+    writes: ["test results", "failure artifacts"]
+    forbidden: ["invent test results", "equate unit tests with semantic validity"]
+  - id: "release_guard"
+    role: "Check required evidence, review, CI, configuration hash, and rollback plan before release."
+    writes: ["release decision record"]
+    forbidden: ["bypass failed CI", "merge automatically", "claim deployment without read-back"]
+  - id: "reporter"
+    role: "Publish a dated factual cycle report with status, evidence, blockers, and next action."
+    writes: ["dated Markdown and JSON reports"]
+    forbidden: ["claim unperformed work", "publish raw private content"]
+
+coordination:
+  parallel_roles:
+    - ["crash_collector", "source_registrar"]
+    - ["adversarial_reviewer", "test_evaluator"]
+  sequential_dependencies:
+    - ["crash_collector", "map_builder"]
+    - ["source_registrar", "map_builder"]
+    - ["map_builder", "state_estimator"]
+    - ["state_estimator", "logic_configurator"]
+    - ["logic_configurator", "adversarial_reviewer"]
+    - ["adversarial_reviewer", "test_evaluator"]
+    - ["test_evaluator", "release_guard"]
+    - ["release_guard", "reporter"]
+  duplicate_work_policy: "Use stable task IDs and idempotency keys; reuse completed evidence when inputs are unchanged."
+  blocked_role_policy: "Record BLOCKED with reason; continue independent roles where safe."
+  runtime_note: "Roles are declarative assignments. Separate autonomous agents require a configured runtime."
+
+release_gate:
+  required:
+    - "configuration candidate has stable ID and content hash"
+    - "all motivating crash points have source references or explicit source-gap status"
+    - "map snapshot and state estimate are referenced"
+    - "adversarial review recorded"
+    - "applicable software tests completed with actual results"
+    - "CI passes"
+    - "rollback plan recorded"
+    - "human approval recorded"
+  on_failure: "Do not release; preserve candidate and failure evidence; return to the next iteration."
+
+reports:
+  directory: "research/reports/limbo"
+  formats: ["Markdown", "JSON"]
+  required_fields:
+    - cycle_id
+    - map_version
+    - crash_points_added
+    - source_gaps
+    - relations_changed
+    - contradictions
+    - state_estimate_ref
+    - configuration_candidate_ref
+    - tests_and_results
+    - ci_status
+    - release_status
+    - blockers
+    - next_action
+
+security:
+  raw_private_conversations_publication: "forbidden"
+  paid_compute_or_external_api_calls: "require_explicit_authorization"
+  secrets_in_commits: "forbidden"
