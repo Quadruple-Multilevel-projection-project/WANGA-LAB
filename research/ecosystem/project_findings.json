@@ -686,14 +686,34 @@
       "ref": "Connected Wix site snapshot",
       "file_path": "logic-wiki-research-status.html; logic-wiki.html; logic-wiki-fractal-research.html",
       "source_uri": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/",
-      "summary": "The exact public Logic Wiki host resolves to the connected Logic Engine Research Lab site. Its static file inventory contains 29 files; the research-status page is 12,315 bytes. Read access is confirmed; this cycle has not yet changed the deployment.",
-      "epistemic_status": "WIX_SITE_CONTEXT_AND_FILE_LIST_READ",
+      "summary": "The exact Logic Engine Research Lab site was resolved. The current research-status page was patched and read back byte-for-byte at 10,527 bytes; the site still contains 29 files. The other 28 files were not re-read, so the deployment audit remains partial.",
+      "epistemic_status": "PUBLISHED_READ_BACK_PARTIAL",
       "overlap_candidates": [
         "logic_wiki/data/wix_sync_manifest.json"
       ],
       "contradictions": [],
       "permission_scope": "Connected Wix site read access",
-      "next_action": "Publish only after the current report's PR CI and internal source review pass; patch the complete page and read it back.",
+      "next_action": "Re-audit remaining site files only when needed; keep the manifest aligned with each subsequent patch.",
+      "scan_date": "2026-11-24"
+    },
+    {
+      "id": "F-CI-LOGIC-FRACTAL-2026-11-24",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "research/wanga-cycle-2026-11-24",
+      "file_path": "logic_wiki/generated/readiness-report.json; research/reports/logic-fractal/typed-first-model-candidate.json",
+      "git_blob_sha": "artifact:14892563484",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/actions/runs/45333262038",
+      "summary": "Logic Fractal Wiki Research, Vitruvius Research Index, CodeQL Advanced, WANGA Ecosystem Agent Sweep and Repository Integrity all completed successfully. The builder produced a two-level candidate from three synthetic fixtures with model hash a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904; the candidate remains unreleased and semantic status remains NOT_YET_VERIFIED. Catalog validation PASS is distinct from FIRST_MODEL_ALPHA readiness, which remains NOT_READY.",
+      "epistemic_status": "SOFTWARE_CI_PASS_SYNTHETIC_CANDIDATE_NOT_SEMANTIC_VERIFICATION",
+      "overlap_candidates": [
+        "scripts/build_first_fractal_model.py",
+        "logic_fractal/fragment_composer.py"
+      ],
+      "contradictions": [
+        "readiness-report.json records critical_core_contradictions=0, while agent_cycle_report.json says contradiction_inventory_available=false; conservative status is NOT_MEASURED."
+      ],
+      "permission_scope": "PUBLIC_READ; GitHub Actions artifact",
+      "next_action": "Keep candidate internal; create reviewed source-grounded semantic cases and independent reviews.",
       "scan_date": "2026-11-24"
     }
   ],
