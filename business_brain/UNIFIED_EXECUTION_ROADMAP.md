@@ -220,6 +220,7 @@ This addendum updates existing goals; it does not create a parallel queue or ano
 - Added subtask **AI231-AGENT-NO-EGRESS-SNAPSHOT-001**.
 - Priority: P1. Owner: Agent Factory. Dependencies: existing Wix auditor blueprint/schema and the exact agent-contract CI workflow; no runtime dependency for the contract-only change.
 - Acceptance: direct public-web permission absent; `network_egress=false`; orchestrator-supplied immutable snapshots specified; AT-WIX-009 present and its dedicated contract test passes.
+- Evidence required: exact workflow run/job/step for every changed contract test; before any activation, exact-version backend config, successful invocation log, OS-isolation result and denied-egress test.
 - Status: DONE_CONTRACT_AND_CI_VERIFIED; runtime NOT_CONFIGURED. Rollback: revert the two dedicated commits listed below.
 - Source: PR #160 branch `automation/ai231-wix-evidence-auditor-2026-11-20`; blueprint `agent_blueprints/ai231-wix-site-evidence-auditor.json`; test `tests/test_ai231_wix_site_evidence_auditor.py`.
 - Change: removed the direct `read_public_web_content` permission because the blueprint already requires `network_egress=false); public pages must be fetched by the authorized orchestrator and supplied as immutable snapshots. Added acceptance contract `AT-WIX-009` and a dedicated contract test.
@@ -233,6 +234,7 @@ This addendum updates existing goals; it does not create a parallel queue or ano
 - Added subtask **AI231-WIX-ROBOTICS-METADATA-001**.
 - Priority: P1. Owner: Site Evidence Auditor (draft). Dependencies: explicit approval for this exact site/change scope and a non-production preview; external routes must be independently checked.
 - Acceptance: three canonical tags, one three-URL sitemap and a robots declaration pass read-back, route, mobile and accessibility checks in preview.
+- Evidence required: explicit approval record for the exact site/files/scope, preview URL, before/after file hashes, canonical/sitemap/robots read-back, internal/external route checks, mobile and accessibility results.
 - Status: DRAFT_PREPARED / PRODUCTION_BLOCKED. Risk: repository draft only; no production write. Rollback: discard the draft or revert its dedicated commit.
 - Source/site: AI231 Robotics Collaboration, site ID `d8dcc187-d8fe-4e3c-b7a4-9e46f020349e`, live URL https://headless-nkogaqagpcv-beywolf5-1408.wix-site-host.com/.
 - Verified read-only inventory: exactly three files (`index.html` 14,709 bytes; `about.html` 22,857 bytes; `agents.html` 10,775 bytes), `hasMore=false`. All three have titles, descriptions and viewport declarations; all three lack canonical links. No `sitemap.xml` or `robots.txt` is present. Internal links among the three files resolve to the inventory. The Hebrew About section carries `lang="he"` and RTL markup.
@@ -280,6 +282,7 @@ This addendum updates existing goals; it does not create a parallel queue or ano
 - Acceptance: Automation 2 ingests the newest handoff before selecting mutating work; if it is missing or still in progress, record the blocker and limit work to read-only validation or reversible drafts.
 - Permission/risk: governance prompt change only; no schedule change or new automation.
 - Rollback: N/A for this read-only finding; any future prompt edit must retain the exact pre-edit prompt for restoration.
+- Evidence required: current-date handoff path and commit, timestamp later than Supervisor start, provenance, prioritized task IDs and explicit blocker/acceptance fields.
 - Status: BLOCKED_PENDING_CURRENT_DAY_HANDOFF.
 
 ### External convergence research — 2026-11-24
