@@ -286,3 +286,10 @@ This addendum updates existing goals; it does not create a parallel queue or ano
 - #148/#149 have no evidence update for more than seven days and are flagged stale. Other P1 goals were updated above or retain their existing blockers.
 - Actual cash collected: NOT_YET_VERIFIED. Actual cash costs paid: NOT_YET_VERIFIED. Contribution margin: NOT_COMPUTABLE. Qualified pipeline: NOT_VERIFIED. Forecasts: HYPOTHESIS. Internal Logic Credits: non-cash only. External token quantity remains zero; no issuance or monetary-value promise.
 
+
+
+### PR integration gate — 2026-11-24
+- PR #160 current head `b0ca0205e3146ad44f1f435114f7018b69feb4de`: 24 commits behind current main and 38 commits ahead. Its agent-contract workflow passed on the exact head, but integration/rebase and the remaining repository checks are not yet verified.
+- PR #150 head `d77a91bc4456ec0894257fba2a9fc8ae1d164a62`: 119 commits behind current main and 30 commits ahead. Its ledger CI passed on the exact old head; this is not a current-main integration pass.
+- PR #167 head `979de22bb300b332c75b7e7604aa10d99e9ab857` is based on current main and remains OPEN / DRAFT. Its research readiness limitations remain as recorded above.
+- Do not merge or close these PRs from this automation. Reconcile each branch with current main, resolve conflicts, and rerun the exact changed-file/schema/test workflows before any merge decision.
