@@ -155,7 +155,7 @@ Ledger_CI_Run=44478402542
 
 ### 2. Advance the agent factory
 **Status: DONE — contract improvement only**  
-**Evidence:** `agent_blueprints/ai231-wix-site-evidence-auditor.json` commit `0dcd8d4fd1da01832171f36ea3848b1c85aba0b9`; `tests/test_ai231_wix_site_evidence_auditor.py` commit `b0ca0205e3146ad44f1f435114f7018b69feb4de`. Removed the direct `read_public_web_content` permission, required immutable read-only snapshots supplied by the orchestrator, added `AT-WIX-009` and a dedicated contract test. Workflow `.github/workflows/agent-blueprint-contract.yml` blob `c6b6b480feba3e5e048695c726a4b6a0b196622a`; run `45342942417`; job `138270633398`; steps `Verify agent blueprint contract`, `Validate agent blueprint JSON Schemas`, `Wix site evidence auditor tests` — all SUCCESS.  
+**Evidence:** `agent_blueprints/ai231-wix-site-evidence-auditor.json` commit `0dcd8d4fd1da01832171f36ea3848b1c85aba0b9`; `tests/test_ai231_wix_site_evidence_auditor.py` commit `b0ca0205e3146ad44f1f435114f7018b69feb4de`. Removed the direct `read_public_web_content` permission, required immutable read-only snapshots supplied by the orchestrator, added `AT-WIX-009` and a dedicated contract test. Workflow `.github/workflows/agent-blueprint-contract.yml` blob `c6b6b480feba3e5e048695c726a4b6a0b196622a`; test-change run `45342942417`; job `138270633398`; and follow-up run `45344004180`; job `138274073921` on commit `b41b936518f9fbfda735d32c6676d0b3c5ff0d46`. Steps `Verify agent blueprint contract`, `Validate agent blueprint JSON Schemas`, `Wix site evidence auditor tests` — all SUCCESS in both runs.  
 **Acceptance: PASS** for the blueprint/test contract on the exact test commit; **UNRESOLVED** for actual runtime isolation, invocation and network-egress enforcement.  
 **Next action:** keep the agent DRAFT / NOT_CONFIGURED until a real isolated backend, task-scoped authorization, invocation logs and egress-denial tests exist.
 
@@ -198,13 +198,13 @@ Ledger_CI_Run=44478402542
 
 ### 9. Run verification, source, security and drift checks
 **Status: PARTIAL — exact contract CI passed; integration/runtime gates remain open**  
-**Evidence:** agent contract run `45342942417` / job `138270633398` / exact successful test step above; ledger run `45001947753` / job `137145211088` / exact successful schema and transition steps; PR #167 Logic Fractal run `45333684412` / job `138240627681` and Ecosystem Sweep run `45333684351` / job `138240658219`, both SUCCESS on the exact research head. Repository Integrity run `45342942359` was still `in_progress` at inspection.  
+**Evidence:** agent contract run `45342942417` / job `138270633398` / exact successful test step above; ledger run `45001947753` / job `137145211088` / exact successful schema and transition steps; PR #167 Logic Fractal run `45333684412` / job `138240627681` and Ecosystem Sweep run `45333684351` / job `138240658219`, both SUCCESS on the exact research head. Repository Integrity follow-up run `45344004090`, job `138274073542`, completed SUCCESS with all returned steps SUCCESS. CodeQL Advanced run `45344004106` remained `in_progress` at the last check.  
 **Acceptance: PASS** for the named CI steps on their exact commits; **UNRESOLVED** for current-main ledger integration, full repository-integrity completion, actual runtime isolation, live browser/mobile checks and semantic truth.  
 **Next action:** recheck pending CI; rerun tests after branch reconciliation; do not claim active deployment or production verification.
 
 ### 10. Update cumulative roadmap, execution log and next-cycle handoff
 **Status: DONE**  
-**Evidence:** roadmap `business_brain/UNIFIED_EXECUTION_ROADMAP.md` commit `7fb2b0358c39345bf87dac8f3771caa0fb37520a`; Automation 2 → Automation 3 handoff `business_brain/handoffs/2026-11-24-AUTOMATION2-TO-AUTOMATION3.md` commit `063e692fc5c9ab6831fc217208d586f12b501377`; this cumulative log update. PR #160 remains OPEN / DRAFT / NOT MERGED.  
+**Evidence:** roadmap `business_brain/UNIFIED_EXECUTION_ROADMAP.md` commit `d0c02c0d7e31066dfbbe1c5f3779adf350c38a0f`; Automation 2 → Automation 3 handoff `business_brain/handoffs/2026-11-24-AUTOMATION2-TO-AUTOMATION3.md` commit `20975458f8e74e9578678d3e2e0b8e934b086710`; this cumulative log update. PR #160 remains OPEN / DRAFT / NOT MERGED.  
 **Acceptance: PASS** for the dated roadmap and handoff artifacts; no merge, public publication, external message, payment, token issuance or production Wix write occurred.  
 **Next action:** Automation 3 evaluates the evidence handoff; next run prioritizes current-day handoff freshness, PR #150 reconciliation, agent runtime isolation, the Robotics metadata approval gate, and stale revenue discovery.
 
@@ -236,21 +236,30 @@ Agent_Test_Commit=b0ca0205e3146ad44f1f435114f7018b69feb4de
 Website_Draft_Path=business_brain/website-drafts/2026-11-24-ROBOTICS-COLLABORATION-METADATA-PATCH.md
 Website_Draft_Commit=ae7a50ca82bfe4d0686e8bf251b1a7b778ca611f
 Roadmap_Path=business_brain/UNIFIED_EXECUTION_ROADMAP.md
-Roadmap_Commit=7fb2b0358c39345bf87dac8f3771caa0fb37520a
+Roadmap_Commit=d0c02c0d7e31066dfbbe1c5f3779adf350c38a0f
 Handoff_Path=business_brain/handoffs/2026-11-24-AUTOMATION2-TO-AUTOMATION3.md
-Handoff_Commit=063e692fc5c9ab6831fc217208d586f12b501377
-Pre_Log_Branch_Head=063e692fc5c9ab6831fc217208d586f12b501377
+Handoff_Commit=20975458f8e74e9578678d3e2e0b8e934b086710
+Pre_Log_Branch_Head=20975458f8e74e9578678d3e2e0b8e934b086710
 Run_Log_Path=business_brain/logs/AI231-UNIFIED-EXECUTION-LOG.md
 PR=160
 Automation2_Run_ID=e187c30e-ec68-8329-b0cb-c8ae12da6ee3
 Automation3_Last_Completed_Run_ID=9cce4f85-0394-832d-998a-be8287e53080
 Supervisor_Run_ID=ad703ed3-d830-832a-a20b-d601d3e1020c
 Agent_CI_Run=45342942417
+Agent_CI_Job=138270633398
+Agent_CI_Revalidation_Run=45344004180
+Agent_CI_Revalidation_Job=138274073921
+Repository_Integrity_Run=45344004090
+Repository_Integrity_Job=138274073542
+CodeQL_Run=45344004106
 Ledger_CI_Run=45001947753
+Ledger_CI_Job=137145211088
 Research_CI_Run=45333684412
+Research_CI_Job=138240627681
 Ecosystem_CI_Run=45333684351
+Ecosystem_CI_Job=138240658219
 ```
 
-**SHA-256:** `b63a3b85587c0850f4767dd705d96d502d02fe1dafbecde1ae36a151bae38475`  
+**SHA-256:** `11ff7171b4bca3c674740165c91f43a58e810d82db5f4e5cb7c83a012e0ff825`  
 **Integrity result:** PASS — SHA-256 computed for the exact payload above. This is an integrity digest, not a detached digital signature.  
 **Contract status:** NOT SEALED. No Git tag or tag push was created; no contract seal is claimed.
