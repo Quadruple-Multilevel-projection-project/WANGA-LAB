@@ -169,3 +169,108 @@ The connector returned no readable content and no raw bytes in this environment.
 
 ---
 **Status at creation:** architecture/function contracts recorded; calendar work block created in Google and Outlook; daily automation creation blocked by the 3-active-task limit; ZIP extraction blocked because the found file is old and its bytes were not accessible.
+
+
+## 9. Graph / Intersection Orchestrator — extracted model and boundaries
+
+### 9.1 What the current model files actually say
+
+The three files under `neural_wikipedia/` currently define different responsibilities:
+
+| File | Declared role | Declared contents | Current boundary |
+|---|---|---|---|
+| `index_model.json` | Index | Channels: up_down, width, depth; temporal: current, previous, next; 231 gates as 3D directional parameters + planetary coordinates | Index representation; it does not yet define graph intersections or execution routing |
+| `encyclopedia_model.json` | Encyclopedia (Logic Wikipedia) | Locked logic rules; day axis = Talmud logic; night axis = Sefer HaHiggayon language logic | Logic-rule store; no claim that it is the graph runtime |
+| `language_model.json` | Language Model | Same three spatial channels and three temporal positions; formatted output only | Readout/output representation, not the internal graph or reasoning engine |
+
+The current model files do **not** yet specify a complete map-intersection schema, a map-version ledger, a semantic-network coordinate contract, or an execution-routing contract. These remain implementation requirements, not verified capabilities.
+
+### 9.2 Three linked knowledge planes
+
+The target structure is three linked but non-collapsed Wikipedia planes:
+
+1. **Logic of structure** — rules, logical types, constraints, permitted transitions, contradiction and validation status.
+2. **Language** — letters, letter combinations, language units, terms and their structural relations.
+3. **Sentences and words** — source text, exact quotations, sentence decomposition, word-level units, claims, premises and reconstruction paths.
+
+A single source page can project into all three planes, but each extracted object retains its own ID, source locator, version and status. A relation between planes must be typed and evidenced; similarity alone is not a relation.
+
+### 9.3 Graph is both map and orchestration surface — with a separate execution contract
+
+The graph has two distinct responsibilities:
+
+- **Representation:** nodes, typed edges, source lineage, version history, index keys and (when defined) coordinate fields.
+- **Orchestration:** selecting the next processor/function from an explicit transition contract.
+
+A visual edge alone must not trigger an action. For an edge to route work, it must carry at least: `from_id`, `to_id`, `relation_type`, `processor_id`, `function_id`, `preconditions`, `required_inputs`, `expected_output`, `validation_gate`, `permission_scope`, `source_refs`, `version` and `status`.
+
+The current Registry map records contain source record IDs, candidate relation edges and Excel links. The relation types include `supports`, `contradicts`, `refines`, `references` and `unresolved`. Those are evidence/knowledge relations; they are not yet executable routing edges. Therefore the current graph is a source-grounded candidate map, not yet a fully functioning orchestrator.
+
+### 9.4 Graph / Intersection Orchestrator flow
+
+```mermaid
+flowchart TD
+  S[Source page / workbook / repository] --> X[Source extraction + provenance]
+  X --> L[Three knowledge planes]
+  L --> R[Typed relation builder]
+  R --> G[Versioned graph snapshot]
+  G --> I[Intersection analyzer]
+  I --> D[Diff: new / changed / removed]
+  D --> IDX[Reverse-link + intersection index]
+  IDX --> O[Graph Orchestrator]
+  O -->|validated function contract| P[Existing processor app]
+  P --> V[Validation + evidence receipt]
+  V --> G
+  O -->|candidate only| B[Future app blueprint]
+  B --> H[Human approval gate]
+  H --> DEP[Deployment only after approval]
+  IDX --> T[Language readout]
+```
+
+The graph does not create a new app merely because two nodes intersect. It first creates an **intersection record**. A separate blueprint function may propose an app/processor only when the intersection exposes a real missing capability and has a source-backed contract. Deployment remains approval-gated.
+
+### 9.5 Measurement contract
+
+Every run records a timestamp, timezone, source/version fingerprint, run ID, map ID, counts and a diff against the prior snapshot.
+
+| Metric | Measurement rule | What it does not prove |
+|---|---|---|
+| Map inventory | Count of readable, versioned maps | Completeness of the source corpus |
+| Node inventory | Unique stable source/node IDs | Semantic correctness |
+| Edge inventory | Unique typed relation keys | Truth of a proposed relation |
+| Provenance coverage | Share of nodes/edges with resolvable source locator and exact evidence | Validity of the interpretation |
+| Index integrity | Unique IDs, resolvable endpoints, reverse-link consistency | Correctness of the underlying logic |
+| Structural intersections | Exact shared record IDs, canonical relation keys or workbook-cell IDs across map pairs | Semantic or geometric intersection |
+| Map delta | New, changed and removed map/intersection IDs by fingerprint | Whether a change is an improvement |
+| Unresolved load | Count of unresolved relations, missing sources and blocked gates | A failure rate unless a denominator is defined |
+| Runtime | Duration, success/failure, last successful snapshot and staleness | Logical accuracy |
+| Coordinate integrity | Missing/duplicate coordinate fields and coordinate-schema version | Physical meaning of the coordinates |
+
+Do not publish an “accuracy” percentage without an independently labeled reference set. Do not infer a geometric intersection from coordinate proximity until the coordinate system, units, reference frame and transformation rules are defined.
+
+### 9.6 Proposed cadence and current deployment status
+
+- **Every two hours, Asia/Jerusalem:** deterministic, read-only map snapshot; exact-ID intersections; fingerprint comparison; new/changed/removed map and intersection ledger.
+- **19:00, Asia/Jerusalem:** daily consolidation of the two-hour snapshots into the daily intersection map and difference report.
+- **No automatic AI enrichment or agent dispatch in the scheduled audit.** Changed items become review candidates; agent work and app deployment require their own permission gates.
+
+The Registry currently has an existing `logic-auto-sync` cron at `*/15 * * * *`. It is a GitHub inbox sync, not the requested map-intersection audit. The Logic Factory Hub has no cron configured. AppDeploy's cron contract supports five-field schedules, including a two-hour interval, but the attempted Registry update was rejected with `FREE_DEPLOYMENT_WINDOW_EXPIRED`; therefore the two-hour audit and 19:00 consolidation are **specified, not active**. No schedule was silently substituted.
+
+### 9.7 Airtable function contracts added
+
+The Processor Functions table now contains three new specification records:
+
+- **F21 — Map Intersection Analyzer** (`SPECIFIED`): exact-ID intersections across maps.
+- **F22 — Two-Hour Snapshot and Daily Map Difference Compiler** (`SPECIFIED`): periodic snapshots and daily deltas.
+- **F23 — Intersection-to-App Blueprint Gate** (`SPECIFIED`): proposes a future processor/app blueprint only after an intersection is validated; does not deploy it.
+
+These are function specifications, not claims of deployed code.
+
+### 9.8 Agent email infrastructure — current evidence
+
+AgentMail currently exposes three inboxes: `sy-neuro-01`, `sy-neuro-02` and `sy-neuro-03`, all assigned to the Map Link Provenance project. There is no evidence of a provisioned 20,000-agent mail system.
+
+Before provisioning at that scale, the architecture must distinguish between 20,000 independent mailboxes and 20,000 agent identities routed through a shared mail gateway. The latter can preserve per-agent identity, routing and audit without creating 20,000 separate mailbox objects. No bulk mailbox provisioning has been performed.
+
+---
+**Status of this addition:** source-derived model extraction and function contracts recorded; two-hour cadence specified but not deployed; semantic/geometric intersection remains unverified; 20,000-agent mail infrastructure not provisioned.
