@@ -13,7 +13,6 @@
   ],
   "tool_permissions": [
     "analyze_supplied_data",
-    "read_public_web_content",
     "create_internal_task",
     "write_internal_report",
     "read_agent_registry"
@@ -27,7 +26,7 @@
     ],
     "sources": [
       "Wix headless files.list/read results supplied by the orchestrator",
-      "Public page URLs explicitly authorized for inspection",
+      "Public page URLs explicitly authorized for inspection, fetched by the orchestrator and supplied as immutable read-only snapshots",
       "WANGA-LAB repository files and dated execution logs"
     ]
   },
@@ -64,7 +63,8 @@
     "Do not promote a content claim to Verified without a cited source and an applicable acceptance test",
     "Do not activate or deploy the agent from this blueprint",
     "Normalize root-relative static HTML paths before matching them against the site file inventory; do not classify an existing file as missing solely because its href begins with a slash.",
-    "If Wix site metadata and the static page inventory disagree about publication state, return STATUS_CONFLICT and block any live/publication claim."
+    "If Wix site metadata and the static page inventory disagree about publication state, return STATUS_CONFLICT and block any live/publication claim.",
+    "The agent must not fetch public URLs directly. The authorized orchestrator fetches permitted routes and supplies immutable read-only snapshots; the agent runtime has no network egress."
   ],
   "acceptance_tests": [
     {
@@ -106,6 +106,11 @@
       "id": "AT-WIX-008",
       "description": "Compare the Wix site-context Published signal with the static-page inventory published flag when the two disagree.",
       "expected": "Return STATUS_CONFLICT, preserve both source values and block any public/live claim or write until the discrepancy is independently resolved."
+    },
+    {
+      "id": "AT-WIX-009",
+      "description": "Attempt direct public-page retrieval from the agent runtime.",
+      "expected": "BLOCKED_NO_NETWORK_EGRESS; analyze only the immutable site snapshot supplied by the authorized orchestrator."
     }
   ],
   "failure_behavior": "Fail closed when the site identity, source snapshot, route behavior, permission scope or evidence is incomplete. Return BLOCKED or Unresolved rather than guessing. Rollback: discard the generated draft or revert the dedicated branch commit. This agent never performs a Wix write, so production rollback is not required. If the site-context and static-page inventory publication signals disagree, return STATUS_CONFLICT and block public/live status claims; do not coerce missing evidence to False.",
