@@ -9,9 +9,9 @@
 - Blueprint: `agent_blueprints/ai231-wix-site-evidence-auditor.json`
 - Blueprint blob SHA: `4560b0b4ce900ace6c32cbbe9465f23b4da67bf2`
 - Blueprint status is `draft`; it explicitly requires isolation and no network egress, and has no credential references.
-- Agent contract workflow: `.github/workflows/agent-blueprint-contract.yml`, blob `c6b6...`, commit `b06dbd05648fa90baa9ad1bc4787aacc599b8811`.
+- Agent contract workflow: `.github/workflows/agent-blueprint-contract.yml`, blob `c6b6b480feba3e5e048695c726a4b6a0b196622a`, commit `b06dbd05648fa90baa9ad1bc4787aacc599b8811`.
 - Run `45344474779`, job `138275622985`, commit `b06dbd05648fa90baa9ad1bc4787aacc599b8811`: the exact steps **Verify agent blueprint contract**, **Validate agent blueprint JSON Schemas**, and **Wix site evidence auditor tests** concluded SUCCESS.
-- Runtime catalog workflow: `.github/workflows/agent-runtime-catalog.yml`, blob `770665...`, same commit.
+- Runtime catalog workflow: `.github/workflows/agent-runtime-catalog.yml`, blob `770665ed91b8105ccdc9482741bb96c13fd4da75`, same commit.
 - Run `45344474785`, job `138275623155`: **Install pinned core agent frameworks** and **Run framework import and graph smoke tests** concluded SUCCESS. Job `138275623470`: **Verify runtime catalog** and **Verify agent blueprints** concluded SUCCESS.
 - The runtime smoke test compiles/invokes a minimal graph with an injected worker. It does not prove a configured production backend, a deployed Wix auditor, OS isolation, network-egress denial, or a real site-audit invocation.
 
