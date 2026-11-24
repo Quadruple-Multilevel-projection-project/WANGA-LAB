@@ -1,0 +1,77 @@
+{
+  "schema_version": "wanga-formal-benchmark-report/1.0",
+  "status": "PASS",
+  "suite_id": "wanga-propositional-smoke-v1",
+  "case_count": 5,
+  "passed": 5,
+  "failed": 0,
+  "cases": [
+    {
+      "case_id": "MP-001",
+      "passed": true,
+      "expected_status": "ENTAILED_WITHIN_ENCODING",
+      "actual_status": "ENTAILED_WITHIN_ENCODING",
+      "premise_consistency": "SAT",
+      "entailment": "ENTAILED_WITHIN_PROPOSITIONAL_ENCODING",
+      "countermodel": null,
+      "input_sha256": "2904abb73ad6fbf97193bd1fc0cb6d11ae35c865e8b40e14d682f02731d56783",
+      "verification_status": "NOT_YET_VERIFIED"
+    },
+    {
+      "case_id": "NENT-001",
+      "passed": true,
+      "expected_status": "NOT_ENTAILED_BY_ENCODING",
+      "actual_status": "NOT_ENTAILED_BY_ENCODING",
+      "premise_consistency": "SAT",
+      "entailment": "COUNTERMODEL_FOUND",
+      "countermodel": {
+        "P": false,
+        "Q": false
+      },
+      "input_sha256": "45afb5f3aec18999a2a38e4e2ab40083b7662c2bfba2c6f762ba4d6a8d796f13",
+      "verification_status": "NOT_YET_VERIFIED"
+    },
+    {
+      "case_id": "INC-001",
+      "passed": true,
+      "expected_status": "INCONSISTENT_PREMISES",
+      "actual_status": "INCONSISTENT_PREMISES",
+      "premise_consistency": "UNSAT",
+      "entailment": "NOT_EVALUATED",
+      "countermodel": null,
+      "input_sha256": "3db1c908633ad1066c4d70d6478dc2a33a9636c8753d5d983d09b090abe6a806",
+      "verification_status": "NOT_YET_VERIFIED"
+    },
+    {
+      "case_id": "TAUT-001",
+      "passed": true,
+      "expected_status": "ENTAILED_WITHIN_ENCODING",
+      "actual_status": "ENTAILED_WITHIN_ENCODING",
+      "premise_consistency": "SAT",
+      "entailment": "ENTAILED_WITHIN_PROPOSITIONAL_ENCODING",
+      "countermodel": null,
+      "input_sha256": "7e0506629e7722c9deb7a279d2e05552aa0d7f4e40e9b8b33160da03bc445737",
+      "verification_status": "NOT_YET_VERIFIED"
+    },
+    {
+      "case_id": "BOUND-001",
+      "passed": true,
+      "expected_status": "NOT_ENTAILED_BY_ENCODING",
+      "actual_status": "NOT_ENTAILED_BY_ENCODING",
+      "premise_consistency": "SAT",
+      "entailment": "COUNTERMODEL_FOUND",
+      "countermodel": {
+        "P": false,
+        "Q": false,
+        "R": true
+      },
+      "input_sha256": "032f67d03995da80e2d038c371b2cebfcc3ae1b6ed90a88b2da669aa058b02e7",
+      "verification_status": "NOT_YET_VERIFIED"
+    }
+  ],
+  "scope": "SYNTHETIC_PROPOSITIONAL_FIXTURES_ONLY",
+  "natural_language_truth_verified": false,
+  "epistemic_status_promotion": "FORBIDDEN",
+  "verification_status": "NOT_YET_VERIFIED",
+  "next_gate": "Expand to source-grounded cases and independent holdout before using this suite for candidate release."
+}

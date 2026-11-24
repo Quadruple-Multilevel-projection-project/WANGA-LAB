@@ -1,0 +1,69 @@
+{
+  "schema_version": "wanga-source-grounded-benchmark-report/1.0",
+  "status": "BLOCKED_INSUFFICIENT_REVIEWED_CASES",
+  "dataset_id": "WANGA-LOGIC-SOURCE-GROUNDED-V1",
+  "dataset_version": "0.1.0",
+  "manifest_sha256": "8d1a76bfcecc0dbe87af32edd2bdff76e8386e8007bec4be97674fae4f263bde",
+  "source_registry_sha256": "3088e428358108293d5397ba7a15ab6c898ac791a2a83153c3a22ea0fe43018f",
+  "case_schema_sha256": "3d26fb77f6c2b69082fbc600445180846bb03635b901ddbc57f06d6755e01359",
+  "case_count": 0,
+  "reviewed_executable_case_count": 0,
+  "eligible_reviewed_case_count": 0,
+  "eligible_executed_case_count": 0,
+  "passed_cases": 0,
+  "failed_cases": 0,
+  "eligible_passed_cases": 0,
+  "eligible_failed_cases": 0,
+  "risk_case_counts": {
+    "BOUNDARY": 0,
+    "COUNTEREXAMPLE": 0,
+    "NEGATIVE": 0
+  },
+  "source_class_count": 0,
+  "source_classes": [],
+  "reviewed_splits": [],
+  "metrics": {
+    "source_coverage": null,
+    "evidence_coverage": null,
+    "benchmark_accuracy": null,
+    "false_accept_rate": null,
+    "counterexample_escape_rate": null,
+    "holdout_score": null
+  },
+  "metric_gates": {
+    "source_coverage": false,
+    "evidence_coverage": false,
+    "benchmark_accuracy": false,
+    "false_accept_rate": false,
+    "counterexample_escape_rate": false,
+    "holdout_score": false
+  },
+  "metric_thresholds": {
+    "min_source_coverage": 0.95,
+    "min_evidence_coverage": 0.95,
+    "min_benchmark_accuracy": 0.9,
+    "max_counterexample_rate": 0.02,
+    "max_false_accept_rate": 0.05,
+    "max_counterexample_escape_rate": 0.02,
+    "min_holdout_score": 0.85,
+    "max_compute_seconds": 30
+  },
+  "threshold_status": "INITIAL_CONFIG_NOT_EMPIRICALLY_CALIBRATED",
+  "readiness_requirements": {
+    "minimum_reviewed_risk_cases": false,
+    "required_risk_types_present": false,
+    "required_splits_present": false,
+    "minimum_source_classes_present": false,
+    "at_least_one_eligible_case_executed": false,
+    "all_eligible_expected_results_match": false,
+    "metric_gates_pass": false,
+    "no_case_errors": true
+  },
+  "minimum_risk_cases": 30,
+  "case_results": [],
+  "elapsed_seconds": 0.020084,
+  "false_accept_rate_semantics": "Known eligible risk cases observed as ENTAILED_WITHIN_ENCODING divided by eligible executed risk cases; null when no such cases exist.",
+  "counterexample_escape_rate_semantics": "Eligible counterexample cases observed as ENTAILED_WITHIN_ENCODING divided by eligible executed counterexample cases; null when none exist.",
+  "semantic_status": "NOT_YET_VERIFIED",
+  "truth_boundary": "Results validate only the explicitly reviewed propositional encoding; source references and mapping review do not prove unrestricted natural-language truth. Synthetic/test-fixture sources are excluded from readiness metrics."
+}

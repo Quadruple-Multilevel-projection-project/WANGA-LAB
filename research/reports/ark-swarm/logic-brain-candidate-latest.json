@@ -1,0 +1,252 @@
+{
+  "schema_version": "wanga-logic-brain-candidate/1.0",
+  "model_name": "WANGA Source-Grounded Logical Brain Candidate",
+  "candidate_id": "LT-c1918183cff25c53",
+  "status": "INTERNAL_CANDIDATE_NOT_RELEASED",
+  "task_sha256": "10f8eed4fe2d9a9a5faa151608863ed2668a07f7987aafb0bcd93d39155b9797",
+  "package_hash": "e462a18447565beea93eca29eebaea68a66d8ea10134debc44e43536bc06b984",
+  "logic_package": {
+    "package_id": "LT-c1918183cff25c53",
+    "version": "0.1",
+    "status": "INTERNAL_CANDIDATE_NOT_RELEASED",
+    "task": "Build a source-grounded fractal logic model by connecting evidence provenance, logical primitives, typed relations, recursive composition, verification, bounded agents, and model readiness. Select existing logic assets, assemble a candidate, keep source lineage, and reject unverified status promotion.",
+    "task_sha256": "10f8eed4fe2d9a9a5faa151608863ed2668a07f7987aafb0bcd93d39155b9797",
+    "member_articles": [
+      {
+        "id": "multi-scale-fractal-map",
+        "title": "Multi-scale logical-fractal map",
+        "kind": "WANGA_RESEARCH_PROPOSAL",
+        "status": "MAP_SCHEMA_CANDIDATE_NOT_SEMANTIC_ENTAILMENT",
+        "definition": "A versioned map connecting logical units and composed fragments across scales, with stable IDs, typed edges, parent links, provenance, constraints, counterexamples and status metadata.",
+        "source_refs": [
+          "SRC-WANGA-FRACTAL-COMPOSER",
+          "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+        ],
+        "relation_refs": [
+          "fractal-invariant",
+          "logic-wiki",
+          "logical-fractal",
+          "logical-particle",
+          "recursive-composition"
+        ]
+      },
+      {
+        "id": "fractal-invariant",
+        "title": "Fractal composition invariant",
+        "kind": "WANGA_RESEARCH_PROPOSAL",
+        "status": "CONTRACT_CANDIDATE_REQUIRES_BENCHMARK",
+        "definition": "A condition intended to remain true when validated logical fragments are composed at a higher scale, such as typed interface compatibility, stable parent IDs, source lineage, and preserved constraints.",
+        "source_refs": [
+          "SRC-WANGA-FRACTAL-COMPOSER",
+          "SRC-WANGA-READINESS-GATE"
+        ],
+        "relation_refs": [
+          "evidence-provenance",
+          "fractal-composition",
+          "logical-fractal",
+          "typed-logic-fragment"
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "SRC-WANGA-FRACTAL-COMPOSER",
+        "title": "Typed Fractal Fragment Composer",
+        "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_fractal/fragment_composer.py",
+        "type": "IMPLEMENTATION_SOURCE",
+        "status": "IMPLEMENTATION_SOURCE",
+        "note": "Composes typed fragments as source-backed candidates; validates interfaces and preserves parent/source lineage."
+      },
+      {
+        "id": "SRC-WANGA-LOGIC-FRACTAL-PLAN",
+        "title": "Logic Fractal Model Program V1",
+        "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/feature/logic-fractal-wiki-research-v1/research/LOGIC_FRACTAL_PROGRAM_V1.md",
+        "type": "PROJECT_PROPOSAL",
+        "status": "DRAFT_ON_RESEARCH_BRANCH",
+        "note": "Provisional proposal; readiness thresholds are not empirically validated."
+      },
+      {
+        "id": "SRC-WANGA-READINESS-GATE",
+        "title": "First Model Alpha Readiness Gate",
+        "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/readiness_gate.json",
+        "type": "PROJECT_CONTRACT",
+        "status": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+        "note": "Configured release criteria are project thresholds and are not empirically validated universal cutoffs."
+      }
+    ],
+    "composition_candidate": {
+      "candidate_id": "LF-041fc83b906782",
+      "member_article_ids": [
+        "multi-scale-fractal-map",
+        "fractal-invariant"
+      ],
+      "member_titles": [
+        "Multi-scale logical-fractal map",
+        "Fractal composition invariant"
+      ],
+      "source_refs": [
+        "SRC-WANGA-FRACTAL-COMPOSER",
+        "SRC-WANGA-LOGIC-FRACTAL-PLAN",
+        "SRC-WANGA-READINESS-GATE"
+      ],
+      "source_count": 3,
+      "composition_rule_id": "COMPOSE-CHAIN",
+      "member_lexical_scores": [
+        0.41431,
+        0.310862
+      ],
+      "selection_score": 0.377586,
+      "invariants_checked": {
+        "all_members_have_sources": true,
+        "all_edges_exist_in_catalog": true,
+        "stable_membership_hash": true
+      },
+      "status": "INTERNAL_CANDIDATE_NOT_RELEASED",
+      "semantic_entailment": "NOT_ESTABLISHED"
+    },
+    "semantic_status": "NOT_YET_VERIFIED",
+    "model_hash": "c1918183cff25c536ce28d1771877bd0f92ee8246b113ee8409639f9b95e64d0",
+    "boundary": "This is a selected research package candidate, not an executable proof or released model."
+  },
+  "formalization_queue_item": {
+    "schema_version": "wanga-formalization-queue-item/1.0",
+    "queue_item_id": "FORM-085788abb132f6bb",
+    "candidate_package_id": "LT-c1918183cff25c53",
+    "candidate_package_version": "0.1",
+    "status": "READY_FOR_FORMALIZATION",
+    "candidate_claims": [
+      {
+        "claim_ref": "multi-scale-fractal-map",
+        "surface_definition": "A versioned map connecting logical units and composed fragments across scales, with stable IDs, typed edges, parent links, provenance, constraints, counterexamples and status metadata.",
+        "source_refs": [
+          "SRC-WANGA-FRACTAL-COMPOSER",
+          "SRC-WANGA-LOGIC-FRACTAL-PLAN"
+        ],
+        "source_status": "RESOLVED",
+        "formalization_status": "NOT_FORMALIZED"
+      },
+      {
+        "claim_ref": "fractal-invariant",
+        "surface_definition": "A condition intended to remain true when validated logical fragments are composed at a higher scale, such as typed interface compatibility, stable parent IDs, source lineage, and preserved constraints.",
+        "source_refs": [
+          "SRC-WANGA-FRACTAL-COMPOSER",
+          "SRC-WANGA-READINESS-GATE"
+        ],
+        "source_status": "RESOLVED",
+        "formalization_status": "NOT_FORMALIZED"
+      }
+    ],
+    "source_ids": [
+      "SRC-WANGA-FRACTAL-COMPOSER",
+      "SRC-WANGA-LOGIC-FRACTAL-PLAN",
+      "SRC-WANGA-READINESS-GATE"
+    ],
+    "unresolved_sources": [],
+    "missing_formal_fields": [
+      "logic_fragment",
+      "variable_declarations",
+      "formal_premises",
+      "formal_conclusion",
+      "assumption_scope",
+      "counterexample_suite",
+      "solver_result"
+    ],
+    "solver_execution_status": "NOT_RUN_NO_FORMAL_AST",
+    "formal_fragment_schema": "wanga-formal-fragment/1.0",
+    "semantic_status": "NOT_YET_VERIFIED",
+    "automatic_semantic_conversion": false,
+    "boundary": "Definitions are kept as source-linked surface text. No AST, premise, conclusion, proof, or entailment has been invented. A reviewer or a configured proposer must draft a formal representation that passes the formal-fragment contract.",
+    "queue_item_sha256": "c205a25253675e198ce278abcdd89c32482a98d10c47dd590eee77d3d9c0a854"
+  },
+  "typed_formal_benchmark_summary": {
+    "status": "PASS",
+    "case_count": 7,
+    "passed_cases": 7,
+    "failed_cases": 0,
+    "verification_status": "NOT_YET_VERIFIED"
+  },
+  "composition_graph_summary": {
+    "status": "CANDIDATE_MAP_BUILT_NOT_RELEASED",
+    "node_count": 28,
+    "edge_count": 111,
+    "candidate_composition_count": 523,
+    "shared_source_composition_count": 8,
+    "source_boundary": "Edges are based on the editorial related-entry map in the catalog, not independently proven semantic entailment."
+  },
+  "typed_fixture_probe": {
+    "probe_type": "SYNTHETIC_TYPED_FRAGMENT_COMPOSITION",
+    "passed": true,
+    "checks": {
+      "all_fixture_fragments_validate": true,
+      "two_scales_composed": true,
+      "all_source_ids_preserved": true,
+      "stable_replay_hash": true,
+      "semantic_equivalence_not_established": true,
+      "claim_status_not_promoted": true
+    },
+    "level_one_hash": "da2f66873244bb05801110b843755095b450d980b5c5e004a64b981a6c46c4b0",
+    "level_two_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "source_ids_preserved": [
+      "SRC-OBS-001",
+      "SRC-REL-001",
+      "SRC-TEST-001"
+    ],
+    "semantic_status": "NOT_YET_VERIFIED",
+    "limitation": "Fixture-only interface test. It is not evidence that the selected real-catalog package is semantically valid."
+  },
+  "provenance_gate": {
+    "agent_id": "source-provenance-gate",
+    "status": "PASS",
+    "passed": true,
+    "checks": {
+      "every_member_has_resolved_sources": true,
+      "package_source_union_preserved": true
+    },
+    "details": {
+      "provenance_errors": [],
+      "source_count": 3
+    }
+  },
+  "mirror_review": {
+    "passed": true,
+    "status": "COUNTER_READING_CANDIDATE",
+    "original_member_ids": [
+      "multi-scale-fractal-map",
+      "fractal-invariant"
+    ],
+    "reversed_order_candidate": [
+      "fractal-invariant",
+      "multi-scale-fractal-map"
+    ],
+    "source_refs": [
+      "SRC-WANGA-FRACTAL-COMPOSER",
+      "SRC-WANGA-LOGIC-FRACTAL-PLAN",
+      "SRC-WANGA-READINESS-GATE"
+    ],
+    "checks": {
+      "candidate_has_two_or_more_members": true,
+      "mirror_preserves_membership": true,
+      "source_lineage_preserved": true,
+      "mirror_is_not_declared_truth": true
+    },
+    "meaning_boundary": "Reversed order is a counter-reading candidate only; it does not assert inverse implication or semantic equivalence.",
+    "semantic_status": "NOT_YET_VERIFIED"
+  },
+  "formal_benchmark_summary": {
+    "status": "PASS",
+    "case_count": 5,
+    "passed": 5,
+    "failed": 0,
+    "verification_status": "NOT_YET_VERIFIED"
+  },
+  "semantic_status": "NOT_YET_VERIFIED",
+  "release_gate": {
+    "automatically_released": false,
+    "requires_real_source_review": true,
+    "requires_formalization_queue_completion": true,
+    "requires_semantic_benchmarks": true,
+    "requires_counterexamples": true,
+    "requires_independent_review": true,
+    "decision": "BLOCKED_INTERNAL_CANDIDATE_ONLY"
+  }
+}

@@ -1,0 +1,652 @@
+{
+  "date": "2026-11-24",
+  "run_status": "PASS",
+  "research_scope": "repository-visible catalog and explicitly supplied conversation exports",
+  "access_boundary": "No automatic access to unavailable private ChatGPT history. Add an explicit export through the private intake utility, review/redact, then commit only approved derivatives.",
+  "catalog_hash": "3088e428358108293d5397ba7a15ab6c898ac791a2a83153c3a22ea0fe43018f",
+  "agent_count": 12,
+  "agents": [
+    {
+      "agent": "conversation-collector",
+      "status": "COMPLETED_WITH_NO_EXPORTS",
+      "record_count": 0,
+      "errors": [],
+      "boundary": "Only repository-visible exports are scanned; private chat history is not fetched automatically."
+    },
+    {
+      "agent": "source-registrar",
+      "status": "PASS",
+      "source_records": 17,
+      "source_classes": 11,
+      "dangling_source_refs": [],
+      "duplicate_source_ids": 0
+    },
+    {
+      "agent": "logic-extractor",
+      "status": "REGISTERED_SOURCE_SPANS_ONLY",
+      "conversation_exports": 0,
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    {
+      "agent": "logic-normalizer",
+      "status": "COMPLETED",
+      "article_nodes": 28,
+      "declared_editorial_edges": 111,
+      "dangling_relations": [],
+      "semantic_status": "EDITORIAL_STRUCTURAL_MAP_ONLY"
+    },
+    {
+      "agent": "fractal-pattern-miner",
+      "status": "CANDIDATE_MAP_BUILT",
+      "taxonomy_levels": 4,
+      "catalog_hash": "3088e428358108293d5397ba7a15ab6c898ac791a2a83153c3a22ea0fe43018f",
+      "candidate_substructures": 523,
+      "semantic_status": "STRUCTURAL_CANDIDATES"
+    },
+    {
+      "agent": "fractal-composer",
+      "status": "COMPLETED",
+      "candidate_compositions": 523,
+      "active_contract_count": 2,
+      "status_contract": "CANDIDATE_COMPOSITION_NOT_SEMANTICALLY_VERIFIED"
+    },
+    {
+      "agent": "mirror-reviewer",
+      "status": "REVIEW_REQUIRED",
+      "reciprocal_edge_candidates": [
+        {
+          "pair": [
+            "ark-swarm-logic-trader",
+            "autonomous-research-agent"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "ark-swarm-logic-trader",
+            "logical-diamond"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "ark-swarm-logic-trader",
+            "logical-fractal"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "autonomous-research-agent",
+            "ark-swarm-logic-trader"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "autonomous-research-agent",
+            "conversation-evidence-unit"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "autonomous-research-agent",
+            "longitudinal-research-cycle"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "conversation-evidence-unit",
+            "autonomous-research-agent"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "conversation-evidence-unit",
+            "longitudinal-research-cycle"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "deduction",
+            "evidence-provenance"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "deduction",
+            "logic"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "evidence-provenance",
+            "deduction"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "evidence-provenance",
+            "logic-wiki"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "evidence-provenance",
+            "source-first-contract"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "first-order-logic",
+            "formal-language"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "first-order-logic",
+            "logic"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "first-order-logic",
+            "second-order-logic"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "formal-language",
+            "first-order-logic"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "formal-language",
+            "lnl"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "fractal-composition",
+            "logical-diamond"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "fractal-composition",
+            "logical-fractal"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "fractal-composition",
+            "logical-primitive"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "fractal-composition",
+            "logical-relation"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "lnl",
+            "formal-language"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "lnl",
+            "source-first-contract"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logic",
+            "deduction"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logic",
+            "first-order-logic"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logic-wiki",
+            "evidence-provenance"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-diamond",
+            "ark-swarm-logic-trader"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-diamond",
+            "fractal-composition"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-diamond",
+            "logical-fractal"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-fractal",
+            "ark-swarm-logic-trader"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-fractal",
+            "fractal-composition"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-fractal",
+            "logical-diamond"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-fractal",
+            "logical-primitive"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-fractal",
+            "source-first-contract"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-particle",
+            "multi-scale-fractal-map"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-primitive",
+            "fractal-composition"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-primitive",
+            "logical-fractal"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-primitive",
+            "logical-relation"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-relation",
+            "fractal-composition"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "logical-relation",
+            "logical-primitive"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "longitudinal-research-cycle",
+            "autonomous-research-agent"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "longitudinal-research-cycle",
+            "conversation-evidence-unit"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "meta-logic",
+            "second-order-logic"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "multi-scale-fractal-map",
+            "logical-particle"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "multi-scale-fractal-map",
+            "recursive-composition"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "recursive-composition",
+            "multi-scale-fractal-map"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "second-order-logic",
+            "first-order-logic"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "second-order-logic",
+            "meta-logic"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "source-first-contract",
+            "evidence-provenance"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "source-first-contract",
+            "lnl"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        },
+        {
+          "pair": [
+            "source-first-contract",
+            "logical-fractal"
+          ],
+          "status": "RECIPROCAL_EDGE_REVIEW_CANDIDATE"
+        }
+      ],
+      "independent_review_count": 0,
+      "note": "Reciprocal links are review candidates, not proof of logical equivalence."
+    },
+    {
+      "agent": "benchmark-evaluator",
+      "status": "BLOCKED_NO_GROUNDED_BENCHMARKS",
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0,
+      "note": "Unit tests validate software contracts; they do not count as semantic ground-truth cases."
+    },
+    {
+      "agent": "readiness-gatekeeper",
+      "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+      "metrics": {
+        "source_records": 17,
+        "source_classes": 11,
+        "logic_units_with_provenance": 28,
+        "composition_rules_with_contracts": 2,
+        "counterexample_cases": 0,
+        "semantic_test_cases": 0,
+        "benchmark_suites": 0,
+        "independent_review_cycles": 0,
+        "unresolved_dangling_source_refs": 0,
+        "unresolved_dangling_relation_refs": 0,
+        "unresolved_duplicate_stable_ids": 0,
+        "critical_core_contradictions": null,
+        "contradiction_inventory_available": false,
+        "deterministic_build": true,
+        "holdout_split_available": false,
+        "mirror_review_available": false
+      },
+      "deficits": [
+        {
+          "gate": "source_records",
+          "actual": 17,
+          "required": 20,
+          "missing": 3
+        },
+        {
+          "gate": "logic_units_with_provenance",
+          "actual": 28,
+          "required": 50,
+          "missing": 22
+        },
+        {
+          "gate": "composition_rules_with_contracts",
+          "actual": 2,
+          "required": 20,
+          "missing": 18
+        },
+        {
+          "gate": "counterexample_cases",
+          "actual": 0,
+          "required": 30,
+          "missing": 30
+        },
+        {
+          "gate": "semantic_test_cases",
+          "actual": 0,
+          "required": 100,
+          "missing": 100
+        },
+        {
+          "gate": "benchmark_suites",
+          "actual": 0,
+          "required": 3,
+          "missing": 3
+        },
+        {
+          "gate": "independent_review_cycles",
+          "actual": 0,
+          "required": 2,
+          "missing": 2
+        },
+        {
+          "gate": "critical_core_contradictions",
+          "actual": "NOT_MEASURED_NO_INVENTORY",
+          "required": 0
+        },
+        {
+          "gate": "holdout_split",
+          "actual": false,
+          "required": true
+        },
+        {
+          "gate": "independent_mirror_review",
+          "actual": false,
+          "required": true
+        }
+      ],
+      "threshold_policy": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED"
+    },
+    {
+      "agent": "wiki-curator",
+      "status": "READY_FOR_REVIEW",
+      "articles": 28,
+      "sources": 17,
+      "taxonomy_status": "EDITORIAL_RELATIONS_NOT_ENTAILMENT"
+    },
+    {
+      "agent": "wix-sync-auditor",
+      "status": "PARTIAL_READ_BACK_REQUIRES_FURTHER_CHECK",
+      "last_sync_date": "2026-11-14",
+      "synced_articles": 28,
+      "live_write_performed_by_this_cycle": false,
+      "note": "GitHub runner has no Wix credentials; connected Wix sync must be performed separately and read back."
+    },
+    {
+      "agent": "report-publisher",
+      "status": "REPORT_GENERATED",
+      "wix_write_performed": false,
+      "note": "This run records status and artifacts; it does not perform a Wix deployment."
+    }
+  ],
+  "source_coverage": {
+    "source_records": 17,
+    "source_classes": 11,
+    "classes": [
+      "IMPLEMENTATION_SOURCE",
+      "LOCAL_ARCHIVE",
+      "OPEN_TEXTBOOK",
+      "PROJECT_CODE",
+      "PROJECT_CONTRACT",
+      "PROJECT_IMPLEMENTATION",
+      "PROJECT_PROPOSAL",
+      "PROJECT_REPOSITORY",
+      "PROJECT_RESEARCH",
+      "REFERENCE_ARTICLE",
+      "USER_PROVIDED_RESEARCH_HYPOTHESIS"
+    ],
+    "article_count": 28,
+    "article_units_with_resolved_sources": 28
+  },
+  "conversation_records_ingested": [],
+  "model_candidate": {
+    "hash": "fa22ea68fe47f88b97ee61f3c572e3b494b356b2500186238b595e208ed7c0cf",
+    "status": "CANDIDATE_NOT_RELEASED",
+    "deterministic_rebuild": true,
+    "candidate_composition_count": 523
+  },
+  "first_model_gate": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+  "readiness_metrics": {
+    "source_records": 17,
+    "source_classes": 11,
+    "logic_units_with_provenance": 28,
+    "composition_rules_with_contracts": 2,
+    "counterexample_cases": 0,
+    "semantic_test_cases": 0,
+    "benchmark_suites": 0,
+    "independent_review_cycles": 0,
+    "unresolved_dangling_source_refs": 0,
+    "unresolved_dangling_relation_refs": 0,
+    "unresolved_duplicate_stable_ids": 0,
+    "critical_core_contradictions": null,
+    "contradiction_inventory_available": false,
+    "deterministic_build": true,
+    "holdout_split_available": false,
+    "mirror_review_available": false
+  },
+  "readiness_deficits": [
+    {
+      "gate": "source_records",
+      "actual": 17,
+      "required": 20,
+      "missing": 3
+    },
+    {
+      "gate": "logic_units_with_provenance",
+      "actual": 28,
+      "required": 50,
+      "missing": 22
+    },
+    {
+      "gate": "composition_rules_with_contracts",
+      "actual": 2,
+      "required": 20,
+      "missing": 18
+    },
+    {
+      "gate": "counterexample_cases",
+      "actual": 0,
+      "required": 30,
+      "missing": 30
+    },
+    {
+      "gate": "semantic_test_cases",
+      "actual": 0,
+      "required": 100,
+      "missing": 100
+    },
+    {
+      "gate": "benchmark_suites",
+      "actual": 0,
+      "required": 3,
+      "missing": 3
+    },
+    {
+      "gate": "independent_review_cycles",
+      "actual": 0,
+      "required": 2,
+      "missing": 2
+    },
+    {
+      "gate": "critical_core_contradictions",
+      "actual": "NOT_MEASURED_NO_INVENTORY",
+      "required": 0
+    },
+    {
+      "gate": "holdout_split",
+      "actual": false,
+      "required": true
+    },
+    {
+      "gate": "independent_mirror_review",
+      "actual": false,
+      "required": true
+    }
+  ],
+  "wix_sync": {
+    "manifest_status": "PUBLISHED_READ_BACK_PARTIAL",
+    "last_sync_date": "2026-11-14",
+    "current_cycle_write_performed": false,
+    "note": "Wix is updated only through the connected authorized tool followed by read-back."
+  },
+  "open_gaps": [
+    "Scheduled jobs cannot fetch private ChatGPT history; they scan only explicit repository-visible export records.",
+    "Semantic benchmark cases, named benchmark suites, a holdout manifest and independent review logs are not yet registered.",
+    "A core-contradiction inventory is required before zero unresolved critical contradictions can be claimed.",
+    "The L0-L3 fractal taxonomy is a research contract; recursive composition semantics remain partly specified and not empirically validated."
+  ]
+}
