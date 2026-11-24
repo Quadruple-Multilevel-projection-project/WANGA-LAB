@@ -20,16 +20,26 @@
   },
   "last_research_cycle": {
     "date": "2026-11-24",
-    "pr_url": null,
+    "pr_number": 167,
+    "pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/167",
     "merge_commit": null,
-    "wix_readback_status": "PENDING_PR_CI_AND_REVIEW",
+    "wix_readback_status": "PASS_READ_BACK_PARTIAL",
     "conversation_archive_coverage": "PARTIAL_ACCESS_ONLY",
     "new_conversation_source_records": 0,
     "first_model_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "candidate_status": "CANDIDATE_NOT_RELEASED",
+    "candidate_model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "candidate_file_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+    "current_cycle_rebuild_status": "PASS_SYNTHETIC_FIXTURES_ONLY",
+    "logic_fractal_workflow_run_id": 45333262038,
+    "logic_fractal_artifact_id": 14892563484,
+    "logic_fractal_artifact_size_bytes": 97982,
+    "ci_status": "PASS",
     "semantic_status": "NOT_YET_VERIFIED",
     "github_report_path": "research/reports/logic-fractal/2026-11-24-cycle.md",
-    "current_cycle_rebuild_status": "PENDING_PR_CI",
-    "note": "Counts were recomputed from current repository files and live connector snapshots. No private Library content or raw conversation text was published."
+    "wix_status_page_bytes": 10527,
+    "wix_site_file_count": 29,
+    "note": "Software and catalog checks passed; semantic readiness remains blocked. The generated readiness report records zero critical contradictions, but the agent cycle states that no contradiction inventory is available, so the conservative status remains NOT_MEASURED."
   },
   "latest_snapshot": {
     "date": "2026-11-24",
@@ -77,11 +87,13 @@
         "dangling_source_refs": 0,
         "dangling_relation_refs": 0,
         "duplicate_stable_ids": 0,
-        "deterministic_build": "PREVIOUS_SYNTHETIC_TEST_ONLY_CURRENT_REBUILD_PENDING",
+        "deterministic_build": true,
         "holdout_split": false,
         "mirror_review": false,
         "critical_core_contradictions": "NOT_MEASURED_NO_INVENTORY"
-      }
+      },
+      "reported_critical_core_contradictions": 0,
+      "critical_core_inventory_available": false
     },
     "ecosystem": {
       "accessible_repositories": 66,
@@ -119,7 +131,72 @@
       "url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/",
       "site_files": 29,
       "read_access": "CONFIRMED",
-      "write_status": "PENDING_PR_CI_AND_REVIEW"
+      "write_status": "PUBLISHED_READ_BACK_PARTIAL",
+      "updated_file": "logic-wiki-research-status.html",
+      "updated_file_bytes": 10527,
+      "exact_readback": true,
+      "full_site_audit": false
+    },
+    "ci": {
+      "status": "PASS",
+      "runs": [
+        {
+          "name": "Logic Fractal Wiki Research",
+          "run_id": 45333262038,
+          "conclusion": "success",
+          "duration_seconds": 30
+        },
+        {
+          "name": "Vitruvius Research Index",
+          "run_id": 45333262026,
+          "conclusion": "success",
+          "duration_seconds": 24
+        },
+        {
+          "name": "CodeQL Advanced",
+          "run_id": 45333261960,
+          "conclusion": "success",
+          "duration_seconds": 56
+        },
+        {
+          "name": "WANGA Ecosystem Agent Sweep",
+          "run_id": 45333261948,
+          "conclusion": "success",
+          "duration_seconds": 15
+        },
+        {
+          "name": "Repository Integrity",
+          "run_id": 45333261936,
+          "conclusion": "success",
+          "duration_seconds": 16
+        }
+      ],
+      "runner_name": "NOT_EXPOSED_BY_CONNECTOR",
+      "logic_fractal_artifact": {
+        "artifact_id": 14892563484,
+        "name": "logic-wiki-research-report",
+        "size_bytes": 97982,
+        "file_count": 54
+      }
+    },
+    "model": {
+      "status": "CANDIDATE_NOT_RELEASED",
+      "scope": "SYNTHETIC_TEST_FIXTURES_NOT_REAL_CONVERSATION_OR_EXTERNAL_FACTS",
+      "model_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+      "candidate_file_sha256": "f098e58f1cb3fac19772e9a55bb4a15590251fd5bcb7863c7d42b3e6b2de05a4",
+      "candidate_file_bytes": 9843,
+      "deterministic_rebuild": true
+    },
+    "benchmarks": {
+      "formal_reasoning_software_cases": 5,
+      "typed_fragment_software_cases": 7,
+      "source_grounded_semantic_cases": 0,
+      "semantic_suites": 0,
+      "counterexamples": 0,
+      "holdout_split": false,
+      "mirror_review": false,
+      "independent_review_cycles": 0,
+      "note": "Formal/software benchmark cases are not counted as semantic ground-truth cases."
     }
   }
 }
