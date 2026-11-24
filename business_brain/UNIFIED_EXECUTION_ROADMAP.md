@@ -218,6 +218,9 @@ This addendum updates existing goals; it does not create a parallel queue or ano
 
 #### AI231-AGENT-FACTORY-WIX-AUDITOR-001 — P1
 - Added subtask **AI231-AGENT-NO-EGRESS-SNAPSHOT-001**.
+- Priority: P1. Owner: Agent Factory. Dependencies: existing Wix auditor blueprint/schema and the exact agent-contract CI workflow; no runtime dependency for the contract-only change.
+- Acceptance: direct public-web permission absent; `network_egress=false`; orchestrator-supplied immutable snapshots specified; AT-WIX-009 present and its dedicated contract test passes.
+- Status: DONE_CONTRACT_AND_CI_VERIFIED; runtime NOT_CONFIGURED. Rollback: revert the two dedicated commits listed below.
 - Source: PR #160 branch `automation/ai231-wix-evidence-auditor-2026-11-20`; blueprint `agent_blueprints/ai231-wix-site-evidence-auditor.json`; test `tests/test_ai231_wix_site_evidence_auditor.py`.
 - Change: removed the direct `read_public_web_content` permission because the blueprint already requires `network_egress=false); public pages must be fetched by the authorized orchestrator and supplied as immutable snapshots. Added acceptance contract `AT-WIX-009` and a dedicated contract test.
 - Acceptance: PASS for the blueprint/test contract on commit `b0ca0205e3146ad44f1f435114f7018b69feb4de`; workflow run `45342942417`; job `138270633398`; workflow `.github/workflows/agent-blueprint-contract.yml`; exact successful steps: `Verify agent blueprint contract`, `Validate agent blueprint JSON Schemas`, `Wix site evidence auditor tests`.
@@ -228,6 +231,9 @@ This addendum updates existing goals; it does not create a parallel queue or ano
 
 #### AI231-WIX-CORE-METADATA-001 — P1
 - Added subtask **AI231-WIX-ROBOTICS-METADATA-001**.
+- Priority: P1. Owner: Site Evidence Auditor (draft). Dependencies: explicit approval for this exact site/change scope and a non-production preview; external routes must be independently checked.
+- Acceptance: three canonical tags, one three-URL sitemap and a robots declaration pass read-back, route, mobile and accessibility checks in preview.
+- Status: DRAFT_PREPARED / PRODUCTION_BLOCKED. Risk: repository draft only; no production write. Rollback: discard the draft or revert its dedicated commit.
 - Source/site: AI231 Robotics Collaboration, site ID `d8dcc187-d8fe-4e3c-b7a4-9e46f020349e`, live URL https://headless-nkogaqagpcv-beywolf5-1408.wix-site-host.com/.
 - Verified read-only inventory: exactly three files (`index.html` 14,709 bytes; `about.html` 22,857 bytes; `agents.html` 10,775 bytes), `hasMore=false`. All three have titles, descriptions and viewport declarations; all three lack canonical links. No `sitemap.xml` or `robots.txt` is present. Internal links among the three files resolve to the inventory. The Hebrew About section carries `lang="he"` and RTL markup.
 - Artifact: `business_brain/website-drafts/2026-11-24-ROBOTICS-COLLABORATION-METADATA-PATCH.md`, commit `ae7a50ca82bfe4d0686e8bf251b1a7b778ca611f`.
@@ -269,6 +275,7 @@ This addendum updates existing goals; it does not create a parallel queue or ano
 - Read-back confirms the rotating-coverage rule, one Step 3 website slot, no per-site/per-run edit quota, and rollback/compensating-action intake.
 - Latest Automation 3 handoff remains dated 2026-11-23; no 2026-11-24 handoff was available at intake. Current Supervisor run was still in progress.
 - Added subtask **AI231-AUTO2-HANDOFF-FRESHNESS-001**.
+- Priority: P1. Source: latest accessible Automation 3 handoff and current Supervisor run state.
 - Owner: Automation 3 Governance. Dependency: a dated Automation 3 handoff for the current local date, produced after the current Supervisor start, with provenance and priority evidence.
 - Acceptance: Automation 2 ingests the newest handoff before selecting mutating work; if it is missing or still in progress, record the blocker and limit work to read-only validation or reversible drafts.
 - Permission/risk: governance prompt change only; no schedule change or new automation.
