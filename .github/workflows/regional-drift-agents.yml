@@ -2,8 +2,12 @@ name: Regional Drift Agents
 
 on:
   workflow_dispatch:
-  schedule:
-    - cron: "*/15 * * * *"
+    inputs:
+      allow_external_calls:
+        description: "Explicitly authorize calls to configured regional model endpoints for this run"
+        required: true
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -15,8 +19,8 @@ jobs:
     env:
       DRIFT_NODE: REG-US
       DRIFT_LANGUAGE: en
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_US }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_US }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_US || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_US || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -33,8 +37,8 @@ jobs:
     env:
       DRIFT_NODE: REG-EU
       DRIFT_LANGUAGE: en
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_EU }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_EU }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_EU || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_EU || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -51,8 +55,8 @@ jobs:
     env:
       DRIFT_NODE: REG-IL-ME
       DRIFT_LANGUAGE: he
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_IL_ME }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_IL_ME }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_IL_ME || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_IL_ME || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -69,8 +73,8 @@ jobs:
     env:
       DRIFT_NODE: REG-SA
       DRIFT_LANGUAGE: en
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_SA }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_SA }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_SA || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_SA || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -87,8 +91,8 @@ jobs:
     env:
       DRIFT_NODE: REG-EA
       DRIFT_LANGUAGE: en
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_EA }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_EA }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_EA || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_EA || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -105,8 +109,8 @@ jobs:
     env:
       DRIFT_NODE: REG-LATAM
       DRIFT_LANGUAGE: es
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_LATAM }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_LATAM }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_LATAM || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_LATAM || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -123,8 +127,8 @@ jobs:
     env:
       DRIFT_NODE: REG-OCEANIA
       DRIFT_LANGUAGE: en
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_OCEANIA }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_OCEANIA }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_OCEANIA || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_OCEANIA || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -141,8 +145,8 @@ jobs:
     env:
       DRIFT_NODE: REG-AFRICA
       DRIFT_LANGUAGE: en
-      DRIFT_ENDPOINT: ${{ secrets.DRIFT_ENDPOINT_AFRICA }}
-      DRIFT_TOKEN: ${{ secrets.DRIFT_TOKEN_AFRICA }}
+      DRIFT_ENDPOINT: ${{ inputs.allow_external_calls && secrets.DRIFT_ENDPOINT_AFRICA || '' }}
+      DRIFT_TOKEN: ${{ inputs.allow_external_calls && secrets.DRIFT_TOKEN_AFRICA || '' }}
       DRIFT_MODEL: ${{ vars.DRIFT_MODEL }}
     steps:
       - uses: actions/checkout@v4
@@ -158,6 +162,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      pull-requests: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
@@ -170,12 +175,17 @@ jobs:
           set -euo pipefail
           mkdir -p ai-drift-forensics/global-drift-network/data/regional-observations
           find /tmp/regional -type f -name '*.json' -exec cp {} ai-drift-forensics/global-drift-network/data/regional-observations/ \;
-      - name: Commit observations
-        shell: bash
-        run: |
-          set -euo pipefail
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add ai-drift-forensics/global-drift-network/data/regional-observations/
-          git diff --cached --quiet || git commit -m "data: regional drift observation batch"
-          git push
+      - name: Propose observations through a review PR
+        uses: peter-evans/create-pull-request@v7
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          branch: automation/regional-drift-observations
+          delete-branch: false
+          title: 'data: publish regional drift observation batch'
+          commit-message: 'data: regional drift observation batch'
+          body: |
+            Collects regional observation records from the configured endpoint jobs.
+            NOT_CONFIGURED and UNAVAILABLE records remain explicit and are not treated as
+            model outputs or verified findings. This workflow does not write to main.
+          add-paths: |
+            ai-drift-forensics/global-drift-network/data/regional-observations/**
