@@ -1,0 +1,59 @@
+{
+  "task_id": "GBM-002",
+  "title": "Validate Wix Agency Operations Copilot as first revenue product",
+  "status": "discovery_and_validation",
+  "priority": "critical",
+  "owner": "231-EXECUTIVE-ORCHESTRATOR",
+  "agents": [
+    "ARK-01",
+    "WANGA-STRATEGY",
+    "231-EXECUTIVE-ORCHESTRATOR"
+  ],
+  "buyer_hypothesis": "Small Wix Studio agencies and freelancers managing multiple client sites.",
+  "product_hypothesis": "A multi-site operations assistant that audits authorized client sites, prioritizes maintenance/content/SEO/lead-flow issues, drafts fixes and client-ready work orders, and tracks completion. Human-approved service first; autonomous edits are excluded from MVP.",
+  "customer_problem_hypotheses": [
+    "Recurring manual site audits and maintenance consume agency hours",
+    "Agencies struggle to turn technical findings into clear recurring client deliverables",
+    "Issues across a portfolio of client sites are missed or handled inconsistently"
+  ],
+  "discovery_requirements": [
+    "Identify 30 relevant agencies/freelancers across at least 3 markets",
+    "Collect at least 10 buyer interviews or structured responses",
+    "Document current workflow, frequency, hours/cost, current tools, purchase authority and budget",
+    "Ask for a paid pilot commitment; a positive opinion is not purchase evidence",
+    "Map at least 5 direct or adjacent alternatives/substitutes",
+    "Verify required Wix APIs, OAuth scopes, rate limits, site permissions and technical constraints"
+  ],
+  "pilot_offer_hypothesis": "A fixed-scope 2–4 week paid pilot for a small portfolio of authorized Wix client sites, delivering baseline audit, prioritized work orders, client-ready monthly report, and measured time saved. Price to be tested with buyers; no price is assumed validated.",
+  "success_gates": [
+    "At least 10 qualified buyer conversations completed",
+    "At least 5 buyers independently confirm frequent, costly pain",
+    "At least 3 buyers request a proposal or agree to a concrete next step",
+    "At least 1 paid pilot, deposit, or signed purchase commitment before building beyond a thin prototype",
+    "Expected gross margin is positive after measuring delivery and support time",
+    "No unauthorized site access or production edits"
+  ],
+  "kill_or_pivot_conditions": [
+    "Buyers do not prioritize the problem",
+    "Existing tools solve it adequately at lower total cost",
+    "No buyer will pay for a pilot after qualified discovery",
+    "Wix permissions/API constraints make the proposed workflow impractical",
+    "Human service delivery costs exceed plausible pricing"
+  ],
+  "deliverables": [
+    "buyer segment and competitor map",
+    "interview evidence ledger with consent and anonymization",
+    "Wix API feasibility matrix",
+    "pilot offer and tested pricing",
+    "unit economics model with assumptions clearly marked",
+    "go/no-go recommendation"
+  ],
+  "source_links": [
+    "https://dev.wix.com/docs/overview/platform-overview/about-wix-apis",
+    "https://dev.wix.com/docs/api-reference/account-level/sites/introduction",
+    "https://www.wix.com/headless",
+    "https://www.dataprovider.com/research/pdf/dataprovider-cms-market-share.pdf"
+  ],
+  "evidence_status": "Hypothesis",
+  "created_at": "2026-11-15"
+}
