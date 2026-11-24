@@ -45,7 +45,9 @@
     "remaining_public_count": 40,
     "cursor": "priority-order-after-batch-03",
     "previous_batch_id": "2026-11-15-batch-02",
-    "primary_project_refresh": "Quadruple-Multilevel-projection-project/WANGA-LAB"
+    "primary_project_refresh": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+    "revisit_count": 9,
+    "new_unique_registry_entries": 1
   },
   "repositories": [
     {
@@ -803,7 +805,7 @@
         "AmbassadorOv/Qualia"
       ],
       "status": "COMPLETED_BOUNDED_BATCH",
-      "note": "10 new public repositories; README read for 9; one repository had no README and exposed only a shared handoff notice."
+      "note": "10 repositories were scanned; 9 were already present in the previous inventory and were rechecked, 1 new unique repository entry was added. README was read for 9 repositories; one repository had no README and exposed only a shared handoff notice."
     }
   ]
 }
