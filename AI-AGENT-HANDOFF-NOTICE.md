@@ -1,5 +1,16 @@
 # AI AGENT HANDOFF NOTICE
 
+## Mandatory first read
+
+Before any planning, coding, data modification, or interface change, every WANGA agent MUST read and accept:
+
+1. `WANGA_SEMANTIC_TRUTH_CONTRACT_V1.md` — the canonical WANGA semantic definition and mandatory four-application architecture.
+2. `AI-AGENT-NOTICE.md` — the sequential logic, evidence, provenance, and repository-safety gates.
+
+The semantic truth contract is the first governing semantic contract for every agent and downstream component contract. If an agent cannot accept or understand it, the agent must stop and report:
+
+`BLOCKED — WANGA SEMANTIC CONTRACT NOT ACCEPTED OR NOT UNDERSTOOD.`
+
 This repository is governed by the following sequential execution gates:
 
 L1 — FIRST-ORDER STRUCTURAL LOGIC
@@ -83,5 +94,8 @@ BUILT / SPECIFIED / PROTOTYPED / TESTED / VERIFIED / PLANNED / HYPOTHETICAL / NO
 
 This notice is a handoff boundary, not an optional suggestion.
 
-Canonical WANGA-LAB reference:
+Canonical WANGA semantic contract:
+https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/WANGA_SEMANTIC_TRUTH_CONTRACT_V1.md
+
+Canonical agent notice:
 https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/AI-AGENT-NOTICE.md
