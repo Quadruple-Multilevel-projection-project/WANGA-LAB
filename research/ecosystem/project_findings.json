@@ -1,6 +1,6 @@
 {
   "schema_version": "wanga-ecosystem-project-findings/1.0",
-  "snapshot_date": "2026-11-15",
+  "snapshot_date": "2026-11-24",
   "epistemic_rule": "A source proves only what is written in that source; structural links and candidate compositions are not semantic entailments.",
   "findings": [
     {
@@ -465,6 +465,236 @@
       "permission_scope": "PUBLIC_READ; repository permission ADMIN",
       "next_action": "No integration action.",
       "scan_date": "2026-11-15"
+    },
+    {
+      "id": "F-REPO-LOGICL-NEURAL-ORDER-2026-11-24",
+      "repository": "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+      "ref": "master",
+      "file_path": "README.md",
+      "git_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/-logicl-neural-order/blob/master/README.md",
+      "summary": "README title is Nanomathematics. Its blob SHA matches AmbassadorOv/Nanomathematics and other previously scanned README content; this is duplicate content, not repository identity.",
+      "epistemic_status": "DUPLICATE_README_BLOB_LOW_SIGNAL",
+      "overlap_candidates": [
+        "AmbassadorOv/Nanomathematics",
+        "Quadruple-Multilevel-projection-project/MNM",
+        "tribal-archery/Qdprojects"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; connector reports ADMIN permission",
+      "next_action": "Keep repository distinct; inspect source tree only if later priority warrants it.",
+      "scan_date": "2026-11-24"
+    },
+    {
+      "id": "F-REPO-AI-AGENT-TERRAFORM-2026-11-24",
+      "repository": "Quadruple-Multilevel-projection-project/ai-agent-terraform",
+      "ref": "main",
+      "file_path": "README.md",
+      "git_blob_sha": "1530209671f6f76eb1808cf17d9584437e1e867b",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/ai-agent-terraform/blob/main/README.md",
+      "summary": "README describes Terraform infrastructure for AI chat/API services across environments and regions, and explicitly warns that main is out of date. A bounded branch listing returned 20 branches and a continuation cursor.",
+      "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE",
+      "overlap_candidates": [
+        "WANGA-LAB agent orchestration and deployment infrastructure"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; connector reports ADMIN permission",
+      "next_action": "Inspect the most recently changed relevant branch before proposing any integration.",
+      "scan_date": "2026-11-24"
+    },
+    {
+      "id": "F-REPO-AI231-META-IO-2026-11-24",
+      "repository": "Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "ref": "main",
+      "file_path": "README.md; AI-AGENT-HANDOFF-NOTICE.md; repository root",
+      "git_blob_sha": "21f3693e1b2eb5967e8e365bc20faf3d2217bff6",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/AI231.meta.io",
+      "summary": "README points to an external Julius Caesar page. Root contains datasets, docs, economy, governance, index.html and the shared WANGA handoff notice. The handoff notice is policy text, not proof of implementation.",
+      "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+        "Quadruple-Multilevel-projection-project/glowing-octo-waddle"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; connector reports ADMIN permission",
+      "next_action": "Review specific docs only when a concrete cross-project dependency is proposed.",
+      "scan_date": "2026-11-24"
+    },
+    {
+      "id": "F-REPO-ARK-KERNEL-OVERSIGHT-2026-11-24",
+      "repository": "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "ref": "main",
+      "file_path": "README.md; AI-AGENT-HANDOFF-NOTICE.md; docs/",
+      "git_blob_sha": "0d8d8445027549ac2ce08a40a7cce2379a1ef0c0",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT",
+      "summary": "README contains only the repository title; root has docs and the same WANGA handoff notice found in AI231.meta.io and glowing-octo-waddle. The shared notice alone does not establish implementation overlap.",
+      "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE_LOW_SIGNAL",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/AI231.meta.io",
+        "Quadruple-Multilevel-projection-project/glowing-octo-waddle"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; connector reports ADMIN permission",
+      "next_action": "Inspect docs/ only if a direct integration question arises.",
+      "scan_date": "2026-11-24"
+    },
+    {
+      "id": "F-REPO-MNM-2026-11-24",
+      "repository": "Quadruple-Multilevel-projection-project/MNM",
+      "ref": "master",
+      "file_path": "README.md",
+      "git_blob_sha": "e0fa7f84c36601e9895a7306f5b18dbaf7d09107",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/MNM/blob/master/README.md",
+      "summary": "README title is Nanomathematics and shares the same blob SHA as -logicl-neural-order and previously scanned Nanomathematics content. Repository identity remains separate.",
+      "epistemic_status": "DUPLICATE_README_BLOB_LOW_SIGNAL",
+      "overlap_candidates": [
+        "AmbassadorOv/Nanomathematics",
+        "Quadruple-Multilevel-projection-project/-logicl-neural-order",
+        "tribal-archery/Qdprojects"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; connector reports ADMIN permission",
+      "next_action": "Keep repository identity separate; inspect code only if prioritized.",
+      "scan_date": "2026-11-24"
+    },
+    {
+      "id": "F-REPO-QUALIA-FORK-2026-11-24",
+      "repository": "Quadruple-Multilevel-projection-project/Qualia",
+      "ref": "main",
+      "file_path": "README.md",
+      "git_blob_sha": "740c8ff6d88049f5eedf97d21772e12e2ef6fa96",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/Qualia/blob/main/README.md",
+      "summary": "GitHub metadata confirms this repository is a fork of AmbassadorOv/Qualia. README frames AI231/QUALIA as research into logic-shaped synthetic cognition, a 22-unit/231-gate proposal and independent logical verification; capabilities remain subject to experimental validation and financial mechanisms are proposals, not launched products.",
+      "epistemic_status": "PROJECT_PROPOSAL_NOT_EMPIRICALLY_VALIDATED",
+      "overlap_candidates": [
+        "AmbassadorOv/Qualia",
+        "WANGA-LAB logic/fractal research"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; connector reports ADMIN permission",
+      "next_action": "Compare source docs and tests with WANGA contracts before proposing integration.",
+      "scan_date": "2026-11-24"
+    },
+    {
+      "id": "F-REPO-O-MS-2026-11-24",
+      "repository": "AmbassadorOv/O-Ms",
+      "ref": "main",
+      "file_path": "README.md",
+      "git_blob_sha": "5477f49658507c3de65a774eb54976d22a3e0c52",
+      "source_uri": "https://github.com/AmbassadorOv/O-Ms/blob/main/README.md",
+      "summary": "README contains only the title O-Ms. No WANGA logic or implementation relationship can be established from the available file.",
+      "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE_LOW_SIGNAL",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; connector reports ADMIN permission",
+      "next_action": "No integration action; retain in inventory.",
+      "scan_date": "2026-11-24"
+    },
+    {
+      "id": "F-REPO-GLOBALSPEED-2026-11-24",
+      "repository": "Quadruple-Multilevel-projection-project/globalSpeed",
+      "ref": "master",
+      "file_path": "README.md",
+      "git_blob_sha": "a6976e6480700db0264d5dd7a20267a04f9209f0",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/globalSpeed/blob/master/README.md",
+      "summary": "README describes a browser media-speed extension and related controls. No direct WANGA logic relationship was identified.",
+      "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE_UNRELATED",
+      "overlap_candidates": [],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; connector reports ADMIN permission",
+      "next_action": "No integration action.",
+      "scan_date": "2026-11-24"
+    },
+    {
+      "id": "F-REPO-GLOWING-OCTO-WADDLE-2026-11-24",
+      "repository": "Quadruple-Multilevel-projection-project/glowing-octo-waddle",
+      "ref": "main",
+      "file_path": "AI-AGENT-HANDOFF-NOTICE.md; LICENSE; README.md",
+      "git_blob_sha": "2e2698d337a60a93059d85d4302ea01cc3837b7b",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/glowing-octo-waddle/blob/main/AI-AGENT-HANDOFF-NOTICE.md",
+      "summary": "No README exists; root contains the shared WANGA handoff notice and LICENSE. The notice states evidence/provenance gates and repository safety protocol, but is policy text rather than implementation evidence.",
+      "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE_POLICY_ONLY",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/AI231.meta.io",
+        "Quadruple-Multilevel-projection-project/ARK-KERNEL-OVERSIGHT"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; connector reports ADMIN permission",
+      "next_action": "Do not modify; inspect further only if a concrete dependency appears.",
+      "scan_date": "2026-11-24"
+    },
+    {
+      "id": "F-REPO-QUALIA-PARENT-2026-11-24",
+      "repository": "AmbassadorOv/Qualia",
+      "ref": "main",
+      "file_path": "README.md",
+      "git_blob_sha": "72a7d51dbb14cbc1f17bd0fe9b7ea3a35ea1efa2",
+      "source_uri": "https://github.com/AmbassadorOv/Qualia/blob/main/README.md",
+      "summary": "This is the parent repository of Quadruple-Multilevel-projection-project/Qualia. Its README is minimal and links to the same research blog; parent and fork are kept as distinct repository identities.",
+      "epistemic_status": "DIRECT_TEXTUAL_EVIDENCE_LOW_SIGNAL",
+      "overlap_candidates": [
+        "Quadruple-Multilevel-projection-project/Qualia"
+      ],
+      "contradictions": [],
+      "permission_scope": "PUBLIC_READ; connector reports ADMIN permission",
+      "next_action": "Inspect parent docs only if fork/parent divergence becomes relevant.",
+      "scan_date": "2026-11-24"
+    },
+    {
+      "id": "F-WANGA-READINESS-2026-11-24",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "main",
+      "file_path": "logic_wiki/data/articles.json; logic_wiki/data/research_metrics.json; logic_fractal/data/composition_rules.json; logic_fractal/data/recursive_composition_contracts_v1.json; logic_fractal/data/semantic_benchmark_plan_v1.json",
+      "git_blob_sha": "435dfb96c0a8bfcc388a35bb5f4ad8ee6ad5c0ed",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_wiki/data/articles.json",
+      "summary": "Recomputed from current main: 28 unique articles, 17 source records across 11 source classes, 28 articles with source references, 111 editorial relation links, no duplicate article/source IDs and no dangling source/relation references. Two composition rules are ACTIVE_SPECIFIED, one is DRAFT_NOT_EXECUTED; semantic benchmark cases, counterexamples, holdout and independent reviews remain absent.",
+      "epistemic_status": "DIRECT_REPOSITORY_SNAPSHOT_NOT_SEMANTIC_VERIFICATION",
+      "overlap_candidates": [
+        "logic_fractal/fragment_composer.py",
+        "logic_fractal/data/recursive_composition_contracts_v1.json"
+      ],
+      "contradictions": [
+        "Critical core contradiction inventory remains NOT_MEASURED_NO_INVENTORY; zero registered contradictions is not evidence of absence."
+      ],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "Trigger PR CI, rebuild synthetic candidate, and keep Alpha blocked until source-grounded suites and reviews exist.",
+      "scan_date": "2026-11-24"
+    },
+    {
+      "id": "F-LIMBO-PR122-2026-11-24",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "deploy/limbo-cartography-core-v1",
+      "file_path": "limbo-cartography-core/cartography/reality_matrix.json; limbo-cartography-core/cartography/iterative_crash_map.json; limbo-cartography-core/cartography/tuning_candidates/TUNE-9c166900cc4ad5dd.json; limbo-cartography-core/cartography/run_logs/latest_execution.json",
+      "git_blob_sha": "3617504c68262f71366a244563fc06b1be270da2",
+      "source_uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/122",
+      "summary": "Current branch snapshot records 10 crash incidents and 2 history events; map v1.0.0 has 14 nodes and 19 edges, last recorded 2026-10-19. The only tuning candidate has a historical PASS retest but replay_status NOT_RUN. Crash-point inbox folders contain no new point/history/keystone files; one pre-existing logic-bundle input remains. PR #122 is OPEN_DRAFT, 63 commits ahead and 191 behind current main; its three checks are ACTION_REQUIRED and have zero jobs.",
+      "epistemic_status": "STRUCTURAL_SNAPSHOT_WITH_HISTORICAL_RETEST_NOT_CURRENT_REPLAY",
+      "overlap_candidates": [
+        "tests/test_research_agent_work_queue.py",
+        "limbo-cartography-core/engine/seismic_detector.py"
+      ],
+      "contradictions": [
+        "No current-state retest is recorded; the latest map state is historical, not a live system assessment."
+      ],
+      "permission_scope": "PUBLIC_READ; repository permission ADMIN",
+      "next_action": "Reconcile the PR branch with current main, obtain the required CI approval, then rerun the exact work-queue and Limbo suites and record any new evidence without erasing incidents.",
+      "scan_date": "2026-11-24"
+    },
+    {
+      "id": "F-WIX-SITE-CONTEXT-2026-11-24",
+      "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "ref": "Connected Wix site snapshot",
+      "file_path": "logic-wiki-research-status.html; logic-wiki.html; logic-wiki-fractal-research.html",
+      "source_uri": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/",
+      "summary": "The exact public Logic Wiki host resolves to the connected Logic Engine Research Lab site. Its static file inventory contains 29 files; the research-status page is 12,315 bytes. Read access is confirmed; this cycle has not yet changed the deployment.",
+      "epistemic_status": "WIX_SITE_CONTEXT_AND_FILE_LIST_READ",
+      "overlap_candidates": [
+        "logic_wiki/data/wix_sync_manifest.json"
+      ],
+      "contradictions": [],
+      "permission_scope": "Connected Wix site read access",
+      "next_action": "Publish only after the current report's PR CI and internal source review pass; patch the complete page and read it back.",
+      "scan_date": "2026-11-24"
     }
   ],
   "system_boundaries": {
