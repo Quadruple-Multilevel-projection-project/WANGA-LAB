@@ -1,0 +1,284 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.example/schemas/logic-currency-ledger-state-v1.schema.json",
+  "title": "AI231 Logic Currency Ledger Aggregate State V1",
+  "description": "Draft aggregate-state contract that separates proposed, approved and internal-issued Logic Credits from external tokens and cash. No issuance is authorized by this schema.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "ledger_id",
+    "as_of",
+    "status",
+    "unit",
+    "balances",
+    "cash_separation",
+    "provenance"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ai231-logic-currency-ledger-state/1.0"
+    },
+    "ledger_id": {
+      "const": "AI231-LOGIC-CURRENCY-LEDGER"
+    },
+    "as_of": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "status": {
+      "const": "DRAFT_NOT_LIVE"
+    },
+    "unit": {
+      "const": "LOGIC_CREDIT_INTERNAL"
+    },
+    "balances": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "planned_quantity",
+        "approved_quantity",
+        "issued_internal_quantity",
+        "external_token_quantity"
+      ],
+      "properties": {
+        "planned_quantity": {
+          "type": "number",
+          "minimum": 0
+        },
+        "approved_quantity": {
+          "type": "number",
+          "minimum": 0
+        },
+        "issued_internal_quantity": {
+          "const": 0
+        },
+        "external_token_quantity": {
+          "const": 0
+        }
+      }
+    },
+    "cash_separation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "status",
+        "currency",
+        "actual_cash_collected_minor_units",
+        "actual_cash_costs_paid_minor_units",
+        "actual_variable_cash_costs_paid_minor_units",
+        "contribution_margin_minor_units"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "NOT_YET_VERIFIED",
+            "VERIFIED"
+          ]
+        },
+        "currency": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[A-Z]{3}$"
+        },
+        "actual_cash_collected_minor_units": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "actual_cash_costs_paid_minor_units": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        },
+        "contribution_margin_minor_units": {
+          "type": [
+            "integer",
+            "null"
+          ]
+        },
+        "actual_variable_cash_costs_paid_minor_units": {
+          "type": [
+            "integer",
+            "null"
+          ],
+          "minimum": 0
+        }
+      },
+      "allOf": [
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "NOT_YET_VERIFIED"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "currency": {
+                "type": "null"
+              },
+              "actual_cash_collected_minor_units": {
+                "type": "null"
+              },
+              "actual_cash_costs_paid_minor_units": {
+                "type": "null"
+              },
+              "contribution_margin_minor_units": {
+                "type": "null"
+              },
+              "actual_variable_cash_costs_paid_minor_units": {
+                "type": "null"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "status": {
+                "const": "VERIFIED"
+              }
+            },
+            "required": [
+              "status"
+            ]
+          },
+          "then": {
+            "properties": {
+              "currency": {
+                "type": "string"
+              },
+              "actual_cash_collected_minor_units": {
+                "type": "integer"
+              },
+              "actual_cash_costs_paid_minor_units": {
+                "type": "integer"
+              },
+              "contribution_margin_minor_units": {
+                "type": "integer"
+              },
+              "actual_variable_cash_costs_paid_minor_units": {
+                "type": "integer",
+                "minimum": 0
+              }
+            }
+          }
+        }
+      ]
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source_event_ids",
+        "source_hashes",
+        "authorization_refs",
+        "notes"
+      ],
+      "properties": {
+        "source_event_ids": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "source_hashes": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        },
+        "authorization_refs": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "notes": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 2000
+        }
+      }
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "balances": {
+            "properties": {
+              "planned_quantity": {
+                "exclusiveMinimum": 0
+              }
+            },
+            "required": [
+              "planned_quantity"
+            ]
+          }
+        },
+        "required": [
+          "balances"
+        ]
+      },
+      "then": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "source_event_ids": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "balances": {
+            "properties": {
+              "approved_quantity": {
+                "exclusiveMinimum": 0
+              }
+            },
+            "required": [
+              "approved_quantity"
+            ]
+          }
+        },
+        "required": [
+          "balances"
+        ]
+      },
+      "then": {
+        "properties": {
+          "provenance": {
+            "properties": {
+              "authorization_refs": {
+                "minItems": 1
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}

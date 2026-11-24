@@ -1,0 +1,27 @@
+{
+  "schema_version": "ai231-logic-currency-ledger-state/1.0",
+  "ledger_id": "AI231-LOGIC-CURRENCY-LEDGER",
+  "as_of": "2026-11-21T00:00:00Z",
+  "status": "DRAFT_NOT_LIVE",
+  "unit": "LOGIC_CREDIT_INTERNAL",
+  "balances": {
+    "planned_quantity": 0,
+    "approved_quantity": 0,
+    "issued_internal_quantity": 0,
+    "external_token_quantity": 0
+  },
+  "cash_separation": {
+    "status": "NOT_YET_VERIFIED",
+    "currency": null,
+    "actual_cash_collected_minor_units": null,
+    "actual_cash_costs_paid_minor_units": null,
+    "contribution_margin_minor_units": null,
+    "actual_variable_cash_costs_paid_minor_units": null
+  },
+  "provenance": {
+    "source_event_ids": [],
+    "source_hashes": [],
+    "authorization_refs": [],
+    "notes": "Illustrative empty draft fixture only; not a live ledger, actual balance or financial record."
+  }
+}

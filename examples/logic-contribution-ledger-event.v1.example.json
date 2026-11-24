@@ -1,0 +1,24 @@
+{
+  "schema_version": "ai231-logic-contribution-ledger-event/1.0",
+  "event_id": "LCE-20261115-DEMO-0001",
+  "event_type": "CONTRIBUTION_SUBMITTED",
+  "occurred_at": "2026-11-15T18:54:51+02:00",
+  "recorded_at": "2026-11-15T18:54:51+02:00",
+  "actor_ref": "ACTOR-EXAMPLE-001",
+  "subject_ref": "PACKAGE-EXAMPLE-001",
+  "contribution_ref": "CONTRIB-EXAMPLE-001",
+  "evidence_refs": [
+    "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/issues/90"
+  ],
+  "review_status": "UNREVIEWED",
+  "quantity": 0,
+  "unit": "LOGIC_CREDIT_INTERNAL",
+  "authorization": {
+    "state": "PENDING",
+    "approver_ref": null,
+    "policy_ref": "POLICY-UNDEFINED-NOT-AUTHORIZED"
+  },
+  "previous_event_sha256": null,
+  "event_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+  "notes": "Illustrative fixture only; placeholder hash is not a valid computed event digest."
+}

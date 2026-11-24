@@ -1,0 +1,197 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.example/schemas/logic-contribution-ledger-event-v1.schema.json",
+  "title": "AI231 Logic Contribution Ledger Event V1",
+  "description": "Append-only internal accounting event for provenance-tracked logic contributions. Not fiat, a security, a transferable token, a redemption promise, or a valuation.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "event_id",
+    "event_type",
+    "occurred_at",
+    "recorded_at",
+    "actor_ref",
+    "subject_ref",
+    "contribution_ref",
+    "evidence_refs",
+    "review_status",
+    "quantity",
+    "unit",
+    "authorization",
+    "previous_event_sha256",
+    "event_sha256"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "ai231-logic-contribution-ledger-event/1.0"
+    },
+    "event_id": {
+      "type": "string",
+      "pattern": "^LCE-[A-Z0-9-]{8,80}$"
+    },
+    "event_type": {
+      "enum": [
+        "CONTRIBUTION_SUBMITTED",
+        "CONTRIBUTION_ACCEPTED",
+        "CONTRIBUTION_REJECTED",
+        "CREDIT_PROPOSED",
+        "CREDIT_APPROVED",
+        "CREDIT_REVERSED",
+        "USAGE_RECORDED",
+        "CORRECTION_RECORDED"
+      ]
+    },
+    "occurred_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "recorded_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "actor_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contribution_ref": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence_refs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "minItems": 1,
+      "uniqueItems": true
+    },
+    "review_status": {
+      "enum": [
+        "UNREVIEWED",
+        "IN_REVIEW",
+        "ACCEPTED",
+        "REJECTED",
+        "REVERSED",
+        "NOT_APPLICABLE"
+      ]
+    },
+    "quantity": {
+      "type": "number",
+      "minimum": 0
+    },
+    "unit": {
+      "enum": [
+        "LOGIC_CREDIT_INTERNAL",
+        "PACKAGE_USAGE_COUNT",
+        "RESEARCH_CONTRIBUTION_UNIT"
+      ]
+    },
+    "authorization": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "state",
+        "approver_ref",
+        "policy_ref"
+      ],
+      "properties": {
+        "state": {
+          "enum": [
+            "NOT_REQUIRED",
+            "PENDING",
+            "APPROVED",
+            "DENIED",
+            "REVOKED"
+          ]
+        },
+        "approver_ref": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "policy_ref": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "previous_event_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "event_sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "notes": {
+      "type": "string",
+      "maxLength": 2000
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "enum": [
+              "CREDIT_APPROVED",
+              "CREDIT_REVERSED"
+            ]
+          }
+        },
+        "required": [
+          "event_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "authorization": {
+            "properties": {
+              "state": {
+                "const": "APPROVED"
+              }
+            }
+          },
+          "review_status": {
+            "enum": [
+              "ACCEPTED",
+              "REVERSED"
+            ]
+          }
+        }
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "event_type": {
+            "const": "CONTRIBUTION_REJECTED"
+          }
+        },
+        "required": [
+          "event_type"
+        ]
+      },
+      "then": {
+        "properties": {
+          "quantity": {
+            "const": 0
+          },
+          "review_status": {
+            "const": "REJECTED"
+          }
+        }
+      }
+    }
+  ]
+}
