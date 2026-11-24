@@ -1,0 +1,100 @@
+{
+  "schema_version": "wanga-formal-benchmark-result/1.0",
+  "status": "PASS",
+  "fixture_status": "SYNTHETIC_FORMAL_FIXTURES_NOT_SOURCE_GROUNDED",
+  "case_count": 7,
+  "passed_cases": 7,
+  "failed_cases": 0,
+  "results": [
+    {
+      "case_id": "F001-ENTAILED-INT",
+      "status": "PASS",
+      "expected": {
+        "premise_consistency": "SAT",
+        "entailment_status": "ENTAILED_WITHIN_ENCODED_FRAGMENT"
+      },
+      "observed": {
+        "premise_consistency": "SAT",
+        "entailment_status": "ENTAILED_WITHIN_ENCODED_FRAGMENT"
+      },
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    {
+      "case_id": "F002-COUNTERMODEL",
+      "status": "PASS",
+      "expected": {
+        "premise_consistency": "SAT",
+        "entailment_status": "NOT_ENTAILED_COUNTERMODEL"
+      },
+      "observed": {
+        "premise_consistency": "SAT",
+        "entailment_status": "NOT_ENTAILED_COUNTERMODEL"
+      },
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    {
+      "case_id": "F003-INCONSISTENT-PREMISES",
+      "status": "PASS",
+      "expected": {
+        "premise_consistency": "UNSAT",
+        "entailment_status": "BLOCKED_INCONSISTENT_PREMISES"
+      },
+      "observed": {
+        "premise_consistency": "UNSAT",
+        "entailment_status": "BLOCKED_INCONSISTENT_PREMISES"
+      },
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    {
+      "case_id": "F004-BOOL-ENTAILMENT",
+      "status": "PASS",
+      "expected": {
+        "premise_consistency": "SAT",
+        "entailment_status": "ENTAILED_WITHIN_ENCODED_FRAGMENT"
+      },
+      "observed": {
+        "premise_consistency": "SAT",
+        "entailment_status": "ENTAILED_WITHIN_ENCODED_FRAGMENT"
+      },
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    {
+      "case_id": "F005-UNSUPPORTED-OPERATOR",
+      "status": "PASS",
+      "expected": {
+        "error": "FormalSpecError"
+      },
+      "observed": {
+        "error": "FormalSpecError",
+        "message": "unsupported operator or missing args: 'forbidden_exec'"
+      },
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    {
+      "case_id": "F006-UNDECLARED-VARIABLE",
+      "status": "PASS",
+      "expected": {
+        "error": "FormalSpecError"
+      },
+      "observed": {
+        "error": "FormalSpecError",
+        "message": "undeclared variable 'y'"
+      },
+      "semantic_status": "NOT_YET_VERIFIED"
+    },
+    {
+      "case_id": "F007-NATURAL-LANGUAGE-NOT-AST",
+      "status": "PASS",
+      "expected": {
+        "error": "FormalSpecError"
+      },
+      "observed": {
+        "error": "FormalSpecError",
+        "message": "conclusion must be an expression object"
+      },
+      "semantic_status": "NOT_YET_VERIFIED"
+    }
+  ],
+  "claim_boundary": "Synthetic formal fixtures verify adapter behavior only; they are not source-grounded semantic benchmarks and do not verify Logic Trader packages.",
+  "semantic_status": "NOT_YET_VERIFIED"
+}
