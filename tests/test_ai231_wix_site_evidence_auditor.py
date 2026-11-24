@@ -37,6 +37,15 @@ class WixSiteEvidenceAuditorBlueprintTests(unittest.TestCase):
         self.assertNotIn("publish_wix_site", permissions)
         self.assertNotIn("write_wix_site", permissions)
         self.assertNotIn("modify_production_site", permissions)
+        self.assertNotIn("read_public_web_content", permissions)
+        self.assertIn("analyze_supplied_data", permissions)
+
+    def test_public_page_fetch_is_orchestrator_supplied(self):
+        boundary = " ".join(self.blueprint["boundaries"]).lower()
+        self.assertIn("must not fetch public urls directly", boundary)
+        self.assertIn("network egress", boundary)
+        test = next(item for item in self.blueprint["acceptance_tests"] if item["id"] == "AT-WIX-009")
+        self.assertIn("blocked_no_network_egress", test["expected"].lower())
 
     def test_dynamic_routes_are_unresolved_until_verified(self):
         text = " ".join(
