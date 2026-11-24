@@ -1,8 +1,13 @@
 # WANGA-LAB — AI AGENT HANDOFF NOTICE
 
-## MANDATORY START
+## MANDATORY START — READ THESE CONTRACTS FIRST
 
-Before performing any action, read `docs/NEXT-MODEL-HANDOFF-KRAKEN.md`.
+Before performing any action, every agent MUST read, acknowledge, and comply with:
+
+1. `WANGA_SEMANTIC_TRUTH_CONTRACT_V1.md` — canonical semantic axiom, four-application architecture, Aleph-Agent requirements, and LOCK / ABSTAIN obligations.
+2. `docs/NEXT-MODEL-HANDOFF-KRAKEN.md` — existing model handoff and execution context.
+
+The semantic truth contract is the first governing semantic contract for every WANGA agent and every downstream component contract. No agent may plan, code, modify data, or change an interface before reading it.
 
 This notice is an execution boundary, not an optional suggestion.
 
