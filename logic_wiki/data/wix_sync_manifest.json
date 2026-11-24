@@ -12,10 +12,10 @@
   "homepage_card_verified": true,
   "existing_model_builder_preserved": true,
   "existing_corpus_atlas_preserved": true,
-  "verification_method": "Connected Wix Headless patch published upload bce8ba31-77fe-4b2c-821c-480e5b017bd7. Read-back verified logic-wiki-research-status.html (12,315 bytes), logic-wiki.html (53,739 bytes; 28 entry cards), and logic-wiki-fractal-research.html (12,297 bytes). The other 26 site files were not re-read in this cycle; status is therefore partial, not a full-site audit.",
+  "verification_method": "Connected Wix Headless patch published upload bce8ba31-77fe-4b2c-821c-480e5b017bd7. Read-back verified logic-wiki-research-status.html (12,315 bytes), logic-wiki.html (53,739 bytes; 28 entry cards), and logic-wiki-fractal-research.html (12,297 bytes). The other 26 site files were not re-read in this cycle; status is therefore partial, not a full-site audit. Additional 2026-11-23 read-only check: exact site identity resolved; 29 files listed; logic-wiki.html read back with 28 entry cards (49,268 characters), logic-wiki-research-status.html (9,528 characters), and logic-wiki-fractal-research.html (9,698 characters). No publication was performed; full 29-file content audit was not performed.",
   "automation_boundary": "Connected Wix upload/read-back was used. GitHub Actions does not have Wix credentials; scheduled research must use the connected Wix integration and record a read-back result.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
-  "note": "GitHub catalog snapshot: 28 articles, 17 source records and 11 source types; 111 editorial relation links. Last readiness report counted 28 provenance-linked logic units, 2 active composition contracts, 0 source-grounded counterexamples, 0 semantic benchmark cases, 0 benchmark suites and 0 independent reviews. First model remains NOT_READY_INTERNAL_CANDIDATE_ONLY. Source registration and catalog links do not prove semantic truth.",
+  "note": "GitHub catalog snapshot: 28 articles, 17 source records and 11 source types; 111 editorial relation links. Last readiness report counted 28 provenance-linked logic units, 2 active composition contracts, 0 source-grounded counterexamples, 0 semantic benchmark cases, 0 benchmark suites and 0 independent reviews. First model remains NOT_READY_INTERNAL_CANDIDATE_ONLY. Source registration and catalog links do not prove semantic truth. The 2026-11-23 check resolved the exact site ID and verified the three catalog/research pages by read-back; no approved catalog delta existed, so no upload was made.",
   "extended_topic_page_count": 10,
   "main_page_card_count": 28,
   "extended_page_resources": [
@@ -124,6 +124,73 @@
       "logic-wiki-fractal-research.html"
     ],
     "homepage_entry_cards": 28,
+    "all_site_files_reaudited": false
+  },
+  "last_checked_date": "2026-11-23",
+  "current_cycle_sync_status": "READ_BACK_VERIFIED_NO_UPLOAD_NO_CATALOG_DELTA",
+  "last_attempt": {
+    "date": "2026-11-23",
+    "status": "READ_BACK_VERIFIED_NO_UPLOAD_NO_CATALOG_DELTA",
+    "target_site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "site_name": "Logic Engine Research Lab",
+    "site_id_resolution": "RESOLVED_EXACT_HOST_MATCH",
+    "lookup_summary": "GetSiteContext resolved Logic Engine Research Lab to the exact host already recorded in the manifest; the returned site URL matches the manifest host.",
+    "publication_performed": false,
+    "read_back_performed": true,
+    "read_back_summary": {
+      "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+      "site_name": "Logic Engine Research Lab",
+      "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
+      "date": "2026-11-23",
+      "files_listed": 29,
+      "target_pages": [
+        {
+          "path": "logic-wiki.html",
+          "characters": 49268,
+          "entry_cards": 28
+        },
+        {
+          "path": "logic-wiki-research-status.html",
+          "characters": 9528,
+          "entry_cards": 0
+        },
+        {
+          "path": "logic-wiki-fractal-research.html",
+          "characters": 9698,
+          "entry_cards": 0
+        }
+      ],
+      "all_site_files_reaudited": false
+    },
+    "reason": "No approved public catalog or report delta was ready for publication in this cycle. A read-only deployment check was performed; no Wix files were changed.",
+    "next_action": "When a reviewed, source-backed catalog/report change is approved, publish it through the connected Wix tool and read back the changed files. GitHub Actions still has no Wix credentials."
+  },
+  "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+  "site_name": "Logic Engine Research Lab",
+  "latest_readback": {
+    "site_id": "9d15d5e8-ebae-4660-8092-81f1fc817509",
+    "site_name": "Logic Engine Research Lab",
+    "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com",
+    "date": "2026-11-23",
+    "files_listed": 29,
+    "target_pages": [
+      {
+        "path": "logic-wiki.html",
+        "characters": 49268,
+        "entry_cards": 28
+      },
+      {
+        "path": "logic-wiki-research-status.html",
+        "characters": 9528,
+        "entry_cards": 0
+      },
+      {
+        "path": "logic-wiki-fractal-research.html",
+        "characters": 9698,
+        "entry_cards": 0
+      }
+    ],
     "all_site_files_reaudited": false
   }
 }
