@@ -1,5 +1,5 @@
 # AI231 / WANGA — Unified Execution Roadmap
-Last updated: 2026-11-21
+Last updated: 2026-11-24
 Queue owner: AI231 Unified Execution Agent
 Canonical schedule: Automation 2, daily 08:00 Asia/Jerusalem
 This file is the single cumulative project backlog for the unified queue. It is not a new automation or a parallel scheduler.
@@ -201,3 +201,88 @@ This file is the single cumulative project backlog for the unified queue. It is 
 - Automation 2 → Automation 3 handoff: business_brain/handoffs/2026-11-21-AUTOMATION2-TO-AUTOMATION3.md, commit 8fa046bddb947bec3c11da8745c7ef76dc46a871.
 - Cumulative log: business_brain/logs/AI231-UNIFIED-EXECUTION-LOG.md.
 - No additional automation was created; no production Wix or public-site write occurred.
+
+
+## 2026-11-24 Evidence Update — Automation 2 Run 005
+
+This addendum updates existing goals; it does not create a parallel queue or another automation.
+
+### Intake and queue reconciliation
+- Latest accessible Automation 3 → Automation 2 handoff: `business_brain/handoffs/2026-11-23-AUTOMATION3-TO-AUTOMATION2.md`, blob `fd6ecab09743f574c48fe500d6472581fffade46`. No 2026-11-24 handoff file was present on current main at inspection.
+- Current main: `efed7d60a62cd1207357728413cea9fe50edaeae`.
+- Open repository inventory at inspection: 69 open PRs and 27 open issues. No open issue is labeled P0 or P1; the roadmap's P1 priorities therefore remain the operative priority register.
+- Supervisor run was still `in_progress` during this inspection. No unseen conversation or private agent messages were assumed.
+- The exact Automation 2 prompt read-back contains ten numbered steps, rollback/compensating-action intake, one website slot with rotating coverage, and no per-site edit quota. No new schedule was created.
+
+### Existing-goal updates and subtasks
+
+#### AI231-AGENT-FACTORY-WIX-AUDITOR-001 — P1
+- Added subtask **AI231-AGENT-NO-EGRESS-SNAPSHOT-001**.
+- Source: PR #160 branch `automation/ai231-wix-evidence-auditor-2026-11-20`; blueprint `agent_blueprints/ai231-wix-site-evidence-auditor.json`; test `tests/test_ai231_wix_site_evidence_auditor.py`.
+- Change: removed the direct `read_public_web_content` permission because the blueprint already requires `network_egress=false); public pages must be fetched by the authorized orchestrator and supplied as immutable snapshots. Added acceptance contract `AT-WIX-009` and a dedicated contract test.
+- Acceptance: PASS for the blueprint/test contract on commit `b0ca0205e3146ad44f1f435114f7018b69feb4de`; workflow run `45342942417`; job `138270633398`; workflow `.github/workflows/agent-blueprint-contract.yml`; exact successful steps: `Verify agent blueprint contract`, `Validate agent blueprint JSON Schemas`, `Wix site evidence auditor tests`.
+- Permission/risk: repository draft branch only; no Wix write, no runtime activation, no credentials.
+- Rollback: revert the two dedicated commits `0dcd8d4fd1da01832171f36ea3848b1c85aba0b9` and `b0ca0205e3146ad44f1f435114f7018b69feb4de`.
+- Runtime status remains **DRAFT / NOT_CONFIGURED**. Static contract tests do not prove an isolated backend, actual network-egress denial, or successful runtime invocation.
+- Next action: configure and test an isolated backend only after explicit operator authorization; capture invocation logs and real egress-denial evidence before any active status.
+
+#### AI231-WIX-CORE-METADATA-001 — P1
+- Added subtask **AI231-WIX-ROBOTICS-METADATA-001**.
+- Source/site: AI231 Robotics Collaboration, site ID `d8dcc187-d8fe-4e3c-b7a4-9e46f020349e`, live URL https://headless-nkogaqagpcv-beywolf5-1408.wix-site-host.com/.
+- Verified read-only inventory: exactly three files (`index.html` 14,709 bytes; `about.html` 22,857 bytes; `agents.html` 10,775 bytes), `hasMore=false`. All three have titles, descriptions and viewport declarations; all three lack canonical links. No `sitemap.xml` or `robots.txt` is present. Internal links among the three files resolve to the inventory. The Hebrew About section carries `lang="he"` and RTL markup.
+- Artifact: `business_brain/website-drafts/2026-11-24-ROBOTICS-COLLABORATION-METADATA-PATCH.md`, commit `ae7a50ca82bfe4d0686e8bf251b1a7b778ca611f`.
+- Acceptance: PASS for an evidence-backed draft; UNRESOLVED for preview rendering, external link availability, browser/mobile rendering, sitemap/robots live responses and production publication.
+- Permission/risk: repository draft only; production Wix write/publication BLOCKED without explicit approval for this exact site, exact files and publication scope.
+- Rollback: discard the draft or revert its dedicated branch commit; no live Wix change exists.
+- Next action: after explicit scope approval, prepare a non-production preview and run the listed route, metadata, mobile and accessibility acceptance checks.
+
+#### AI231-WIX-COVERAGE-063-001 — P1
+- Current connected Wix inventory: **70 sites** (page 1: 50; page 2: 20), compared with the prior roadmap snapshot of 69.
+- Deep inspection this run: AI231 Robotics Collaboration (three HTML files). The prior summary did not expose the full list of eight previously inspected site IDs, so a cumulative unique-site count is not asserted.
+- Status: CARRIED_FORWARD; unselected sites remain in the same rotating queue.
+- Next action: continue the next highest-priority site rotation; no cosmetic changes and no per-site edit quota.
+
+#### AI231-LEDGER-STATE-SEPARATION-001 — P1
+- PR #150 remains OPEN / DRAFT. Head: `d77a91bc4456ec0894257fba2a9fc8ae1d164a62`; base: `2e43830e8b624568ebc9195977a6fdb35fbdacff`.
+- Exact CI on that head: run `45001947753`, job `137145211088`, workflow `.github/workflows/repository-integrity.yml`; successful steps: `Logic contribution ledger verifier tests`, `Logic contribution ledger JSON Schema validation`, `Logic currency ledger aggregate-state schema validation`, `Logic currency ledger aggregate-state transition tests`.
+- The aggregate schema keeps planned, approved, issued-internal and external-token quantities separate; v1 fixes both internal-issued and external-token quantities at zero. Cash fields remain null until verified.
+- Integration blocker: PR #150 head is 119 commits behind current main and 30 commits ahead. The CI result is valid for its exact old PR head only; it is not a current-main integration pass.
+- Status: SPECIFIED_AND_CI_VERIFIED_ON_OLD_HEAD / INTEGRATION_UNRESOLVED / LIVE_LEDGER_NOT_CONFIGURED.
+- Next action: reconcile/rebase onto current main, rerun the exact schema and transition-test steps on the new head, and preserve zero issuance.
+
+#### AI231-LOGICAL-ISLANDS-ECONOMY-001 — P1
+- Status remains PARTIAL. The revenue-first baseline and risk-adjusted grant comparison remain the correct decision model.
+- No transaction-level source or cost ledger was accessible in this run. Actual cash collected, actual cash costs paid and contribution margin remain NOT_YET_VERIFIED / NOT_COMPUTABLE. Qualified pipeline remains unverified; forecasts remain hypotheses; internal Logic Credits remain non-cash.
+- Next action: instrument actual cash receipts and attributable delivery costs before claiming unit economics. No grant, investor, partner commitment or funding outcome is assumed.
+
+#### AI231-REVENUE-PILOT-VALIDATION-001 — P1
+- Existing issues #148 and #149 remain open. Both were last updated 2026-11-15, so the evidence records are stale by more than seven days. No buyer conversation, named budget authority, willingness-to-pay result, paid pilot or collected cash is evidenced.
+- The bounded offer remains one-site evidence-led Wix audit, up to 10 static pages and 3 dynamic-route checks; proposed test price €290 excluding VAT; estimated effort 2–4 analyst hours. Internal loaded rate and actual tool costs are unknown, so contribution margin is not computable.
+- Permission/risk: internal offer draft only; outreach and customer contact remain blocked without explicit authorization.
+- Next action: obtain outreach authorization, then test the price hypothesis with qualified buyers; do not treat the price as a quote or validated willingness to pay.
+
+#### AI231-ISSUE-148-149-DUPLICATE-REVIEW-001 — P2
+- #148 and #149 were created eight seconds apart and substantially overlap, but the duplicate is not proven. Both remain open; neither was closed or modified.
+- Next action: maintainer review; preserve both until then.
+
+#### AI231-AUTOMATION2-WIX-COVERAGE-CONFLICT-001 — P1 governance
+- Read-back confirms the rotating-coverage rule, one Step 3 website slot, no per-site/per-run edit quota, and rollback/compensating-action intake.
+- Latest Automation 3 handoff remains dated 2026-11-23; no 2026-11-24 handoff was available at intake. Current Supervisor run was still in progress.
+- Added subtask **AI231-AUTO2-HANDOFF-FRESHNESS-001**.
+- Owner: Automation 3 Governance. Dependency: a dated Automation 3 handoff for the current local date, produced after the current Supervisor start, with provenance and priority evidence.
+- Acceptance: Automation 2 ingests the newest handoff before selecting mutating work; if it is missing or still in progress, record the blocker and limit work to read-only validation or reversible drafts.
+- Permission/risk: governance prompt change only; no schedule change or new automation.
+- Rollback: N/A for this read-only finding; any future prompt edit must retain the exact pre-edit prompt for restoration.
+- Status: BLOCKED_PENDING_CURRENT_DAY_HANDOFF.
+
+### External convergence research — 2026-11-24
+- WANGA internal research PR #167 is OPEN / DRAFT, based directly on current main, head `979de22bb300b332c75b7e7604aa10d99e9ab857`. It reports 28 source-referenced Logic Wiki articles, 17 source records across 11 classes and 111 editorial relation links, but **zero source-grounded semantic cases, zero benchmark suites and zero independent reviews**. Readiness remains `NOT_READY_INTERNAL_CANDIDATE_ONLY`; the synthetic candidate is not released. The catalog links are not semantic entailments.
+- Exact PR #167 CI: Logic Fractal run `45333684412`, job `138240627681`, and Ecosystem Agent Sweep run `45333684351`, job `138240658219`; both are tied to the exact PR head and concluded SUCCESS. These verify their named build/test/scan steps, not semantic truth or product readiness.
+- Primary-source comparison: OpenAI Agents SDK documents sandbox agents, manifests and per-run sandbox sessions, but explicitly says isolation depends on backend/configuration; its Unix-local Linux backend does not add OS-level confinement. LangGraph persistence provides checkpoint/store-based continuity and recovery, not a security sandbox. A2A 1.0 standardizes discovery and task exchange across independent agents; interoperability does not itself grant authority. MCP HTTP authorization uses OAuth 2.1 bearer verification at the resource server; the MCP server does not issue tokens. Google's Agent Mesh preview describes task-scoped attenuation across sub-agent hops, egress credential brokering and audit receipts, while separating mesh authorization from the sandbox platform's OS/container confinement.
+- Architecture implication: retain WANGA's bounded agent contracts and independent verification, but add a separately tested runtime boundary for OS isolation, task-scoped authority, egress control, secret brokering and audit logs. Do not infer that LangGraph or a blueprint provides sandboxing.
+
+### Backlog freshness and financial separation
+- No open issue is labeled P0 or P1; roadmap P1 items remain authoritative.
+- #148/#149 have no evidence update for more than seven days and are flagged stale. Other P1 goals were updated above or retain their existing blockers.
+- Actual cash collected: NOT_YET_VERIFIED. Actual cash costs paid: NOT_YET_VERIFIED. Contribution margin: NOT_COMPUTABLE. Qualified pipeline: NOT_VERIFIED. Forecasts: HYPOTHESIS. Internal Logic Credits: non-cash only. External token quantity remains zero; no issuance or monetary-value promise.
+
