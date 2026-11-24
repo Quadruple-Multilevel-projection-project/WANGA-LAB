@@ -19,25 +19,107 @@
     "note": "The builder constructs a deterministic two-scale candidate and preserves source lineage. This does not satisfy the first-model release gate because source ingestion, benchmark suites, holdout, MIRROR review and independent review remain incomplete."
   },
   "last_research_cycle": {
-    "date": "2026-10-12",
-    "pr_url": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/pull/98",
-    "merge_commit": "f0ef3c345aeefbff2888312544f1e4bde7cf83d5",
-    "wix_readback_status": "PASS",
+    "date": "2026-11-24",
+    "pr_url": null,
+    "merge_commit": null,
+    "wix_readback_status": "PENDING_PR_CI_AND_REVIEW",
     "conversation_archive_coverage": "PARTIAL_ACCESS_ONLY",
     "new_conversation_source_records": 0,
-    "typed_fragment_tests": 8,
-    "first_model_status": "CANDIDATE_NOT_RELEASED",
+    "first_model_status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
     "semantic_status": "NOT_YET_VERIFIED",
-    "wix_research_status_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki-research-status.html",
-    "github_report_path": "research/reports/logic-fractal/2026-10-12-cycle.md",
-    "agent_run": {
-      "workflow_run_id": 38280474364,
-      "agent_roles_executed": 8,
-      "conversation_records_processed": 0,
-      "catalog_graph_composition_candidates": 189,
-      "wiki_build_status": "PASS",
-      "readiness_gate": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
-      "note": "Catalog graph paths only; not 189 verified logic units or conversation-derived fragments."
+    "github_report_path": "research/reports/logic-fractal/2026-11-24-cycle.md",
+    "current_cycle_rebuild_status": "PENDING_PR_CI",
+    "note": "Counts were recomputed from current repository files and live connector snapshots. No private Library content or raw conversation text was published."
+  },
+  "latest_snapshot": {
+    "date": "2026-11-24",
+    "catalog": {
+      "articles": 28,
+      "source_records": 17,
+      "source_classes": 11,
+      "articles_with_source_refs": 28,
+      "editorial_relation_links": 111,
+      "duplicate_article_ids": 0,
+      "duplicate_source_ids": 0,
+      "dangling_source_refs": 0,
+      "dangling_relation_refs": 0
+    },
+    "composition": {
+      "active_specified_rules": 2,
+      "draft_rules": 1,
+      "recursive_contracts": 4,
+      "semantic_entailments_added": 0
+    },
+    "readiness": {
+      "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+      "thresholds": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+      "required": {
+        "source_records": 20,
+        "source_classes": 3,
+        "logic_units_with_provenance": 50,
+        "composition_rules_with_contracts": 20,
+        "counterexamples": 30,
+        "semantic_test_cases": 100,
+        "benchmark_suites": 3,
+        "independent_review_cycles": 2,
+        "holdout_split": true,
+        "mirror_review": true
+      },
+      "observed": {
+        "source_records": 17,
+        "source_classes": 11,
+        "logic_units_with_provenance": 28,
+        "composition_rules_with_contracts": 2,
+        "counterexamples": 0,
+        "semantic_test_cases": 0,
+        "benchmark_suites": 0,
+        "independent_review_cycles": 0,
+        "dangling_source_refs": 0,
+        "dangling_relation_refs": 0,
+        "duplicate_stable_ids": 0,
+        "deterministic_build": "PREVIOUS_SYNTHETIC_TEST_ONLY_CURRENT_REBUILD_PENDING",
+        "holdout_split": false,
+        "mirror_review": false,
+        "critical_core_contradictions": "NOT_MEASURED_NO_INVENTORY"
+      }
+    },
+    "ecosystem": {
+      "accessible_repositories": 66,
+      "public_repositories": 61,
+      "private_or_nonpublic_redacted": 5,
+      "repository_inventory_entries": 21,
+      "remaining_public_repositories": 40,
+      "batch_scanned": 10,
+      "new_unique_repository_entries": 1,
+      "readme_files_read": 9,
+      "readme_missing": 1
+    },
+    "conversation_access": {
+      "current_conversation_files_surfaced": 4,
+      "complete_exports_found": 0,
+      "private_library_files_read": 3,
+      "private_library_status": "PRIVATE_REVIEW_ONLY_NOT_PUBLISHED"
+    },
+    "limbo": {
+      "pr": 122,
+      "state": "OPEN_DRAFT",
+      "ahead_by": 63,
+      "behind_by": 191,
+      "checks": "ACTION_REQUIRED",
+      "crash_incidents": 10,
+      "history_events": 2,
+      "map_nodes": 14,
+      "map_edges": 19,
+      "new_crash_point_inputs": 0,
+      "tuning_candidate": "TUNE-9c166900cc4ad5dd",
+      "tuning_replay": "NOT_RUN"
+    },
+    "wix": {
+      "site": "Logic Engine Research Lab",
+      "url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/",
+      "site_files": 29,
+      "read_access": "CONFIRMED",
+      "write_status": "PENDING_PR_CI_AND_REVIEW"
     }
   }
 }
