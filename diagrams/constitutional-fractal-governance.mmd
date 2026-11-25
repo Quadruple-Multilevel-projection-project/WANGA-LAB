@@ -1,8 +1,31 @@
 flowchart TD
-  SRC["L0 Source / exact span / explicit assumption"] --> U["L0 Typed claim or relation candidate"]
-  U --> F["L1 Typed fragment"]
-  F --> C["L2 Recursive composition candidate"]
-  C --> M["L3 Versioned model candidate"]
+  SRC["L0 Source / exact span / explicit assumption"] --> TERM["S1 Core term / primitive"]
+  TERM --> DEF["S2 Immediate definition / typed attributes"]
+  DEF --> UP["S3 Upper boundary / declared axis"]
+  UP --> LOW["S4 Lower boundary / declared axis"]
+  LOW --> PLACE["S5 Enclosing semantic place — contains S1–S4"]
+
+  subgraph SEM["Semantic Space Contract — every canonical word"]
+    TERM
+    DEF
+    UP
+    LOW
+    PLACE
+    REL["Typed relations / neighboring terms"]
+    TRUTH["Truth conditions + positive / negative / boundary tests"]
+    COUNTER["Counterexamples + contradiction keys"]
+    REG["Versioned semantic registry / provenance"]
+    REL --> PLACE
+    PLACE --> TRUTH
+    TRUTH --> COUNTER
+    REG --> TERM
+    REG --> REL
+  end
+
+  SRC --> REG
+  PLACE --> FRAG["L1 Typed fragment"]
+  FRAG --> COMP["L2 Recursive composition candidate"]
+  COMP --> MODEL["L3 Versioned model candidate"]
 
   subgraph CONSTITUTION["Constitutional invariants — apply at every level"]
     I1["CF-01 Source before conclusion"]
@@ -15,33 +38,34 @@ flowchart TD
     I8["CF-08 Preserve contradictions"]
     I9["CF-09 No statistical shortcut"]
     I10["CF-10 Fail closed: REVIEW / ABSTAIN / HALT"]
+    TAIL["CF-11 NO SEMANTIC TAILS — no unversioned alias, extension, scope drift or incompatible definition"]
   end
 
-  SRC -.-> CONSTITUTION
-  U -.-> CONSTITUTION
-  F -.-> CONSTITUTION
-  C -.-> CONSTITUTION
-  M -.-> CONSTITUTION
+  TERM -.-> CONSTITUTION
+  DEF -.-> CONSTITUTION
+  UP -.-> CONSTITUTION
+  LOW -.-> CONSTITUTION
+  PLACE -.-> CONSTITUTION
+  MODEL -.-> CONSTITUTION
 
-  M --> T["Semantic suites: positive / negative / boundary"]
-  T --> H["Holdout + counterexamples + MIRROR review"]
-  H --> G{"Configured readiness gate"}
-  G -->|Evidence and reviews pass| R["Candidate release-ready for human review"]
-  G -->|Missing evidence| P["NOT_YET_VERIFIED / REVIEW"]
-  G -->|Contradiction or invalid scope| X["OPEN CONFLICT REGISTER"]
-  X --> A["Adjudication record + required test"]
-  A --> G
-
-  P --> LOG["Append-only report / source / commit / test receipt"]
-  R --> LOG
-  LOG --> D["Daily derived diagram + current state"]
-  D --> SRC
+  MODEL --> SUITES["Semantic suites: positive / negative / boundary"]
+  SUITES --> HOLD["Holdout + counterexamples + independent review"]
+  HOLD --> GATE{"Semantic contract gate"}
+  GATE -->|All declared conditions pass| READY["VERIFIED only for declared scope"]
+  GATE -->|Missing definition / stale registry| REVIEW["NOT_YET_VERIFIED / REVIEW"]
+  GATE -->|Contradictory tail or boundary collision| CONFLICT["Quarantine both branches / OPEN CONFLICT"]
+  CONFLICT --> ADJ["Versioned adjudication + required tests"]
+  ADJ --> GATE
+  REVIEW --> LOG["Append-only report / source / commit / test receipt"]
+  READY --> LOG
+  LOG --> DAILY["Daily registry snapshot + derived diagrams"]
+  DAILY --> REG
 
   classDef source fill:#dbeafe,stroke:#2563eb,color:#172554
   classDef candidate fill:#fef3c7,stroke:#d97706,color:#78350f
   classDef verified fill:#dcfce7,stroke:#16a34a,color:#14532d
   classDef stop fill:#ffe4e6,stroke:#e11d48,color:#881337
-  class SRC,U source
-  class F,C,M,T,H candidate
-  class R verified
-  class P,X stop
+  class SRC,REG source
+  class TERM,DEF,UP,LOW,PLACE,REL,TRUTH,COUNTER,FRAG,COMP,MODEL,SUITES,HOLD candidate
+  class READY verified
+  class REVIEW,CONFLICT,TAIL stop
