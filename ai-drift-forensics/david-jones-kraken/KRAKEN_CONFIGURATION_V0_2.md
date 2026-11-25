@@ -179,3 +179,38 @@ No diagram edge proves a live connection. The repository implementation and test
 - **NOT_YET_VERIFIED:** insufficient implementation or evidence.
 
 **Governing rule:** KRAKEN is the execution fabric for a wider cognitive-logic architecture. WANGA's semantic and logical contracts govern workload validity; KRAKEN governs bounded compute execution. Neither architecture may claim results beyond its evidence.
+
+
+## 10. Visual / imaginal transformation track (new scope)
+
+This track formalizes the architect-supplied observation that a letter or shape may be transformed through a visual field operation (for example, a demonstrated Bet-to-Aleph reversal) rather than by geometric translation or numeric letter-combination alone.
+
+**Engineering interpretation boundary:** the first implementation is a reproducible image/representation transformation pipeline. “Light dispersion”, frequency and illumination are modelled as visual/signal transformations unless an optical or photonic physical apparatus is separately specified and tested. No physical optical processor is claimed.
+
+### Pipeline
+`SOURCE IMAGE / GLYPH → CAPTURE + PROVENANCE → NORMALIZE VIEW (without erasing source) → VISUAL FEATURE FIELD → TRANSFORMATION OPERATOR → CANDIDATE GLYPH / FORM → SEMANTIC + LOGIC CHECK → HUMAN REVIEW → REPLAYABLE RECEIPT`
+
+Required operator record:
+- `operator_id`, version, input/output schema;
+- source image hash, crop/region locator, resolution and color-space;
+- transform family (frequency-domain, spatial, illumination/dispersion simulation, morphology, or learned proposal);
+- parameters and deterministic seed where applicable;
+- expected transformation and forbidden transformations;
+- target glyph/form and comparison basis;
+- semantic Place, language/script and source lineage;
+- positive, negative and boundary examples;
+- reproducibility result, reviewer and epistemic status.
+
+### Letter-combination boundary
+- The 231 pair-gate alphabet layer and the 14-gate / 175-term logic-book layer remain separate registries.
+- Image similarity or visual resemblance is a candidate signal, not proof of letter identity, meaning, derivation or semantic truth.
+- A transformed glyph is only a candidate until source, shape constraints, language context, logical role and human review pass.
+- If the transform cannot be reproduced or its semantic interpretation is ambiguous, status is REVIEW / ABSTAIN; do not invent a new canonical combination.
+
+### Relationship to the five-sphere Place model
+The visual field, upper/lower limits and enclosing fifth sphere are represented as a typed Place/context record. The fifth sphere's containment role remains architect-supplied and the exact topology remains OPEN until the schema, axes, boundary predicates and counterexamples are formalized.
+
+### Status
+Visual transformation pipeline: SPECIFIED / NOT_YET_VERIFIED.
+Physical photonic implementation: NOT_SPECIFIED.
+New letter combinations and semantic claims: HYPOTHESIS until independently validated.
