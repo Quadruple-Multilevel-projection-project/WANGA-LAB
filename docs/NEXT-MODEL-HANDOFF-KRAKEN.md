@@ -1,12 +1,34 @@
-# NEXT MODEL HANDOFF — QUANTUM PROCESSOR / KRAKEN
+# NEXT MODEL HANDOFF — WANGA KRAKEN: COGNITIVE LOGIC + HETEROGENEOUS COMPUTE
 
 > EXECUTION NOTE / MANDATORY OUTPUT CONTRACT
 >
 > This file is the handoff. The next model must read it before acting and continue from the repository state. It is not a request for a new proposal.
 
+## 0. NEW GOVERNING SCOPE — READ FIRST
+
+KRAKEN is not limited to a quantum-processor architecture. It is specified as two coordinated tracks:
+
+1. **Cognitive Logic Plane:** Thought Mapping, Naming–Place contract, Thinking Language, typed operations, logical gates, fractal composition and evidence/provenance.
+2. **Heterogeneous Compute Plane:** scheduling and execution across conventional processors, accelerators, simulations and QPU classes only when hardware and run evidence exist.
+
+Read these canonical contracts before acting:
+- `WANGA_SEMANTIC_TRUTH_CONTRACT_V1.md`
+- `WANGA_NAMING_PLACE_NUMERIC_DERIVATION_CONTRACT_V1.md`
+- `ai-drift-forensics/david-jones-kraken/KRAKEN_CONFIGURATION_V0_2.md`
+- `ai-drift-forensics/david-jones-kraken/EVIDENCE_GATE.md`
+
+Required naming-first order:
+`DISTINGUISH → NAME/TYPE → DEFINE PLACE → DEFINE COMPARISON + UNIT → MEASURE/NUMBER`
+
+The compiler/runtime must preserve qualitative relation types and must not compare measurements across incompatible Place/protocol/substrate contexts without an explicit equivalence mapping. Missing grounding means ABSTAIN/HALT.
+
+The quantum reinterpretations in the Naming–Place contract are hypotheses/interpretations, not established physics. Do not claim that naming physically causes collapse or that the quantum measurement problem has been experimentally solved.
+
+The 36 dual configurations / 72 QPU positions remain an internal hardware requirement marked NOT_YET_VERIFIED. No physical build, quantum advantage or production readiness is implied.
+
 ## 1. OPERATING DIRECTIVE
 
-Continue the concrete build of the Quantum Processor / Kraken prototype.
+Continue the concrete build of the KRAKEN cognitive-logic and heterogeneous-compute architecture.
 
 Do not restart the discussion.
 Do not replace execution with a high-level architecture proposal.
@@ -141,12 +163,13 @@ If a field has no evidence, say so explicitly. Do not manufacture a value.
 If this model/session ends, the next model must:
 
 1. read this file;
-2. inspect the current Git state;
-3. inspect the latest implementation and evidence;
-4. continue from the existing state;
-5. apply the mandatory output filter before every handoff;
-6. preserve unresolved contradictions and evidence gaps;
-7. avoid restarting analysis unless the repository state requires it.
+2. read the four governing contracts listed in section 0;
+3. inspect the current Git state;
+4. inspect the latest implementation and evidence;
+5. continue from the existing state;
+6. apply the mandatory output filter before every handoff;
+7. preserve unresolved contradictions and evidence gaps;
+8. avoid restarting analysis unless the repository state requires it.
 
 The next model is expected to execute, test, document, and verify—not merely summarize.
 
