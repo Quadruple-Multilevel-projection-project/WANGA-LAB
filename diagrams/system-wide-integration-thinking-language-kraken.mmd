@@ -1,90 +1,98 @@
 ---
-title: AI231 / WANGA — Integrated Thinking Language + Kraken Architecture
-status: Mixed — existing bounded modules, specified concepts, and proposed interfaces are distinguished
+title: WANGA / AI231 — Naming-First Thinking Language + Expanded KRAKEN
+status: Mixed — existing repository modules, specified contracts and proposed integrations distinguished
 audit_date: 2026-11-25
 ---
 flowchart TB
-  subgraph INPUT["1. Thought and source intake"]
-    RAW["Human / model input"]
-    SOURCES["Neural Wikipedia + source registry"]
-    SNAP["Thought Snapshot\nimmutable source, time, context, state"]
+  subgraph IN["1. Source and thought intake"]
+    RAW["Human / model / environment input"]
+    SRC["Source registry + Neural Wikipedia"]
+    SNAP["Thought Snapshot\nsource · identity · context · version · hash"]
     RAW --> SNAP
-    SOURCES --> SNAP
+    SRC --> SNAP
   end
 
-  subgraph THINK["2. Thought Mapping — cognitive state model"]
-    F0["F0 / Pre-Thought Field\narchitect-specified concept"]
-    MAP1["Logical map\nstructures, relations, operations"]
-    MAP2["Book of Logic map\nterms attached after structure extraction"]
-    MAP3["Semantic / word map\nmeanings, contexts, boundaries"]
-    MAP4["Letters / agents map\nTa'amim · Nekudot · Tagin · Otiyot"]
-    SPHERES["Five-sphere spatial boundary model\nupper / lower limits · fifth sphere contains all\nplace/context definition — schema pending"]
-    F0 --> MAP1
-    MAP1 --> MAP2 --> MAP3 --> MAP4
-    SPHERES --> MAP3
-    MAP1 --> SPHERES
+  subgraph MAP["2. Thought Mapping"]
+    DIST["Distinction + entity identity"]
+    REL["Qualitative relations\ncausal · structural · temporal · containment"]
+    PLACE["Place / context\nobserver B · substrate · protocol Π\nboundary κ · persistence ρ"]
+    SPHERE["Five-sphere model\nupper/lower boundaries · fifth contains all\nformal schema pending"]
+    COG["Four cognitive maps\nlogic · Book of Logic · semantic/word · letters/agents"]
+    SNAP --> DIST --> REL --> PLACE
+    SPHERE --> PLACE
+    REL --> COG
+    PLACE --> COG
   end
 
-  subgraph LANGUAGE["3. Thinking Language — machine-checkable representation"]
-    AST["Typed thought graph / AST\nentities · relations · scope · provenance"]
-    OPS["Thought operations\nROTATE · PROJECT · BRAID · READOUT"]
-    LNL["LNL compiler / language contract"]
-    SEM["Semantic truth and contradiction gates\nLOCK · ABSTAIN · HALT"]
-    AST --> OPS --> LNL --> SEM
+  subgraph LANG["3. Thinking Language + Numeric Derivation Contract"]
+    NAME["Name / type / provenance"]
+    TYPED["Typed thought graph / AST"]
+    OPS["ROTATE · PROJECT · BRAID · READOUT"]
+    NUMGATE{"Numeric derivation preconditions met?\nidentity · Place · unit · comparison · persistence"}
+    MEASURE["Measurement receipt\nvalue · uncertainty · protocol · source"]
+    ABSTAIN["ABSTAIN / HALT\nmissing or incompatible grounding"]
+    NAME --> TYPED --> OPS --> NUMGATE
+    NUMGATE -->|yes| MEASURE
+    NUMGATE -->|no| ABSTAIN
   end
 
-  subgraph LOGIC["4. Deterministic logic and fractal composition"]
+  subgraph LOGIC["4. Logic and fractal validation"]
+    LNL["Logic-Native Language / compiler"]
     KERNEL["Symbolic Logic Kernel"]
     FORMAL["Typed formal checks"]
-    FRACTAL["Fractal composer\nL0 → L1 → L2 → L3"]
-    PACK["Versioned Logic Package\ninvariants · source lineage · tests"]
-    KERNEL --> FORMAL --> FRACTAL --> PACK
+    FRACTAL["Fractal Composer"]
+    PACKAGE["Validated workload package\ninvariants · lineage · tests · Place"]
+    LNL --> KERNEL --> FORMAL --> FRACTAL --> PACKAGE
   end
 
-  subgraph KRAKEN["5. KRAKEN — heterogeneous compute orchestration"]
-    BOX["David Jones Box\nintegration boundary"]
-    FABRIC["KRAKEN orchestration fabric\nnot one processor"]
-    POOL["Candidate heterogeneous pool\nCPU · GPU · FPGA · ASIC · AI/NPU\nQPU classes only when evidenced"]
-    SIM["Simulation / scheduling / resource telemetry"]
-    HW["Physical processor interfaces\nNOT_YET_VERIFIED"]
-    BOX --> FABRIC --> POOL
-    POOL --> SIM
-    POOL -.-> HW
+  subgraph KRAKEN["5. KRAKEN — expanded architecture"]
+    COGPLANE["Cognitive Logic Plane\naccepts typed, grounded workloads"]
+    ROUTER["Capability-aware workload router"]
+    FABRIC["Heterogeneous compute fabric"]
+    CLASSICAL["CPU · GPU · FPGA · ASIC · DSP · NPU"]
+    SIM["Simulation / emulation"]
+    QPU["QPU classes / physical hardware\nNOT_YET_VERIFIED until evidenced"]
+    TELEMETRY["Scheduling · latency · utilization\nerror · power · provenance"]
+    COGPLANE --> ROUTER --> FABRIC
+    FABRIC --> CLASSICAL
+    FABRIC --> SIM
+    FABRIC -.-> QPU
+    CLASSICAL --> TELEMETRY
+    SIM --> TELEMETRY
+    QPU -.-> TELEMETRY
   end
 
-  subgraph CONTROL["6. Multi-model orchestration and evidence"]
-    ROUTER["Capability-aware model router"]
-    SWARM["ARK-Swarm / agent roles"]
-    LEDGER["Shared task + evidence ledger"]
+  subgraph EVID["6. Evidence, agents and governance"]
+    SWARM["ARK-Swarm / model-agent roles"]
+    LEDGER["Shared task and evidence ledger"]
     VERIFY["Independent verification / replay"]
-    ROUTER --> SWARM --> LEDGER --> VERIFY
+    AUDIT["Audit · integrity · governance"]
+    SWARM --> LEDGER --> VERIFY --> AUDIT
   end
 
-  subgraph OUTPUT["7. Readout, action, and feedback"]
-    READOUT["Semantic readout\nanswer / plan / action proposal"]
-    APPROVAL["Human approval + safety boundary"]
-    RESULT["Observed result / execution evidence"]
-    FEEDBACK["Next thought snapshot / versioned learning"]
-    READOUT --> APPROVAL --> RESULT --> FEEDBACK
+  subgraph OUT["7. Readout and feedback"]
+    READOUT["Readout / recommendation / action proposal"]
+    HUMAN["Human approval + safety boundary"]
+    RESULT["Observed result + evidence"]
+    NEXT["Next verified thought snapshot"]
+    READOUT --> HUMAN --> RESULT --> NEXT
   end
 
-  SNAP --> THINK
-  MAP4 --> AST
-  SEM --> KERNEL
-  PACK --> ROUTER
-  PACK --> FABRIC
-  FABRIC --> SIM
-  SIM --> LEDGER
-  SWARM --> FABRIC
+  COG --> NAME
+  MEASURE --> LNL
+  ABSTAIN --> KERNEL
+  PACKAGE --> COGPLANE
+  PACKAGE --> SWARM
+  TELEMETRY --> LEDGER
   VERIFY --> READOUT
-  VERIFY --> SEM
-  FEEDBACK --> SNAP
+  VERIFY --> KERNEL
+  NEXT --> SNAP
 
   classDef existing fill:#dbeafe,stroke:#2563eb,color:#172554
   classDef specified fill:#fef3c7,stroke:#d97706,color:#78350f
   classDef proposed fill:#ffedd5,stroke:#ea580c,color:#7c2d12
   classDef gate fill:#fce7f3,stroke:#db2777,color:#831843
-  class RAW,SOURCES,SNAP,KERNEL,FORMAL,FRACTAL,SWARM existing
-  class F0,MAP1,MAP2,MAP3,MAP4,SPHERES,OPS specified
-  class AST,LNL,SEM,PACK,BOX,FABRIC,POOL,SIM,HW,ROUTER,LEDGER,READOUT,APPROVAL,RESULT,FEEDBACK proposed
-  class VERIFY gate
+  class RAW,SRC,SNAP,LNL,KERNEL,FORMAL,FRACTAL,SWARM,AUDIT existing
+  class DIST,REL,PLACE,SPHERE,COG,NAME,OPS specified
+  class TYPED,MEASURE,COGPLANE,ROUTER,FABRIC,CLASSICAL,SIM,QPU,TELEMETRY,LEDGER,READOUT,HUMAN,RESULT,NEXT,PACKAGE proposed
+  class NUMGATE,ABSTAIN,VERIFY gate
