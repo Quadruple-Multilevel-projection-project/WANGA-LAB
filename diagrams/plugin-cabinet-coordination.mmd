@@ -10,25 +10,28 @@ flowchart TD
   M2 --> R
   M3 --> R
   MT --> R
-  R --> CF["Constitutional Fractal Gate: source / status / type / scope / contradiction"]
+  R --> LEX["Versioned Semantic Registry — shared canonical terms"]
+  LEX --> SP["Five-Sphere Contract: S1 core → S2 definition → S3 upper → S4 lower → S5 enclosing place"]
+  SP --> SG["Semantic Gate: truth conditions / typed relations / boundaries / tests"]
+  SG --> CF["Constitutional Fractal Gate: source / status / type / scope / anti-tail / contradiction"]
   CF --> V["Evidence & Provenance Review"]
   V --> Q{"Status"}
-  Q -->|Supported| OK["Verified / accepted finding"]
-  Q -->|Incomplete| U["Assessment / hypothesis / pending"]
-  Q -->|Conflict| X["Conflict register — preserve both sides"]
-  Q -->|Unsafe or invalid| H["ABSTAIN / HALT"]
+  Q -->|Supported within declared scope| OK["Verified / accepted finding"]
+  Q -->|Incomplete or stale registry| U["Assessment / hypothesis / pending"]
+  Q -->|Conflicting semantic tails| X["Quarantine both branches / conflict register"]
+  Q -->|Invalid contract or missing mandatory evidence| H["ABSTAIN / HALT"]
   OK --> S["CURRENT-STATE + task ledger"]
   U --> S
   X --> S
   H --> S
-  S --> DLY["Daily summary + updated Mermaid diagram"]
+  S --> DLY["Daily summary + updated Mermaid diagrams + registry version"]
   DLY --> B
 
   classDef core fill:#dbeafe,stroke:#2563eb,color:#172554
   classDef review fill:#dcfce7,stroke:#16a34a,color:#14532d
   classDef pending fill:#fef3c7,stroke:#d97706,color:#78350f
   classDef stop fill:#ffe4e6,stroke:#e11d48,color:#881337
-  class A,B,C,D,S,DLY core
+  class A,B,C,D,S,DLY,LEX core
   class V,OK review
-  class U,X pending
-  class H stop
+  class U,SP,SG pending
+  class X,H stop
