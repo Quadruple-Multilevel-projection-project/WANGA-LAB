@@ -196,7 +196,7 @@ class WixSiteEvidenceAuditorBlueprintTests(unittest.TestCase):
         self.assertIn("isolated_page_candidate", expected)
         self.assertIn("no_navigation_expected", expected)
         self.assertIn("unresolved_insufficient_context", expected)
-        self.assertIn("not automatically", expected)
+        self.assertIn("do not automatically edit", expected)
 
 
 if __name__ == "__main__":

@@ -118,7 +118,7 @@
     {
       "id": "AT-WIX-010",
       "description": "Classify a page with no navigation links against the site-wide HTML page count.",
-      "expected": "Return ISOLATED_PAGE_CANDIDATE only when the site has multiple HTML pages; return NO_NAVIGATION_EXPECTED for a one-page site and UNRESOLVED_INSUFFICIENT_CONTEXT when the page count is missing. Do not treat a candidate as a confirmed defect or edit automatically; require journey-context review and prepare a draft only."
+      "expected": "Return ISOLATED_PAGE_CANDIDATE only when the site has multiple HTML pages; return NO_NAVIGATION_EXPECTED for a one-page site and UNRESOLVED_INSUFFICIENT_CONTEXT when the page count is missing. Do not automatically edit or classify the candidate as a confirmed defect; require journey-context review and prepare a draft only."
     }
   ],
   "failure_behavior": "Fail closed when the site identity, source snapshot, route behavior, permission scope or evidence is incomplete. Return BLOCKED or Unresolved rather than guessing. Rollback: discard the generated draft or revert the dedicated branch commit. This agent never performs a Wix write, so production rollback is not required. If the site-context and static-page inventory publication signals disagree, return STATUS_CONFLICT and block public/live status claims; do not coerce missing evidence to False.",
