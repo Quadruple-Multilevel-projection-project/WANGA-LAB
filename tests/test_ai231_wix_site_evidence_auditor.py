@@ -13,6 +13,7 @@ from core.wix_link_auditor import (
     classify_publication_state,
     NavigationStatus,
     classify_navigation_presence,
+    audit_page_metadata,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -201,3 +202,44 @@ class WixSiteEvidenceAuditorBlueprintTests(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main()
+
+
+class WixPageMetadataAuditorTests(unittest.TestCase):
+    def test_missing_canonical_is_detected_without_network(self):
+        html = '<html><head><title>About</title><meta name="description" content="About page"></head></html>'
+        result = audit_page_metadata(html, expected_canonical="https://example.test/about.html")
+        self.assertEqual(result["canonical_status"], "MISSING")
+        self.assertEqual(result["canonical_count"], 0)
+
+    def test_single_matching_https_canonical_is_present(self):
+        expected = "https://example.test/about.html"
+        html = f'<html><head><link rel="canonical" href="{expected}"></head></html>'
+        result = audit_page_metadata(html, expected_canonical=expected)
+        self.assertEqual(result["canonical_status"], "PRESENT")
+        self.assertEqual(result["canonical_href"], expected)
+
+    def test_non_https_canonical_is_invalid(self):
+        result = audit_page_metadata('<link rel="canonical" href="http://example.test/about.html">')
+        self.assertEqual(result["canonical_status"], "INVALID")
+
+    def test_duplicate_canonical_tags_are_reported(self):
+        html = (
+            '<link rel="canonical" href="https://example.test/a">'
+            '<link rel="canonical" href="https://example.test/b">'
+        )
+        result = audit_page_metadata(html)
+        self.assertEqual(result["canonical_status"], "DUPLICATE")
+        self.assertEqual(result["canonical_count"], 2)
+
+    def test_canonical_must_match_orchestrator_supplied_expected_url(self):
+        html = '<link rel="canonical" href="https://example.test/old.html">'
+        result = audit_page_metadata(
+            html,
+            expected_canonical="https://example.test/new.html",
+        )
+        self.assertEqual(result["canonical_status"], "MISMATCH")
+
+    def test_blueprint_declares_canonical_metadata_acceptance(self):
+        blueprint = json.loads(BLUEPRINT_PATH.read_text(encoding="utf-8"))
+        acceptance_ids = {item["id"] for item in blueprint["acceptance_tests"]}
+        self.assertIn("AT-WIX-011", acceptance_ids)
