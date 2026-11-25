@@ -1,0 +1,141 @@
+{
+  "schema_version": "1.0.0",
+  "project": "AI231/WANGA Plugin Configuration Factory",
+  "status": "INITIAL_REGISTRY_SKELETON_NOT_RUNTIME_VERIFIED",
+  "canonical_repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+  "source_authority": {
+    "term_index": "milaot-hahigayon/INDEX.md",
+    "term_orchestrator": "milaot-hahigayon/ORCHESTRATOR.md",
+    "master_map_contract": "docs/LOGIC_FACTORY/MASTER_MAP_INTEGRATION_CONTRACT.md",
+    "map_registry": "docs/LOGIC_FACTORY/map_registry.v1.json",
+    "portability_contract": "contracts/SYS-PORTABILITY-001.md"
+  },
+  "component_types": [
+    "PLUGIN",
+    "MCP_SERVER",
+    "MCP_TOOL",
+    "AGENT_SKILL",
+    "AGENT",
+    "PROVIDER_ADAPTER",
+    "RUNTIME",
+    "DATA_STORE",
+    "IDENTITY",
+    "TRIGGER",
+    "OTHER"
+  ],
+  "configuration_families": [
+    {
+      "family_id": "PLUGIN_ONLY",
+      "description": "Single plugin configuration with documented capability and permission boundary",
+      "status": "SCHEMA_DEFINED"
+    },
+    {
+      "family_id": "MCP_CONNECTIVITY",
+      "description": "MCP server, tool, transport, auth and client compatibility configuration",
+      "status": "SCHEMA_DEFINED"
+    },
+    {
+      "family_id": "AGENT_TOOLCHAIN",
+      "description": "Agent identity, skills, tools, policy and runtime composition",
+      "status": "SCHEMA_DEFINED"
+    },
+    {
+      "family_id": "PROVIDER_PORTABILITY",
+      "description": "Replaceable provider adapters and tested fallback paths",
+      "status": "SCHEMA_DEFINED"
+    },
+    {
+      "family_id": "NESTED_COMPOSITION",
+      "description": "Configuration assembled from independently versioned sub-configurations",
+      "status": "SCHEMA_DEFINED"
+    },
+    {
+      "family_id": "LANGUAGE_DRIVEN_CONFIGURATION",
+      "description": "Natural-language request mapped to source-linked logic terms and typed configuration graph",
+      "status": "DESIGN_ONLY"
+    }
+  ],
+  "agents": [
+    {
+      "agent_id": "CATALOG-01",
+      "role": "Provider and plugin capability discovery",
+      "status": "ROLE_SPECIFIED"
+    },
+    {
+      "agent_id": "CAPABILITY-01",
+      "role": "Capability and interface normalization",
+      "status": "ROLE_SPECIFIED"
+    },
+    {
+      "agent_id": "LOGIC-MAP-01",
+      "role": "175-term source mapping and provenance",
+      "status": "ROLE_SPECIFIED"
+    },
+    {
+      "agent_id": "COMPOSER-01",
+      "role": "Recursive configuration composition",
+      "status": "ROLE_SPECIFIED"
+    },
+    {
+      "agent_id": "COMPILER-01",
+      "role": "Provider-specific manifest generation through adapters",
+      "status": "ROLE_SPECIFIED"
+    },
+    {
+      "agent_id": "SECURITY-01",
+      "role": "Permissions, secrets and trust-boundary review",
+      "status": "ROLE_SPECIFIED"
+    },
+    {
+      "agent_id": "PORTABILITY-01",
+      "role": "Provider substitution and exit testing",
+      "status": "ROLE_SPECIFIED"
+    },
+    {
+      "agent_id": "BENCHMARK-01",
+      "role": "Comparative research and measurements",
+      "status": "ROLE_SPECIFIED"
+    },
+    {
+      "agent_id": "VERIFIER-01",
+      "role": "Independent configuration verification",
+      "status": "ROLE_SPECIFIED"
+    },
+    {
+      "agent_id": "LANGUAGE-01",
+      "role": "Shared agent-language rendering and term traceability",
+      "status": "ROLE_SPECIFIED"
+    }
+  ],
+  "registered_components": [],
+  "registered_configurations": [],
+  "experiments": [],
+  "status_vocabulary": [
+    "DISCOVERED",
+    "SOURCE_CHECKED",
+    "SCHEMA_VALIDATED",
+    "SECURITY_REVIEWED",
+    "TESTED",
+    "VERIFIED",
+    "ASSESSMENT",
+    "HYPOTHESIS",
+    "UNRESOLVED",
+    "BLOCKED",
+    "RETIRED"
+  ],
+  "rules": [
+    "No invented endpoints, permission scopes, capability claims, limits or source-term meanings.",
+    "Every configuration edge requires an exact interface contract and evidence reference.",
+    "Nested configurations must be version-pinned and provenance-linked.",
+    "Cycles are blocked unless bounded recursion is explicitly contracted and tested.",
+    "No numeric optimization weights unless explicitly sourced and approved.",
+    "Provider independence follows contracts/SYS-PORTABILITY-001.md.",
+    "A schema-valid configuration is not a live or production-verified integration."
+  ],
+  "action_signature": {
+    "Timestamp": "2026-11-20T00:59:46.207438+00:00",
+    "Contract_Start_Time": "2026-11-16T05:28:32+00:00",
+    "Action_ID": "ACT-20261120-PLUGIN-CONFIGURATION-FACTORY-001",
+    "SHA256": "eb3bce9a13961a119d17dab98525364f68085c7eff0f2cc0fbd8adc69f7d2cdb"
+  }
+}
