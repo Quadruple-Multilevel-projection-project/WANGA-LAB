@@ -1,0 +1,47 @@
+flowchart TD
+  SRC["L0 Source / exact span / explicit assumption"] --> U["L0 Typed claim or relation candidate"]
+  U --> F["L1 Typed fragment"]
+  F --> C["L2 Recursive composition candidate"]
+  C --> M["L3 Versioned model candidate"]
+
+  subgraph CONSTITUTION["Constitutional invariants — apply at every level"]
+    I1["CF-01 Source before conclusion"]
+    I2["CF-02 Preserve epistemic status"]
+    I3["CF-03 Type every relation"]
+    I4["CF-04 Preserve types and scope"]
+    I5["CF-05 No silent premises/rules"]
+    I6["CF-06 Provenance and deterministic record"]
+    I7["CF-07 Bounded recursion"]
+    I8["CF-08 Preserve contradictions"]
+    I9["CF-09 No statistical shortcut"]
+    I10["CF-10 Fail closed: REVIEW / ABSTAIN / HALT"]
+  end
+
+  SRC -.-> CONSTITUTION
+  U -.-> CONSTITUTION
+  F -.-> CONSTITUTION
+  C -.-> CONSTITUTION
+  M -.-> CONSTITUTION
+
+  M --> T["Semantic suites: positive / negative / boundary"]
+  T --> H["Holdout + counterexamples + MIRROR review"]
+  H --> G{"Configured readiness gate"}
+  G -->|Evidence and reviews pass| R["Candidate release-ready for human review"]
+  G -->|Missing evidence| P["NOT_YET_VERIFIED / REVIEW"]
+  G -->|Contradiction or invalid scope| X["OPEN CONFLICT REGISTER"]
+  X --> A["Adjudication record + required test"]
+  A --> G
+
+  P --> LOG["Append-only report / source / commit / test receipt"]
+  R --> LOG
+  LOG --> D["Daily derived diagram + current state"]
+  D --> SRC
+
+  classDef source fill:#dbeafe,stroke:#2563eb,color:#172554
+  classDef candidate fill:#fef3c7,stroke:#d97706,color:#78350f
+  classDef verified fill:#dcfce7,stroke:#16a34a,color:#14532d
+  classDef stop fill:#ffe4e6,stroke:#e11d48,color:#881337
+  class SRC,U source
+  class F,C,M,T,H candidate
+  class R verified
+  class P,X stop
