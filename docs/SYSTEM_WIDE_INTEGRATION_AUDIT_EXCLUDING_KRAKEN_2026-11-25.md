@@ -63,6 +63,10 @@ QUALIA defines a proposed protected-foundation / commercial-output distinction a
 ### G. Robotics and physical systems
 The robotics and nanomathematics repository labels do not establish a working hardware control stack, robot runtime, molecular material process or validated physical substrate. Treat robotics as a separate integration track until code, simulation, hardware interfaces, safety controls and test evidence are located.
 
+
+
+The current WANGA-LAB repository diagram also identifies an operational evidence/forensics path: insurer intake triage and activation queue; observation capture and event collectors; drift analysis; audit generation; SHA-256 integrity chain; evidence packaging; independent verification; timestamping and external anchoring; governance review; and a WANGA runtime/worker contract. GitDiagram marks several connections as dashed/inferred rather than source-confirmed calls. Treat those dashed links as candidate integration paths until direct call paths and tests are inspected. This operational evidence path is a distinct strength of WANGA-LAB and should be integrated with, not conflated with, the Logic Wiki/fractal research path.
+
 ## 4. Unified target architecture (excluding Kraken)
 
 This is a gated pipeline, not one unrestricted agent:
