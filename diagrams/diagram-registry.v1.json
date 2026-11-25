@@ -1,0 +1,92 @@
+{
+  "schema_version": "1.0",
+  "product": "AI Logic Factory — Unified Semantic & Analytical Processor",
+  "repository": "Quadruple-Multilevel-projection-project/WANGA-LAB",
+  "entrypoint": "AI_LOGIC_FACTORY_DIAGRAM_INDEX.md",
+  "model_guide": "docs/DIAGRAM_CATALOG_AND_MODEL_READING_GUIDE_V1.md",
+  "handoff_protocol": "docs/AI_MODEL_HANDOFF_PROTOCOL_V1.md",
+  "status_vocabulary": [
+    "EXISTING",
+    "SPECIFIED",
+    "PROPOSED",
+    "NOT_YET_VERIFIED",
+    "VERIFIED",
+    "SIMULATED",
+    "ABSTAIN",
+    "HALT"
+  ],
+  "layers": [
+    {
+      "id": "L1",
+      "name": "Language & Contract",
+      "responsibility": "Terms, typed relations, distinctions, Place, semantic constraints, evidence and numeric derivation.",
+      "sources": [
+        "WANGA_NAMING_PLACE_NUMERIC_DERIVATION_CONTRACT_V1.md",
+        "WANGA_SEMANTIC_TRUTH_CONTRACT_V1.md"
+      ]
+    },
+    {
+      "id": "L2",
+      "name": "Analytics & Visualization",
+      "responsibility": "Text/glyph/image intake, snapshots, visual transforms, pattern analysis and candidate review.",
+      "status": "SPECIFIED / NOT_YET_VERIFIED"
+    },
+    {
+      "id": "L3",
+      "name": "KRAKEN",
+      "responsibility": "Bounded fractal composition, state transitions, workload admission and heterogeneous compute orchestration.",
+      "sources": [
+        "ai-drift-forensics/david-jones-kraken/KRAKEN_CONFIGURATION_V0_2.md"
+      ]
+    },
+    {
+      "id": "L4",
+      "name": "Orchestration & Product",
+      "responsibility": "Workbench, model cabinet, agents, APIs, knowledge registry, audit, review and KPI.",
+      "sources": [
+        "docs/AI_LOGIC_FACTORY_PRODUCT_ARCHITECTURE_V1.md",
+        "diagrams/AI_LOGIC_FACTORY_PRODUCT_DELIVERY_MAP_V1.mmd"
+      ]
+    }
+  ],
+  "diagrams": [
+    {
+      "id": "D-00",
+      "path": "AI_LOGIC_FACTORY_DIAGRAM_INDEX.md",
+      "kind": "navigation",
+      "status": "EXISTING"
+    },
+    {
+      "id": "D-01",
+      "path": "diagrams/AI_LOGIC_FACTORY_MASTER_LINK_MAP_V1.mmd",
+      "kind": "master-mermaid",
+      "status": "SPECIFIED / NOT_YET_VERIFIED"
+    },
+    {
+      "id": "D-02",
+      "path": "ai-drift-forensics/david-jones-kraken/KRAKEN_COGNITIVE_LOGIC_FABRIC_V0_2.mmd",
+      "kind": "kraken-mermaid",
+      "status": "EXISTING / NOT_YET_VERIFIED"
+    },
+    {
+      "id": "D-03",
+      "path": "diagrams/AI_LOGIC_FACTORY_PRODUCT_DELIVERY_MAP_V1.mmd",
+      "kind": "product-delivery-mermaid",
+      "status": "EXISTING / NOT_YET_VERIFIED"
+    },
+    {
+      "id": "D-04",
+      "path": "diagrams/diagram-registry.v1.json",
+      "kind": "machine-readable-registry",
+      "status": "EXISTING"
+    }
+  ],
+  "invariants": [
+    "14 logic gates / 175 logic terms are distinct from 231 letter-pair gates.",
+    "Visual resemblance is not semantic identity.",
+    "Simulation is not physical QPU execution.",
+    "A diagram edge does not prove a deployed API or runtime integration.",
+    "A target metric is not a measured result.",
+    "Contracts govern; diagrams explain and link."
+  ]
+}
