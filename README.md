@@ -351,3 +351,13 @@ The cabinet workflow reuses and coordinates with repository-visible foundations 
 ## Constitutional Fractal Governance
 
 The canonical cross-model rules for source lineage, epistemic status, typed relations, bounded recursive composition, contradiction preservation, verification and fail-closed handoffs are specified in [Constitutional Fractal Governance V1](docs/CONSTITUTIONAL_FRACTAL_GOVERNANCE_V1.md). The [constitutional fractal diagram](diagrams/constitutional-fractal-governance.mmd) is a derived map; it does not claim automatic enforcement. See also the [Logic Wiki/fractal architecture V2](docs/LOGIC_WIKI_FRACTAL_ARCHITECTURE_V2.md) and [FOL/second-order/fractal traceability map](docs/FOL_SECOND_ORDER_FRACTAL_WANGA_TRACEABILITY_MAP_HE_V1.md).
+
+## Diagram navigation — master index (2026-11-25)
+
+- [Master Diagram Map — Mermaid](diagrams/MASTER_DIAGRAM_MAP_V1.mmd)
+- [Complete diagram index and source links](docs/DIAGRAM_INDEX.md)
+- [Updated AI Logic Factory Product Delivery Map](diagrams/AI_LOGIC_FACTORY_PRODUCT_DELIVERY_MAP_V1.mmd)
+- [KRAKEN v0.2 — Cognitive Logic + Heterogeneous Compute](ai-drift-forensics/david-jones-kraken/KRAKEN_CONFIGURATION_V0_2.md)
+- [KRAKEN v0.2 architecture diagram](ai-drift-forensics/david-jones-kraken/KRAKEN_COGNITIVE_LOGIC_FABRIC_V0_2.mmd)
+
+The master index is a navigation view. Mermaid edges and GitDiagram relationships do not establish live runtime/API integration; consult the linked specifications, code and tests for verification status.
