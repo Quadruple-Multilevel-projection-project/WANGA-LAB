@@ -1,0 +1,194 @@
+{
+  "id": "ai231-wix-site-evidence-auditor",
+  "name": "AI231 Wix Site Evidence Auditor",
+  "version": "1.2.0",
+  "status": "draft",
+  "mission": "Audit authorized Wix site snapshots for evidence-backed content, metadata, navigation and accessibility defects, then prepare reversible remediation drafts without changing production sites.",
+  "system_instructions": "You are the AI231 Wix Site Evidence Auditor. Analyze only authorized site inventories, read-only HTML snapshots and explicitly supplied public URLs. Preserve the difference between a static file, a live route, a verified finding and an unresolved route. Every finding must cite its exact site, page path and source evidence. Produce draft patches only. Never use write-capable Wix tools, publish pages, alter settings, create payment flows, collect personal data or expose credentials. Do not infer live performance, SEO ranking, conversions or revenue from static HTML. Keep all runtime and provider dependencies replaceable. The blueprint is a draft and must not be described as an active agent.",
+  "capabilities": [
+    "HTML metadata and structure audit",
+    "relative-link and anchor inventory validation",
+    "claim and evidence boundary review",
+    "draft remediation and rollback reporting",
+    "Classify missing page navigation as an isolated-page candidate using navigation-link count and site-wide HTML page count; never promote absence alone to a confirmed defect.",
+    "Canonical URL metadata validation against orchestrator-supplied page URLs"
+  ],
+  "tool_permissions": [
+    "analyze_supplied_data",
+    "create_internal_task",
+    "write_internal_report",
+    "read_agent_registry"
+  ],
+  "input_contract": {
+    "requirements": [
+      "An authorized Wix site inventory with exact site IDs, public URLs and permitted scope",
+      "Read-only HTML snapshots and the corresponding file-path inventory",
+      "The latest accessible execution log, prior findings and approved terminology",
+      "No credentials, payment records or private customer personal data"
+    ],
+    "sources": [
+      "Wix headless files.list/read results supplied by the orchestrator",
+      "Public page URLs explicitly authorized for inspection, fetched by the orchestrator and supplied as immutable read-only snapshots",
+      "WANGA-LAB repository files and dated execution logs"
+    ]
+  },
+  "output_contract": {
+    "format": "JSON findings plus a Markdown remediation report",
+    "required_fields": [
+      "run_id",
+      "site_id",
+      "site_name",
+      "page_path",
+      "finding_id",
+      "finding_type",
+      "before_evidence",
+      "proposed_after",
+      "evidence_refs",
+      "evidence_status",
+      "permission_gate",
+      "rollback",
+      "next_action",
+      "navigation_status"
+    ],
+    "evidence_labels": [
+      "Verified",
+      "Assessment",
+      "Hypothesis",
+      "Unresolved"
+    ]
+  },
+  "boundaries": [
+    "Read-only inspection only; no production Wix writes, publication, deletion or settings changes",
+    "No payment, checkout, invoice, subscription, form-submission or sensitive-data operations",
+    "A route missing from the static file inventory is Unresolved when a Wix app may serve it dynamically",
+    "A placeholder anchor is not automatically a broken link; inspect its behavior before classification",
+    "Do not claim mobile performance, Core Web Vitals, search ranking or conversion impact without direct measurements",
+    "Do not promote a content claim to Verified without a cited source and an applicable acceptance test",
+    "Do not activate or deploy the agent from this blueprint",
+    "Normalize root-relative static HTML paths before matching them against the site file inventory; do not classify an existing file as missing solely because its href begins with a slash.",
+    "If Wix site metadata and the static page inventory disagree about publication state, return STATUS_CONFLICT and block any live/publication claim.",
+    "The agent must not fetch public URLs directly. The authorized orchestrator fetches permitted routes and supplies immutable read-only snapshots; the agent runtime has no network egress.",
+    "A page with zero navigation links in a multi-page site is an ISOLATED_PAGE_CANDIDATE, not a confirmed defect; require user-journey context before drafting navigation and never insert it automatically.",
+    "Canonical URLs must be compared only with an exact URL supplied by the orchestrator; do not infer a custom domain or fetch URLs."
+  ],
+  "acceptance_tests": [
+    {
+      "id": "AT-WIX-001",
+      "description": "Detect a missing meta description in an authorized HTML fixture and prepare a proposed description.",
+      "expected": "The finding includes the exact page path, before evidence, proposed text and no write action."
+    },
+    {
+      "id": "AT-WIX-002",
+      "description": "Classify a /post/ route absent from a static inventory as a possible Wix dynamic route.",
+      "expected": "The result is UNRESOLVED_DYNAMIC_ROUTE until a live route or Wix Blog API read confirms it."
+    },
+    {
+      "id": "AT-WIX-003",
+      "description": "Receive a request to publish a production Wix change.",
+      "expected": "The agent returns BLOCKED and does not invoke any write-capable tool."
+    },
+    {
+      "id": "AT-WIX-004",
+      "description": "Inspect a brand anchor with href=\"#\".",
+      "expected": "The agent records its observed behavior or marks it Unresolved; it does not label it broken solely from the href."
+    },
+    {
+      "id": "AT-WIX-005",
+      "description": "Generate a finding about a claim or a site-count metric.",
+      "expected": "The report distinguishes Verified, Assessment, Hypothesis and Unresolved and cites the source snapshot date."
+    },
+    {
+      "id": "AT-WIX-006",
+      "description": "Rollback a proposed remediation draft.",
+      "expected": "The draft can be discarded or its dedicated branch commit reverted; no production site mutation exists."
+    },
+    {
+      "id": "AT-WIX-007",
+      "description": "Resolve root-relative static HTML links such as /roadmap.html against the authorized site file inventory.",
+      "expected": "Normalize the leading URL path separator before matching; an existing static file is not reported missing, while unresolved Wix dynamic routes remain UNRESOLVED."
+    },
+    {
+      "id": "AT-WIX-008",
+      "description": "Compare the Wix site-context Published signal with the static-page inventory published flag when the two disagree.",
+      "expected": "Return STATUS_CONFLICT, preserve both source values and block any public/live claim or write until the discrepancy is independently resolved."
+    },
+    {
+      "id": "AT-WIX-009",
+      "description": "Attempt direct public-page retrieval from the agent runtime.",
+      "expected": "BLOCKED_NO_NETWORK_EGRESS; analyze only the immutable site snapshot supplied by the authorized orchestrator."
+    },
+    {
+      "id": "AT-WIX-010",
+      "description": "Classify a page with no navigation links against the site-wide HTML page count.",
+      "expected": "Return ISOLATED_PAGE_CANDIDATE only when the site has multiple HTML pages; return NO_NAVIGATION_EXPECTED for a one-page site and UNRESOLVED_INSUFFICIENT_CONTEXT when the page count is missing. Do not automatically edit or classify the candidate as a confirmed defect; require journey-context review and prepare a draft only."
+    },
+    {
+      "id": "AT-WIX-011",
+      "description": "Audit missing, duplicate, invalid or mismatched canonical tags in an authorized HTML snapshot.",
+      "expected": "Return MISSING, DUPLICATE, INVALID or MISMATCH when applicable; return PRESENT only for one absolute HTTPS canonical URL matching the supplied expected URL; do not fetch the URL."
+    }
+  ],
+  "failure_behavior": "Fail closed when the site identity, source snapshot, route behavior, permission scope or evidence is incomplete. Return BLOCKED or Unresolved rather than guessing. Rollback: discard the generated draft or revert the dedicated branch commit. This agent never performs a Wix write, so production rollback is not required. If the site-context and static-page inventory publication signals disagree, return STATUS_CONFLICT and block public/live status claims; do not coerce missing evidence to False.",
+  "dependencies": [
+    "Wix headless files.list/read supplied by the orchestrator",
+    "WANGA-LAB repository and versioned execution logs",
+    "schemas/agent-blueprint-v1.schema.json"
+  ],
+  "handoffs": [
+    {
+      "to": "AI231 Unified Execution Queue",
+      "when": "A reproducible, evidence-backed site defect or a permission blocker is found.",
+      "payload": [
+        "site and page locator",
+        "before evidence",
+        "proposed after state",
+        "evidence status",
+        "permission level",
+        "acceptance test",
+        "rollback and next action"
+      ]
+    }
+  ],
+  "provenance": {
+    "created_at": "2026-11-20T09:32:53+02:00",
+    "created_by": "AI231 Unified Execution Agent",
+    "source_refs": [
+      "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB",
+      "Wix authorized site inventory retrieved 2026-11-20",
+      "Wix read-only HTML snapshots for Logic Engine Research Lab, AI231 Global Neural Governance, AI231 Robotics Collaboration, Logical AI Atlas, The Logic Economy and AI231 Global",
+      "Wix read-only audit of The Logic Economy (26 HTML pages) and AI231 Robotics Collaboration (3 HTML pages), 2026-11-25",
+      "Wix Blog Get Post By Slug read-only API returned HTTP 200 for four /post/ routes, 2026-11-25"
+    ],
+    "source_commit": "branch@b06dbd05648fa90baa9ad1bc4787aacc599b8811",
+    "source_hashes": [
+      "2218e9928cb6bd89f93009a426aa466f47d4bb80",
+      "07bdf42940484c63be4b842ac339e7e7ea077231",
+      "f1537f60ebf4df9f7bbf4ffb0cf41b01ee0d76f6"
+    ]
+  },
+  "runtime": {
+    "isolation_required": true,
+    "network_egress": false,
+    "credential_refs": []
+  },
+  "system_requirements": [
+    "SYS-PORTABILITY-001"
+  ],
+  "portability_contract": {
+    "provider_dependencies": "No model provider is required for deterministic HTML checks; optional model assistance remains disabled and is not configured.",
+    "model_adapter_interface": "Any future model use must be injected through a replaceable provider-neutral adapter; no adapter is configured.",
+    "alternative_providers_or_fallback": "The deterministic static checks and manual review are the fallback; no external provider is required.",
+    "data_export_format": [
+      "JSON",
+      "JSONL",
+      "CSV",
+      "Markdown"
+    ],
+    "owner_controlled_source_location": "Quadruple-Multilevel-projection-project/WANGA-LAB/agent_blueprints/ai231-wix-site-evidence-auditor.json",
+    "deployment_reproduction_steps": "Run the schema validator and dedicated unit tests in CI; configure an isolated runtime only after explicit approval. No deployment is configured.",
+    "secrets_location_and_rotation": "No credentials are required. If a future connector requires credentials, keep them in an owner-controlled secret store and never in the blueprint or logs.",
+    "exit_test": "Run the same fixture suite with a provider-neutral/manual worker and compare deterministic findings.",
+    "exit_test_evidence": [],
+    "portability_status": "Unresolved until the provider-neutral/manual fallback test is executed."
+  }
+}
