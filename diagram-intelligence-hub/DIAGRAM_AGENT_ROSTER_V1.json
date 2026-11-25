@@ -1,0 +1,60 @@
+{
+  "roster_version": "1.0.0",
+  "status": "PROPOSED",
+  "runtime_deployed": false,
+  "coordination_rule": "30 audit seats with explicit responsibilities; no seat is considered an active agent until runtime, tool access and tests are verified.",
+  "workstreams": [
+    {
+      "name": "Intake & Extraction",
+      "agents": [
+        {"id":"DA-01","role":"Source Discovery","mandate":"Locate approved diagram sources and capture exact URLs."},
+        {"id":"DA-02","role":"GitHub Intake","mandate":"Collect repository artifacts and commit context without changing source files."},
+        {"id":"DA-03","role":"Wix Intake","mandate":"Collect designated Wix uploads and CMS/page assets with provenance."},
+        {"id":"DA-04","role":"Grok Output Adapter","mandate":"Validate Grok submissions against the versioned ingest contract."},
+        {"id":"DA-05","role":"Mermaid Parser","mandate":"Parse Mermaid nodes, edges, subgraphs and labels with source locations."},
+        {"id":"DA-06","role":"JSON Schema Parser","mandate":"Parse JSON registries and validate declared schemas."},
+        {"id":"DA-07","role":"Markdown Structure Parser","mandate":"Extract headings, links, tables and diagram references."},
+        {"id":"DA-08","role":"Image Structure Extractor","mandate":"Extract image labels and connectors while recording ambiguity."},
+        {"id":"DA-09","role":"Fingerprint & Provenance","mandate":"Compute exact-byte SHA-256 and maintain artifact lineage."},
+        {"id":"DA-10","role":"Version Diff","mandate":"Compare versions and report structural changes."}
+      ]
+    },
+    {
+      "name": "Structure & Relations",
+      "agents": [
+        {"id":"DA-11","role":"Layer Classifier","mandate":"Classify artifacts against the four architecture layers."},
+        {"id":"DA-12","role":"Node Identity Auditor","mandate":"Detect stable node identities and naming collisions."},
+        {"id":"DA-13","role":"Edge & Relation Auditor","mandate":"Validate edge direction, labels and endpoints."},
+        {"id":"DA-14","role":"Contract Link Auditor","mandate":"Verify links from diagram claims to governing contracts."},
+        {"id":"DA-15","role":"Topology Auditor","mandate":"Check only source-defined geometric and topological invariants."},
+        {"id":"DA-16","role":"Dependency Graph Auditor","mandate":"Build evidence-backed dependencies between diagrams."},
+        {"id":"DA-17","role":"Duplicate Detector","mandate":"Detect exact and near duplicates without deleting artifacts."},
+        {"id":"DA-18","role":"Orphan Detector","mandate":"Find unlinked diagrams, nodes and sources."},
+        {"id":"DA-19","role":"Broken-Link Auditor","mandate":"Check references and record target-resolution evidence."},
+        {"id":"DA-20","role":"Cross-Source Reconciler","mandate":"Compare corresponding GitHub, Wix and Grok artifacts."}
+      ]
+    },
+    {
+      "name": "Reliability & Decision",
+      "agents": [
+        {"id":"DA-21","role":"Semantic Consistency Auditor","mandate":"Check terminology against authoritative source definitions."},
+        {"id":"DA-22","role":"Contradiction Detector","mandate":"Identify incompatible claims and preserve both source references."},
+        {"id":"DA-23","role":"Drift Auditor","mandate":"Detect divergence from baselines and governing contracts."},
+        {"id":"DA-24","role":"Safety & Leakage Auditor","mandate":"Detect unsafe content, secret exposure and uncontrolled leakage."},
+        {"id":"DA-25","role":"Evidence Auditor","mandate":"Check that material claims and relations have supporting evidence."},
+        {"id":"DA-26","role":"Reproducibility Auditor","mandate":"Verify repeatability from recorded inputs and tool versions."},
+        {"id":"DA-27","role":"Human Review Router","mandate":"Route novelty, impact and unresolved conflicts to a human."},
+        {"id":"DA-28","role":"Decision Gate Coordinator","mandate":"Apply approved LOCK, HUMAN_REVIEW, ABSTAIN and SANDBOX rules."},
+        {"id":"DA-29","role":"Canonical Registry Maintainer","mandate":"Maintain canonical IDs and propose approved registry changes."},
+        {"id":"DA-30","role":"Daily Synthesis & Report","mandate":"Produce daily snapshots, changelogs and unresolved issue reports."}
+      ]
+    }
+  ],
+  "global_non_goals": [
+    "Do not invent definitions, weights, coordinates, lambda_p or kappa formulas.",
+    "Do not treat model confidence or majority vote as verification.",
+    "Do not merge contradictions automatically.",
+    "Do not claim runtime deployment from a roster entry.",
+    "Do not delete source artifacts during deduplication."
+  ]
+}
