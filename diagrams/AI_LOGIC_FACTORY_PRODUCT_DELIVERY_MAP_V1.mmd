@@ -1,0 +1,53 @@
+---
+title: AI Logic Factory — Product Delivery Map
+status: PRODUCT CONCEPT / ROADMAP
+audit_date: 2026-11-25
+---
+flowchart LR
+  USER["Researcher / AI engineering team / institution"]
+  subgraph EXPERIENCE["Experience"]
+    WB["Logic Factory Workbench"]
+    MAP["Thought + Place maps"]
+    VST["Visual Transformation Studio"]
+    KPI["KPI / evidence dashboard"]
+  end
+  subgraph CORE["Logic core"]
+    SNAP["Thought snapshots"]
+    REG["Term + source registry"]
+    LNL["Thinking Language / LNL"]
+    SEM["Naming–Place contract"]
+    KERNEL["Symbolic + typed validation"]
+    FRACTAL["Fractal composer"]
+  end
+  subgraph COORD["Coordination"]
+    CAB["Model cabinet"]
+    TASK["Task contracts + handoffs"]
+    CONFLICT["Conflict ledger"]
+  end
+  subgraph EXEC["Execution"]
+    ROUTE["KRAKEN workload admission"]
+    CPU["CPU / GPU / FPGA"]
+    SIM["Simulation / emulation"]
+    QPU["QPU adapter<br/>blocked until evidence"]
+  end
+  subgraph EVID["Evidence"]
+    PROV["Provenance + hashes"]
+    REPLAY["Replay + independent verification"]
+    RELEASE["Human approval / release"]
+  end
+  USER --> WB
+  WB --> MAP
+  WB --> VST
+  WB --> KPI
+  MAP --> SNAP --> REG --> LNL --> SEM --> KERNEL --> FRACTAL
+  VST --> SNAP
+  FRACTAL --> CAB --> TASK --> CONFLICT
+  FRACTAL --> ROUTE
+  ROUTE --> CPU
+  ROUTE --> SIM
+  ROUTE -.-> QPU
+  CORE --> PROV
+  COORD --> PROV
+  EXEC --> PROV
+  PROV --> REPLAY --> KPI --> RELEASE
+  RELEASE --> SNAP
