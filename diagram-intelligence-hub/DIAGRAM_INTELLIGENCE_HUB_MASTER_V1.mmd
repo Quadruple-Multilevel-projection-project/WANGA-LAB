@@ -1,0 +1,63 @@
+flowchart TD
+  subgraph SOURCES["Diagram Sources"]
+    GH["GitHub / WANGA-LAB"]
+    WX["Wix / Logical AI Atlas"]
+    GR["Grok Candidate Output"]
+  end
+
+  subgraph INTAKE["Ingestion & Provenance"]
+    ING["Source Intake"]
+    HASH["Exact-byte SHA-256"]
+    PARSE["Format Parsers"]
+    IR["Typed Intermediate Representation"]
+  end
+
+  subgraph BRAIN["Diagram Intelligence Hub — 30 Audit Seats"]
+    A1["10 Intake & Extraction roles"]
+    A2["10 Structure & Relations roles"]
+    A3["10 Reliability & Decision roles"]
+    CMP["Cross-Diagram Comparison"]
+  end
+
+  subgraph GOVERNANCE["Evidence & Decision"]
+    AUD["Audit Ledger"]
+    GATE{"Decision Gate"}
+    HUMAN["Human Review"]
+    ABSTAIN["ABSTAIN / SANDBOX"]
+    LOCK["LOCK — accepted candidate"]
+  end
+
+  subgraph SYSTEMS["Shared Project Systems"]
+    AIR["Airtable Registries"]
+    NOTION["Notion Decision Record"]
+    PR["GitHub Branch / Pull Request"]
+    WIXVIEW["Wix Approved Diagram View"]
+    DAILY["Daily Snapshot & Report"]
+  end
+
+  GH --> ING
+  WX -.-> ING
+  GR -.-> ING
+  ING --> HASH --> PARSE --> IR
+  IR --> A1
+  IR --> A2
+  IR --> A3
+  A1 --> CMP
+  A2 --> CMP
+  A3 --> CMP
+  CMP --> AUD --> GATE
+  GATE -->|all required checks pass| LOCK
+  GATE -->|novelty or unresolved impact| HUMAN
+  GATE -->|missing evidence or conflict| ABSTAIN
+  LOCK --> AIR
+  HUMAN --> NOTION
+  LOCK --> PR
+  PR -->|human merge| GH
+  LOCK --> WIXVIEW
+  AIR --> DAILY
+  NOTION --> DAILY
+  GH --> DAILY
+  WX --> DAILY
+
+  classDef proposed stroke-dasharray: 5 5
+  class GR,WX,ING,HASH,PARSE,IR,A1,A2,A3,CMP,AUD,GATE,HUMAN,ABSTAIN,LOCK,AIR,NOTION,PR,WIXVIEW,DAILY proposed
