@@ -1,0 +1,92 @@
+---
+title: AI Logic Factory — Master Link Map
+version: 1.0
+status: PRODUCT ARCHITECTURE / MIXED EVIDENCE
+entrypoint: ../AI_LOGIC_FACTORY_DIAGRAM_INDEX.md
+---
+
+flowchart TB
+  INDEX["Diagram Index + Model Guide"]
+  USER["Researcher / Engineer / Institution"]
+
+  subgraph L1["L1 — Language & Contract"]
+    TERMS["Term & Source Registry"]
+    PLACE["Naming · Distinction · Place"]
+    SEM["Typed Semantic Relations"]
+    TRUTH["Truth / Evidence Contract"]
+    NUM["Numeric Derivation Gate"]
+    TERMS --> PLACE --> SEM --> TRUTH --> NUM
+  end
+
+  subgraph L2["L2 — Analytics & Visualization"]
+    INPUT["Text · Glyph · Image Intake"]
+    SNAP["Immutable Source Snapshot"]
+    TRANS["Visual / Spatial / Frequency Transform"]
+    PATTERN["Pattern & Shape Analysis"]
+    CANDIDATE["Candidate Composition"]
+    REVIEW["Analyst Review"]
+    INPUT --> SNAP --> TRANS --> PATTERN --> CANDIDATE --> REVIEW
+  end
+
+  subgraph L3["L3 — KRAKEN"]
+    ADMIT["Workload Admission"]
+    FRACTAL["Bounded Fractal Composer"]
+    STATE["Versioned State Transitions"]
+    SCHED["Capability-aware Scheduler"]
+    EXEC["Compute Adapter"]
+    RECEIPT["Execution Receipt"]
+    ADMIT --> FRACTAL --> STATE --> SCHED --> EXEC --> RECEIPT
+    CPU["CPU / GPU / FPGA / ASIC"]
+    SIM["Simulation / Emulation"]
+    QPU["Physical QPU Adapter"]
+    EXEC --> CPU
+    EXEC --> SIM
+    EXEC -.-> QPU
+  end
+
+  subgraph L4["L4 — Orchestration & Product"]
+    WB["Logic Factory Workbench"]
+    CAB["Multi-Model Cabinet / Agents"]
+    API["Versioned APIs & Connectors"]
+    KNOW["Knowledge / Artifact Registry"]
+    AUDIT["Audit & Evidence Ledger"]
+    KPI["KPI / QAT Dashboard"]
+    RELEASE["Human Approval / Release"]
+    WB --> CAB
+    WB --> API
+    CAB --> KNOW
+    KNOW --> AUDIT --> KPI --> RELEASE
+  end
+
+  INDEX -.-> WB
+  USER --> WB
+  WB --> INPUT
+  REVIEW -.-> TERMS
+  REVIEW -.-> PLACE
+  NUM --> ADMIT
+  TRUTH --> ADMIT
+  CANDIDATE --> ADMIT
+  RECEIPT --> AUDIT
+  RELEASE --> SNAP
+
+  classDef source fill:#dbeafe,stroke:#2563eb,color:#172554
+  classDef specified fill:#fef3c7,stroke:#d97706,color:#78350f
+  classDef proposed fill:#ffedd5,stroke:#ea580c,color:#7c2d12
+  classDef evidence fill:#dcfce7,stroke:#16a34a,color:#14532d
+  classDef blocked fill:#fee2e2,stroke:#dc2626,color:#7f1d1d
+
+  class TERMS,PLACE,SEM,TRUTH,NUM source
+  class ADMIT,FRACTAL,STATE specified
+  class TRANS,PATTERN,CANDIDATE,SCHED,EXEC,WB,CAB,API proposed
+  class SNAP,RECEIPT,AUDIT,KNOW evidence
+  class QPU blocked
+
+  click INDEX "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/AI_LOGIC_FACTORY_DIAGRAM_INDEX.md"
+  click TERMS "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ARCHITECTURE_REGISTRY.json"
+  click PLACE "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/WANGA_NAMING_PLACE_NUMERIC_DERIVATION_CONTRACT_V1.md"
+  click TRUTH "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/WANGA_SEMANTIC_TRUTH_CONTRACT_V1.md"
+  click ADMIT "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/david-jones-kraken/KRAKEN_CONFIGURATION_V0_2.md"
+  click FRACTAL "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/logic_fractal/fragment_composer.py"
+  click WB "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/AI_LOGIC_FACTORY_PRODUCT_ARCHITECTURE_V1.md"
+  click CAB "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ark_swarm/coordinator.py"
+  click AUDIT "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/src/core/audit_generator.py"
