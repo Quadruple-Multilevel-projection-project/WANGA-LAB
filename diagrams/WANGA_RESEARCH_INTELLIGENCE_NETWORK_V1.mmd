@@ -1,0 +1,78 @@
+flowchart TD
+  subgraph SOURCES["1 · Research Sources"]
+    OA["OpenAlex"]
+    CR["Crossref / DOI"]
+    AX["arXiv"]
+    PM["PubMed / Europe PMC"]
+    ST["Standards / Patents / Approved Feeds"]
+  end
+
+  subgraph COLLECT["2 · Collection Plane"]
+    SCH["Daily Scheduler"]
+    AD["Source Adapters"]
+    RAW[("Immutable Source Envelopes")]
+    NORM["Normalize · Resolve IDs · Deduplicate"]
+  end
+
+  subgraph INTEL["3 · Research Intelligence Plane"]
+    EXT["Evidence Extractor"]
+    REL["Relation Mapper"]
+    NOV["Novelty & Contradiction Audit"]
+    PLC["Naming–Place / Contract Audit"]
+    GATE{"Decision Gate"}
+  end
+
+  subgraph GRAPH["4 · Fractal Knowledge Plane"]
+    L0["L0 Evidence Atoms"]
+    L1["L1 Concepts & Relations"]
+    L2["L2 Local Structures"]
+    L3["L3 Domain Maps"]
+    L4["L4 Cross-Domain Maps"]
+    L5["L5 System / Language Contract"]
+    GDB[("Canonical Versioned Knowledge Graph")]
+    COMP["Deterministic Diagram Compiler"]
+    DIFF["Graph + Diagram Diff"]
+  end
+
+  subgraph REVIEW["5 · Governance"]
+    HR["Human Review"]
+    RELS["Versioned Release / Rollback"]
+    LOG[("Append-only Run & Provenance Ledger")]
+  end
+
+  subgraph DIST["6 · Cross-platform Distribution"]
+    MCP["MCP Adapters"]
+    API["HTTPS / JSON API"]
+    WIKI["Neural Wikipedia Views"]
+    AG["WANGA / Cabinet Agents"]
+    NOTION["Notion · Research Narrative"]
+    WIX["Wix · Portal / Dashboard"]
+    GH["GitHub · Canonical Schemas, Diagrams, History"]
+    AT["Airtable · Optional Review Queue"]
+  end
+
+  OA --> AD
+  CR --> AD
+  AX --> AD
+  PM --> AD
+  ST --> AD
+  SCH --> AD
+  AD --> RAW --> NORM --> EXT
+  EXT --> REL --> NOV --> PLC --> GATE
+  GATE -->|"AUTO_ACCEPT: deterministic low-risk only"| GDB
+  GATE -->|"HUMAN_REVIEW"| HR
+  GATE -->|"ABSTAIN / REJECT"| LOG
+  HR -->|"approved"| GDB
+  HR -->|"defer / reject"| LOG
+  GDB --> L0 --> L1 --> L2 --> L3 --> L4 --> L5
+  GDB --> COMP --> DIFF --> HR
+  GDB --> RELS --> LOG
+  RELS --> MCP
+  RELS --> API
+  MCP --> AG
+  API --> WIKI
+  API --> NOTION
+  API --> WIX
+  API --> AT
+  RELS --> GH
+  LOG --> GH
