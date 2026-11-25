@@ -1,0 +1,276 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/schemas/RESEARCH_EVIDENCE_GRAPH_SCHEMA_V1.json",
+  "title": "WANGA Research Evidence Graph Record",
+  "description": "Minimal envelope for source-grounded research records and candidate graph changes. This schema is a starting contract, not a deployed database.",
+  "type": "object",
+  "required": [
+    "record_id",
+    "record_type",
+    "status",
+    "created_at",
+    "schema_version",
+    "provenance"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9._:-]{2,127}$"
+    },
+    "record_type": {
+      "enum": [
+        "source",
+        "evidence_atom",
+        "claim",
+        "concept",
+        "relation",
+        "diagram",
+        "change_set",
+        "audit_receipt"
+      ]
+    },
+    "status": {
+      "enum": [
+        "RAW",
+        "CANDIDATE",
+        "UNDER_REVIEW",
+        "ACCEPTED",
+        "HYPOTHESIS",
+        "CONFLICTED",
+        "REJECTED",
+        "DEPRECATED",
+        "NOT_YET_VERIFIED"
+      ]
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "updated_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "title": {
+      "type": "string"
+    },
+    "text": {
+      "type": "string"
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "evidence_anchors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "locator"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "locator": {
+            "type": "string"
+          },
+          "quote_or_excerpt": {
+            "type": "string"
+          },
+          "license_status": {
+            "enum": [
+              "OPEN",
+              "RESTRICTED",
+              "UNKNOWN",
+              "NOT_APPLICABLE"
+            ]
+          }
+        }
+      }
+    },
+    "subject_id": {
+      "type": "string"
+    },
+    "predicate": {
+      "type": "string"
+    },
+    "object_id": {
+      "type": "string"
+    },
+    "relation_type": {
+      "type": "string"
+    },
+    "place": {
+      "type": "object",
+      "properties": {
+        "observer_or_base": {
+          "type": "string"
+        },
+        "substrate": {
+          "type": "string"
+        },
+        "protocol": {
+          "type": "string"
+        },
+        "boundary": {
+          "type": "string"
+        },
+        "persistence": {
+          "type": "string"
+        },
+        "time_window": {
+          "type": "string"
+        },
+        "unit": {
+          "type": "string"
+        },
+        "comparison_class": {
+          "type": "string"
+        },
+        "uncertainty": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "measurement": {
+      "type": "object",
+      "properties": {
+        "value": {},
+        "unit": {
+          "type": "string"
+        },
+        "method": {
+          "type": "string"
+        },
+        "population_or_sample": {
+          "type": "string"
+        },
+        "uncertainty": {
+          "type": "string"
+        },
+        "source_id": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "change_type": {
+      "enum": [
+        "ADD",
+        "REFINE",
+        "SPLIT",
+        "MERGE",
+        "DEPRECATE",
+        "CONTRADICT",
+        "NO_CHANGE"
+      ]
+    },
+    "confidence": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1
+        },
+        "method": {
+          "type": "string"
+        },
+        "calibration_reference": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "method"
+      ],
+      "additionalProperties": false
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "source_uri",
+        "retrieved_at",
+        "content_hash"
+      ],
+      "properties": {
+        "source_uri": {
+          "type": "string",
+          "format": "uri"
+        },
+        "doi": {
+          "type": "string"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "content_hash": {
+          "type": "string"
+        },
+        "source_version": {
+          "type": "string"
+        },
+        "collector_version": {
+          "type": "string"
+        },
+        "model_or_prompt_version": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "audit": {
+      "type": "object",
+      "properties": {
+        "decision": {
+          "enum": [
+            "AUTO_ACCEPT",
+            "HUMAN_REVIEW",
+            "ABSTAIN",
+            "REJECT"
+          ]
+        },
+        "reasons": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "reviewer": {
+          "type": "string"
+        },
+        "reviewed_at": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "contract_version": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    },
+    "supersedes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    },
+    "conflicts_with": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "uniqueItems": true
+    }
+  },
+  "additionalProperties": false
+}
