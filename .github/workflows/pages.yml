@@ -1,7 +1,7 @@
 name: Build and deploy Jekyll
 on:
   push:
-    branches: ["agent/copernicus/static-blog-platform"]
+    branches: ["website/ai-logical-atlas-public-site"]
   workflow_dispatch:
 jobs:
   build:
@@ -17,7 +17,7 @@ jobs:
         with:
           ruby-version: "3.3"
           bundler-cache: true
-      - run: bundle exec jekyll build --baseurl ""
+      - run: bundle exec jekyll build --baseurl "/WANGA-LAB"
       - uses: actions/upload-pages-artifact@v3
         with:
           path: ./_site
