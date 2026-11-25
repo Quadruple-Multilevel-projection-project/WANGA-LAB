@@ -1,0 +1,96 @@
+---
+title: Kraken Atomic Fractal Engine
+version: 1.0
+status: PROPOSED — implementation and benchmark pending
+---
+
+flowchart TB
+  subgraph ATOM["1. Three-sphere atomic unit"]
+    CORE["CORE sphere<br/>Identity · type · invariant"]
+    REL["RELATION sphere<br/>Typed ports · dependencies"]
+    BOUND["BOUNDARY sphere<br/>Scope · limits · HALT"]
+    CORE <-->|"constrained by"| REL
+    REL <-->|"constrained by"| BOUND
+    BOUND <-->|"constrained by"| CORE
+    CONTRACT["Atomic contract<br/>ID · version · provenance · hash · validation state"]
+    CORE --> CONTRACT
+    REL --> CONTRACT
+    BOUND --> CONTRACT
+  end
+
+  subgraph FRACTAL["2. Fractal composition"]
+    A["Atoms"] --> C["Cells"]
+    C --> L["Lattice / crystal-like arrangement"]
+    L --> K["Kraken structure"]
+    K --> W["WANGA / Cabinet systems"]
+  end
+
+  CONTRACT --> A
+
+  subgraph CHECK["3. Contract-preserving verification"]
+    TYPE["Type and interface checks"]
+    SEM["Semantic / boundary tests"]
+    PROV["Provenance and hash checks"]
+    IMPACT["Dependency impact analysis"]
+    GATE{"All declared gates pass?"}
+    VERIFIED["Verified for declared scope"]
+    REVIEW["REVIEW / ABSTAIN / HALT"]
+    TYPE --> GATE
+    SEM --> GATE
+    PROV --> GATE
+    IMPACT --> GATE
+    GATE -->|yes| VERIFIED
+    GATE -->|no| REVIEW
+  end
+
+  C --> TYPE
+  C --> SEM
+  CONTRACT --> PROV
+  L --> IMPACT
+  VERIFIED --> L
+  REVIEW --> CONTRACT
+
+  subgraph KRAKEN["4. Kraken mapping — project parameters requiring verification"]
+    K36["Kraken-36<br/>18 Inner Cyan + 18 Outer Mag"]
+    TC["126 TensorCells"]
+    MAP["Explicit atom ↔ cell ↔ Kraken mapping<br/>NOT YET SPECIFIED"]
+    K36 --> MAP
+    TC --> MAP
+  end
+  K --> MAP
+
+  subgraph MEASURE["5. Granularity benchmark"]
+    COARSE["Coarse atoms"]
+    MEDIUM["Medium atoms"]
+    FINE["Fine atoms"]
+    SAME["Same tasks · same quality bar"]
+    METRIC["Measure total cost, time, tokens,<br/>rework, mismatch, revalidation"]
+    OPT["Choose measured optimal granularity"]
+    COARSE --> SAME
+    MEDIUM --> SAME
+    FINE --> SAME
+    SAME --> METRIC --> OPT
+  end
+  A --> COARSE
+  A --> MEDIUM
+  A --> FINE
+
+  subgraph SEM5["6. Separate semantic abstraction"]
+    FIVE["Five-sphere semantic place model"]
+    MAP5["Explicit tested mapping<br/>to one or more three-sphere atoms"]
+    FIVE --> MAP5
+    MAP5 --> CONTRACT
+  end
+
+  classDef core fill:#dbeafe,stroke:#2563eb,color:#172554
+  classDef relation fill:#cffafe,stroke:#0891b2,color:#164e63
+  classDef boundary fill:#fef3c7,stroke:#d97706,color:#78350f
+  classDef pending fill:#ffedd5,stroke:#ea580c,color:#7c2d12
+  classDef verified fill:#dcfce7,stroke:#16a34a,color:#14532d
+  classDef stop fill:#ffe4e6,stroke:#e11d48,color:#881337
+  class CORE core
+  class REL relation
+  class BOUND boundary
+  class MAP,OPT,MAP5 pending
+  class VERIFIED verified
+  class REVIEW stop
