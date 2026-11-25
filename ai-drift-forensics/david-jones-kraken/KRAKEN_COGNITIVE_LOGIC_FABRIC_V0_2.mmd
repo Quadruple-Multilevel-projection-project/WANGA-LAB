@@ -1,56 +1,101 @@
 ---
-title: KRAKEN v0.2 — Cognitive Logic + Heterogeneous Compute Fabric
+title: KRAKEN v0.3 — Thinking Language, Visual Transformation & Heterogeneous Compute
 status: SPECIFIED / NOT_YET_VERIFIED
 audit_date: 2026-11-25
 ---
-flowchart LR
-  subgraph WANGA["WANGA Cognitive Logic Plane"]
-    INPUT["Thought / source input"]
-    SNAP["Immutable thought snapshot"]
-    MAP["Thought Mapping\nentities · names · qualitative relations"]
-    PLACE["Place contract\nobserver/base · substrate · Π · κ · ρ"]
-    LANG["Thinking Language\ntyped graph / AST · LNL"]
-    GATE{"Grounding and logic gates pass?"}
-    ABSTAIN["ABSTAIN / HALT\nmissing identity, Place, unit or evidence"]
-    FRACTAL["Fractal package\nvalidated structure + provenance"]
-    INPUT --> SNAP --> MAP --> PLACE --> LANG --> GATE
-    GATE -->|no| ABSTAIN
-    GATE -->|yes| FRACTAL
+flowchart TB
+  subgraph INPUT["1. Source and thought intake"]
+    HUMAN["Human / model / environment input"]
+    IMAGE["Source image / glyph / visual sequence"]
+    SNAP["Immutable thought + image snapshot<br/>source · identity · version · hash"]
+    HUMAN --> SNAP
+    IMAGE --> SNAP
   end
 
-  subgraph KRAKEN["KRAKEN Execution Fabric"]
-    ADMIT["Workload admission\ncapability + safety + scope"]
-    SCHED["Resource scheduler"]
-    CLASSICAL["CPU / GPU / FPGA / ASIC / DSP / NPU"]
+  subgraph MAP["2. Thought mapping and Place"]
+    DIST["Distinction + typed identity"]
+    REL["Qualitative relations<br/>causal · structural · temporal · containment"]
+    PLACE["Place / context<br/>observer B · substrate · protocol Π<br/>boundary κ · persistence ρ"]
+    SPHERE["Five-sphere concept<br/>upper + lower limits; sphere 5 contains 1–4<br/>topology OPEN / NOT_YET_VERIFIED"]
+    COG["Four cognitive maps<br/>logic · Book of Logic · semantic/word · letters/agents"]
+    SNAP --> DIST --> REL --> PLACE
+    SPHERE --> PLACE
+    REL --> COG
+  end
+
+  subgraph LANG["3. Naming-first Thinking Language"]
+    NAME["Name / type / source lineage"]
+    AST["Typed thought graph / AST"]
+    OPS["ROTATE · PROJECT · BRAID · READOUT"]
+    NUM{"Identity + Place + unit + comparison<br/>+ persistence complete?"}
+    RECEIPT["Measurement receipt<br/>value · uncertainty · protocol · source"]
+    ABSTAIN["ABSTAIN / REVIEW / HALT"]
+    NAME --> AST --> OPS --> NUM
+    NUM -->|yes| RECEIPT
+    NUM -->|no| ABSTAIN
+  end
+
+  subgraph VIS["4. Visual / imaginal transformation track"]
+    CAP["Capture image + hash + region locator"]
+    FIELD["Visual feature field<br/>shape · illumination · frequency representation"]
+    TRANS["Versioned transform operator<br/>spatial / frequency / morphology / dispersion simulation"]
+    CAND["Candidate glyph / form<br/>not yet canonical"]
+    CHECK["Shape + language + Place + logic checks"]
+    REVIEW["Human review + replay receipt"]
+    CAP --> FIELD --> TRANS --> CAND --> CHECK --> REVIEW
+  end
+
+  subgraph LOGIC["5. Logic, semantic and fractal validation"]
+    LNL["LNL parser / compiler"]
+    KERNEL["Symbolic Logic Kernel"]
+    FORMAL["Typed formal checks"]
+    FRACTAL["Fractal composer"]
+    PACKAGE["Bounded workload package<br/>invariants · lineage · tests · Place"]
+    LNL --> KERNEL --> FORMAL --> FRACTAL --> PACKAGE
+  end
+
+  subgraph KRAKEN["6. KRAKEN execution fabric"]
+    ADMIT["Workload admission<br/>capability · scope · safety"]
+    ROUTER["Capability-aware scheduler"]
+    CLASSICAL["CPU · GPU · FPGA · ASIC · DSP · NPU"]
     SIM["Simulation / emulation"]
-    QPU["Physical QPU path\nNOT_YET_VERIFIED"]
-    TELEMETRY["Execution receipt\nlatency · utilization · errors · power"]
-    ADMIT --> SCHED
-    SCHED --> CLASSICAL
-    SCHED --> SIM
-    SCHED -.-> QPU
+    QPU["Physical QPU path<br/>NOT_YET_VERIFIED"]
+    TELEMETRY["Execution receipt<br/>latency · throughput · utilization<br/>error · power · provenance"]
+    ADMIT --> ROUTER
+    ROUTER --> CLASSICAL
+    ROUTER --> SIM
+    ROUTER -.-> QPU
     CLASSICAL --> TELEMETRY
     SIM --> TELEMETRY
     QPU -.-> TELEMETRY
   end
 
-  subgraph VERIFY["Evidence and feedback"]
-    REPLAY["Independent verification / replay"]
-    LOCK["LOCK accepted state"]
-    NEXT["Next thought snapshot"]
-    REPLAY --> LOCK --> NEXT
+  subgraph PRODUCT["7. Product and governance plane"]
+    CABINET["Multi-model cabinet<br/>bounded tasks · handoffs · capability tiers"]
+    API["Product API / SDK"]
+    WORKBENCH["Logic Factory workbench<br/>maps · contracts · visual review"]
+    KPI["Benchmark ledger<br/>baseline vs treatment"]
+    VERIFY["Independent verification / replay"]
+    RELEASE["Human approval + controlled release"]
+    CABINET --> API --> WORKBENCH
+    KPI --> VERIFY --> RELEASE
   end
 
-  FRACTAL --> ADMIT
-  TELEMETRY --> REPLAY
-  NEXT --> SNAP
-  ABSTAIN --> REPLAY
+  COG --> NAME
+  REVIEW --> NAME
+  RECEIPT --> LNL
+  ABSTAIN --> VERIFY
+  PACKAGE --> ADMIT
+  PACKAGE --> CABINET
+  TELEMETRY --> KPI
+  REVIEW --> KPI
+  RELEASE --> SNAP
 
-  classDef existing fill:#dbeafe,stroke:#2563eb,color:#172554
+  classDef implemented fill:#dbeafe,stroke:#2563eb,color:#172554
   classDef specified fill:#fef3c7,stroke:#d97706,color:#78350f
   classDef proposed fill:#ffedd5,stroke:#ea580c,color:#7c2d12
   classDef gate fill:#fce7f3,stroke:#db2777,color:#831843
-  class INPUT,SNAP existing
-  class MAP,PLACE,LANG specified
-  class FRACTAL,ADMIT,SCHED,CLASSICAL,SIM,QPU,TELEMETRY,NEXT proposed
-  class GATE,ABSTAIN,REPLAY,LOCK gate
+  class HUMAN,SNAP,LNL,KERNEL,FRACTAL,CABINET implemented
+  class DIST,REL,PLACE,NAME,AST,OPS,NUM,SPHERE specified
+  class IMAGE,CAP,FIELD,TRANS,CAND,CHECK,REVIEW,ADMIT,ROUTER,CLASSICAL,SIM,QPU,TELEMETRY,API,WORKBENCH,KPI proposed
+  class RECEIPT,ABSTAIN,VERIFY,RELEASE gate
