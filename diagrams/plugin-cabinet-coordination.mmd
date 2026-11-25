@@ -1,0 +1,33 @@
+flowchart TD
+  A["WANGA-LAB — Canonical Project & Evidence Repository"] --> B["Cabinet Entry: START-HERE / CURRENT-STATE"]
+  B --> C["Model Registry & Capability Declaration"]
+  C --> D["Task Allocator: bounded scope + task ID"]
+  D --> M1["Model A"]
+  D --> M2["Model B"]
+  D --> M3["Model C"]
+  D --> MT["Tool-specialist model"]
+  M1 --> R["Append-only Model Reports"]
+  M2 --> R
+  M3 --> R
+  MT --> R
+  R --> V["Evidence & Provenance Review"]
+  V --> Q{"Status"}
+  Q -->|Supported| OK["Verified / accepted finding"]
+  Q -->|Incomplete| U["Assessment / hypothesis / pending"]
+  Q -->|Conflict| X["Conflict register — preserve both sides"]
+  Q -->|Unsafe or invalid| H["ABSTAIN / HALT"]
+  OK --> S["CURRENT-STATE + task ledger"]
+  U --> S
+  X --> S
+  H --> S
+  S --> DLY["Daily summary + updated Mermaid diagram"]
+  DLY --> B
+
+  classDef core fill:#dbeafe,stroke:#2563eb,color:#172554
+  classDef review fill:#dcfce7,stroke:#16a34a,color:#14532d
+  classDef pending fill:#fef3c7,stroke:#d97706,color:#78350f
+  classDef stop fill:#ffe4e6,stroke:#e11d48,color:#881337
+  class A,B,C,D,S,DLY core
+  class V,OK review
+  class U,X pending
+  class H stop
