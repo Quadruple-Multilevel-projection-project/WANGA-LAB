@@ -2,7 +2,7 @@
 
 ## Purpose
 
-This directory is the engineering documentation boundary for the **David Jones Box** and the **KRAKEN** heterogeneous quantum-computing orchestration concept.
+This directory is the engineering documentation boundary for the **David Jones Box** and **KRAKEN**, a heterogeneous cognitive-logic and compute orchestration architecture. Quantum processing is one candidate execution track, not the complete definition of KRAKEN.
 
 The David Jones Box is the bounded enclosure / integration boundary.
 
