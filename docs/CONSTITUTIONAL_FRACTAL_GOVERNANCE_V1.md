@@ -170,4 +170,82 @@ Before accepting a new fractal rule, model, plugin, or diagram edge, verify:
 - [Fragment composer](../logic_fractal/fragment_composer.py)
 - [Governance kernel](../governance/kernel.py)
 
+
+## 12. Semantic Space and Five-Sphere Word Contract (proposed; semantic validation NOT_YET_VERIFIED)
+
+**Principle:** The language layer must do more than establish agreement on labels. A word/term must carry a testable semantic structure: domain, relations, upper and lower boundaries, a defined place/context, truth conditions, provenance, and counterexamples. Model consensus is not semantic truth.
+
+### 12.1 Five nested spheres
+
+The current working interpretation of the five-sphere illustration is a nested structure in which sphere 5 is the enclosing whole and contains spheres 1–4. This is a **provisional formalization** of the described model; the canonical names and exact internal meaning of spheres 1–4 must be confirmed against the project's primary source before being treated as final.
+
+- **S1 — Core term / primitive:** the word or primitive claim being defined.
+- **S2 — Immediate definition:** necessary attributes, typed inputs/outputs, and direct relations.
+- **S3 — Upper boundary:** the permitted upper extent, maximum scope, or inclusion boundary of the term in the declared domain.
+- **S4 — Lower boundary:** the permitted lower extent, minimum scope, exclusion boundary, or termination boundary in the declared domain.
+- **S5 — Enclosing semantic place:** the containing whole that includes S1–S4 and fixes the term's place relative to its domain, context, neighboring terms, and boundary conditions.
+
+S3 and S4 are boundary functions, not permission to invent a hierarchy. “Upper” and “lower” must be interpreted relative to an explicitly declared axis/domain; if no axis is declared, the term is under-specified and must not be promoted.
+
+### 12.2 Place definition
+
+A **semantic place** is not merely a label or coordinate. It is the uniquely scoped position of a term/claim inside S5, determined by:
+1. its declared domain and context;
+2. its typed relations to other terms;
+3. its upper and lower boundaries;
+4. its inclusion and exclusion conditions;
+5. its source lineage and version;
+6. its truth conditions and applicable tests.
+
+If two terms claim the same place with incompatible types, boundaries, or truth conditions, record a conflict. Do not silently merge them.
+
+### 12.3 Required semantic term record
+
+Every canonical term intended to participate in a contract must have a versioned record containing, at minimum:
+
+- `term_id`, canonical label, aliases, language, and version;
+- source references and exact locators;
+- domain, context, and declared axis (if upper/lower are used);
+- S1–S5 membership and containment links;
+- typed definition and necessary/sufficient conditions where available;
+- upper-bound and lower-bound predicates, including inclusions/exclusions;
+- semantic-place identifier and neighboring typed relations;
+- positive examples, negative examples, boundary cases, and counterexamples;
+- truth conditions: what observable/formal conditions make the claim pass, fail, or remain undecided;
+- contradiction keys, status, and adjudication history;
+- derivation rule/version and parent term IDs.
+
+Unknown fields remain explicitly UNKNOWN / NOT_YET_SPECIFIED. No model may fill them by plausible-sounding prose.
+
+### 12.4 Semantic truth and contract validation
+
+For this project, **testable semantic validity** means that a term/claim satisfies its declared definition, type, scope, boundaries, relations, and truth conditions under reproducible checks. It does not mean that a string, hash, solver result, or model consensus proves universal or empirical truth.
+
+A semantic contract passes only when:
+- all required fields and references resolve;
+- upper/lower boundary predicates are coherent and non-empty where required;
+- typed relations are valid and do not imply undeclared equivalence, causality, symmetry, or transitivity;
+- positive, negative, and boundary tests produce the specified outcomes;
+- counterexamples are retained and either refuted by evidence or kept as an open conflict;
+- the term's place remains stable under permitted composition, or a versioned change is explicitly approved;
+- independent review and a recorded verification receipt exist.
+
+Otherwise status is REVIEW, NOT_YET_VERIFIED, ABSTAIN, or HALT according to the missing evidence or conflict. Passing structural checks alone is not semantic verification.
+
+### 12.5 Anti-tail / cross-model language consistency rule
+
+A **semantic tail** is any appended definition, alias, relation, scope expansion, or derived term that is not traceable to the canonical term record and its declared rules.
+
+- No model may append a semantic tail as if it were canonical.
+- A proposed extension must reference the parent term ID/version, declare its delta, provide source/rule support, update affected boundaries and tests, and pass compatibility checks.
+- Every model reads the same versioned semantic registry before proposing a new term or relation.
+- Incompatible extensions are quarantined in the conflict register; neither branch is deleted or auto-selected.
+- A model must not translate, abbreviate, rename, or broaden a term in a way that changes its semantic place or truth conditions without a versioned change proposal.
+- If the registry is unavailable or stale, the model must report the version it used and abstain from claiming cross-model consistency.
+
+This rule supplements CF-01 through CF-10; it does not replace source precedence, provenance, typed relations, or contradiction preservation.
+
+**Adoption boundary:** The five-sphere mapping above is PROPOSED / NOT_YET_VERIFIED until the project owner confirms the exact intended semantics and primary-source mapping for S1–S5. The anti-tail rule is a governance requirement; automatic enforcement requires implementation and adversarial tests.
+
+
 **Implementation status:** This is a canonical documentation proposal until reviewed and adopted by the project owner. No claim of complete automated enforcement is made.
