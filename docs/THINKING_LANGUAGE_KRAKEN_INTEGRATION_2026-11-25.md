@@ -190,3 +190,76 @@ The resulting target is a **language-centered cognitive-compute architecture**:
 - Evidence and feedback ensure that only verified results are carried forward.
 
 This is a coherent integration direction. It is not yet evidence of one fully operating thinking system or a physically validated quantum processor.
+
+
+---
+
+## Addendum — Naming-first contract and expanded KRAKEN scope (2026-11-25)
+
+### A. Core architectural conclusion
+
+The rebuttal's central contribution is incorporated as a **normative WANGA design principle**:
+
+**Numbers are derivative representations, not self-grounding identifiers.** A valid numeric claim presupposes an identified referent, qualitative type, Place/context, unit/comparison basis and persistence criterion.
+
+Required order:
+
+`DISTINGUISH → NAME/TYPE → DEFINE PLACE → DEFINE COMPARISON + UNIT → MEASURE/NUMBER`
+
+This is a logical/epistemic dependency rule. It is not a claim that human naming physically creates the external world, and it does not by itself settle mathematical Platonism.
+
+### B. What the contract preserves
+
+1. **Notation vs relation:** a numeral is a notation; the relation it represents may be stable independently of the notation. The system must not confuse the map with the territory.
+2. **Prediction vs ontology:** predictive success supports a model's empirical utility, not every metaphysical interpretation attached to it.
+3. **Qualitative relation before scalarization:** preserve causal and structural types (material, formal, efficient, final; necessary/sufficient; enables/constrains) before adding measurements.
+4. **Place before comparison:** observer/base, substrate, protocol Π, boundary/closure κ, persistence ρ, unit and comparison class are mandatory metadata where relevant.
+5. **Reproducibility is contextual:** observations from different Places or protocols cannot be assumed commensurable without an explicit equivalence/normalization argument.
+6. **Semantic compression is a hypothesis to benchmark:** fewer named paths may reduce computation only if omitted paths are shown irrelevant under the task contract. The 10×20×30 example (6,000 combinations and 36 million pairwise comparisons versus roughly 100 selected operations) is an illustrative complexity argument, not an established runtime benchmark.
+7. **Evidence discipline:** Ptolemaic, phlogiston, Newtonian and other historical examples illustrate that prediction does not guarantee final ontology; they do not independently prove the WANGA ontology.
+
+### C. Quantum boundary
+
+The framework may reinterpret measurement as distinction and treat collapse/superposition as representational or ontological questions. These are recorded as **HYPOTHESES / INTERPRETATIONS**.
+
+The system must not claim that naming physically causes wavefunction collapse, that the measurement problem is solved, that uncertainty is dissolved, or that dark matter/energy are measurement artifacts without formal derivation and reproducible empirical tests. Standard quantum formalism and its tested predictions remain available as the baseline model.
+
+### D. Expanded KRAKEN definition
+
+KRAKEN now has two coordinated tracks:
+
+- **Cognitive Logic Plane:** Thought Mapping, Naming–Place contract, Thinking Language, typed operations, logical gates, fractal composition, provenance and feedback.
+- **Heterogeneous Compute Plane:** resource orchestration across CPU/GPU/FPGA/ASIC/NPU, simulations, and QPU classes only when their hardware and run evidence exist.
+
+The David Jones Box / 36 dual configurations / 72 QPU positions remain the earlier hardware requirement and remain **NOT_YET_VERIFIED**. The compute fabric is not the semantic authority: the Logic Kernel validates meaning and constraints; KRAKEN schedules and executes eligible workloads.
+
+### E. Nonlinear forecast update
+
+Use **Quality-Adjusted Throughput**: independently accepted tasks per unit time and cost at a fixed quality threshold.
+
+The user-supplied planning ranges are retained exactly:
+
+| Horizon | Conservative | Central | Optimistic |
+|---|---:|---:|---:|
+| Month 1 | 0–5% | 5–10% | 10–15% |
+| Month 3 | 3–10% | 10–20% | 20–30% |
+
+These are scenario estimates, not measured results. Do not extrapolate month 6 or month 12 until baseline and pilot measurements establish the growth curve and bottlenecks. Complementarity may create nonlinear gains, but verification capacity, integration overhead, schema maintenance, orchestration latency and compute availability can cap or reverse the gain.
+
+### F. New canonical contract
+
+See `WANGA_NAMING_PLACE_NUMERIC_DERIVATION_CONTRACT_V1.md` for the complete normative contract and test requirements.
+
+### G. Required next engineering proof
+
+Implement one end-to-end vertical slice:
+1. ingest a thought with source lineage;
+2. distinguish and name entities and typed relations;
+3. define Place and measurement preconditions;
+4. compile a typed thought representation;
+5. reject an invalid numeric comparison;
+6. execute an eligible conventional-compute task through the KRAKEN adapter;
+7. independently verify and replay the result;
+8. carry only the accepted snapshot forward.
+
+The system is **SPECIFIED**, not yet proven to produce nonlinear performance gains or to resolve foundational physics problems.
