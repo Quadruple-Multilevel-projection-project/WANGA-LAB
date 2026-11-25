@@ -4,6 +4,19 @@ status: Mixed — implemented bounded modules and proposed interfaces distinguis
 audit_date: 2026-11-25
 ---
 flowchart TB
+  subgraph OPS["A0. WANGA operational evidence / forensics path"]
+    INTAKE["Case intake / triage / activation queue"]
+    OBSERVE["Observation capture / event collectors"]
+    DRIFT["Drift analysis"]
+    AUDIT["Audit generator / SHA-256 chain"]
+    PACKAGE["Evidence package / independent verification"]
+    TIME["Timestamping / external anchoring"]
+    GOV["Governance review"]
+    INTAKE --> OBSERVE --> DRIFT --> AUDIT --> PACKAGE
+    PACKAGE --> TIME
+    PACKAGE --> GOV
+  end
+
   subgraph SOURCES["A. Source and repository ecosystem"]
     REPOS["GitHub repositories<br/>WANGA-LAB · AI231/QUALIA · research tracks<br/>robotics · governance · external orchestrators"]
     CORPUS["Source registry / Logic Wiki<br/>IDs · versions · spans · hashes · permissions"]
@@ -62,6 +75,7 @@ flowchart TB
     LEDGER --> METRICS --> UPDATE --> CORPUS
   end
 
+  GOV --> CORPUS
   CORPUS --> EXTRACT
   CORPUS --> WIKI
   PACK --> ROUTER
