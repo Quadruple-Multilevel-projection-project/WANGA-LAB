@@ -43,3 +43,38 @@ For AI231/WANGA, the resulting implementation order is:
 - MCP authorization security considerations: https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/specification/2026-07-28/basic/authorization/security-considerations.mdx
 - Google Agent Mesh architecture: https://google.github.io/agentmesh/
 - Google Agent Mesh external ingress: https://google.github.io/agentmesh/docs/guides/external-ingress/
+
+
+## 2026-11-25 — Run 006 primary-source revalidation
+
+### Demonstrated external architecture patterns
+
+- **OpenAI Agents API and Agents SDK:** the official documentation describes durable sessions, events, resumable work, sub-agent delegation and optional sandbox environments. The sandbox guide separates the harness/control plane (agent loop, tool routing, approvals, tracing and recovery) from the compute plane (files, commands, packages, ports and snapshots). Isolation remains provider/backend-specific; the existence of an SDK or sandbox interface is not evidence that a particular application has a confined runtime.
+- **LangGraph:** the official walkthrough decomposes workflows into nodes over shared state and uses a checkpointer for persistence. interrupt() pauses for human input and resumes from saved state. This is orchestration and durable execution, not an OS/container security boundary.
+- **A2A:** the current project specification defines Agent Cards for capability and interaction discovery, task/message objects, asynchronous task lifecycle, status/artifact streaming and multi-turn context. It standardizes agent-to-agent interoperability; it does not by itself authorize a tool call or confine code execution.
+- **MCP authorization:** the official 2026-07-28 security considerations recommend short-lived access tokens and require refresh-token rotation for public clients. OAuth/resource authorization is an identity and access-control layer, not a sandbox or proof of workload integrity.
+- **Human review and guardrails:** OpenAI's official guide distinguishes automated input/output/tool checks from approval interruptions for sensitive side effects. Enforcement must be placed at the actual tool boundary; a prompt-only promise is insufficient.
+
+### Convergence assessment
+
+The demonstrated convergence is toward: (1) explicit task and capability contracts, (2) durable task state and resumability, (3) standard tool and agent interoperability, (4) human approval at side-effect boundaries, (5) structured traces/artifacts, and (6) provider-specific execution isolation. These capabilities are complementary, not interchangeable.
+
+### AI231/WANGA implementation implication
+
+Keep the Wix Site Evidence Auditor bounded and snapshot-only. The new canonical-metadata helper is deterministic and performs no network requests. Before describing any AI231 agent as active, require an exact-version configured backend, a non-dummy invocation record, task-scoped permissions, OS/container isolation, enforced network-egress denial, audit logs and acceptance results. The current runtime-catalog CI installs frameworks and runs generic graph/runtime tests, but it does not prove that this Wix auditor is deployed or isolated.
+
+**VERIFIED:** official specifications and documentation describe the capabilities above; WANGA-LAB's exact blueprint/schema/test workflow passes on its recorded commit.
+
+**ASSESSMENT:** these are converging engineering patterns, not evidence that external projects adopted AI231's logical architecture.
+
+**HYPOTHESIS:** AI231 differentiation must be established by source-grounded logical cases, independent semantic benchmarks, low false-positive rates and paid customer outcomes—not by agent counts, protocol compatibility or workflow green status.
+
+**NOT YET VERIFIED:** AI231 semantic truth, independent reviews, a deployed Wix auditor runtime, runtime isolation, customer willingness to pay, collected cash or positive contribution margin.
+
+### Primary sources
+- OpenAI Agents API: https://developers.openai.com/api/docs/guides/agents-api/overview
+- OpenAI Sandbox Agents: https://developers.openai.com/api/docs/guides/agents/sandboxes
+- OpenAI guardrails and human review: https://developers.openai.com/api/docs/guides/agents/guardrails-approvals
+- LangGraph — Thinking in LangGraph: https://docs.langchain.com/oss/javascript/langgraph/thinking-in-langgraph
+- A2A protocol specification: https://github.com/a2aproject/A2A/blob/main/docs/specification.md
+- MCP authorization security considerations: https://github.com/modelcontextprotocol/modelcontextprotocol/blob/main/docs/specification/2026-07-28/basic/authorization/security-considerations.mdx
