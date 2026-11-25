@@ -1,0 +1,51 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga.example/schemas/node.schema.json",
+  "title": "WANGA Compute and Connectivity Node",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["node_id", "node_class", "provider", "protocols", "capabilities", "status", "payload_policy", "evidence"],
+  "properties": {
+    "node_id": {"type": "string", "minLength": 1},
+    "node_class": {"enum": ["EDGE_DEVICE", "ANDROID_EMULATOR", "IDE_AGENT_HOST", "MCP_SERVICE", "CLOUD_API", "INFERENCE_RUNTIME"]},
+    "provider": {"type": "string", "minLength": 1},
+    "endpoint_ref": {"type": ["string", "null"], "description": "Secret-free reference to endpoint configuration; never store credentials here."},
+    "protocols": {"type": "array", "uniqueItems": true, "items": {"enum": ["MCP_STREAMABLE_HTTP", "ACP", "HTTPS_REST", "WEBSOCKET", "ADB", "ANDROID_CLI", "PROVIDER_SDK"]}},
+    "capabilities": {"type": "array", "items": {"type": "string"}},
+    "resource_class": {"enum": ["TINY", "EDGE", "STANDARD", "ACCELERATED", "UNKNOWN"]},
+    "status": {"enum": ["DISCOVERED", "CONFIGURED", "CONNECTED", "VERIFIED", "QUARANTINED", "REVOKED", "UNKNOWN"]},
+    "payload_policy": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["max_inline_payload_bytes", "allow_weight_transfer"],
+      "properties": {
+        "max_inline_payload_bytes": {"type": "integer", "minimum": 0},
+        "allow_weight_transfer": {"const": false},
+        "prefer_content_refs": {"type": "boolean", "default": true}
+      }
+    },
+    "identity_ref": {"type": ["string", "null"], "description": "External secret-manager or identity reference only."},
+    "health": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "last_probe_at": {"type": ["string", "null"], "format": "date-time"},
+        "latency_ms": {"type": ["number", "null"], "minimum": 0},
+        "probe_result": {"enum": ["PASS", "FAIL", "UNKNOWN"]}
+      }
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["kind", "reference", "status"],
+        "properties": {
+          "kind": {"enum": ["OFFICIAL_DOC", "PUBLIC_REPOSITORY", "HANDSHAKE", "READ_ONLY_PROBE", "FUNCTIONAL_TEST", "APPROVAL"]},
+          "reference": {"type": "string"},
+          "status": {"enum": ["PASS", "FAIL", "PENDING", "UNKNOWN"]}
+        }
+      }
+    }
+  }
+}
