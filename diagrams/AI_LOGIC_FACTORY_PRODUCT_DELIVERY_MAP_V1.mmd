@@ -1,53 +1,86 @@
 ---
 title: AI Logic Factory — Product Delivery Map
-status: PRODUCT CONCEPT / ROADMAP
+status: PRODUCT CONCEPT / SPECIFIED ROADMAP / NOT_YET_VERIFIED
 audit_date: 2026-11-25
+source: docs/AI_LOGIC_FACTORY_PRODUCT_ARCHITECTURE_V1.md + KRAKEN_CONFIGURATION_V0_2.md
 ---
-flowchart LR
+flowchart TB
   USER["Researcher / AI engineering team / institution"]
-  subgraph EXPERIENCE["Experience"]
+
+  subgraph EXPERIENCE["1. Experience layer"]
     WB["Logic Factory Workbench"]
-    MAP["Thought + Place maps"]
-    VST["Visual Transformation Studio"]
-    KPI["KPI / evidence dashboard"]
+    THOUGHTMAPS["Four cognitive maps<br/>logic · Book of Logic · semantic/word · letters/agents"]
+    VST["Visual Transformation Studio<br/>candidate glyphs · replay · human review"]
+    KPI["Quality-Adjusted Throughput / evidence dashboard"]
+    REVIEW["Review queue<br/>LOCK / REVIEW / ABSTAIN / HALT"]
   end
-  subgraph CORE["Logic core"]
-    SNAP["Thought snapshots"]
-    REG["Term + source registry"]
-    LNL["Thinking Language / LNL"]
-    SEM["Naming–Place contract"]
-    KERNEL["Symbolic + typed validation"]
-    FRACTAL["Fractal composer"]
+
+  subgraph CORE["2. Cognitive and logic core"]
+    SNAP["Immutable thought + image snapshots"]
+    REG["Source + term registry"]
+    PLACE["Naming–Place–Distinction–Number contract"]
+    LNL["Thinking Language / LNL typed representation"]
+    KERNEL["Symbolic Logic Kernel + typed formal checks"]
+    FRACTAL["Fractal composer<br/>bounded, versioned packages"]
   end
-  subgraph COORD["Coordination"]
-    CAB["Model cabinet"]
-    TASK["Task contracts + handoffs"]
-    CONFLICT["Conflict ledger"]
+
+  subgraph COORD["3. Coordination plane"]
+    CAB["Model cabinet / ARK-Swarm roles"]
+    TASK["Bounded task contracts + handoffs"]
+    CONFLICT["Append-only conflict ledger"]
   end
-  subgraph EXEC["Execution"]
-    ROUTE["KRAKEN workload admission"]
-    CPU["CPU / GPU / FPGA"]
-    SIM["Simulation / emulation"]
-    QPU["QPU adapter<br/>blocked until evidence"]
+
+  subgraph KRAKEN["4. KRAKEN — two coordinated planes"]
+    COG["Cognitive Logic Plane<br/>admit validated typed workloads"]
+    ADMIT["Workload admission gate<br/>scope · capability · safety · tests"]
+    SCHED["Capability-aware scheduler"]
+    FABRIC["Heterogeneous Compute Plane"]
+    CPU["Conventional compute<br/>CPU · GPU · FPGA · ASIC · DSP · NPU"]
+    SIM["Simulation / emulation<br/>label outputs SIMULATED"]
+    QPU["Physical QPU adapter<br/>NOT_YET_VERIFIED / evidence-gated"]
+    TELEMETRY["Execution receipt<br/>resource · latency · throughput · utilization<br/>error · power · provenance"]
+    COG --> ADMIT --> SCHED --> FABRIC
+    FABRIC --> CPU
+    FABRIC --> SIM
+    FABRIC -.-> QPU
+    CPU --> TELEMETRY
+    SIM --> TELEMETRY
+    QPU -.-> TELEMETRY
   end
-  subgraph EVID["Evidence"]
-    PROV["Provenance + hashes"]
-    REPLAY["Replay + independent verification"]
-    RELEASE["Human approval / release"]
+
+  subgraph EVID["5. Evidence, verification and release"]
+    PROV["Provenance + content hashes"]
+    REPLAY["Deterministic replay"]
+    VERIFY["Independent verification"]
+    RELEASE["Human approval / controlled release"]
   end
+
   USER --> WB
-  WB --> MAP
+  WB --> THOUGHTMAPS
   WB --> VST
   WB --> KPI
-  MAP --> SNAP --> REG --> LNL --> SEM --> KERNEL --> FRACTAL
+  WB --> REVIEW
+  THOUGHTMAPS --> SNAP
   VST --> SNAP
+  SNAP --> REG --> PLACE --> LNL --> KERNEL --> FRACTAL
   FRACTAL --> CAB --> TASK --> CONFLICT
-  FRACTAL --> ROUTE
-  ROUTE --> CPU
-  ROUTE --> SIM
-  ROUTE -.-> QPU
+  FRACTAL --> COG
+  TASK --> COG
+  PLACE --> ADMIT
+  KRAKEN --> PROV
   CORE --> PROV
   COORD --> PROV
-  EXEC --> PROV
-  PROV --> REPLAY --> KPI --> RELEASE
-  RELEASE --> SNAP
+  VST --> PROV
+  PROV --> REPLAY --> VERIFY --> REVIEW
+  TELEMETRY --> KPI
+  REVIEW --> RELEASE --> SNAP
+
+  classDef specified fill:#fef3c7,stroke:#d97706,color:#78350f
+  classDef evidence fill:#dbeafe,stroke:#2563eb,color:#172554
+  classDef blocked fill:#ffedd5,stroke:#ea580c,color:#7c2d12
+  class PLACE,LNL,KERNEL,FRACTAL,COG,ADMIT specified
+  class SNAP,REG,PROV,REPLAY,VERIFY evidence
+  class VST,THOUGHTMAPS,SCHED,FABRIC,CPU,SIM,QPU,TELEMETRY blocked
+
+  click THOUGHTMAPS "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/AI_LOGIC_FACTORY_PRODUCT_ARCHITECTURE_V1.md"
+  click QPU "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/ai-drift-forensics/david-jones-kraken/KRAKEN_CONFIGURATION_V0_2.md"
