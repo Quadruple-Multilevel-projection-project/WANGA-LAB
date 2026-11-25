@@ -1,0 +1,142 @@
+---
+title: WANGA-LAB Cabinet — Unified Constitutional Semantic Architecture
+version: 1.0
+status: ARCHITECTURE_VIEW; semantic validation NOT_YET_VERIFIED
+source_contract: docs/CONSTITUTIONAL_FRACTAL_GOVERNANCE_V1.md
+---
+
+flowchart TB
+  subgraph SOURCES["A. Source and Evidence Layer"]
+    SRC["Primary source / exact span / commit"]
+    PROV["Provenance record: source ID, locator, version, hash"]
+    EPI["Epistemic status: SOURCE / HYPOTHESIS / CANDIDATE / TESTED / VERIFIED"]
+    SRC --> PROV --> EPI
+  end
+
+  subgraph LANGUAGE["B. Unified Semantic Language — Five-Sphere Word Contract"]
+    S1["S1 — Core term / primitive"]
+    S2["S2 — Immediate definition / typed attributes"]
+    S3["S3 — Upper boundary / declared axis"]
+    S4["S4 — Lower boundary / declared axis"]
+    S5["S5 — Enclosing semantic place; contains S1–S4"]
+    REL["Typed relations: association, dependency, derivation, precondition, call, validation, hypothesis"]
+    TRUTH["Truth conditions: positive / negative / boundary cases"]
+    COUNTER["Counterexamples + contradiction keys"]
+    REG["Versioned semantic registry"]
+    S1 --> S2 --> S3 --> S4 --> S5
+    S5 --> REL --> TRUTH --> COUNTER
+    REG --> S1
+    REG --> REL
+  end
+
+  subgraph CONSTITUTION["C. Constitutional Fractal Rules — CF-01 to CF-11"]
+    CF1["CF-01 Source before conclusion"]
+    CF2["CF-02 Preserve epistemic status"]
+    CF3["CF-03 Explicit relation types"]
+    CF4["CF-04 Preserve type and scope"]
+    CF5["CF-05 No silent premises or rules"]
+    CF6["CF-06 Deterministic provenance"]
+    CF7["CF-07 Bounded recursion / termination"]
+    CF8["CF-08 Preserve contradictions"]
+    CF9["CF-09 No statistical shortcut to validity"]
+    CF10["CF-10 Fail closed: REVIEW / ABSTAIN / HALT"]
+    CF11["CF-11 NO SEMANTIC TAILS: no unversioned alias, extension, scope drift or incompatible definition"]
+  end
+
+  subgraph BUILD["D. Logic Construction and Formalization"]
+    L1["L1 — First-order structural logic"]
+    L2["L2 — Derivation logic"]
+    L3["L3 — Relation / rule validation"]
+    COMP["Typed fragment composition"]
+    RECUR["Recursive composition candidate — bounded"]
+    FORMAL["Formal checks / test fixtures"]
+    L1 --> L2 --> L3 --> COMP --> RECUR --> FORMAL
+  end
+
+  subgraph CABINET["E. Multi-Model Cabinet Plugin"]
+    ENTRY["Cabinet START-HERE / CURRENT-STATE"]
+    CAP["Capability declaration: tools, access, context, test ability"]
+    ALLOC["Task allocator: ID + bounded scope + output budget"]
+    STRONG["High-capability model: cross-source synthesis / contradiction audit"]
+    MID["Mid-capability model: assigned repo group / structured extraction"]
+    LIGHT["Limited-capability model: one path / short evidence rows"]
+    REPORT["Append-only reports / handoff ledger"]
+    ENTRY --> CAP --> ALLOC
+    ALLOC --> STRONG
+    ALLOC --> MID
+    ALLOC --> LIGHT
+    STRONG --> REPORT
+    MID --> REPORT
+    LIGHT --> REPORT
+  end
+
+  subgraph GATES["F. Semantic and Evidence Release Gates"]
+    SG{"Semantic contract gate"}
+    EV["Evidence / provenance filter"]
+    DET["Deterministic output filter"]
+    REVIEW["REVIEW / NOT_YET_VERIFIED"]
+    QUAR["QUARANTINE both branches / OPEN CONFLICT"]
+    HALT["ABSTAIN / HALT"]
+    ACCEPT["VERIFIED only for declared scope"]
+    SG --> EV --> DET
+    DET -->|All declared checks pass| ACCEPT
+    SG -->|Missing / stale / ambiguous| REVIEW
+    SG -->|Boundary collision / semantic tail| QUAR
+    EV -->|Mandatory evidence absent| HALT
+  end
+
+  subgraph OPS["G. Existing WANGA-LAB Operational Systems"]
+    RUNTIME["WANGA Runtime"]
+    ORCH["Run Orchestrator / Worker Contract"]
+    SWARM["ARK Swarm Coordinator / State"]
+    FORENSICS["Drift Forensics / Observation / Event Collectors"]
+    AUDIT["Audit Generator / Evidence Package"]
+    CRYPTO["SHA-256 / timestamp / anchoring"]
+    INDEP["Independent Verification"]
+    GOV["Governance Kernel"]
+    RUNTIME --> ORCH --> SWARM
+    ORCH --> FORENSICS --> AUDIT --> CRYPTO --> INDEP --> GOV
+  end
+
+  subgraph MEASURE["H. Measurement and Learning Loop"]
+    BENCH["USCB-100 plan: 30 positive / 30 negative / 40 boundary"]
+    METRICS["Measure: task success, time, tokens, cost, rework, contradictions, human corrections"]
+    BASE["Control: same tasks without shared contract"]
+    TEST["Treatment: same tasks with shared contract"]
+    COMPARE["Compare quality-adjusted outcomes; no assumed percentage gain"]
+    DAILY["Daily snapshot: commit, changed paths, model/task IDs, open conflicts"]
+    BASE --> COMPARE
+    TEST --> COMPARE
+    BENCH --> TEST
+    METRICS --> COMPARE --> DAILY
+  end
+
+  SRC --> REG
+  EPI --> LANGUAGE
+  LANGUAGE --> CONSTITUTION
+  CONSTITUTION --> BUILD
+  BUILD --> SG
+  REPORT --> REG
+  REPORT --> SG
+  GOV --> EV
+  ACCEPT --> DAILY
+  REVIEW --> DAILY
+  QUAR --> DAILY
+  HALT --> DAILY
+  DAILY --> ENTRY
+
+  classDef source fill:#dbeafe,stroke:#2563eb,color:#172554
+  classDef semantic fill:#cffafe,stroke:#0891b2,color:#164e63
+  classDef rule fill:#ede9fe,stroke:#7c3aed,color:#4c1d95
+  classDef pending fill:#fef3c7,stroke:#d97706,color:#78350f
+  classDef verified fill:#dcfce7,stroke:#16a34a,color:#14532d
+  classDef stop fill:#ffe4e6,stroke:#e11d48,color:#881337
+  class SRC,PROV,EPI,REG source
+  class S1,S2,S3,S4,S5,REL,TRUTH,COUNTER semantic
+  class CF1,CF2,CF3,CF4,CF5,CF6,CF7,CF8,CF9,CF10,CF11 rule
+  class REVIEW,BENCH,METRICS,BASE,TEST,COMPARE pending
+  class ACCEPT,EV,DET,INDEP verified
+  class QUAR,HALT stop
+
+  %% Status discipline: diagram describes architecture and proposed gates.
+  %% It does not prove provider connectivity, runtime enforcement, semantic truth, or benchmark gains.
