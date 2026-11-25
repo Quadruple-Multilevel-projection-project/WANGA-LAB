@@ -1,0 +1,86 @@
+---
+title: AI231 / WANGA System-Wide Integration (Kraken Excluded)
+status: Mixed — implemented bounded modules and proposed interfaces distinguished
+audit_date: 2026-11-25
+---
+flowchart TB
+  subgraph SOURCES["A. Source and repository ecosystem"]
+    REPOS["GitHub repositories<br/>WANGA-LAB · AI231/QUALIA · research tracks<br/>robotics · governance · external orchestrators"]
+    CORPUS["Source registry / Logic Wiki<br/>IDs · versions · spans · hashes · permissions"]
+    REPOS --> CORPUS
+  end
+
+  subgraph LANGUAGE["B. Language and logic formation"]
+    EXTRACT["Source-grounded extraction<br/>claims · relations · types · scope · unknowns"]
+    LNL["LNL/0.1 parser and compiler<br/>supported structured language only"]
+    KERNEL["Deterministic symbolic kernel<br/>rules · evidence IDs · derivation trace"]
+    FORMAL["Formal reasoning adapter<br/>supported AST · SAT / UNSAT / UNKNOWN"]
+    EXTRACT --> LNL --> KERNEL --> FORMAL
+  end
+
+  subgraph COMPOSE["C. Reusable logic and composition"]
+    WIKI["Logic Wiki / taxonomy<br/>editorial links are not entailment"]
+    FRACTAL["Logic-fractal composer<br/>L0 primitives → L1 fragments<br/>L2 recursive candidates → L3 model candidates"]
+    PACK["Versioned Logic Packages<br/>provenance · invariants · boundaries · tests"]
+    WIKI --> FRACTAL --> PACK
+  end
+
+  subgraph AGENTS["D. Agent orchestration"]
+    ROUTER["Capability-aware model router<br/>bounded tasks · declared tools"]
+    SWARM["ARK-Swarm coordinator<br/>bounded roles · local event ledger"]
+    MULTI["External multi-agent / coding orchestrators<br/>candidate integrations; not assumed connected"]
+    ROUTER --> SWARM
+    MULTI -.-> ROUTER
+  end
+
+  subgraph GATES["E. Independent acceptance gates"]
+    EVID["Evidence / provenance gate"]
+    CONTRA["Contradiction and scope gate"]
+    BENCH["Source-grounded benchmark<br/>counterexamples · holdout · replay"]
+    HUMAN["Independent review / human approval"]
+    DECISION{"All required gates pass?"}
+    EVID --> DECISION
+    CONTRA --> DECISION
+    BENCH --> DECISION
+    HUMAN --> DECISION
+  end
+
+  subgraph PRODUCTS["F. Products and external domains"]
+    BOXES["Logic Boxes<br/>Evidence Gatekeeper · Scope Binder · Action Filter"]
+    SOLUTION["Logic Bundles / agent capabilities<br/>integrated customer workflows"]
+    ECON["QUALIA / Logical Islands<br/>governance and economic proposals"]
+    ROBOT["Robotics / physical execution adapter<br/>separate safety and authorization boundary"]
+    BOXES --> SOLUTION
+    SOLUTION --> ECON
+    SOLUTION -.-> ROBOT
+  end
+
+  subgraph FEEDBACK["G. Audit and improvement loop"]
+    LEDGER["Versioned shared ledger<br/>commit refs · test results · status · costs"]
+    METRICS["Measure accepted throughput<br/>latency · tokens · rework · mismatch · review cost"]
+    UPDATE["Reviewed repository update / PR"]
+    LEDGER --> METRICS --> UPDATE --> CORPUS
+  end
+
+  CORPUS --> EXTRACT
+  CORPUS --> WIKI
+  PACK --> ROUTER
+  FORMAL --> EVID
+  FORMAL --> CONTRA
+  SWARM --> EVID
+  SWARM --> CONTRA
+  PACK --> BENCH
+  DECISION -->|pass| BOXES
+  DECISION -->|fail / unknown| LEDGER
+  SOLUTION --> LEDGER
+  ROBOT --> HUMAN
+  ECON --> LEDGER
+
+  classDef implemented fill:#dbeafe,stroke:#2563eb,color:#172554
+  classDef proposed fill:#ffedd5,stroke:#ea580c,color:#7c2d12
+  classDef gate fill:#fce7f3,stroke:#db2777,color:#831843
+  classDef review fill:#fef3c7,stroke:#d97706,color:#78350f
+  class CORPUS,LNL,KERNEL,FORMAL,WIKI,FRACTAL,SWARM implemented
+  class ROUTER,MULTI,PACK,BOXES,SOLUTION,ROBOT,ECON proposed
+  class EVID,CONTRA,BENCH,HUMAN,DECISION gate
+  class LEDGER,METRICS,UPDATE review
