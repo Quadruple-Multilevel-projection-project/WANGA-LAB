@@ -1,0 +1,56 @@
+---
+title: KRAKEN v0.2 — Cognitive Logic + Heterogeneous Compute Fabric
+status: SPECIFIED / NOT_YET_VERIFIED
+audit_date: 2026-11-25
+---
+flowchart LR
+  subgraph WANGA["WANGA Cognitive Logic Plane"]
+    INPUT["Thought / source input"]
+    SNAP["Immutable thought snapshot"]
+    MAP["Thought Mapping\nentities · names · qualitative relations"]
+    PLACE["Place contract\nobserver/base · substrate · Π · κ · ρ"]
+    LANG["Thinking Language\ntyped graph / AST · LNL"]
+    GATE{"Grounding and logic gates pass?"}
+    ABSTAIN["ABSTAIN / HALT\nmissing identity, Place, unit or evidence"]
+    FRACTAL["Fractal package\nvalidated structure + provenance"]
+    INPUT --> SNAP --> MAP --> PLACE --> LANG --> GATE
+    GATE -->|no| ABSTAIN
+    GATE -->|yes| FRACTAL
+  end
+
+  subgraph KRAKEN["KRAKEN Execution Fabric"]
+    ADMIT["Workload admission\ncapability + safety + scope"]
+    SCHED["Resource scheduler"]
+    CLASSICAL["CPU / GPU / FPGA / ASIC / DSP / NPU"]
+    SIM["Simulation / emulation"]
+    QPU["Physical QPU path\nNOT_YET_VERIFIED"]
+    TELEMETRY["Execution receipt\nlatency · utilization · errors · power"]
+    ADMIT --> SCHED
+    SCHED --> CLASSICAL
+    SCHED --> SIM
+    SCHED -.-> QPU
+    CLASSICAL --> TELEMETRY
+    SIM --> TELEMETRY
+    QPU -.-> TELEMETRY
+  end
+
+  subgraph VERIFY["Evidence and feedback"]
+    REPLAY["Independent verification / replay"]
+    LOCK["LOCK accepted state"]
+    NEXT["Next thought snapshot"]
+    REPLAY --> LOCK --> NEXT
+  end
+
+  FRACTAL --> ADMIT
+  TELEMETRY --> REPLAY
+  NEXT --> SNAP
+  ABSTAIN --> REPLAY
+
+  classDef existing fill:#dbeafe,stroke:#2563eb,color:#172554
+  classDef specified fill:#fef3c7,stroke:#d97706,color:#78350f
+  classDef proposed fill:#ffedd5,stroke:#ea580c,color:#7c2d12
+  classDef gate fill:#fce7f3,stroke:#db2777,color:#831843
+  class INPUT,SNAP existing
+  class MAP,PLACE,LANG specified
+  class FRACTAL,ADMIT,SCHED,CLASSICAL,SIM,QPU,TELEMETRY,NEXT proposed
+  class GATE,ABSTAIN,REPLAY,LOCK gate
