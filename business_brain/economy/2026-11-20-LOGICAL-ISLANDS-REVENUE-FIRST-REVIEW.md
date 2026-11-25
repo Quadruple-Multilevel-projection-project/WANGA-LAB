@@ -75,3 +75,14 @@ Official product documentation confirms that generic technical-site auditing is 
 **Economic assessment:** do not position AI231 as another generic SEO crawler. The testable wedge is source-linked public-claim consistency, evidence provenance, dynamic-route uncertainty handling and permission-gated remediation drafts. This remains a hypothesis; no customer demand, conversion advantage or willingness-to-pay evidence was found in this run.
 
 **Capital decision:** retain the independent baseline. No grant, investor, partner commitment or funding outcome was evidenced. Evaluate a future instrument only through the existing risk-adjusted net-benefit formula and its IP/control costs.
+
+
+## 2026-11-25 — current evidence update
+
+**VERIFIED:** The connected Wix inventory returned 70 sites (previous inspected snapshot: 69). This run deeply inspected two selected sites: The Logic Economy (26 HTML pages) and AI231 Robotics Collaboration (3 HTML pages). Four The Logic Economy `/post/` routes were checked with the documented Wix Blog Get Post By Slug read API and each returned HTTP 200. These are route-resolution results, not buyer or transaction evidence.
+
+**ASSESSMENT:** The strongest commercial wedge remains source-linked public-claim consistency, dynamic-route uncertainty handling, accessible navigation checks and permission-gated remediation drafts. Generic technical SEO crawling is already served by Lighthouse, Screaming Frog and Semrush; do not position AI231 as another generic crawler. The service should sell evidence provenance and safe remediation decisions, not an unverified logical-processor claim.
+
+**Capital allocation:** retain the independent baseline: paid validation → accepted delivery → measured direct costs → positive contribution margin → reinvestment. Grants and investors remain optional and must be compared by risk-adjusted net benefit, including restrictions, reporting burden, IP/control cost, delay and exit obligations. No funding or partner commitment was evidenced.
+
+**Financial state:** actual cash collected, actual cash costs paid, contribution margin and qualified pipeline remain NOT_YET_VERIFIED from the connected sources. Wix Payments/Stores app presence and published pages are not evidence of transactions. Internal Logic Credits remain non-cash and excluded from revenue and margin. No numerical forecast or valuation is upgraded by this site audit.

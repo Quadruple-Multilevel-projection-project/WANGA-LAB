@@ -90,3 +90,18 @@ The aggregate-state implementation was verified on the exact PR #150 head commit
 - Existing event-ledger verifier step also passed on the same run: five tests ran; `OK`.
 
 **Acceptance:** PASS for the draft aggregate-state schema, validator and proposal/approval transition tests on this commit. **NOT_YET_VERIFIED:** a live append-only ledger, persistent storage, production authorization service, actual cash transaction records and any internal issuance. Issued-internal quantity and external-token quantity remain fixed at zero in v1.
+
+
+## 2026-11-25 — independent two-pass CI revalidation
+
+**PR #150 state:** OPEN / DRAFT / UNMERGED. Branch `agent/ai231-cycle1-ledger-foundation`, head `d77a91bc4456ec0894257fba2a9fc8ae1d164a62`, base `2e43830e8b624568ebc9195977a6fdb35fbdacff`. Compared with current main `1d9afec596a64f59290941c6ea41d3322f7b8492`, the branch is 30 commits ahead and 124 behind; rebase/reconciliation is required before merge.
+
+**Two-pass evidence:** the run was independently re-fetched by querying the exact PR head commit, then re-fetching the job, step list, log and workflow YAML. Workflow: `.github/workflows/repository-integrity.yml`, blob `5049b14b410569e14b9aa91023df69c9e01e4839`. Run `45001947753`, job `137145211088` (`integrity`), conclusion `success`. The runner log checks out synthetic PR merge commit `747217843211f779e02008c74415d226676f04ae`; the workflow-run lookup was tied to head `d77a91bc4456ec0894257fba2a9fc8ae1d164a62`. Both identifiers are retained because the runner executed the merge ref.
+
+Exact successful steps:
+- Step 5 — `Logic contribution ledger verifier tests`: `python -m unittest discover -s tests -p 'test_logic_contribution_ledger_verifier.py' -v`; 5 tests ran; `OK`.
+- Step 6 — `Logic contribution ledger JSON Schema validation`: the inline validator loaded `schemas/logic-contribution-ledger-event-v1.schema.json` and `examples/logic-contribution-ledger-event.v1.example.json`; it validated the example and rejected negative quantity and pending authorization for `CREDIT_APPROVED`.
+- Step 7 — `Logic currency ledger aggregate-state schema validation`: `python scripts/validate_logic_currency_ledger_state.py`; output confirms the exact state schema validates its example, rejects non-zero external tokens/internal issuance/unverified cash promotion, and checks the contribution-margin invariant.
+- Step 8 — `Logic currency ledger aggregate-state transition tests`: `python -m unittest discover -s tests -p 'test_logic_currency_ledger_state.py' -v`; 14 tests ran; `OK`.
+
+**Acceptance:** PASS for the draft event schema, aggregate-state schema and the exact transition/verifier tests on the PR merge commit. **NOT_YET_VERIFIED:** integration on current main, a persistent/live ledger, production authorization, actual cash transactions, and any internal or external issuance. The PR remains unmerged; no token or Logic Credit was issued.

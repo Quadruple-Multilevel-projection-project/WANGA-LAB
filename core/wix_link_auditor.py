@@ -136,3 +136,39 @@ def classify_static_link(
             return LinkStatus.UNRESOLVED_DYNAMIC_ROUTE
 
     return LinkStatus.MISSING_STATIC
+
+
+class NavigationStatus(str, Enum):
+    """Evidence-aware classification of page navigation coverage."""
+
+    NAVIGATION_PRESENT = "NAVIGATION_PRESENT"
+    ISOLATED_PAGE_CANDIDATE = "ISOLATED_PAGE_CANDIDATE"
+    NO_NAVIGATION_EXPECTED = "NO_NAVIGATION_EXPECTED"
+    UNRESOLVED_INSUFFICIENT_CONTEXT = "UNRESOLVED_INSUFFICIENT_CONTEXT"
+    UNRESOLVED_INVALID_EVIDENCE = "UNRESOLVED_INVALID_EVIDENCE"
+
+
+def classify_navigation_presence(
+    navigation_link_count: int | None,
+    site_html_page_count: int | None,
+) -> NavigationStatus:
+    """Classify navigation presence without treating absence alone as a defect.
+
+    A page with no navigation links in a multi-page site is only an isolated-page
+    candidate. A one-page site may legitimately have no navigation. Missing or
+    malformed counts fail closed.
+    """
+    if navigation_link_count is None or site_html_page_count is None:
+        return NavigationStatus.UNRESOLVED_INSUFFICIENT_CONTEXT
+
+    for value in (navigation_link_count, site_html_page_count):
+        if isinstance(value, bool) or not isinstance(value, int) or value < 0:
+            return NavigationStatus.UNRESOLVED_INVALID_EVIDENCE
+
+    if site_html_page_count < 1:
+        return NavigationStatus.UNRESOLVED_INVALID_EVIDENCE
+    if navigation_link_count > 0:
+        return NavigationStatus.NAVIGATION_PRESENT
+    if site_html_page_count == 1:
+        return NavigationStatus.NO_NAVIGATION_EXPECTED
+    return NavigationStatus.ISOLATED_PAGE_CANDIDATE

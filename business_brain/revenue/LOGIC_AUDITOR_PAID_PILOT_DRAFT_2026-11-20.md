@@ -78,3 +78,16 @@ Proceed with the smallest paid validation that can be delivered safely from curr
 Compute direct cost only from measured labor hours at an approved internal rate plus attributable model/API/tool charges, payment fees and rework. Until those inputs exist, the earlier 2–4 hour estimate remains an unverified planning estimate and contribution margin remains NOT_COMPUTABLE.
 
 **Pricing status:** €290 excluding VAT remains a hypothesis only. It is not a quote, proven market price or evidence of willingness to pay. Do not lower or raise it from competitor list prices alone; test it only after explicit outreach authorization and record buyer objections, accepted scope and actual payment evidence.
+
+
+## 2026-11-25 — pilot evidence refresh
+
+**Buyer/problem:** the target remains a Wix owner/operator or agency needing evidence-linked review of public claims, stale content, metadata, static navigation and dynamic routes. This is still a buyer hypothesis; no buyer interview, budget authority or willingness-to-pay evidence was recorded.
+
+**Internal delivery evidence:** a read-only audit inspected 26 HTML pages on The Logic Economy and 3 on AI231 Robotics Collaboration. Four Wix Blog routes returned HTTP 200 through the read-only Get Post By Slug API. This demonstrates that the audit workflow can distinguish dynamic blog routes from missing static files; it is not customer delivery, acceptance or revenue.
+
+**Bounded offer and price:** retain the existing one-site scope (up to 10 static pages plus up to 3 dynamic-route checks), evidence-linked findings, up to 10 prioritized remediation items and draft copy; no production writes or private customer-data handling. The €290 excluding VAT price remains a HYPOTHESIS only. The earlier 2–4 analyst-hour delivery estimate remains unmeasured.
+
+**Cost and margin:** no approved loaded labor rate, timed delivery record, attributable tool/API cost, payment fee or customer transaction record was available. Actual delivery cost and contribution margin are NOT_COMPUTABLE. Actual cash collected/costs and qualified pipeline remain NOT_YET_VERIFIED; no amount is inferred.
+
+**Next measurable action:** after explicit authorization for outreach, run the existing 10–15 buyer discovery protocol, record budget authority and objections, test the €290 hypothesis, and require a paid pilot before generalized product build. No outreach or customer contact occurred in this run.

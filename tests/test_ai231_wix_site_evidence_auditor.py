@@ -11,6 +11,8 @@ from core.wix_link_auditor import (
     normalize_root_relative_path,
     PublicationStatus,
     classify_publication_state,
+    NavigationStatus,
+    classify_navigation_presence,
 )
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -152,6 +154,49 @@ class WixSiteEvidenceAuditorBlueprintTests(unittest.TestCase):
             classify_publication_state("Published", False),
             PublicationStatus.UNRESOLVED_INVALID_EVIDENCE,
         )
+
+
+    def test_navigation_absence_in_multi_page_site_is_candidate_not_defect(self):
+        self.assertEqual(
+            classify_navigation_presence(0, 26),
+            NavigationStatus.ISOLATED_PAGE_CANDIDATE,
+        )
+
+    def test_navigation_present_is_classified(self):
+        self.assertEqual(
+            classify_navigation_presence(3, 26),
+            NavigationStatus.NAVIGATION_PRESENT,
+        )
+
+    def test_single_page_site_may_have_no_navigation(self):
+        self.assertEqual(
+            classify_navigation_presence(0, 1),
+            NavigationStatus.NO_NAVIGATION_EXPECTED,
+        )
+
+    def test_navigation_requires_site_context(self):
+        self.assertEqual(
+            classify_navigation_presence(None, 26),
+            NavigationStatus.UNRESOLVED_INSUFFICIENT_CONTEXT,
+        )
+
+    def test_invalid_navigation_counts_fail_closed(self):
+        self.assertEqual(
+            classify_navigation_presence(True, 26),
+            NavigationStatus.UNRESOLVED_INVALID_EVIDENCE,
+        )
+        self.assertEqual(
+            classify_navigation_presence(-1, 26),
+            NavigationStatus.UNRESOLVED_INVALID_EVIDENCE,
+        )
+
+    def test_blueprint_navigation_acceptance_requires_context(self):
+        test = next(item for item in self.blueprint["acceptance_tests"] if item["id"] == "AT-WIX-010")
+        expected = test["expected"].lower()
+        self.assertIn("isolated_page_candidate", expected)
+        self.assertIn("no_navigation_expected", expected)
+        self.assertIn("unresolved_insufficient_context", expected)
+        self.assertIn("not automatically", expected)
 
 
 if __name__ == "__main__":
