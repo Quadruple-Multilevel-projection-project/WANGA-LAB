@@ -346,3 +346,8 @@ WANGA-LAB is the canonical project and evidence repository for the proposed AI23
 - [Interactive repository architecture map (GitDiagram)](https://gitdiagram.com/quadruple-multilevel-projection-project/wanga-lab)
 
 The cabinet workflow reuses and coordinates with repository-visible foundations including the provider-neutral WANGA runtime, ARK-Swarm coordinator, logic/fractal and formal-reasoning components, and governance/evidence structures. See the architecture document for scope and verification boundaries.
+
+
+## Constitutional Fractal Governance
+
+The canonical cross-model rules for source lineage, epistemic status, typed relations, bounded recursive composition, contradiction preservation, verification and fail-closed handoffs are specified in [Constitutional Fractal Governance V1](docs/CONSTITUTIONAL_FRACTAL_GOVERNANCE_V1.md). The [constitutional fractal diagram](diagrams/constitutional-fractal-governance.mmd) is a derived map; it does not claim automatic enforcement. See also the [Logic Wiki/fractal architecture V2](docs/LOGIC_WIKI_FRACTAL_ARCHITECTURE_V2.md) and [FOL/second-order/fractal traceability map](docs/FOL_SECOND_ORDER_FRACTAL_WANGA_TRACEABILITY_MAP_HE_V1.md).
