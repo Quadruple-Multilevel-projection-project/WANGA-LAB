@@ -1,0 +1,148 @@
+{
+  "schema_version": "1.0.0",
+  "contract_status": "SPECIFIED_NOT_YET_VERIFIED",
+  "purpose": "Portable evidence-bearing envelope for diagram artifacts and external model extraction candidates.",
+  "required_top_level_fields": [
+    "candidate_id",
+    "artifact",
+    "provenance",
+    "extraction",
+    "audit",
+    "decision"
+  ],
+  "enums": {
+    "source_system": ["GitHub", "Wix", "Grok", "External"],
+    "artifact_type": ["Mermaid", "Markdown", "JSON", "Image", "WebDiagram", "Other"],
+    "architecture_layer": [
+      "Language & Contract",
+      "Analytics & Visualization",
+      "KRAKEN",
+      "Orchestration & Product",
+      "Cross-layer",
+      "Unclassified"
+    ],
+    "lifecycle_status": [
+      "EXISTING",
+      "SPECIFIED",
+      "PROPOSED",
+      "NOT_YET_VERIFIED",
+      "VERIFIED",
+      "SIMULATED",
+      "ABSTAIN"
+    ],
+    "decision_status": ["LOCK", "HUMAN_REVIEW", "ABSTAIN", "SANDBOX"],
+    "audit_status": ["PASS", "FAIL", "INCOMPLETE", "NOT_RUN"]
+  },
+  "object_shape": {
+    "candidate_id": "string",
+    "artifact": {
+      "artifact_id": "string",
+      "title": "string",
+      "artifact_type": "enum:artifact_type",
+      "architecture_layer": "enum:architecture_layer",
+      "source_system": "enum:source_system",
+      "source_url": "string|null",
+      "repository_path": "string|null",
+      "source_ref_or_commit": "string|null",
+      "version": "string|null",
+      "media_type": "string|null"
+    },
+    "provenance": {
+      "content_sha256": "64-character lowercase hexadecimal string|null",
+      "captured_at": "ISO-8601 datetime",
+      "captured_by": "string",
+      "original_preserved": "boolean",
+      "parent_candidate_id": "string|null"
+    },
+    "extractor": {
+      "model_or_tool": "string",
+      "version": "string|null",
+      "prompt_or_rule_version": "string|null"
+    },
+    "extraction": {
+      "nodes": [
+        {
+          "node_id": "string",
+          "label": "string",
+          "source_location": "string|null",
+          "node_type": "string|null",
+          "notes": "string|null"
+        }
+      ],
+      "edges": [
+        {
+          "edge_id": "string",
+          "from_node_id": "string",
+          "to_node_id": "string",
+          "relation_label": "string|null",
+          "source_location": "string|null",
+          "notes": "string|null"
+        }
+      ],
+      "subgraphs": [],
+      "references": [],
+      "uncertainty_notes": []
+    },
+    "proposed_relations": [
+      {
+        "from_artifact_id": "string",
+        "to_artifact_id": "string",
+        "relation_type": "depends_on|implements|visualizes|constrains|duplicates|contradicts|supersedes|derived_from",
+        "evidence": "string",
+        "source_location": "string|null",
+        "status": "PROPOSED"
+      }
+    ],
+    "audit": {
+      "gates": [
+        {
+          "gate_id": "string",
+          "status": "PASS|FAIL|INCOMPLETE|NOT_RUN",
+          "evidence": [],
+          "findings": [],
+          "reviewer": "string",
+          "rule_version": "string|null"
+        }
+      ],
+      "unresolved_contradictions": [],
+      "missing_evidence": []
+    },
+    "decision": {
+      "status": "LOCK|HUMAN_REVIEW|ABSTAIN|SANDBOX",
+      "reason": "string",
+      "policy_version": "string",
+      "human_approval": {
+        "required": "boolean",
+        "approved_by": "string|null",
+        "approved_at": "ISO-8601 datetime|null",
+        "approval_reference": "string|null"
+      }
+    }
+  },
+  "metric_policy": {
+    "rule": "Do not emit lambda_p, kappa, confidence thresholds, weights, coordinates or topology metrics unless the exact governing source contract and calculation method are linked.",
+    "required_for_any_metric": [
+      "metric_name",
+      "formula_source",
+      "formula_version",
+      "input_provenance",
+      "calculation_implementation",
+      "test_evidence"
+    ]
+  },
+  "decision_policy": {
+    "lock_requires": [
+      "source_integrity_pass",
+      "parse_pass",
+      "contract_conformance_pass",
+      "safety_pass",
+      "provenance_complete",
+      "no_unresolved_blocking_contradiction",
+      "human_approval_when_required"
+    ],
+    "missing_required_evidence": "ABSTAIN",
+    "novel_or_high_impact_claim": "HUMAN_REVIEW",
+    "unapproved_candidate": "SANDBOX"
+  },
+  "important_note": "This is a schema contract proposal, not a deployed validator. Consumers must validate this shape in code before accepting submissions."
+}
