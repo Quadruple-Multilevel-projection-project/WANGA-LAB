@@ -61,3 +61,9 @@ No **VERIFIED** status without recorded evidence.
 ## Expanded architecture — v0.2
 
 KRAKEN includes both a Cognitive Logic Plane and a Heterogeneous Compute Plane. See [KRAKEN_CONFIGURATION_V0_2.md](./KRAKEN_CONFIGURATION_V0_2.md) and the [WANGA Naming–Place–Numeric Derivation Contract](../../WANGA_NAMING_PLACE_NUMERIC_DERIVATION_CONTRACT_V1.md). The v0.1 hardware counts remain NOT_YET_VERIFIED; this scope expansion does not imply physical implementation or quantum advantage.
+
+
+### Architecture diagrams
+
+- [KRAKEN cognitive logic + heterogeneous compute diagram v0.2](./KRAKEN_COGNITIVE_LOGIC_FABRIC_V0_2.mmd)
+- [System-wide Thinking Language + Kraken integration diagram](../../diagrams/system-wide-integration-thinking-language-kraken.mmd)
