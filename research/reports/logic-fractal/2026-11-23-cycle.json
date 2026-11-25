@@ -1,0 +1,434 @@
+{
+  "schema_version": "wanga-logic-fractal-cycle/1.0",
+  "date": "2026-11-23",
+  "SOURCES_SCANNED": {
+    "wanga_main_commit": "a1220697a0724f8cdbc888ac56f0cfb6bd2cf9b5",
+    "wanga_workloop_branch": "automation/wanga-unified-cycle-2026-11-20-072456",
+    "wanga_branch_head_before_patch": "5e30e930a140eb2e23b8946cfa4aeae379481a7e",
+    "repository_batch": {
+      "batch_id": "2026-11-23-batch-06",
+      "repositories": 10,
+      "readmes_read": 9,
+      "readmes_missing": 1,
+      "empty_repositories": 0
+    },
+    "wanga_branch_files_read": [
+      "logic_wiki/data/articles.json",
+      "logic_wiki/data/wix_sync_manifest.json",
+      "logic_wiki/tests/test_logic_wiki.py",
+      "logic_fractal/data/composition_rules.json",
+      "logic_fractal/data/recursive_composition_contracts_v1.json",
+      "research/ecosystem/repository_inventory.json",
+      "research/ecosystem/project_findings.json",
+      "research/ecosystem/scan_cursor.json"
+    ],
+    "deeper_repo_files": [
+      "AmbassadorOv/agent-orchestrator/AGENTS.md",
+      "AmbassadorOv/agent-orchestrator/DESIGN.md",
+      "AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS/orchestrator.py",
+      "AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS/tests.py",
+      "AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS/TEMPORAL_NETWORK_ROUTING_V0_1.md"
+    ],
+    "library": {
+      "bounded_search_hits": 10,
+      "files_read_and_hashed": 2,
+      "permission_scope": "PRIVATE_REVIEW_ONLY",
+      "raw_private_content_published": 0,
+      "hashes_published": 0
+    },
+    "conversation_exports_found": 0
+  },
+  "ACCESS_GAPS": [
+    "No complete conversations.json or ChatGPT export ZIP surfaced in the bounded Library search; this is not a scan of all private ChatGPT conversations.",
+    "Five nonpublic/private repository identities remain redacted.",
+    "One README path returned 404; that repository is not classified from this result.",
+    "The repository named GOOGLE_API_KEY was inspected only at README level; no secret-bearing files were read.",
+    "The ecosystem scan remains README/selected-doc bounded, not a full audit of every branch, workflow, code path or test suite."
+  ],
+  "NEW_DUPLICATE_SOURCES": {
+    "repository_records_added": 10,
+    "readme_blob_sources_added": 9,
+    "readme_not_found": 1,
+    "empty_repositories": 0,
+    "duplicate_readme_groups": [
+      {
+        "sha": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+        "repositories": [
+          "AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS",
+          "AmbassadorOv/multi-agent-orchestator"
+        ],
+        "interpretation": "Same README blob content appears under multiple repository identities; do not deduplicate repository identities."
+      },
+      {
+        "sha": "8b36e3fec98319bade352adce9b99abe55705188",
+        "repositories": [
+          "AmbassadorOv/AG-triple-X-",
+          "AmbassadorOv/TTTTproject-un.govt",
+          "AmbassadorOv/World-Party-Federation-Branches-managers",
+          "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo"
+        ],
+        "interpretation": "Same README blob content appears under multiple repository identities; do not deduplicate repository identities."
+      },
+      {
+        "sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+        "repositories": [
+          "AmbassadorOv/vscode-azure-blockchain-ethereum",
+          "tribal-archery/vscode-azure-blockchain-ethereum"
+        ],
+        "interpretation": "Same README blob content appears under multiple repository identities; do not deduplicate repository identities."
+      }
+    ],
+    "private_library_files_reviewed": 2,
+    "private_library_hashes_computed": 2,
+    "private_library_files_published": 0,
+    "conversation_export_records_added": 0
+  },
+  "CLAIMS_ADDED": {
+    "project_findings_added": 5,
+    "source_backed_candidate_structures": 1,
+    "logic_wiki_claims_added": 0,
+    "semantic_entailments_added": 0,
+    "claims_promoted_to_verified": 0
+  },
+  "LOGIC_UNITS": {
+    "catalog_articles": 34,
+    "catalog_articles_with_source_refs": 34,
+    "unique_catalog_source_ids": 21,
+    "source_registry_records": 21,
+    "source_classes": 11,
+    "editorial_relation_links": 123,
+    "new_formal_logic_units_added": 0,
+    "new_compositions": 0,
+    "verified": 0
+  },
+  "COMPOSITION_COUNT": {
+    "active_rules_specified": 3,
+    "draft_rules": 1,
+    "active_recursive_contracts": 2,
+    "draft_recursive_contracts": 1,
+    "required_but_unsatisfied_contracts": 1,
+    "new_compositions": 0,
+    "semantic_entailments": 0
+  },
+  "CONTRADICTIONS": {
+    "new_confirmed_core_contradictions": 0,
+    "unresolved_gate13_count_mismatch": "Source witness states 18; enumerated list contains 17; retained as unresolved.",
+    "duplicate_readme_content_groups": 3,
+    "critical_core_contradiction_inventory": "NOT_MEASURED_NO_INVENTORY",
+    "test_design_limitations": [
+      "ARTIFICAL-LOGICAL-ORDERS/tests.py samples datasets randomly; it is not a deterministic holdout benchmark."
+    ]
+  },
+  "BENCHMARKS": {
+    "conversation_intake_tests": "7_PASS (prior CI)",
+    "logic_wiki_tests_before_patch": "4_PASS_1_FAIL",
+    "failure_before_patch": "synced_article_count=28 while draft branch catalog contains 34; prior test conflated last deployment read-back with the newer draft catalog.",
+    "source_candidate_tests_before_patch": "SKIPPED_AFTER_EARLIER_FAILURE",
+    "first_typed_builder_before_patch": "NOT_RUN",
+    "semantic_cases": 0,
+    "source_grounded_counterexamples": 0,
+    "benchmark_suites": 0,
+    "holdout": false,
+    "mirror_review": false,
+    "independent_review_cycles": 0,
+    "post_patch_validation": "PENDING_NEW_PR_CI"
+  },
+  "CI": {
+    "PR159": {
+      "state": "OPEN_DRAFT",
+      "head_sha_before_patch": "5e30e930a140eb2e23b8946cfa4aeae379481a7e",
+      "compare": {
+        "status": "diverged",
+        "ahead_by": 28,
+        "behind_by": 19
+      },
+      "latest_pre_patch_logic_fractal_run": {
+        "id": 44992219632,
+        "conclusion": "failure",
+        "failed_step": "Run Logic Wiki tests",
+        "failed_assertion": "28 != 34"
+      },
+      "other_latest_pre_patch_workflows": {
+        "ecosystem_agent_sweep": "success",
+        "repository_integrity": "success",
+        "vitruvius_research_index": "success",
+        "codeql_advanced": "success"
+      },
+      "post_patch": "PENDING_NEW_CI"
+    },
+    "PR122": {
+      "state": "OPEN_DRAFT",
+      "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+      "compare": {
+        "status": "diverged",
+        "ahead_by": 63,
+        "behind_by": 183
+      },
+      "workflow_runs": [
+        {
+          "id": 42345983634,
+          "name": "Repository Integrity",
+          "conclusion": "action_required",
+          "jobs_returned": 0
+        },
+        {
+          "id": 42345983633,
+          "name": "CodeQL Advanced",
+          "conclusion": "action_required",
+          "jobs_returned": 0
+        },
+        {
+          "id": 42345983702,
+          "name": "WANGA-LAB Limbo Cartography Core",
+          "conclusion": "action_required",
+          "jobs_returned": 0
+        }
+      ]
+    },
+    "PR138": {
+      "state": "OPEN_DRAFT",
+      "branch": "fix/limbo-cartography-refresh-2026-11-04",
+      "compare": {
+        "status": "diverged",
+        "ahead_by": 45,
+        "behind_by": 174
+      }
+    }
+  },
+  "MODEL_HASH": {
+    "current_build": "NOT_RUN_BEFORE_POST_PATCH_CI",
+    "last_recorded_synthetic_candidate_hash": "a16a83eae678b668aa02fc40f311aad34120dfcb7565e3e2ad69ead384b75904",
+    "last_recorded_date": "2026-11-15",
+    "semantic_status": "NOT_YET_VERIFIED"
+  },
+  "READINESS_GATE": {
+    "gate_id": "FIRST_MODEL_ALPHA_V1",
+    "status": "NOT_READY_INTERNAL_CANDIDATE_ONLY",
+    "thresholds": "CONFIGURED_NOT_EMPIRICALLY_VALIDATED",
+    "current_catalog_counts": {
+      "articles": 34,
+      "articles_with_source_refs": 34,
+      "unique_source_ids": 21,
+      "source_registry_records": 21,
+      "source_classes": 11,
+      "editorial_relation_links": 123
+    },
+    "last_reported_readiness_counts": {
+      "source_records": 17,
+      "source_classes": 11,
+      "logic_units_with_provenance": 28
+    },
+    "reconciliation_note": "Catalog counts and last readiness counts are different measures; no silent substitution is made.",
+    "observed": {
+      "active_composition_rules": 3,
+      "active_recursive_contracts": 2,
+      "counterexamples": 0,
+      "semantic_test_cases": 0,
+      "benchmark_suites": 0,
+      "independent_review_cycles": 0,
+      "deterministic_build_scope": "SYNTHETIC_FIXTURES_ONLY",
+      "holdout_split": false,
+      "mirror_review": false,
+      "critical_core_contradictions": "NOT_MEASURED_NO_INVENTORY"
+    },
+    "required": {
+      "source_records": 20,
+      "source_classes": 3,
+      "logic_units_with_provenance": 50,
+      "composition_rules_with_contracts": 20,
+      "counterexamples": 30,
+      "semantic_test_cases": 100,
+      "benchmark_suites": 3,
+      "independent_reviews": 2,
+      "holdout_split": true,
+      "mirror_review": true
+    }
+  },
+  "LIMBO_FORENSIC_CRASH_CARTOGRAPHY": {
+    "pr_number": 122,
+    "branch": "deploy/limbo-cartography-core-v1",
+    "head_sha": "0877000b96c555963295a7e849f3ca7edd9fcedb",
+    "compare": {
+      "status": "diverged",
+      "ahead_by": 63,
+      "behind_by": 183
+    },
+    "matrix_version": "1.3.0",
+    "matrix_blob_sha": "86593dd31e5c20bf47c81d09d527967cf0a22476",
+    "matrix_last_updated": "2026-10-19",
+    "incident_count": 10,
+    "incident_status": "OBSERVED",
+    "history_event_count": 2,
+    "map_version": "1.0.0",
+    "map_node_count": 14,
+    "map_edge_count": 19,
+    "map_blob_sha": "3617504c68262f71366a244563fc06b1be270da2",
+    "map_sha256": "46646b00865c00559e20bf64e09828927be45c363a7fbcac22d12c1fc61d4ff5",
+    "latest_recorded_state": "RECURRENCE_PATTERN_OBSERVED_CURRENT_SYSTEM_STATE_UNASSESSED",
+    "unresolved_recurrence_clusters": 1,
+    "latest_execution_record": {
+      "timestamp_utc": "2026-11-07T06:12:35+00:00",
+      "status": "EXECUTION_RECORD_ONLY",
+      "epistemic_attempt": false
+    },
+    "tuning_candidate": {
+      "id": "TUNE-9c166900cc4ad5dd",
+      "status": "CANDIDATE_REPLAY_REQUIRED",
+      "replay_status": "NOT_RUN",
+      "historical_retest_result": "PASS"
+    },
+    "logic_bundle": {
+      "id": "VITRUVIUS-QUEUE-CONTRACT-RECURRENCE",
+      "status": "DRAFT_UNVERIFIED",
+      "root_cause_status": "NOT_YET_ESTABLISHED"
+    },
+    "inbox": {
+      "history_events": [
+        ".gitkeep"
+      ],
+      "keystone_cases": [
+        ".gitkeep"
+      ],
+      "limbo_points": [
+        ".gitkeep"
+      ],
+      "logic_bundles": [
+        ".gitkeep",
+        "vitruvius-queue-contract-recurrence.json"
+      ],
+      "new_crash_or_history_inputs": "NO_INPUTS"
+    },
+    "decision": "Keep PR draft. Preserve 10 observations and 2 history events. Do not replay without new source-backed inputs; refresh branch and obtain fresh CI before any merge."
+  },
+  "WIX_SYNC": {
+    "site_url": "https://headless-jhbcjnxnldu-beywolf5-1408.wix-site-host.com/logic-wiki.html",
+    "manifest_status": "PUBLISHED_READ_BACK_PARTIAL",
+    "last_sync_date": "2026-11-14",
+    "last_readback": {
+      "articles": 28,
+      "sources": 17,
+      "relations": 111
+    },
+    "current_branch_catalog": {
+      "articles": 34,
+      "sources": 21,
+      "relations": 123
+    },
+    "unsynced_delta": {
+      "articles": 6,
+      "sources": 4,
+      "relations": 12
+    },
+    "approval": "NOT_GRANTED",
+    "write_status": "NOT_PERFORMED",
+    "deployment_readback_this_cycle": "NOT_RUN"
+  },
+  "BUILT_TESTED_VERIFIED": {
+    "BUILT": [
+      "Repository inventory and dated report artifacts prepared on existing draft branch; no model build claimed."
+    ],
+    "TESTED": [
+      "Pre-patch Logic Wiki CI recorded 4 pass / 1 fail; prior conversation intake 7 pass; prior Repository Integrity, Ecosystem Sweep, Vitruvius and CodeQL passed."
+    ],
+    "VERIFIED": [],
+    "NOT_RUN": [
+      "Post-patch CI",
+      "First typed fractal builder after earlier early failure",
+      "Source-backed candidate tests",
+      "Semantic ground-truth suites",
+      "Limbo tuning replay",
+      "Wix deployment/read-back"
+    ]
+  },
+  "AGENT_ROLES": [
+    {
+      "role": "Repository Inventory",
+      "status": "COMPLETED",
+      "output": "Batch 06: 10 repositories; 9 README reads; 1 README 404; public sweep 60/61",
+      "next": "Scan the final remaining public repository."
+    },
+    {
+      "role": "Project README/Docs Collector",
+      "status": "COMPLETED",
+      "output": "Two direct-relevance repositories received deeper bounded review.",
+      "next": "Map contracts without external writes."
+    },
+    {
+      "role": "Conversation Export Collector",
+      "status": "BLOCKED",
+      "output": "No complete export surfaced.",
+      "next": "Wait for user-provided export; keep transcripts private."
+    },
+    {
+      "role": "Logic/Fractal Extractor",
+      "status": "COMPLETED",
+      "output": "One candidate temporal snapshot structure identified; zero new formal logic units.",
+      "next": "Specify domains, preconditions and non-applicability."
+    },
+    {
+      "role": "Normalizer",
+      "status": "IN_PROGRESS",
+      "output": "Candidate-only; no FOL/SOL unit.",
+      "next": "Define missing contract fields."
+    },
+    {
+      "role": "Fractal Composer",
+      "status": "NOT_STARTED",
+      "output": "No new composition.",
+      "next": "Wait for normalized fragment."
+    },
+    {
+      "role": "Mirror/Adversarial Reviewer",
+      "status": "IN_PROGRESS",
+      "output": "Random sampling flagged as non-deterministic for holdout use; no independent review.",
+      "next": "Freeze cases and create counter-readings."
+    },
+    {
+      "role": "Benchmark Evaluator",
+      "status": "BLOCKED",
+      "output": "Logic Wiki test failed before later tests; semantic cases remain zero.",
+      "next": "Inspect new CI."
+    },
+    {
+      "role": "Wiki Curator",
+      "status": "BLOCKED",
+      "output": "No catalog promotion or Wix write.",
+      "next": "Obtain explicit approval."
+    },
+    {
+      "role": "Publisher",
+      "status": "IN_PROGRESS",
+      "output": "One atomic update prepared on existing PR #159 branch; no merge.",
+      "next": "Inspect post-update CI."
+    },
+    {
+      "role": "Limbo Cartography Inspector",
+      "status": "COMPLETED",
+      "output": "10 incidents, 2 history events, 14 nodes, 19 edges; no new inbox inputs.",
+      "next": "Refresh branch and wait for evidence."
+    },
+    {
+      "role": "Limbo Replay",
+      "status": "BLOCKED",
+      "output": "Replay NOT_RUN; no new source-backed inputs.",
+      "next": "Do not synthesize crash points."
+    }
+  ],
+  "BLOCKED": [
+    "PR159 is 19 commits behind main and diverged; it remains draft.",
+    "PR159 Logic Wiki test failed before this patch; post-patch CI is pending.",
+    "PR122 is 183 commits behind main and its three workflows are action_required with no jobs returned.",
+    "No complete ChatGPT export surfaced.",
+    "No semantic benchmark cases, suites, holdout, MIRROR review or independent reviews exist.",
+    "Wix publication is not approved; no deployment/read-back was performed."
+  ],
+  "NEXT": [
+    "Inspect post-patch PR159 CI; if any check fails, keep the PR draft and fix only the evidenced failure.",
+    "Reconcile PR159 against current main without dropping source-backed fragments or ecosystem records.",
+    "Scan the final remaining public repository AmbassadorOv/WANGA-LAB.-01.",
+    "Reconcile readiness counters without substituting article counts for logic units.",
+    "Run the first typed builder when CI reaches that step; retain the release block.",
+    "Refresh PR #122 from current main while preserving all incident/history records; no replay without new evidence.",
+    "Publish to Wix only after explicit approval and successful deployment read-back."
+  ]
+}

@@ -15,7 +15,7 @@
   "verification_method": "Connected Wix Headless patch published upload bce8ba31-77fe-4b2c-821c-480e5b017bd7. Read-back verified logic-wiki-research-status.html (12,315 bytes), logic-wiki.html (53,739 bytes; 28 entry cards), and logic-wiki-fractal-research.html (12,297 bytes). The other 26 site files were not re-read in this cycle; status is therefore partial, not a full-site audit.",
   "automation_boundary": "Connected Wix upload/read-back was used. GitHub Actions does not have Wix credentials; scheduled research must use the connected Wix integration and record a read-back result.",
   "model_readiness": "FIRST_MODEL_ALPHA_NOT_READY",
-  "note": "GitHub catalog snapshot: 28 articles, 17 source records and 11 source types; 111 editorial relation links. Last readiness report counted 28 provenance-linked logic units, 2 active composition contracts, 0 source-grounded counterexamples, 0 semantic benchmark cases, 0 benchmark suites and 0 independent reviews. First model remains NOT_READY_INTERNAL_CANDIDATE_ONLY. Source registration and catalog links do not prove semantic truth.",
+  "note": "Last deployment read-back remains 28 articles, 17 source records and 111 relation links. Draft branch catalog: 34 articles, 21 source records and 123 relation links (delta +6/+4/+12). This delta is not approved or published; no Wix deployment/read-back is implied.",
   "extended_topic_page_count": 10,
   "main_page_card_count": 28,
   "extended_page_resources": [
@@ -124,6 +124,23 @@
       "logic-wiki-fractal-research.html"
     ],
     "homepage_entry_cards": 28,
-    "all_site_files_reaudited": false
+    "all_site_files_reaudited": false,
+    "synced_source_record_count": 17,
+    "synced_relation_link_count": 111
+  },
+  "catalog_reconciliation": {
+    "observed_on_branch": "automation/wanga-unified-cycle-2026-11-20-072456",
+    "observed_date": "2026-11-23",
+    "current_branch_catalog_article_count": 34,
+    "current_branch_source_record_count": 21,
+    "current_branch_relation_link_count": 123,
+    "current_branch_source_class_count": 11,
+    "unsynced_article_delta": 6,
+    "unsynced_source_record_delta": 4,
+    "unsynced_relation_link_delta": 12,
+    "status": "DRAFT_BRANCH_UNAPPROVED_NOT_SYNCED",
+    "publication_approval": "NOT_GRANTED",
+    "readback_required": true,
+    "note": "Current branch catalog is newer than the last deployment read-back. Top-level synced_* fields remain anchored to the last verified read-back; this object records the unapproved branch delta only."
   }
 }

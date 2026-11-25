@@ -1,0 +1,223 @@
+{
+  "schema_version": "wanga-ecosystem-sweep/1.0",
+  "date": "2026-11-23",
+  "batch_id": "2026-11-23-batch-06",
+  "inventory_snapshot": {
+    "unique_accessible_repositories": 66,
+    "affiliation_counts": {
+      "owner": 41,
+      "collaborator": 13,
+      "organization_member": 25
+    },
+    "visibility_counts": {
+      "public": 61,
+      "nonpublic_or_private": 5
+    },
+    "public_repositories": 61,
+    "public_repositories_scanned_after_batch": 60,
+    "public_repositories_remaining": [
+      "AmbassadorOv/WANGA-LAB.-01"
+    ]
+  },
+  "scanned_repositories": [
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/GOOGLE_API_KEY",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "updated_at": "2026-10-05T08:21:43Z",
+      "pushed_at": "2026-10-22T06:50:54Z",
+      "readme_status": "READ",
+      "readme_blob_sha": "7939fbf78d9ac5532789892cb457cbdacdd7b1ff",
+      "additional_files": []
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/think-thank-you-of-cyber-Department",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "updated_at": "2026-10-05T08:21:19Z",
+      "pushed_at": "2026-10-22T06:49:33Z",
+      "readme_status": "READ",
+      "readme_blob_sha": "5bce36b9ed2ffd0c0ebfec2a5e806e974c12ca05",
+      "additional_files": []
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/branches-",
+      "default_branch": "WPinstitutions/-WPG{<<branches>{<🪾>}(<ORG>)>>}]]]",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "updated_at": "2025-07-09T22:10:04Z",
+      "pushed_at": "2026-10-22T06:50:20Z",
+      "readme_status": "READ",
+      "readme_blob_sha": "3c2d05890db488362257aa6bf373620050d7477d",
+      "additional_files": []
+    },
+    {
+      "full_name": "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "updated_at": "2026-10-05T08:21:35Z",
+      "pushed_at": "2026-10-22T06:50:28Z",
+      "readme_status": "READ",
+      "readme_blob_sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "additional_files": []
+    },
+    {
+      "full_name": "tribal-archery/copilot-cli",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "updated_at": "2025-12-13T22:23:45Z",
+      "pushed_at": "2026-10-22T06:52:12Z",
+      "readme_status": "READ",
+      "readme_blob_sha": "1cff9f51b830cee89bfc656ddc6ab140141226cf",
+      "additional_files": []
+    },
+    {
+      "full_name": "tribal-archery/mermaid",
+      "default_branch": "develop",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "updated_at": "2025-02-02T08:51:53Z",
+      "pushed_at": "2026-10-22T06:52:04Z",
+      "readme_status": "READ",
+      "readme_blob_sha": "280725af7ea2fec9941f5711283c65a94523d60c",
+      "additional_files": []
+    },
+    {
+      "full_name": "tribal-archery/unetbootin",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "updated_at": "2021-02-21T13:56:37Z",
+      "pushed_at": "2026-10-22T06:51:33Z",
+      "readme_status": "NOT_FOUND",
+      "readme_blob_sha": null,
+      "additional_files": []
+    },
+    {
+      "full_name": "tribal-archery/vscode-azure-blockchain-ethereum",
+      "default_branch": "master",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "updated_at": "2020-04-20T04:05:20Z",
+      "pushed_at": "2026-10-22T06:51:24Z",
+      "readme_status": "READ",
+      "readme_blob_sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "additional_files": []
+    },
+    {
+      "full_name": "AmbassadorOv/agent-orchestrator",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "updated_at": "2026-11-17T19:55:51Z",
+      "pushed_at": "2026-11-17T19:51:06Z",
+      "readme_status": "READ",
+      "readme_blob_sha": "3630865a27acb6f93b188972c69563910f4fb55d",
+      "additional_files": [
+        {
+          "path": "AGENTS.md",
+          "git_blob_sha": "488eb8d1c364152f73ae4bf0e65668f6fb00f603"
+        },
+        {
+          "path": "DESIGN.md",
+          "git_blob_sha": "053505b772771d813a594ae5d51ff22593a44899"
+        }
+      ]
+    },
+    {
+      "full_name": "AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS",
+      "default_branch": "main",
+      "visibility": "public",
+      "permission_level": "ADMIN",
+      "updated_at": "2026-11-17T18:18:17Z",
+      "pushed_at": "2026-11-17T13:50:22Z",
+      "readme_status": "READ",
+      "readme_blob_sha": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+      "additional_files": [
+        {
+          "path": "orchestrator.py",
+          "git_blob_sha": "dfc7b09542583194fbc3dafd6e40c7a850b4eda0"
+        },
+        {
+          "path": "tests.py",
+          "git_blob_sha": "55826e94ba4a2b3ae73968226f258d88c4cf5895"
+        },
+        {
+          "path": "TEMPORAL_NETWORK_ROUTING_V0_1.md",
+          "git_blob_sha": "c7d88552d8d301832110c3b88fe28ac7f34fd271"
+        }
+      ]
+    }
+  ],
+  "readme_outcomes": {
+    "read": 9,
+    "not_found": 1,
+    "empty": 0
+  },
+  "duplicate_readme_groups": [
+    {
+      "sha": "f41d34bb0019e03f269a723f424f38856bfa6c44",
+      "repositories": [
+        "AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS",
+        "AmbassadorOv/multi-agent-orchestator"
+      ],
+      "interpretation": "Same README blob content appears under multiple repository identities; do not deduplicate repository identities."
+    },
+    {
+      "sha": "8b36e3fec98319bade352adce9b99abe55705188",
+      "repositories": [
+        "AmbassadorOv/AG-triple-X-",
+        "AmbassadorOv/TTTTproject-un.govt",
+        "AmbassadorOv/World-Party-Federation-Branches-managers",
+        "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo"
+      ],
+      "interpretation": "Same README blob content appears under multiple repository identities; do not deduplicate repository identities."
+    },
+    {
+      "sha": "625c97bbc9115e868a9217bdc729341f8a0d1759",
+      "repositories": [
+        "AmbassadorOv/vscode-azure-blockchain-ethereum",
+        "tribal-archery/vscode-azure-blockchain-ethereum"
+      ],
+      "interpretation": "Same README blob content appears under multiple repository identities; do not deduplicate repository identities."
+    }
+  ],
+  "project_findings_added": [
+    "F-AGENT-ORCHESTRATOR-FORK-2026-11-23",
+    "F-ARTIFICAL-LOGICAL-ORDERS-TEMPORAL-ROUTING-2026-11-23",
+    "F-BRANCHES-LEGACY-WIX-2026-11-23",
+    "F-STUNNING-OCTO-README-DUPLICATE-2026-11-23",
+    "F-COPILOT-CLI-REFERENCE-2026-11-23"
+  ],
+  "cross_repository_relationships": [
+    {
+      "candidate": "AmbassadorOv/agent-orchestrator",
+      "relationship": "Fork of OrchestratorInc/agent-orchestrator; external coding-agent fleet orchestration reference.",
+      "status": "READ_ONLY_REFERENCE_NOT_INTEGRATED"
+    },
+    {
+      "candidate": "AmbassadorOv/ARTIFICAL-LOGICAL-ORDERS",
+      "relationship": "Classifier-driven dispatch plus temporal repository-snapshot proposal; possible overlap with NTM provenance/replay.",
+      "status": "SPECIFICATION_AND_CODE_READ_NOT_TESTED"
+    },
+    {
+      "candidate": "Quadruple-Multilevel-projection-project/stunning-octo-garbanzo",
+      "relationship": "README blob duplicate across four repository identities.",
+      "status": "CONTENT_DUPLICATE_ONLY"
+    }
+  ],
+  "access_gaps": [
+    "tribal-archery/unetbootin README.md returned 404; repository contents remain unclassified.",
+    "Five nonpublic/private repository identities remain redacted.",
+    "No complete ChatGPT conversations.json or export ZIP surfaced in the bounded Library search.",
+    "Only README-level review was performed for most repositories; no full code/branch/workflow audit is implied."
+  ],
+  "publication_boundary": "No collaborator repository was modified. No private Library content or conversation text was copied to this public report.",
+  "next_cursor": [
+    "AmbassadorOv/WANGA-LAB.-01"
+  ]
+}

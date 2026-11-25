@@ -526,6 +526,106 @@
         "model-readiness",
         "logical-diamond"
       ]
+    },
+    {
+      "id": "name-classification",
+      "title": "Classification of Names in Gate XIII",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "definition": "Gate XIII distinguishes three name relations: synonymous names (one meaning with multiple names), shared names (one name applied to multiple meanings), and distinct names (different names for different meanings). It divides shared names into six types: שתוף גמור, מוסכמים, מסופקים, בכלל וביחוד, משאלים, and מעתקים.",
+      "scope_note": "Summary of the pinned Hebrew text witness. The sentence registry and validation matrix are derived extraction artifacts, not independent corroboration. The source says 18 names but the closing enumeration contains 17 items; this source-internal count mismatch remains REQUIRES_REVIEW. Do not infer the missing item or treat a shared label as semantic identity.",
+      "sources": [
+        "SRC-SIVAN22-MILOT-GATE13-14",
+        "SRC-WANGA-GATE13-SENTENCE-REGISTRY",
+        "SRC-WANGA-GATE13-VALIDATION-MATRIX"
+      ],
+      "relations": [
+        "semantics",
+        "logical-relation"
+      ]
+    },
+    {
+      "id": "transferred-name",
+      "title": "Transferred Name (Gate XIII)",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "definition": "Gate XIII describes שם המעתק as a name whose original/root use denotes one meaning and is later applied to another because of similarity or dissimilarity between the two; the name is considered across both the source and target meanings.",
+      "scope_note": "The source explicitly allows similarity or dissimilarity; do not normalize the transfer criterion to similarity alone. This is a source-specific account, not a universal theory of metaphor or proof of semantic equivalence.",
+      "sources": [
+        "SRC-SIVAN22-MILOT-GATE13-14",
+        "SRC-WANGA-GATE13-SENTENCE-REGISTRY",
+        "SRC-WANGA-GATE13-VALIDATION-MATRIX"
+      ],
+      "relations": [
+        "semantics",
+        "logical-relation"
+      ]
+    },
+    {
+      "id": "speech-discourse",
+      "title": "Speech and Discourse in Gate XIV",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "definition": "Gate XIV distinguishes three uses of דבור: the human faculty of understanding and learning (הכח הדבור / הנפש המדברת), internal thought (הדבור הפנימי), and external spoken expression (הדבור החיצוני). The text enumerates 27 names in Gate XIV and states that the full fourteen-gate work contains 175 names.",
+      "scope_note": "The total of 175 applies to all fourteen gates together, not to Gate XIV alone. The 27-name count refers to the Gate XIV enumeration in this specific text witness; it is not a universal vocabulary count.",
+      "sources": [
+        "SRC-SIVAN22-MILOT-GATE13-14"
+      ],
+      "relations": [
+        "semantics",
+        "formal-language"
+      ]
+    },
+    {
+      "id": "logic-as-instrument",
+      "title": "Logic as an Instrument in Gate XIV",
+      "category": "Foundations",
+      "kind": "ESTABLISHED_REFERENCE",
+      "status": "SOURCE_SUPPORTED_SUMMARY",
+      "definition": "Gate XIV characterizes logic as an instrument for the sciences and for disciplined thought and expression, rather than classifying it as one of the sciences in the same sense as its subject disciplines.",
+      "scope_note": "This is the historical text's own classification. It does not settle modern disciplinary taxonomy or establish the performance of any WANGA implementation.",
+      "sources": [
+        "SRC-SIVAN22-MILOT-GATE13-14"
+      ],
+      "relations": [
+        "deduction",
+        "formal-language"
+      ]
+    },
+    {
+      "id": "logical-island",
+      "title": "Logical Island",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "SPECIFICATION_REQUIRED",
+      "definition": "The Qualia open blueprint proposes a bounded domain with declared vocabulary, scope, axioms, rules, constraints, assumptions, evidence, provenance, and testable interfaces.",
+      "scope_note": "Open proposal, not an implemented network. Cross-island exchanges are proposed to preserve source, version, permissions, dependencies, and verification status; no inter-island protocol or runtime is verified by this document.",
+      "sources": [
+        "SRC-QUALIA-LOGICAL-CURRENCY-V01"
+      ],
+      "relations": [
+        "evidence-provenance",
+        "source-first-contract"
+      ]
+    },
+    {
+      "id": "logical-value",
+      "title": "Logical Value",
+      "category": "Logic-fractal research",
+      "kind": "WANGA_RESEARCH_PROPOSAL",
+      "status": "SPECIFICATION_REQUIRED",
+      "definition": "The Qualia open blueprint treats logical value as demonstrable improvement in correctness, consistency, proof, reproducibility, interoperability, or useful problem-solving.",
+      "scope_note": "The proposal separates these dimensions from financial price, token demand, and publicity; none proves logical validity. It provides no empirically validated scalar score or weights, and separates contribution recognition from token issuance. Proposal only; no currency or token is launched.",
+      "sources": [
+        "SRC-QUALIA-LOGICAL-CURRENCY-V01"
+      ],
+      "relations": [
+        "evidence-provenance",
+        "model-readiness"
+      ]
     }
   ],
   "sources": [
@@ -664,6 +764,38 @@
       "type": "PROJECT_IMPLEMENTATION",
       "status": "IMPLEMENTED_PROTOTYPE_NOT_SEMANTICALLY_VERIFIED",
       "note": "Bounded deterministic candidate ranker and local swarm coordinator; no P2P transport, external LLM or model release."
+    },
+    {
+      "id": "SRC-SIVAN22-MILOT-GATE13-14",
+      "title": "Maimonides, Millot HaHigayon, Gates XIII–XIV — public text witness",
+      "uri": "https://github.com/Sivan22/otzaria-library/blob/d1106d9a66528dc3e39cf1ea0732782927d9f678/%D7%90%D7%95%D7%A6%D7%A8%D7%99%D7%90/%D7%9E%D7%97%D7%A9%D7%91%D7%AA%20%D7%99%D7%A9%D7%A8%D7%90%D7%9C/%D7%A8%D7%90%D7%A9%D7%95%D7%A0%D7%99%D7%9D/%D7%9E%D7%99%D7%9C%D7%95%D7%AA%20%D7%94%D7%92%D7%99%D7%95%D7%9F.txt",
+      "type": "PROJECT_RESEARCH",
+      "status": "SOURCE_REFERENCE_LOCATED",
+      "note": "Public Hebrew text witness pinned to commit d1106d9a66528dc3e39cf1ea0732782927d9f678; Gate XIII lines 184–189 and Gate XIV lines 190–240. Git blob SHA-1 66a42051c1a7df62df2f98c72e98d5ce8d07a6d1. Not edition-verified against the 1928 print witness."
+    },
+    {
+      "id": "SRC-WANGA-GATE13-SENTENCE-REGISTRY",
+      "title": "WANGA-LAB Gate XIII Sentence Registry (derived extraction)",
+      "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/LOGIC/MILOT_HIGAYON_GATE_13_SENTENCE_REGISTRY.md",
+      "type": "PROJECT_RESEARCH",
+      "status": "PROJECT_SOURCE",
+      "note": "Derived registry of 59 extracted Gate XIII sentence units. Evidence fields preserve source wording; structural labels are extraction, not source claims. Derived from the Sivan22 text witness; not independent corroboration."
+    },
+    {
+      "id": "SRC-WANGA-GATE13-VALIDATION-MATRIX",
+      "title": "WANGA-LAB Gate XIII Validation Matrix (derived validation artifact)",
+      "uri": "https://github.com/Quadruple-Multilevel-projection-project/WANGA-LAB/blob/main/docs/LOGIC/MILOT_HIGAYON_GATE_13_VALIDATION_MATRIX.json",
+      "type": "PROJECT_RESEARCH",
+      "status": "PROJECT_SOURCE",
+      "note": "Derived matrix reports 59/59 structural checks PASS but flags inventory.source_claim=18 versus enumerated_in_registry=17 as REVIEW. Structural checks are not semantic verification and this matrix is not independent corroboration."
+    },
+    {
+      "id": "SRC-QUALIA-LOGICAL-CURRENCY-V01",
+      "title": "AI231 Logical Economy & Logical Currency — Open Blueprint v0.1",
+      "uri": "https://github.com/AmbassadorOv/Qualia/blob/54e24e9d097a5b3a8d69e71bc52a913d169ec30e/research/logical-economy/LOGICAL_CURRENCY_BLUEPRINT_v0.1.md",
+      "type": "PROJECT_PROPOSAL",
+      "status": "PROJECT_SOURCE",
+      "note": "Open research proposal only; it explicitly does not describe a launched currency or securities offering. Git blob SHA-1 4eec5102ee2359b725cb2852f199688efa491051."
     }
   ]
 }
