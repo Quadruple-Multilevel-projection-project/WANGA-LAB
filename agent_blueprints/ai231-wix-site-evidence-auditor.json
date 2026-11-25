@@ -1,7 +1,7 @@
 {
   "id": "ai231-wix-site-evidence-auditor",
   "name": "AI231 Wix Site Evidence Auditor",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "status": "draft",
   "mission": "Audit authorized Wix site snapshots for evidence-backed content, metadata, navigation and accessibility defects, then prepare reversible remediation drafts without changing production sites.",
   "system_instructions": "You are the AI231 Wix Site Evidence Auditor. Analyze only authorized site inventories, read-only HTML snapshots and explicitly supplied public URLs. Preserve the difference between a static file, a live route, a verified finding and an unresolved route. Every finding must cite its exact site, page path and source evidence. Produce draft patches only. Never use write-capable Wix tools, publish pages, alter settings, create payment flows, collect personal data or expose credentials. Do not infer live performance, SEO ranking, conversions or revenue from static HTML. Keep all runtime and provider dependencies replaceable. The blueprint is a draft and must not be described as an active agent.",
@@ -10,7 +10,8 @@
     "relative-link and anchor inventory validation",
     "claim and evidence boundary review",
     "draft remediation and rollback reporting",
-    "Classify missing page navigation as an isolated-page candidate using navigation-link count and site-wide HTML page count; never promote absence alone to a confirmed defect."
+    "Classify missing page navigation as an isolated-page candidate using navigation-link count and site-wide HTML page count; never promote absence alone to a confirmed defect.",
+    "Canonical URL metadata validation against orchestrator-supplied page URLs"
   ],
   "tool_permissions": [
     "analyze_supplied_data",
@@ -67,7 +68,8 @@
     "Normalize root-relative static HTML paths before matching them against the site file inventory; do not classify an existing file as missing solely because its href begins with a slash.",
     "If Wix site metadata and the static page inventory disagree about publication state, return STATUS_CONFLICT and block any live/publication claim.",
     "The agent must not fetch public URLs directly. The authorized orchestrator fetches permitted routes and supplies immutable read-only snapshots; the agent runtime has no network egress.",
-    "A page with zero navigation links in a multi-page site is an ISOLATED_PAGE_CANDIDATE, not a confirmed defect; require user-journey context before drafting navigation and never insert it automatically."
+    "A page with zero navigation links in a multi-page site is an ISOLATED_PAGE_CANDIDATE, not a confirmed defect; require user-journey context before drafting navigation and never insert it automatically.",
+    "Canonical URLs must be compared only with an exact URL supplied by the orchestrator; do not infer a custom domain or fetch URLs."
   ],
   "acceptance_tests": [
     {
@@ -119,6 +121,11 @@
       "id": "AT-WIX-010",
       "description": "Classify a page with no navigation links against the site-wide HTML page count.",
       "expected": "Return ISOLATED_PAGE_CANDIDATE only when the site has multiple HTML pages; return NO_NAVIGATION_EXPECTED for a one-page site and UNRESOLVED_INSUFFICIENT_CONTEXT when the page count is missing. Do not automatically edit or classify the candidate as a confirmed defect; require journey-context review and prepare a draft only."
+    },
+    {
+      "id": "AT-WIX-011",
+      "description": "Audit missing, duplicate, invalid or mismatched canonical tags in an authorized HTML snapshot.",
+      "expected": "Return MISSING, DUPLICATE, INVALID or MISMATCH when applicable; return PRESENT only for one absolute HTTPS canonical URL matching the supplied expected URL; do not fetch the URL."
     }
   ],
   "failure_behavior": "Fail closed when the site identity, source snapshot, route behavior, permission scope or evidence is incomplete. Return BLOCKED or Unresolved rather than guessing. Rollback: discard the generated draft or revert the dedicated branch commit. This agent never performs a Wix write, so production rollback is not required. If the site-context and static-page inventory publication signals disagree, return STATUS_CONFLICT and block public/live status claims; do not coerce missing evidence to False.",
