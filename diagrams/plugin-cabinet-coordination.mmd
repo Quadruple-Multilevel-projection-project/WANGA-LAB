@@ -10,7 +10,8 @@ flowchart TD
   M2 --> R
   M3 --> R
   MT --> R
-  R --> V["Evidence & Provenance Review"]
+  R --> CF["Constitutional Fractal Gate: source / status / type / scope / contradiction"]
+  CF --> V["Evidence & Provenance Review"]
   V --> Q{"Status"}
   Q -->|Supported| OK["Verified / accepted finding"]
   Q -->|Incomplete| U["Assessment / hypothesis / pending"]
