@@ -125,6 +125,29 @@ flowchart TB
   HALT --> DAILY
   DAILY --> ENTRY
 
+
+  subgraph KRAKEN_ATOM["I. Kraken Atomic Fractal Engine — proposed"]
+    KCORE["Core sphere: identity / invariant"]
+    KREL["Relation sphere: typed interfaces / dependencies"]
+    KBOUND["Boundary sphere: scope / limits / stop"]
+    KATOM["Atomic contract: ID · version · provenance · hash"]
+    KCELL["Cells"]
+    KLATTICE["Crystal-like lattice"]
+    K36["Kraken-36: 18 Inner Cyan + 18 Outer Mag"]
+    K126["126 TensorCells"]
+    KMAP["Atom ↔ Cell ↔ Kraken mapping: NOT YET SPECIFIED"]
+    KCORE --> KATOM
+    KREL --> KATOM
+    KBOUND --> KATOM
+    KATOM --> KCELL --> KLATTICE
+    KLATTICE --> KMAP
+    K36 --> KMAP
+    K126 --> KMAP
+  end
+  FORMAL --> KATOM
+  KMAP --> SG
+  KMAP -.->|requires explicit mapping| REVIEW
+
   classDef source fill:#dbeafe,stroke:#2563eb,color:#172554
   classDef semantic fill:#cffafe,stroke:#0891b2,color:#164e63
   classDef rule fill:#ede9fe,stroke:#7c3aed,color:#4c1d95
