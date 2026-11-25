@@ -1,0 +1,134 @@
+{
+  "schema_version": "1.0.0",
+  "configuration_id": "UMBRELLA-NEURONICS-MASTER",
+  "status": "PROPOSED_CONFIGURATION",
+  "umbrella_project": {
+    "id": "UMBRELLA-NEURONICS",
+    "name": "Umbrella Project",
+    "purpose": "Parent project and shared governance boundary for the Global Institute of Neuronics"
+  },
+  "institute": {
+    "id": "GLOBAL-INSTITUTE-OF-NEURONICS",
+    "name": "Global Institute of Neuronics",
+    "logic_core": "INSTITUTE-LOGIC",
+    "analytics_organism": "INSTITUTE-ANALYTICS-ORGANISM",
+    "bodies": [
+      {
+        "id": "DEEP-NETWORK-ANALYTICS",
+        "name": "Deep Network Analytics",
+        "function": "measurement_and_analysis",
+        "organizations": [],
+        "default_access": "read_source_and_emit_analysis"
+      },
+      {
+        "id": "DEEP-NETWORK-LOGISTICS",
+        "name": "Deep Network Logistics",
+        "function": "orchestration_and_operations",
+        "organizations": [],
+        "default_access": "orchestrate_approved_workflows"
+      },
+      {
+        "id": "DEEP-NETWORK-ALGORITHMS",
+        "name": "Deep Network Algorithmics",
+        "function": "logic_configuration_and_drift_prevention",
+        "organizations": [],
+        "default_access": "propose_validate_and_version_configuration"
+      }
+    ],
+    "oversight": {
+      "id": "OR",
+      "name": "Global Drift Oversight Committee",
+      "independence": "independent",
+      "scope": [
+        "economic_stability",
+        "financial_stability",
+        "political_stability",
+        "institutional_drift"
+      ],
+      "access": "read_only_audit_and_hold_recommendation",
+      "cannot_approve_its_own_audit_target": true
+    }
+  },
+  "configuration_engine": {
+    "id": "INSTITUTE-CONFIG-ENGINE",
+    "inputs": [
+      "umbrella_logic",
+      "institute_logic",
+      "analytics_organism_outputs",
+      "body_logic",
+      "organization_logic",
+      "agent_logic",
+      "credential_policy",
+      "approval_state"
+    ],
+    "outputs": [
+      "agent_configuration",
+      "application_configuration",
+      "validation_report",
+      "version_record",
+      "rollback_plan"
+    ],
+    "controls": [
+      "dependency_validation",
+      "drift_detection",
+      "approval_gates",
+      "provenance",
+      "version_control",
+      "rollback",
+      "least_privilege",
+      "credential_scope_validation"
+    ],
+    "inheritance": {
+      "default": "DENY",
+      "child_may_narrow_parent": true,
+      "child_may_expand_parent": false,
+      "expansion_requires": "explicit_parent_approval_and_audited_change"
+    }
+  },
+  "configuration_layers": [
+    {
+      "level": "umbrella",
+      "id": "UMBRELLA-NEURONICS",
+      "authority": "root_policy_and_identity_boundaries"
+    },
+    {
+      "level": "institute",
+      "id": "GLOBAL-INSTITUTE-OF-NEURONICS",
+      "authority": "institutional_policy_and_shared_services"
+    },
+    {
+      "level": "body",
+      "ids": [
+        "DEEP-NETWORK-ANALYTICS",
+        "DEEP-NETWORK-LOGISTICS",
+        "DEEP-NETWORK-ALGORITHMS"
+      ],
+      "authority": "domain_scope_and_capabilities"
+    },
+    {
+      "level": "organization",
+      "ids": [],
+      "authority": "organization_specific_grants_and_data_domains"
+    },
+    {
+      "level": "application",
+      "ids": [
+        "LOGIC-FACTORY-HUB",
+        "AI231-LOGIC-REGISTRY",
+        "AI231-AGENT-FOUNDRY"
+      ],
+      "authority": "app_runtime_and_integration_permissions"
+    },
+    {
+      "level": "agent",
+      "ids": [],
+      "authority": "task_scoped_short_lived_capabilities"
+    }
+  ],
+  "execution_gates": {
+    "agent_dispatch": "BLOCKED_UNTIL_DIAGRAM_APPROVAL_AND_CONNECTOR_VERIFICATION",
+    "credential_write": "BLOCKED_UNTIL_SECRET_PRESENCE_AND_SCOPE_VALIDATION",
+    "external_side_effects": "EXPLICIT_USER_ACTION_OR_APPROVED_POLICY_ONLY",
+    "human_review": "REQUIRED_FOR_AGENT_OUTPUTS_AND_CONFIGURATION_PROMOTION"
+  }
+}
