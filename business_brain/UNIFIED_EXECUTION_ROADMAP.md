@@ -319,3 +319,68 @@ This addendum updates existing goals; it does not create a parallel queue or ano
 - Repository Integrity run `45344250661`, job `138274885085`: SUCCESS. All returned integrity job steps SUCCESS.
 - CodeQL run `45344250599` and Logic Fractal run `45344250610` were still in progress at this read-back; no conclusion is claimed for them.
 - PR #160 remains OPEN / DRAFT and is 24 commits behind current main and 51 commits ahead. Reconcile before merge.
+
+
+
+## 2026-11-25 — Run 006 unified execution evidence
+
+### Intake, supervisory audit and governance
+
+- The current prompt contains ten execution steps and the final user-authorized merger of Supervisor, Governance and Execution. The later merger instruction controls: this run did not depend on a future Automation 3 handoff and did not create a replacement schedule.
+- Read-only automation registry audit: 11 automations total; 3 enabled; 8 paused. The three legacy mission streams (Logic Currency Ledger, convergence research and monthly Logical Islands review) are paused. However, the two control automations explicitly described as retired by the merger remain enabled: `Automation_148c65055034819188de8415b2349983` and `6af9e12b3c288191b4f487adbdeb0446`. The current task itself is enabled. No automation settings were changed because the merged contract prohibits changing other automation settings. This is a P1 governance conflict, not a reason to depend on those automations.
+- WANGA-LAB main observed at `1d9afec596a64f59290941c6ea41d3322f7b8492`; 72 open PRs and 27 open issues. PR #160 remains OPEN / DRAFT, current head `234cadb16b3dc13354dd019d5842283f76d4a7c2`, 63 commits ahead and 29 behind current main. PR #150 remains OPEN / DRAFT, head `d77a91bc4456ec0894257fba2a9fc8ae1d164a62`, 30 commits ahead and 124 behind current main. Neither was merged or closed.
+- Qualia main latest observed commit: `95de58aa795a5ccfe1adcb20a3c24b8dc2e079e8` (2026-11-11); 27 open PRs, no open issues and no Actions runs returned. Its README continues to describe the Logical Islands Economy as proposed, not launched.
+- Wix inventory: 70 connected sites. Deep inspection selected AI231 Robotics Collaboration, site `d8dcc187-d8fe-4e3c-b7a4-9e46f020349e`. Other sites remain in the rotating coverage queue.
+
+### Existing goal registry reconciliation
+
+No new top-level goal was created. The existing registry entries were updated:
+
+- `AI231-AGENT-FACTORY-WIX-AUDITOR-001` — extended the existing Wix auditor with deterministic canonical-metadata analysis, an explicit expected-URL comparison and no-network behavior. Blueprint version 1.2.0 remains DRAFT. The exact blueprint contract, schema and tests pass on commit `536cbac9b6ee01510baa184de7562069889981fc`. Runtime remains NOT_CONFIGURED.
+- `AI231-WIX-CORE-METADATA-001` — refreshed the Robotics Collaboration evidence: all three HTML files lack canonical tags; sitemap.xml and robots.txt are absent; the primary navigation is hidden by CSS at max-width 700px on all three pages; no mobile menu fallback was found. Internal static links and fragment targets resolve. Production remains unchanged.
+- `AI231-LEDGER-STATE-SEPARATION-001` — independently re-fetched PR #150 workflow, run, job, steps and logs. Its event schema, aggregate-state schema and 14 transition tests pass on the old PR merge ref, but the branch is 124 commits behind current main. No current-main integration or live ledger is claimed.
+- `AI231-EXTERNAL-CONVERGENCE-TRACK-001` — refreshed the comparison against OpenAI Agents API/Sandbox Agents, LangGraph persistence/interrupts, A2A task and Agent Card specification, and MCP authorization security. External convergence is an engineering-pattern assessment, not evidence of AI231 adoption.
+- `AI231-LOGICAL-ISLANDS-ECONOMY-001` — refreshed project-state and financial evidence. No transaction-level cash, qualified pipeline, partner commitment or funding outcome was evidenced.
+- `AI231-REVENUE-PILOT-VALIDATION-001` — rechecked issues #148 and #149. They remain open and were last updated on 2026-11-15, exceeding the seven-day evidence threshold. No buyer, budget authority, outreach, paid pilot or revenue is claimed.
+- `AI231-WIX-COVERAGE-063-001` — deep-inspected the Robotics Collaboration site; other sites remain queued for rotation.
+- `AI231-AUTOMATION2-WIX-COVERAGE-CONFLICT-001` — retained the read-only coverage audit and recorded the merger-versus-registry discrepancy.
+- `AI231-PROCESSOR-TERMINOLOGY-MAJORANA-001` — no new canonical-source evidence; remains blocked and carried forward.
+- `AI231-AUTO2-HANDOFF-FRESHNESS-001` — future handoff dependency is superseded by the later user-authorized merger; no dependency on future Supervisor/Orchestrator reports is used in this run.
+
+### New subordinate backlog tasks (inside existing goals only)
+
+- **AI231-WIX-CANONICAL-METADATA-AUDITOR-001 — P1.** Source: authorized Robotics Collaboration HTML snapshots. Owner: Agent Factory. Dependencies: exact blueprint workflow evidence (satisfied) and later runtime assurance (open). Acceptance: one canonical metadata parser, fail-closed statuses for missing/duplicate/invalid/mismatched tags, no URL fetch, exact schema validation and unit tests. Permission: repository draft only. Rollback: revert commits `7877c483f33e13fe901360765f0b1340002ae3f1`, `a0c5c98ab84b19d7a9877fea527de3e0632f8bc4` and `536cbac9b6ee01510baa184de7562069889981fc`. Status: DONE for the bounded code/contract and CI acceptance; runtime NOT_CONFIGURED.
+- **AI231-WIX-MOBILE-NAV-ACCESSIBILITY-001 — P1.** Source: Wix headless snapshots for index.html, about.html and agents.html. Owner: Wix Site Evidence Auditor. Dependencies: non-production preview capability and browser/accessibility verification. Acceptance: mobile navigation remains discoverable and keyboard/screen-reader accessible at 390px and 700px, while desktop navigation remains intact. Permission: DRAFT_ONLY; production write/publication requires exact approval. Rollback: discard the draft or revert its repository commit. Status: draft prepared; preview and production action BLOCKED.
+- **AI231-AUTOMATION-MERGER-REGISTRY-RECONCILIATION-001 — P1.** Source: current automation registry versus the latest merger instruction. Owner: Governance Agent. Dependencies: explicit authorization before changing automation settings. Acceptance: registry state matches the intended single canonical operating cycle, or the user explicitly confirms the two control automations should remain enabled. Permission: read-only until separately authorized. Rollback: N/A for this inspection. Status: BLOCKED / UNRESOLVED; no settings changed.
+
+### Exact CI and two-pass evidence
+
+- Agent Blueprint Contract workflow: `.github/workflows/agent-blueprint-contract.yml`, blob `c6b6b480feba3e5e048695c726a4b6a0b196622a`. Run `45564018156`, job `139034294701`, exact head `536cbac9b6ee01510baa184de7562069889981fc`, conclusion SUCCESS. Step 5 “Verify agent blueprint contract” SUCCESS; step 6 “Validate agent blueprint JSON Schemas” SUCCESS; step 7 “Wix site evidence auditor tests” SUCCESS. The dedicated validator explicitly loads `schemas/agent-blueprint-v1.schema.json`; the exact unittest command ran 30 tests and returned OK. Two-pass re-fetch of run, job, steps, workflow, test blob, schema blob and blueprint blob was consistent.
+- An intermediate Agent Blueprint Contract run `45564008071`, job `139034262209`, failed on commit `a0c5c98ab84b19d7a9877fea527de3e0632f8bc4` because the test required AT-WIX-011 before the blueprint had been updated. The subsequent blueprint commit added AT-WIX-011; final run `45564018156` passed all 30 tests. The intermediate failure is retained, not erased.
+- Runtime Catalog run `45564018145`, jobs `139034294357` and `139034294684`, SUCCESS. The install job installed pinned frameworks and ran eight framework/runtime tests; the static job explicitly reports “static metadata checks only; no package install, SBOM, sandbox or runtime tests.” These results do not prove the Wix auditor is active, deployed, isolated or network-confined. Registry entry remains `status=DRAFT`, `runtime_status=NOT_CONFIGURED`.
+- Repository Integrity run `45564018126`, job `139034339142`, SUCCESS on the same branch head. CodeQL run `45564018269`, SUCCESS.
+- Ledger Repository Integrity run `45001947753`, job `137145211088`, SUCCESS on PR #150 head `d77a91bc4456ec0894257fba2a9fc8ae1d164a62`. Exact steps 7 “Logic currency ledger aggregate-state schema validation” and 8 “Logic currency ledger aggregate-state transition tests” succeeded; 14 transition tests returned OK. This is not current-main integration.
+- Two-pass evidence comparison found no mismatch in the run/job IDs, head SHAs, workflow blobs, step names or conclusions inspected.
+
+### Financial and token state
+
+- Actual cash collected: NOT_YET_VERIFIED.
+- Actual cash costs paid: NOT_YET_VERIFIED.
+- Contribution margin: NOT_COMPUTABLE.
+- Qualified pipeline: NOT_VERIFIED.
+- Forecasts: HYPOTHESIS only.
+- Internal Logic Credits: non-cash internal accounting units; excluded from revenue and margin.
+- External token quantity: 0; no issuance, transfer, redemption, payment, reserve backing or monetary-value promise.
+
+### Next-run priorities
+
+1. Reconcile PR #160 with current main (29 commits behind) and rerun exact changed-file CI on the reconciled head; do not merge automatically.
+2. Reconcile PR #150 with current main (124 commits behind), then rerun the exact event schema, aggregate-state schema and transition tests on the reconciled head.
+3. Keep the Wix auditor DRAFT / NOT_CONFIGURED until the exact backend, invocation, isolation, egress-denial, audit and rollback evidence exists.
+4. Keep Robotics Collaboration production changes blocked until exact site/files/scope approval; first validate the mobile navigation draft and canonical/sitemap/robots draft in a non-production preview.
+5. Preserve the €290 pilot hypothesis; buyer discovery remains blocked until outreach authorization. Flag #148/#149 as stale until new evidence appears.
+6. Keep actual cash, actual direct costs and contribution margin separate from forecasts and internal Logic Credits.
+7. Rotate deep-inspection coverage next to AI231 Global Neural Governance; do not infer that uninspected sites have no defects.
+8. Resolve the automation-registry merger discrepancy without changing schedules absent explicit permission.
+9. Resolve the canonical Majorana processor terminology from the authoritative project source.
+10. Keep semantic readiness NOT_READY until source-grounded cases, independent benchmark suites and independent reviews exist.
