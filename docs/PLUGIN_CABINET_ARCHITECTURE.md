@@ -94,6 +94,13 @@ Each report must include:
 - A daily Mermaid diagram can be regenerated from committed coordination records.
 - The workflow clearly reports when an external model has not checked in.
 
-## 9. Implementation status
 
-This file is a design specification. The cabinet plugin, external provider connections, automated cross-provider messaging, and daily report-generation workflow are **not established by this document**. Track implementation in GitHub issues or pull requests with tests and deployment evidence.
+## 10. Constitutional fractal governance
+
+All cabinet tasks that inspect, extract, compose, verify, or publish logic structures are governed by [Constitutional Fractal Governance V1](CONSTITUTIONAL_FRACTAL_GOVERNANCE_V1.md). The corresponding [constitutional fractal diagram](../diagrams/constitutional-fractal-governance.mmd) is a derived view, not an independent source of truth.
+
+The cabinet must preserve source lineage, epistemic status, typed relations, scope, parent IDs, composition-rule versions, contradiction records, and verification receipts at every L0–L3 scale. Model consensus and structural checks cannot promote a claim to VERIFIED. Missing required evidence leads to REVIEW / ABSTAIN / HALT. These are required workflow policies; automatic enforcement is not claimed until implemented and tested.
+
+## 11. Implementation status
+
+This file is a design specification. The cabinet plugin, external provider connections, automated cross-provider messaging, daily report-generation workflow, and full automatic enforcement of constitutional invariants are **not established by this document**. Track implementation in GitHub issues or pull requests with tests and deployment evidence.
