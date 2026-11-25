@@ -86,3 +86,16 @@ Official product documentation confirms that generic technical-site auditing is 
 **Capital allocation:** retain the independent baseline: paid validation → accepted delivery → measured direct costs → positive contribution margin → reinvestment. Grants and investors remain optional and must be compared by risk-adjusted net benefit, including restrictions, reporting burden, IP/control cost, delay and exit obligations. No funding or partner commitment was evidenced.
 
 **Financial state:** actual cash collected, actual cash costs paid, contribution margin and qualified pipeline remain NOT_YET_VERIFIED from the connected sources. Wix Payments/Stores app presence and published pages are not evidence of transactions. Internal Logic Credits remain non-cash and excluded from revenue and margin. No numerical forecast or valuation is upgraded by this site audit.
+
+
+## 2026-11-25 — Run 006 operating-evidence refresh
+
+**VERIFIED project-state evidence:** WANGA-LAB currently exposes 72 open pull requests and 27 open issues. Qualia exposes 27 open pull requests, no open issues and no Actions workflow runs in the connected repository view; its latest main-branch commit inspected here is dated 2026-11-11. These are governance and engineering-activity indicators, not customer demand, product adoption or revenue.
+
+**VERIFIED revenue-evidence boundary:** WANGA-LAB issues #148 and #149 remain open and were last updated on 2026-11-15. No new buyer, budget-authority, paid-pilot or cash evidence was present in the inspected records. The internal Wix audits demonstrate a repeatable internal workflow only; they are not customer delivery or willingness-to-pay evidence.
+
+**ASSESSMENT:** keep the Logic Economy / Logical Islands platform as a proposed coordination and accounting framework. Do not expand platform scope or assign market value to Logic Credits before a customer-funded use case exists. The immediate commercial test remains one narrow evidence-led Wix Site & Claims Audit, with delivery acceptance and actual direct cost captured.
+
+**Capital decision:** independent baseline remains the default. Grants and investors are optional and must be compared by risk-adjusted net benefit, IP/control impact, restrictions, reporting burden, delay and exit obligations. No grant, investor, partner commitment, payment, cash receipt or reserve backing was evidenced in this run.
+
+**Financial state:** actual cash collected and actual cash costs paid remain NOT_YET_VERIFIED; contribution margin remains NOT_COMPUTABLE; qualified pipeline remains NOT_VERIFIED; forecasts remain HYPOTHESIS; internal Logic Credits remain non-cash and excluded from revenue and margin; external token quantity remains 0.
