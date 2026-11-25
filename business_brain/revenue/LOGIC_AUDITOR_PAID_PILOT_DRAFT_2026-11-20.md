@@ -91,3 +91,13 @@ Compute direct cost only from measured labor hours at an approved internal rate 
 **Cost and margin:** no approved loaded labor rate, timed delivery record, attributable tool/API cost, payment fee or customer transaction record was available. Actual delivery cost and contribution margin are NOT_COMPUTABLE. Actual cash collected/costs and qualified pipeline remain NOT_YET_VERIFIED; no amount is inferred.
 
 **Next measurable action:** after explicit authorization for outreach, run the existing 10–15 buyer discovery protocol, record budget authority and objections, test the €290 hypothesis, and require a paid pilot before generalized product build. No outreach or customer contact occurred in this run.
+
+
+## 2026-11-25 — Run 006 evidence and staleness check
+
+- Issue #148 remains OPEN; last updated 2026-11-15T16:55:18Z.
+- Issue #149 remains OPEN; last updated 2026-11-15T16:55:26Z.
+- Both exceed the seven-day evidence-update threshold. Preserve them; do not close either or treat them as buyer validation. No outreach or customer contact was performed.
+- The internal read-only site audit and canonical-metadata test suite are capability evidence only. They do not establish a buyer, budget authority, willingness to pay, accepted customer delivery, payment or revenue.
+- The €290 excluding VAT price remains a HYPOTHESIS. The 2–4 analyst-hour estimate remains unmeasured. Actual delivery cost and contribution margin remain NOT_COMPUTABLE without timed delivery, approved labor rate, attributable tool/API charges and transaction evidence.
+- Next measurable action remains gated by explicit outreach authorization: conduct the existing 10–15 buyer discovery protocol, identify at least 3 qualified opportunities, test the fixed scope and price, and require one paid pilot before generalized product expansion.
