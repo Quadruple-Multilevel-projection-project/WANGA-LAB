@@ -22,9 +22,9 @@ This index is the navigation layer for repository diagrams. Mermaid files are so
 | D05 | Plugin Cabinet Coordination | Cabinet coordination and bounded handoffs | [Mermaid](../diagrams/plugin-cabinet-coordination.mmd) |
 | D06 | Constitutional Fractal Governance | Governance invariants, provenance and bounded composition | [Mermaid](../diagrams/constitutional-fractal-governance.mmd) |
 | D07 | Kraken Atomic Fractal Engine | KRAKEN/fractal research architecture | [Mermaid](../diagrams/kraken-atomic-fractal-engine.mmd) |
-| D08 | KRAKEN Cognitive Logic + Heterogeneous Compute v0.2 | Cognitive Logic Plane, visual transformation, workload admission, heterogeneous compute and evidence gates | [Mermaid](../ai-drift-forensics/david-jones-kraken/KRAKEN_COGNITIVE_LOGIC_FABRIC_V0_2.mmd) |
+| D08 | KRAKEN Cognitive Logic + Heterogeneous Compute v0.2 | Cognitive Logic Plane, visual transformation, workload admission, heterogeneous compute and evidence gates | [Mermaid](../ai-drift-forensics/david-jones-kraken/KRAKEN_COGNITIVE_LOGIC_FABRIC_V0_2.mmd) |\n| D09 | Master Diagram Map | Clickable navigation graph linking the repository's diagram families | [Mermaid](../diagrams/MASTER_DIAGRAM_MAP_V1.mmd) |
 
-## Related specifications and operating documents
+## Related specifications and operating documents\n\n- [WANGA Daily Processor Operating Map — system flow and daily execution sequence (two embedded Mermaid diagrams)](./architecture/WANGA_DAILY_PROCESSOR_OPERATING_MAP.md)
 
 - [KRAKEN configuration v0.1 — hardware requirements, NOT_YET_VERIFIED](../ai-drift-forensics/david-jones-kraken/KRAKEN_CONFIGURATION_V0_1.md)
 - [KRAKEN configuration v0.2 — expanded two-plane architecture, SPECIFIED / NOT_YET_VERIFIED](../ai-drift-forensics/david-jones-kraken/KRAKEN_CONFIGURATION_V0_2.md)
