@@ -334,3 +334,15 @@ The agent factory creates specialist digital agents from source-backed work unit
 - [Runtime benchmark cases and metrics](benchmarks/)
 
 The current core runtime profile (LangGraph + Hugging Face smolagents) has been installed in GitHub Actions from immutable commit pins and passed framework import and LangGraph graph-execution smoke tests. This verifies package installation and basic orchestration only; it does not establish production readiness, sandbox isolation, semantic quality, or integration with WANGA-X/LNL/Wix. See the [runtime CI workflow](.github/workflows/agent-runtime-catalog.yml).
+
+
+## Multi-model Plug-in Cabinet (2026-11-25)
+
+WANGA-LAB is the canonical project and evidence repository for the proposed AI231 multi-model coordination cabinet. The cabinet specification is a proposed integration layer; external model-provider connections and automated cross-provider messaging are not claimed as deployed.
+
+- [Plug-in Cabinet architecture](docs/PLUGIN_CABINET_ARCHITECTURE.md)
+- [Multi-model handoff protocol](docs/MULTI_MODEL_HANDOFF_PROTOCOL.md)
+- [Cabinet coordination diagram (Mermaid)](diagrams/plugin-cabinet-coordination.mmd)
+- [Interactive repository architecture map (GitDiagram)](https://gitdiagram.com/quadruple-multilevel-projection-project/wanga-lab)
+
+The cabinet workflow reuses and coordinates with repository-visible foundations including the provider-neutral WANGA runtime, ARK-Swarm coordinator, logic/fractal and formal-reasoning components, and governance/evidence structures. See the architecture document for scope and verification boundaries.
