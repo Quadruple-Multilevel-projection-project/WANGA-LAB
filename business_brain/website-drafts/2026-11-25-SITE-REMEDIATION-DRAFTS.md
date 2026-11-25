@@ -26,3 +26,21 @@ Artifact: `business_brain/website-drafts/2026-11-25-ROBOTICS-ABOUT-NAV-IDs-DRAFT
 - Draft acceptance: metadata present; Logic Economy navigation targets resolve; historical date is explicit; Robotics IDs are unique and fragment targets resolve.
 - Live/preview acceptance: NOT_RUN. Production change remains BLOCKED until the exact site, files, changes and publication scope are explicitly approved.
 - Rollback: discard either draft file or revert the dedicated branch commit. No production state was changed.
+
+
+## 3. AI231 Robotics Collaboration — mobile navigation (Run 006)
+
+**VERIFIED static-code finding:** the authorized three-file inventory was re-read on 2026-11-25. In index.html, about.html and agents.html, the narrow-screen media rule (max-width 700px) hides the primary navigation (.navlinks / .links) with display:none. No alternative details/summary menu, navigation toggle, aria-expanded control or menu-specific button was found in any of the three snapshots. All three pages still have a viewport declaration; their existing internal file and fragment links resolve.
+
+**Evidence boundary:** this proves the navigation is hidden by the supplied static CSS at the narrow breakpoint. It does not prove every possible navigation path is unavailable at runtime. No browser viewport, keyboard-only, screen-reader, Lighthouse, Core Web Vitals or visual regression run was performed.
+
+**Proposed after-state — draft only:** retain the desktop navigation and add a native, keyboard-operable mobile disclosure menu (for example, a details element with a visible summary reading “Menu” and a nav labelled “Primary navigation” containing the same page-specific destinations). Keep the menu hidden on desktop and visible at the narrow breakpoint. Do not add a custom JavaScript toggle unless a native disclosure fails the acceptance tests.
+
+**Acceptance tests required before release:**
+- At 390×844 and 700px viewport widths, the mobile menu is visible and opens/closes by keyboard and pointer.
+- All page destinations and fragment targets remain valid.
+- Focus order is logical; the summary has an accessible name; expanded/collapsed state is exposed to assistive technology.
+- At desktop widths, the existing navigation remains visible and no duplicate focusable menu is exposed.
+- Browser and accessibility checks are captured from the non-production preview before any production approval request.
+
+**Permission and rollback:** no Wix write or preview deployment was performed. Production remains BLOCKED pending approval for the exact site, files and scope. Discard this proposed change or revert its dedicated repository commit to roll it back.
