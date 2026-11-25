@@ -67,4 +67,15 @@ The layers communicate through versioned contracts. A diagram arrow is not proof
 6. Record what changed, what did not change, evidence used, unresolved gaps and next owner.
 7. Never overwrite an unresolved contradiction. Record it and ABSTAIN pending review.
 
+## 7. Diagram Intelligence Hub — multi-model diagram audit
+
+- [Diagram Intelligence Hub README](diagram-intelligence-hub/README_V1.md)
+- [Grok collaboration handoff protocol](diagram-intelligence-hub/GROK_COLLABORATION_HANDOFF_V1.md)
+- [Diagram ingest contract](diagram-intelligence-hub/DIAGRAM_INGEST_CONTRACT_V1.json)
+- [Daily reconciliation protocol](diagram-intelligence-hub/DAILY_RECONCILIATION_PROTOCOL_V1.md)
+- [30-role proposed agent roster](diagram-intelligence-hub/DIAGRAM_AGENT_ROSTER_V1.json)
+- [Diagram Intelligence Hub master architecture map](diagram-intelligence-hub/DIAGRAM_INTELLIGENCE_HUB_MASTER_V1.mmd)
+
+The 30 entries are proposed audit roles, not deployed agents. Grok submissions are untrusted candidates until source-grounded review. Wix automation and Grok API connectivity remain NOT_YET_VERIFIED; see the handoff and daily reconciliation documents.
+
 **Canonical rule:** diagrams explain and link to source artifacts; contracts govern.
