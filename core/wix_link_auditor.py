@@ -172,3 +172,114 @@ def classify_navigation_presence(
     if site_html_page_count == 1:
         return NavigationStatus.NO_NAVIGATION_EXPECTED
     return NavigationStatus.ISOLATED_PAGE_CANDIDATE
+
+def audit_page_metadata(
+    html: str,
+    *,
+    expected_canonical: str | None = None,
+) -> dict[str, str | int | None]:
+    """Audit title, description and canonical metadata in a supplied HTML snapshot.
+
+    This function performs no network requests. A canonical URL is considered
+    PRESENT only when exactly one absolute HTTPS URL is found and, when an
+    expected URL is supplied by the orchestrator, it matches that exact URL.
+    """
+    from html.parser import HTMLParser
+
+    class MetadataParser(HTMLParser):
+        def __init__(self) -> None:
+            super().__init__(convert_charrefs=True)
+            self.title_count = 0
+            self.title_chunks: list[str] = []
+            self.in_title = False
+            self.descriptions: list[str] = []
+            self.canonicals: list[str] = []
+
+        def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+            values = {key.lower(): (value or "") for key, value in attrs if key}
+            tag = tag.lower()
+            if tag == "title":
+                self.title_count += 1
+                self.in_title = True
+            elif tag == "meta" and values.get("name", "").lower() == "description":
+                self.descriptions.append(values.get("content", ""))
+            elif tag == "link":
+                relations = set(values.get("rel", "").lower().split())
+                if "canonical" in relations:
+                    self.canonicals.append(values.get("href", ""))
+
+        def handle_endtag(self, tag: str) -> None:
+            if tag.lower() == "title":
+                self.in_title = False
+
+        def handle_data(self, data: str) -> None:
+            if self.in_title:
+                self.title_chunks.append(data)
+
+    if not isinstance(html, str):
+        return {
+            "title_status": "UNRESOLVED_INVALID_INPUT",
+            "title": None,
+            "description_status": "UNRESOLVED_INVALID_INPUT",
+            "description": None,
+            "canonical_status": "UNRESOLVED_INVALID_INPUT",
+            "canonical_href": None,
+            "canonical_count": 0,
+        }
+
+    parser = MetadataParser()
+    parser.feed(html)
+    parser.close()
+    title = " ".join("".join(parser.title_chunks).split())
+
+    if parser.title_count == 0:
+        title_status = "MISSING"
+    elif parser.title_count > 1:
+        title_status = "DUPLICATE"
+    elif not title:
+        title_status = "EMPTY"
+    else:
+        title_status = "PRESENT"
+
+    if not parser.descriptions:
+        description_status = "MISSING"
+    elif len(parser.descriptions) > 1:
+        description_status = "DUPLICATE"
+    elif not parser.descriptions[0].strip():
+        description_status = "EMPTY"
+    else:
+        description_status = "PRESENT"
+
+    canonical = parser.canonicals[0] if parser.canonicals else None
+    if not parser.canonicals:
+        canonical_status = "MISSING"
+    elif len(parser.canonicals) > 1:
+        canonical_status = "DUPLICATE"
+    else:
+        parts = urlsplit(canonical or "")
+        if (
+            parts.scheme.lower() != "https"
+            or not parts.netloc
+            or parts.username
+            or parts.password
+        ):
+            canonical_status = "INVALID"
+        elif expected_canonical is not None and canonical != expected_canonical:
+            canonical_status = "MISMATCH"
+        else:
+            canonical_status = "PRESENT"
+
+    description = (
+        parser.descriptions[0].strip()
+        if len(parser.descriptions) == 1
+        else None
+    )
+    return {
+        "title_status": title_status,
+        "title": title or None,
+        "description_status": description_status,
+        "description": description,
+        "canonical_status": canonical_status,
+        "canonical_href": canonical,
+        "canonical_count": len(parser.canonicals),
+    }
