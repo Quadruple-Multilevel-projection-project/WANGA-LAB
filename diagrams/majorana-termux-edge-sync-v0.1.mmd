@@ -1,0 +1,24 @@
+# MAJORANA — Termux Edge Fleet and Sync Protocol
+
+```mermaid
+sequenceDiagram
+  participant Cloud as WANGA Cloud API
+  participant Queue as Signed Job Queue
+  participant T1 as Termux Node A
+  participant T2 as Termux Node B
+  participant Audit as Audit / Decision Gate
+  participant Repo as GitHub Canonical Repo
+  Cloud->>Queue: Publish bounded signed task
+  T1->>Cloud: Pull tasks with sync cursor
+  Cloud-->>T1: Manifest + schema + expiry
+  T1->>T1: Verify signature / allowlist / idempotency
+  T1->>T1: Capture source + provenance + SHA-256
+  T1->>Cloud: Push JSONL + artifact refs + receipt
+  Cloud->>Audit: Validate source, schema and anti-drift
+  Audit-->>Cloud: CANDIDATE / ABSTAIN / HUMAN_REVIEW
+  Cloud->>Repo: Proposed delta via branch/PR after approval
+  T2->>Cloud: Register independently
+  T2->>Cloud: Pull its own scoped task
+```
+
+Termux nodes are edge workers, not canonical authorities. Default to outbound HTTPS, local SQLite queue, signed task manifests, allowlisted operations, idempotent retries and explicit human approval for core changes.
