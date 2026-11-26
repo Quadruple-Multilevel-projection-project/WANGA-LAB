@@ -1,50 +1,78 @@
-flowchart TD
+flowchart TB
   A["WANGA-LAB — Canonical Project & Evidence Repository"] --> B["Cabinet Entry: START-HERE / CURRENT-STATE"]
   B --> C["Model Registry & Capability Declaration"]
-  C --> D["Task Allocator: bounded scope + task ID"]
-  D --> M1["Model A"]
-  D --> M2["Model B"]
-  D --> M3["Model C"]
-  D --> MT["Tool-specialist model"]
+  C --> D["Network Coordinator: constitution version + bounded task + token cap"]
+  D --> MODE{"Dispatch mode"}
+  MODE --> HS["HORIZONTAL_SWEEP"]
+  MODE --> VS["VERTICAL_SYNTHESIS"]
+  MODE --> DP["DEEP_EXTRACTION — disabled in Round 1"]
+  MODE --> TR["TARGETED_REGION"]
+  MODE --> PC["PRIORITY_CHAIN"]
+  MODE --> PF["PARALLEL_FANOUT"]
+  MODE --> ED["EVENT_DELTA"]
+  HS --> M1["Model / Agent A"]
+  HS --> M2["Model / Agent B"]
+  HS --> M3["Model / Agent C"]
+  VS --> M1
+  VS --> M2
+  VS --> M3
+  TR --> M1
+  PC --> M2
+  PF --> M1
+  PF --> M2
+  PF --> M3
+  ED --> M3
   M1 --> R["Append-only Model Reports"]
   M2 --> R
   M3 --> R
-  MT --> R
-  R --> LEX["Versioned Semantic Registry — shared canonical terms"]
-  LEX --> SP["Five-Sphere Contract: S1 core → S2 definition → S3 upper → S4 lower → S5 enclosing place"]
-  SP --> SG["Semantic Gate: truth conditions / typed relations / boundaries / tests"]
-  SG --> CF["Constitutional Fractal Gate: source / status / type / scope / anti-tail / contradiction"]
+  R --> F["Constitutional Fractal Map — Round 1 A"]
+  R --> P["Preliminary P1–P7 headings — Round 1 B"]
+  R --> X["Critical gaps / conflicts — Round 1 C"]
+  F --> G{"All assigned models returned A/B/C?"}
+  P --> G
+  X --> G
+  G -->|No| PART["PARTIAL / NEEDS_SPLIT / ABSTAIN<br/>record gap; bounded retry"]
+  PART --> D
+  G -->|Yes| U["Consolidation Agent<br/>preserve variants and conflicts"]
+  U --> AUD["Independent Audit Agent"]
+  AUD --> Q{"Coverage + provenance + conflict preservation"}
+  Q -->|Fail / missing| H["OPEN / ABSTAIN / targeted rescan"]
+  H --> D
+  Q -->|Pass| MAP["Unified constitutional map + gap map + unified priority"]
+  MAP --> DEEP["Deep extraction — only after consolidation"]
+  DEEP --> VER["Verification P0–P5"]
+  VER --> IMPL["Implementation gate — separate authorization"]
+  U --> LEX["Versioned Semantic Registry"]
+  LEX --> SP["Five-Sphere Contract — provisional where marked"]
+  SP --> SG["Semantic Gate"]
+  SG --> CF["Constitutional Fractal Gate"]
   CF --> V["Evidence & Provenance Review"]
-  V --> Q{"Status"}
-  Q -->|Supported within declared scope| OK["Verified / accepted finding"]
-  Q -->|Incomplete or stale registry| U["Assessment / hypothesis / pending"]
-  Q -->|Conflicting semantic tails| X["Quarantine both branches / conflict register"]
-  Q -->|Invalid contract or missing mandatory evidence| H["ABSTAIN / HALT"]
+  V --> ST{"Status"}
+  ST -->|Supported| OK["Verified finding — within declared scope"]
+  ST -->|Incomplete| PEND["Assessment / hypothesis / pending"]
+  ST -->|Conflict| CON["Preserve both branches / conflict register"]
+  ST -->|Missing mandatory evidence| HALT["ABSTAIN / HALT"]
   OK --> S["CURRENT-STATE + task ledger"]
-  U --> S
-  X --> S
-  H --> S
-  S --> DLY["Daily summary + updated Mermaid diagrams + registry version"]
-  DLY --> B
+  PEND --> S
+  CON --> S
+  HALT --> S
+  S --> DI["Diagram Agent: Mermaid/JSON diff + snapshot"]
+  DI --> GH["GitHub — versioned artifacts"]
+  GH --> NR["Notification Router"]
+  NR --> MAIL["AgentMail — approved recipients only"]
+  MAIL --> ACK["Acknowledgements / response ledger"]
+  ACK --> D
+  AT["Airtable: agent roster / diagram registry / audit ledger"] -.-> D
+  NO["Notion: operating manual / decisions"] -.-> U
+  MG["MongoDB Atlas: optional; connection NOT_YET_VERIFIED"] -.-> U
+  MCP["MCP Precheck before adding MCP servers"] -.-> D
+  CD["Codex Dev Workflows: scoped orchestration / QA / handoff"] -.-> D
+  CT["Codex Material Themes: editor appearance only"] -.-> D
+  GD["GitDiagram: derived read-only visualization; refresh pending"] -.-> DI
 
-  classDef core fill:#dbeafe,stroke:#2563eb,color:#172554
-  classDef review fill:#dcfce7,stroke:#16a34a,color:#14532d
+  classDef gate fill:#dbeafe,stroke:#2563eb,color:#172554
   classDef pending fill:#fef3c7,stroke:#d97706,color:#78350f
   classDef stop fill:#ffe4e6,stroke:#e11d48,color:#881337
-  class A,B,C,D,S,DLY,LEX core
-  class V,OK review
-  class U,SP,SG pending
-  class X,H stop
-
-
-%% Unified architecture source of truth for the cabinet diagram:
-%% ../diagrams/cabinet-unified-semantic-architecture.mmd
-%% This coordination view is a navigation/dispatch view; semantic definitions
-%% and constitutional gates are specified in the unified diagram and
-%% docs/CONSTITUTIONAL_FRACTAL_GOVERNANCE_V1.md.
-
-%% Kraken atomic-fractal specification and diagram:
-%% docs/KRAKEN_ATOMIC_FRACTAL_ENGINE_V1.md
-%% diagrams/kraken-atomic-fractal-engine.mmd
-%% Three-sphere atom = Core / Relation / Boundary.
-%% Five-sphere semantic-place model remains a distinct higher-level abstraction.
+  class A,B,C,D,S,GH,NR,ACK gate
+  class DP,DEEP,VER,MG,GD pending
+  class PART,H,CON,HALT stop
