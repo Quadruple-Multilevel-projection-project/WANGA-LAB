@@ -1,0 +1,60 @@
+flowchart TB
+  C["Network Coordinator<br/>constitution-version + task budget"] --> G{"Dispatch mode"}
+  G --> H["HORIZONTAL_SWEEP<br/>parallel source coverage"]
+  G --> V["VERTICAL_SYNTHESIS<br/>cross-layer mapping"]
+  G --> T["TARGETED_REGION<br/>bounded local scan"]
+  G --> P["PRIORITY_CHAIN<br/>dependency order"]
+  G --> E["EVENT_DELTA<br/>changed-source only"]
+  H --> S["Source Discovery"]
+  V --> S
+  T --> S
+  P --> S
+  E --> S
+  S --> F["Constitutional Fractal Scanner"]
+  F --> PR["Provenance Agent"]
+  PR --> X["Conflict & Gap Agent"]
+  X --> R1["Round 1 Output A<br/>Fractal Map"]
+  X --> R2["Round 1 Output B<br/>P1–P7 headings"]
+  X --> R3["Round 1 Output C<br/>Critical gaps/conflicts"]
+  R1 --> M{"Round 1 complete?"}
+  R2 --> M
+  R3 --> M
+  M -->|No| Q["PARTIAL / NEEDS_SPLIT / ABSTAIN<br/>record gap; bounded retry"]
+  Q --> C
+  M -->|Yes| U["Consolidation Agent<br/>no silent merging"]
+  U --> A["Independent Audit Agent"]
+  A --> D{"Coverage + provenance + conflicts preserved?"}
+  D -->|No| O["OPEN / ABSTAIN / targeted rescan"]
+  O --> C
+  D -->|Yes| MAP["Unified constitutional map<br/>gap map + unified P1–P7"]
+  MAP --> DEEP["DEEP_EXTRACTION<br/>only after consolidation"]
+  DEEP --> VERIFY["Verification gate P0–P5"]
+  VERIFY --> IMPL["Implementation gate<br/>separate authorization"]
+  U --> DG["Diagram Agent<br/>derived Mermaid/JSON diff"]
+  DG --> GH["GitHub / WANGA-LAB<br/>versioned artifacts"]
+  MAP --> N["Notification Router"]
+  GH --> N
+  N --> MAIL["AgentMail<br/>only approved recipients"]
+  MAIL --> ACK["Acknowledgements / response ledger"]
+  ACK --> C
+
+  subgraph Registry["Shared records"]
+    AT["Airtable<br/>agent roster / diagrams / audit ledger"]
+    NO["Notion<br/>operating manual / decisions"]
+    DB["MongoDB Atlas<br/>optional; not connected/verified"]
+  end
+  C -.-> AT
+  U -.-> NO
+  PR -.-> AT
+  DG -.-> AT
+
+  subgraph Governance["Constitutional controls"]
+    K1["No merging of similar fractals"]
+    K2["No conflict resolution by model consensus"]
+    K3["Source + version + locator required"]
+    K4["No full extraction in Round 1"]
+    K5["No email until recipients approved"]
+  end
+  Governance -.-> C
+  Governance -.-> F
+  Governance -.-> A
