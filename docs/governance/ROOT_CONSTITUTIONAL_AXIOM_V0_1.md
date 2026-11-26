@@ -1,7 +1,7 @@
 # ROOT CONSTITUTIONAL AXIOM — WANGA / MAJORANA
-Version: 0.1-draft
+Version: 0.2-draft
 Date: 2026-11-26
-Status: CONSTITUTIONAL DIRECTIVE DRAFT — canonical source text and human sealing still required
+Status: CONSTITUTIONAL DIRECTIVE DRAFT — reference gate added; runtime integration and canonical source sealing still required
 
 ## 0. Authority and scope
 
@@ -149,7 +149,33 @@ Every cross-group task should carry:
 
 Do not fabricate missing fields. Null/missing constitutional source references block core semantic execution.
 
-## 7. Immediate system-wide actions
+## 7. Constitutional Enforcement Layer — implementation contract
+
+### 7.1 Decision rule
+- The gate runs before dispatch, tool invocation, state mutation, synthesis that changes canonical state, LOCK, release or external side effects.
+- It is fail-closed: missing, malformed, contradictory or unverified evidence returns BLOCKED.
+- Documentation-only recording may return PASS_FOR_REVIEW, which is not execution permission.
+- Only an explicit PASS permits dispatch. PASS_FOR_REVIEW, CANDIDATE, ABSTAIN, BLOCKED and HUMAN_REVIEW never permit dispatch.
+- A model's own assertion that the source is verified is not proof. The runtime must validate the canonical source reference and approval receipt against trusted registries.
+
+### 7.2 Minimum core-operation checks
+A core task must provide:
+1. constitutional_axiom_id exactly AXIOM-001;
+2. canonical constitution_source_ref and constitution_version;
+3. independently verified canonical source status;
+4. at least one approved derived_law_ref;
+5. requested_operation included in allowed_operations;
+6. source_refs with exact locators;
+7. no unresolved constitutional conflicts;
+8. explicit architect_approval_receipt for the operation's authorization scope.
+
+### 7.3 Reference implementation
+A fail-closed reference evaluator is provided at `governance/constitutional_gate.py`, with unit tests at `tests/test_constitutional_gate.py`. It emits a SHA-256 decision receipt. It is a policy evaluator only: it does not intercept agents, tools, providers or runtime dispatch by itself.
+
+### 7.4 Integration requirements
+The orchestrator must call the evaluator before dispatch and enforce `may_dispatch(decision) == true`. All provider adapters, plugins, edge workers and state-write paths must route through the same gate. Direct bypass paths must be removed or denied. Gate failures must be logged with the receipt and escalated without retrying through an alternate route.
+
+## 8. Immediate system-wide actions
 
 1. Register this document as a draft constitutional coordination directive.
 2. Audit all current WANGA/MAJORANA specifications, diagrams, prompts, agent instructions and plugin descriptions for conflicts with constitutional precedence.
@@ -157,11 +183,13 @@ Do not fabricate missing fields. Null/missing constitutional source references b
 4. Mark unsupported geometric interpretations and unproven mappings as hypotheses/unresolved.
 5. Require every group to acknowledge the directive and return a compliance receipt before being marked acknowledged. No acknowledgement is claimed by this document.
 6. Obtain and register the architect's verbatim canonical AXIOM-001 text and its source locator.
-7. Only after source registration and explicit architect approval, derive/version root laws and update implementation contracts.
+7. Only after source registration and explicit architect approval, derive/version root laws and connect the gate to production dispatch.
+8. Run the gate tests and integration tests; verify that missing source, invalid permission, conflicting evidence and absent approval all block execution.
 
-## 8. Status and non-claims
+## 9. Status and non-claims
 
-Current status: DRAFT DIRECTIVE RECORDED; DISTRIBUTION THROUGH CONNECTED INTERNAL DOCUMENTATION / REPOSITORY CHANNELS ONLY.
-Not claimed: canonical axiom text fully captured; Constitution sealed; every external provider notified; any external group acknowledged; all plugins updated; runtime enforcement deployed; tests passed; production system updated.
+Current status: REFERENCE GATE AND TESTS ADDED TO THE REVIEW BRANCH; NOT YET CONNECTED TO A LIVE ORCHESTRATOR OR PROVIDER RUNTIME.
 
-Required next evidence: verbatim AXIOM-001 source text, source locator, architect approval, and per-group acknowledgement receipts.
+Not claimed: canonical axiom text fully captured; Constitution sealed; every external provider notified; any external group acknowledged; all plugins updated; runtime enforcement deployed; production dispatch blocked by code; tests executed or passed; production system updated.
+
+Required next evidence: verbatim AXIOM-001 source text, source locator, architect approval, per-group acknowledgement receipts, repository test run, and verified integration at every dispatch/state-write boundary.
