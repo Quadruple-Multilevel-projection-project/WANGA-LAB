@@ -1,0 +1,49 @@
+name: WANGA TANTA 231 Extractor
+
+on:
+  push:
+    paths:
+      - 'sources/**'
+      - 'scripts/run_extractor.py'
+      - 'schemas/**'
+      - 'prompts/**'
+      - '.github/workflows/wanga-extract.yml'
+  workflow_dispatch:
+    inputs:
+      strict_lock_only:
+        description: 'Safety flag (this version never issues LOCK)'
+        required: false
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+
+concurrency:
+  group: wanga-extractor-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  deterministic-compile:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Compile deterministic 231-gate catalog
+        run: python scripts/run_extractor.py --input-dir sources --output-dir compiled
+      - name: Run unit tests
+        run: |
+          python -m pip install -r requirements-extractor.txt
+          pytest -q tests/test_wanga_extractor.py
+      - name: Upload compilation report
+        uses: actions/upload-artifact@v4
+        with:
+          name: wanga-tanta-231-compiled
+          path: compiled/
+          if-no-files-found: error
+          retention-days: 30

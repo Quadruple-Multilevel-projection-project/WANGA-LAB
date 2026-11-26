@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "WANGA TANTA 231 Gate Catalog",
+  "type": "object",
+  "required": ["gate_id", "pair", "matrix_21x11", "phase_wheel", "star_vector", "tanta_layers", "evidence", "ternary_status"],
+  "properties": {
+    "gate_id": {"type": "integer", "minimum": 1, "maximum": 231},
+    "pair": {"type": "string", "minLength": 2, "maxLength": 2},
+    "matrix_21x11": {
+      "type": "object", "required": ["row", "col", "is_albam_axis"],
+      "properties": {
+        "row": {"type": "integer", "minimum": 1, "maximum": 21},
+        "col": {"type": "integer", "minimum": 1, "maximum": 11},
+        "is_albam_axis": {"type": "boolean"}
+      }, "additionalProperties": false
+    },
+    "phase_wheel": {
+      "type": "object", "required": ["angle_deg", "slot_230", "slot_semantics"],
+      "properties": {
+        "angle_deg": {"type": "number", "minimum": 0, "exclusiveMaximum": 360},
+        "slot_230": {"type": "integer", "minimum": 1, "maximum": 230},
+        "slot_semantics": {"type": "string"}
+      }, "additionalProperties": false
+    },
+    "star_vector": {
+      "type": "object", "required": ["pseudo_vx", "pseudo_vy", "pseudo_vz", "coordinate_status"],
+      "properties": {
+        "pseudo_vx": {"type": "number"}, "pseudo_vy": {"type": "number"},
+        "pseudo_vz": {"type": "number"}, "coordinate_status": {"const": "VISUALIZATION_ONLY"}
+      }, "additionalProperties": false
+    },
+    "tanta_layers": {"type": "object"},
+    "evidence": {"type": "array", "items": {"type": "object"}},
+    "ternary_status": {"enum": ["LOCK", "MATI_FLOW", "ABSTAIN"]},
+    "lock_reason": {"type": "string"}
+  },
+  "additionalProperties": true
+}
