@@ -1,0 +1,43 @@
+# MAJORANA — Hyperdimensional Map Architecture
+
+```mermaid
+flowchart TB
+  subgraph IDENT["Identity & Discrete Structure"]
+    C["crystal_id"]
+    L["15,625 lattice point IDs"]
+    G["231 gate IDs"]
+    SG["230 space-group IDs"]
+    M["21×11 = 231 cells"]
+  end
+  subgraph SPACES["Independent Coordinate Spaces"]
+    P3["Physical XYZ"]
+    O4["Operational XYZW"]
+    H126["Proposed 126D Hyper-Space"]
+    S["Semantic Relation Graph"]
+  end
+  subgraph PROJECTIONS["Versioned Projection Layer"]
+    PR1["2D / Mermaid topology"]
+    PR2["3D spatial projection"]
+    PR3["4D operational view"]
+    PR4["Hyper-map / numerical projection"]
+  end
+  C --> L
+  C --> G
+  C --> SG
+  G <-->|"explicit mapping only"| M
+  L --> H126
+  G --> S
+  SG --> S
+  H126 --> PR2
+  H126 --> PR3
+  H126 --> PR4
+  S --> PR1
+  P3 --> PR2
+  O4 --> PR3
+```
+
+Rules:
+- 15,625 points, 126 dimensions, 231 gates, 230 groups and 21×11 cells are separate dimensions/identities.
+- 81×81 remains an unresolved candidate projection.
+- Every projection records source snapshot, transform, invertibility and loss profile.
+- Mermaid represents graph/process structure; it is not the 126D geometric renderer.

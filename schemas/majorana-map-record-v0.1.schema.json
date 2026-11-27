@@ -1,0 +1,178 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://wanga-lab.example/schemas/majorana-map-record-v0.1.json",
+  "title": "MAJORANA Map Record",
+  "type": "object",
+  "required": [
+    "record_id",
+    "crystal_id",
+    "map_id",
+    "schema_version",
+    "evidence_status",
+    "decision_status"
+  ],
+  "properties": {
+    "record_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "crystal_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "map_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "node_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "edge_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "crystal_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "map_version": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "coordinate_space_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "coordinate_space_type": {
+      "enum": [
+        "PHYSICAL_3D",
+        "OPERATIONAL_4D",
+        "HYPER_126D",
+        "LATTICE_15625",
+        "TOPOLOGY_231",
+        "SPACE_GROUP_230",
+        "SEMANTIC_GRAPH",
+        null
+      ]
+    },
+    "basis_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "transform_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "coordinates": {
+      "type": [
+        "array",
+        "null"
+      ],
+      "items": {
+        "type": "number"
+      }
+    },
+    "projection_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "projection_loss": {
+      "enum": [
+        "NONE",
+        "LOSSY",
+        "UNKNOWN",
+        null
+      ]
+    },
+    "invertible": {
+      "type": [
+        "boolean",
+        "null"
+      ]
+    },
+    "source_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_uri": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "uri"
+    },
+    "source_locator": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "retrieved_at": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "format": "date-time"
+    },
+    "content_hash_sha256": {
+      "type": [
+        "string",
+        "null"
+      ],
+      "pattern": "^[a-fA-F0-9]{64}$"
+    },
+    "parent_record_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "supersedes_record_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "evidence_status": {
+      "enum": [
+        "VERIFIED",
+        "ASSESSED",
+        "HYPOTHESIS",
+        "NOT_YET_VERIFIED"
+      ]
+    },
+    "decision_status": {
+      "enum": [
+        "CANDIDATE",
+        "PASS_FOR_REVIEW",
+        "LOCK",
+        "HUMAN_REVIEW",
+        "ABSTAIN",
+        "BLOCKED"
+      ]
+    }
+  },
+  "additionalProperties": true
+}
